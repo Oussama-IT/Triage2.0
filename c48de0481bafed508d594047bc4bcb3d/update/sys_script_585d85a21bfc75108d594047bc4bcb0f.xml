@@ -39,6 +39,7 @@
     while (gr.next()) {
         html = gr.html_template;
     }
+	gs.info('33.33'+html);
     var hfInfo = new Object();
     hfInfo["HeaderImageAttachmentId"] = "fe71ca801b04b910d991c882604bcb30";
     hfInfo["HeaderImageAlignment"] = "left";
@@ -51,7 +52,7 @@
     // Add your code here
     var targetTableSysId = current.sys_id;
     var tableName = 'x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation';
-    var pdfName = "Demande de consultaion avec possibilité d'évaluation pour  " + current.getDisplayValue('l_ve');
+    var pdfName = "Demande de consultation avec possibilité d'évaluation pour  " + current.getDisplayValue('l_ve');
     newHtml = html.replace("var1", current.getDisplayValue('l_ve'));
 
 
@@ -93,9 +94,10 @@
 
     newHtml = newHtml.replace("var34", current.getDisplayValue('l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole'));
     if (current.getValue('l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole') == "yes") {
-        newHtml = newHtml.replace('<div>L’élève utilise-t-il un système de communication alternative? :var35 </div>', '');
+		gs.info('010101');
         newHtml = newHtml.replace('<div>Communication alternative : var36</div>', '');
         newHtml = newHtml.replace('<div>Autre Communication : var37</div>', '');
+		newHtml = newHtml.replace('<div>L’élève utilise-t-il un système de communication alternative? :var35 </div>', '');
     } else {
         newHtml = newHtml.replace("var35", current.getDisplayValue('l_l_ve_utilise_t_il_un_syst_me_de_communication_alternative'));
         newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong>Parole</strong></span></div>', '');
@@ -194,12 +196,16 @@
 
     newHtml = newHtml.replace("var60", current.getDisplayValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture'));
     if (current.getValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture') == 'no') {
+gs.info('aaaaaaaaaaaaaaaaaaaaa');
         newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler les sons des mots à l’oral) : var64</span></p>', '');
-        newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">L’élève présente un retard en lecture  : var61</span></p>', '');
         newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">L’élève éprouve un retard en écriture :var65</span></p>', '');
         newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Note en lecture au dernier bulletin : var62 </span></p>', '');
+		gs.info('okokok');
+		newHtml = newHtml.replace('<p><span style="font-family: &#39;times new roman&#39;, times;">L’élève présente un retard en lecture: var61</span></p>', '');
+		gs.info('okokokokokokokok');
         newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Note en écriture au dernier bulletin : var66</span></p>', '');
         newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Est-ce que l’élève a un PEI en lecture et/ou écriture? : var63</span></p>', '');
+	
     } else {
         newHtml = newHtml.replace("var61", current.getDisplayValue('l_l_ve_pr_sente_un_retard_en_lecture'));
         newHtml = newHtml.replace("var62", current.getDisplayValue('note_en_lecture_au_dernier_bulletin'));
@@ -408,6 +414,7 @@
         newHtml = newHtml.replace('<div><span title="">Date (SRMS) : var175</span></div>', '');
         newHtml = newHtml.replace('<div><span title="">Date (Pratique privée) : var176</span></div>', '');
         newHtml = newHtml.replace('<div>Autre Orthophonie : var79</div>', '');
+		newHtml = newHtml.replace('<div>Orthophonie : var78</div>','');
     }
 
 
@@ -428,18 +435,24 @@
 
 
     if (current.getValue('est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel') == "no") {
+		gs.info('3366');
         newHtml = newHtml.replace('<div><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Diagnostique médical officiel : var111</span></div>', '');
         newHtml = newHtml.replace('<div><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Autre Diagnostique : var112</span></div>', '');
+		newHtml = newHtml.replace('<div><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Pr<span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">éciser Syndrome : var320</span></span></div>', "");
     } else {
+		gs.info('1919');
         newHtml = newHtml.replace("var111", current.getDisplayValue('diagnostique_m_dical_officiel'));
-        if (current.getDisplayValue('diagnostique_m_dical_officiel').indexOf("Syndrome génétique")) {
+        if (current.getDisplayValue('diagnostique_m_dical_officiel').indexOf("Syndrome génétique") >-1) {
             newHtml = newHtml.replace("var320", current.getDisplayValue('pr_ciser'));
         } else {
-            newHtml = newHtml.replace('<div><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Pr<span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Préciser Syndrome : var320</span></span></div>', "");
+			gs.info('1313');
+            newHtml = newHtml.replace('<div><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Pr<span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">éciser Syndrome : var320</span></span></div>', "");
         }
-        if (current.getDisplayValue('diagnostique_m_dical_officiel').indexOf("Autres")) {
+        if (current.getDisplayValue('diagnostique_m_dical_officiel').indexOf("Autres")>-1) {
+			gs.info('1717');
             newHtml = newHtml.replace("var320", current.getDisplayValue('autres_diagnostic2'));
         } else {
+			gs.info('1818');
             newHtml = newHtml.replace('<div><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Autre Diagnostique : var112</span></div>', "");
         }
     }
@@ -524,7 +537,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>585d85a21bfc75108d594047bc4bcb0f</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>PDF2</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -532,7 +545,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_585d85a21bfc75108d594047bc4bcb0f</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-15 14:20:03</sys_updated_on>
+        <sys_updated_on>2023-09-18 18:04:56</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
