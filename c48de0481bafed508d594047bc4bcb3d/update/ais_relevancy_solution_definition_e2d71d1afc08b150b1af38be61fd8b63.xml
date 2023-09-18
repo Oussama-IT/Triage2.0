@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="ais_relevancy_solution_definition">
+    <ais_relevancy_solution_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <capability display_value="Search Relevancy">458c3b2ab72300100e173307fe11a923</capability>
+        <current_solution_version>5</current_solution_version>
+        <dataset_language>en</dataset_language>
+        <fields>signal_json</fields>
+        <filter table="ais_relevancy_training_staging">sys_created_onONLast 30 days@javascript:gs.beginningOfLast30Days()@javascript:gs.endOfLast30Days()^search_profile=26d71d1a1a08b15042280f3e52bcae62^EQ<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 30 days@javascript:gs.beginningOfLast30Days()@javascript:gs.endOfLast30Days()"/>
+            <item display_table="ais_search_profile" display_value="cecce-demande-de-partage-equipe-triage Search Profile" endquery="false" field="search_profile" goto="false" newquery="false" operator="=" or="false" value="26d71d1a1a08b15042280f3e52bcae62"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <profile display_value="cecce-demande-de-partage-equipe-triage Search Profile">26d71d1a1a08b15042280f3e52bcae62</profile>
+        <request_source>api</request_source>
+        <solution_label>ais_relevancy_26d71d1a1a08b15042280f3e52bcae62</solution_label>
+        <solution_name>ml_x_snc_sn_workspace_start_global_ais_relevancy_26d71d1a1a08b15042280f3e52bcae62</solution_name>
+        <solution_parameters/>
+        <solution_properties>{"trainingMode":"generateFeatureVectorsandTrain","algorithm":"liblinear"}</solution_properties>
+        <stopwords>a6282a25533333008c5bddeeff7b12c3</stopwords>
+        <sys_class_name>ais_relevancy_solution_definition</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-17 14:26:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e2d71d1afc08b150b1af38be61fd8b63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ais_relevancy_26d71d1a1a08b15042280f3e52bcae62</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>ais_relevancy_solution_definition_e2d71d1afc08b150b1af38be61fd8b63</sys_update_name>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-07-17 14:26:42</sys_updated_on>
+        <table>ais_relevancy_training_staging</table>
+        <training_frequency>every_30_days</training_frequency>
+        <triggered_source/>
+        <word_vector_corpus/>
+    </ais_relevancy_solution_definition>
+</record_update>

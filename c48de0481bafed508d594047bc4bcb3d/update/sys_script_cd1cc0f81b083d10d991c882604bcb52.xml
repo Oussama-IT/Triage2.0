@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Calcul score </name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+gs.info('here');
+    var score = 0;
+    var selectdict = {
+        //Les stratégies de différenciation - les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l
+        "60b6078a1b64f110d991c882604bcbf4": 0.5,
+        "ecb6078a1b64f110d991c882604bcbf4": 0.5,
+        "64b6078a1b64f110d991c882604bcbf5": 0.5,
+        "e8b6078a1b64f110d991c882604bcbf5": 0.5,
+        "60b6078a1b64f110d991c882604bcbf6": 0.5,
+        "e4b6078a1b64f110d991c882604bcbf6": 0.5,
+        "6cb6078a1b64f110d991c882604bcbf6": 0.5,
+        "e0b6078a1b64f110d991c882604bcbf7": 0.5,
+        "68b6078a1b64f110d991c882604bcbf7": 0.5,
+        "ecb6078a1b64f110d991c882604bcbf7": 0.5,
+		"619dbf541bc97550d991c882604bcbc7": 0,
+		"80b6d37e1bfcfd10d991c882604bcb6c": 0.5,
+        //Veuillez cliquer sur les services - veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n
+        "a09c03421ba4f110d991c882604bcbee": 3,
+        "289c03421ba4f110d991c882604bcbee": 3,
+        "ac9c03421ba4f110d991c882604bcbee": 6,
+		"209c03421ba4f110d991c882604bcbf0": 0,
+		"249c03421ba4f110d991c882604bcbef": 0,
+		"a49c03421ba4f110d991c882604bcbed": 0,
+		"a49c03421ba4f110d991c882604bcbf0": 0,
+		"a89c03421ba4f110d991c882604bcbef": 0,
+		"ed9dbf541bc97550d991c882604bcbc7": 0,
+        //L’élève présente-il les facteur - l_l_ve_pr_sente_il_les_facteurs_de_risque_suivants_questionnez_les_parents
+        "12e4070a1b64f110d991c882604bcbce": 1,
+        "dee4070a1b64f110d991c882604bcbd0": 3,
+        "d2e4070a1b64f110d991c882604bcbd1": 3,
+        "d6e4070a1b64f110d991c882604bcbd1": 3,
+        "5ee4070a1b64f110d991c882604bcbce": 3,
+        "52e4070a1b64f110d991c882604bcbcf": 2,
+        "d6e4070a1b64f110d991c882604bcbcf": 2,
+        "5ee4070a1b64f110d991c882604bcbcf": 1,
+        "d2e4070a1b64f110d991c882604bcbd0": 1,
+        "5ae4070a1b64f110d991c882604bcbd0": 1,
+		"632cb7141bc97550d991c882604bcb62": 0,
+
+    };
+
+    function scoreforselectfields(str) {
+        if (str != null) {
+            var arr = str.split(',');
+			gs.info('5454 '+arr);
+            arr.forEach((element) => score += selectdict[element]);
+        }
+    }
+    scoreforselectfields(current.getValue("les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l"));
+	//gs.info('88888' + current.getValue("veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n"));
+    scoreforselectfields(current.getValue("veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n"));
+	//gs.info("123123" + score);
+    scoreforselectfields(current.getValue("l_l_ve_pr_sente_il_les_facteurs_de_risque_suivants_questionnez_les_parents"));
+    //scoreforselectfields('5ae4070a1b64f110d991c882604bcbd0,ac9c03421ba4f110d991c882604bcbee,dee4070a1b64f110d991c882604bcbd0,60b6078a1b64f110d991c882604bcbf4')
+
+	gs.info("003003" + score);
+
+    
+    //gs.info("#######"+current.getDisplayValue('l_l_ve_b_gaie_r_p_titions_de_sons_ou_de_syllabes_prolongations_de_sons_bloca'));
+    //gs.info("#"+current.getDisplayValue("l_l_ve_s_exprime_verbalement_dans_le_seul_but_de_nommer_de_r_citer_ou_d_num_r"));
+    //gs.info("##"+current.getDisplayValue('je_comprends_l_l_ve_du_temps_impact_des_difficult_s_de_prononciation_et_non'));
+
+    if (current.getValue('l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole') == "no") {
+        score += 30;
+    }
+    if (current.getValue('l_l_ve_b_gaie_r_p_titions_de_sons_ou_de_syllabes_prolongations_de_sons_bloca') == "yes") {
+        score += 3;
+    }
+    if (current.getValue("l_l_ve_s_exprime_verbalement_dans_le_seul_but_de_nommer_de_r_citer_ou_d_num_r") == "yes") {
+        score += 3;
+    }
+    if (current.getValue("l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler") == "yes") {
+        score += 2;
+    }
+
+
+
+    switch (current.getValue('je_comprends_l_l_ve_du_temps_impact_des_difficult_s_de_prononciation_et_non')) {
+        case "100": {
+            break;
+        }
+        case "75": {
+            score += 1;
+            break;
+        }
+        case "50": {
+            score += 2;
+            break;
+        }
+        case "25": {
+            score += 5;
+            break;
+        }
+    }
+
+    switch (current.getValue('quelle_est_la_note_obtenue_au_bulletin_le_plus_r_cent_en_communication_orale')) {
+        case "aoub": {
+            break;
+        }
+        case "c": {
+            score += 1;
+            break;
+        }
+        case "d": {
+            score += 2;
+            break;
+        }
+    }
+
+    switch (current.getValue('note_en_lecture_au_dernier_bulletin')) {
+        case "aoub": {
+            break;
+        }
+        case "c": {
+            score += 1;
+            break;
+        }
+        case "d": {
+            score += 2;
+            break;
+        }
+    }
+
+    switch (current.getValue('note_en_criture_au_dernier_bulletin')) {
+        case "aoub": {
+            break;
+        }
+        case "c": {
+            score += 1;
+            break;
+        }
+        case "d": {
+            score += 2;
+            break;
+        }
+    }
+
+
+    switch (current.getValue('est_ce_que_l_l_ve_a_un_pei_en_communication_orale_langage_expressif_et_ou_r_ce')) {
+        case "no": {
+            break;
+        }
+        case "yes-adapted": {
+            score += 1;
+            break;
+        }
+        case "yes-modified": {
+            score += 2;
+            break;
+        }
+
+    }
+    switch (current.getValue('est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture')) {
+        case "no": {
+            break;
+        }
+        case "yes-adapted": {
+            score += 1;
+            break;
+        }
+        case "yes-modified": {
+            score += 2;
+            break;
+        }
+
+    }
+
+    switch (current.getValue('quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit')) {
+        case "n/a": {
+            break;
+        }
+        case "indifficulty": {
+            score += 12;
+            break;
+        }
+        case "inrisk": {
+            score += 5;
+            break;
+        }
+        case "inthestandard": {
+            break;
+        }
+
+    }
+
+    switch (current.getValue('l_l_ve_pr_sente_un_retard_en_lecture')) {
+        case "nodifficulty": {
+            break;
+        }
+        case "slightdelay": {
+            score += 0.5;
+            break;
+        }
+        case "moderatedelay": {
+            score += 1;
+            break;
+        }
+        case "severedelay": {
+            score += 2;
+            break;
+        }
+
+    }
+
+    switch (current.getValue('l_l_ve_prouve_un_retard_en_criture')) {
+        case "nodifficulty": {
+            break;
+        }
+        case "slightdelay": {
+            score += 0.5;
+            break;
+        }
+        case "moderatedelay": {
+            score += 1;
+            break;
+        }
+        case "severedelay": {
+            score += 2;
+            break;
+        }
+
+    }
+
+
+    // function addscoreforcomsoci(field){
+    // 	if(current.getValue(field)=="true"){
+    // 		score+=0.5;
+    // 	}
+
+    // }
+    // addscoreforcomsoci("saluer");
+    // addscoreforcomsoci("initier_l_interaction_la_conversation");
+    // addscoreforcomsoci("faire_un_choix");
+    // addscoreforcomsoci("pointer_pour_demander_pour_montrer");
+    // addscoreforcomsoci("faire_une_demande");
+    // addscoreforcomsoci("respecter_le_sujet_de_conversation");
+    // addscoreforcomsoci("exprimer_un_refus");
+    // addscoreforcomsoci("respecter_le_tour_de_parole");
+    // addscoreforcomsoci("demander_de_l_aide");
+    // addscoreforcomsoci("mettre_des_commentaires");
+
+    // addscoreforcomsoci("expressions_faciales_mouvements_de_la_bouche");
+    // addscoreforcomsoci("vocalisations_sons_ou_syllabes");
+    // addscoreforcomsoci("actions_du_corps_imite_des_actions_lors_de_chanson_comptines");
+    // addscoreforcomsoci("gestes_ex_mouvements_avec_la_main_pour_saluer");
+    // addscoreforcomsoci("actions_lors_du_jeu_ex_imite_l_action_de_rouler_une_voiture");
+    // addscoreforcomsoci("l_l_ve_prouve_des_difficult_s_suivre_la_routine_du_groupe");
+    // addscoreforcomsoci("l_l_ve_prouve_des_difficult_s_lors_des_temps_non_structur_s");
+
+    if (current.getValue('l_l_ve_prouve_des_difficult_s_cr_er_et_maintenir_des_liens_d_amiti') == "yes") {
+        score += 1.5;
+    }
+    // addscoreforcomsoci("cause_effet");
+    // addscoreforcomsoci("collaboratif");
+    // addscoreforcomsoci("manipulation");
+    // addscoreforcomsoci("construction");
+    // addscoreforcomsoci("parall_le");
+    // addscoreforcomsoci("symbolique");
+
+
+    function addscoreforjpst(field) {
+        switch (current.getValue(field)) {
+            case 'never': {
+                break;
+            }
+            case 'sometimes': {
+                score += 1;
+                break;
+            }
+            case 'often': {
+                score += 2;
+                break;
+            }
+            case 'always': {
+                score += 3;
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+
+    }
+    addscoreforjpst("l_l_ve_a_de_la_difficult_comprendre_les_consignes");
+    addscoreforjpst("l_l_ve_a_de_la_difficult_comprendre_les_questions");
+    addscoreforjpst("l_l_ve_utilise_des_mots_impr_cis_ex_chose_a_un_vocabulaire_plus_pauvre_qu");
+    addscoreforjpst("l_l_ve_produit_des_phrases_incompl_tes");
+    addscoreforjpst("l_l_ve_produit_des_phrases_grammaticalement_incorrectes");
+    addscoreforjpst("l_l_ve_a_de_la_difficult_raconter_un_v_nement_v_cu_r_cemment");
+    addscoreforjpst("l_l_ve_s_exprime_par_de_l_cholalie_r_p_tition_imm_diate_ou_diff_r_e_d_un_non");
+
+    // function addscore(field,val){
+    // 	if(current.getValue(field)=="true"){
+    // 		score+=val;
+    // 	}
+
+    // }
+
+    // addscore("pr_maturit_moins_de_36_semaines_ou_petit_poids_la_naissance_moins_de_5_5_l",1);
+    // addscore("difficult_s_langagi_res_dans_la_langue_dominante",3);
+    // addscore("trouble_des_apprentissages",3);
+    // addscore("trouble_de_l_attention",3);
+    // addscore("trouble_du_spectre_de_l_autisme",3);
+    // addscore("retard_langagier",2);
+    // addscore("perte_auditive",2);
+    // addscore("complications_p_rinatales_hospitalisation_prolong_e_la_naissance_ou_plus_tar",1);
+    // addscore("condition_m_dicale_chronique",1);
+    // addscore("alf_pana",1);
+
+    if (current.getValue('est_ce_que_les_difficult_s_observ_es_ont_un_impact_sur_les_apprentissages_scolai') == "yes") {
+        score += 5;
+    }
+
+    // addscore("r_p_tition_des_renseignements_donner_une_directive_la_fois",0.5);
+    // addscore("rep_res_appuis_visuels",0.5);
+    // addscore("d_bit_rythme_de_la_parole_ralenti",0.5);
+    // addscore("reformuler_la_question_ou_l_information",0.5);
+    // addscore("modelage_expansion_ajouter_des_informations_ce_que_l_enfant_dit",0.5);
+    // addscore("positionnement_strat_gique_dans_la_classe_proximit_de_l_adulte",0.5);
+    // addscore("morcellement_des_t_ches",0.5);
+    // addscore("r_duction_de_charge_de_travail",0.5);
+    // addscore("temps_suppl_mentaire_pour_traiter_l_information",0.5);
+
+
+    // addscore("programme_isl_1",3);
+    // addscore("programme_destin_l_eed",3);
+    // addscore("programme_sli",6);
+
+
+    switch (current.getValue('de_fa_on_g_n_rale_est_ce_que_l_l_ve_profite_des_interventions_offertes')) {
+        case "no": {
+            score += 5;
+            break;
+        }
+        case "yes": {
+            break;
+        }
+        case "s_o": {
+            break;
+        }
+        case "a_little": {
+            score += 3;
+            break;
+        }
+    }
+
+    switch (current.getValue('l_l_ve_b_n_ficie_t_il_d_un_plan_d_enseignement_individualis_pei')) {
+        case "no": {
+            break;
+        }
+        case "yes_adaptations_only": {
+            break;
+        }
+        case "yes_different_expectation": {
+            score += 3;
+            break;
+        }
+        case "Yes_modified": {
+            score += 6;
+            break;
+        }
+    }
+
+    if (current.getValue('cette_demande_de_service_en_orthophonie_a_t_formellement_recommand_e_par_une_o') == "yes") {
+        score += 12;
+    }
+
+    current.setValue("score", score);
+    current.update();
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-12 17:06:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cd1cc0f81b083d10d991c882604bcb52</sys_id>
+        <sys_mod_count>114</sys_mod_count>
+        <sys_name>Calcul score </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_cd1cc0f81b083d10d991c882604bcb52</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-09-04 19:19:42</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=cd1cc0f81b083d10d991c882604bcb52"/>
+</record_update>

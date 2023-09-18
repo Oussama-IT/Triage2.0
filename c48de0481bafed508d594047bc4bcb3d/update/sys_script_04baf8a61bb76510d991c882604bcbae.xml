@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ndecd_triage_2_0_demande_de_partage</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_ndecd_triage_2_0_demande_de_partage">approvalCHANGESTOapproved^EQ<item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="CHANGESTO" or="false" value="approved"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>CECCE Generate PDF partage</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var html;
+    var newHtml;
+    var gr = new GlideRecord('x_ndecd_triage_2_0_pdftemplate');
+    gr.addQuery('template_name', 'PDF');
+    gr.query();
+    while (gr.next()) {
+        html = gr.html_template;
+    }
+    var hfInfo = new Object();
+    hfInfo["HeaderImageAttachmentId"] = "fe71ca801b04b910d991c882604bcb30";
+    hfInfo["HeaderImageAlignment"] = "left";
+    hfInfo["FooterImageAttachmentId"] = "f69aa9661bf7a5108d594047bc4bcb1c";
+    hfInfo["FooterImageAlignment"] = "TOP_CENTER";
+    hfInfo["PageSize"] = "A4";
+    hfInfo["GeneratePageNumber"] = "false";
+    hfInfo["TopOrBottomMargin"] = "50";
+    hfInfo["LeftOrRightMargin"] = "24";
+    // Add your code here
+    var targetTableSysId = current.sys_id;
+    var tableName = 'x_ndecd_triage_2_0_demande_de_partage';
+    var pdfName = "Partage d'un rapport " + current.getDisplayValue('eleve');
+    newHtml = html.replace("var1", current.getDisplayValue('eleve'));
+    newHtml = newHtml.replace("var15", current.getDisplayValue('consentement_parental_verbal'));
+
+
+    newHtml = newHtml.replace("var9", current.getDisplayValue('interpretation_formelle'));
+    newHtml = newHtml.replace("var8", current.getDisplayValue('date_du_rapport'));
+    newHtml = newHtml.replace("var7", current.getDisplayValue('type_de_rapport'));
+    //var 6
+    if (current.getDisplayValue('autre_situation_explication') != "") {
+        newHtml = newHtml.replace("var6", current.getDisplayValue('autre_situation_explication'));
+    } else {
+        newHtml = newHtml.replace('<div id="maBalise"><span style="font-size: 10pt;">Autre situation explication: var6</span></div>', '');
+    }
+
+
+    //
+    newHtml = newHtml.replace("var5", current.getDisplayValue('situation_familiale_de_l_l_ve'));
+    newHtml = newHtml.replace("var4", current.getDisplayValue('est_ce_que_l_l_ve_a_un_diagnostic'));
+    // var3
+    if (current.getValue('classe_distinct') != null) {
+        newHtml = newHtml.replace("var3", current.getDisplayValue('classe_distinct'));
+    } else {
+        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Classe distincte: var3</span></div>', '');
+    }
+    //
+    newHtml = newHtml.replace("var2", current.getDisplayValue('classe_distinc_vrai_faux'));
+    newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
+    newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
+    newHtml = newHtml.replace("var21", current.getDisplayValue('sys_created_on'));
+    newHtml = newHtml.replace("var90", current.getDisplayValue('sys_updated_by'));
+    newHtml = newHtml.replace("var91", current.getDisplayValue('sys_updated_by'));
+    newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
+
+
+    var eleve1 = current.getValue("eleve");
+
+    var gselve = new GlideRecord('sys_user');
+    gselve.get(eleve1);
+
+    newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_ecole'));
+    newHtml = newHtml.replace("var12", gselve.u_niso);
+    newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
+
+    var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
+    var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
+
+    current.linkattachment = result.attachment_id;
+    current.update();
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-05 22:04:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>04baf8a61bb76510d991c882604bcbae</sys_id>
+        <sys_mod_count>102</sys_mod_count>
+        <sys_name>CECCE Generate PDF partage</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_04baf8a61bb76510d991c882604bcbae</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-08-29 03:40:08</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=04baf8a61bb76510d991c882604bcbae"/>
+</record_update>

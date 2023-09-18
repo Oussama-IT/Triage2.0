@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture">approvalCHANGESTOapproved^EQ<item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="CHANGESTO" or="false" value="approved"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>CECCE Generate PDF SEP</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    gs.info(JSON.stringify(current));
+    var html;
+    var newHtml;
+    var gr = new GlideRecord('x_ndecd_triage_2_0_pdftemplate');
+    gr.addQuery('template_name', 'Demande SEP');
+    gr.query();
+    while (gr.next()) {
+        html = gr.html_template;
+    }
+    var hfInfo = new Object();
+    hfInfo["HeaderImageAttachmentId"] = "fe71ca801b04b910d991c882604bcb30";
+    hfInfo["HeaderImageAlignment"] = "left";
+    hfInfo["FooterImageAttachmentId"] = "f69aa9661bf7a5108d594047bc4bcb1c";
+    hfInfo["FooterImageAlignment"] = "TOP_CENTER";
+    hfInfo["PageSize"] = "A4";
+    hfInfo["GeneratePageNumber"] = "false";
+    hfInfo["TopOrBottomMargin"] = "50";
+    hfInfo["LeftOrRightMargin"] = "24";
+    // Add your code here
+    var targetTableSysId = current.sys_id;
+    var tableName = 'x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture';
+    var pdfName = "Demande SEP " + current.getDisplayValue('eleve');
+    newHtml = html.replace("var1", current.getDisplayValue('eleve'));
+    newHtml = newHtml.replace("var15", current.getDisplayValue('consentement_parental_verbal'));
+
+
+    newHtml = newHtml.replace("var33", current.getDisplayValue('est_ce_que_l_l_ve_est_motiv_e_utiliser_la_technologie_d_aide'));
+    newHtml = newHtml.replace("var32", current.getDisplayValue('est_ce_que_l_l_ve_poss_de_des_aptitudes_de_base_pour_pouvoir_utiliser_cette_tec'));
+    newHtml = newHtml.replace("var31", current.getDisplayValue('est_ce_qu_une_p_riode_de_mise_l_essai_de_l_outil_technologique_a_t_compl_t_e'));
+    newHtml = newHtml.replace("var7", current.getDisplayValue('est_ce_que_l_achat_d_outils_technologiques_a_t_recommand_par_un_e_profession'));
+    //delete null value if Achat outils tech recommand par un pro 
+    if (current.getValue('est_ce_que_l_achat_d_outils_technologiques_a_t_recommand_par_un_e_profession') != 'no') {
+        newHtml = newHtml.replace("var9", current.getDisplayValue('quelle_date'));
+        newHtml = newHtml.replace("var8", current.getDisplayValue('par_qui'));
+    } else {
+		// delete line
+        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Par qui? : var8</span></div>', '');
+        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">&Agrave; quelle date? : var9</span></div>', '');
+    }
+	//
+    // delete null value if true
+    if (current.getDisplayValue('autre_situation_explication') != "") {
+        newHtml = newHtml.replace("var6", current.getDisplayValue('autre_situation_explication'));
+    } else {
+        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Autre situation explication: var6</span></div>', '');
+    }
+    //
+    newHtml = newHtml.replace("var5", current.getDisplayValue('situation_familiale_de_l_l_ve'));
+    newHtml = newHtml.replace("var4", current.getDisplayValue('est_ce_que_l_l_ve_a_un_diagnostic'));
+    // delete null value if true
+    if (current.getValue('classe_distinct') != null) {
+        newHtml = newHtml.replace("var3", current.getDisplayValue('classe_distinct'));
+    } else {
+        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Classe distincte: var3</span></div>', '');
+    }
+    //
+    newHtml = newHtml.replace("var2", current.getDisplayValue('est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte'));
+    newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
+    newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
+    newHtml = newHtml.replace("var21", current.getDisplayValue('sys_created_on'));
+    newHtml = newHtml.replace("var90", current.getDisplayValue('sys_updated_by'));
+    newHtml = newHtml.replace("var91", current.getDisplayValue('sys_updated_by'));
+    newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
+    var eleve1 = current.getValue("eleve");
+
+    var gselve = new GlideRecord('sys_user');
+    gselve.get(eleve1);
+
+    newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_ecole'));
+    newHtml = newHtml.replace("var12", gselve.u_niso);
+    newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
+
+    var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
+    var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
+
+    current.linkattachment = "/sys_attachment.do?sys_id=" + result.attachment_id;
+    current.update();
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-25 18:21:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>00e85fb81b943d50d991c882604bcb2e</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>CECCE Generate PDF SEP</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_00e85fb81b943d50d991c882604bcb2e</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-08-28 15:21:09</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=00e85fb81b943d50d991c882604bcb2e"/>
+</record_update>

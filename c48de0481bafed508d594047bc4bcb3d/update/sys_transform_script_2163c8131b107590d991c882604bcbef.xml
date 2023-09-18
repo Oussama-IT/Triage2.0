@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="u_imp_saml_user_b0syyweerf">dd63c8131b107590d991c882604bcbd3</map>
+        <order>100</order>
+        <script><![CDATA[ //Send data to usage analytics.
+ //sso_source is 'sso:' followed by the idp sys id. Hence 'sso:' needs to be removed
+if (action == 'insert')
+    SNC.SecurityEventSender.sendSAMLAutoprovisionGCFEvent('create');
+else if (action == 'update' && target.changes())
+    SNC.SecurityEventSender.sendSAMLAutoprovisionGCFEvent('update');
+]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-08-01 21:07:20</sys_created_on>
+        <sys_id>2163c8131b107590d991c882604bcbef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_transform_script_2163c8131b107590d991c882604bcbef</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-08-01 21:07:20</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+</record_update>

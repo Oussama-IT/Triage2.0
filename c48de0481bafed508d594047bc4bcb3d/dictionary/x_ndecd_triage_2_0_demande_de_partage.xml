@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="f71e6c481bafed508d594047bc4bcb8f" extends="task" label="Tâche" max_length="40" name="x_ndecd_triage_2_0_demande_de_partage" text_index="true" type="collection">
+        <element label="Accusé de réception" max_length="255" name="accuse_de_reception" type="boolean"/>
+        <element label="Accuse d'envoi" max_length="255" name="accuse_d_envoi" type="boolean"/>
+        <element label="Attachment" max_length="255" name="attachment" type="file_attachment"/>
+        <element label="Adresse courriel supplémentaire" max_length="250" name="autre_e_mail" type="email"/>
+        <element label="autre situation explication" max_length="40" name="autre_situation_explication" type="string"/>
+        <element choice="3" choice_field="classe_distincte" choice_table="x_ndecd_cecce_base_options" label="Classe distinct" max_length="40" name="classe_distinct" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="classe distinc vrai faux" max_length="40" name="classe_distinc_vrai_faux" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="Non" sequence="1" value="no"/>
+            </choice>
+        </element>
+        <element choice="1" label="Consentement Parental verbal" max_length="40" name="consentement_parental_verbal" type="choice">
+            <choice/>
+        </element>
+        <element label="Date du rapport" max_length="255" name="date_du_rapport" type="glide_date"/>
+        <element label="Élève" mandatory="true" max_length="32" name="eleve" reference="sys_user" type="reference"/>
+        <element choice="1" label="diagnostique" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="TSA" sequence="0" value="TSA"/>
+                <element inactive_on_update="false" label="HD/DIL" sequence="1" value="HD/DIL"/>
+                <element inactive_on_update="false" label="Aucun diagnostic ou autre diagnostic" sequence="2" value="aucun"/>
+            </choice>
+        </element>
+        <element choice="1" label="Interpretation formelle" max_length="40" name="interpretation_formelle" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="Oui"/>
+                <element inactive_on_update="false" label="Non" sequence="1" value="Non"/>
+            </choice>
+        </element>
+        <element label="linkattachment" max_length="200" name="linkattachment" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Raison" max_length="250" name="raison" type="string"/>
+        <element label="situation familiale de l eleve" max_length="100" name="situation_familiale_de_l_l_ve" type="string"/>
+        <element default="971e923f1b2b6510d991c882604bcbbe" function_definition="971e923f1b2b6510d991c882604bcbbe" label="topic_sysID" max_length="40" name="topic_sysid" type="string"/>
+        <element choice="1" label="Type de rapport" max_length="40" name="type_de_rapport" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Orthophonie" sequence="0" value="orthophonie"/>
+                <element inactive_on_update="false" label="Audiologie" sequence="1" value="Audiologie"/>
+            </choice>
+        </element>
+        <element choice="1" label="Type d'envoi du formulaire" max_length="40" name="type_d_envoi_du_rapport" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Par courriel" sequence="0" value="par courriel"/>
+                <element inactive_on_update="false" label="Par lettre" sequence="1" value="par lettre"/>
+            </choice>
+        </element>
+    </element>
+</database>

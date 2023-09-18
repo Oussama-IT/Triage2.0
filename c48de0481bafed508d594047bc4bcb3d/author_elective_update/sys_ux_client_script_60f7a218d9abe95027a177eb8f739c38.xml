@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <includes/>
+        <macroponent display_value="Landing Page">e8f7a21824abe950d03d9b643a336143</macroponent>
+        <name>data_row_3_data</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : null,
+  "message" : "{0} out of 5",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    const input = api.data.evam_popular_articles.compositeDataViews;
+    for (var i = 0; i < input.items.length; i++) {
+        var model = input.items[i].propValues;
+        if (model.model.rating != "") {
+            model.detailValueTwo = helpers.translateSync("{0} out of 5", model.model.rating);
+        }
+    }
+    return input;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-16 18:37:25</sys_created_on>
+        <sys_id>60f7a218d9abe95027a177eb8f739c38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>data_row_3_data</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_ux_client_script_60f7a218d9abe95027a177eb8f739c38</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-16 18:37:25</sys_updated_on>
+        <target/>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</application>
+        <file_path/>
+        <instance_id>65b29b3adb7ea19492f5684e13961931</instance_id>
+        <instance_name>ceccedev</instance_name>
+        <name>sys_ux_client_script_60f7a218d9abe95027a177eb8f739c38</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;includes/&gt;&lt;macroponent display_value="Landing Page"&gt;e8f7a21824abe950d03d9b643a336143&lt;/macroponent&gt;&lt;name&gt;data_row_3_data&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[ {
+  "code" : null,
+  "message" : "{0} out of 5",
+  "comment" : ""
+} ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    const input = api.data.evam_popular_articles.compositeDataViews;
+    for (var i = 0; i &lt; input.items.length; i++) {
+        var model = input.items[i].propValues;
+        if (model.model.rating != "") {
+            model.detailValueTwo = helpers.translateSync("{0} out of 5", model.model.rating);
+        }
+    }
+    return input;
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;system&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-06-16 18:37:25&lt;/sys_created_on&gt;&lt;sys_id&gt;60f7a218d9abe95027a177eb8f739c38&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;data_row_3_data&lt;/sys_name&gt;&lt;sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Triage 2.0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_60f7a218d9abe95027a177eb8f739c38&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-06-16 18:37:25&lt;/sys_updated_on&gt;&lt;target/&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-836187188</payload_hash>
+        <record_name>data_row_3_data</record_name>
+        <reverted_from/>
+        <source>008de0481bafed508d594047bc4bcb4c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2023-06-16 18:37:33</sys_created_on>
+        <sys_id>47f7a6181babe950d991c882604bcb0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188c57f997f0000001</sys_recorded_at>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-06-16 18:37:33</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>cbf7a618e8abe95010d9acec446fcb0d</update_guid>
+        <update_guid_history>cbf7a618e8abe95010d9acec446fcb0d:-836187188</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-06-16 19:21:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>0090f232138949d8b424a1ac5c648c10</sys_id>
+        <sys_metadata>60f7a218d9abe95027a177eb8f739c38</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>data_row_3_data</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_scope_delete display_value="">14b51fc3ce834665bcd5327947e6f949</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_60f7a218d9abe95027a177eb8f739c38</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_60f7a218d9abe95027a177eb8f739c38">47f7a6181babe950d991c882604bcb0e</sys_update_version>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-06-16 19:21:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

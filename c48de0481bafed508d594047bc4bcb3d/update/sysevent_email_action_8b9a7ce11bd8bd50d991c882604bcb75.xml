@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation</collection>
+        <condition table="x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation">type_d_envoi_du_rapport=Par courriel^autre_e_mailISNOTEMPTY^approvalCHANGESTOapproved^EQ<item display_value="Par courriel" endquery="false" field="type_d_envoi_du_rapport" goto="false" newquery="false" operator="=" or="false" value="Par courriel"/>
+            <item endquery="false" field="autre_e_mail" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="CHANGESTO" or="false" value="approved"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from>ne-pas-répondre équipe triage&lt;e_triage@ecolecatholique.ca&gt;</from>
+        <generation_type>engine</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>Bonjour ${l_ve.u_tuteur},</p>
+<p>L'&eacute;quipe &eacute;cole de votre enfant ${l_ve.first_name} ${l_ve.last_name} souhaite acheminer une demande de consultation avec possibilit&eacute; d'&eacute;valuation aupr&egrave;s du Service d'orthophonie du Conseil des &eacute;coles catholiques du Centre-Est.</p>
+<p>Afin de confirmer votre consentement &agrave; ce service, merci de prendre connaissance du document ci-joint, puis, de bien vouloir acheminer un courriel &agrave; l'adresse : ${opened_by.email} en y ajoutant le message ci-dessous dans un d&eacute;lai de 10 jours ouvrables :</p>
+<p>Je, soussign&eacute;, _________________ (nom du parent/tuteur l&eacute;gal taper), confirme avoir pris connaissance des informations contenues dans le document qui m'a &eacute;t&eacute; partag&eacute; en lien avec la demande de service en orthophonie : Demande de consultation avec possibilit&eacute; d'&eacute;valuation.</p>
+<p>Je comprends et je suis d'accord avec les informations qui s'y retrouvent, notamment, je comprends que :</p>
+<p>-le formulaire d&rsquo;autorisation sign&eacute; est valide pour l&rsquo;ensemble des services offerts en orthophonie et qu&rsquo;il est valide pour la dur&eacute;e de la scolarit&eacute; de l&rsquo;&eacute;l&egrave;ve, &agrave; moins que le consentement soit retir&eacute; ou qu&rsquo;une dur&eacute;e sp&eacute;cifique soit prescrite par moi, parent/tuteur l&eacute;gal;</p>
+<p>-si un autre service est requis, l&rsquo;orthophoniste communiquera moi afin d&rsquo;en discuter, et ce, au besoin;</p>
+<p>-je peux retirer mon consentement &agrave; ce service &agrave; tout moment;</p>
+<p>-qu'il est entendu que tout r&eacute;sultat ou renseignement pertinent ayant trait au pr&eacute;sent service me sera communiqu&eacute;, ainsi qu&rsquo;aux intervenantes et intervenants scolaires qui &oelig;uvrent aupr&egrave;s de l&rsquo;&eacute;l&egrave;ve susmentionn&eacute;/e suite &agrave; mon consentement;</p>
+<p>-sous r&eacute;serve des lois applicables en mati&egrave;re de divulgation ou d&rsquo;acc&egrave;s &agrave; l&rsquo;information et en mati&egrave;re de protection de l&rsquo;enfance, qu&rsquo;aucun r&eacute;sultat ou renseignement ne sera communiqu&eacute; &agrave; des personnes qui ne sont pas au service du Conseil des &eacute;coles catholiques du Centre-Est sans mon consentement &eacute;crit.</p>
+<p>Si vous avez des questions, nous vous prions de communiquer avec un membre de l'&eacute;quipe &eacute;cole de votre enfant.</p>
+<p>Veuillez noter que, &agrave; la suite de la r&eacute;ception de votre autorisation, la demande de service sera achemin&eacute;e au Service d'orthophonie du CECCE par l'&eacute;quipe &eacute;cole et, lorsque le dossier sera d&eacute;l&eacute;gu&eacute; &agrave; un(e) orthophoniste, celle/celui-ci communiquera avec vous afin de vous donner des informations suppl&eacute;mentaires et obtenir votre consentement &eacute;clair&eacute;.</p>
+<p>Merci.</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Demande de consentement parental Autre</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>autre_e_mail</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to>ne-pas-répondre équipe triage&lt;e_triage@ecolecatholique.ca&gt;</reply_to>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Demande de consentement parental</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-27 14:39:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8b9a7ce11bd8bd50d991c882604bcb75</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Demande de consentement parental Autre</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sysevent_email_action_8b9a7ce11bd8bd50d991c882604bcb75</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-09-13 15:05:45</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_data_policy2">
+    <sys_data_policy2 action="DELETE">
+        <active>false</active>
+        <apply_import_set>true</apply_import_set>
+        <apply_soap>true</apply_soap>
+        <conditions table="x_ndecd_triage_2_0_demande_de_partage">type_d_envoi_du_rapport!=rejeter^EQ<item display_value="Rejeter" endquery="false" field="type_d_envoi_du_rapport" goto="false" newquery="false" operator="!=" or="false" value="rejeter"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <enforce_ui>true</enforce_ui>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table>x_ndecd_triage_2_0_demande_de_partage</model_table>
+        <reverse_if_false>true</reverse_if_false>
+        <short_description>CECCE add reject when task rejected</short_description>
+        <sys_class_name>sys_data_policy2</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-19 14:41:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6dfda3fe1b48f5508d594047bc4bcb67</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>CECCE add reject when task rejected</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_data_policy2_6dfda3fe1b48f5508d594047bc4bcb67</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-08-19 16:09:14</sys_updated_on>
+    </sys_data_policy2>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</application>
+        <file_path/>
+        <instance_id>65b29b3adb7ea19492f5684e13961931</instance_id>
+        <instance_name>ceccedev</instance_name>
+        <name>sys_data_policy2_6dfda3fe1b48f5508d594047bc4bcb67</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_data_policy2"><sys_data_policy2 action="INSERT_OR_UPDATE"><active>false</active><apply_import_set>true</apply_import_set><apply_soap>true</apply_soap><conditions table="x_ndecd_triage_2_0_demande_de_partage">type_d_envoi_du_rapport!=rejeter^EQ<item display_value="Rejeter" endquery="false" field="type_d_envoi_du_rapport" goto="false" newquery="false" operator="!=" or="false" value="rejeter"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></conditions><description/><enforce_ui>true</enforce_ui><inherit>false</inherit><model_id/><model_table>x_ndecd_triage_2_0_demande_de_partage</model_table><reverse_if_false>true</reverse_if_false><short_description>CECCE add reject when task rejected</short_description><sys_class_name>sys_data_policy2</sys_class_name><sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by><sys_created_on>2023-07-19 14:41:13</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>6dfda3fe1b48f5508d594047bc4bcb67</sys_id><sys_mod_count>3</sys_mod_count><sys_name>CECCE add reject when task rejected</sys_name><sys_overrides/><sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package><sys_policy/><sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope><sys_update_name>sys_data_policy2_6dfda3fe1b48f5508d594047bc4bcb67</sys_update_name><sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by><sys_updated_on>2023-08-19 16:09:14</sys_updated_on></sys_data_policy2></record_update>]]></payload>
+        <payload_hash>1096472832</payload_hash>
+        <record_name>CECCE add reject when task rejected</record_name>
+        <reverted_from/>
+        <source>008de0481bafed508d594047bc4bcb4c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-08-19 16:09:14</sys_created_on>
+        <sys_id>2acb67301b3879108d594047bc4bcbae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18a0e8ece960000001</sys_recorded_at>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-08-19 16:09:14</sys_updated_on>
+        <type>Data Policy</type>
+        <update_guid>eacb67305b387910f92214cb312acead</update_guid>
+        <update_guid_history>eacb67305b387910f92214cb312acead:1096472832,b971f336d988f5501f470cad454ff530:39005985,bfde67322788f550b4c634b9a2723d5e:-248722141,fa5eebfe3548f5502fcb8921a176d7e9:-1939797726</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-08-19 16:13:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_data_policy2">sys_data_policy2</sys_db_object>
+        <sys_id>176caba973e544c488978745e588a9d9</sys_id>
+        <sys_metadata>6dfda3fe1b48f5508d594047bc4bcb67</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CECCE add reject when task rejected</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_parent display_value="Demande de partage">f71e6c481bafed508d594047bc4bcb8f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_scope_delete display_value="">14b51fc3ce834665bcd5327947e6f949</sys_scope_delete>
+        <sys_update_name>sys_data_policy2_6dfda3fe1b48f5508d594047bc4bcb67</sys_update_name>
+        <sys_update_version display_value="sys_data_policy2_6dfda3fe1b48f5508d594047bc4bcb67">2acb67301b3879108d594047bc4bcbae</sys_update_version>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-08-19 16:13:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>false</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation</collection>
+        <condition table="x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation">assigned_toVALCHANGES^accuse_de_reception=true^EQ<item endquery="false" field="assigned_to" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="accuse_de_reception" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from>ne-pas-répondre équipe triage&lt;e_triage@ecolecatholique.ca&gt;</from>
+        <generation_type>engine</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>Bonjour ${opened_by.first_name} ${opened_by.last_name}</p>
+<p>Nous d&eacute;sirons vous informer que votre demande de consultation avec possibilit&eacute; d'&eacute;valuation concernant l'&eacute;l&egrave;ve ${l_ve.first_name} ${l_ve.last_name}(N&deg; ${number}) a &eacute;t&eacute; attribu&eacute;e &agrave; l'orthophoniste ${assigned_to.first_name}, ${assigned_to.last_name} .&nbsp;</p>
+<p>L'orthophoniste communiquera avec vous dans les plus brefs d&eacute;lais.</p>
+<p>Merci<br />&nbsp;</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Notification demandeur orthophoniste Affecte</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>opened_by</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to>ne-pas-répondre équipe triage&lt;e_triage@ecolecatholique.ca&gt;</reply_to>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Votre demande de consultation avec possibilité d'évaluation N° ${number}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-27 14:06:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ad23f8a91b98bd50d991c882604bcb03</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Notification demandeur orthophoniste Affecte</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sysevent_email_action_ad23f8a91b98bd50d991c882604bcb03</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-09-13 15:07:09</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

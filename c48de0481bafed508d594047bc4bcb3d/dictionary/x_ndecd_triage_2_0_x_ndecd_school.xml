@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="87da6be31b6f65108d594047bc4bcb3a" label="School" max_length="40" name="x_ndecd_triage_2_0_x_ndecd_school" text_index="true" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="ID" max_length="40" name="id" type="string"/>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element label="Name" max_length="400" name="name" type="string"/>
+        <index name="index">
+            <element name="location"/>
+        </index>
+    </element>
+</database>

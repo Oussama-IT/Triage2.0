@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="432061e21baf61108d594047bc4bcbc2" extends="task" label="Demande de consultation avec possibilité d’évaluation" max_length="40" name="x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation" text_index="true" type="collection">
+        <element label="Accusé de réception" max_length="255" name="accuse_de_reception" type="boolean"/>
+        <element label="Accusé d'envoi" max_length="255" name="accuse_d_envoi" type="boolean"/>
+        <element label="Assigné à moi" max_length="255" name="assigne_to_me" type="boolean"/>
+        <element label="Autres diagnostic :" max_length="200" name="autres_diagnostic2" type="string"/>
+        <element label="Autre Communication" max_length="40" name="autre_communication" type="string"/>
+        <element label="autre diagnostic" max_length="100" name="autre_diagnostic" type="string"/>
+        <element label="Adresse courriel supplémentaire" max_length="255" name="autre_e_mail" type="email"/>
+        <element label="Autre (Langue dominante) :" max_length="40" name="autre_langue_dominante" type="string"/>
+        <element label="Autre(Langue parlé) :" max_length="40" name="autre_langue_parl" type="string"/>
+        <element label="Autre (Orthophonie) :" max_length="40" name="autre_orthophonie" type="string"/>
+        <element label="veuillez preciser: " max_length="100" name="autre_resp1" type="string"/>
+        <element label="autre situation(explication) :" max_length="400" name="autre_situation_explication" type="string"/>
+        <element label="Autre Strategie" max_length="100" name="autre_strategie" type="string"/>
+        <element label="L’élève éprouve des difficultés à utiliser différentes fonctions du langage" max_length="4000" name="a_l_l_ve_prouve_des_difficult_s_utiliser_diff_rentes_fonctions_du_langage" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element choice="1" label="Cette demande de service en orthophonie a été formellement recommandée par une o" max_length="40" name="cette_demande_de_service_en_orthophonie_a_t_formellement_recommand_e_par_une_o" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="Classe distinct" max_length="40" name="classe_distinct" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Classe DA (Trouble d’apprentissage)" sequence="0" value="DA"/>
+                <element inactive_on_update="false" label="Classe DAF (Difficulté d’apprentissage - frontière)" sequence="1" value="DAF"/>
+                <element inactive_on_update="false" label="Classe DIL (Déficience intellectuelle légère)" sequence="2" value="DIL"/>
+                <element inactive_on_update="false" label="Classe HD (Handicap de développement)" sequence="3" value="HID"/>
+                <element inactive_on_update="false" label="Classe TSA (Trouble du spectre de l’autisme)" sequence="4" value="TSA"/>
+            </choice>
+        </element>
+        <element choice="1" label="classe distinc vrai faux" max_length="40" name="classe_distinc_vrai_faux" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="Non" sequence="1" value="no"/>
+            </choice>
+        </element>
+        <element label="Communication alternative" max_length="4000" name="communication_alternative" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element choice="1" label="consentement parental" max_length="40" name="consetement_parental" type="boolean">
+            <choice>
+                <element inactive_on_update="false" label="True" sequence="0" value="true"/>
+                <element inactive_on_update="false" label="False" sequence="1"/>
+            </choice>
+        </element>
+        <element label="Démontre des difficultés en situations sociales:" max_length="4000" name="c_d_montre_des_difficult_s_en_situations_sociales" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element label="Date (Audiologie) :" max_length="40" name="date_audiologie" type="glide_date"/>
+        <element label="Date du Dépist’Écrit: " max_length="40" name="date_du_d_pist_crit" type="glide_date_time"/>
+        <element label="Date début (éducateur-ressource EED) :" max_length="40" name="date_d_but_ducateur_ressource_eed" type="glide_date"/>
+        <element label="Date début (EEAS-EED, Coach ACA) :" max_length="40" name="date_d_but_eeas_eed_coach_aca" type="glide_date"/>
+        <element label="Date début (programme ALF/PANA) :" max_length="40" name="date_d_but_programme_alf_pana" type="glide_date"/>
+        <element label="Date début (programme destiné à l’EED) :" max_length="40" name="date_d_but_programme_destin_l_eed" type="glide_date"/>
+        <element label="Date début (programme d’intervention ROI) :" max_length="40" name="date_d_but_programme_d_intervention_roi" type="glide_date"/>
+        <element label="Date début (programme d’intervention SOI) :" max_length="40" name="date_d_but_programme_d_intervention_soi" type="glide_date"/>
+        <element label="Date début (programme ISLÉ1) :" max_length="40" name="date_d_but_programme_isl_1" type="glide_date"/>
+        <element label="Date début (programme SLI) :" max_length="40" name="date_d_but_programme_sli" type="glide_date"/>
+        <element label="Date (Ergothérapie)" max_length="40" name="date_ergoth_rapie" type="glide_date"/>
+        <element label="Date fin (éducateur-ressource EED) :" max_length="40" name="date_fin_ducateur_ressource_eed" type="glide_date"/>
+        <element label="Date fin (EEAS-EED, Coach ACA) :" max_length="40" name="date_fin_eeas_eed_coach_aca" type="glide_date"/>
+        <element label="Date fin (programme ALF/PANA) :" max_length="40" name="date_fin_programme_alf_pana" type="glide_date"/>
+        <element label="Date fin (programme destiné à l’EED) :" max_length="40" name="date_fin_programme_destin_l_eed" type="glide_date"/>
+        <element label="Date fin (programme d’intervention ROI) :" max_length="40" name="date_fin_programme_d_intervention_roi" type="glide_date"/>
+        <element label="Date fin (programme d’intervention SOI) :" max_length="40" name="date_fin_programme_d_intervention_soi" type="glide_date"/>
+        <element label="Date fin (programme ISLÉ1) :" max_length="40" name="date_fin_programme_isl_1" type="glide_date"/>
+        <element label="Date fin (programme SLI) :" max_length="40" name="date_fin_programme_sli" type="glide_date"/>
+        <element label="Date (Optométrie) " max_length="40" name="date_optom_trie" type="glide_date"/>
+        <element label="Date (Pratique privée)" max_length="40" name="date_pratique_priv_e" type="glide_date"/>
+        <element label="Date (Premiers Mots / CTEO / Programme préscolaire en orthophonie)" max_length="40" name="date_premiers_mots_cteo_programme_pr_scolaire_en_orthophonie" type="glide_date"/>
+        <element label="Date (Psychologie)" max_length="40" name="date_psychologie" type="glide_date"/>
+        <element label="Date (Recommandation)" max_length="40" name="date_recommandation" type="glide_date"/>
+        <element label="Date (SRMS)" max_length="40" name="date_srms" type="glide_date"/>
+        <element label="Date (Travail social)" max_length="40" name="date_travail_social" type="glide_date"/>
+        <element label="demande d'assignation" max_length="32" name="demande_d_assignation" reference="sys_user" type="reference"/>
+        <element label="Depuis quand :" max_length="40" name="depuis_quand" type="glide_date"/>
+        <element choice="1" label="Des difficultés langagières orales (compréhension ou expression) sont-elles obse" max_length="40" name="des_difficult_s_langagi_res_orales_compr_hension_ou_expression_sont_elles_obse" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="oui" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="non" sequence="1" value="no"/>
+            </choice>
+        </element>
+        <element choice="1" label="Des difficultés sont-elles observées au niveau de la communication sociale/habil" max_length="40" name="des_difficult_s_sont_elles_observ_es_au_niveau_de_la_communication_sociale_habil" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="oui" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="non" sequence="1" value="no"/>
+            </choice>
+        </element>
+        <element choice="1" label="Des difficultés sont-elles observées au niveau de la lecture ou de l’écriture?" max_length="40" name="des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="oui" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="non" sequence="1" value="no"/>
+            </choice>
+        </element>
+        <element choice="1" label="De façon générale, est-ce que l’élève profite des interventions offertes?" max_length="40" name="de_fa_on_g_n_rale_est_ce_que_l_l_ve_profite_des_interventions_offertes" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+                <element inactive_on_update="false" label="s/o" value="s_o"/>
+                <element inactive_on_update="false" label="un peu" value="a_little"/>
+            </choice>
+        </element>
+        <element label="Diagnostique médical officiel" max_length="4000" name="diagnostique_m_dical_officiel" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element label="éducateur-ressource EED date debut" max_length="40" name="ducateur_ressource_eed_date_debut" type="glide_date_time"/>
+        <element label="éducateur-ressource EED date fin" max_length="40" name="ducateur_ressource_eed_date_fin" type="glide_date_time"/>
+        <element label="éducateur-ressource EED frequence (heure/semaine)" max_length="100" name="ducateur_ressource_eed_frequence_heure_semaine" type="string"/>
+        <element label="EEAS-EED, Coach ACA date debut" max_length="40" name="eeas_eed_coach_aca_date_debut" type="glide_date_time"/>
+        <element label="EEAS-EED, Coach ACA date fin" max_length="40" name="eeas_eed_coach_aca_date_fin" type="glide_date_time"/>
+        <element label="EEAS-EED, Coach ACA frequence (heure/semaine)" max_length="100" name="eeas_eed_coach_aca_frequence_heure_semaine" type="string"/>
+        <element choice="1" label="En cours (Audiologie)" max_length="40" name="en_cours_audiologie" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" value="no"/>
+                <element inactive_on_update="false" label="Non" language="fq" value="no"/>
+                <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
+                <element inactive_on_update="false" label="Yes" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="En cours (Ergothérapie)" max_length="40" name="en_cours_ergoth_rapie" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" value="no"/>
+                <element inactive_on_update="false" label="Yes" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="En cours (Optométrie) " max_length="40" name="en_cours_optom_trie" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" value="no"/>
+                <element inactive_on_update="false" label="Non" language="fq" value="no"/>
+                <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
+                <element inactive_on_update="false" label="Yes" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="En cours (Psychologie) " max_length="40" name="en_cours_psychologie" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" value="no"/>
+                <element inactive_on_update="false" label="Yes" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="En cours (Travail social)" max_length="40" name="en_cours_travail_social" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" value="no"/>
+                <element inactive_on_update="false" label="Non" language="fq" value="no"/>
+                <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
+                <element inactive_on_update="false" label="Yes" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="Est ce que des difficult s langagi res sont observ es dans sa langue dominante p" max_length="40" name="est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante_p" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="Est-ce que les difficultés observées ont un impact sur les apprentissages scolai" max_length="40" name="est_ce_que_les_difficult_s_observ_es_ont_un_impact_sur_les_apprentissages_scolai" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="Est-ce que les parents sont en accord avec cette demande de placement?" max_length="40" name="est_ce_que_les_parents_sont_en_accord_avec_cette_demande_de_placement" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="incertain" value="incertain"/>
+                <element inactive_on_update="false" label="non" value="non"/>
+                <element inactive_on_update="false" label="oui" value="oui"/>
+            </choice>
+        </element>
+        <element choice="1" label="diagnostique" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">
+            <choice>
+                <element inactive="true" inactive_on_update="true" sequence="0"/>
+                <element inactive_on_update="false" label="Aucun diagnostic ou autre diagnostic" sequence="0" value="aucun"/>
+                <element inactive_on_update="false" label="TSA" sequence="1" value="TSA"/>
+                <element inactive_on_update="false" label="HD/DIL" sequence="2" value="HD/DIL"/>
+            </choice>
+        </element>
+        <element choice="1" label="Est-ce que l’élève a un PEI en communication orale (langage expressif et/ou réce" max_length="40" name="est_ce_que_l_l_ve_a_un_pei_en_communication_orale_langage_expressif_et_ou_r_ce" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Non" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Oui - Adapté" sequence="1" value="yes-adapted"/>
+                <element inactive_on_update="false" label="Oui - Modifié" sequence="2" value="yes-modified"/>
+            </choice>
+        </element>
+        <element choice="1" choice_field="adapte" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève a un PEI en lecture et/ou écriture?" max_length="40" name="est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Est-ce que l’élève est en attente d’une évaluation pouvant mener à un diagnostic" max_length="40" name="est_ce_que_l_l_ve_est_en_attente_d_une_valuation_pouvant_mener_un_diagnostic" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="Est-ce que l’élève présente un diagnostic médical officiel?" max_length="40" name="est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="Est-ce qu’un placement est envisagé pour l’élève? " max_length="40" name="est_ce_qu_un_placement_est_envisag_pour_l_l_ve" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element label="L’élève éprouve des difficultés au niveau du jeu." max_length="4000" name="e_l_l_ve_prouve_des_difficult_s_au_niveau_du_jeu" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element label="Fréquence (éducateur-ressource EED) :" max_length="40" name="fr_quence_ducateur_ressource_eed" type="string"/>
+        <element label="Fréquence (EEAS-EED, Coach ACA) :" max_length="20" name="fr_quence_eeas_eed_coach_aca" type="string"/>
+        <element label="Fréquence (programme ALF/PANA) :" max_length="40" name="fr_quence_programme_alf_pana" type="string"/>
+        <element label="Fréquence (programme destiné à l’EED) :" max_length="40" name="fr_quence_programme_destin_l_eed" type="string"/>
+        <element label="Fréquence (programme d’intervention ROI) :" max_length="20" name="fr_quence_programme_d_intervention_roi" type="string"/>
+        <element label="Fréquence (programme d’intervention SOI) :" max_length="40" name="fr_quence_programme_d_intervention_soi" type="string"/>
+        <element label="Fréquence (programme ISLÉ1) :" max_length="40" name="fr_quence_programme_isl_1" type="string"/>
+        <element label="Fréquence (programme SLI) :" max_length="40" name="fr_quence_programme_sli" type="string"/>
+        <element choice="3" choice_field="je_comprends" choice_table="x_ndecd_cecce_base_options" label="Je comprends l’élève" max_length="40" name="je_comprends_l_l_ve" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Je comprends l’élève % du temps (impact des difficultés de prononciation et non " max_length="40" name="je_comprends_l_l_ve_du_temps_impact_des_difficult_s_de_prononciation_et_non" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="100%" value="100"/>
+                <element inactive_on_update="false" label="25%" value="25"/>
+                <element inactive_on_update="false" label="50%" value="50"/>
+                <element inactive_on_update="false" label="75%" value="75"/>
+            </choice>
+        </element>
+        <element label="Langue dominante de l’élève (la langue avec laquelle l’élève est le plus à l’ais" max_length="100" name="langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element label="Langue(s) parlée(s) à la maison :" max_length="100" name="langue_s_parl_e_s_la_maison" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element choice="1" label="La qualité de la voix de l’élève semble anormale (ex. rauque, nasale), et ce, de" max_length="40" name="la_qualit_de_la_voix_de_l_l_ve_semble_anormale_ex_rauque_nasale_et_ce_dela_quali" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element label="Les stratégies de différenciation et les adaptations suivantes ont été mises à l" max_length="4000" name="les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element label="linkattachment" max_length="200" name="linkattachment" type="string"/>
+        <element choice="1" label="L’enfant présente-il des difficultés de la parole (par ex. bégaiement, articulat" max_length="40" name="l_enfant_pr_sente_il_des_difficult_s_de_la_parole_par_ex_b_gaiement_articulat" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’enfant utilise-t-il la parole comme moyen principal de communication à l’école" max_length="40" name="l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève a de la difficulté à comprendre les consignes." max_length="40" name="l_l_ve_a_de_la_difficult_comprendre_les_consignes" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Jamais" sequence="0" value="never"/>
+                <element inactive_on_update="false" label="Parfois" sequence="1" value="sometimes"/>
+                <element inactive_on_update="false" label="Souvent" sequence="2" value="often"/>
+                <element inactive_on_update="false" label="Toujours" sequence="3" value="always"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève a de la difficulté à comprendre les questions." max_length="40" name="l_l_ve_a_de_la_difficult_comprendre_les_questions" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Jamais" sequence="0" value="never"/>
+                <element inactive_on_update="false" label="Parfois" sequence="1" value="sometimes"/>
+                <element inactive_on_update="false" label="Souvent" sequence="2" value="often"/>
+                <element inactive_on_update="false" label="Toujours" sequence="3" value="always"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève a de la difficulté à prononcer certains sons (autres que /s/ et /z/)." max_length="40" name="l_l_ve_a_de_la_difficult_prononcer_certains_sons_autres_que_s_et_zl_eleve_a_de_l" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève a de la difficulté à raconter un évènement vécu récemment." max_length="40" name="l_l_ve_a_de_la_difficult_raconter_un_v_nement_v_cu_r_cemment" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Toujours" value="always"/>
+                <element inactive_on_update="false" label="Jamais" sequence="0" value="never"/>
+                <element inactive_on_update="false" label="Parfois" sequence="1" value="sometimes"/>
+                <element inactive_on_update="false" label="Souvent" sequence="2" value="often"/>
+            </choice>
+        </element>
+        <element label="L’élève a-t-il reçu des services professionnels dans les domaines suivants (coch" max_length="4000" name="l_l_ve_a_t_il_re_u_des_services_professionnels_dans_les_domaines_suivants_coch" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element choice="1" label="L’élève a-t-il été évalué en orthophonie dans les deux dernières années (Premier" max_length="40" name="l_l_ve_a_t_il_t_valu_en_orthophonie_dans_les_deux_derni_res_ann_es_premier" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève bégaie (répétitions de sons ou de syllabes, prolongations de sons, bloca" max_length="40" name="l_l_ve_b_gaie_r_p_titions_de_sons_ou_de_syllabes_prolongations_de_sons_bloca" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève bénéficie-t-il d’un plan d’enseignement individualisé (PEI) ?" max_length="40" name="l_l_ve_b_n_ficie_t_il_d_un_plan_d_enseignement_individualis_pei" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui - adaptations seulement" value="yes_adaptations_only"/>
+                <element inactive_on_update="false" label="oui - attente(s) différente(s)" value="yes_different_expectation"/>
+                <element inactive_on_update="false" label="oui - modifié" value="Yes_modified"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève est conscient de ses difficultés, éprouve de la frustration ou se restre" max_length="40" name="l_l_ve_est_conscient_de_ses_difficult_s_prouve_de_la_frustration_ou_se_restre" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève produit des phrases grammaticalement incorrectes." max_length="40" name="l_l_ve_produit_des_phrases_grammaticalement_incorrectes" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Jamais" sequence="0" value="never"/>
+                <element inactive_on_update="false" label="Parfois" sequence="1" value="sometimes"/>
+                <element inactive_on_update="false" label="Souvent" sequence="2" value="often"/>
+                <element inactive_on_update="false" label="Toujours" sequence="3" value="always"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève produit des phrases incomplètes." max_length="40" name="l_l_ve_produit_des_phrases_incompl_tes" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Jamais" sequence="0" value="never"/>
+                <element inactive_on_update="false" label="Parfois" sequence="1" value="sometimes"/>
+                <element inactive_on_update="false" label="Souvent" sequence="2" value="often"/>
+                <element inactive_on_update="false" label="Toujours" sequence="3" value="always"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève éprouve des difficultés à créer et à maintenir des liens d’amitié." max_length="40" name="l_l_ve_prouve_des_difficult_s_cr_er_et_maintenir_des_liens_d_amiti" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="oui" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="non" sequence="1" value="no"/>
+            </choice>
+        </element>
+        <element label="L’élève éprouve des difficultés d’imitation :" max_length="4000" name="l_l_ve_prouve_des_difficult_s_d_imitation" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element choice="1" label="L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler" max_length="40" name="l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="oui" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="non" sequence="1" value="no"/>
+            </choice>
+        </element>
+        <element choice="1" choice_field="retard_en_lecture" choice_table="x_ndecd_cecce_base_options" label="L’élève éprouve un retard en écriture" max_length="40" name="l_l_ve_prouve_un_retard_en_criture" type="choice">
+            <choice/>
+        </element>
+        <element label="L’élève présente-il les facteurs de risque suivants (questionnez les parents)?" max_length="4000" name="l_l_ve_pr_sente_il_les_facteurs_de_risque_suivants_questionnez_les_parents" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element choice="1" choice_field="retard_en_lecture" choice_table="x_ndecd_cecce_base_options" label="L’élève présente un retard en lecture " max_length="40" name="l_l_ve_pr_sente_un_retard_en_lecture" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="L’élève s’exprime par de l’écholalie (répétition immédiate ou différée d’un énon" max_length="40" name="l_l_ve_s_exprime_par_de_l_cholalie_r_p_tition_imm_diate_ou_diff_r_e_d_un_non" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Jamais" sequence="0" value="never"/>
+                <element inactive="true" inactive_on_update="true" label="Parfois" sequence="0" value="sometimes"/>
+                <element inactive_on_update="false" label="Souvent" sequence="2" value="often"/>
+                <element inactive_on_update="false" label="Toujours" sequence="3" value="always"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève s’exprime verbalement dans le seul but de nommer, de réciter ou d’énumér" max_length="40" name="l_l_ve_s_exprime_verbalement_dans_le_seul_but_de_nommer_de_r_citer_ou_d_num_r" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="oui" sequence="0" value="yes"/>
+                <element inactive_on_update="false" label="non" sequence="1" value="no"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève utilise des mots imprécis (ex. chose, ça…)/un vocabulaire plus pauvre qu" max_length="40" name="l_l_ve_utilise_des_mots_impr_cis_ex_chose_a_un_vocabulaire_plus_pauvre_qu" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Jamais" sequence="0" value="never"/>
+                <element inactive_on_update="false" label="Parfois" sequence="1" value="sometimes"/>
+                <element inactive_on_update="false" label="Souvent" sequence="2" value="often"/>
+                <element inactive_on_update="false" label="Toujours" sequence="3" value="always"/>
+            </choice>
+        </element>
+        <element choice="1" label="L’élève utilise-t-il un système de communication alternative?" max_length="40" name="l_l_ve_utilise_t_il_un_syst_me_de_communication_alternative" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element label="Élève" mandatory="true" max_length="32" name="l_ve" reference="sys_user" type="reference"/>
+        <element choice="1" label="Note en écriture au dernier bulletin" max_length="40" name="note_en_criture_au_dernier_bulletin" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="A ou B" sequence="0" value="aoub"/>
+                <element inactive_on_update="false" label="C" sequence="1" value="c"/>
+                <element inactive_on_update="false" label="D" sequence="2" value="d"/>
+            </choice>
+        </element>
+        <element choice="1" label="Note en lecture au dernier bulletin" max_length="40" name="note_en_lecture_au_dernier_bulletin" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="A ou B" sequence="0" value="aoub"/>
+                <element inactive_on_update="false" label="C" sequence="1" value="c"/>
+                <element inactive_on_update="false" label="D" sequence="2" value="d"/>
+            </choice>
+        </element>
+        <element label="Options" max_length="1000" name="options" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" reference_qual="question=Options^EQ" reference_qual_condition="question=Options^EQ" type="glide_list"/>
+        <element label="Orthophonie :" max_length="4000" name="orthophonie" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element choice="1" label="Parole : (en cas de doute ou de questionnement, veuillez communiquer avec l’orth" max_length="40" name="parole_en_cas_de_doute_ou_de_questionnement_veuillez_communiquer_avec_l_orth" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element label="Préciser :" max_length="200" name="pr_ciser" type="string"/>
+        <element choice="1" label="Précisez la classe :" max_length="40" name="pr_cisez_la_classe" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Centre Jules-Léger Consortium Program (for students who are deaf or hard of hearing, deafblind, blind or low vision)" value="centre_jules_l_ger_consortium_program"/>
+                <element inactive="true" inactive_on_update="true" label="Centre Jules-Léger Consortium Program (for students who are deaf or hard of hearing, deafblind, blind or low vision)" sequence="0" value="centre_jules_l_ger_consortium_program"/>
+                <element inactive_on_update="false" label="Class for students with learning disabilities" sequence="1" value="class_for_students_with_learning_disabilities"/>
+                <element inactive_on_update="false" label="Class for students with intellectual functioning frontier category" sequence="2" value="class _or_students_with_intellectual_functioning_frontier_category"/>
+                <element inactive="true" inactive_on_update="true" label="Centre Jules-Léger Consortium Program (for students with severe learning disabilities)" sequence="3" value="programme_du_consortium_centre_jules_l_ger"/>
+                <element inactive_on_update="false" label="Class for students with mild developmental disabilities" sequence="3" value="class_for_students_with_mild_developmental_disabilities"/>
+                <element inactive_on_update="false" label="Class for Students with Autism Spectrum Disorder" sequence="4" value="class_for_students_with_autism_spectrum_disorder"/>
+                <element inactive_on_update="false" label="Class for students with developmental disabilities" sequence="5" value="class_for_students_with_developmental_disabilities"/>
+                <element inactive_on_update="false" label="Class for students with learning disabilities" language="fq" sequence="10" value="class_for_students_with_learning_disabilities"/>
+                <element inactive_on_update="false" label="Class for students with intellectual functioning frontier category" language="fq" sequence="20" value="class _or_students_with_intellectual_functioning_frontier_category"/>
+                <element inactive_on_update="false" label="Class for students with mild developmental disabilities" language="fq" sequence="30" value="class_for_students_with_mild_developmental_disabilities"/>
+                <element inactive_on_update="false" label="Class for Students with Autism Spectrum Disorder" sequence="40" value="class_for_students_with_autism_spectrum_disorder"/>
+                <element inactive_on_update="false" label="Class for students with developmental disabilities" sequence="50" value="class_for_students_with_developmental_disabilities"/>
+                <element inactive_on_update="false" label="Centre Jules-Léger Consortium Program (for students with severe learning disabilities)" sequence="60" value="programme_du_consortium_centre_jules_l_ger"/>
+            </choice>
+        </element>
+        <element label="Présicez :" max_length="100" name="pr_sicez2" type="string"/>
+        <element label="Quand :" max_length="40" name="quand" type="glide_date"/>
+        <element choice="1" label="Quelle est la note obtenue au bulletin le plus récent en communication orale?" max_length="40" name="quelle_est_la_note_obtenue_au_bulletin_le_plus_r_cent_en_communication_orale" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="A ou B" sequence="0" value="aoub"/>
+                <element inactive_on_update="false" label="C" sequence="1" value="c"/>
+                <element inactive_on_update="false" label="D" sequence="2" value="d"/>
+            </choice>
+        </element>
+        <element choice="1" label="Quel est le résultat obtenu au dernier Dépist’Écrit? " max_length="40" name="quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="n/a" sequence="0" value="n/a"/>
+                <element inactive_on_update="false" label="en difficulté" sequence="1" value="indifficulty"/>
+                <element inactive_on_update="false" label="à risque" sequence="2" value="inrisk"/>
+                <element inactive_on_update="false" label="dans la norme" sequence="3" value="inthestandard"/>
+            </choice>
+        </element>
+        <element label="Raison de la demande" max_length="250" name="raison" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element label="Raison" max_length="4000" name="raison_1" type="string"/>
+        <element label="Recommandé par" max_length="40" name="recommand_par" type="string"/>
+        <element label="Résultat :" max_length="20" name="r_sultat" type="string"/>
+        <element label="score" max_length="20" name="score" type="decimal"/>
+        <element label="Score" max_length="40" name="score1" type="string"/>
+        <element choice="1" label="Situation familiale" max_length="40" name="situation_familiale" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec sa mère" sequence="0" value="fait l’objet d’une garde exclusive avec sa mère"/>
+                <element inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec son père" sequence="1" value="fait l’objet d’une garde exclusive avec son père"/>
+                <element inactive_on_update="false" label="Fait l’objet d’une garde partagée" sequence="2" value="fait l’objet d’une garde partagée"/>
+                <element inactive_on_update="false" label="Habite avec son tuteur ou sa tutrice" sequence="3" value="habite avec son tuteur ou sa tutrice"/>
+                <element inactive_on_update="false" label="Réside avec ses deux parents à la même adresse" sequence="4" value="réside avec ses deux parents à la même adresse"/>
+                <element inactive_on_update="false" label="Autre situation" sequence="5" value="autre situation"/>
+            </choice>
+        </element>
+        <element choice="3" default="non" label="Si la langue dominante de l’élève n’est pas le français, est-ce que des difficul" max_length="40" name="si_la_langue_dominante_de_l_l_ve_n_est_pas_le_fran_ais_est_ce_que_des_difficul" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element label="tableau ou cahier de communication" max_length="40" name="tableau_ou_cahier_de_communication" type="boolean"/>
+        <element label="testlist" max_length="1024" name="testlist" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element choice="1" label="Type d'envoi du rapport" max_length="40" name="type_d_envoi_du_rapport" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Par lettre" sequence="0" value="par lettre"/>
+                <element inactive_on_update="false" label="Par courriel" sequence="1" value="par courriel"/>
+            </choice>
+        </element>
+        <element choice="1" label="Une évaluation pédagogique a-t-elle été effectuée auprès de l’élève (ex. EFAR ou" max_length="40" name="une_valuation_p_dagogique_a_t_elle_t_effectu_e_aupr_s_de_l_l_ve_ex_efar_ou" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="non" value="no"/>
+                <element inactive_on_update="false" label="oui" value="yes"/>
+            </choice>
+        </element>
+        <element label="Veuillez cliquer sur les services et programmes dont l’élève a bénéficié ou béné" max_length="4000" name="veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element label="veuillez preciser2" max_length="100" name="veuillez_preciser2" type="string"/>
+    </element>
+</database>
