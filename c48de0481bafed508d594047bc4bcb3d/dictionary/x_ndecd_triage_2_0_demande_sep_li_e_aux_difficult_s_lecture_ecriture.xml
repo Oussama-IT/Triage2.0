@@ -15,10 +15,10 @@
         </element>
         <element label="Je confirme avoir obtenu le consentement parental verbal pour cette demande afin" max_length="40" name="consentement_parental_verbal" type="boolean"/>
         <element label="eleve" max_length="32" name="eleve" reference="sys_user" type="reference"/>
-        <element choice="1" label="Est-ce que l’achat d’outils technologiques a été recommandé par un(e) profession" max_length="40" name="est_ce_que_l_achat_d_outils_technologiques_a_t_recommand_par_un_e_profession" type="choice">
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’achat d’outils technologiques a été recommandé par un(e) profession" max_length="40" name="est_ce_que_l_achat_d_outils_technologiques_a_t_recommand_par_un_e_profession" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Oui" sequence="0" value="yes"/>
-                <element inactive_on_update="false" label="Non" sequence="1" value="no"/>
+                <element inactive="true" inactive_on_update="true" label="Oui" sequence="0" value="yes"/>
+                <element inactive="true" inactive_on_update="true" label="Non" sequence="1" value="no"/>
             </choice>
         </element>
         <element choice="1" label="Est-ce que l’élève a un diagnostic" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">

@@ -96,10 +96,10 @@
     var gsdirect = new GlideRecord('sysapproval_approver');
     gsdirect.addEncodedQuery('sysapproval.number=' + dir);
     gsdirect.query();
-
-    newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
-    newHtml = newHtml.replace("var91", gsdirect.getDisplayValue('approver'));
-
+    while (gsdirect.next()) {
+        newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
+        newHtml = newHtml.replace("var91", gsdirect.getDisplayValue('approver'));
+    }
     newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
     var eleve1 = current.getValue("eleve");
 
@@ -122,7 +122,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>00e85fb81b943d50d991c882604bcb2e</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>CECCE Generate PDF SEP</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -130,7 +130,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_00e85fb81b943d50d991c882604bcb2e</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-19 21:42:44</sys_updated_on>
+        <sys_updated_on>2023-09-20 16:03:45</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

@@ -80,9 +80,17 @@
     newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
     newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
     newHtml = newHtml.replace("var21", current.getDisplayValue('sys_created_on'));
-    newHtml = newHtml.replace("var90", current.getDisplayValue('sys_updated_by'));
-    newHtml = newHtml.replace("var91", current.getDisplayValue('sys_updated_by'));
     newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
+    // get direction name 
+    var dir = current.number;
+    var gsdirect = new GlideRecord('sysapproval_approver');
+    gsdirect.addEncodedQuery('sysapproval.number=' + dir);
+    gsdirect.query();
+    while (gsdirect.next()) {
+        newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
+        newHtml = newHtml.replace("var91", gsdirect.getDisplayValue('approver'));
+    }
+
 
 
     var eleve1 = current.getValue("eleve");
@@ -106,7 +114,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>04baf8a61bb76510d991c882604bcbae</sys_id>
-        <sys_mod_count>102</sys_mod_count>
+        <sys_mod_count>111</sys_mod_count>
         <sys_name>CECCE Generate PDF partage</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -114,7 +122,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_04baf8a61bb76510d991c882604bcbae</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-08-29 03:40:08</sys_updated_on>
+        <sys_updated_on>2023-09-20 15:59:00</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

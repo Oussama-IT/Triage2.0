@@ -32,16 +32,10 @@
 	
 	//Make attachment mandatory only based on conditions.
 	if(field == 'yes'){
-		
-		var cat_id = g_form.getValue('sysparm_item_guid');
-		var gr = new GlideRecord("sys_attachment");
-		gr.addQuery("table_name", "x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture"); //Update your table
-		gr.addQuery("table_sys_id", cat_id);
-		gr.query();
-		if (!gr.next()) {
-			g_form.addErrorMessage("aucune pièce jointe n'a été ajoutée.");
-			return false;
-		}
+		if(this.document.getElementsByClassName('get-attachment').length == 0) {
+            g_form.addErrorMessage("Aucune pièce jointe n'a été ajoutée.");
+            return false;
+        }
 	}
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -50,7 +44,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c8df8c341b38f510d991c882604bcb3d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>OnSumbit</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -58,7 +52,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_c8df8c341b38f510d991c882604bcb3d</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-08-25 15:13:35</sys_updated_on>
+        <sys_updated_on>2023-09-19 15:19:10</sys_updated_on>
         <table/>
         <type>onSubmit</type>
         <ui_type>10</ui_type>

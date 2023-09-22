@@ -30,11 +30,11 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
-	gs.info(JSON.stringify(current));
+    gs.info(JSON.stringify(current));
     var html;
     var newHtml;
     var gr = new GlideRecord('x_ndecd_triage_2_0_pdftemplate');
-	gr.addQuery('template_name','Demande de ROI');
+    gr.addQuery('template_name', 'Demande de ROI');
     gr.query();
     while (gr.next()) {
         html = gr.html_template;
@@ -51,43 +51,50 @@
     // Add your code here
     var targetTableSysId = current.sys_id;
     var tableName = 'x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi';
-    var pdfName = "Envoi d’un formulaire de consentement pour le programme ROI pour "+current.getDisplayValue('eleve');
+    var pdfName = "Envoi d’un formulaire de consentement pour le programme ROI pour " + current.getDisplayValue('eleve');
     newHtml = html.replace("var1", current.getDisplayValue('eleve'));
     newHtml = newHtml.replace("var15", current.getDisplayValue('consentement_parental_verbal'));
 
 
     newHtml = newHtml.replace("var9", current.getDisplayValue('raison_de_soumissions_de_formulaire'));
-	if (current.par_l_orthophoniste != '') {
-		newHtml = newHtml.replace("var8", current.getDisplayValue('par_l_orthophoniste'));		
-	}
-	else {
-		newHtml = newHtml.replace("var8", current.getDisplayValue('par_l_ducatrice_ressource_langage'));	
-	}
-    
+    if (current.par_l_orthophoniste != '') {
+        newHtml = newHtml.replace("var8", current.getDisplayValue('par_l_orthophoniste'));
+    } else {
+        newHtml = newHtml.replace("var8", current.getDisplayValue('par_l_ducatrice_ressource_langage'));
+    }
+
     newHtml = newHtml.replace("var7", current.getDisplayValue('nom_du_demandeur'));
     newHtml = newHtml.replace("var6", current.getDisplayValue('autre_situation_explication'));
     newHtml = newHtml.replace("var5", current.getDisplayValue('situation_familiale'));
     newHtml = newHtml.replace("var4", current.getDisplayValue('est_ce_que_l_l_ve_a_un_diagnostic'));
-	newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
-	newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
+    newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
+    newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
     newHtml = newHtml.replace("var21", current.getDisplayValue('sys_created_on'));
-	newHtml = newHtml.replace("var90", current.getDisplayValue('sys_updated_by'));
-	newHtml = newHtml.replace("var91", current.getDisplayValue('sys_updated_by'));
-	newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
+
+    var dir = current.number;
+    var gsdirect = new GlideRecord('sysapproval_approver');
+    gsdirect.addEncodedQuery('sysapproval.number=' + dir);
+    gsdirect.query();
+    while (gsdirect.next()) {
+        newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
+        newHtml = newHtml.replace("var91", gsdirect.getDisplayValue('approver'));
+    }
+
+    newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
     var eleve1 = current.getValue("eleve");
 
     var gselve = new GlideRecord('sys_user');
     gselve.get(eleve1);
-	
+
     newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_ecole'));
-	newHtml = newHtml.replace("var12", gselve.u_niso);
-	newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
+    newHtml = newHtml.replace("var12", gselve.u_niso);
+    newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
 
     var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
     var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
 
-	current.linkattachment="/sys_attachment.do?sys_id="+result.attachment_id;
-	current.update();
+    current.linkattachment = "/sys_attachment.do?sys_id=" + result.attachment_id;
+    current.update();
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_created_by>
@@ -95,7 +102,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>899b69401bc0b910d991c882604bcb48</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>CECCE Generae PDF ROI</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -103,7 +110,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_899b69401bc0b910d991c882604bcb48</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-08-28 19:22:53</sys_updated_on>
+        <sys_updated_on>2023-09-20 15:59:55</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

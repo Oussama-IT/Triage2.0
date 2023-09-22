@@ -280,13 +280,8 @@
                 <element inactive_on_update="false" label="oui" value="yes"/>
             </choice>
         </element>
-        <element choice="1" label="L’élève bénéficie-t-il d’un plan d’enseignement individualisé (PEI) ?" max_length="40" name="l_l_ve_b_n_ficie_t_il_d_un_plan_d_enseignement_individualis_pei" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="non" value="no"/>
-                <element inactive_on_update="false" label="oui - adaptations seulement" value="yes_adaptations_only"/>
-                <element inactive_on_update="false" label="oui - attente(s) différente(s)" value="yes_different_expectation"/>
-                <element inactive_on_update="false" label="oui - modifié" value="Yes_modified"/>
-            </choice>
+        <element choice="1" choice_field="pei" choice_table="x_ndecd_cecce_base_options" label="L’élève bénéficie-t-il d’un plan d’enseignement individualisé (PEI) ?" max_length="40" name="l_l_ve_b_n_ficie_t_il_d_un_plan_d_enseignement_individualis_pei" type="choice">
+            <choice/>
         </element>
         <element choice="1" label="L’élève est conscient de ses difficultés, éprouve de la frustration ou se restre" max_length="40" name="l_l_ve_est_conscient_de_ses_difficult_s_prouve_de_la_frustration_ou_se_restre" type="choice">
             <choice>
