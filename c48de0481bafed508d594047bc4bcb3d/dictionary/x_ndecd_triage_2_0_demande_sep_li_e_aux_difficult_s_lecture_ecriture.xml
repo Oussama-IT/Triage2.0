@@ -47,16 +47,7 @@
         <element label="Par qui?" max_length="32" name="par_qui" type="string"/>
         <element label=" À quelle date?" max_length="40" name="quelle_date" type="glide_date"/>
         <element label="Raison" max_length="250" name="raison" type="string"/>
-        <element choice="1" label="Situation familiale de l’élève" max_length="40" name="situation_familiale_de_l_l_ve" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Réside avec ses deux parents à la même adresse" sequence="0" value="réside avec ses deux parents à la même adresse"/>
-                <element inactive_on_update="false" label="Fait l’objet d’une garde partagée" sequence="1" value="fait l’objet d’une garde partagée"/>
-                <element inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec son père" sequence="2" value="fait l’objet d’une garde exclusive avec son père"/>
-                <element inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec sa mère" sequence="3" value="fait l’objet d’une garde exclusive avec sa mère"/>
-                <element inactive_on_update="false" label="Habite avec son tuteur ou sa tutrice" sequence="4" value="habite avec son tuteur ou sa tutrice"/>
-                <element inactive_on_update="false" label="Autre situation" sequence="5" value="autre situation"/>
-            </choice>
-        </element>
+        <element label="Situation familiale de l’élève" max_length="100" name="situation_familiale_de_l_l_ve" type="string"/>
         <element label="test" max_length="40" name="test" type="file_attachment"/>
         <element choice="1" label="Type d'envoi du rapport" max_length="40" name="type_d_envoi_du_rapport" type="choice">
             <choice>
