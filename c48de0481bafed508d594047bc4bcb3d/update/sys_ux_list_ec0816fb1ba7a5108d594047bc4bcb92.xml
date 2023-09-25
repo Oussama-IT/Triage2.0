@@ -3,7 +3,9 @@
         <active>true</active>
         <category display_value="Demande de consultation">708716fb1ba7a5108d594047bc4bcb89</category>
         <columns>number,l_ve.u_nom_de_l_ecole,l_ve,l_ve.u_classe,state,assigned_to,score</columns>
-        <condition table="x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation">assigned_toISEMPTY<item endquery="false" field="assigned_to" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+        <condition table="x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation">assigned_toISEMPTY^active=true^accuse_de_reception=true<item endquery="false" field="assigned_to" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="false" field="accuse_de_reception" goto="false" newquery="false" operator="=" or="false" value="true"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
@@ -61,7 +63,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ec0816fb1ba7a5108d594047bc4bcb92</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Unassigned</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -69,7 +71,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_ec0816fb1ba7a5108d594047bc4bcb92</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-06 19:43:21</sys_updated_on>
+        <sys_updated_on>2023-09-25 19:45:19</sys_updated_on>
         <table>x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation</table>
         <title>Unassigned</title>
         <view/>
