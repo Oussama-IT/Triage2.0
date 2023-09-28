@@ -56,25 +56,26 @@
 
     //Langues parlees
     newHtml = newHtml.replace("var400", current.getDisplayValue('raison'));
-	if (current.getDisplayValue('raison').indexOf("Autre") > -1) {
+    if (current.getDisplayValue('raison').indexOf("Autre") > -1) {
         newHtml = newHtml.replace("var500", current.getDisplayValue('autre_diagnostic'));
     } else {
-		newHtml = newHtml.replace('<div>Autre raison: var500</div>','');
-	}
+        newHtml = newHtml.replace('<div>Autre raison: var500</div>', '');
+    }
     newHtml = newHtml.replace("var31", current.getDisplayValue('langue_s_parl_e_s_la_maison'));
-    if (current.getDisplayValue('langue_s_parl_e_s_la_maison').indexOf("autre_langue_parl") > -1) {
+    if (current.getDisplayValue('langue_s_parl_e_s_la_maison').indexOf("Autre") > -1) {
         newHtml = newHtml.replace("var200", current.getDisplayValue('autre_langue_parl'));
     } else {
-		newHtml = newHtml.replace('<div>Autre : var200</div>','');
-	}
+        newHtml = newHtml.replace('<div>Autre : var200</div>', '');
+    }
 
 
 
 
-    if (current.getValue('langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais') == "" || current.getValue('langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais') == 'french') {
-        newHtml = newHtml.replace('<div>Est-ce que des difficultés langagières sont observées dans sa langue dominante (par les parents et/ou l’équipe-école) (ex. difficultés à  comprendre des questions ou des consignes, à s’exprimer en phrases complètes) ?: var32</div>', '');
+    if (current.getDisplayValue('langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais').indexOf('Fran') > -1) {
+        newHtml = newHtml.replace("<div>Est-ce que des difficultés langagières sont observées dans sa langue dominante (par les parents et/ou l’équipe-école) (ex. difficultés à  comprendre des questions ou des consignes, à s’exprimer en phrases complètes) ?: var32</div>", '');
+
     } else {
-        newHtml = newHtml.replace("var32", current.getDisplayValue('si_la_langue_dominante_de_l_l_ve_n_est_pas_le_fran_ais_est_ce_que_des_difficul'));
+        newHtml = newHtml.replace("var32", current.getDisplayValue('est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante_p'));
     }
 
 
@@ -490,11 +491,11 @@
         newHtml = newHtml.replace("var125", current.getDisplayValue('est_ce_que_les_parents_sont_en_accord_avec_cette_demande_de_placement'));
         newHtml = newHtml.replace("var126", current.getDisplayValue('pr_cisez_la_classe'));
     }
- // get direction name 
+    // get direction name 
     var dir = current.number;
     gs.info('sysapproval.number=' + dir);
     var gsdirect = new GlideRecord('sysapproval_approver');
-    gsdirect.addEncodedQuery('sysapproval.number=' + dir+'^state=approved');
+    gsdirect.addEncodedQuery('sysapproval.number=' + dir + '^state=approved');
     gsdirect.query();
     while (gsdirect.next()) {
         newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
@@ -529,7 +530,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>585d85a21bfc75108d594047bc4bcb0f</sys_id>
-        <sys_mod_count>83</sys_mod_count>
+        <sys_mod_count>93</sys_mod_count>
         <sys_name>PDF2</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -537,7 +538,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_585d85a21bfc75108d594047bc4bcb0f</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-28 01:02:07</sys_updated_on>
+        <sys_updated_on>2023-09-28 02:29:12</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

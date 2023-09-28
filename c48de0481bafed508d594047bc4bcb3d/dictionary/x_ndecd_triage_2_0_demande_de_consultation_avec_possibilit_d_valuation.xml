@@ -140,7 +140,7 @@
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
             </choice>
         </element>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est ce que des difficult s langagi res sont observ es dans sa langue dominante p" max_length="40" name="est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante_p" type="choice">
+        <element choice="3" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est ce que des difficult s langagi res sont observ es dans sa langue dominante p" max_length="40" name="est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante_p" type="choice">
             <choice/>
         </element>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que les difficultés observées ont un impact sur les apprentissages scolai" max_length="40" name="est_ce_que_les_difficult_s_observ_es_ont_un_impact_sur_les_apprentissages_scolai" type="choice">
@@ -367,7 +367,7 @@
             </choice>
         </element>
         <element label="Préciser :" max_length="200" name="pr_ciser" type="string"/>
-        <element choice="1" choice_field="pr_ciser_classe" choice_table="x_ndecd_cecce_base_options" label="Précisez la classe :" max_length="40" name="pr_cisez_la_classe" type="choice">
+        <element choice="1" choice_field="pr_ciser_classe" choice_table="x_ndecd_cecce_base_options" label="Précisez la classe :" max_length="300" name="pr_cisez_la_classe" type="choice">
             <choice/>
         </element>
         <element label="Présicez :" max_length="100" name="pr_sicez2" type="string"/>
