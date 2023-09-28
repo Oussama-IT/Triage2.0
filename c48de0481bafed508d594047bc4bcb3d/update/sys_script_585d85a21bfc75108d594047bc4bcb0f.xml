@@ -56,6 +56,11 @@
 
     //Langues parlees
     newHtml = newHtml.replace("var400", current.getDisplayValue('raison'));
+	if (current.getDisplayValue('raison').indexOf("Autre") > -1) {
+        newHtml = newHtml.replace("var500", current.getDisplayValue('autre_diagnostic'));
+    } else {
+		newHtml = newHtml.replace('<div>Autre raison: var500</div>','');
+	}
     newHtml = newHtml.replace("var31", current.getDisplayValue('langue_s_parl_e_s_la_maison'));
     if (current.getDisplayValue('langue_s_parl_e_s_la_maison').indexOf("autre_langue_parl") > -1) {
         newHtml = newHtml.replace("var200", current.getDisplayValue('autre_langue_parl'));
@@ -261,18 +266,18 @@
         newHtml = newHtml.replace('<div>Fréquence (programme SLI ) : var161</div>', '');
     }
     if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("EEAS-EED, Coach ACA") > -1) {
-        newHtml = newHtml.replace("var163", current.getDisplayValue('eeas_eed_coach_aca_date_fin'));
-        newHtml = newHtml.replace("var164", current.getDisplayValue('eeas_eed_coach_aca_frequence_heure_semaine'));
-        newHtml = newHtml.replace("var162", current.getDisplayValue('eeas_eed_coach_aca_date_debut'));
+        newHtml = newHtml.replace("var163", current.getDisplayValue('date_fin_eeas_eed_coach_aca'));
+        newHtml = newHtml.replace("var164", current.getDisplayValue('fr_quence_eeas_eed_coach_aca'));
+        newHtml = newHtml.replace("var162", current.getDisplayValue('date_d_but_eeas_eed_coach_aca'));
     } else {
         newHtml = newHtml.replace('<div>Date Début (EEAS-EED, Coach ACA ) : var162</div>', '');
         newHtml = newHtml.replace('<div>Date Fin (EEAS-EED, Coach ACA ) : var163</div>', '');
         newHtml = newHtml.replace('<div>Fréquence (EEAS-EED, Coach ACA ) : var164</div>', '');
     }
     if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("Éducateur-ressource EED") > -1) {
-        newHtml = newHtml.replace("var166", current.getDisplayValue('ducateur_ressource_eed_date_fin'));
-        newHtml = newHtml.replace("var167", current.getDisplayValue('ducateur_ressource_eed_frequence_heure_semaine'));
-        newHtml = newHtml.replace("var165", current.getDisplayValue('ducateur_ressource_eed_date_debut'));
+        newHtml = newHtml.replace("var166", current.getDisplayValue('date_fin_ducateur_ressource_eed'));
+        newHtml = newHtml.replace("var167", current.getDisplayValue('fr_quence_ducateur_ressource_eed'));
+        newHtml = newHtml.replace("var165", current.getDisplayValue('date_d_but_ducateur_ressource_eed'));
     } else {
         newHtml = newHtml.replace('<div>Date Début (éducateur-ressource EED ) : var165</div>', '');
         newHtml = newHtml.replace('<div>Date Fin (éducateur-ressource EED ) : var166</div>', '');
@@ -489,7 +494,7 @@
     var dir = current.number;
     gs.info('sysapproval.number=' + dir);
     var gsdirect = new GlideRecord('sysapproval_approver');
-    gsdirect.addEncodedQuery('sysapproval.number=' + dir);
+    gsdirect.addEncodedQuery('sysapproval.number=' + dir+'^state=approved');
     gsdirect.query();
     while (gsdirect.next()) {
         newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
@@ -524,15 +529,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>585d85a21bfc75108d594047bc4bcb0f</sys_id>
-        <sys_mod_count>79</sys_mod_count>
+        <sys_mod_count>83</sys_mod_count>
         <sys_name>PDF2</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_585d85a21bfc75108d594047bc4bcb0f</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-25 14:13:29</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-09-28 01:02:07</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
