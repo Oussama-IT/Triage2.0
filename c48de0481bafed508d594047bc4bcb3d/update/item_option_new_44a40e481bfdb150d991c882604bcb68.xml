@@ -21,11 +21,11 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field>par_l_ducatrice_ressource_langage</field>
+        <field/>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
-        <hidden>true</hidden>
+        <hidden>false</hidden>
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
@@ -38,16 +38,16 @@
         <macro/>
         <macroponent/>
         <mandatory>false</mandatory>
-        <map_to_field>true</map_to_field>
+        <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>par_l_ducatrice_ressource_langage</name>
-        <order>400</order>
+        <name>merci_d_indiquer_la_date_du_courriel</name>
+        <order>300</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Par l’éducatrice ressource langage</question_text>
+        <question_text>Merci d'indiquer la date du courriel</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -55,7 +55,7 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</record_producer_table>
-        <reference>sys_user</reference>
+        <reference/>
         <reference_qual/>
         <reference_qual_condition/>
         <rich_text/>
@@ -74,20 +74,20 @@
         <sp_widget/>
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
-        <sys_created_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-07-04 15:40:19</sys_created_on>
-        <sys_id>8eeb66021bbf25108d594047bc4bcb37</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Par l’éducatrice ressource langage</sys_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-10-05 17:47:29</sys_created_on>
+        <sys_id>44a40e481bfdb150d991c882604bcb68</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Merci d'indiquer la date du courriel</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
-        <sys_update_name>item_option_new_8eeb66021bbf25108d594047bc4bcb37</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-08-22 17:18:59</sys_updated_on>
+        <sys_update_name>item_option_new_44a40e481bfdb150d991c882604bcb68</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-10-05 17:48:00</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>6</type>
+        <type>9</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -103,39 +103,39 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=8eeb66021bbf25108d594047bc4bcb37"/>
-    <fx_price action="delete_multiple" query="id=8eeb66021bbf25108d594047bc4bcb37"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=44a40e481bfdb150d991c882604bcb68"/>
+    <fx_price action="delete_multiple" query="id=44a40e481bfdb150d991c882604bcb68"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
-        <currency display_value="EUR">EUR</currency>
+        <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>8eeb66021bbf25108d594047bc4bcb37</id>
+        <id>44a40e481bfdb150d991c882604bcb68</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
-        <sys_created_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-07-04 15:40:19</sys_created_on>
-        <sys_id>120ce6021bbf25108d594047bc4bcb4a</sys_id>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-10-05 17:47:29</sys_created_on>
+        <sys_id>840582881bfdb150d991c882604bcb6a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-07-04 15:40:19</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-10-05 17:47:29</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
-        <currency display_value="EUR">EUR</currency>
+        <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>8eeb66021bbf25108d594047bc4bcb37</id>
+        <id>44a40e481bfdb150d991c882604bcb68</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
-        <sys_created_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-07-04 15:40:19</sys_created_on>
-        <sys_id>520ce6021bbf25108d594047bc4bcb49</sys_id>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-10-05 17:47:29</sys_created_on>
+        <sys_id>3bf482881bfdb150d991c882604bcb69</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-07-04 15:40:19</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-10-05 17:47:29</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>

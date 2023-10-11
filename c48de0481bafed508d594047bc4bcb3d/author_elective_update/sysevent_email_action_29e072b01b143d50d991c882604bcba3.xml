@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="DELETE">
+        <action_insert>false</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</collection>
+        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">type_d_envoi_du_rapport=Par courriel^autre_e_mailISNOTEMPTY^approvalCHANGESTOapproved^EQ<item display_value="Par courriel" endquery="false" field="type_d_envoi_du_rapport" goto="false" newquery="false" operator="=" or="false" value="Par courriel"/>
+            <item endquery="false" field="autre_e_mail" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="CHANGESTO" or="false" value="approved"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from>ne-pas-répondre équipe triage&lt;e_triage@ecolecatholique.ca&gt;</from>
+        <generation_type>engine</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>Bonjour ${eleve.u_tuteur},</p>
+<p>L'&eacute;quipe &eacute;cole de votre enfant ${eleve.first_name} ${eleve.last_name} souhaite acheminer une demande d'Envoi d&rsquo;un formulaire de consentement pour le programme ROI aupr&egrave;s du Service d'orthophonie du Conseil des &eacute;coles catholiques du Centre-Est. Afin de confirmer votre consentement &agrave; ce service, merci de prendre connaissance du document ci-joint, puis, de bien vouloir acheminer un courriel &agrave; l'adresse : &nbsp;${opened_by.email} en y ajoutant le message ci-dessous dans un d&eacute;lai de 10 jours ouvrables :</p>
+<p>Je, soussign&eacute;, _________________ (nom du parent/tuteur l&eacute;gal taper), confirme avoir pris connaissance des informations contenues dans le document qui m'a &eacute;t&eacute; partag&eacute; en lien avec la demande de service en orthophonie : Envoi d&rsquo;un formulaire de consentement pour le programme ROI. Je comprends et je suis d'accord avec les informations qui s'y retrouvent, notamment, je comprends que :</p>
+<p>-le formulaire d&rsquo;autorisation sign&eacute; est valide pour l&rsquo;ensemble des services offerts en orthophonie et qu&rsquo;il est valide pour la dur&eacute;e de la scolarit&eacute; de l&rsquo;&eacute;l&egrave;ve, &agrave; moins que le consentement soit retir&eacute; ou qu&rsquo;une dur&eacute;e sp&eacute;cifique soit prescrite par moi, parent/tuteur l&eacute;gal; -si un autre service est requis, l&rsquo;orthophoniste communiquera moi afin d&rsquo;en discuter, et ce, au besoin;</p>
+<p>-je peux retirer mon consentement &agrave; ce service &agrave; tout moment;</p>
+<p>-qu'il est entendu que tout r&eacute;sultat ou renseignement pertinent ayant trait au pr&eacute;sent service me sera communiqu&eacute;, ainsi qu&rsquo;aux intervenantes et intervenants scolaires qui &oelig;uvrent aupr&egrave;s de l&rsquo;&eacute;l&egrave;ve susmentionn&eacute;/e suite &agrave; mon consentement;</p>
+<p>-sous r&eacute;serve des lois applicables en mati&egrave;re de divulgation ou d&rsquo;acc&egrave;s &agrave; l&rsquo;information et en mati&egrave;re de protection de l&rsquo;enfance, qu&rsquo;aucun r&eacute;sultat ou renseignement ne sera communiqu&eacute; &agrave; des personnes qui ne sont pas au service du Conseil des &eacute;coles catholiques du Centre-Est sans mon consentement &eacute;crit.</p>
+<p>Si vous avez des questions, nous vous prions de communiquer avec un membre de l'&eacute;quipe &eacute;cole de votre enfant.</p>
+<p>Veuillez noter que, &agrave; la suite de la r&eacute;ception de votre autorisation, la demande de service sera achemin&eacute;e au Service d'orthophonie du CECCE par l'&eacute;quipe &eacute;cole et, lorsque le dossier sera d&eacute;l&eacute;gu&eacute; &agrave; un(e) orthophoniste, celle/celui-ci communiquera avec vous afin de vous donner des informations suppl&eacute;mentaires et obtenir votre consentement &eacute;clair&eacute;.</p>
+<p>Merci.</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Demande de consentement parental Autre</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>autre_e_mail</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to>ne-pas-répondre équipe triage&lt;e_triage@ecolecatholique.ca&gt;</reply_to>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Demande de consentement parental</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-25 15:20:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>29e072b01b143d50d991c882604bcba3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Demande de consentement parental Autre</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sysevent_email_action_29e072b01b143d50d991c882604bcba3</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-08-30 02:32:36</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</application>
+        <file_path/>
+        <instance_id>65b29b3adb7ea19492f5684e13961931</instance_id>
+        <instance_name>ceccedev</instance_name>
+        <name>sysevent_email_action_29e072b01b143d50d991c882604bcba3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_email_action"&gt;&lt;sysevent_email_action action="INSERT_OR_UPDATE"&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;advanced_condition/&gt;&lt;affected_field_on_event/&gt;&lt;category display_value="Uncategorized" name="Uncategorized"&gt;c97d83137f4432005f58108c3ffa917a&lt;/category&gt;&lt;collection&gt;x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi&lt;/collection&gt;&lt;condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi"&gt;type_d_envoi_du_rapport=Par courriel^autre_e_mailISNOTEMPTY^approvalCHANGESTOapproved^EQ&lt;item display_value="Par courriel" endquery="false" field="type_d_envoi_du_rapport" goto="false" newquery="false" operator="=" or="false" value="Par courriel"/&gt;&lt;item endquery="false" field="autre_e_mail" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/&gt;&lt;item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="CHANGESTO" or="false" value="approved"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/condition&gt;&lt;content_type&gt;text/html&lt;/content_type&gt;&lt;default_interval/&gt;&lt;description/&gt;&lt;digest_from/&gt;&lt;digest_html/&gt;&lt;digest_reply_to/&gt;&lt;digest_separator_html&gt;&lt;![CDATA[&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;]]&gt;&lt;/digest_separator_html&gt;&lt;digest_separator_text&gt;&lt;![CDATA[\n--------------------------------------------------------------------------------\n]]&gt;&lt;/digest_separator_text&gt;&lt;digest_subject/&gt;&lt;digest_template/&gt;&lt;digest_text/&gt;&lt;digestable&gt;false&lt;/digestable&gt;&lt;enable_dynamic_translation&gt;false&lt;/enable_dynamic_translation&gt;&lt;event_name&gt;activate.life.cycle.migration&lt;/event_name&gt;&lt;event_parm_1&gt;false&lt;/event_parm_1&gt;&lt;event_parm_2&gt;false&lt;/event_parm_2&gt;&lt;exclude_delegates&gt;false&lt;/exclude_delegates&gt;&lt;force_delivery&gt;false&lt;/force_delivery&gt;&lt;from&gt;ne-pas-répondre équipe triage&amp;lt;e_triage@ecolecatholique.ca&amp;gt;&lt;/from&gt;&lt;generation_type&gt;engine&lt;/generation_type&gt;&lt;importance/&gt;&lt;include_attachments&gt;false&lt;/include_attachments&gt;&lt;item&gt;event.parm1&lt;/item&gt;&lt;item_table/&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;message/&gt;&lt;message_html&gt;&lt;![CDATA[&lt;p&gt;Bonjour ${eleve.u_tuteur},&lt;/p&gt;
+&lt;p&gt;L'&amp;eacute;quipe &amp;eacute;cole de votre enfant ${eleve.first_name} ${eleve.last_name} souhaite acheminer une demande d'Envoi d&amp;rsquo;un formulaire de consentement pour le programme ROI aupr&amp;egrave;s du Service d'orthophonie du Conseil des &amp;eacute;coles catholiques du Centre-Est. Afin de confirmer votre consentement &amp;agrave; ce service, merci de prendre connaissance du document ci-joint, puis, de bien vouloir acheminer un courriel &amp;agrave; l'adresse : &amp;nbsp;${opened_by.email} en y ajoutant le message ci-dessous dans un d&amp;eacute;lai de 10 jours ouvrables :&lt;/p&gt;
+&lt;p&gt;Je, soussign&amp;eacute;, _________________ (nom du parent/tuteur l&amp;eacute;gal taper), confirme avoir pris connaissance des informations contenues dans le document qui m'a &amp;eacute;t&amp;eacute; partag&amp;eacute; en lien avec la demande de service en orthophonie : Envoi d&amp;rsquo;un formulaire de consentement pour le programme ROI. Je comprends et je suis d'accord avec les informations qui s'y retrouvent, notamment, je comprends que :&lt;/p&gt;
+&lt;p&gt;-le formulaire d&amp;rsquo;autorisation sign&amp;eacute; est valide pour l&amp;rsquo;ensemble des services offerts en orthophonie et qu&amp;rsquo;il est valide pour la dur&amp;eacute;e de la scolarit&amp;eacute; de l&amp;rsquo;&amp;eacute;l&amp;egrave;ve, &amp;agrave; moins que le consentement soit retir&amp;eacute; ou qu&amp;rsquo;une dur&amp;eacute;e sp&amp;eacute;cifique soit prescrite par moi, parent/tuteur l&amp;eacute;gal; -si un autre service est requis, l&amp;rsquo;orthophoniste communiquera moi afin d&amp;rsquo;en discuter, et ce, au besoin;&lt;/p&gt;
+&lt;p&gt;-je peux retirer mon consentement &amp;agrave; ce service &amp;agrave; tout moment;&lt;/p&gt;
+&lt;p&gt;-qu'il est entendu que tout r&amp;eacute;sultat ou renseignement pertinent ayant trait au pr&amp;eacute;sent service me sera communiqu&amp;eacute;, ainsi qu&amp;rsquo;aux intervenantes et intervenants scolaires qui &amp;oelig;uvrent aupr&amp;egrave;s de l&amp;rsquo;&amp;eacute;l&amp;egrave;ve susmentionn&amp;eacute;/e suite &amp;agrave; mon consentement;&lt;/p&gt;
+&lt;p&gt;-sous r&amp;eacute;serve des lois applicables en mati&amp;egrave;re de divulgation ou d&amp;rsquo;acc&amp;egrave;s &amp;agrave; l&amp;rsquo;information et en mati&amp;egrave;re de protection de l&amp;rsquo;enfance, qu&amp;rsquo;aucun r&amp;eacute;sultat ou renseignement ne sera communiqu&amp;eacute; &amp;agrave; des personnes qui ne sont pas au service du Conseil des &amp;eacute;coles catholiques du Centre-Est sans mon consentement &amp;eacute;crit.&lt;/p&gt;
+&lt;p&gt;Si vous avez des questions, nous vous prions de communiquer avec un membre de l'&amp;eacute;quipe &amp;eacute;cole de votre enfant.&lt;/p&gt;
+&lt;p&gt;Veuillez noter que, &amp;agrave; la suite de la r&amp;eacute;ception de votre autorisation, la demande de service sera achemin&amp;eacute;e au Service d'orthophonie du CECCE par l'&amp;eacute;quipe &amp;eacute;cole et, lorsque le dossier sera d&amp;eacute;l&amp;eacute;gu&amp;eacute; &amp;agrave; un(e) orthophoniste, celle/celui-ci communiquera avec vous afin de vous donner des informations suppl&amp;eacute;mentaires et obtenir votre consentement &amp;eacute;clair&amp;eacute;.&lt;/p&gt;
+&lt;p&gt;Merci.&lt;/p&gt;]]&gt;&lt;/message_html&gt;&lt;message_list/&gt;&lt;message_text/&gt;&lt;name&gt;Demande de consentement parental Autre&lt;/name&gt;&lt;omit_watermark&gt;false&lt;/omit_watermark&gt;&lt;order&gt;100&lt;/order&gt;&lt;push_message_only&gt;false&lt;/push_message_only&gt;&lt;recipient_fields&gt;autre_e_mail&lt;/recipient_fields&gt;&lt;recipient_groups/&gt;&lt;recipient_users/&gt;&lt;reply_to&gt;ne-pas-répondre équipe triage&amp;lt;e_triage@ecolecatholique.ca&amp;gt;&lt;/reply_to&gt;&lt;send_self&gt;true&lt;/send_self&gt;&lt;sms_alternate/&gt;&lt;style/&gt;&lt;subject&gt;Demande de consentement parental&lt;/subject&gt;&lt;subscribable&gt;false&lt;/subscribable&gt;&lt;sys_class_name&gt;sysevent_email_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;ServiceNowDeveloper4@ecolecatholique.ca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-25 15:20:33&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;29e072b01b143d50d991c882604bcba3&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;Demande de consentement parental Autre&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Triage 2.0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_email_action_29e072b01b143d50d991c882604bcba3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;ServiceNowDeveloper2@ecolecatholique.ca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-08-30 02:32:36&lt;/sys_updated_on&gt;&lt;sys_version&gt;2&lt;/sys_version&gt;&lt;template display_value="Unsubscribe and Preferences"&gt;7ed0481f3b0b2200c869c2c703efc487&lt;/template&gt;&lt;type&gt;email&lt;/type&gt;&lt;weight&gt;0&lt;/weight&gt;&lt;/sysevent_email_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1146382764</payload_hash>
+        <record_name>Demande de consentement parental Autre</record_name>
+        <reverted_from/>
+        <source>008de0481bafed508d594047bc4bcb4c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-08-30 02:32:36</sys_created_on>
+        <sys_id>575a5d5c1b417550d991c882604bcb52</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18a44491bd60000001</sys_recorded_at>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-08-30 02:32:36</sys_updated_on>
+        <type>Notification</type>
+        <update_guid>db5a5d5c8b4175502183aacc684ff751</update_guid>
+        <update_guid_history>db5a5d5c8b4175502183aacc684ff751:1146382764,c8a96c11b9787910834b201b058bdebf:692917454,35a2b5459ebc391098854e9eb90158a3:-214879660,b0e84ae869bcf510c48d397ce5de6a73:966430487,f96b8198fb78b51067bb2beb2c4ea697:2114157319,5d51727472143d508d52cbb07149feb8:-735513473,6de072b08c143d50667f1731fee925a4:264649798</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-10-06 13:53:31</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_email_action">sysevent_email_action</sys_db_object>
+        <sys_id>12a7a258ec5e4bdda45afead2152f5b1</sys_id>
+        <sys_metadata>29e072b01b143d50d991c882604bcba3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Demande de consentement parental Autre</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_parent display_value="Envoi d’un formulaire de consentement pour le programme ROI">e70cf46b1be365108d594047bc4bcb10</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_scope_delete display_value="">14b51fc3ce834665bcd5327947e6f949</sys_scope_delete>
+        <sys_update_name>sysevent_email_action_29e072b01b143d50d991c882604bcba3</sys_update_name>
+        <sys_update_version display_value="sysevent_email_action_29e072b01b143d50d991c882604bcba3">575a5d5c1b417550d991c882604bcb52</sys_update_version>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-10-06 13:53:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

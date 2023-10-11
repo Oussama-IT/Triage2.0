@@ -1095,25 +1095,6 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_d9c25eed1b672110d991c882604bcb22"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_d9c25eed1b672110d991c882604bcb22"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_d9c25eed1b672110d991c882604bcb22"/>
-    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=d9c25eed1b672110d991c882604bcb22^sys_idNOT INf6151e611ba72110d991c882604bcbac"/>
-    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
-        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
-        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"f6151e611ba72110d991c882604bcbac","name":"plan","plan_signature":null}}</plan>
-        <plan_id>d9c25eed1b672110d991c882604bcb22</plan_id>
-        <snapshot>85db42101bc83d108d594047bc4bcb1b</snapshot>
-        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-06-20 14:27:29</sys_created_on>
-        <sys_domain>global</sys_domain>
-        <sys_domain_path>/</sys_domain_path>
-        <sys_id>f6151e611ba72110d991c882604bcbac</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_overrides/>
-        <sys_scope/>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-07-10 19:39:11</sys_updated_on>
-        <trigger display_value="">f919bc281bf361108d594047bc4bcb67</trigger>
-    </sys_flow_trigger_plan>
-    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=d9c25eed1b672110d991c882604bcb22"/>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
@@ -2201,4 +2182,23 @@
         <latest_snapshot>ea151e611ba72110d991c882604bcb4c</latest_snapshot>
         <compiler_build>glide-utah-12-21-2022__patch4-hotfix2-06-23-2023_06-23-2023_2224.zip</compiler_build>
     </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=d9c25eed1b672110d991c882604bcb22^sys_idNOT INf6151e611ba72110d991c882604bcbac"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"f6151e611ba72110d991c882604bcbac","name":"plan","plan_signature":null}}</plan>
+        <plan_id>d9c25eed1b672110d991c882604bcb22</plan_id>
+        <snapshot>85db42101bc83d108d594047bc4bcb1b</snapshot>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-06-20 14:27:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f6151e611ba72110d991c882604bcbac</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-07-10 19:39:11</sys_updated_on>
+        <trigger display_value="">f919bc281bf361108d594047bc4bcb67</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=d9c25eed1b672110d991c882604bcb22"/>
 </record_update>

@@ -6,7 +6,7 @@
         <applies_sc_task>false</applies_sc_task>
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
-        <catalog_conditions>IO:18cfdf1f1b1c7590d991c882604bcb11ISNOTEMPTY^IO:498088d21b6b2110d991c882604bcb15ANYTHING^EQ</catalog_conditions>
+        <catalog_conditions>IO:18cfdf1f1b1c7590d991c882604bcb11ISNOTEMPTY^IO:498088d21b6b2110d991c882604bcb15ANYTHING^IO:8ad5752a1bef61108d594047bc4bcb44ANYTHING^EQ</catalog_conditions>
         <catalog_item display_value="Demande de consultation avec possibilité d'évaluation">e48029e21baf61108d594047bc4bcbaf</catalog_item>
         <conditions/>
         <description/>
@@ -18,17 +18,34 @@
         <on_load>true</on_load>
         <order>4100</order>
         <reverse_if_false>true</reverse_if_false>
-        <run_scripts>false</run_scripts>
+        <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
 
-g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', false);
-g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture',false);
+ g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', false);
+ g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture',false);
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
+var ga = new GlideAjax('global.eleve_ajax_utils');
+ga.addParam('sysparm_name','getclasse');
+ga.addParam('eleve',g_form.getValue("eleve"));
+ga.getXMLAnswer(Parse);
+function Parse(response) {
+	alert("resp"+response)  ;
+   if (response!="78911a0d1b413950d991c882604bcbc2" && response!="74911a0d1b413950d991c882604bcbc3" ){
+	g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', true);
+    g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture',true);
+	}
+	else{
+	 g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', false);
+     g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture',false);
 
-g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', true);
-g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture',true);
-}]]></script_true>
+	}
+   
+}
+
+}
+
+]]></script_true>
         <set_values/>
         <short_description>Raison de la demande </short_description>
         <sys_class_name>catalog_ui_policy</sys_class_name>
@@ -37,7 +54,7 @@ g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lectur
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>eb8807121ba43510d991c882604bcbdc</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>Raison de la demande </sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -45,7 +62,7 @@ g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lectur
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_ui_policy_eb8807121ba43510d991c882604bcbdc</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-26 14:23:32</sys_updated_on>
+        <sys_updated_on>2023-10-10 20:00:48</sys_updated_on>
         <table/>
         <ui_type>10</ui_type>
         <variable_set/>
