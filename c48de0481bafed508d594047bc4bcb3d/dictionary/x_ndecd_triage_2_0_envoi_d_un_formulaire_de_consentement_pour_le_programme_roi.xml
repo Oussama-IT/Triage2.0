@@ -25,6 +25,7 @@
         <element choice="1" label="Consentement Parental verbal" max_length="40" name="consentement_parental_verbal" type="choice">
             <choice/>
         </element>
+        <element label="date du courriel" max_length="40" name="date_du_courriel" type="glide_date"/>
         <element label="Eleve" mandatory="true" max_length="32" name="eleve" reference="sys_user" type="reference"/>
         <element choice="1" label="diagnostique" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">
             <choice>
@@ -34,26 +35,22 @@
             </choice>
         </element>
         <element label="linkattachment" max_length="200" name="linkattachment" type="string"/>
-        <element choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Nom du demandeur" max_length="40" name="nom_du_demandeur" type="choice">
-            <choice>
-                <element dependent_value="non" inactive="true" inactive_on_update="true" label="Non" sequence="0" value="non"/>
-                <element dependent_value="oui_par_leducatrice_ressource_langage" inactive="true" inactive_on_update="true" label="oui, par l’éducatrice ressource langage" sequence="1" value="oui_par_leducatrice_ressource_langage"/>
-                <element dependent_value="oui_par_lorthophoniste" inactive="true" inactive_on_update="true" label="oui, par l’orthophoniste" sequence="2" value="oui_par_lorthophoniste"/>
-            </choice>
+        <element choice="3" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Nom du demandeur" max_length="40" name="nom_du_demandeur" type="choice">
+            <choice/>
         </element>
         <element label="Par l’éducatrice ressource langage" max_length="32" name="par_l_ducatrice_ressource_langage" type="string"/>
         <element label="Par l’orthophoniste" max_length="32" name="par_l_orthophoniste" type="string"/>
         <element label="Raison" max_length="250" name="raison" type="string"/>
-        <element choice="1" label="Raison de soumissions de formulaire" max_length="40" name="raison_de_soumissions_de_formulaire" type="choice">
+        <element choice="1" label="Raison de soumissions de formulaire" max_length="250" name="raison_de_soumissions_de_formulaire" type="choice">
             <choice>
-                <element dependent_value="bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai" inactive_on_update="false" label="Bloc d’intervention ROI." value="bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai"/>
-                <element dependent_value="evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_seulemen" inactive_on_update="false" label="Évaluation sommaire ROI avec possibilité de bloc d’intervention" value="evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_seulemen"/>
+                <element dependent_value="bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai" inactive_on_update="false" label="Bloc d’intervention ROI." language="fq" value="bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai"/>
+                <element dependent_value="evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_seulemen" inactive_on_update="false" label="Évaluation sommaire ROI avec possibilité de bloc d’intervention" language="fq" value="evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_visible"/>
             </choice>
         </element>
         <element choice="1" label="Recomendation" max_length="40" name="recomendation" type="choice">
             <choice/>
         </element>
-        <element choice="1" label="Situation familiale" max_length="40" name="situation_familiale" type="choice">
+        <element choice="1" label="Situation familiale" max_length="200" name="situation_familiale" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Autre situation" value="autre situation"/>
                 <element dependent_value="fait l’objet d’une garde exclusive avec sa mère" inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec sa mère" value="fait l’objet d’une garde exclusive avec sa mère"/>

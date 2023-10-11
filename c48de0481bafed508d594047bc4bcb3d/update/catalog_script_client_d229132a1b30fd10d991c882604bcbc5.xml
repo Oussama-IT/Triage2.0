@@ -26,15 +26,15 @@
     var D_three = new Date(year, 4, 26, 0, 0, 0, 0); //26 mai)
     var D_four = new Date(year, 0, 1, 0, 0, 0, 0); //1er janvier
 
-g_form.addOption('je_soumets_le_formulaire_de_consentement_pour', 'evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_visible', 'Évaluation sommaire ROI avec possibilité de bloc d’intervention');
+		// g_form.addOption('je_soumets_le_formulaire_de_consentement_pour', 'evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_visible', 'Évaluation sommaire ROI avec possibilité de bloc d’intervention');
 
-g_form.addOption('je_soumets_le_formulaire_de_consentement_pour', 'bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai', "Bloc d’intervention ROI");
+		// g_form.addOption('je_soumets_le_formulaire_de_consentement_pour', 'bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai', "Bloc d’intervention ROI");
 
-    // if (((dte - D_two) > 0) && ((dte - D_one) < 0)) {
-    //     g_form.addOption('je_soumets_le_formulaire_de_consentement_pour', 'evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_visible', 'Évaluation sommaire ROI avec possibilité de bloc d’intervention');
-    // } else if (((dte - D_four) > 0) && ((dte - D_three) < 0)) {
-    //     g_form.addOption('je_soumets_le_formulaire_de_consentement_pour', 'bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai', "Bloc d’intervention ROI");
-    // }
+    if (((dte - D_two) > 0) && ((dte - D_one) < 0)) {
+       g_form.addOption('je_soumets_le_formulaire_de_consentement_pour', 'evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_visible', 'Évaluation sommaire ROI avec possibilité de bloc d’intervention');
+   } else if (((dte - D_four) > 0) && ((dte - D_three) < 0)) {
+       g_form.addOption('je_soumets_le_formulaire_de_consentement_pour', 'bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai', "Bloc d’intervention ROI");
+   }
     }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -42,7 +42,7 @@ g_form.addOption('je_soumets_le_formulaire_de_consentement_pour', 'bloc_dinterve
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d229132a1b30fd10d991c882604bcbc5</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>on change date </sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -50,7 +50,7 @@ g_form.addOption('je_soumets_le_formulaire_de_consentement_pour', 'bloc_dinterve
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_d229132a1b30fd10d991c882604bcbc5</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-08-25 13:46:22</sys_updated_on>
+        <sys_updated_on>2023-10-11 16:31:18</sys_updated_on>
         <table/>
         <type>onLoad</type>
         <ui_type>10</ui_type>
