@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="e70cf46b1be365108d594047bc4bcb10" extends="task" label="Tâche" max_length="40" name="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi" text_index="true" type="collection">
-        <element label="Accusé de reception" max_length="255" name="accuse_de_reception" type="boolean"/>
-        <element label="Accusé d'envoi" max_length="255" name="accuse_d_envoi" type="boolean"/>
         <element label="Autre e-mail" max_length="255" name="autre_e_mail" type="email"/>
         <element label="autre situation" max_length="400" name="autre_situation" type="string"/>
         <element choice="1" label="classe choisie" max_length="40" name="classe_choisie" type="choice">
@@ -32,6 +30,18 @@
                 <element inactive_on_update="false" label="TSA" sequence="0" value="TSA"/>
                 <element inactive_on_update="false" label="HD/DIL" sequence="1" value="HD/DIL"/>
                 <element inactive_on_update="false" label="Aucun diagnostic ou autre diagnostic" sequence="2" value="aucun"/>
+            </choice>
+        </element>
+        <element choice="1" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_a_t_il_t_envoy_aux_parents_tuteurs_l_gaux" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
+            </choice>
+        </element>
+        <element choice="1" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
             </choice>
         </element>
         <element label="linkattachment" max_length="200" name="linkattachment" type="string"/>

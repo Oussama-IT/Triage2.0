@@ -41,14 +41,29 @@ ga.getXMLAnswer(Parse);
 }
 function Parse(response) {
     if (response != "78911a0d1b413950d991c882604bcbc2" && response != "74911a0d1b413950d991c882604bcbc3") {
+		//eleve is not preschooler->hide
+		g_form.setVisible("prealables_au_langage_ecrit", false);
+		g_form.setMandatory("prealables_au_langage_ecrit", false);
+		g_form.setVisible("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit",false);
+		g_form.setMandatory("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit",false);
+		g_form.setValue("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit","");
+
+
 		g_form.setVisible('langage_ecrit', true);
         g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', true);
         g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', true);
     } else {
+		//eleve is preschooler->show
+		g_form.setVisible("prealables_au_langage_ecrit", true);
+		g_form.setVisible("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit",true);
+		g_form.setMandatory("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit",true);
+
+
 		g_form.setVisible('langage_ecrit', false);
-		g_form.setMandatory('langage_ecrit', false)
+		g_form.setMandatory('langage_ecrit', false);
         g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', false);
         g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', false);
+		g_form.setValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture',"");
 
     }
 }
@@ -60,7 +75,7 @@ function Parse(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8517a3b11b71f1108d594047bc4bcbee</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>onchange eleve</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -68,7 +83,7 @@ function Parse(response) {
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_8517a3b11b71f1108d594047bc4bcbee</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-11 15:23:55</sys_updated_on>
+        <sys_updated_on>2023-10-11 18:30:51</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

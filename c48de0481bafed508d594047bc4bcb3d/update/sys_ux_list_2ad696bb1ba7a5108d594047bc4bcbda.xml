@@ -5,7 +5,6 @@
         <columns>number,eleve.u_nom_de_l_ecole,eleve,eleve.u_classe,state,sys_created_on</columns>
         <condition table="x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture">active=true^assigned_toISEMPTY^accuse_d_envoi=true<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item endquery="false" field="assigned_to" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
-            <item endquery="false" field="accuse_d_envoi" goto="false" newquery="false" operator="=" or="false" value="true"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>

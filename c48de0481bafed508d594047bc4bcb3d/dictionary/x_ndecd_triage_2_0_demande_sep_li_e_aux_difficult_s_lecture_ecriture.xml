@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="9f0ea0eb1ba365108d594047bc4bcb29" extends="task" label="Tâche" max_length="40" name="x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture" text_index="true" type="collection">
-        <element label="Accusé de reception" max_length="255" name="accuse_de_reception" type="boolean"/>
-        <element label="Accusé d'envoi" max_length="255" name="accuse_d_envoi" type="boolean"/>
         <element label="Autre e-mail" max_length="255" name="autre_e_mail" type="email"/>
         <element label="Autre situation(explication) :" max_length="255" name="autre_situation_explication" type="string_full_utf8"/>
         <element choice="1" label="Spécifier la classe entre les choix suivants" max_length="40" name="classe_distinct" type="choice">
@@ -42,6 +40,18 @@
         </element>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce qu’une période de mise à l’essai de l’outil technologique a été complétée" max_length="40" name="est_ce_qu_une_p_riode_de_mise_l_essai_de_l_outil_technologique_a_t_compl_t_e" type="choice">
             <choice/>
+        </element>
+        <element choice="1" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_a_t_il_t_envoy_aux_parents_tuteurs_l_gaux" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
+            </choice>
+        </element>
+        <element choice="1" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
+            </choice>
         </element>
         <element label="linkattachment" max_length="200" name="linkattachment" type="string"/>
         <element label="Par qui?" max_length="32" name="par_qui" type="string"/>

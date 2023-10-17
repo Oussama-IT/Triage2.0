@@ -20,9 +20,16 @@
         <reverse_if_false>true</reverse_if_false>
         <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
- g_form.setVisible('langage_ecrit', false);
- g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', false);
- g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture',false);
+    g_form.setVisible("prealables_au_langage_ecrit", false);
+	g_form.setMandatory("prealables_au_langage_ecrit", false);
+    g_form.setVisible("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit", false);
+    g_form.setMandatory("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit", false);
+    g_form.setValue("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit", "");
+
+    g_form.setVisible('langage_ecrit', false);
+    g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', false);
+    g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', false);
+    g_form.setValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', "");
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
 var ga = new GlideAjax('global.eleve_ajax_utils');
@@ -32,13 +39,28 @@ ga.getXMLAnswer(Parse);
 
 function Parse(response) {
     if (response != "78911a0d1b413950d991c882604bcbc2" && response != "74911a0d1b413950d991c882604bcbc3") {
+		//eleve is not preschooler->hide
+		g_form.setVisible("prealables_au_langage_ecrit", false);
+		g_form.setMandatory("prealables_au_langage_ecrit", false);
+		g_form.setVisible("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit",false);
+		g_form.setMandatory("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit",false);
+		g_form.setValue("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit","");
+
 		g_form.setVisible('langage_ecrit', true);
         g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', true);
         g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', true);
     } else {
+		//eleve is preschooler->show
+		g_form.setVisible("prealables_au_langage_ecrit", true);
+		g_form.setVisible("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit",true);
+		g_form.setMandatory("quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit",true);
+
+
 		g_form.setVisible('langage_ecrit', false);
+		g_form.setMandatory('langage_ecrit', false);
         g_form.setVisible('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', false);
         g_form.setMandatory('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture', false);
+		g_form.setValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture',"");
 
     }
 
@@ -55,7 +77,7 @@ function Parse(response) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>eb8807121ba43510d991c882604bcbdc</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>53</sys_mod_count>
         <sys_name>Raison de la demande </sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -63,7 +85,7 @@ function Parse(response) {
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_ui_policy_eb8807121ba43510d991c882604bcbdc</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-11 15:14:48</sys_updated_on>
+        <sys_updated_on>2023-10-11 18:49:20</sys_updated_on>
         <table/>
         <ui_type>10</ui_type>
         <variable_set/>

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="432061e21baf61108d594047bc4bcbc2" extends="task" label="Demande de consultation avec possibilité d’évaluation" max_length="40" name="x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation" text_index="true" type="collection">
-        <element label="Accusé de réception" max_length="255" name="accuse_de_reception" type="boolean"/>
-        <element label="Accusé d'envoi" max_length="255" name="accuse_d_envoi" type="boolean"/>
         <element label="Assigné à moi" max_length="255" name="assigne_to_me" type="boolean"/>
         <element label="Autres diagnostic :" max_length="200" name="autres_diagnostic2" type="string"/>
         <element label="Autre Communication" max_length="40" name="autre_communication" type="string"/>
@@ -214,6 +212,18 @@
             </choice>
         </element>
         <element label="Les stratégies de différenciation et les adaptations suivantes ont été mises à l" max_length="4000" name="les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element choice="1" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_a_t_il_t_envoy_aux_parents_tuteurs_l_gaux" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
+            </choice>
+        </element>
+        <element choice="1" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
+            </choice>
+        </element>
         <element label="linkattachment" max_length="200" name="linkattachment" type="string"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’enfant présente-il des difficultés de la parole (par ex. bégaiement, articulat" max_length="40" name="l_enfant_pr_sente_il_des_difficult_s_de_la_parole_par_ex_b_gaiement_articulat" type="choice">
             <choice>
