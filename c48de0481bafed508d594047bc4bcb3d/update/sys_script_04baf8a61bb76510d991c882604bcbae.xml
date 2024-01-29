@@ -38,6 +38,7 @@
     while (gr.next()) {
         html = gr.html_template;
     }
+	gs.info('Partage test : ' + html);
     var hfInfo = new Object();
     hfInfo["HeaderImageAttachmentId"] = "fe71ca801b04b910d991c882604bcb30";
     hfInfo["HeaderImageAlignment"] = "left";
@@ -52,30 +53,54 @@
     var tableName = 'x_ndecd_triage_2_0_demande_de_partage';
     var pdfName = "Partage d'un rapport " + current.getDisplayValue('eleve');
     newHtml = html.replace("var1", current.getDisplayValue('eleve'));
-    newHtml = newHtml.replace("var15", current.getDisplayValue('consentement_parental_verbal'));
 
-
-    newHtml = newHtml.replace("var9", current.getDisplayValue('interpretation_formelle'));
-    newHtml = newHtml.replace("var8", current.getDisplayValue('date_du_rapport'));
-    newHtml = newHtml.replace("var7", current.getDisplayValue('type_de_rapport'));
+    newHtml = newHtml.replace("var7", current.getDisplayValue('il_s_agit_d_un_rapport_en'));
     //var 6
     if (current.getDisplayValue('autre_situation_explication') != "") {
         newHtml = newHtml.replace("var6", current.getDisplayValue('autre_situation_explication'));
     } else {
-        newHtml = newHtml.replace('<div id="maBalise"><span style="font-size: 10pt;">Autre situation explication: var6</span></div>', '');
+        newHtml = newHtml.replace('<p id="maBalise"><span style="font-size: 10pt;">Autre situation explication: <strong>var6</strong></span></p>', '');
     }
+    if (current.getDisplayValue('il_s_agit_d_un_rapport_en').indexOf('Partage d’un rapport en orthophonie') > -1) {
+        newHtml = newHtml.replace("var8", current.getDisplayValue('date_du_rapport'));
+        newHtml = newHtml.replace("var75", current.getDisplayValue('interpretation_formelle'));
+
+    } else {
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Date du rapport(Orthophonie): <strong>var8</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Est-ce qu&#39;une interprétation formelle de ce rapport est demandée(Orthophonie): <strong>var75</strong></span></p>', '');
+    }
+
+    if (current.getDisplayValue('il_s_agit_d_un_rapport_en').indexOf('Partage d’un rapport en audiologie') > -1) {
+        newHtml = newHtml.replace("var48", current.getDisplayValue('date_du_rapport2'));
+        newHtml = newHtml.replace("var41", current.getDisplayValue('interpretation_formelle2'));
+
+    } else {
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Date du rapport(Audiologie): <strong>var48</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Est-ce qu&#39;une interprétation formelle de ce rapport est demandée(Audiologie): <strong>var41</strong></span></p>', '');
+    }
+
+	if (current.getDisplayValue('il_s_agit_d_un_rapport_en').indexOf('Recommandation d’achat d’un système MF ') > -1) {
+        newHtml = newHtml.replace("var42", current.getDisplayValue('nom_de_l_orthophoniste_ayant_fait_la_recommandation'));
+        newHtml = newHtml.replace("var43", current.getDisplayValue('date_du_rapport3'));
+
+    } else {
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Nom de l’orthophoniste ayant fait la recommandation d’achat du système MF: <strong>var42</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Date: <strong>var43</strong></span></p>', '');
+    }
+
 
 
     //
     newHtml = newHtml.replace("var5", current.getDisplayValue('situation_familiale_de_l_l_ve'));
     newHtml = newHtml.replace("var4", current.getDisplayValue('est_ce_que_l_l_ve_a_un_diagnostic'));
     // var3
-    if (current.getValue('classe_distinct') != null) {
+    if (current.getValue('classe_distinct') != null ) {
         newHtml = newHtml.replace("var3", current.getDisplayValue('classe_distinct'));
     } else {
-        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Classe distincte: var3</span></div>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Classe distincte: <strong>var3</strong></span></p>', '');
     }
     //
+
     newHtml = newHtml.replace("var2", current.getDisplayValue('classe_distinc_vrai_faux'));
     newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
     newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
@@ -84,7 +109,7 @@
     // get direction name 
     var dir = current.number;
     var gsdirect = new GlideRecord('sysapproval_approver');
-    gsdirect.addEncodedQuery('sysapproval.number=' + dir+'^state=approved');
+    gsdirect.addEncodedQuery('sysapproval.number=' + dir + '^state=approved');
     gsdirect.query();
     while (gsdirect.next()) {
         newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
@@ -97,11 +122,19 @@
 
     var gselve = new GlideRecord('sys_user');
     gselve.get(eleve1);
-
+	
+	newHtml = newHtml.replace("var1125", gselve.getDisplayValue('u_classe'));
     newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_ecole'));
     newHtml = newHtml.replace("var12", gselve.u_niso);
     newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
 
+	var approver =  new GlideRecord('sys_user');
+	approver.addEncodedQuery('name='+gsdirect.getDisplayValue('approver'));
+	approver.query();
+	if(approver.next()){
+	newHtml = newHtml.replace("var22", approver.getDisplayValue('title'));
+	}
+	
     var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
     var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
 
@@ -114,7 +147,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>04baf8a61bb76510d991c882604bcbae</sys_id>
-        <sys_mod_count>112</sys_mod_count>
+        <sys_mod_count>133</sys_mod_count>
         <sys_name>CECCE Generate PDF partage</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -122,7 +155,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_04baf8a61bb76510d991c882604bcbae</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-27 19:12:14</sys_updated_on>
+        <sys_updated_on>2024-01-26 20:56:35</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

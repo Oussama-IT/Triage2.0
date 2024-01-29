@@ -18,12 +18,12 @@
         <on_load>true</on_load>
         <order>100</order>
         <reverse_if_false>true</reverse_if_false>
-        <run_scripts>false</run_scripts>
+        <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
 
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
-
+g_form.showFieldMsg('est_ce_que_l_achat_d_outils_technologiques_a_t_recommand_par_un_e_professionnel_le',"Veuillez insérer le rapport orthophonique contenant la recommandation d'essai ou d'achat en pièce jointe.",'info');
 }]]></script_true>
         <set_values/>
         <short_description>personne et date</short_description>
@@ -33,17 +33,17 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ca413f4d1b44bd10d991c882604bcb69</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>personne et date</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_ui_policy_ca413f4d1b44bd10d991c882604bcb69</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-07-14 04:25:13</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-01-26 15:37:51</sys_updated_on>
         <table/>
-        <ui_type>0</ui_type>
+        <ui_type>10</ui_type>
         <variable_set/>
         <view/>
     </catalog_ui_policy>

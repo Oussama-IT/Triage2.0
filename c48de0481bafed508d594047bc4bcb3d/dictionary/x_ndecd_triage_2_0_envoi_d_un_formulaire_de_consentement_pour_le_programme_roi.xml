@@ -70,7 +70,7 @@
                 <element dependent_value="réside avec ses deux parents à la même adresse" inactive_on_update="false" label="Réside avec ses deux parents à la même adresse" value="réside avec ses deux parents à la même adresse"/>
             </choice>
         </element>
-        <element choice="1" label="Type d'envoi du rapport" max_length="40" name="type_d_envoi_du_rapport" type="choice">
+        <element choice="1" default="par lettre" label="Type d'envoi du rapport" max_length="40" name="type_d_envoi_du_rapport" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Par lettre" sequence="0" value="par lettre"/>
                 <element inactive_on_update="false" label="Par courriel" sequence="1" value="par courriel"/>

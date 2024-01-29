@@ -6,7 +6,7 @@
         <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>true</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -15,7 +15,7 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">raison_de_soumissions_de_formulaire=bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai^EQ<item display_value="bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai" endquery="false" field="raison_de_soumissions_de_formulaire" goto="false" newquery="false" operator="=" or="false" value="bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai"/>
+        <filter_condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">raison_de_soumissions_de_formulaire=^EQ<item display_value="-- None --" endquery="false" field="raison_de_soumissions_de_formulaire" goto="false" newquery="false" operator="=" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
@@ -45,15 +45,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>53eb17bd1bb03d10d991c882604bcbb6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>hide choice</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_53eb17bd1bb03d10d991c882604bcbb6</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-08-22 17:38:52</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-01-16 16:27:41</sys_updated_on>
         <template>raison_de_soumissions_de_formulaire=^EQ</template>
         <when>before_display</when>
     </sys_script>

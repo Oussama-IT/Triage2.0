@@ -59,7 +59,7 @@
         <element label="Raison" max_length="250" name="raison" type="string"/>
         <element label="Situation familiale de l’élève" max_length="100" name="situation_familiale_de_l_l_ve" type="string"/>
         <element label="test" max_length="40" name="test" type="file_attachment"/>
-        <element choice="1" label="Type d'envoi du rapport" max_length="40" name="type_d_envoi_du_rapport" type="choice">
+        <element choice="1" default="par lettre" label="Type d'envoi du rapport" max_length="40" name="type_d_envoi_du_rapport" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Par courriel" sequence="0" value="par courriel"/>
                 <element inactive_on_update="false" label="Par lettre" sequence="1" value="par lettre"/>

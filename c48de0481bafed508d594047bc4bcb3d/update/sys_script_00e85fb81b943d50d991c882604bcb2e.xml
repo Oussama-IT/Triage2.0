@@ -54,7 +54,6 @@
     var tableName = 'x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture';
     var pdfName = "Demande SEP " + current.getDisplayValue('eleve');
     newHtml = html.replace("var1", current.getDisplayValue('eleve'));
-    newHtml = newHtml.replace("var15", current.getDisplayValue('consentement_parental_verbal'));
 
 
     newHtml = newHtml.replace("var33", current.getDisplayValue('est_ce_que_l_l_ve_est_motiv_e_utiliser_la_technologie_d_aide'));
@@ -67,15 +66,15 @@
         newHtml = newHtml.replace("var8", current.getDisplayValue('par_qui'));
     } else {
         // delete line
-        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Par qui? : var8</span></div>', '');
-        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">À quelle date? : var9</span></div>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Par qui? : <strong>var8</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">À quelle date? : <strong>var9</strong></span></p>', '');
     }
     //
     // delete null value if true
     if (current.getDisplayValue('autre_situation_explication') != "") {
         newHtml = newHtml.replace("var6", current.getDisplayValue('autre_situation_explication'));
     } else {
-        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Autre situation explication: var6</span></div>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Autre situation explication: <strong>var6</strong></span></p>', '');
     }
     //
     newHtml = newHtml.replace("var5", current.getDisplayValue('situation_familiale_de_l_l_ve'));
@@ -84,7 +83,7 @@
     if (current.getValue('classe_distinct') != null) {
         newHtml = newHtml.replace("var3", current.getDisplayValue('classe_distinct'));
     } else {
-        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Classe distincte: var3</span></div>', '');
+        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Classe distincte: <strong>var3</strong></span></div>', '');
     }
     //
     newHtml = newHtml.replace("var2", current.getDisplayValue('est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte'));
@@ -105,10 +104,18 @@
 
     var gselve = new GlideRecord('sys_user');
     gselve.get(eleve1);
-
+    newHtml = newHtml.replace("var14", gselve.getDisplayValue('u_classe'));
     newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_ecole'));
     newHtml = newHtml.replace("var12", gselve.u_niso);
     newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
+
+	var approver =  new GlideRecord('sys_user');
+	approver.addEncodedQuery('name='+gsdirect.getDisplayValue('approver'));
+	approver.query();
+	if(approver.next()){
+	newHtml = newHtml.replace("var22", approver.getDisplayValue('title'));
+
+	}
 
     var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
     var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
@@ -122,7 +129,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>00e85fb81b943d50d991c882604bcb2e</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>CECCE Generate PDF SEP</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -130,7 +137,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_00e85fb81b943d50d991c882604bcb2e</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-27 19:20:16</sys_updated_on>
+        <sys_updated_on>2024-01-26 20:45:18</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

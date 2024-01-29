@@ -3,7 +3,8 @@
         <active>true</active>
         <category display_value="Envoi d’un formulaire ROI">2047dabb1ba7a5108d594047bc4bcbac</category>
         <columns>number,eleve.u_nom_de_l_ecole,eleve,eleve.u_classe,state,assigned_to,sys_created_on</columns>
-        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">assigned_toDYNAMIC90d1921e5f510100a9ad2572f2b477fe<item endquery="false" field="assigned_to" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">assigned_toDYNAMIC90d1921e5f510100a9ad2572f2b477fe^stateNOT IN3,7,4<item endquery="false" field="assigned_to" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item display_value="3,7,4" endquery="false" field="state" goto="false" newquery="false" operator="NOT IN" or="false" value="3,7,4"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
@@ -52,7 +53,7 @@
         <highlight_content_pattern/>
         <list_attributes/>
         <max_characters>4000</max_characters>
-        <order>600</order>
+        <order>700</order>
         <override_word_wrap_user_pref>false</override_word_wrap_user_pref>
         <roles/>
         <sys_class_name>sys_ux_list</sys_class_name>
@@ -61,17 +62,17 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>aa9e1f761b303150d991c882604bcbb8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Assigné à moi</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Assigné à moi (Ouvert)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_aa9e1f761b303150d991c882604bcbb8</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-06 19:25:53</sys_updated_on>
+        <sys_updated_on>2024-01-19 15:24:10</sys_updated_on>
         <table>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</table>
-        <title>Assigné à moi</title>
+        <title>Assigné à moi (Ouvert)</title>
         <view/>
         <word_wrap>false</word_wrap>
     </sys_ux_list>

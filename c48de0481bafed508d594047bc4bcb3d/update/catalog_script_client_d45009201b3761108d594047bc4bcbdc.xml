@@ -17,12 +17,17 @@
         <messages/>
         <name>submit</name>
         <order/>
-        <script><![CDATA[function onSubmit(){
+        <script><![CDATA[function onSubmit() {
 
-	if(g_form.getValue('consentement_parental_verbal') == 'No'){
-		g_form.showFieldMsg('consentement_parental_verbal',"consentement parental verbal est obligatoire",'error');
-		return false;
-	}
+    if (g_form.getValue('consentement_parental_verbal') == 'No') {
+        g_form.showFieldMsg('consentement_parental_verbal', "consentement parental verbal est obligatoire", 'error');
+        return false;
+    }
+    if (g_form.getValue('il_s_agit_d_un_rapport_en').indexOf('4187b5b51bf33110d991c882604bcbec') > -1) {
+        g_form.addErrorMessage("Il ne vous est pas possible de soumettre votre demande pour le moment. Veuillez communiquer avec l’orthophoniste attitrée à votre école.");
+
+        return false;
+    }
 
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -31,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d45009201b3761108d594047bc4bcbdc</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>submit</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -39,7 +44,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_d45009201b3761108d594047bc4bcbdc</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-06-30 17:40:26</sys_updated_on>
+        <sys_updated_on>2024-01-23 16:42:50</sys_updated_on>
         <table/>
         <type>onSubmit</type>
         <ui_type>10</ui_type>

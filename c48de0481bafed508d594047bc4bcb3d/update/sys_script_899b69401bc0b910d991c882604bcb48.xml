@@ -57,8 +57,17 @@
     if (current.getDisplayValue('autre_situation') != "") {
         newHtml = newHtml.replace("var6", current.getDisplayValue('autre_situation'));
     } else {
-        newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Autre situation explication: var6</span></div>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Autre situation explication: <strong>var6</strong></span></p>', '');
     }
+
+	// //added 2 missing question. to verify
+	// newHtml = newHtml.replace("var2", current.getDisplayValue('est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte')); 
+    //     if (current.getValue('classe_distinct') != null) {
+    //     newHtml = newHtml.replace("var3", current.getDisplayValue('classe_distinct'));
+    // } else {
+    //     newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Classe distincte: <strong>var3</strong></span></div>', '');
+    // }
+
 
     newHtml = newHtml.replace("var9", current.getDisplayValue('raison_de_soumissions_de_formulaire'));
     newHtml = newHtml.replace("var8", current.getDisplayValue('date_du_courriel'));
@@ -77,13 +86,21 @@
         newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
         newHtml = newHtml.replace("var91", gsdirect.getDisplayValue('approver'));
     }
+	var approver =  new GlideRecord('sys_user');
+	approver.addEncodedQuery('name='+gsdirect.getDisplayValue('approver'));
+	approver.query();
+	if(approver.next()){
+	newHtml = newHtml.replace("var22", approver.getDisplayValue('title'));
+
+	}
+	
 
     newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
     var eleve1 = current.getValue("eleve");
 
     var gselve = new GlideRecord('sys_user');
     gselve.get(eleve1);
-
+	newHtml = newHtml.replace("var14", gselve.getDisplayValue('u_classe'));
     newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_ecole'));
     newHtml = newHtml.replace("var12", gselve.u_niso);
     newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
@@ -100,7 +117,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>899b69401bc0b910d991c882604bcb48</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>CECCE Generae PDF ROI</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -108,7 +125,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_899b69401bc0b910d991c882604bcb48</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-11 16:17:49</sys_updated_on>
+        <sys_updated_on>2024-01-26 20:43:42</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
