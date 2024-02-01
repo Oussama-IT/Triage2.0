@@ -76,9 +76,11 @@ gs.info('here');
 		"3c09454e1b6cb110d991c882604bcb7b": 0.5,
 		"3c09454e1b6cb110d991c882604bcb7c": 0.5,
 		"6809054e1b6cb110d991c882604bcbb0": 0.5,
+		"d340afee1b2bf950d991c882604bcba4" : 0,
 		//Démontre des difficultés en situations sociales
 		"633b09021bacb110d991c882604bcbb8": 0.5,
 		"0e41a7221b6bf950d991c882604bcb0e": 0.5,
+		"7ab9018e1b6cb110d991c882604bcbe9": 0,
 		//L’élève éprouve des difficultés au niveau du jeu
 		"65fb0d421bacb110d991c882604bcbeb": 0.5,
 		"69fb0d421bacb110d991c882604bcbea": 0.5,
@@ -86,12 +88,15 @@ gs.info('here');
 		"e9fb0d421bacb110d991c882604bcbe9": 0.5,
 		"e9fb0d421bacb110d991c882604bcbeb": 0.5,
 		"edfb0d421bacb110d991c882604bcbea": 0.5,
+		"1f12af221b6bf950d991c882604bcb4f": 0,
 		//L’élève éprouve des difficultés d’imitation
 		"2181c6391b9cfd50d991c882604bcb7e": 0.5,
 		"2181c6391b9cfd50d991c882604bcb7f": 0.5,
 		"2501cef51b9cfd50d991c882604bcb5f": 0.5,
 		"2981c6391b9cfd50d991c882604bcb7e": 0.5,
 		"2981c6391b9cfd50d991c882604bcb7f": 0.5,
+		"83e0efee1b2bf950d991c882604bcb43": 0.5,
+		
     };
     function scoreforselectfields(str) {
         if (str != null) {
@@ -126,6 +131,7 @@ gs.info('here');
 	if (current.getValue("la_qualit_de_la_voix_de_l_l_ve_semble_anormale_ex_rauque_nasale_et_ce_dela_quali") == "yes"){
 		score += 2;
 	}
+	gs.info(58963),
 	scoreforselectfields(current.getValue("l_l_ve_prouve_des_difficult_s_d_imitation"));
 
 
@@ -438,15 +444,15 @@ gs.info('here');
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cd1cc0f81b083d10d991c882604bcb52</sys_id>
-        <sys_mod_count>124</sys_mod_count>
+        <sys_mod_count>126</sys_mod_count>
         <sys_name>Calcul score </sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_cd1cc0f81b083d10d991c882604bcb52</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-01-22 16:02:37</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-01-30 20:50:29</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
