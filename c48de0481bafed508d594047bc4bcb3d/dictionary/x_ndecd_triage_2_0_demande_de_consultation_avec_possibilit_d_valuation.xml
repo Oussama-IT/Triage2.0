@@ -225,10 +225,7 @@
         <element label="Langue dominante de l’élève (la langue avec laquelle l’élève est le plus à l’ais" max_length="100" name="langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
         <element label="Langue(s) parlée(s) à la maison :" max_length="100" name="langue_s_parl_e_s_la_maison" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="La qualité de la voix de l’élève semble anormale (ex. rauque, nasale), et ce, de" max_length="40" name="la_qualit_de_la_voix_de_l_l_ve_semble_anormale_ex_rauque_nasale_et_ce_dela_quali" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
+            <choice/>
         </element>
         <element label="Les stratégies de différenciation et les adaptations suivantes ont été mises à l" max_length="4000" name="les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
         <element choice="1" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_a_t_il_t_envoy_aux_parents_tuteurs_l_gaux" type="choice">

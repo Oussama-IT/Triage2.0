@@ -36,7 +36,9 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>Bonjour ${opened_by.last_name} ${opened_by.first_name}&nbsp;<br /><br />, Nous vous informons que votre formulaire SLI concernant l'&eacute;l&egrave;ve ${l_ve.last_name} ${l_ve.first_name}<br /><br />(N&deg;: ${number}) a &eacute;t&eacute; communiqu&eacute; &agrave; la direction pour approbation. Nous vous tiendrons inform&eacute; (e) de tout avancement concernant votre demande. Veuillez cliquer sur ce lien [lien vers workspace] pour consulter votre demande. Merci.</p>]]></message_html>
+        <message_html><![CDATA[<p>Bonjour ${opened_by.last_name} ${opened_by.first_name} ,</p>
+<p>Nous vous informons que votre formulaire SLI concernant l'&eacute;l&egrave;ve ${l_ve.last_name} ${l_ve.first_name} (N&deg;: ${number}) a &eacute;t&eacute; communiqu&eacute; &agrave; la direction pour approbation. Nous vous tiendrons inform&eacute; (e) de tout avancement concernant votre demande. Veuillez cliquer sur <a href="/x/ndecd/triage-20-demande-de-partage/record/x_ndecd_triage_2_0_sli_roi/${sys_id}">ce lien</a> pour consulter votre demande.</p>
+<p>Merci.</p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>SLI Demandeur</name>
@@ -45,7 +47,7 @@
         <push_message_only>false</push_message_only>
         <recipient_fields/>
         <recipient_groups/>
-        <recipient_users>6768e9d71b60b110d991c882604bcbac</recipient_users>
+        <recipient_users>6768e9d71b60b110d991c882604bcbac,115cb09e1b500e108d594047bc4bcb78</recipient_users>
         <reply_to/>
         <send_self>true</send_self>
         <sms_alternate/>
@@ -58,7 +60,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5da94f791b144a10d991c882604bcbd4</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>SLI Demandeur</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -66,7 +68,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_5da94f791b144a10d991c882604bcbd4</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-02-13 15:04:03</sys_updated_on>
+        <sys_updated_on>2024-02-14 15:08:33</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
