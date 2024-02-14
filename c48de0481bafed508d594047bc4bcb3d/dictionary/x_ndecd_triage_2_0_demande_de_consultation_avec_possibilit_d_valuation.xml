@@ -430,16 +430,7 @@
         <element label="Résultat :" max_length="500" name="r_sultat" type="string"/>
         <element label="score" max_length="20" name="score" type="decimal"/>
         <element label="Score" max_length="40" name="score1" type="string"/>
-        <element choice="1" label="Situation familiale" max_length="40" name="situation_familiale" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec sa mère" sequence="0" value="fait l’objet d’une garde exclusive avec sa mère"/>
-                <element inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec son père" sequence="1" value="fait l’objet d’une garde exclusive avec son père"/>
-                <element inactive_on_update="false" label="Fait l’objet d’une garde partagée" sequence="2" value="fait l’objet d’une garde partagée"/>
-                <element inactive_on_update="false" label="Habite avec son tuteur ou sa tutrice" sequence="3" value="habite avec son tuteur ou sa tutrice"/>
-                <element inactive_on_update="false" label="Réside avec ses deux parents à la même adresse" sequence="4" value="réside avec ses deux parents à la même adresse"/>
-                <element inactive_on_update="false" label="Autre situation" sequence="5" value="autre situation"/>
-            </choice>
-        </element>
+        <element label="Situation familiale" max_length="100" name="situation_familiale" type="string"/>
         <element choice="3" default="non" label="Si la langue dominante de l’élève n’est pas le français, est-ce que des difficul" max_length="40" name="si_la_langue_dominante_de_l_l_ve_n_est_pas_le_fran_ais_est_ce_que_des_difficul" type="choice">
             <choice>
                 <element inactive_on_update="false" label="non" value="no"/>
