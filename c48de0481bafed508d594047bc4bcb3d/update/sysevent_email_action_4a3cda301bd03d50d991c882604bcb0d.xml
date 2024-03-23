@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
     <sysevent_email_action action="INSERT_OR_UPDATE">
-        <action_insert>false</action_insert>
-        <action_update>true</action_update>
+        <action_insert>true</action_insert>
+        <action_update>false</action_update>
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
         <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
         <collection>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</collection>
-        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointeCHANGESTOoui^EQ<item display_value="Oui" endquery="false" field="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" goto="false" newquery="false" operator="CHANGESTO" or="false" value="oui"/>
+        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">soumis_parSTARTSWITHéquipe-école^EQ<item endquery="false" field="soumis_par" goto="false" newquery="false" operator="STARTSWITH" or="false" value="équipe-école"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <content_type>text/html</content_type>
@@ -30,7 +30,7 @@
         <event_parm_2>false</event_parm_2>
         <exclude_delegates>false</exclude_delegates>
         <force_delivery>false</force_delivery>
-        <from>ne-pas-répondre équipe triage&lt;e_triage@ecolecatholique.ca&gt;</from>
+        <from>ne-pas-répondre comité ROI&lt;sli_roi@ecolecatholique.ca&gt;</from>
         <generation_type>engine</generation_type>
         <importance/>
         <include_attachments>false</include_attachments>
@@ -38,20 +38,21 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>Bonjour</p>
-<p>Nous vous informons que ${opened_by.first_name} ${opened_by.last_name} a &eacute;mis une nouvelle demande d'Envoi d&rsquo;un formulaire de consentement pour le programme ROI concernant l'&eacute;l&egrave;ve&nbsp; ${eleve.first_name}, ${eleve.last_name}(N&deg; ${number}).&nbsp;</p>
-<p>Veuillez consulter le <a href="/x/ndecd/triage-20-demande-de-partage/record/x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi/${sys_id}/params/selected-tab-index/1" target="_blank" rel="noopener">lien suivant</a> afin de d&eacute;l&eacute;guer cette demande &agrave; un(e) orthophoniste.</p>
-<p><br />Merci<br />&nbsp;</p>]]></message_html>
+        <message_html><![CDATA[<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Bonjour,</span></p>
+<p>&nbsp;</p>
+<p>Nous vous informons que ${opened_by.first_name} ${opened_by.last_name} a &eacute;mis un nouveau formulaire ROI concernant l'&eacute;l&egrave;ve ${eleve.name}(N&deg; ${number}) et que cette demande a obtenu le consentement parental de l'&eacute;l&egrave;ve.&nbsp;</p>
+<p>Veuillez consulter le <a href="/x/ndecd/triage-20-demande-de-partage/record/x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi/${sys_id}/params/selected-tab-index/1" target="_blank" rel="noopener">lien suivant</a>&nbsp; afin de consulter et d&eacute;l&eacute;guer cette demande vu qu'une &eacute;valuation ROI est requise pour cette demande.</p>
+<p><br />Merci.</p>]]></message_html>
         <message_list/>
         <message_text/>
-        <name>Notification à l'équipe triage d'une nouvelle soumission</name>
+        <name>Notification à la comitte d'une nouvelle soumission</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
         <recipient_fields/>
-        <recipient_groups/>
-        <recipient_users>00f6e32d1b9531508d594047bc4bcbfa</recipient_users>
-        <reply_to>ne-pas-répondre équipe triage&lt;e_triage@ecolecatholique.ca&gt;</reply_to>
+        <recipient_groups name="CECCE Comité ROI">b678afa31ba48e50d991c882604bcb1b</recipient_groups>
+        <recipient_users/>
+        <reply_to>ne-pas-répondre comité ROI&lt;sli_roi@ecolecatholique.ca&gt;</reply_to>
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
@@ -63,15 +64,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4a3cda301bd03d50d991c882604bcb0d</sys_id>
-        <sys_mod_count>15</sys_mod_count>
-        <sys_name>Notification à l'équipe triage d'une nouvelle soumission</sys_name>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Notification à la comitte d'une nouvelle soumission</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_4a3cda301bd03d50d991c882604bcb0d</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-18 13:21:16</sys_updated_on>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-19 13:33:23</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

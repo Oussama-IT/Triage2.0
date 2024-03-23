@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ndecd_triage_2_0_sli_roi</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Calcul score SLI-ROI</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+var scoreROI=0;
+var scoreSLI=0;
+if (current.getValue("l_l_ve_sera_en_quelle_ann_e_au_mois_de_septembre_prochain") == "jardin") {
+        scoreROI += 1;
+}
+if (current.getValue("l_l_ve_sera_en_quelle_ann_e_au_mois_de_septembre_prochain") == "1ere") {
+        scoreROI += 2;
+}
+gs.info("xxxxxxxx1"+scoreROI+"xxxxxxxx1"+scoreSLI);
+if (current.getValue("quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri") == "french") {
+        scoreROI += 4;
+}
+if (current.getValue("quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri") == "english") {
+        scoreROI += 2;
+}
+if (current.getValue("quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri") == "other") {
+        scoreROI += 2;
+}
+
+
+if (current.getValue("l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs") == "no") {
+        scoreROI += 3;
+		scoreSLI += 2.1;
+}
+
+///
+if (current.getValue("l_l_ve_a_de_la_difficult_comprendre_les_consignes_dans_sa_langue_dominante") == "sometimes") {
+		scoreSLI += 6.3;
+}
+if (current.getValue("l_l_ve_a_de_la_difficult_comprendre_les_consignes_dans_sa_langue_dominante") == "often") {
+		scoreSLI += 12.6;
+}
+if (current.getValue("l_l_ve_a_de_la_difficult_comprendre_les_consignes_dans_sa_langue_dominante") == "always") {
+		scoreSLI += 18.6;
+}
+///
+if (current.getValue("l_l_ve_a_de_la_difficult_comprendre_les_questions_dans_sa_langue_dominante") == "sometimes") {
+		scoreSLI += 6.3;
+}
+if (current.getValue("l_l_ve_a_de_la_difficult_comprendre_les_questions_dans_sa_langue_dominante") == "often") {
+		scoreSLI += 12.6;
+}
+if (current.getValue("l_l_ve_a_de_la_difficult_comprendre_les_questions_dans_sa_langue_dominante") == "always") {
+		scoreSLI += 18.6;
+}
+///
+if (current.getValue("l_l_ve_utilise_des_mots_impr_cis_ex_chose_a_un_vocabulaire_plus_pauvre") == "sometimes") {
+		scoreSLI += 4.2;
+}
+if (current.getValue("l_l_ve_utilise_des_mots_impr_cis_ex_chose_a_un_vocabulaire_plus_pauvre") == "often") {
+		scoreSLI += 8.4;
+}
+if (current.getValue("l_l_ve_utilise_des_mots_impr_cis_ex_chose_a_un_vocabulaire_plus_pauvre") == "always") {
+		scoreSLI += 12.6;
+}
+///
+if (current.getValue("l_l_ve_produit_des_phrases_incompl_tes_dans_sa_langue_dominante") == "sometimes") {
+		scoreSLI += 4.2;
+}
+if (current.getValue("l_l_ve_produit_des_phrases_incompl_tes_dans_sa_langue_dominante") == "often") {
+		scoreSLI += 8.4;
+}
+if (current.getValue("l_l_ve_produit_des_phrases_incompl_tes_dans_sa_langue_dominante") == "always") {
+		scoreSLI += 12.6;
+}
+///
+if (current.getValue("l_l_ve_produit_des_phrases_grammaticalement_incorrectes_dans_sa_langue_dominant") == "sometimes") {
+		scoreSLI += 4.2;
+}
+if (current.getValue("l_l_ve_produit_des_phrases_grammaticalement_incorrectes_dans_sa_langue_dominant") == "often") {
+		scoreSLI += 8.4;
+}
+if (current.getValue("l_l_ve_produit_des_phrases_grammaticalement_incorrectes_dans_sa_langue_dominant") == "always") {
+		scoreSLI += 12.6;
+}
+///
+if (current.getValue("l_l_ve_a_de_la_difficult_raconter_un_v_nement_v_cu_r_cemment_dans_sa_langue") == "sometimes") {
+		scoreSLI += 2.1;
+}
+if (current.getValue("l_l_ve_a_de_la_difficult_raconter_un_v_nement_v_cu_r_cemment_dans_sa_langue") == "often") {
+		scoreSLI += 4.2;
+}
+if (current.getValue("l_l_ve_a_de_la_difficult_raconter_un_v_nement_v_cu_r_cemment_dans_sa_langue") == "always") {
+		scoreSLI += 6.3;
+}
+
+if (current.getValue("l_l_ve_a_de_la_difficult_nommer_les_lettres_et_leurs_sons_selon_les_attentes") == "yes") {
+		scoreSLI += 6.3;
+}
+
+if (current.getValue("l_l_ve_a_de_la_difficult_en_conscience_phonologique_habilit_s_manipuler_les") == "yes") {
+		scoreSLI += 6.3;
+}
+
+if (current.getValue("les_difficult_s_de_l_l_ve_ont_un_impact_sur_ses_apprentissages") == "yes") {
+		scoreSLI += 1.575;
+}
+if (current.getValue("les_difficult_s_de_l_l_ve_ont_un_impact_sur_sa_participation_en_salle_de_classe") == "yes") {
+		scoreSLI += 1.575;
+}
+
+if (current.getValue("votre_connaissance_est_ce_que_les_parents_sont_inquiets_du_d_veloppement_lang") == "yes") {
+		scoreSLI += 0.525;
+}
+current.setValue("scoresli",parseFloat(scoreSLI.toFixed(1)));
+current.setValue("scoreroi",parseFloat(scoreROI.toFixed(1)));
+gs.info("xxxxxxxx2"+scoreROI+"xxxxxxxx2"+scoreSLI);
+current.update();
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-02-28 17:01:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5c42bd471b600e50d991c882604bcba2</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Calcul score SLI-ROI</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_5c42bd471b600e50d991c882604bcba2</sys_update_name>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 19:53:05</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=5c42bd471b600e50d991c882604bcba2"/>
+</record_update>

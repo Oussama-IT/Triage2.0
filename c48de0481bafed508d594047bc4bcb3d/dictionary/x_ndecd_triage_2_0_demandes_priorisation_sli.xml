@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="a51bb6881b2cc2508d594047bc4bcb5b" extends="task" label=" demandes/priorisation SLI" max_length="40" name="x_ndecd_triage_2_0_demandes_priorisation_sli" type="collection">
+        <element label="Autre situation explication" max_length="200" name="autre_situation_explication" type="string"/>
+        <element label="Classe" max_length="32" name="classe" reference="x_ndecd_triage_2_0_classe" type="reference"/>
+        <element label="Demandesliroi" max_length="4000" name="demandesliroi" reference="x_ndecd_cecce_base_sli_roi_qa" type="glide_list"/>
+        <element choice="1" label="Dépistage SLI requis" max_length="40" name="d_pistage_sli_requis" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" value="no"/>
+                <element inactive_on_update="false" label="Non" language="fq" value="no"/>
+                <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
+                <element inactive_on_update="false" label="Yes" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" choice_field="d_pistage_sli_requis_non_requis" choice_table="x_ndecd_cecce_base_options" label="Dépistage SLI requis ou non?" max_length="40" name="d_pistage_sli_requis_ou_non" type="choice">
+            <choice/>
+        </element>
+        <element label="Est-ce que l'élève a un diagnostic posé par un professionnel de la santé autoris" max_length="200" name="est_ce_que_l_l_ve_a_un_diagnostic" type="string"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
+            <choice/>
+        </element>
+        <element label="generer Roi?" max_length="40" name="generer_roi" type="boolean"/>
+        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langue dominante" max_length="40" name="langue_dominante" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="English" sequence="0" value="english"/>
+                <element inactive_on_update="false" label="French" sequence="1" value="french"/>
+                <element inactive_on_update="false" label="Hindi" sequence="2" value="hindi"/>
+                <element inactive_on_update="false" label="Japanese" sequence="3" value="japanese"/>
+                <element inactive_on_update="false" label="Spanish" sequence="4" value="spanish"/>
+                <element inactive_on_update="false" label="Chinese" sequence="5" value="chinese"/>
+                <element inactive_on_update="false" label="Arabic" sequence="6" value="arabic"/>
+                <element inactive_on_update="false" label="Russian" sequence="7" value="russian"/>
+                <element inactive_on_update="false" label="Portuguese" sequence="8" value="portuguese"/>
+                <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
+            </choice>
+        </element>
+        <element label="Nom de l'élève" max_length="32" name="nom_de_l_l_ve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
+        <element label="Nom éducatrice dépistage" max_length="32" name="nom_ducatrice_d_pistage" reference="sys_user" reference_qual="u_user_type=educatrice^EQ" reference_qual_condition="u_user_type=educatrice^EQ" type="reference"/>
+        <element label="Nom éducatrice Bloc SLI" max_length="32" name="nom_ducatrice_programme_sli" reference="sys_user" reference_qual="u_user_type=educatrice^EQ" reference_qual_condition="u_user_type=educatrice^EQ" type="reference"/>
+        <element label="Particularités " max_length="200" name="particularit_s" type="string"/>
+        <element label="Score de priorisation ROI" max_length="200" name="scorepriorisationroi" type="string"/>
+        <element label="Score de priorisation SLI" max_length="200" name="score_de_priorisation" type="string"/>
+        <element label="Situation familiale de l’élève" max_length="200" name="situation_familiale_de_l_l_ve" type="string"/>
+        <element label="Soumis par" max_length="200" name="soumis_par" type="string"/>
+        <element choice="3" choice_field="statut_sli" choice_table="x_ndecd_cecce_base_options" label="Statut SLI" max_length="40" name="statut_sli" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="À risque" language="fq" value="risque"/>
+                <element inactive_on_update="false" label="Admissible" language="fq" value="admis"/>
+                <element inactive_on_update="false" label="Non-admissible" language="fq" value="non_admis"/>
+                <element inactive_on_update="false" label="Admissible" sequence="0" value="admis"/>
+                <element inactive_on_update="false" label="À risque" sequence="1" value="risque"/>
+                <element inactive_on_update="false" label="Non-admissible" sequence="2" value="non_admis"/>
+            </choice>
+        </element>
+        <element choice="3" choice_field="statut_sli_si_admissible" choice_table="x_ndecd_cecce_base_options" label="Statut SLI - si admissible" max_length="40" name="statut_sli_si_admissible" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Admis - Bloc 1" sequence="0" value="b1"/>
+                <element inactive_on_update="false" label="Admis - Bloc 2" sequence="1" value="b2"/>
+                <element inactive_on_update="false" label="Sans service" sequence="2" value="ss"/>
+            </choice>
+        </element>
+        <element label="Suivis antérieurs" max_length="40" name="suivis_anterieurs" reference="x_ndecd_cecce_base_sli_roi_qa" reference_qual="questionSTARTSWITHLesquels program^EQ" reference_qual_condition="questionSTARTSWITHLesquels program^EQ" type="glide_list"/>
+        <element choice="3" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Suivis antérieurs ou non" max_length="200" name="suivis_ant_rieurs_ou_non" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+    </element>
+</database>

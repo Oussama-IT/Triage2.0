@@ -1,0 +1,2717 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_pd_process_definition">
+    <sys_pd_process_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <description/>
+        <label>CECCE SLI-ROI orthophoniste</label>
+        <name>cecce_sli_roi_orthophoniste</name>
+        <run_on_pad_engine>false</run_on_pad_engine>
+        <snapshot display_value="cecce_sli_roi_orthophoniste">e0d7d7c61b010e10d991c882604bcbfd</snapshot>
+        <status>published</status>
+        <sys_class_name>sys_pd_process_definition</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 20:06:24</sys_created_on>
+        <sys_id>2200a2d11b700610d991c882604bcb5f</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>CECCE SLI-ROI orthophoniste</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_process_definition_2200a2d11b700610d991c882604bcb5f</sys_update_name>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:21:16</sys_updated_on>
+        <view_type>KANBAN</view_type>
+    </sys_pd_process_definition>
+    <sys_pd_process_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <description/>
+        <label>CECCE SLI-ROI orthophoniste</label>
+        <name>cecce_sli_roi_orthophoniste</name>
+        <run_on_pad_engine>false</run_on_pad_engine>
+        <snapshot display_value="cecce_sli_roi_orthophoniste">e0d7d7c61b010e10d991c882604bcbfd</snapshot>
+        <status>published</status>
+        <sys_class_name>sys_pd_process_definition</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 20:06:24</sys_created_on>
+        <sys_id>2200a2d11b700610d991c882604bcb5f</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>CECCE SLI-ROI orthophoniste</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_process_definition_2200a2d11b700610d991c882604bcb5f</sys_update_name>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:21:16</sys_updated_on>
+        <view_type>KANBAN</view_type>
+    </sys_pd_process_definition>
+    <sys_pd_lane action="delete_multiple" query="process_definition=2200a2d11b700610d991c882604bcb5f^sys_idNOT IN257022151b700610d991c882604bcbec,eb8122551b700610d991c882604bcb57"/>
+    <sys_pd_lane action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__257022151b700610d991c882604bcbec">input_record.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_sLIKEf6b6f5191bbcc210d991c882604bcb8a<item endquery="false" field="input_record.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s" goto="false" newquery="false" operator="LIKE" or="false" value="f6b6f5191bbcc210d991c882604bcb8a"/>
+        </condition_to_run>
+        <description/>
+        <label>create ROI records</label>
+        <lane_condition/>
+        <name>create_sli_record</name>
+        <order>1</order>
+        <process_definition display_value="CECCE SLI-ROI orthophoniste">2200a2d11b700610d991c882604bcb5f</process_definition>
+        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule_vars/>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 20:08:14</sys_created_on>
+        <sys_id>257022151b700610d991c882604bcbec</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-08 18:11:00</sys_updated_on>
+        <visible_rule/>
+    </sys_pd_lane>
+    <sys_variable_value action="delete_multiple" query="document_key=257022151b700610d991c882604bcbec"/>
+    <sys_pd_lane action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__eb8122551b700610d991c882604bcb57">input_record.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_sLIKEfab6f5191bbcc210d991c882604bcb89<item endquery="false" field="input_record.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s" goto="false" newquery="false" operator="LIKE" or="false" value="fab6f5191bbcc210d991c882604bcb89"/>
+        </condition_to_run>
+        <description/>
+        <label>create SLI records</label>
+        <lane_condition/>
+        <name>create_sli_records</name>
+        <order>2</order>
+        <process_definition display_value="CECCE SLI-ROI orthophoniste">2200a2d11b700610d991c882604bcb5f</process_definition>
+        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule_vars/>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 20:13:01</sys_created_on>
+        <sys_id>eb8122551b700610d991c882604bcb57</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-08 15:34:52</sys_updated_on>
+        <visible_rule/>
+    </sys_pd_lane>
+    <sys_variable_value action="delete_multiple" query="document_key=eb8122551b700610d991c882604bcb57"/>
+    <sys_pd_activity action="delete_multiple" query="process_definition=2200a2d11b700610d991c882604bcb5f^sys_idNOT IN2932cfd11bf00610d991c882604bcbfe,040195351b4986508d594047bc4bcb98,133243151bf00610d991c882604bcb7c"/>
+    <sys_pd_activity action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <condition_to_run/>
+        <derivative_order/>
+        <derivative_parent/>
+        <description/>
+        <inputs/>
+        <inputs/>
+        <label>Create Record Roi</label>
+        <lane display_value="create ROI records">257022151b700610d991c882604bcbec</lane>
+        <name>automated_create_record</name>
+        <order>1</order>
+        <outputs/>
+        <process_definition display_value="CECCE SLI-ROI orthophoniste">2200a2d11b700610d991c882604bcb5f</process_definition>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_vars/>
+        <swim_lane/>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>2932cfd11bf00610d991c882604bcbfe</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:19:47</sys_updated_on>
+        <type_vals/>
+        <type_vals/>
+    </sys_pd_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=2932cfd11bf00610d991c882604bcbfe"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>2d3203151bf00610d991c882604bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Is Automated">63fd1eeac7e60010bfbaf89f51c26059</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>313203151bf00610d991c882604bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value/>
+        <variable display_value="Record fields">05bee8875b00001070e4492c11f91afb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>353203151bf00610d991c882604bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Show SLA">54c49bc60f3200102920c912d4767ee2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>393203151bf00610d991c882604bcbdc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Attachments read only">576de7780f1300102920c912d4767e52</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>693203151bf00610d991c882604bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value/>
+        <variable display_value="Footer">71ae56b6b74100101a6ddb91de11a9a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>713203151bf00610d991c882604bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value>Create a new record</value>
+        <variable display_value="Pending State Title">e9ae23190700101070e493d0fad300c1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>753203151bf00610d991c882604bcbdc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:36:59</sys_updated_on>
+        <value/>
+        <variable display_value="Description">1d27b10ac7200010bfbaf89f51c26016</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>7d3203151bf00610d991c882604bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value/>
+        <variable display_value="Attachment Source">4f0e5d7e736100104a905ee515f6a70b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>a13203151bf00610d991c882604bcbdc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value>document_outline</value>
+        <variable display_value="Icon">ad4db04673030010fe4a6da44cf6a798</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>a53203151bf00610d991c882604bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value/>
+        <variable display_value="Experience Status Record">5e5272b2c3211010381b60bc0eba8f13</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>b53203151bf00610d991c882604bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value/>
+        <variable display_value="Form View">7cb449e85b41001070e4492c11f91a06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>b93203151bf00610d991c882604bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value>Create Record</value>
+        <variable display_value="Tagline">9a0c340673030010fe4a6da44cf6a7de</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>bd3203151bf00610d991c882604bcbdc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value/>
+        <variable display_value="Form fields">fbc1f11b5b40001070e4492c11f91a45</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>bd3203151bf00610d991c882604bcbdf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:36:59</sys_updated_on>
+        <value>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</value>
+        <variable display_value="Table">0352fc8cc3c632002841b63b12d3ae12</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>e13203151bf00610d991c882604bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value/>
+        <variable display_value="Associated table">77edf4e40f100010f5bf5ae9c4767edb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>e93203151bf00610d991c882604bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value/>
+        <variable display_value="Pending State Description">6688ff5d0700101070e493d0fad300f6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>ed3203151bf00610d991c882604bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value/>
+        <variable display_value="Associated record">8c1ef8e40f100010f5bf5ae9c4767ed6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>f13203151bf00610d991c882604bcbde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Show Checklist">d803775a5b01001031a67d6f7281c7aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>f53203151bf00610d991c882604bcbdd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value>sys_flow_data</value>
+        <variable display_value="Experience Status Table">4612be72c3211010381b60bc0eba8f47</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>f93203151bf00610d991c882604bcbdc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <value>New {{vl.Create Record./start.table_name}} Record</value>
+        <variable display_value="Title">13597d8ac7200010bfbaf89f51c2609e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>2932cfd11bf00610d991c882604bcbfe</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>f93203151bf00610d991c882604bcbdf</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:19:47</sys_updated_on>
+        <value>active=true^eleve={{pd.inputRecord.l_ve}}^statut_sli=admis^suivis_ant_rieurs={{pd.inputRecord.lequel_s_programmes}}^opened_by={{pd.inputRecord.opened_by}}^score_roi={{pd.inputRecord.scoreroi}}^degr_de_s_v_rit_langage_expressif={{pd.inputRecord.orth_langage_expressif_dans_sa_langue_dominante}}^degr_de_s_v_rit_langage_r_ceptif={{pd.inputRecord.orth_langage_r_ceptif_dans_sa_langue_dominante}}^evaluation_sommaire_requise={{pd.inputRecord.orth_valuation_sommaire_roi_requise_ou_non}}^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^parent={{pd.inputRecord}}^soumis_par=équipe-ortophonistes^demandesliroi={{pd.inputRecord.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s}}^</value>
+        <variable display_value="Fields">8b52fc8cc3c632002841b63b12d3ae36</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2932cfd11bf00610d991c882604bcbfe"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_record</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>e93203151bf00610d991c882604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./end.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_table</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>ed3203151bf00610d991c882604bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./start.table_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachments_read_only</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>253203151bf00610d991c882604bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachment_source</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>693203151bf00610d991c882604bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>description</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>613203151bf00610d991c882604bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{act.2932cfd11bf00610d991c882604bcbfe.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_record</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>a13203151bf00610d991c882604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_table</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>e13203151bf00610d991c882604bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>footer</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>653203151bf00610d991c882604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_fields</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>a93203151bf00610d991c882604bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_view</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>693203151bf00610d991c882604bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>icon</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>ad3203151bf00610d991c882604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>is_automated</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>293203151bf00610d991c882604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_description</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>293203151bf00610d991c882604bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_title</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>6d3203151bf00610d991c882604bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_fields</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>e13203151bf00610d991c882604bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_checklist</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>a53203151bf00610d991c882604bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_sla</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>213203151bf00610d991c882604bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>b53203151bf00610d991c882604bcbdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tagline</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>a53203151bf00610d991c882604bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>title</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>e53203151bf00610d991c882604bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>New {{vl.Create Record./start.table_name}} Record</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>793203151bf00610d991c882604bcbdf</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:19:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value>active=true^eleve={{pd.inputRecord.l_ve}}^statut_sli=admis^suivis_ant_rieurs={{pd.inputRecord.lequel_s_programmes}}^opened_by={{pd.inputRecord.opened_by}}^score_roi={{pd.inputRecord.scoreroi}}^degr_de_s_v_rit_langage_expressif={{pd.inputRecord.orth_langage_expressif_dans_sa_langue_dominante}}^degr_de_s_v_rit_langage_r_ceptif={{pd.inputRecord.orth_langage_r_ceptif_dans_sa_langue_dominante}}^evaluation_sommaire_requise={{pd.inputRecord.orth_valuation_sommaire_roi_requise_ou_non}}^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^parent={{pd.inputRecord}}^soumis_par=équipe-ortophonistes^demandesliroi={{pd.inputRecord.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s}}^</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_02f0b88cc3c632002841b63b12d3aeff^id=2932cfd11bf00610d991c882604bcbfe"/>
+    <sys_element_mapping action="delete_multiple" query="id=2932cfd11bf00610d991c882604bcbfe"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_record</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>e93203151bf00610d991c882604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./end.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_table</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>ed3203151bf00610d991c882604bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./start.table_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachments_read_only</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>253203151bf00610d991c882604bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachment_source</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>693203151bf00610d991c882604bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>description</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>613203151bf00610d991c882604bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{act.2932cfd11bf00610d991c882604bcbfe.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_record</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>a13203151bf00610d991c882604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_table</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>e13203151bf00610d991c882604bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>footer</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>653203151bf00610d991c882604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_fields</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>a93203151bf00610d991c882604bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_view</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>693203151bf00610d991c882604bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>icon</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>ad3203151bf00610d991c882604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>is_automated</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>293203151bf00610d991c882604bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_description</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>293203151bf00610d991c882604bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_title</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>6d3203151bf00610d991c882604bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_fields</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>e13203151bf00610d991c882604bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_checklist</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>a53203151bf00610d991c882604bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_sla</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>213203151bf00610d991c882604bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>b53203151bf00610d991c882604bcbdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tagline</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>a53203151bf00610d991c882604bcb06</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>title</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>e53203151bf00610d991c882604bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:42</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>New {{vl.Create Record./start.table_name}} Record</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>2932cfd11bf00610d991c882604bcbfe</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:42</sys_created_on>
+        <sys_id>793203151bf00610d991c882604bcbdf</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:19:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value>active=true^eleve={{pd.inputRecord.l_ve}}^statut_sli=admis^suivis_ant_rieurs={{pd.inputRecord.lequel_s_programmes}}^opened_by={{pd.inputRecord.opened_by}}^score_roi={{pd.inputRecord.scoreroi}}^degr_de_s_v_rit_langage_expressif={{pd.inputRecord.orth_langage_expressif_dans_sa_langue_dominante}}^degr_de_s_v_rit_langage_r_ceptif={{pd.inputRecord.orth_langage_r_ceptif_dans_sa_langue_dominante}}^evaluation_sommaire_requise={{pd.inputRecord.orth_valuation_sommaire_roi_requise_ou_non}}^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^parent={{pd.inputRecord}}^soumis_par=équipe-ortophonistes^demandesliroi={{pd.inputRecord.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s}}^</value>
+    </sys_element_mapping>
+    <sys_pd_activity action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <condition_to_run table="v_pd_activity_condition_to_run__sys_id__040195351b4986508d594047bc4bcb98">input_record.orth_d_pistage_sli_requis_ou_non=sli-requis<item display_value="Dépistage SLI requis" endquery="false" field="input_record.orth_d_pistage_sli_requis_ou_non" goto="false" newquery="false" operator="=" or="false" value="sli-requis"/>
+        </condition_to_run>
+        <derivative_order/>
+        <derivative_parent/>
+        <description/>
+        <inputs/>
+        <inputs/>
+        <label>Automated Create Record</label>
+        <lane display_value="create SLI records">eb8122551b700610d991c882604bcb57</lane>
+        <name>automated_create_record_1</name>
+        <order>2</order>
+        <outputs/>
+        <process_definition display_value="CECCE SLI-ROI orthophoniste">2200a2d11b700610d991c882604bcb5f</process_definition>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_vars/>
+        <swim_lane/>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>040195351b4986508d594047bc4bcb98</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:20:19</sys_updated_on>
+        <type_vals/>
+        <type_vals/>
+    </sys_pd_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=040195351b4986508d594047bc4bcb98"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>000199351b4986508d594047bc4bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Is Automated">63fd1eeac7e60010bfbaf89f51c26059</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>000199351b4986508d594047bc4bcb4a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:54:32</sys_updated_on>
+        <value>x_ndecd_triage_2_0_demandes_priorisation_sli</value>
+        <variable display_value="Table">0352fc8cc3c632002841b63b12d3ae12</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>040199351b4986508d594047bc4bcb45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value/>
+        <variable display_value="Pending State Description">6688ff5d0700101070e493d0fad300f6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>040199351b4986508d594047bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value/>
+        <variable display_value="Record fields">05bee8875b00001070e4492c11f91afb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>080199351b4986508d594047bc4bcb47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Show SLA">54c49bc60f3200102920c912d4767ee2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>0c0199351b4986508d594047bc4bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Attachments read only">576de7780f1300102920c912d4767e52</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>400199351b4986508d594047bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value/>
+        <variable display_value="Attachment Source">4f0e5d7e736100104a905ee515f6a70b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>440199351b4986508d594047bc4bcb47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value>Create a new record</value>
+        <variable display_value="Pending State Title">e9ae23190700101070e493d0fad300c1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>480199351b4986508d594047bc4bcb46</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:54:32</sys_updated_on>
+        <value/>
+        <variable display_value="Description">1d27b10ac7200010bfbaf89f51c26016</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>4c0199351b4986508d594047bc4bcb45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value/>
+        <variable display_value="Footer">71ae56b6b74100101a6ddb91de11a9a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>4c0199351b4986508d594047bc4bcb49</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:20:19</sys_updated_on>
+        <value>statut_sli=^nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^soumis_par=équipe-ortophonistes^d_pistage_sli_requis_ou_non={{pd.inputRecord.orth_d_pistage_sli_requis_ou_non}}^generer_roi=false^demandesliroi={{pd.inputRecord.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s}}^</value>
+        <variable display_value="Fields">8b52fc8cc3c632002841b63b12d3ae36</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>800199351b4986508d594047bc4bcb47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value/>
+        <variable display_value="Form fields">fbc1f11b5b40001070e4492c11f91a45</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>840199351b4986508d594047bc4bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value>document_outline</value>
+        <variable display_value="Icon">ad4db04673030010fe4a6da44cf6a798</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>880199351b4986508d594047bc4bcb45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value/>
+        <variable display_value="Experience Status Record">5e5272b2c3211010381b60bc0eba8f13</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>880199351b4986508d594047bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value/>
+        <variable display_value="Form View">7cb449e85b41001070e4492c11f91a06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>8c0199351b4986508d594047bc4bcb47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value>Create Record</value>
+        <variable display_value="Tagline">9a0c340673030010fe4a6da44cf6a7de</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c00199351b4986508d594047bc4bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value/>
+        <variable display_value="Associated record">8c1ef8e40f100010f5bf5ae9c4767ed6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c40199351b4986508d594047bc4bcb45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value/>
+        <variable display_value="Associated table">77edf4e40f100010f5bf5ae9c4767edb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c40199351b4986508d594047bc4bcb48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Show Checklist">d803775a5b01001031a67d6f7281c7aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c80199351b4986508d594047bc4bcb47</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value>sys_flow_data</value>
+        <variable display_value="Experience Status Table">4612be72c3211010381b60bc0eba8f47</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>040195351b4986508d594047bc4bcb98</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>cc0199351b4986508d594047bc4bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <value>New {{vl.Create Record./start.table_name}} Record</value>
+        <variable display_value="Title">13597d8ac7200010bfbaf89f51c2609e</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=040195351b4986508d594047bc4bcb98"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_record</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c80199351b4986508d594047bc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./end.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_table</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>cc0199351b4986508d594047bc4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./start.table_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachments_read_only</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>040199351b4986508d594047bc4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachment_source</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>480199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>description</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>400199351b4986508d594047bc4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{act.040195351b4986508d594047bc4bcb98.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_record</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>800199351b4986508d594047bc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_table</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c00199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>footer</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>440199351b4986508d594047bc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_fields</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>880199351b4986508d594047bc4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_view</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>800199351b4986508d594047bc4bcb45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>icon</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>8c0199351b4986508d594047bc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>is_automated</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>080199351b4986508d594047bc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_description</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>0c0199351b4986508d594047bc4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_title</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>4c0199351b4986508d594047bc4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_fields</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>0c0199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_checklist</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>cc0199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_sla</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>000199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>080199351b4986508d594047bc4bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tagline</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>840199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>title</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c40199351b4986508d594047bc4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>New {{vl.Create Record./start.table_name}} Record</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c80199351b4986508d594047bc4bcb49</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:20:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value>statut_sli=^nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^soumis_par=équipe-ortophonistes^d_pistage_sli_requis_ou_non={{pd.inputRecord.orth_d_pistage_sli_requis_ou_non}}^generer_roi=false^demandesliroi={{pd.inputRecord.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s}}^</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_02f0b88cc3c632002841b63b12d3aeff^id=040195351b4986508d594047bc4bcb98"/>
+    <sys_element_mapping action="delete_multiple" query="id=040195351b4986508d594047bc4bcb98"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_record</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c80199351b4986508d594047bc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./end.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_table</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>cc0199351b4986508d594047bc4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./start.table_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachments_read_only</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>040199351b4986508d594047bc4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachment_source</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>480199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>description</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>400199351b4986508d594047bc4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{act.040195351b4986508d594047bc4bcb98.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_record</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>800199351b4986508d594047bc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_table</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c00199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>footer</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>440199351b4986508d594047bc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_fields</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>880199351b4986508d594047bc4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_view</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>800199351b4986508d594047bc4bcb45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>icon</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>8c0199351b4986508d594047bc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>is_automated</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>080199351b4986508d594047bc4bcb42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_description</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>0c0199351b4986508d594047bc4bcb41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_title</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>4c0199351b4986508d594047bc4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_fields</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>0c0199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_checklist</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>cc0199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_sla</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>000199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>080199351b4986508d594047bc4bcb49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tagline</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>840199351b4986508d594047bc4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>title</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c40199351b4986508d594047bc4bcb43</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-20 13:53:44</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>New {{vl.Create Record./start.table_name}} Record</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>040195351b4986508d594047bc4bcb98</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-20 13:53:44</sys_created_on>
+        <sys_id>c80199351b4986508d594047bc4bcb49</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:20:19</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value>statut_sli=^nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^soumis_par=équipe-ortophonistes^d_pistage_sli_requis_ou_non={{pd.inputRecord.orth_d_pistage_sli_requis_ou_non}}^generer_roi=false^demandesliroi={{pd.inputRecord.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s}}^</value>
+    </sys_element_mapping>
+    <sys_pd_activity action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <condition_to_run table="v_pd_activity_condition_to_run__sys_id__133243151bf00610d991c882604bcb7c">input_record.orth_d_pistage_sli_requis_ou_non!=sli-requis<item display_value="Dépistage SLI requis" endquery="false" field="input_record.orth_d_pistage_sli_requis_ou_non" goto="false" newquery="false" operator="!=" or="false" value="sli-requis"/>
+        </condition_to_run>
+        <derivative_order/>
+        <derivative_parent/>
+        <description/>
+        <inputs/>
+        <inputs/>
+        <label>Automated Create Record</label>
+        <lane display_value="create SLI records">eb8122551b700610d991c882604bcb57</lane>
+        <name>automated_create_record</name>
+        <order>3</order>
+        <outputs/>
+        <process_definition display_value="CECCE SLI-ROI orthophoniste">2200a2d11b700610d991c882604bcb5f</process_definition>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_vars/>
+        <swim_lane/>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>133243151bf00610d991c882604bcb7c</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:21:04</sys_updated_on>
+        <type_vals/>
+        <type_vals/>
+    </sys_pd_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=133243151bf00610d991c882604bcb7c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>133243151bf00610d991c882604bcb87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value/>
+        <variable display_value="Attachment Source">4f0e5d7e736100104a905ee515f6a70b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>173243151bf00610d991c882604bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value>Create a new record</value>
+        <variable display_value="Pending State Title">e9ae23190700101070e493d0fad300c1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>1b3243151bf00610d991c882604bcb85</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:39:40</sys_updated_on>
+        <value/>
+        <variable display_value="Description">1d27b10ac7200010bfbaf89f51c26016</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>1f3243151bf00610d991c882604bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value/>
+        <variable display_value="Footer">71ae56b6b74100101a6ddb91de11a9a1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>533243151bf00610d991c882604bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value/>
+        <variable display_value="Form fields">fbc1f11b5b40001070e4492c11f91a45</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>573243151bf00610d991c882604bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value>document_outline</value>
+        <variable display_value="Icon">ad4db04673030010fe4a6da44cf6a798</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>5b3243151bf00610d991c882604bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value/>
+        <variable display_value="Experience Status Record">5e5272b2c3211010381b60bc0eba8f13</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>5b3243151bf00610d991c882604bcb87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value/>
+        <variable display_value="Form View">7cb449e85b41001070e4492c11f91a06</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>5f3243151bf00610d991c882604bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value>Create Record</value>
+        <variable display_value="Tagline">9a0c340673030010fe4a6da44cf6a7de</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>5f3243151bf00610d991c882604bcb88</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:39:40</sys_updated_on>
+        <value>x_ndecd_triage_2_0_demandes_priorisation_sli</value>
+        <variable display_value="Table">0352fc8cc3c632002841b63b12d3ae12</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>933243151bf00610d991c882604bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value/>
+        <variable display_value="Associated record">8c1ef8e40f100010f5bf5ae9c4767ed6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>973243151bf00610d991c882604bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value/>
+        <variable display_value="Associated table">77edf4e40f100010f5bf5ae9c4767edb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>973243151bf00610d991c882604bcb87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Show Checklist">d803775a5b01001031a67d6f7281c7aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>9b3243151bf00610d991c882604bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value>sys_flow_data</value>
+        <variable display_value="Experience Status Table">4612be72c3211010381b60bc0eba8f47</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>9b3243151bf00610d991c882604bcb88</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:21:04</sys_updated_on>
+        <value>nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^soumis_par=équipe-ortophonistes^d_pistage_sli_requis_ou_non={{pd.inputRecord.orth_d_pistage_sli_requis_ou_non}}^statut_sli=admis^generer_roi=false^demandesliroi={{pd.inputRecord.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s}}^</value>
+        <variable display_value="Fields">8b52fc8cc3c632002841b63b12d3ae36</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>9f3243151bf00610d991c882604bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value>New {{vl.Create Record./start.table_name}} Record</value>
+        <variable display_value="Title">13597d8ac7200010bfbaf89f51c2609e</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>d33243151bf00610d991c882604bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value/>
+        <variable display_value="Pending State Description">6688ff5d0700101070e493d0fad300f6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>d33243151bf00610d991c882604bcb87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value/>
+        <variable display_value="Record fields">05bee8875b00001070e4492c11f91afb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>d73243151bf00610d991c882604bcb86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Show SLA">54c49bc60f3200102920c912d4767ee2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>db3243151bf00610d991c882604bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Attachments read only">576de7780f1300102920c912d4767e52</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_activity</document>
+        <document_key>133243151bf00610d991c882604bcb7c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>df3243151bf00610d991c882604bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Is Automated">63fd1eeac7e60010bfbaf89f51c26059</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=133243151bf00610d991c882604bcb7c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_record</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>9b3243151bf00610d991c882604bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./end.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_table</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>9f3243151bf00610d991c882604bcb80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./start.table_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachments_read_only</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>d33243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachment_source</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>1b3243151bf00610d991c882604bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>description</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>133243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{act.133243151bf00610d991c882604bcb7c.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_record</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>533243151bf00610d991c882604bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_table</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>933243151bf00610d991c882604bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>footer</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>173243151bf00610d991c882604bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_fields</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>5b3243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_view</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>533243151bf00610d991c882604bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>icon</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>5f3243151bf00610d991c882604bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>is_automated</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>d73243151bf00610d991c882604bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_description</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>db3243151bf00610d991c882604bcb80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_title</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>1f3243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_fields</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>db3243151bf00610d991c882604bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_checklist</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>9f3243151bf00610d991c882604bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_sla</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>df3243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>573243151bf00610d991c882604bcb88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tagline</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>573243151bf00610d991c882604bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>title</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>973243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>New {{vl.Create Record./start.table_name}} Record</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>1b3243151bf00610d991c882604bcb88</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:21:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value>nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^soumis_par=équipe-ortophonistes^d_pistage_sli_requis_ou_non={{pd.inputRecord.orth_d_pistage_sli_requis_ou_non}}^statut_sli=admis^generer_roi=false^demandesliroi={{pd.inputRecord.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s}}^</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_02f0b88cc3c632002841b63b12d3aeff^id=133243151bf00610d991c882604bcb7c"/>
+    <sys_element_mapping action="delete_multiple" query="id=133243151bf00610d991c882604bcb7c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_record</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>9b3243151bf00610d991c882604bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./end.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>associated_table</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>9f3243151bf00610d991c882604bcb80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{vl.Create Record./start.table_name}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachments_read_only</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>d33243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachment_source</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>1b3243151bf00610d991c882604bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>description</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>133243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>{{act.133243151bf00610d991c882604bcb7c.description}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_record</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>533243151bf00610d991c882604bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>experience_status_table</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>933243151bf00610d991c882604bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>footer</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>173243151bf00610d991c882604bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_fields</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>5b3243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>form_view</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>533243151bf00610d991c882604bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>icon</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>5f3243151bf00610d991c882604bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>is_automated</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>d73243151bf00610d991c882604bcb81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_description</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>db3243151bf00610d991c882604bcb80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>pending_title</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>1f3243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record_fields</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>db3243151bf00610d991c882604bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_checklist</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>9f3243151bf00610d991c882604bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>show_sla</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>df3243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>573243151bf00610d991c882604bcb88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tagline</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>573243151bf00610d991c882604bcb83</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>title</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>973243151bf00610d991c882604bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 22:35:49</sys_updated_on>
+        <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
+        <value>New {{vl.Create Record./start.table_name}} Record</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>133243151bf00610d991c882604bcb7c</id>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 22:35:49</sys_created_on>
+        <sys_id>1b3243151bf00610d991c882604bcb88</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:21:04</sys_updated_on>
+        <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
+        <value>nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^soumis_par=équipe-ortophonistes^d_pistage_sli_requis_ou_non={{pd.inputRecord.orth_d_pistage_sli_requis_ou_non}}^statut_sli=admis^generer_roi=false^demandesliroi={{pd.inputRecord.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s}}^</value>
+    </sys_element_mapping>
+    <sys_pd_swim_lane action="delete_multiple" query="process_definition=2200a2d11b700610d991c882604bcb5f"/>
+    <sys_pd_activity_m2m_app_object action="delete_multiple" query="activity.process_definition=2200a2d11b700610d991c882604bcb5f"/>
+    <sys_pd_snapshot action="delete_multiple" query="sys_id=e0d7d7c61b010e10d991c882604bcbfd^sys_idNOT INe0d7d7c61b010e10d991c882604bcbfd"/>
+    <sys_pd_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <derivatives>{"table":"sys_pd_snapshot","id":"e0d7d7c61b010e10d991c882604bcbfd","name":"derivatives","type":"com.snc.pd.model.serialization.DerivativeFetcher"}</derivatives>
+        <name>cecce_sli_roi_orthophoniste</name>
+        <process_definition>{"table":"sys_pd_snapshot","id":"e0d7d7c61b010e10d991c882604bcbfd","name":"process_definition","type":"com.snc.pd.model.ProcessDefinition"}</process_definition>
+        <process_plan>{"table":"sys_pd_snapshot","id":"e0d7d7c61b010e10d991c882604bcbfd","name":"process_plan","type":"com.snc.process_flow.engine.ProcessPlan"}</process_plan>
+        <source display_value="CECCE SLI-ROI orthophoniste">2200a2d11b700610d991c882604bcb5f</source>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-21 18:21:16</sys_created_on>
+        <sys_id>e0d7d7c61b010e10d991c882604bcbfd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:21:16</sys_updated_on>
+    </sys_pd_snapshot>
+    <sys_json_chunk action="delete_multiple" query="document_id=e0d7d7c61b010e10d991c882604bcbfd"/>
+    <sys_pd_snapshot_chunk action="delete_multiple" query="document_id=e0d7d7c61b010e10d991c882604bcbfd^sys_idNOT IN24d7d7c61b010e10d991c882604bcbfe,28d7d7c61b010e10d991c882604bcbfe,2cd7d7c61b010e10d991c882604bcbfd"/>
+    <sys_pd_snapshot_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAN1XyW7bMBD9FZfoMSlIaiMD9BCkOQQNECDtrQgILqOUhSy5WowGQf691GInjm2JNbokjU+hRo8z7w2HT/fIGnSCKMVYUkOISjCOCTacE80YjXGotIpSdIRyOQcXqUFrEFVmRVlYUZT112LxtchtVYMLyqSCzEWdnZ+dnc8+XV4cX19dzLajcqjQyZf7YfMowZSSaPfmoJ9sXoKsh91BF6Vxj6paljU6GbBMaBKT6DiJMMFAcAI4DogOMVaKRDEfwXrbIz0WsT/CQKVLu6htkaOTvMmyvia/WhwQlKvXOkRRNhlsr4j6brFreSlLx979wxHSRW5sm4WoC/dsnYyBBeQGcm07nm/aldIuZW2XA/Gpzeo2C+QSktqt2/rOh76HmyGVD5DJu6uOgiGZx2zdP277tSaE9aBcDaA84gkDCA0NOR/XpMUZU6R//sr08OlSygOq0/ZEpjsSTwH5izrJv6+oJWwetmgANmEP7HIMWcJTHjNMg3FhV1hj4j7GvDKB/bWZpNBXm00WZ+3Y7Vms0GbRyM7nYKzsJvGQid0Yx1Odt1ZVNnUxd0BGDNqth/L6Hhiy6dZn14V9riVCByhJRiraUhNByqRiGssgbZFAEZLQOEgj0nKeYOStNUIHHGX/XpgkfrIXUE90F7jdknte3Sq+b+l1+Z+L6654my+aepD4XXuli2/utBbNHOpKZFJo6V4wsm5KEAZE5n5LELIRP8SiLG5L6VQS1eXFx/M0VrGjnxOltKbPC2USPRwNvQiKEUqjPT0RJSMTptryBkT3UtFhDqbtnyRMxpTHqmuEvWDT5qDycAce5bzkYTVJ4CHuIBpAU9qD6oARxVJmsGNFT6gyYQ+qSX/wIhVB2E0mHgUuq5CzOMLMRDzEYaJ0mxVnLisSBDQM2mm5a1gk7bSclOsXrqkpkQ61EHwAxrgHDjSLtVuJCdcymVDfw0NUXibiRXaBvzqTJB5oItz326EmwqODx02EIE9kPV3FzDYMxYiZ8FeU/iszsX2fGrFwX8jydtXA3xtbiaIReZG/dyvH/coOE/IbT/qkcP4mZHWJe4wqb0P5JzsheBWd8OavtcKkbv+NH5WjfrT/CHPvaKiqS1hCdvp04rWV6KIrV4fMAA7d3ShTMM8PT+CI+AmCWjh9cBMAAA==</data>
+        <document_id display_value="cecce_sli_roi_orthophoniste">e0d7d7c61b010e10d991c882604bcbfd</document_id>
+        <field>process_definition</field>
+        <length>1172</length>
+        <position>0</position>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-21 18:21:16</sys_created_on>
+        <sys_id>24d7d7c61b010e10d991c882604bcbfe</sys_id>
+    </sys_pd_snapshot_chunk>
+    <sys_pd_snapshot_chunk action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <document_id display_value="cecce_sli_roi_orthophoniste">e0d7d7c61b010e10d991c882604bcbfd</document_id>
+        <field>derivatives</field>
+        <length>4248</length>
+        <position>0</position>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-21 18:21:16</sys_created_on>
+        <sys_id>28d7d7c61b010e10d991c882604bcbfe</sys_id>
+    </sys_pd_snapshot_chunk>
+    <sys_pd_snapshot_chunk action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <document_id display_value="cecce_sli_roi_orthophoniste">e0d7d7c61b010e10d991c882604bcbfd</document_id>
+        <field>process_plan</field>
+        <length>8736</length>
+        <position>0</position>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-21 18:21:16</sys_created_on>
+        <sys_id>2cd7d7c61b010e10d991c882604bcbfd</sys_id>
+    </sys_pd_snapshot_chunk>
+    <sys_pd_trigger_instance action="delete_multiple" query="sys_id=a200ee911b700610d991c882604bcb53^sys_idNOT INa200ee911b700610d991c882604bcb53"/>
+    <sys_pd_trigger_instance action="INSERT_OR_UPDATE">
+        <label/>
+        <name/>
+        <process_definition display_value="CECCE SLI-ROI orthophoniste">2200a2d11b700610d991c882604bcb5f</process_definition>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 20:06:24</sys_created_on>
+        <sys_id>a200ee911b700610d991c882604bcb53</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-07 22:48:19</sys_updated_on>
+        <trigger_definition/>
+        <trigger_inputs/>
+        <trigger_type display_value="Record Create">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
+    </sys_pd_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a200ee911b700610d991c882604bcb53"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_trigger_instance</document>
+        <document_key>a200ee911b700610d991c882604bcb53</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 20:07:54</sys_created_on>
+        <sys_id>6460a2d11b700610d991c882604bcb54</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-06 20:07:54</sys_updated_on>
+        <value>x_ndecd_triage_2_0_sli_roi</value>
+        <variable display_value="Table">a8ae38d1ff2200108c8733af793bf15c</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_pd_trigger_instance</document>
+        <document_key>a200ee911b700610d991c882604bcb53</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-06 20:07:54</sys_created_on>
+        <sys_id>ac60a2d11b700610d991c882604bcb53</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-07 22:48:19</sys_updated_on>
+        <value>orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_sISNOTEMPTY</value>
+        <variable display_value="Condition">2a8a7851ff2200108c8733af793bf131</variable>
+    </sys_variable_value>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=a200ee911b700610d991c882604bcb53^sys_idNOT IN64d7d7c61b010e10d991c882604bcbfc"/>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_trigger":"org.mozilla.javascript.UniqueTag@122aca2: NOT_FOUND"}</data>
+        <identifier>a200ee911b700610d991c882604bcb53</identifier>
+        <runner>PDTriggerRunner</runner>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-21 18:21:16</sys_created_on>
+        <sys_id>64d7d7c61b010e10d991c882604bcbfc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:21:16</sys_updated_on>
+        <trigger display_value="">e8d7d7c61b010e10d991c882604bcbfb</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="delete_multiple" query="document_id=64d7d7c61b010e10d991c882604bcbfc"/>
+    <sys_flow_record_trigger action="delete_multiple" query="sys_id=e8d7d7c61b010e10d991c882604bcbfb^sys_idNOT INe8d7d7c61b010e10d991c882604bcbfb"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_ndecd_triage_2_0_sli_roi">orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_sISNOTEMPTY<item endquery="false" field="orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-21 18:21:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e8d7d7c61b010e10d991c882604bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 18:21:16</sys_updated_on>
+        <table>x_ndecd_triage_2_0_sli_roi</table>
+    </sys_flow_record_trigger>
+</record_update>

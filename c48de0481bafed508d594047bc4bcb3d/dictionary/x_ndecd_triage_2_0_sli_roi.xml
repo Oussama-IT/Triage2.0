@@ -4,6 +4,7 @@
         <element label="Autres langues" max_length="200" name="autres_langues" type="string"/>
         <element label="Autre (veuillez préciser)." max_length="200" name="autre_diagnostic" type="string"/>
         <element label="Autre langues" max_length="200" name="autre_langues_dominante" type="string"/>
+        <element label="Autre situation explication" max_length="200" name="autre_situation_explication" type="string"/>
         <element choice="1" label="Cet élève pourrait-il être jumelé avec un autre élève dans le cadre des sessions" max_length="40" name="cet_l_ve_pourrait_il_tre_jumel_avec_un_autre_l_ve_dans_le_cadre_des_sessions" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Il serait préférable de le voir individu..." value="Il serait preferable de le voir individu"/>
@@ -20,6 +21,9 @@
                 <element inactive_on_update="false" label="Yes" value="yes"/>
             </choice>
         </element>
+        <element choice="1" label="Est-ce que l'élève a un diagnostic posé par un professionnel de la santé autoris" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="string">
+            <choice/>
+        </element>
         <element choice="1" label="Est-ce que l’élève est identifié comme étant un élève PANA?" max_length="40" name="est_ce_que_l_l_ve_est_identifi_comme_tant_un_l_ve_pana" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="no"/>
@@ -27,6 +31,9 @@
                 <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
                 <element inactive_on_update="false" label="Yes" value="yes"/>
             </choice>
+        </element>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
+            <choice/>
         </element>
         <element choice="1" label="Existe-t-il un rapport d’évaluation en orthophonie au dossier?" max_length="40" name="existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier" type="choice">
             <choice>
@@ -191,7 +198,22 @@
                 <element inactive_on_update="false" label="Toujours" language="fq" value="always"/>
             </choice>
         </element>
-        <element label="Élève" max_length="32" name="l_ve" reference="sys_user" type="reference"/>
+        <element label="Élève" max_length="32" name="l_ve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
+        <element choice="1" choice_field="d_pistage_sli_requis_non_requis" choice_table="x_ndecd_cecce_base_options" label="Dépistage SLI requis ou non?" max_length="40" name="orth_d_pistage_sli_requis_ou_non" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" choice_field="sli_roi" choice_table="x_ndecd_cecce_base_options" label="Je soumets la candidature de l’élève au(x) programme(s) :" max_length="200" name="orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s" reference="x_ndecd_cecce_base_sli_roi_qa" type="glide_list">
+            <choice/>
+        </element>
+        <element choice="1" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="Langage expressif dans sa langue dominante :" max_length="40" name="orth_langage_expressif_dans_sa_langue_dominante" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="Langage réceptif dans sa langue dominante :" max_length="40" name="orth_langage_r_ceptif_dans_sa_langue_dominante" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" choice_field="valuation_sommaire_roi_requise_suffisantes" choice_table="x_ndecd_cecce_base_options" label="Évaluation sommaire ROI requise ou non" max_length="40" name="orth_valuation_sommaire_roi_requise_ou_non" type="choice">
+            <choice/>
+        </element>
         <element choice="1" label="Précisez le nombre d’années depuis son arrivée au Canada." max_length="40" name="pr_cisez_le_nombre_d_ann_es_depuis_son_arriv_e_au_canada" type="choice">
             <choice>
                 <element inactive_on_update="false" label="0" value="0"/>
@@ -216,6 +238,11 @@
             </choice>
         </element>
         <element label="Quels services du soutien 1 de la pyramide d’intervention l’élève a-t-il déjà re" max_length="4000" name="quels_services_du_soutien_1_de_la_pyramide_d_intervention_l_l_ve_a_t_il_d_j_re" reference="x_ndecd_cecce_base_sli_roi_qa" type="glide_list"/>
+        <element label="scoreROI" max_length="200" name="scoreroi" type="string"/>
+        <element label="scoreSLI" max_length="200" name="scoresli" type="string"/>
+        <element choice="1" choice_table="x_ndecd_cecce_base_options" label="Situation familiale de l’élève" max_length="200" name="situation_familiale_de_l_l_ve" type="string">
+            <choice/>
+        </element>
         <element label="Veuillez préciser pourquoi :" max_length="200" name="veuillez_pr_ciser_pourquoi" type="string"/>
         <element choice="1" label="À votre connaissance, est-ce que les parents sont inquiets du développement lang" max_length="40" name="votre_connaissance_est_ce_que_les_parents_sont_inquiets_du_d_veloppement_lang" type="choice">
             <choice>

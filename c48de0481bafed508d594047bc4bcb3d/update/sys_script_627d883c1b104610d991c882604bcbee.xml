@@ -15,7 +15,7 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_ndecd_triage_2_0_sli_roi">approval=approved^EQ<item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <filter_condition table="x_ndecd_triage_2_0_sli_roi">approvalCHANGESTOapproved^EQ<item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="CHANGESTO" or="false" value="approved"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
@@ -55,10 +55,10 @@
 
     //information eleve
 	newHtml = html.replace("var10", current.getDisplayValue('l_ve'));
-	var gselve = new GlideRecord('sys_user');
+	var gselve = new GlideRecord('x_ndecd_triage_2_0_eleve');
     gselve.get(current.getValue("l_ve"));
     newHtml = newHtml.replace("var14", gselve.getDisplayValue('u_classe'));
-    newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_ecole'));
+    newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_cole'));
     newHtml = newHtml.replace("var12", gselve.u_niso);
     newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
 
@@ -66,6 +66,9 @@
 
 	//record producer details
 	record_fields={
+		"var17":"est_ce_que_l_l_ve_a_un_diagnostic",
+		"var18":"situation_familiale_de_l_l_ve",
+		"var19":"autre_situation_explication",
 		"var20":"existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier",
 		"var21":"l_l_ve_sera_en_quelle_ann_e_au_mois_de_septembre_prochain",
 		"var22":"quelles_langues_sont_parl_es_la_maison",
@@ -127,11 +130,11 @@
 		newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Veuillez préciser pourquoi:<strong>var50</strong></span></div>',"");
 	}
 
-    gs.info("ddddddd"+newHtml)
 
 	
 	for (const property in record_fields) {
-		newHtml = newHtml.replace(property, current.getDisplayValue(record_fields[property]));
+
+		newHtml = newHtml.replace(property, current.getDisplayValue(record_fields[property])?current.getDisplayValue(record_fields[property]):"Sans objet");
     }
 
 
@@ -151,6 +154,14 @@
         newHtml = newHtml.replace("var91", gsdirect.getDisplayValue('approver'));
     }
     newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
+
+
+	var approver =  new GlideRecord('sys_user');
+	approver.addEncodedQuery('name='+gsdirect.getDisplayValue('approver'));
+	approver.query();
+	if(approver.next()){
+	newHtml = newHtml.replace("var61", approver.getDisplayValue('title'));
+	}
 	
     var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
     var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
@@ -164,7 +175,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>627d883c1b104610d991c882604bcbee</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_name>SLI-ROI PDF</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -172,7 +183,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_627d883c1b104610d991c882604bcbee</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-02-12 19:32:50</sys_updated_on>
+        <sys_updated_on>2024-03-14 16:41:22</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

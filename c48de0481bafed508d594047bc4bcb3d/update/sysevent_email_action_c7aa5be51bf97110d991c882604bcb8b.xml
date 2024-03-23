@@ -7,7 +7,7 @@
         <affected_field_on_event/>
         <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
         <collection>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</collection>
-        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">stateCHANGESTO3^EQ<item display_value="Fermé terminé" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="3"/>
+        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">c_te_de_priorisation_de_baseVALCHANGES^EQ<item display_value="-- None --" endquery="false" field="c_te_de_priorisation_de_base" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <content_type>text/html</content_type>
@@ -30,7 +30,7 @@
         <event_parm_2>false</event_parm_2>
         <exclude_delegates>false</exclude_delegates>
         <force_delivery>false</force_delivery>
-        <from/>
+        <from>ne-pas-répondre comité ROI&lt;sli_roi@ecolecatholique.ca&gt;</from>
         <generation_type>engine</generation_type>
         <importance/>
         <include_attachments>false</include_attachments>
@@ -38,18 +38,20 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>Bonjour &eacute;quipe triage,<br />&nbsp;<br />Nous vous confirmons que le traitement de la demande d'envoi d'un formulaire de consentement pour le programme ROI concernant l'&eacute;l&egrave;ve ${eleve.first_name} ${eleve.last_name} N&deg; ${number} est compl&eacute;t&eacute;.&nbsp;</p>
+        <message_html><![CDATA[<p>Bonjour,</p>
+<p>Nous vous informons que l'orthophoniste ${orthophoniste_d_evaluation.first_name} ${orthophoniste_d_evaluation.last_name} a compl&eacute;t&eacute; l'&eacute;valuation sommaire en lien avec la demande ROI concernant l'&eacute;l&egrave;ve &nbsp;${eleve.name} N&deg; ${number}.&nbsp;</p>
+<p>Veuillez cliquer sur le <a href="/x/ndecd/triage-20-demande-de-partage/record/x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi/${sys_id}/params/selected-tab-index/1" target="_blank" rel="noopener">lien suivant</a> &nbsp;afin de consulter le dossier.&nbsp;</p>
 <p>Merci.</p>]]></message_html>
         <message_list/>
         <message_text/>
-        <name>Notification équipe triage demande achev</name>
+        <name>Notification au comité ROI de l'achévement de l'évaluation</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
         <recipient_fields/>
-        <recipient_groups/>
-        <recipient_users>00f6e32d1b9531508d594047bc4bcbfa</recipient_users>
-        <reply_to/>
+        <recipient_groups name="CECCE Comité ROI">b678afa31ba48e50d991c882604bcb1b</recipient_groups>
+        <recipient_users/>
+        <reply_to>ne-pas-répondre comité ROI&lt;sli_roi@ecolecatholique.ca&gt;</reply_to>
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
@@ -61,15 +63,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c7aa5be51bf97110d991c882604bcb8b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Notification équipe triage demande achev</sys_name>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Notification au comité ROI de l'achévement de l'évaluation</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_c7aa5be51bf97110d991c882604bcb8b</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-10 15:55:46</sys_updated_on>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-19 13:32:59</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

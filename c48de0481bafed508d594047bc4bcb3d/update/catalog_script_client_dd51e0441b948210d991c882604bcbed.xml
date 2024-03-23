@@ -7,7 +7,7 @@
         <applies_sc_task>false</applies_sc_task>
         <applies_target_record>false</applies_target_record>
         <applies_to>item</applies_to>
-        <cat_item display_value="Demande SLI ">1e56ebde1b004a508d594047bc4bcb1e</cat_item>
+        <cat_item display_value="Programme : Stimulation langagière intensive (SLI)">1e56ebde1b004a508d594047bc4bcb1e</cat_item>
         <cat_variable>IO:baec4b6a1bcc4a508d594047bc4bcbad</cat_variable>
         <condition/>
         <description/>
@@ -28,13 +28,13 @@
 	function checkeleveexiste(result){
 	if (result.next()) {
         g_form.showFieldMsg('l_ve',"Une demande a déjà été acheminée pour cet élève. Veuillez acheminer un courriel au comité SLI-ROI afin de préciser les éléments que vous souhaitez mettre à jour",'error');
-		g_form.setMandatory('consentement_parental_verbal',false);
-		g_form.setVisible("consentement_parental_verbal",false);
-		g_form.setValue("consentement_parental_verbal","false");
+		//g_form.setMandatory('consentement_parental_verbal',false);
+		//g_form.setVisible("consentement_parental_verbal",false);
+		//g_form.setValue("consentement_parental_verbal","false");
 	}else{
-		g_form.showFieldMsg('l_ve',"Ce programme vise la stimulation des habiletés langagières, telles que la compréhension des consignes/concepts, les structures de phrases, le vocabulaire, le discours ainsi que les préalables à l'écrit tels que la conscience phonologique et l'apprentissage des lettres de l'alphabet. Pour y être admissible, un élève doit présenter de telles difficultés dans sa langue dominante, c'est-à-dire la langue dans laquelle il ou elle est le plus confortable pour s'exprimer. Il est à noter que les élèves présentant seulement des difficultés au niveau de la parole (ex.: articulation des sons, bégaiement) ou au niveau de la lecture/écriture ne sont pas admissibles",'info');
-		g_form.setMandatory('consentement_parental_verbal',true);
-		g_form.setVisible("consentement_parental_verbal",true);
+		g_form.showFieldMsg('l_ve',"Ce programme vise la stimulation des habiletés langagières, telles que la compréhension des consignes/concepts, les structures de phrases, le vocabulaire, le discours ainsi que les préalables au langage écrit tels que la conscience phonologique et l'apprentissage des lettres de l'alphabet. Pour y être admissible, un élève doit présenter de telles difficultés dans sa langue dominante, c'est-à-dire la langue dans laquelle il ou elle est le plus confortable pour s'exprimer. Il est à noter que les élèves présentant seulement des difficultés au niveau de la parole (ex.: articulation des sons, bégaiement) ou au niveau de la lecture/écriture ne sont pas admissibles",'info');
+		//g_form.setMandatory('consentement_parental_verbal',true);
+		//g_form.setVisible("consentement_parental_verbal",true);
 	}
 
 	}
@@ -43,13 +43,13 @@
 	
     var school;
     //Type appropriate comment here, and begin script below
-    var now_GR = new GlideRecord('sys_user');
+    var now_GR = new GlideRecord('x_ndecd_triage_2_0_eleve');
     now_GR.addQuery('sys_id', newValue); // Priority is 4 – Low and,
     now_GR.query(response);
 
     function response(result) {
         if (result.next()) {
-            school = result.getValue('u_nom_de_l_ecole');
+            school = result.getValue('u_nom_de_l_cole');
             var admins = new GlideRecord('x_ndecd_triage_2_0_x_ndecd_school');
             admins.addQuery('sys_id', school); // Priority is 4 – Low and,
             admins.query(responseA);
@@ -82,7 +82,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>dd51e0441b948210d991c882604bcbed</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>eleve change</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -90,7 +90,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_dd51e0441b948210d991c882604bcbed</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-02-09 18:43:22</sys_updated_on>
+        <sys_updated_on>2024-03-04 18:59:00</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
