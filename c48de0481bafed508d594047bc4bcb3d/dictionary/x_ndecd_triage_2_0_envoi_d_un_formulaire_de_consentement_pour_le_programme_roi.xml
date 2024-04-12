@@ -20,7 +20,7 @@
                 <element inactive_on_update="false" label="Non" sequence="1" value="no"/>
             </choice>
         </element>
-        <element choice="1" label="Consentement Parental verbal" max_length="40" name="consentement_parental_verbal" type="choice">
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Consentement Parental verbal" max_length="40" name="consentement_parental_verbal" type="choice">
             <choice/>
         </element>
         <element choice="1" label="Cote de priorisation de base" max_length="200" name="c_te_de_priorisation_de_base" type="float">
