@@ -21,7 +21,10 @@
             </choice>
         </element>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Consentement Parental verbal" max_length="40" name="consentement_parental_verbal" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
         </element>
         <element choice="1" label="Cote de priorisation de base" max_length="200" name="c_te_de_priorisation_de_base" type="float">
             <choice>
