@@ -2,11 +2,11 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Orthophonie TSA ">2783f91d1b4906508d594047bc4bcbce</cat_item>
+        <cat_item display_value="Orthophonie TSA/Communication sociale (CS)">2783f91d1b4906508d594047bc4bcbce</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
-        <choice_field/>
-        <choice_table/>
+        <choice_field>yes_no</choice_field>
+        <choice_table>x_ndecd_cecce_base_options</choice_table>
         <create_roles/>
         <default_html_value/>
         <default_value/>
@@ -24,7 +24,7 @@
         <field/>
         <global>false</global>
         <help_tag>More information</help_tag>
-        <help_text/>
+        <help_text>(Exemples:  ne répond pas à son prénom, n’initie pas de jeux sociaux, démontre peu d’empathie envers les sentiments des autres)?</help_text>
         <hidden>false</hidden>
         <include_none>false</include_none>
         <instructions/>
@@ -42,19 +42,19 @@
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>l_l_ve_prouve_t_il_des_difficult_s_li_es_la_r_ciprocit_sociale_ou_motionnelle</name>
-        <order/>
+        <order>280</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>L’élève éprouve-t-il des difficultés liées à la réciprocité sociale ou émotionnelle (Exemple:  ne répond pas à son prénom, n’initie pas de jeux sociaux, démontre peu d’empathie envers les sentiments des autres)? </question_text>
+        <question_text>L’élève éprouve-t-il des difficultés liées à la réciprocité sociale ou émotionnelle ? </question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
-        <record_producer_table>x_ndecd_triage_2_0_demandes_priorisation_sli</record_producer_table>
+        <record_producer_table>x_ndecd_triage_2_0_demande_tsa</record_producer_table>
         <reference/>
         <reference_qual/>
         <reference_qual_condition/>
@@ -69,7 +69,7 @@
 */]]></save_script>
         <scale_max>5</scale_max>
         <scale_min>0</scale_min>
-        <show_help>false</show_help>
+        <show_help>true</show_help>
         <show_help_on_load>false</show_help_on_load>
         <sp_widget/>
         <summary_macro/>
@@ -77,17 +77,17 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-19 04:03:18</sys_created_on>
         <sys_id>a52042d91b8906508d594047bc4bcbf2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>L’élève éprouve-t-il des difficultés liées à la réciprocité sociale ou émotionnelle (Exemple:  ne répond pas à son prénom, n’initie pas de jeux sociaux, démontre peu d’empathie envers les sentiments des autres)? </sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>L’élève éprouve-t-il des difficultés liées à la réciprocité sociale ou émotionnelle ? </sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>item_option_new_a52042d91b8906508d594047bc4bcbf2</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-19 04:03:18</sys_updated_on>
+        <sys_updated_on>2024-03-25 17:36:40</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>6</type>
+        <type>5</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>

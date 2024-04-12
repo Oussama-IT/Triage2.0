@@ -2,13 +2,14 @@
     <ais_relevancy_solution_definition action="INSERT_OR_UPDATE">
         <active>true</active>
         <capability display_value="Search Relevancy">458c3b2ab72300100e173307fe11a923</capability>
-        <current_solution_version>18</current_solution_version>
+        <current_solution_version>19</current_solution_version>
         <dataset_language>en</dataset_language>
         <fields>signal_json</fields>
         <filter table="ais_relevancy_training_staging">sys_created_onONLast 30 days@javascript:gs.beginningOfLast30Days()@javascript:gs.endOfLast30Days()^search_profile=94835dde7ac4b150225c610faea1d6cd^EQ<item endquery="false" field="sys_created_on" goto="false" newquery="false" operator="ON" or="false" value="Last 30 days@javascript:gs.beginningOfLast30Days()@javascript:gs.endOfLast30Days()"/>
             <item display_table="ais_search_profile" display_value="cecce-demande-de-partage-equipe-triage Search Profile" endquery="false" field="search_profile" goto="false" newquery="false" operator="=" or="false" value="94835dde7ac4b150225c610faea1d6cd"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter>
+        <pretrained>false</pretrained>
         <profile display_value="cecce-demande-de-partage-equipe-triage Search Profile">94835dde7ac4b150225c610faea1d6cd</profile>
         <request_source>api</request_source>
         <solution_label>ais_relevancy_94835dde7ac4b150225c610faea1d6cd</solution_label>

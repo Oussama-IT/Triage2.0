@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="catalog_script_client">
+    <catalog_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>false</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>item</applies_to>
+        <cat_item display_value="Orthophonie TSA/Communication sociale (CS)">2783f91d1b4906508d594047bc4bcbce</cat_item>
+        <cat_variable>IO:8b77f5511b8906508d594047bc4bcb4d</cat_variable>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>eleve change</name>
+        <order/>
+        <published_ref/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading || newValue == '') {
+		g_form.setVisible("des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture_co",false)
+	    g_form.setMandatory("des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture_co",false)
+		return;
+		
+    }
+    //check if demande existe pour l'eleve
+	var sligr=new GlideRecord('x_ndecd_triage_2_0_demande_tsa');
+	sligr.addQuery('eleve', newValue);
+	sligr.query(checkeleveexiste);
+	function checkeleveexiste(result){
+	if (result.next()) {
+        g_form.showFieldMsg('eleve',"Une demande a déjà été acheminée, cette année pour cet élève.",'error'); //Veuillez acheminer un courriel au comité SLI-ROI afin de préciser les éléments que vous souhaitez mettre à jour
+		//g_form.setMandatory('consentement_parental_verbal',false);
+		//g_form.setVisible("consentement_parental_verbal",false);
+		//g_form.setValue("consentement_parental_verbal","false");
+	}else{
+		g_form.showFieldMsg('eleve',"La demande de service au volet TSA/Communication sociale pourrait inclure le(s) service(s) orthophoniques suivants : -Consultations auprès de l’équipe école-parents pouvant inclure:  une observation de l’élève, une interprétation de rapports, une demande SEP (ex. outils technologiques essentiels à la réussite de l’élève), un soutien indirect à l’équipe pédagogique, des recommandations pour appuyer le développement des habiletés langagières et de communication sociale de l’élève. -Programme : Rééducation orthophonique individualisée - Communication sociale (ROI-CS) (Élèves de la maternelle à la première année) : Suite à une priorisation systémique, un dépistage sera effectué par l’orthophoniste pour la sélection des élèves qui seront retenus pour le programme. L’élève pourrait également être éligible pour participer au programme Stimulation de la communication sociale (SCS) offert aux élèves de la maternelle et du jardin, animé par une éducatrice ressource en langage.",'info');
+		//g_form.setMandatory('consentement_parental_verbal',true);
+		//g_form.setVisible("consentement_parental_verbal",true);
+	}
+
+	}
+	
+
+    var school;
+    //Type appropriate comment here, and begin script below
+    var now_GR = new GlideRecord('x_ndecd_triage_2_0_eleve');
+    now_GR.addQuery('sys_id', newValue); // Priority is 4 – Low and,
+    if (g_form.getValue("consentement_parental_verbal")=="true"){
+
+		now_GR.query(response);
+	}
+	
+
+    function response(result) {
+        if (result.next()) {
+            school = result.getValue('u_nom_de_l_cole');
+			//hide langage ecrit variables
+			classe= result.getValue('u_classe');
+			if (!["78911a0d1b413950d991c882604bcbc2", "2fc911a0d1b413950d991c882604bcbc2", "78911a0d1b413950d991c882604bcbc2"].includes(classe)){//id jk sk prek 
+			    
+				g_form.setVisible("des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture_co",true)
+	            g_form.setMandatory("des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture_co",true)
+			}
+			else{
+				g_form.setMandatory("des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture_co",false)
+				g_form.setVisible("des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture_co",false)
+				g_form.setValue("des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture_co","")
+	            
+			}
+			
+            var admins = new GlideRecord('x_ndecd_triage_2_0_x_ndecd_school');
+            admins.addQuery('sys_id', school); // Priority is 4 – Low and,
+            admins.query(responseA);
+
+
+        }
+    }
+
+    function responseA(result) {
+        while (result.next()) {
+            var u_admin = result.getValue('admins');
+            g_form.setValue("direction", u_admin);
+
+        }
+    }
+
+
+
+    // var school;
+    // school = gselve.getValue('u_nom_de_l_ecole');
+
+    // var gr = new GlideRecord('');
+
+
+
+
+}]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-04-03 20:48:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>66263a1e1b55ca50d991c882604bcb4e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>eleve change</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>catalog_script_client_66263a1e1b55ca50d991c882604bcb4e</sys_update_name>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-04-03 21:22:10</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <va_supported>true</va_supported>
+        <variable_set/>
+        <view/>
+    </catalog_script_client>
+</record_update>

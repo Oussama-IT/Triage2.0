@@ -2,11 +2,11 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Orthophonie TSA ">2783f91d1b4906508d594047bc4bcbce</cat_item>
+        <cat_item display_value="Orthophonie TSA/Communication sociale (CS)">2783f91d1b4906508d594047bc4bcbce</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
-        <choice_table/>
+        <choice_table>x_ndecd_cecce_base_tsa_qa</choice_table>
         <create_roles/>
         <default_html_value/>
         <default_value/>
@@ -21,7 +21,7 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field/>
+        <field>l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -29,7 +29,7 @@
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
-        <list_table/>
+        <list_table>x_ndecd_cecce_base_tsa_qa</list_table>
         <lookup_label/>
         <lookup_price/>
         <lookup_table/>
@@ -38,25 +38,25 @@
         <macro/>
         <macroponent/>
         <mandatory>false</mandatory>
-        <map_to_field>false</map_to_field>
+        <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ex</name>
-        <order/>
+        <name>l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses</name>
+        <order>330</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>L’élève démontre-t-il de l’intérêt à partager son plaisir, ses réussites et ses intérêts avec les autres explication</question_text>
+        <question_text>Veuillez préciser</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
-        <record_producer_table>x_ndecd_triage_2_0_demandes_priorisation_sli</record_producer_table>
+        <record_producer_table>x_ndecd_triage_2_0_demande_tsa</record_producer_table>
         <reference/>
-        <reference_qual/>
+        <reference_qual>questionSTARTSWITHl’intérêt à partager son plaisir, ses ré</reference_qual>
         <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
@@ -77,21 +77,21 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-19 04:09:33</sys_created_on>
         <sys_id>dd91425d1b8906508d594047bc4bcb51</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>L’élève démontre-t-il de l’intérêt à partager son plaisir, ses réussites et ses intérêts avec les autres explication</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Veuillez préciser</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>item_option_new_dd91425d1b8906508d594047bc4bcb51</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-19 04:09:33</sys_updated_on>
+        <sys_updated_on>2024-03-25 17:37:46</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>6</type>
+        <type>21</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
         <validate_regex/>
         <variable_name/>
         <variable_set/>

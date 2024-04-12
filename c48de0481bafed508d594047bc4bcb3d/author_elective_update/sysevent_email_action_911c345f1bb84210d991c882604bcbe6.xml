@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="DELETE">
+        <action_insert>true</action_insert>
+        <action_update>false</action_update>
+        <active>false</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_ndecd_triage_2_0_demandes_priorisation_sli</collection>
+        <condition table="x_ndecd_triage_2_0_demandes_priorisation_sli">soumis_parSTARTSWITHéquipe-ortophonistes^EQ<item endquery="false" field="soumis_par" goto="false" newquery="false" operator="STARTSWITH" or="false" value="équipe-ortophonistes"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description/>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html><![CDATA[<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>]]></digest_separator_html>
+        <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <enable_dynamic_translation>false</enable_dynamic_translation>
+        <event_name>activate.life.cycle.migration</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from>ne-pas-répondre comité SLI&lt;sli_roi@ecolecatholique.ca&gt;</from>
+        <generation_type>engine</generation_type>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<p>Bonjour,</p>
+<p>Nous vous informons qu'une demande SLI a &eacute;t&eacute; soumise par l'orthophoniste ${opened_by.first_name} ${opened_by.last_name} concernant l'&eacute;l&egrave;ve ${eleve.name} (N&deg; ${number}).</p>
+<p>Un courriel vous sera achemin&eacute; &agrave; l'automne prochain si un suivi est requis pour compl&eacute;ter le dossier de l'&eacute;l&egrave;ve.</p>
+<p>Merci.</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Email supp 1</name>
+        <omit_watermark>false</omit_watermark>
+        <order>100</order>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>nom_de_l_l_ve.u_nom_de_l_cole.admins</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to>ne-pas-répondre comité SLI&lt;sli_roi@ecolecatholique.ca&gt;</reply_to>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>Demande SLI N° ${number}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-12 18:00:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>911c345f1bb84210d991c882604bcbe6</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Email supp 1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sysevent_email_action_911c345f1bb84210d991c882604bcbe6</sys_update_name>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 22:58:26</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
+        <type>email</type>
+        <weight>0</weight>
+    </sysevent_email_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</application>
+        <file_path/>
+        <instance_id>65b29b3adb7ea19492f5684e13961931</instance_id>
+        <instance_name>ceccedev</instance_name>
+        <name>sysevent_email_action_911c345f1bb84210d991c882604bcbe6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_email_action"&gt;&lt;sysevent_email_action action="INSERT_OR_UPDATE"&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;advanced_condition/&gt;&lt;affected_field_on_event/&gt;&lt;category display_value="Uncategorized" name="Uncategorized"&gt;c97d83137f4432005f58108c3ffa917a&lt;/category&gt;&lt;collection&gt;x_ndecd_triage_2_0_demandes_priorisation_sli&lt;/collection&gt;&lt;condition table="x_ndecd_triage_2_0_demandes_priorisation_sli"&gt;soumis_parSTARTSWITHéquipe-ortophonistes^EQ&lt;item endquery="false" field="soumis_par" goto="false" newquery="false" operator="STARTSWITH" or="false" value="équipe-ortophonistes"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/condition&gt;&lt;content_type&gt;text/html&lt;/content_type&gt;&lt;default_interval/&gt;&lt;description/&gt;&lt;digest_from/&gt;&lt;digest_html/&gt;&lt;digest_reply_to/&gt;&lt;digest_separator_html&gt;&lt;![CDATA[&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;]]&gt;&lt;/digest_separator_html&gt;&lt;digest_separator_text&gt;&lt;![CDATA[\n--------------------------------------------------------------------------------\n]]&gt;&lt;/digest_separator_text&gt;&lt;digest_subject/&gt;&lt;digest_template/&gt;&lt;digest_text/&gt;&lt;digestable&gt;false&lt;/digestable&gt;&lt;enable_dynamic_translation&gt;false&lt;/enable_dynamic_translation&gt;&lt;event_name&gt;activate.life.cycle.migration&lt;/event_name&gt;&lt;event_parm_1&gt;false&lt;/event_parm_1&gt;&lt;event_parm_2&gt;false&lt;/event_parm_2&gt;&lt;exclude_delegates&gt;false&lt;/exclude_delegates&gt;&lt;force_delivery&gt;false&lt;/force_delivery&gt;&lt;from&gt;ne-pas-répondre comité SLI&amp;lt;sli_roi@ecolecatholique.ca&amp;gt;&lt;/from&gt;&lt;generation_type&gt;engine&lt;/generation_type&gt;&lt;importance/&gt;&lt;include_attachments&gt;false&lt;/include_attachments&gt;&lt;item&gt;event.parm1&lt;/item&gt;&lt;item_table/&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;message/&gt;&lt;message_html&gt;&lt;![CDATA[&lt;p&gt;Bonjour,&lt;/p&gt;
+&lt;p&gt;Nous vous informons qu'une demande SLI a &amp;eacute;t&amp;eacute; soumise par l'orthophoniste ${opened_by.first_name} ${opened_by.last_name} concernant l'&amp;eacute;l&amp;egrave;ve ${eleve.name} (N&amp;deg; ${number}).&lt;/p&gt;
+&lt;p&gt;Un courriel vous sera achemin&amp;eacute; &amp;agrave; l'automne prochain si un suivi est requis pour compl&amp;eacute;ter le dossier de l'&amp;eacute;l&amp;egrave;ve.&lt;/p&gt;
+&lt;p&gt;Merci.&lt;/p&gt;]]&gt;&lt;/message_html&gt;&lt;message_list/&gt;&lt;message_text/&gt;&lt;name&gt;Email supp 1&lt;/name&gt;&lt;omit_watermark&gt;false&lt;/omit_watermark&gt;&lt;order&gt;100&lt;/order&gt;&lt;push_message_only&gt;false&lt;/push_message_only&gt;&lt;recipient_fields&gt;nom_de_l_l_ve.u_nom_de_l_cole.admins&lt;/recipient_fields&gt;&lt;recipient_groups/&gt;&lt;recipient_users/&gt;&lt;reply_to&gt;ne-pas-répondre comité SLI&amp;lt;sli_roi@ecolecatholique.ca&amp;gt;&lt;/reply_to&gt;&lt;send_self&gt;true&lt;/send_self&gt;&lt;sms_alternate/&gt;&lt;style/&gt;&lt;subject&gt;Demande SLI N° ${number}&lt;/subject&gt;&lt;subscribable&gt;false&lt;/subscribable&gt;&lt;sys_class_name&gt;sysevent_email_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;servicenowdeveloper3@ecolecatholique.ca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-03-12 18:00:21&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;911c345f1bb84210d991c882604bcbe6&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;Email supp 1&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Triage 2.0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_email_action_911c345f1bb84210d991c882604bcbe6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;servicenowdeveloper3@ecolecatholique.ca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-03-21 22:58:26&lt;/sys_updated_on&gt;&lt;sys_version&gt;2&lt;/sys_version&gt;&lt;template display_value="Unsubscribe and Preferences"&gt;7ed0481f3b0b2200c869c2c703efc487&lt;/template&gt;&lt;type&gt;email&lt;/type&gt;&lt;weight&gt;0&lt;/weight&gt;&lt;/sysevent_email_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>677470193</payload_hash>
+        <record_name>Email supp 1</record_name>
+        <reverted_from/>
+        <source>1a8b10cc1b548210d991c882604bcb11</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-21 22:58:26</sys_created_on>
+        <sys_id>684754561b050e10d991c882604bcb92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18e633cb3430000001</sys_recorded_at>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-21 22:58:26</sys_updated_on>
+        <type>Notification</type>
+        <update_guid>6c47545659050e10a00623516c1e4291</update_guid>
+        <update_guid_history>6c47545659050e10a00623516c1e4291:677470193,c9128ca1acc146500e871a00c464c852:-1085886206,ec120ca1fdc14650829cb6791f2cc625:-2127352227,54cf05eba6744e1093b47fec90cb2ee0:1863551288,d4d1c157f7f84210660c96c7986e5e28:-1058223113,9d91c15799f84210824b5ccf90c4b01b:1917713160,aabc7413d4f84210919869b55f59683a:165933756</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-04-04 17:38:13</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_email_action">sysevent_email_action</sys_db_object>
+        <sys_id>58d4cf53ab0d4d7c93a3948472beeb24</sys_id>
+        <sys_metadata>911c345f1bb84210d991c882604bcbe6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Email supp 1</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_parent display_value=" demandes/priorisation SLI">a51bb6881b2cc2508d594047bc4bcb5b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_scope_delete display_value="">14b51fc3ce834665bcd5327947e6f949</sys_scope_delete>
+        <sys_update_name>sysevent_email_action_911c345f1bb84210d991c882604bcbe6</sys_update_name>
+        <sys_update_version display_value="sysevent_email_action_911c345f1bb84210d991c882604bcbe6">684754561b050e10d991c882604bcb92</sys_update_version>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-04-04 17:38:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

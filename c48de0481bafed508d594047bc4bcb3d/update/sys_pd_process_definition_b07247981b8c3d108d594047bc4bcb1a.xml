@@ -3,9 +3,12 @@
         <access>public</access>
         <active>true</active>
         <description/>
+        <designer_state/>
         <label>CECCE Demande departage workflow</label>
         <name>cecce_demande_departage_workflow</name>
+        <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
+        <schema_version/>
         <snapshot display_value="cecce_demande_departage_workflow">c558746d1b8546508d594047bc4bcbae</snapshot>
         <status>published</status>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
@@ -26,9 +29,12 @@
         <access>public</access>
         <active>true</active>
         <description/>
+        <designer_state/>
         <label>CECCE Demande departage workflow</label>
         <name>cecce_demande_departage_workflow</name>
+        <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
+        <schema_version/>
         <snapshot display_value="cecce_demande_departage_workflow">c558746d1b8546508d594047bc4bcbae</snapshot>
         <status>published</status>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
@@ -55,6 +61,7 @@
         <name>approbation</name>
         <order>1</order>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -76,6 +83,7 @@
         <name>envoi_par_lettre</name>
         <order>2</order>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Previous">3f030dc5bd8842aebc1fa64716545da2</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -98,6 +106,7 @@
         <name>traitement</name>
         <order>3</order>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Previous">3f030dc5bd8842aebc1fa64716545da2</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -125,6 +134,7 @@
         <order>1</order>
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
@@ -955,6 +965,7 @@
         <order>2</order>
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
@@ -1822,6 +1833,7 @@
         <order>3</order>
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
@@ -3031,6 +3043,7 @@
         <order>4</order>
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
@@ -4240,6 +4253,7 @@
         <order>5</order>
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
@@ -5221,6 +5235,7 @@
         <order>6</order>
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
@@ -6088,6 +6103,7 @@
         <order>7</order>
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
@@ -7297,6 +7313,7 @@
         <order>8</order>
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
+        <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
@@ -8491,8 +8508,6 @@
         <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
         <value>{{act.ec326ef31b5979508d594047bc4bcb4e.label}}</value>
     </sys_element_mapping>
-    <sys_pd_swim_lane action="delete_multiple" query="process_definition=b07247981b8c3d108d594047bc4bcb1a"/>
-    <sys_pd_activity_m2m_app_object action="delete_multiple" query="activity.process_definition=b07247981b8c3d108d594047bc4bcb1a"/>
     <sys_pd_snapshot action="delete_multiple" query="sys_id=c558746d1b8546508d594047bc4bcbae^sys_idNOT INc558746d1b8546508d594047bc4bcbae"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

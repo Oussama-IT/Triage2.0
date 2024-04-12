@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" db_object_id="a51bb6881b2cc2508d594047bc4bcb5b" extends="task" label=" demandes/priorisation SLI" max_length="40" name="x_ndecd_triage_2_0_demandes_priorisation_sli" type="collection">
+    <element audit="true" db_object_id="a51bb6881b2cc2508d594047bc4bcb5b" extends="task" label=" demandes/priorisation SLI" max_length="40" name="x_ndecd_triage_2_0_demandes_priorisation_sli" text_index="true" type="collection">
         <element label="Autre situation explication" max_length="200" name="autre_situation_explication" type="string"/>
         <element label="Classe" max_length="32" name="classe" reference="x_ndecd_triage_2_0_classe" type="reference"/>
         <element label="Demandesliroi" max_length="4000" name="demandesliroi" reference="x_ndecd_cecce_base_sli_roi_qa" type="glide_list"/>
@@ -40,7 +40,9 @@
         <element label="Score de priorisation ROI" max_length="200" name="scorepriorisationroi" type="string"/>
         <element label="Score de priorisation SLI" max_length="200" name="score_de_priorisation" type="string"/>
         <element label="Situation familiale de l’élève" max_length="200" name="situation_familiale_de_l_l_ve" type="string"/>
-        <element label="Soumis par" max_length="200" name="soumis_par" type="string"/>
+        <element choice="1" choice_field="x_ndecd_triage_2_0_soumis_par" choice_table="x_ndecd_cecce_base_options" label="Soumis par" max_length="200" name="soumis_par" type="choice">
+            <choice/>
+        </element>
         <element choice="3" choice_field="statut_sli" choice_table="x_ndecd_cecce_base_options" label="Statut SLI" max_length="40" name="statut_sli" type="choice">
             <choice>
                 <element inactive_on_update="false" label="À risque" language="fq" value="risque"/>

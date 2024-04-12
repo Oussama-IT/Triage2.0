@@ -2,11 +2,11 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Orthophonie TSA ">2783f91d1b4906508d594047bc4bcbce</cat_item>
+        <cat_item display_value="Orthophonie TSA/Communication sociale (CS)">2783f91d1b4906508d594047bc4bcbce</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
-        <choice_field/>
-        <choice_table/>
+        <choice_field>yes_no</choice_field>
+        <choice_table>x_ndecd_cecce_base_options</choice_table>
         <create_roles/>
         <default_html_value/>
         <default_value/>
@@ -24,7 +24,7 @@
         <field/>
         <global>false</global>
         <help_tag>More information</help_tag>
-        <help_text/>
+        <help_text> (Exemples:  L’élève n’établit pas le contact visuel de façon constante, ne hoche pas la tête pour indiquer « oui » ou « non », ne cherche pas à être réconforté s’il est blessé)?</help_text>
         <hidden>false</hidden>
         <include_none>false</include_none>
         <instructions/>
@@ -42,19 +42,19 @@
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>l_l_ve_prouve_t_il_des_difficult_s_r_guler_les_interactions_sociales</name>
-        <order/>
+        <order>300</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>L’élève éprouve-t-il des difficultés à réguler les interactions sociales en utilisant des comportements non-verbaux?</question_text>
+        <question_text>L’élève éprouve-t-il des difficultés à réguler les interactions sociales en utilisant des comportements non-verbaux</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
-        <record_producer_table>x_ndecd_triage_2_0_demandes_priorisation_sli</record_producer_table>
+        <record_producer_table>x_ndecd_triage_2_0_demande_tsa</record_producer_table>
         <reference/>
         <reference_qual/>
         <reference_qual_condition/>
@@ -69,7 +69,7 @@
 */]]></save_script>
         <scale_max>5</scale_max>
         <scale_min>0</scale_min>
-        <show_help>false</show_help>
+        <show_help>true</show_help>
         <show_help_on_load>false</show_help_on_load>
         <sp_widget/>
         <summary_macro/>
@@ -77,17 +77,17 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-19 04:06:17</sys_created_on>
         <sys_id>b4c046d91b8906508d594047bc4bcbcb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>L’élève éprouve-t-il des difficultés à réguler les interactions sociales en utilisant des comportements non-verbaux?</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>L’élève éprouve-t-il des difficultés à réguler les interactions sociales en utilisant des comportements non-verbaux</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>item_option_new_b4c046d91b8906508d594047bc4bcbcb</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-19 04:06:17</sys_updated_on>
+        <sys_updated_on>2024-03-25 17:35:53</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>6</type>
+        <type>5</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="bcfad5001b9d8250d991c882604bcbb5" extends="x_ndecd_triage_2_0_demande_tsa" label="ROI-CS" max_length="40" name="x_ndecd_triage_2_0_roi_cs" text_index="true" type="collection">
+        <element label="Année de la demande " max_length="40" name="ann_e_de_la_demande" type="integer"/>
+        <element label="Nom éducatrice SCS" max_length="40" name="nom_ducatrice_scs" reference="sys_user" type="reference"/>
+        <element label="Nom orthophoniste dépistage ROI-CS" max_length="32" name="nom_orthophoniste_d_pistage_roi_cs" reference="sys_user" type="reference"/>
+        <element label="Nom orthophoniste suivi ROI-CS" max_length="32" name="nom_orthophoniste_suivi_roi_cs" reference="sys_user" type="reference"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Programme ROI-CS si suivi" max_length="40" name="programme_roi_cs_si_suivi" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Programme SCS si suivi" max_length="40" name="programme_scs_si_suivi" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+        <element label="ScoreROICS" max_length="40" name="scoreroics" type="float"/>
+        <element label="Score communication sociale" max_length="40" name="score_communication_sociale" type="float"/>
+        <element label="Score expressif" max_length="40" name="score_expressif" type="float"/>
+        <element label="Score imitation" max_length="40" name="score_imitation" type="float"/>
+        <element label="Score jeu" max_length="40" name="score_jeu" type="float"/>
+        <element label="Score global de priorisation (ROI-CS)" max_length="40" name="score_roi_cs" type="float"/>
+        <element label="Score réceptif" max_length="40" name="score_r_ceptif" type="float"/>
+        <element choice="1" choice_field="status_de_la_demande_roics" choice_table="x_ndecd_cecce_base_options" label="Statut de la demande ROI/CS" max_length="40" name="statut_de_la_demande_roi_cs" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Dépistée" sequence="0" value="depiste"/>
+                <element inactive_on_update="false" label="En cours de dépistage" sequence="1" value="encoursdepistage"/>
+                <element inactive_on_update="false" label="En suivi" sequence="2" value="ensuivi"/>
+                <element inactive_on_update="false" label="Fermée" sequence="3" value="fermee"/>
+                <element inactive_on_update="false" label="Non dépisté" sequence="4" value="nondepiste"/>
+            </choice>
+        </element>
+    </element>
+</database>

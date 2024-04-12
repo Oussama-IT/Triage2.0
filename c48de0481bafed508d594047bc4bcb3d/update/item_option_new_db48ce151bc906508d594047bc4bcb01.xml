@@ -2,11 +2,11 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Orthophonie TSA ">2783f91d1b4906508d594047bc4bcbce</cat_item>
+        <cat_item display_value="Orthophonie TSA/Communication sociale (CS)">2783f91d1b4906508d594047bc4bcbce</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
-        <choice_field/>
-        <choice_table/>
+        <choice_field>yes_no_uncertain</choice_field>
+        <choice_table>x_ndecd_cecce_base_options</choice_table>
         <create_roles/>
         <default_html_value/>
         <default_value/>
@@ -21,7 +21,7 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field/>
+        <field>est_ce_que_les_parents_sont_en_accord_avec_cette_demande_de_placement</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -38,11 +38,11 @@
         <macro/>
         <macroponent/>
         <mandatory>false</mandatory>
-        <map_to_field>false</map_to_field>
+        <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>est_ce_que_les_parents_sont_en_accord_avec_cette_demande_de_placement</name>
-        <order/>
+        <order>610</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
@@ -54,7 +54,7 @@
         <rec_lookup_price/>
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
-        <record_producer_table>x_ndecd_triage_2_0_demandes_priorisation_sli</record_producer_table>
+        <record_producer_table>x_ndecd_triage_2_0_demande_tsa</record_producer_table>
         <reference/>
         <reference_qual/>
         <reference_qual_condition/>
@@ -77,17 +77,17 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-19 04:38:32</sys_created_on>
         <sys_id>db48ce151bc906508d594047bc4bcb01</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Est-ce que les parents sont en accord avec cette demande de placement?</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>item_option_new_db48ce151bc906508d594047bc4bcb01</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-19 04:38:32</sys_updated_on>
+        <sys_updated_on>2024-03-25 18:37:06</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>6</type>
+        <type>5</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>

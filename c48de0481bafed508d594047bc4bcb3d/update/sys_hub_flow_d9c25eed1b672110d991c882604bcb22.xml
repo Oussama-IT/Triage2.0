@@ -4,11 +4,15 @@
         <acls/>
         <active>false</active>
         <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
         <copied_from_name>FlowTemplate_Empty</copied_from_name>
         <description/>
+        <flow_priority/>
+        <generation_source/>
         <internal_name>approbation_de_demande_de_partage</internal_name>
         <label_cache>[{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"demande de partage","type":"reference","base_type":"reference","attributes":{}},{"name":"97fa361a-d87c-414a-ad4b-91b563e38115.record","label":"1 - Update Record➛demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"demande de partage","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"demande de partage","type":"reference","base_type":"reference","attributes":{}},{"name":"{{static.5bb210401be7a950d991c882604bcb68}}","label":"soufiane ben moussa","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"e419e110-a276-4b9f-b86d-f7c22816df51.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"786d22d3-1c07-473d-b5d3-62acbfb680f4.record","label":"4 - Update Record➛demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"demande de partage","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"786d22d3-1c07-473d-b5d3-62acbfb680f4.record.opened_by","label":"4 - Update Record➛demande de partage Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"opened_by"},{"name":"Created_1.current.eleve","label":"Trigger - Record Created➛demande de partage Record➛Eleve","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"eleve"},{"name":"97fa361a-d87c-414a-ad4b-91b563e38115.record.opened_by","label":"1 - Update Record➛demande de partage Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"opened_by"},{"name":"{{static.584c97c31b83ed108d594047bc4bcba5}}","label":"Yassine ","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"{{static.63ead09c1bf321108d594047bc4bcb4c}}","label":"Mourad Dimassi","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"Created_1.current.approval","label":"Trigger - Record Created➛demande de partage Record➛Approval","reference":"","reference_display":"Approval","type":"choice","base_type":"choice","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"approval","choices":[{"used":false,"label":"Not Yet Requested","reference":false,"image":"","rawLabel":"Not Yet Requested","selected":false,"missing":false,"value":"not requested","parameters":{"name":"task"}},{"used":false,"label":"Requested","reference":false,"image":"","rawLabel":"Requested","selected":false,"missing":false,"value":"requested","parameters":{"name":"task"}},{"used":false,"label":"Approved","reference":false,"image":"","rawLabel":"Approved","selected":false,"missing":false,"value":"approved","parameters":{"name":"task"}},{"used":false,"label":"Rejected","reference":false,"image":"","rawLabel":"Rejected","selected":false,"missing":false,"value":"rejected","parameters":{"name":"task"}}]}]</label_cache>
         <master_snapshot>ea151e611ba72110d991c882604bcb4c</master_snapshot>
@@ -241,6 +245,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3815da611ba72110d991c882604bcb44"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -324,6 +329,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f015da611ba72110d991c882604bcb3c"/>
     <sys_hub_flow_output action="delete_multiple" query="model=d9c25eed1b672110d991c882604bcb22"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=d9c25eed1b672110d991c882604bcb22"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=d9c25eed1b672110d991c882604bcb22^sys_idNOT IN7015da611ba72110d991c882604bcb7e,b015da611ba72110d991c882604bcb69,c509260e1b7f25108d594047bc4bcb98,e1174da41b3761108d594047bc4bcbc1,e5174da41b3761108d594047bc4bcbab,f809260e1b7f25108d594047bc4bcb8e"/>
@@ -332,9 +338,11 @@
         <action_inputs/>
         <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">d9c25eed1b672110d991c882604bcb22</flow>
+        <generation_source/>
         <order>2</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -498,9 +506,11 @@
         <action_inputs/>
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">d9c25eed1b672110d991c882604bcb22</flow>
+        <generation_source/>
         <order>1</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -586,9 +596,11 @@
         <action_inputs/>
         <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">d9c25eed1b672110d991c882604bcb22</flow>
+        <generation_source/>
         <order>8</order>
         <parent_ui_id>5e3b03f4-4ab2-463b-8e04-c01535bb036c</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -634,9 +646,11 @@
         <action_inputs/>
         <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">d9c25eed1b672110d991c882604bcb22</flow>
+        <generation_source/>
         <order>5</order>
         <parent_ui_id>a6f84baf-f22d-41b2-9cbe-983408962ecd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -746,9 +760,11 @@
         <action_inputs/>
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">d9c25eed1b672110d991c882604bcb22</flow>
+        <generation_source/>
         <order>4</order>
         <parent_ui_id>a6f84baf-f22d-41b2-9cbe-983408962ecd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -834,9 +850,11 @@
         <action_inputs/>
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">d9c25eed1b672110d991c882604bcb22</flow>
+        <generation_source/>
         <order>7</order>
         <parent_ui_id>5e3b03f4-4ab2-463b-8e04-c01535bb036c</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -920,6 +938,7 @@
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=d9c25eed1b672110d991c882604bcb22"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=d9c25eed1b672110d991c882604bcb22^sys_idNOT IN6d174da41b3761108d594047bc4bcba2,bc09260e1b7f25108d594047bc4bcb7b"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">61174da41b3761108d594047bc4bcba2</block>
         <comment/>
         <connected_to/>
@@ -930,6 +949,7 @@
         <flow display_value="approbation de demande de partage ">d9c25eed1b672110d991c882604bcb22</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -966,6 +986,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=6d174da41b3761108d594047bc4bcba2"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=6d174da41b3761108d594047bc4bcba2"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">f009260e1b7f25108d594047bc4bcb7b</block>
         <comment/>
         <connected_to>a6f84baf-f22d-41b2-9cbe-983408962ecd</connected_to>
@@ -976,6 +997,7 @@
         <flow display_value="approbation de demande de partage ">d9c25eed1b672110d991c882604bcb22</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
         <order>6</order>
@@ -1100,11 +1122,14 @@
         <acls/>
         <active>true</active>
         <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
         <copied_from_name/>
         <description/>
+        <flow_priority/>
         <internal_name>approbation_de_demande_de_partage</internal_name>
         <label_cache>[{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"demande de partage","type":"reference","base_type":"reference","attributes":{}},{"name":"97fa361a-d87c-414a-ad4b-91b563e38115.record","label":"1 - Update Record➛demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"demande de partage","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current","label":"Trigger - Record Created➛demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"demande de partage","type":"reference","base_type":"reference","attributes":{}},{"name":"{{static.5bb210401be7a950d991c882604bcb68}}","label":"soufiane ben moussa","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"e419e110-a276-4b9f-b86d-f7c22816df51.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"786d22d3-1c07-473d-b5d3-62acbfb680f4.record","label":"4 - Update Record➛demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"demande de partage","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"786d22d3-1c07-473d-b5d3-62acbfb680f4.record.opened_by","label":"4 - Update Record➛demande de partage Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"opened_by"},{"name":"Created_1.current.eleve","label":"Trigger - Record Created➛demande de partage Record➛Eleve","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"eleve"},{"name":"97fa361a-d87c-414a-ad4b-91b563e38115.record.opened_by","label":"1 - Update Record➛demande de partage Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"opened_by"},{"name":"{{static.584c97c31b83ed108d594047bc4bcba5}}","label":"Yassine ","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"{{static.63ead09c1bf321108d594047bc4bcb4c}}","label":"Mourad Dimassi","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference"},{"name":"Created_1.current.approval","label":"Trigger - Record Created➛demande de partage Record➛Approval","reference":"","reference_display":"Approval","type":"choice","base_type":"choice","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"approval","choices":[{"used":false,"label":"Not Yet Requested","reference":false,"image":"","rawLabel":"Not Yet Requested","selected":false,"missing":false,"value":"not requested","parameters":{"name":"task"}},{"used":false,"label":"Requested","reference":false,"image":"","rawLabel":"Requested","selected":false,"missing":false,"value":"requested","parameters":{"name":"task"}},{"used":false,"label":"Approved","reference":false,"image":"","rawLabel":"Approved","selected":false,"missing":false,"value":"approved","parameters":{"name":"task"}},{"used":false,"label":"Rejected","reference":false,"image":"","rawLabel":"Rejected","selected":false,"missing":false,"value":"rejected","parameters":{"name":"task"}}]}]</label_cache>
         <master>true</master>
@@ -1323,6 +1348,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=aa151e611ba72110d991c882604bcb76"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1406,6 +1432,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e2151e611ba72110d991c882604bcb4f"/>
     <sys_hub_flow_output action="delete_multiple" query="model=ea151e611ba72110d991c882604bcb4c"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=ea151e611ba72110d991c882604bcb4c"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=ea151e611ba72110d991c882604bcb4c^sys_idNOT IN482701e41b3761108d594047bc4bcb21,8b09e60e1b7f25108d594047bc4bcb22,8c2701e41b3761108d594047bc4bcb16,c309e60e1b7f25108d594047bc4bcb0c,ee151e611ba72110d991c882604bcb87,fe151e611ba72110d991c882604bcb90"/>
@@ -1414,9 +1441,11 @@
         <action_inputs/>
         <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
         <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">ea151e611ba72110d991c882604bcb4c</flow>
+        <generation_source/>
         <order>5</order>
         <parent_ui_id>a6f84baf-f22d-41b2-9cbe-983408962ecd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -1526,9 +1555,11 @@
         <action_inputs/>
         <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
         <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">ea151e611ba72110d991c882604bcb4c</flow>
+        <generation_source/>
         <order>8</order>
         <parent_ui_id>5e3b03f4-4ab2-463b-8e04-c01535bb036c</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -1574,9 +1605,11 @@
         <action_inputs/>
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">ea151e611ba72110d991c882604bcb4c</flow>
+        <generation_source/>
         <order>4</order>
         <parent_ui_id>a6f84baf-f22d-41b2-9cbe-983408962ecd</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -1662,9 +1695,11 @@
         <action_inputs/>
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">ea151e611ba72110d991c882604bcb4c</flow>
+        <generation_source/>
         <order>7</order>
         <parent_ui_id>5e3b03f4-4ab2-463b-8e04-c01535bb036c</parent_ui_id>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -1750,9 +1785,11 @@
         <action_inputs/>
         <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
         <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">ea151e611ba72110d991c882604bcb4c</flow>
+        <generation_source/>
         <order>1</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -1838,9 +1875,11 @@
         <action_inputs/>
         <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
         <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="approbation de demande de partage ">ea151e611ba72110d991c882604bcb4c</flow>
+        <generation_source/>
         <order>2</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -2002,6 +2041,7 @@
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=ea151e611ba72110d991c882604bcb4c"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=ea151e611ba72110d991c882604bcb4c^sys_idNOT IN402701e41b3761108d594047bc4bcb25,c709e60e1b7f25108d594047bc4bcb2b"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">61174da41b3761108d594047bc4bcba2</block>
         <comment/>
         <connected_to/>
@@ -2012,6 +2052,7 @@
         <flow display_value="approbation de demande de partage ">ea151e611ba72110d991c882604bcb4c</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <inputs/>
         <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
@@ -2048,6 +2089,7 @@
     <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=402701e41b3761108d594047bc4bcb25"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=402701e41b3761108d594047bc4bcb25"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <attributes/>
         <block display_value="">f009260e1b7f25108d594047bc4bcb7b</block>
         <comment/>
         <connected_to>a6f84baf-f22d-41b2-9cbe-983408962ecd</connected_to>
@@ -2058,6 +2100,7 @@
         <flow display_value="approbation de demande de partage ">ea151e611ba72110d991c882604bcb4c</flow>
         <flow_variable/>
         <flow_variables_assigned/>
+        <generation_source/>
         <inputs/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
         <order>6</order>

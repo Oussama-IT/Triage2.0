@@ -4,11 +4,15 @@
         <acls/>
         <active>false</active>
         <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
         <copied_from_name>FlowTemplate_Empty</copied_from_name>
         <description/>
+        <flow_priority/>
+        <generation_source/>
         <internal_name>cecce_demande_de_partage_assigned_to_notification</internal_name>
         <label_cache>[{"name":"Updated_1.current.assigned_to.last_name","label":"Trigger - Record Updated➛Demande de partage Record➛Assigned to➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Updated_1.current.assigned_to.first_name","label":"Trigger - Record Updated➛Demande de partage Record➛Assigned to➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Updated_1.current.eleve.last_name","label":"Trigger - Record Updated➛Demande de partage Record➛Eleve➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Updated_1.current.eleve.first_name","label":"Trigger - Record Updated➛Demande de partage Record➛Eleve➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛Demande de partage Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"number"},{"name":"Updated_1.current.opened_by.last_name","label":"Trigger - Record Updated➛Demande de partage Record➛Opened by➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Updated_1.current.opened_by.first_name","label":"Trigger - Record Updated➛Demande de partage Record➛Opened by➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Updated_1.current.opened_by","label":"Trigger - Record Updated➛Demande de partage Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"opened_by"},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"Demande de partage","type":"reference","base_type":"reference","attributes":{}}]</label_cache>
         <master_snapshot>6f4469491bc8fd108d594047bc4bcb34</master_snapshot>
@@ -229,6 +233,30 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4e44e5491bc8fd108d594047bc4bcb8d"/>
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDCollection</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>global</scope_name>
+        <serialized_content>{"FlowDesigner:FDCollection":{"$COCollectionField":[{"FDChangeDetails":{"previous_display_value":"String","previous_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Display Value\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"},"previous_value":"String","previous_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"current_display_value":"String","current_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Display Value\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"0\"}"},"current_value":"String","current_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Value\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"},"field_name":"String","field_name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Field Name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDCollection.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 23:19:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>f4f014150f023300ecf0cc52ff767eed</sys_id>
+        <sys_mod_count>101</sys_mod_count>
+        <sys_name>FDCollection</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Flow Designer Designer Model" source="com.glide.hub.designer_backend.model">1170673e1bf221108d594047bc4bcb15</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name>sys_complex_object_f4f014150f023300ecf0cc52ff767eed</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-28 05:06:11</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -312,6 +340,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4e44e5491bc8fd108d594047bc4bcb91"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -395,6 +424,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8644e5491bc8fd108d594047bc4bcb95"/>
     <sys_hub_flow_output action="delete_multiple" query="model=37a2e9c51bc8fd108d594047bc4bcb6e"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=37a2e9c51bc8fd108d594047bc4bcb6e"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=37a2e9c51bc8fd108d594047bc4bcb6e^sys_idNOT IN1244e5491bc8fd108d594047bc4bcbbc"/>
@@ -403,9 +433,11 @@
         <action_inputs/>
         <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
         <action_type_parent/>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="cecce demande de partage assigned to notification">37a2e9c51bc8fd108d594047bc4bcb6e</flow>
+        <generation_source/>
         <order>1</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
@@ -714,11 +746,14 @@
         <acls/>
         <active>true</active>
         <annotation/>
+        <attributes/>
+        <authored_on_release_version/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
         <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
         <copied_from_name/>
         <description/>
+        <flow_priority/>
         <internal_name>cecce_demande_de_partage_assigned_to_notification</internal_name>
         <label_cache>[{"name":"Updated_1.current.assigned_to.last_name","label":"Trigger - Record Updated➛Demande de partage Record➛Assigned to➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Updated_1.current.assigned_to.first_name","label":"Trigger - Record Updated➛Demande de partage Record➛Assigned to➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Updated_1.current.eleve.last_name","label":"Trigger - Record Updated➛Demande de partage Record➛Eleve➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Updated_1.current.eleve.first_name","label":"Trigger - Record Updated➛Demande de partage Record➛Eleve➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛Demande de partage Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"number"},{"name":"Updated_1.current.opened_by.last_name","label":"Trigger - Record Updated➛Demande de partage Record➛Opened by➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Updated_1.current.opened_by.first_name","label":"Trigger - Record Updated➛Demande de partage Record➛Opened by➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Updated_1.current.opened_by","label":"Trigger - Record Updated➛Demande de partage Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"opened_by"},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"Demande de partage","type":"reference","base_type":"reference","attributes":{}}]</label_cache>
         <master>true</master>
@@ -897,6 +932,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=274469491bc8fd108d594047bc4bcb57"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -980,6 +1016,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2f4469491bc8fd108d594047bc4bcb36"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1063,6 +1100,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6f4469491bc8fd108d594047bc4bcb4e"/>
     <sys_hub_flow_output action="delete_multiple" query="model=6f4469491bc8fd108d594047bc4bcb34"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=6f4469491bc8fd108d594047bc4bcb34"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=6f4469491bc8fd108d594047bc4bcb34^sys_idNOT IN274469491bc8fd108d594047bc4bcb6b"/>
@@ -1071,9 +1109,11 @@
         <action_inputs/>
         <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
         <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
         <comment/>
         <display_text/>
         <flow display_value="cecce demande de partage assigned to notification">6f4469491bc8fd108d594047bc4bcb34</flow>
+        <generation_source/>
         <order>1</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>

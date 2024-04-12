@@ -158,7 +158,9 @@
                 <element dependent_value="réside avec ses deux parents à la même adresse" inactive_on_update="false" label="Réside avec ses deux parents à la même adresse" value="réside avec ses deux parents à la même adresse"/>
             </choice>
         </element>
-        <element label="Soumis par" max_length="200" name="soumis_par" type="string"/>
+        <element choice="1" choice_field="x_ndecd_triage_2_0_soumis_par" choice_table="x_ndecd_cecce_base_options" label="Soumis par" max_length="200" name="soumis_par" type="choice">
+            <choice/>
+        </element>
         <element label="Statut ROI" max_length="200" name="statut_roi" type="string"/>
         <element choice="1" choice_field="statut_sli" choice_table="x_ndecd_cecce_base_options" label="Statut SLI" max_length="40" name="statut_sli" type="choice">
             <choice/>

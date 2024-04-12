@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ndecd_triage_2_0_demande_tsa</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>calcul score TSA</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+var scoreTSA=0;
+
+ if (current.getValue("l_enfant_utilise_t_il_la_parole_comme_moyen_principal_pour_communiquer_ses_beso") == "no") {
+         scoreTSA += 7.5;
+ }
+ if (current.getValue("l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler") == "yes") {
+         scoreTSA += 0.01;
+ }
+ gs.error("111111"+scoreTSA)
+    switch (current.getValue('l_l_ve_pr_sente_un_retard_en_lecture')) {
+        case "nodifficulty": {
+            break;
+        }
+        case "slightdelay": {
+            scoreTSA += 0.0025;
+            break;
+        }
+        case "moderatedelay": {
+            scoreTSA += 0.005;
+            break;
+        }
+        case "severedelay": {
+            scoreTSA += 0.01;
+            break;
+        }
+
+    }
+	switch (current.getValue('l_l_ve_prouve_un_retard_en_criture')) {
+        case "nodifficulty": {
+            break;
+        }
+        case "slightdelay": {
+            scoreTSA += 0.0025;
+            break;
+        }
+        case "moderatedelay": {
+            scoreTSA += 0.005;
+            break;
+        }
+        case "severedelay": {
+            scoreTSA += 0.01;
+            break;
+        }
+
+    }
+	switch (current.getValue('est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture')) {
+        case "non": {
+            break;
+        }
+        case "mon-encours": {
+            break;
+        }
+        case "oui-adapte": {
+            scoreTSA += 0.005;
+            break;
+        }
+        case "oui-modifie": {
+            scoreTSA += 0.01;
+            break;
+        }
+
+    }
+  gs.error("22222"+scoreTSA)
+selectdict = {
+	//l_l_ve_prouve_t_il_des_difficult_s_li_es_explication
+	"124a840f1b45ca508d594047bc4bcbf2": 3.375,
+	"164a840f1b45ca508d594047bc4bcbf2": 3.375,
+	"924a840f1b45ca508d594047bc4bcbf1": 3.375,
+	//l_l_ve_prouve_t_il_des_difficult_s_r_guler_les_interactions_sociales_en_util
+	"622b444f1b45ca508d594047bc4bcb64": 3.375,
+	"622b444f1b45ca508d594047bc4bcb65": 1.8,
+	"662b444f1b45ca508d594047bc4bcb64": 2.25,
+	"6a2b444f1b45ca508d594047bc4bcb64": 2.25,
+	"6e2b444f1b45ca508d594047bc4bcb64": 3.375,
+	"a22b044f1b45ca508d594047bc4bcba9": 3.375,
+	//l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses
+	"418b884f1b45ca508d594047bc4bcbdb": 1.8,
+	"498b884f1b45ca508d594047bc4bcbda": 3.375,
+	"4d8b884f1b45ca508d594047bc4bcbda": 3.375,
+	"c18b884f1b45ca508d594047bc4bcbda": 3.375,
+	//l_l_ve_prouve_t_il_des_difficult_s_former_des_relations_avec_ses_pairs_du_m
+	"10dbcc4f1b45ca508d594047bc4bcb85": 3.375,
+	"1cdbcc4f1b45ca508d594047bc4bcb84": 3.375,
+	"94dbcc4f1b45ca508d594047bc4bcb84": 3.375,
+	//l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication
+	"f91d04cf1b45ca508d594047bc4bcbae": 1.5,
+	"711d04cf1b45ca508d594047bc4bcbaf": 1,
+	"751d04cf1b45ca508d594047bc4bcbaf": 1.5,
+	"791d04cf1b45ca508d594047bc4bcbaf": 0.5,
+	"7d1d04cf1b45ca508d594047bc4bcbaf": 1.5,
+	"711d04cf1b45ca508d594047bc4bcbb0": 1,
+	"751d04cf1b45ca508d594047bc4bcbb0": 0.5,
+	"791d04cf1b45ca508d594047bc4bcbb0": 0.5,
+	"7d1d04cf1b45ca508d594047bc4bcbb0": 0.5,
+	"711d04cf1b45ca508d594047bc4bcbb1": 0,
+	"751d04cf1b45ca508d594047bc4bcbb1": 0,
+	"791d04cf1b45ca508d594047bc4bcbb1": 0,
+	//les_enfants_utilisent_souvent_plus_d_un_moyen_pour_exprimer_leurs_besoins
+	"3a5e08031b85ca508d594047bc4bcb8e": 0,
+	"be5e08031b85ca508d594047bc4bcb8e": 0.375,
+	"b25e08031b85ca508d594047bc4bcb8f": 0.375,
+	"b65e08031b85ca508d594047bc4bcb8f": 0.15,
+	"ba5e08031b85ca508d594047bc4bcb8f": 0.15,
+	"be5e08031b85ca508d594047bc4bcb8f": 0.075,
+	"b25e08031b85ca508d594047bc4bcb90": 0.075,
+	"b65e08031b85ca508d594047bc4bcb90": 0.075,
+	"ba5e08031b85ca508d594047bc4bcb90": 0.075,
+	"be5e08031b85ca508d594047bc4bcb90": 0.05,
+	"b25e08031b85ca508d594047bc4bcb91": 0.025,
+	"b65e08031b85ca508d594047bc4bcb91": 0,
+	//difficult_s_au_niveau_de_la_routine_et_des_transitions
+	"f4ce8c031b85ca508d594047bc4bcbd1": 1.875,
+	"7cce8c031b85ca508d594047bc4bcbd1": 1.875,
+	"70ce8c031b85ca508d594047bc4bcbd2": 1.875,
+	"74ce8c031b85ca508d594047bc4bcbd2": 1.25,
+	//l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex
+	"c85394471b85ca508d594047bc4bcbbd": 1.8,
+	"405394471b85ca508d594047bc4bcbbe": 1.8,
+	"445394471b85ca508d594047bc4bcbbe": 1.8,
+	"485394471b85ca508d594047bc4bcbbe": 1.8,
+	"4c5394471b85ca508d594047bc4bcbbe": 0.6,
+	"405394471b85ca508d594047bc4bcbbf": 0.6,
+	"545394471b85ca508d594047bc4bcbbf": 0.6,
+	"585394471b85ca508d594047bc4bcbbf": 1.8,
+	//l_l_ve_prouve_t_il_des_difficult_s_imiter
+	"f3e310871b85ca508d594047bc4bcb79": 2.625,
+	"7be310871b85ca508d594047bc4bcb79": 2.625,
+	"7fe310871b85ca508d594047bc4bcb79": 1.75,
+	"73e310871b85ca508d594047bc4bcb7a": 1.75,
+	"77e310871b85ca508d594047bc4bcb7a": 1.75,
+	"7be310871b85ca508d594047bc4bcb7a": 0.875,
+	"7fe310871b85ca508d594047bc4bcb7a": 0.35,
+
+}
+    function scoreforselectfields(str) {
+        if (str != null) {
+            var arr = str.split(',');
+            arr.forEach((element) => scoreTSA += selectdict[element]);
+        }
+    }
+	scoreforselectfields(current.getValue("l_l_ve_prouve_t_il_des_difficult_s_li_es_explication"));
+	scoreforselectfields(current.getValue("l_l_ve_prouve_t_il_des_difficult_s_r_guler_les_interactions_sociales_en_util"));
+	scoreforselectfields(current.getValue("l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses"));
+	scoreforselectfields(current.getValue("l_l_ve_prouve_t_il_des_difficult_s_former_des_relations_avec_ses_pairs_du_m"));
+	scoreforselectfields(current.getValue("l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication"));
+	scoreforselectfields(current.getValue("les_enfants_utilisent_souvent_plus_d_un_moyen_pour_exprimer_leurs_besoins"));
+	scoreforselectfields(current.getValue("difficult_s_au_niveau_de_la_routine_et_des_transitions"));
+	scoreforselectfields(current.getValue("l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex"));
+	scoreforselectfields(current.getValue("l_l_ve_prouve_t_il_des_difficult_s_imiter"));
+
+
+//  l_l_ve_prouve_t_il_des_difficult_s_li_es_explication
+//  l_l_ve_prouve_t_il_des_difficult_s_r_guler_les_interactions_sociales_en_util
+//  l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses
+//  l_l_ve_prouve_t_il_des_difficult_s_former_des_relations_avec_ses_pairs_du_m
+//  l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication
+//  les_enfants_utilisent_souvent_plus_d_un_moyen_pour_exprimer_leurs_besoins
+//  difficult_s_au_niveau_de_la_routine_et_des_transitions
+//  l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex
+//  l_l_ve_prouve_t_il_des_difficult_s_imiter
+gs.error("333333"+scoreTSA)
+
+current.setValue("scoretsa",parseFloat(scoreTSA.toFixed(1)));
+current.update();
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-25 19:11:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4a9940af1b0d0250d991c882604bcbf6</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>calcul score TSA</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_4a9940af1b0d0250d991c882604bcbf6</sys_update_name>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-03-26 09:46:09</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=4a9940af1b0d0250d991c882604bcbf6"/>
+</record_update>
