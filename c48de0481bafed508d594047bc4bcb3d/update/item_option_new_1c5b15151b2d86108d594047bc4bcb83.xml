@@ -21,7 +21,7 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field>eleve</field>
+        <field/>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -37,17 +37,17 @@
         <lookup_value/>
         <macro/>
         <macroponent/>
-        <mandatory>true</mandatory>
-        <map_to_field>true</map_to_field>
+        <mandatory>false</mandatory>
+        <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>eleve</name>
-        <order>100</order>
+        <name>descriptiftsa</name>
+        <order>10</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Recherche d'un élève</question_text>
+        <question_text/>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -55,10 +55,13 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table>x_ndecd_triage_2_0_demande_tsa</record_producer_table>
-        <reference>x_ndecd_triage_2_0_eleve</reference>
+        <reference/>
         <reference_qual/>
         <reference_qual_condition/>
-        <rich_text/>
+        <rich_text><![CDATA[<p>La demande de service au volet TSA/Communication sociale pourrait inclure les services orthophoniques suivants:</p>
+<p>-Consultations auprès de l’équipe école et des parents pouvant inclure: une observation de l’élève, une interprétation de rapports, une demande SEP (ex. outils technologiques essentiels à la réussite de l’élève), un soutien indirect à l’équipe pédagogique, des recommandations pour appuyer le développement des habiletés langagières et de communication sociale de l’élève.</p>
+<p>-Programme : Rééducation orthophonique individualisée - Communication sociale (ROI-CS) (Élèves de la maternelle à la première année) : Suite à une priorisation systémique, un dépistage sera effectué par l’orthophoniste pour la sélection des élèves qui seront retenus pour le programme.</p>
+<p>L’élève pourrait également être éligible pour participer au programme Stimulation de la communication sociale (SCS) offert aux élèves de la maternelle et du jardin, animé par une éducatrice ressource en langage.</p>]]></rich_text>
         <roles_to_use_also_request_for/>
         <save_script><![CDATA[/** This script is executed before the Record is generated
 * `current`- GlideRecord produced by Record Producer
@@ -75,19 +78,19 @@
         <summary_macro/>
         <sys_class_name>item_option_new</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2024-03-19 03:25:32</sys_created_on>
-        <sys_id>8b77f5511b8906508d594047bc4bcb4d</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>Recherche d'un élève</sys_name>
+        <sys_created_on>2024-04-12 21:54:59</sys_created_on>
+        <sys_id>1c5b15151b2d86108d594047bc4bcb83</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>descriptiftsa</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
-        <sys_update_name>item_option_new_8b77f5511b8906508d594047bc4bcb4d</sys_update_name>
+        <sys_update_name>item_option_new_1c5b15151b2d86108d594047bc4bcb83</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-12 21:56:58</sys_updated_on>
+        <sys_updated_on>2024-04-12 21:56:43</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>8</type>
+        <type>32</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
@@ -103,22 +106,22 @@
         <visible_summary>true</visible_summary>
         <write_roles/>
     </item_option_new>
-    <sys_translated_text action="delete_multiple" query="documentkey=8b77f5511b8906508d594047bc4bcb4d"/>
-    <fx_price action="delete_multiple" query="id=8b77f5511b8906508d594047bc4bcb4d"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=1c5b15151b2d86108d594047bc4bcb83"/>
+    <fx_price action="delete_multiple" query="id=1c5b15151b2d86108d594047bc4bcb83"/>
     <fx_price action="INSERT_OR_UPDATE">
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>price_if_checked</field>
-        <id>8b77f5511b8906508d594047bc4bcb4d</id>
+        <id>1c5b15151b2d86108d594047bc4bcb83</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2024-03-19 03:25:32</sys_created_on>
-        <sys_id>4ca771911b8906508d594047bc4bcbc9</sys_id>
+        <sys_created_on>2024-04-12 21:54:59</sys_created_on>
+        <sys_id>f5bb5d151b2d86108d594047bc4bcbc0</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-19 03:25:32</sys_updated_on>
+        <sys_updated_on>2024-04-12 21:54:59</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
@@ -126,16 +129,16 @@
         <amount>0</amount>
         <currency display_value="USD">USD</currency>
         <field>rec_price_if_checked</field>
-        <id>8b77f5511b8906508d594047bc4bcb4d</id>
+        <id>1c5b15151b2d86108d594047bc4bcb83</id>
         <parent/>
         <reference_amount>0</reference_amount>
         <reference_currency display_value="USD">USD</reference_currency>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2024-03-19 03:25:32</sys_created_on>
-        <sys_id>c0a771911b8906508d594047bc4bcbc9</sys_id>
+        <sys_created_on>2024-04-12 21:54:59</sys_created_on>
+        <sys_id>fdbb5d151b2d86108d594047bc4bcbbe</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-19 03:25:32</sys_updated_on>
+        <sys_updated_on>2024-04-12 21:54:59</sys_updated_on>
         <table>item_option_new</table>
         <type>calculated</type>
     </fx_price>
