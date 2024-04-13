@@ -124,7 +124,7 @@
         <element label="Orthophonie explication autre" max_length="200" name="orthophonie_explication_autre" type="string"/>
         <element label="Par la présente demande, nous souhaitons :" max_length="4000" name="par_la_pr_sente_demande_nous_souhaitons" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHPar la présente demande, nous souhaitons" reference_qual_condition="questionSTARTSWITHPar la présente demande, nous souhaitons" type="glide_list"/>
         <element label="Par la présente demande, nous souhaitons autre" max_length="200" name="par_la_pr_sente_demande_nous_souhaitons_autre" type="string"/>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux? " mandatory="true" max_length="40" name="pdf_envoye_au_parents" type="choice">
+        <element choice="1" choice_field="yes_only" choice_table="x_ndecd_cecce_base_options" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux? " mandatory="true" max_length="40" name="pdf_envoye_au_parents" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>

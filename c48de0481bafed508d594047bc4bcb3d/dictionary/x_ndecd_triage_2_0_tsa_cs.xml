@@ -24,9 +24,9 @@
         <element label="Score de priorisation du dépistage ROI-CS" max_length="40" name="score_de_priorisation_du_d_pistage_roi_cs" type="float"/>
         <element choice="1" choice_field="status_de_la_demande_tsacs" choice_table="x_ndecd_cecce_base_options" label="Statut de la demande TSA/CS" max_length="40" name="statut_de_la_demande_tsa_cs" type="choice">
             <choice>
-                <element inactive_on_update="false" label="En consultation" sequence="0" value="enconsultation"/>
-                <element inactive_on_update="false" label="Fermée" sequence="1" value="fermee"/>
-                <element inactive_on_update="false" label="Non déléguée" sequence="2" value="nondeleguee"/>
+                <element inactive="true" inactive_on_update="true" label="En consultation" sequence="0" value="enconsultation"/>
+                <element inactive_on_update="false" label="Fermée" sequence="0" value="fermee"/>
+                <element inactive="true" inactive_on_update="true" label="Non déléguée" sequence="1" value="nondeleguee"/>
             </choice>
         </element>
     </element>
