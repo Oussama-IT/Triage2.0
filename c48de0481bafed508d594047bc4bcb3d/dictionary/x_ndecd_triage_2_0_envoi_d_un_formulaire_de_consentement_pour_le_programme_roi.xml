@@ -28,11 +28,11 @@
         </element>
         <element choice="1" label="Cote de priorisation de base" max_length="200" name="c_te_de_priorisation_de_base" type="float">
             <choice>
-                <element inactive_on_update="false" label="1" value="1"/>
-                <element inactive_on_update="false" label="2" value="2"/>
-                <element inactive_on_update="false" label="3" value="3"/>
-                <element inactive_on_update="false" label="4" value="4"/>
-                <element inactive_on_update="false" label="5" value="5"/>
+                <element inactive_on_update="false" label="1:  N’a jamais reçu le programme ROI par le passé; ne recevra pas SLI prochainement (jardin et première)" value="1"/>
+                <element inactive_on_update="false" label="2: N’a jamais reçu le programme ROI`; recevra SLI prochainement ou l'a reçu l'an dernier" value="2"/>
+                <element inactive_on_update="false" label="3:  A reçu le programme ROI ou SOI-TSA par le passé; n'a pas reçu SLI par le passé et ne le recevra pas prochainement (jardin et première)" value="3"/>
+                <element inactive_on_update="false" label="4: A déjà reçu le programme ROI ou SOI-TSA par le passé et qui recevra le programme SLI prochainement ou l'a reçu l'an dernier" value="4"/>
+                <element inactive_on_update="false" label="5: Non-admissible" value="5"/>
             </choice>
         </element>
         <element label="Date du courriel" max_length="40" name="date_du_courriel" type="glide_date"/>
