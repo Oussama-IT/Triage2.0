@@ -103,6 +103,18 @@
 		"var51":"autres_commentaires",
 
 	}
+
+	fields_html={
+
+		
+		"autre_situation_explication":'<div><span style="font-size: 10pt;">Autre situation:<strong>var71</strong></span></div>',
+		"pr_cisez_le_nombre_d_ann_es_depuis_son_arriv_e_au_canada":'<div><span style="font-size: 10pt;">Précisez le nombre d’années depuis son arrivée au Canada:<strong>var29</strong></span></div>',
+		"lequel_s_programmes":'<div><span style="font-size: 10pt;">Lequel(s)?:<strong>var32</strong></span></div>',
+		"pr_cise_dignostic":'<div><span style="font-size: 10pt;">Précisez:<strong>var46</strong></span></div>',
+		"autres_commentaires":'<div><span style="font-size: 10pt;">Autres commentaires :<strong>var51</strong></span></div>'
+
+
+	}
 	if (current.getDisplayValue('quelles_langues_sont_parl_es_la_maison').indexOf("Autre") == -1) {
             newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Autres langues:<strong>var23</strong></span></div>', "");
         }
@@ -130,7 +142,9 @@
 		newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Veuillez préciser pourquoi:<strong>var50</strong></span></div>',"");
 	}
 
-
+    for (const property in fields_html) {
+		newHtml = newHtml.replace(fields_html[property], current.getDisplayValue(property)?fields_html[property]:"");
+    }
 	
 	for (const property in record_fields) {
 
@@ -175,7 +189,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>627d883c1b104610d991c882604bcbee</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name>SLI-ROI PDF</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -183,7 +197,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_627d883c1b104610d991c882604bcbee</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-14 16:41:22</sys_updated_on>
+        <sys_updated_on>2024-04-15 11:20:34</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

@@ -2,6 +2,16 @@
     <element audit="true" db_object_id="a51bb6881b2cc2508d594047bc4bcb5b" extends="task" label=" demandes/priorisation SLI" max_length="40" name="x_ndecd_triage_2_0_demandes_priorisation_sli" text_index="true" type="collection">
         <element label="Autre situation explication" max_length="200" name="autre_situation_explication" type="string"/>
         <element label="Classe" max_length="32" name="classe" reference="x_ndecd_triage_2_0_classe" type="reference"/>
+        <element choice="1" label="Cote de priorisation de base SLI" mandatory="true" max_length="40" name="cote_de_priorisation" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="1. Élève admissible de première année n'ayant pas reçu le programme SLI dans le passé" value="1"/>
+                <element inactive_on_update="false" label="2. Élève admissible du jardin n'ayant pas reçu le programme SLI dans le passé." value="2"/>
+                <element inactive_on_update="false" label="3. Élève de première année dont le statut est à risque" value="3"/>
+                <element inactive_on_update="false" label="4. Élève de jardin dont le statut est à risque" value="4"/>
+                <element inactive_on_update="false" label="5. Élève de première année admissible ayant déjà reçu le programme SLI" value="5"/>
+                <element inactive_on_update="false" label="6. Élève du jardin admissible ayant déjà reçu le programme SLI." value="6"/>
+            </choice>
+        </element>
         <element label="Demandesliroi" max_length="4000" name="demandesliroi" reference="x_ndecd_cecce_base_sli_roi_qa" type="glide_list"/>
         <element choice="1" label="Dépistage SLI requis" max_length="40" name="d_pistage_sli_requis" type="choice">
             <choice>
