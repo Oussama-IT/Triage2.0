@@ -13,7 +13,9 @@
         <element label="Nom orthophoniste consultation TSA/CS" max_length="32" name="nom_orthophoniste_consultation_tsa_cs" reference="sys_user" type="reference"/>
         <element label="Nom orthophoniste dépistage ROI-CS" max_length="32" name="nom_orthophoniste_d_pistage_roi_cs" reference="sys_user" type="reference"/>
         <element label="Nom orthophoniste suivi ROI-CS" max_length="32" name="nom_orthophoniste_suivi_roi_cs" reference="sys_user" type="reference"/>
-        <element label="Programme ROI-CS si suivi" max_length="200" name="programme_roi_cs_si_suivi" type="string"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Programme ROI-CS si suivi" max_length="200" name="programme_roi_cs_si_suivi" type="choice">
+            <choice/>
+        </element>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Programme SCS si suivi" max_length="200" name="programme_scs_si_suivi" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>
