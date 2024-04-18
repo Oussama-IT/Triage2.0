@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="e70cf46b1be365108d594047bc4bcb10" extends="task" label="Tâche" max_length="40" name="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi" text_index="true" type="collection">
+        <element label="approver" max_length="32" name="approver" reference="sys_user" type="reference"/>
         <element label="Autre e-mail" max_length="255" name="autre_e_mail" type="email"/>
         <element label="Autre situation" max_length="400" name="autre_situation" type="string"/>
         <element choice="1" label="classe choisie" max_length="40" name="classe_choisie" type="choice">
@@ -46,7 +47,7 @@
                 <element inactive_on_update="false" label="Sévère" sequence="5" value="severe"/>
             </choice>
         </element>
-        <element choice="1" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="Degré de sévérité langage réceptif" max_length="200" name="degr_de_s_v_rit_langage_r_ceptif" type="choice">
+        <element choice="3" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="Degré de sévérité langage réceptif" max_length="200" name="degr_de_s_v_rit_langage_r_ceptif" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Adéquat" sequence="0" value="adequat"/>
                 <element inactive_on_update="false" label="Léger" sequence="1" value="leger"/>
@@ -116,6 +117,12 @@
                 <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
             </choice>
         </element>
+        <element choice="3" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="LD" max_length="40" name="ld" type="choice">
+            <choice/>
+        </element>
+        <element choice="3" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="LE" max_length="40" name="le" type="choice">
+            <choice/>
+        </element>
         <element choice="1" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_a_t_il_t_envoy_aux_parents_tuteurs_l_gaux" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
@@ -129,6 +136,9 @@
             </choice>
         </element>
         <element label="Pièces jointes" max_length="200" name="linkattachment" type="string"/>
+        <element choice="3" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="LR" max_length="40" name="lr" type="choice">
+            <choice/>
+        </element>
         <element choice="3" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Nom du demandeur" max_length="40" name="nom_du_demandeur" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>
@@ -137,9 +147,12 @@
         </element>
         <element label="Nom orthophoniste intervention" max_length="32" name="nom_orthophoniste_intervention" reference="sys_user" type="reference"/>
         <element label="Nom orthophoniste évaluation" max_length="32" name="orthophoniste_d_evaluation" reference="sys_user" type="reference"/>
+        <element label="Ortho Éval" max_length="32" name="ortho_eval" reference="sys_user" type="reference"/>
+        <element label="Ortho Int" max_length="32" name="ortho_int" reference="sys_user" type="reference"/>
         <element label="Particularités" max_length="200" name="particularit_s" type="string"/>
         <element label="Par l’éducatrice ressource langage" max_length="32" name="par_l_ducatrice_ressource_langage" type="string"/>
         <element label="Par l’orthophoniste" max_length="32" name="par_l_orthophoniste" type="string"/>
+        <element label="PRIO" max_length="40" name="prio" type="float"/>
         <element label="Raison" max_length="250" name="raison" type="string"/>
         <element choice="1" label="Raison de soumission du formulaire" max_length="250" name="raison_de_soumissions_de_formulaire" type="choice">
             <choice>

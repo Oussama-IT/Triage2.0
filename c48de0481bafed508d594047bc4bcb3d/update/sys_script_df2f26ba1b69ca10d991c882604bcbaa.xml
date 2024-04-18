@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">evaluation_sommaire_requise=donnees-suffisantes^EQ<item display_value="Évaluation sommaire ROI requise (données insuffisantes)" endquery="false" field="evaluation_sommaire_requise" goto="false" newquery="false" operator="=" or="false" value="donnees-suffisantes"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>PDF formulaire consentement eval requise</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var html;
+    var newHtml;
+    var gr = new GlideRecord('x_ndecd_triage_2_0_pdftemplate');
+    gr.addQuery('template_name', 'PDFcon-eva-req');
+    gr.query();
+    while (gr.next()) {
+        html = gr.html_template;
+    }
+    var hfInfo = new Object();
+    hfInfo["HeaderImageAttachmentId"] = "fe71ca801b04b910d991c882604bcb30";
+    hfInfo["HeaderImageAlignment"] = "left";
+    hfInfo["FooterImageAttachmentId"] = "f69aa9661bf7a5108d594047bc4bcb1c";
+    hfInfo["FooterImageAlignment"] = "TOP_CENTER";
+    hfInfo["PageSize"] = "A4";
+    hfInfo["GeneratePageNumber"] = "false";
+    hfInfo["TopOrBottomMargin"] = "50";
+    hfInfo["LeftOrRightMargin"] = "24";
+    // Add your code here
+    var targetTableSysId = current.sys_id;
+    var tableName = 'x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi';
+    var pdfName = "Consentement ROI " + current.getDisplayValue('eleve');
+
+    //information eleve
+	newHtml = html.replace("var1", current.getDisplayValue('eleve'));
+	var gselve = new GlideRecord('x_ndecd_triage_2_0_eleve');
+    gselve.get(current.getValue("eleve"));
+    newHtml = newHtml.replace("var2", gselve.getDisplayValue('u_classe'));
+    newHtml = newHtml.replace("var3", gselve.getDisplayValue('u_nom_de_l_cole'));
+    newHtml = newHtml.replace("var4", gselve.u_niso);
+    newHtml = newHtml.replace("var5", gselve.u_date_de_naissance);
+    // for (const property in non_record_fields) {
+	// 	newHtml = newHtml.replace(property, current.getDisplayValue(non_record_fields[property])?"Oui":"Non");
+    // }
+
+	// for (const property in fields_html) {
+	// 	newHtml = newHtml.replace(fields_html[property], current.getDisplayValue(property)?fields_html[property]:"");
+    // }
+	
+	// for (const property in record_fields) {
+
+	// 	newHtml = newHtml.replace(property, current.getDisplayValue(record_fields[property])?current.getDisplayValue(record_fields[property]):"Sans objet");
+    // }
+
+
+
+	 //information opened by
+	 newHtml = newHtml.replace("var60", current.getDisplayValue('opened_by'));
+     newHtml = newHtml.replace("var62", current.getDisplayValue('opened_by'));
+     newHtml = newHtml.replace("var63", current.getDisplayValue('sys_created_on'));
+
+//////
+
+		//information direction
+	var dir = current.parent.number;
+    var gsdirect = new GlideRecord('sysapproval_approver');
+    gsdirect.addEncodedQuery('sysapproval.number=' + dir+'^state=approved');
+    gsdirect.query();
+    if (gsdirect.next()) {
+        newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
+        newHtml = newHtml.replace("var91", gsdirect.getDisplayValue('approver'));
+    newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
+	}
+	else{
+		newHtml = newHtml.replace('<table style="border-collapse: collapse; width: 100.104%; height: 37.325px;" border="0"><tbody><tr style="height: 18.6625px;"><td style="width: 50.0417%; height: 18.6625px;"><span style="font-size: 10pt;">Nom de la direction : <strong>var90</strong></span></td><td style="width: 50.0417%; height: 18.6625px;"><span style="font-size: 10pt;">Date :<strong>var92</strong></span></td></tr><tr style="height: 18.6625px;"><td style="width: 50.0417%; height: 18.6625px;"><span style="font-size: 10pt;">Signature de la direction : <strong>var91</strong></span></td><td style="width: 50.0417%; height: 18.6625px;">&nbsp;</td></tr></tbody></table>', '');
+	}
+    
+
+   
+	// var approver =  new GlideRecord('sys_user');
+	// approver.addEncodedQuery('name='+gsdirect.getDisplayValue('approver'));
+	// approver.query();
+	// if(approver.next()){
+	// newHtml = newHtml.replace("var61", approver.getDisplayValue('title'));
+	// }
+	var user =  new GlideRecord('sys_user');
+	user.addEncodedQuery('name='+current.getDisplayValue('opened_by'));
+	user.query();
+	if(user.next()){
+	newHtml = newHtml.replace("var61", user.getDisplayValue('title'));
+	}
+    var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
+    var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
+    //current.linkattachment = result.attachment_id;
+    current.update();
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-04-17 19:57:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>df2f26ba1b69ca10d991c882604bcbaa</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>PDF formulaire consentement eval requise</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_df2f26ba1b69ca10d991c882604bcbaa</sys_update_name>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-04-18 18:37:32</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=df2f26ba1b69ca10d991c882604bcbaa"/>
+</record_update>
