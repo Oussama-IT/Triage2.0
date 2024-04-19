@@ -3,7 +3,7 @@
         <abort_action>false</abort_action>
         <access>package_private</access>
         <action_delete>false</action_delete>
-        <action_insert>false</action_insert>
+        <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>false</action_update>
         <active>true</active>
@@ -15,7 +15,10 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition/>
+        <filter_condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">soumis_par=eq-orth^evaluation_sommaire_requise=donnees-suffisantes^EQ<item display_value="équipe-ortophonistes" endquery="false" field="soumis_par" goto="false" newquery="false" operator="=" or="false" value="eq-orth"/>
+            <item display_value="Évaluation sommaire ROI requise (données insuffisantes)" endquery="false" field="evaluation_sommaire_requise" goto="false" newquery="false" operator="=" or="false" value="donnees-suffisantes"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
         <is_rest>false</is_rest>
         <message/>
         <name>PDF formul orth consentement eva req</name>
@@ -51,13 +54,13 @@
     var pdfName = "Consentement ROI " + current.getDisplayValue('eleve');
 
     //information eleve
-		newHtml = html.replace("var1", current.getDisplayValue('eleve'));
+	newHtml = html.replace("var1", current.getDisplayValue('eleve'));
 	var gselve = new GlideRecord('x_ndecd_triage_2_0_eleve');
     gselve.get(current.getValue("eleve"));
-    newHtml = newHtml.replace("var2", gselve.getDisplayValue('u_classe'));
-    newHtml = newHtml.replace("var3", gselve.getDisplayValue('u_nom_de_l_cole'));
-    newHtml = newHtml.replace("var4", gselve.u_niso);
-    newHtml = newHtml.replace("var5", gselve.u_date_de_naissance);
+    newHtml = newHtml.replace("var2",gselve.u_date_de_naissance );
+    newHtml = newHtml.replace("var3",gselve.u_niso );
+    newHtml = newHtml.replace("var4", gselve.getDisplayValue('u_nom_de_l_cole'));
+    newHtml = newHtml.replace("var5",  gselve.getDisplayValue('u_classe'));
 
 
 	//information opened by
@@ -84,7 +87,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4c93370b1b6d0e10d991c882604bcbb3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>PDF formul orth consentement eva req</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -92,9 +95,9 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_4c93370b1b6d0e10d991c882604bcbb3</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-18 19:37:06</sys_updated_on>
+        <sys_updated_on>2024-04-18 20:40:20</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=4c93370b1b6d0e10d991c882604bcbb3"/>
 </record_update>

@@ -2,8 +2,9 @@
     <sys_ux_list action="INSERT_OR_UPDATE">
         <active>true</active>
         <category display_value="liste de priorisation ROI-CS">a12526441b5102908d594047bc4bcb97</category>
-        <columns>number,priority,parent,ann_e_de_la_demande,state,assigned_to,short_description,sys_class_name,score_roi_cs,scoretsa,</columns>
-        <condition/>
+        <columns>number,priority,parent,ann_e_de_la_demande,state,assigned_to,short_description,sys_class_name,score_roi_cs,scoretsa</columns>
+        <condition table="x_ndecd_triage_2_0_roi_cs">nom_orthophoniste_d_pistage_roi_csISEMPTY<item endquery="false" field="nom_orthophoniste_d_pistage_roi_cs" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+        </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
         <groups/>
@@ -60,17 +61,17 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7209978b1be90e10d991c882604bcbfb</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Non assignées</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Non assignées (depistage)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_7209978b1be90e10d991c882604bcbfb</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-18 17:40:13</sys_updated_on>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-04-19 13:28:41</sys_updated_on>
         <table>x_ndecd_triage_2_0_roi_cs</table>
-        <title>Non assignées</title>
+        <title>Non assignées (depistage)</title>
         <view/>
         <word_wrap>false</word_wrap>
     </sys_ux_list>
