@@ -2,7 +2,7 @@
     <sys_ux_list action="INSERT_OR_UPDATE">
         <active>true</active>
         <category display_value="liste de priorisation SCS">b8652ec01b5102908d594047bc4bcb90</category>
-        <columns>number,eleve.u_nom_de_l_cole,eleve,scorescs,ann_e_de_la_demande,statut_de_la_demande_scs,date_de_l_obtention_du_consentement_parental,eleve.u_classe,est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte,programme_scs_si_suivi,nom_ducatrice_scs,bloc_suivi</columns>
+        <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,scorescs,ann_e_de_la_demande,statut_de_la_demande_scs,date_de_l_obtention_du_consentement_parental,est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte,programme_scs_si_suivi,nom_ducatrice_scs,bloc_suivi</columns>
         <condition table="x_ndecd_triage_2_0_scs">ORDERBYann_e_de_la_demande<item endquery="false" field="" goto="false" newquery="false" operator="ORDERBY" or="false" value="ann_e_de_la_demande"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
@@ -61,15 +61,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>05d666c41b5102908d594047bc4bcb80</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>All</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_05d666c41b5102908d594047bc4bcb80</sys_update_name>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-16 13:41:02</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-04-19 19:42:14</sys_updated_on>
         <table>x_ndecd_triage_2_0_scs</table>
         <title>All</title>
         <view/>
