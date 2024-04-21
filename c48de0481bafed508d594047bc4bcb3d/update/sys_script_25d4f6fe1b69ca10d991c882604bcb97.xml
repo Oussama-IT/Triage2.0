@@ -65,19 +65,22 @@
 	record_fields={
 		"var6":"est_ce_que_l_l_ve_a_un_diagnostic",
 		"var7":"situation_familiale",
-		"var8":"autre_situation",
 	}
 	
 	for (const property in record_fields) {
 
 		newHtml = newHtml.replace(property, current.getDisplayValue(record_fields[property])?current.getDisplayValue(record_fields[property]):"Sans objet");
     }
-	fields_html={         
-		"autre_situation":'<p style="line-height: 1.8; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-family: Calibri, sans-serif; color: #000000; background-color: #ffffff; white-space-collapse: preserve;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif; color: #000000; background-color: #ffffff; white-space-collapse: preserve;">Autre situation familiale</span><strong><span style="font-size: 11pt; font-family: arial, helvetica, sans-serif; color: #000000; background-color: #ffffff; white-space-collapse: preserve;">: <span style="font-size: 10pt;">var8</span></span></strong></span></p>'
-	}
-	for (const property in fields_html) {
-		newHtml = newHtml.replace(fields_html[property], current.getDisplayValue(property)?fields_html[property]:"");
-    }
+	// fields_html={         
+	// 	"autre_situation":'<p style="line-height: 1.8; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif; color: #000000; background-color: #ffffff; white-space-collapse: preserve;">Situation familiale de l’élève: <strong>var7</strong></span></p>'
+	// }
+
+	newHtml = newHtml.replace("Autre situation familiale:", current.getDisplayValue("autre_situation")?"Autre situation familiale:":"");
+	newHtml = newHtml.replace("var8", current.getDisplayValue("autre_situation")?current.getDisplayValue("autre_situation"):"");
+	
+	// for (const property in fields_html) {
+	// 	newHtml = newHtml.replace(fields_html[property], current.getDisplayValue(property)?fields_html[property]:"");
+    // }
     // for (const property in non_record_fields) {
 	// 	newHtml = newHtml.replace(property, current.getDisplayValue(non_record_fields[property])?"Oui":"Non");
     // }
@@ -130,7 +133,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>25d4f6fe1b69ca10d991c882604bcb97</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>PDF formul orth consentement eva non req</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -138,7 +141,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_25d4f6fe1b69ca10d991c882604bcb97</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-20 01:17:31</sys_updated_on>
+        <sys_updated_on>2024-04-20 02:44:58</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

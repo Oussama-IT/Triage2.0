@@ -54,11 +54,8 @@
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
             </choice>
         </element>
-        <element choice="1" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
+            <choice/>
         </element>
         <element label="Est-ce que l’élève présente un diagnostic médical officiel d’un TSA? explication" max_length="4000" name="est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel_d_un_tsa_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdiagnostic médical officiel d’un TSA" reference_qual_condition="questionSTARTSWITHdiagnostic médical officiel d’un TSA" type="glide_list"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce qu’un placement est envisagé pour l’élève?" max_length="40" name="est_ce_qu_un_placement_est_envisag_pour_l_l_ve" type="choice">

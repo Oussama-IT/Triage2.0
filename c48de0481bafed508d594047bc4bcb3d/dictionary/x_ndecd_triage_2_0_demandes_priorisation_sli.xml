@@ -49,7 +49,9 @@
         <element label="Particularités " max_length="200" name="particularit_s" type="string"/>
         <element label="Score de priorisation ROI" max_length="200" name="scorepriorisationroi" type="string"/>
         <element label="Score de priorisation SLI" max_length="200" name="score_de_priorisation" type="string"/>
-        <element label="Situation familiale de l’élève" max_length="200" name="situation_familiale_de_l_l_ve" type="string"/>
+        <element choice="1" choice_field="student_s_family_situation" choice_table="x_ndecd_cecce_base_options" label="Situation familiale de l’élève" max_length="4000" name="situation_familiale_de_l_l_ve" type="choice">
+            <choice/>
+        </element>
         <element choice="1" choice_field="x_ndecd_triage_2_0_soumis_par" choice_table="x_ndecd_cecce_base_options" label="Soumis par" max_length="200" name="soumis_par" type="choice">
             <choice/>
         </element>

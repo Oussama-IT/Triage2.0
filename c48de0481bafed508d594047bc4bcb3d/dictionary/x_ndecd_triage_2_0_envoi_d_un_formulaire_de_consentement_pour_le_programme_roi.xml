@@ -62,12 +62,8 @@
             <choice/>
         </element>
         <element label="Eleve" mandatory="true" max_length="32" name="eleve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
-        <element choice="1" label="Diagnostique" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="TSA" sequence="0" value="TSA"/>
-                <element inactive_on_update="false" label="HD/DIL" sequence="1" value="HD/DIL"/>
-                <element inactive_on_update="false" label="Aucun diagnostic ou autre diagnostic" sequence="2" value="aucun"/>
-            </choice>
+        <element choice="1" choice_field="diagnostic" choice_table="x_ndecd_cecce_base_options" label="Diagnostique" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">
+            <choice/>
         </element>
         <element choice="1" choice_field="valuation_sommaire_roi_requise_suffisantes" choice_table="x_ndecd_cecce_base_options" label="Évaluation sommaire requise" max_length="40" name="evaluation_sommaire_requise" type="choice">
             <choice>
@@ -164,7 +160,7 @@
             <choice/>
         </element>
         <element label="Score ROI" max_length="40" name="score_roi" type="float"/>
-        <element choice="1" label="Situation familiale" max_length="200" name="situation_familiale" type="choice">
+        <element choice="1" label="Situation familiale" max_length="2000" name="situation_familiale" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Autre situation" value="autre situation"/>
                 <element dependent_value="fait l’objet d’une garde exclusive avec sa mère" inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec sa mère" value="fait l’objet d’une garde exclusive avec sa mère"/>
