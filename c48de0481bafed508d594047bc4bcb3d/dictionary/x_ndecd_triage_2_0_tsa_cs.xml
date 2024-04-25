@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="175bd5401b9d8250d991c882604bcb2f" extends="x_ndecd_triage_2_0_demande_tsa" label="TSA/CS" max_length="40" name="x_ndecd_triage_2_0_tsa_cs" text_index="true" type="collection">
         <element label="Année de la demande" max_length="200" name="ann_e_de_la_demande" type="string"/>
+        <element label="Année de la demande int" max_length="40" name="ann_e_de_la_demande_int" type="integer"/>
         <element choice="1" choice_field="bloc_scs" choice_table="x_ndecd_cecce_base_options" label="Bloc suivi" max_length="200" name="bloc_suivi" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Bloc SCS 1" sequence="0" value="b1"/>
@@ -9,6 +10,7 @@
                 <element inactive_on_update="false" label="Bloc SCS 4" sequence="3" value="b4"/>
             </choice>
         </element>
+        <element label="Etat annee" max_length="40" name="etat_annee" type="integer"/>
         <element label="Nom éducatrice SCS" max_length="32" name="nom_ducatrice_scs" reference="sys_user" type="reference"/>
         <element label="Nom orthophoniste consultation TSA/CS" max_length="32" name="nom_orthophoniste_consultation_tsa_cs" reference="sys_user" type="reference"/>
         <element label="Nom orthophoniste dépistage ROI-CS" max_length="32" name="nom_orthophoniste_d_pistage_roi_cs" reference="sys_user" type="reference"/>

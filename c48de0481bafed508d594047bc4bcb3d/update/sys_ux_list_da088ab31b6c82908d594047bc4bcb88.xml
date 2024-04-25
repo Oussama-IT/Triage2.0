@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_list">
     <sys_ux_list action="INSERT_OR_UPDATE">
         <active>true</active>
-        <category display_value="Demandes/priorisation SLI">ce7304141b6006508d594047bc4bcb0c</category>
-        <columns>number,nom_de_l_l_ve.u_nom_de_l_cole,nom_de_l_l_ve,nom_de_l_l_ve.u_classe,langue_dominante,opened_by,suivis_anterieurs,d_pistage_sli_requis_ou_non,cote_de_priorisation,score_de_priorisation,statut_sli,statut_sli_si_admissible,nom_ducatrice_d_pistage,nom_ducatrice_programme_sli,particularit_s</columns>
-        <condition table="x_ndecd_triage_2_0_demandes_priorisation_sli">stateIN3,4,7<item display_value="3,4,7" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="3,4,7"/>
+        <category display_value="SLI - Demandes/Priorisation(en cours)">ce7304141b6006508d594047bc4bcb0c</category>
+        <columns>number,nom_de_l_l_ve.u_nom_de_l_cole,nom_de_l_l_ve,nom_de_l_l_ve.u_classe,score_de_priorisation,langue_dominante,opened_by,suivis_anterieurs,d_pistage_sli_requis_ou_non,cote_de_priorisation,statut_sli,statut_sli_si_admissible,nom_ducatrice_d_pistage,nom_ducatrice_programme_sli,particularit_s</columns>
+        <condition table="x_ndecd_triage_2_0_demandes_priorisation_sli">stateIN3,4,7^etat_annee=1^ORetat_annee=3^ORetat_annee=4<item display_value="3,4,7" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="3,4,7"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="3"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="4"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
@@ -61,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>da088ab31b6c82908d594047bc4bcb88</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Closed</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -69,7 +72,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_da088ab31b6c82908d594047bc4bcb88</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-15 22:53:31</sys_updated_on>
+        <sys_updated_on>2024-04-25 14:03:01</sys_updated_on>
         <table>x_ndecd_triage_2_0_demandes_priorisation_sli</table>
         <title>Closed</title>
         <view/>

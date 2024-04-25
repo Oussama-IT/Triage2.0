@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_list">
     <sys_ux_list action="INSERT_OR_UPDATE">
         <active>true</active>
-        <category display_value="liste de priorisation SCS">b8652ec01b5102908d594047bc4bcb90</category>
+        <category display_value="SCS - Liste de priorisation(en cours)">b8652ec01b5102908d594047bc4bcb90</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,scorescs,ann_e_de_la_demande,statut_de_la_demande_scs,date_de_l_obtention_du_consentement_parental,est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte,programme_scs_si_suivi,nom_ducatrice_scs,bloc_suivi</columns>
-        <condition table="x_ndecd_triage_2_0_scs">nom_ducatrice_scsDYNAMIC90d1921e5f510100a9ad2572f2b477fe<item endquery="false" field="nom_ducatrice_scs" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+        <condition table="x_ndecd_triage_2_0_scs">nom_ducatrice_scsDYNAMIC90d1921e5f510100a9ad2572f2b477fe^etat_annee=1^ORetat_annee=3^ORetat_annee=4<item endquery="false" field="nom_ducatrice_scs" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="3"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="4"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
@@ -52,7 +55,7 @@
         <highlight_content_pattern/>
         <list_attributes/>
         <max_characters>4000</max_characters>
-        <order>300</order>
+        <order>400</order>
         <override_word_wrap_user_pref>false</override_word_wrap_user_pref>
         <roles/>
         <sys_class_name>sys_ux_list</sys_class_name>
@@ -61,15 +64,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cd7e7e861bd58a50d991c882604bcb91</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Assigné à moi (suivi)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_cd7e7e861bd58a50d991c882604bcb91</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-19 19:46:21</sys_updated_on>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-04-25 14:23:52</sys_updated_on>
         <table>x_ndecd_triage_2_0_scs</table>
         <title>Assigné à moi (suivi)</title>
         <view/>

@@ -32,7 +32,7 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 var roi =current //new GlideRecord('x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi');
-roi.setValue("score_roi",Number(roi.getValue("score_roi"))+(roi.getValue("score_roi")*roi.getValue("c_te_de_priorisation_de_base")))
+roi.setValue("score_roi",Number(roi.getValue("score_roi"))+(5*roi.getValue("c_te_de_priorisation_de_base")))
 
 roi.update()
 })(current, previous);]]></script>
@@ -42,7 +42,7 @@ roi.update()
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5961a22d1bb446108d594047bc4bcbd0</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Calcul score roi apres ponderation base</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -50,7 +50,7 @@ roi.update()
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_5961a22d1bb446108d594047bc4bcbd0</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-07 20:37:40</sys_updated_on>
+        <sys_updated_on>2024-04-22 14:56:56</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

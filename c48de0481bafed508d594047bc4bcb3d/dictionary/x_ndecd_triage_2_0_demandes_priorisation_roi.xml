@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="cac4ddb81ba486508d594047bc4bcbec" extends="task" label="demandes/priorisation ROI" max_length="40" name="x_ndecd_triage_2_0_demandes_priorisation_roi" text_index="true" type="collection">
+        <element label="année de la demande int " max_length="40" name="ann_e_de_la_demande_int" type="integer"/>
         <element choice="1" choice_field="consentement_parental" choice_table="x_ndecd_cecce_base_options" label="Consentement parental" max_length="40" name="consentement_parental" type="choice">
             <choice/>
         </element>
+        <element label="etat annee" max_length="40" name="etat_annee" type="integer"/>
         <element choice="3" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langue dominante" max_length="40" name="langue_dominante" type="choice">
             <choice/>
         </element>

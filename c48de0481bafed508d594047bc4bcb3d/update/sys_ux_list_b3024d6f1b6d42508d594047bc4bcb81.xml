@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_list">
     <sys_ux_list action="INSERT_OR_UPDATE">
         <active>true</active>
-        <category display_value="liste de priorisation SCS">b8652ec01b5102908d594047bc4bcb90</category>
+        <category display_value="SCS - Liste de priorisation(en cours)">b8652ec01b5102908d594047bc4bcb90</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,scorescs,ann_e_de_la_demande,statut_de_la_demande_scs,date_de_l_obtention_du_consentement_parental,est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte,programme_scs_si_suivi,nom_ducatrice_scs,bloc_suivi</columns>
-        <condition table="x_ndecd_triage_2_0_scs">^ORDERBYann_e_de_la_demande<item endquery="false" field="" goto="false" newquery="false" operator="ORDERBY" or="false" value="ann_e_de_la_demande"/>
+        <condition table="x_ndecd_triage_2_0_scs">nom_ducatrice_scsISEMPTY^etat_annee=1^ORetat_annee=3^ORetat_annee=4^ORDERBYann_e_de_la_demande<item endquery="false" field="nom_ducatrice_scs" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="3"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="4"/>
+            <item endquery="false" field="" goto="false" newquery="false" operator="ORDERBY" or="false" value="ann_e_de_la_demande"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
@@ -61,15 +65,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b3024d6f1b6d42508d594047bc4bcb81</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Unassigned</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_b3024d6f1b6d42508d594047bc4bcb81</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-19 19:49:27</sys_updated_on>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-04-25 14:23:29</sys_updated_on>
         <table>x_ndecd_triage_2_0_scs</table>
         <title>Unassigned</title>
         <view/>

@@ -9,6 +9,7 @@
                 <element inactive_on_update="false" label="Bloc SCS 4" sequence="3" value="b4"/>
             </choice>
         </element>
+        <element label="etat annee" max_length="40" name="etat_annee" type="integer"/>
         <element label="Nom éducatrice SCS" max_length="32" name="nom_ducatrice_scs" reference="sys_user" type="reference"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Programme SCS si suivi" max_length="200" name="programme_scs_si_suivi" type="choice">
             <choice>

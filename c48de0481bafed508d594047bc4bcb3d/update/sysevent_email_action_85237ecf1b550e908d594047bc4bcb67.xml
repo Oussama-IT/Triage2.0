@@ -7,9 +7,9 @@
         <affected_field_on_event/>
         <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
         <collection>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</collection>
-        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">nom_orthophoniste_interventionVALCHANGES^nom_orthophoniste_interventionISNOTEMPTY^evaluation_sommaire_requise=donnees-insuffisantes^EQ<item endquery="false" field="nom_orthophoniste_intervention" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
-            <item endquery="false" field="nom_orthophoniste_intervention" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">nom_orthophoniste_interventionISNOTEMPTY^evaluation_sommaire_requise=donnees-insuffisantes^sendable_1er_jan_1er_maiCHANGESTOyes^EQ<item endquery="false" field="nom_orthophoniste_intervention" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
             <item display_value="Données suffisantes au dossier pour confirmer l’admissibilité à ROI" endquery="false" field="evaluation_sommaire_requise" goto="false" newquery="false" operator="=" or="false" value="donnees-insuffisantes"/>
+            <item display_value="Yes" endquery="false" field="sendable_1er_jan_1er_mai" goto="false" newquery="false" operator="CHANGESTO" or="false" value="yes"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <content_type>text/html</content_type>
@@ -47,7 +47,7 @@
 <p>Merci.</p>]]></message_html>
         <message_list/>
         <message_text/>
-        <name>Notification à la direction d'école d'une nouvelle assignation d'orthophoniste 20c</name>
+        <name>(differe)Notification à la direction d'école d'une nouvelle assignation d'orthophoniste 20c</name>
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
@@ -58,7 +58,7 @@
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>Demande ROI N° ${number} (email SLI-ROI N 20c)</subject>
+        <subject>Demande ROI N° ${number} (email SLI-ROI N 20c)(diff)</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
@@ -66,15 +66,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>85237ecf1b550e908d594047bc4bcb67</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Notification à la direction d'école d'une nouvelle assignation d'orthophoniste 20c</sys_name>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>(differe)Notification à la direction d'école d'une nouvelle assignation d'orthophoniste 20c</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_85237ecf1b550e908d594047bc4bcb67</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-06 04:49:29</sys_updated_on>
+        <sys_updated_on>2024-04-23 13:10:15</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

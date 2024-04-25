@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="a51bb6881b2cc2508d594047bc4bcb5b" extends="task" label=" demandes/priorisation SLI" max_length="40" name="x_ndecd_triage_2_0_demandes_priorisation_sli" text_index="true" type="collection">
+        <element label="année de la demande int " max_length="40" name="ann_e_de_la_demande_int" type="integer"/>
         <element label="Autre situation explication" max_length="200" name="autre_situation_explication" type="string"/>
         <element label="Classe" max_length="32" name="classe" reference="x_ndecd_triage_2_0_classe" type="reference"/>
         <element choice="1" label="Cote de priorisation de base SLI" mandatory="true" max_length="40" name="cote_de_priorisation" type="integer">
             <choice>
-                <element inactive_on_update="false" label="1. Élève admissible de première année n'ayant pas reçu le programme SLI dans le passé" value="1"/>
-                <element inactive_on_update="false" label="2. Élève admissible du jardin n'ayant pas reçu le programme SLI dans le passé." value="2"/>
-                <element inactive_on_update="false" label="3. Élève de première année dont le statut est à risque" value="3"/>
-                <element inactive_on_update="false" label="4. Élève de jardin dont le statut est à risque" value="4"/>
-                <element inactive_on_update="false" label="5. Élève de première année admissible ayant déjà reçu le programme SLI" value="5"/>
-                <element inactive_on_update="false" label="6. Élève du jardin admissible ayant déjà reçu le programme SLI." value="6"/>
+                <element inactive_on_update="false" label="1. Élève admissible de première année n'ayant pas reçu le programme SLI dans le passé" value="6"/>
+                <element inactive_on_update="false" label="2. Élève admissible du jardin n'ayant pas reçu le programme SLI dans le passé." value="5"/>
+                <element inactive_on_update="false" label="3. Élève de première année dont le statut est à risque" value="4"/>
+                <element inactive_on_update="false" label="4. Élève de jardin dont le statut est à risque" value="3"/>
+                <element inactive_on_update="false" label="5. Élève de première année admissible ayant déjà reçu le programme SLI" value="2"/>
+                <element inactive_on_update="false" label="6. Élève du jardin admissible ayant déjà reçu le programme SLI." value="1"/>
                 <element inactive_on_update="false" label="7. Non admissible" value="0"/>
             </choice>
         </element>
@@ -23,12 +24,19 @@
             </choice>
         </element>
         <element choice="1" choice_field="d_pistage_sli_requis_non_requis" choice_table="x_ndecd_cecce_base_options" label="Dépistage SLI requis ou non?" max_length="40" name="d_pistage_sli_requis_ou_non" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Dépistage SLI non-requis" sequence="0" value="sli-non-requis"/>
+                <element inactive_on_update="false" label="Dépistage SLI requis" sequence="1" value="sli-requis"/>
+            </choice>
         </element>
         <element label="Est-ce que l'élève a un diagnostic posé par un professionnel de la santé autoris" max_length="200" name="est_ce_que_l_l_ve_a_un_diagnostic" type="string"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
         </element>
+        <element label="etat annee" max_length="40" name="etat_annee" type="integer"/>
         <element label="generer Roi?" max_length="40" name="generer_roi" type="boolean"/>
         <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langue dominante" max_length="40" name="langue_dominante" type="choice">
             <choice>
@@ -49,12 +57,22 @@
         <element label="Nom éducatrice Bloc SLI" max_length="32" name="nom_ducatrice_programme_sli" reference="sys_user" reference_qual="u_user_type=educatrice^EQ" reference_qual_condition="u_user_type=educatrice^EQ" type="reference"/>
         <element label="Particularités " max_length="200" name="particularit_s" type="string"/>
         <element label="Score de priorisation ROI" max_length="200" name="scorepriorisationroi" type="string"/>
-        <element label="Score de priorisation SLI" max_length="200" name="score_de_priorisation" type="string"/>
+        <element label="Score SLI" max_length="200" name="score_de_priorisation" type="string"/>
         <element choice="1" choice_field="student_s_family_situation" choice_table="x_ndecd_cecce_base_options" label="Situation familiale de l’élève" max_length="4000" name="situation_familiale_de_l_l_ve" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Lives with both parents at the same address" sequence="0" value="Lives with both parents at the same address"/>
+                <element inactive_on_update="false" label="Lives with his or her guardian" sequence="1" value="Lives with his or her guardian"/>
+                <element inactive_on_update="false" label="Other" sequence="2" value="Other"/>
+                <element inactive_on_update="false" label="sole custody with his father" sequence="3" value="Sole custody with his father"/>
+                <element inactive_on_update="false" label="sole custody with his mother" sequence="4" value="Sole custody with his mother"/>
+                <element inactive_on_update="false" label="subject of joint custody" sequence="5" value="Subject of joint custody"/>
+            </choice>
         </element>
         <element choice="1" choice_field="x_ndecd_triage_2_0_soumis_par" choice_table="x_ndecd_cecce_base_options" label="Soumis par" max_length="200" name="soumis_par" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="équipe-école" sequence="0" value="eq-eco"/>
+                <element inactive_on_update="false" label="équipe-ortophonistes" sequence="1" value="eq-orth"/>
+            </choice>
         </element>
         <element choice="3" choice_field="statut_sli" choice_table="x_ndecd_cecce_base_options" label="Statut SLI" max_length="40" name="statut_sli" type="choice">
             <choice>
