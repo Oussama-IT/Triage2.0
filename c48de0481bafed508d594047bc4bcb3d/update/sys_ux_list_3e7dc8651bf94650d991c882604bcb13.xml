@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_list">
     <sys_ux_list action="INSERT_OR_UPDATE">
         <active>true</active>
-        <category display_value="SCS - Liste de priorisation(préc2)">655676191b71ca508d594047bc4bcbe7</category>
+        <category display_value="SCS - Liste de priorisation(ANT2)">655676191b71ca508d594047bc4bcbe7</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,scorescs,ann_e_de_la_demande,statut_de_la_demande_scs,date_de_l_obtention_du_consentement_parental,est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte,programme_scs_si_suivi,nom_ducatrice_scs</columns>
         <condition table="x_ndecd_triage_2_0_scs">nom_ducatrice_scsISEMPTY^etat_annee=10^ORetat_annee=5^ORetat_annee=6<item endquery="false" field="nom_ducatrice_scs" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="10"/>

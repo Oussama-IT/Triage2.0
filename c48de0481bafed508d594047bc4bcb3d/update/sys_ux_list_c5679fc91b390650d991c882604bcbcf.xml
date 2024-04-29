@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_list">
     <sys_ux_list action="INSERT_OR_UPDATE">
         <active>true</active>
-        <category display_value="ROI-CS - Liste de priorisation(préc1)">a6f6130d1b390650d991c882604bcbc9</category>
+        <category display_value="ROI-CS - Liste de priorisation(ANT1)">a6f6130d1b390650d991c882604bcbc9</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,scoreroics,statut_de_la_demande_roi_cs,ann_e_de_la_demande,date_de_l_obtention_du_consentement_parental,est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte,score_roi_cs,score_imitation,score_jeu,score_r_ceptif,score_expressif,score_communication_sociale,programme_roi_cs_si_suivi,programme_scs_si_suivi,nom_orthophoniste_d_pistage_roi_cs,nom_orthophoniste_suivi_roi_cs</columns>
         <condition table="x_ndecd_triage_2_0_roi_cs">nom_orthophoniste_d_pistage_roi_csISEMPTY^etat_annee=5^ORetat_annee=4^ORetat_annee=<item endquery="false" field="nom_orthophoniste_d_pistage_roi_cs" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="5"/>
