@@ -35,10 +35,12 @@
 	let month =d.getMonth();
 	if (month>7){
 	current.ann_e_de_la_demande= year+"-"+(year+1);
+	current.ann_e_de_la_demande_int= year+"-"+(year+1);
 	current.update();
 	}
 	else{
 	current.ann_e_de_la_demande= (year-1)+"-"+year;
+	current.ann_e_de_la_demande_int= (year-1)+"-"+year;
 	current.update();
 	}
 	
@@ -50,7 +52,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2b47b6ac1b9182908d594047bc4bcb15</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>copy atachement and set annee TSACS </sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -58,7 +60,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_2b47b6ac1b9182908d594047bc4bcb15</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-24 19:26:57</sys_updated_on>
+        <sys_updated_on>2024-04-28 12:56:52</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

@@ -36,6 +36,19 @@
     g_form.addErrorMessage("L'élève ne répond pas aux critères d'admissibilité au programme ROI");
 	return false
    }
+
+    var sligr=new GlideRecord('x_ndecd_triage_2_0_sli_roi');
+	sligr.addQuery('l_ve', g_form.getValue("l_ve"));
+	sligr.query(checkeleveexiste);
+	function checkeleveexiste(result){
+	if (result.next()) {
+        g_form.addErrorMessage("Une demande a déjà été acheminée pour cet élève. Veuillez acheminer un courriel au comité SLI-ROI afin de préciser les éléments que vous souhaitez mettre à jour");
+	}
+	}
+
+	if(g_form.getValue("can_submit")=="false"){
+		return false;
+	}
    
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -44,7 +57,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>262db1781bb082108d594047bc4bcbd2</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -52,7 +65,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_262db1781bb082108d594047bc4bcbd2</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-20 15:17:50</sys_updated_on>
+        <sys_updated_on>2024-04-26 17:37:16</sys_updated_on>
         <table/>
         <type>onSubmit</type>
         <ui_type>10</ui_type>
