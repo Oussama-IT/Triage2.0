@@ -180,7 +180,7 @@
     var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
     var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
 
-    current.linkattachment = result.attachment_id;
+    //current.linkattachment = result.attachment_id;
     current.update();
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -189,7 +189,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>627d883c1b104610d991c882604bcbee</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>SLI-ROI PDF</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -197,9 +197,9 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_627d883c1b104610d991c882604bcbee</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-15 11:20:34</sys_updated_on>
+        <sys_updated_on>2024-05-02 19:56:05</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=627d883c1b104610d991c882604bcbee"/>
 </record_update>
