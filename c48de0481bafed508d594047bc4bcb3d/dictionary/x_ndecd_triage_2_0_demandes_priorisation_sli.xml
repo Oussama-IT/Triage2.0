@@ -53,8 +53,8 @@
             </choice>
         </element>
         <element label="Nom de l'élève" max_length="32" name="nom_de_l_l_ve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
-        <element label="Nom éducatrice dépistage" max_length="32" name="nom_ducatrice_d_pistage" reference="sys_user" reference_qual="u_user_type=educatrice^EQ" reference_qual_condition="u_user_type=educatrice^EQ" type="reference"/>
-        <element label="Nom éducatrice Bloc SLI" max_length="32" name="nom_ducatrice_programme_sli" reference="sys_user" reference_qual="u_user_type=educatrice^EQ" reference_qual_condition="u_user_type=educatrice^EQ" type="reference"/>
+        <element label="Nom éducatrice dépistage" max_length="32" name="nom_ducatrice_d_pistage" reference="sys_user" reference_qual="u_user_typeLIKEÉducatrices ressources langage^EQ" reference_qual_condition="u_user_typeLIKEÉducatrices ressources langage^EQ" type="reference"/>
+        <element label="Nom éducatrice Bloc SLI" max_length="32" name="nom_ducatrice_programme_sli" reference="sys_user" reference_qual="u_user_typeLIKEÉducatrices ressources langage^EQ" reference_qual_condition="u_user_typeLIKEÉducatrices ressources langage^EQ" type="reference"/>
         <element label="Particularités " max_length="200" name="particularit_s" type="string"/>
         <element label="Score de priorisation ROI" max_length="200" name="scorepriorisationroi" type="string"/>
         <element label="Score SLI" max_length="200" name="score_de_priorisation" type="string"/>

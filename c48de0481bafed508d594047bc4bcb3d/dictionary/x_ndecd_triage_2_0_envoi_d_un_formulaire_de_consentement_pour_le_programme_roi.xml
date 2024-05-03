@@ -143,8 +143,8 @@
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
             </choice>
         </element>
-        <element label="Nom orthophoniste intervention" max_length="32" name="nom_orthophoniste_intervention" reference="sys_user" type="reference"/>
-        <element label="Nom orthophoniste évaluation" max_length="32" name="orthophoniste_d_evaluation" reference="sys_user" type="reference"/>
+        <element label="Nom orthophoniste intervention" max_length="32" name="nom_orthophoniste_intervention" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du régulier^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du régulier^EQ" type="reference"/>
+        <element label="Nom orthophoniste évaluation" max_length="32" name="orthophoniste_d_evaluation" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du régulier^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du régulier^EQ" type="reference"/>
         <element label="Ortho Éval" max_length="32" name="ortho_eval" reference="sys_user" type="reference"/>
         <element label="Ortho Int" max_length="32" name="ortho_int" reference="sys_user" type="reference"/>
         <element label="Particularités" max_length="200" name="particularit_s" type="string"/>

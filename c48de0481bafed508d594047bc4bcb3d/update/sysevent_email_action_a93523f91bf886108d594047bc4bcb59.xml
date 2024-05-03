@@ -5,7 +5,7 @@
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
-        <category display_value="Non catégorisé" name="Non catégorisé">c97d83137f4432005f58108c3ffa917a</category>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
         <collection>x_ndecd_triage_2_0_sli_roi</collection>
         <condition table="x_ndecd_triage_2_0_sli_roi">orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_sLIKEfab6f5191bbcc210d991c882604bcb89^orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_sLIKEf6b6f5191bbcc210d991c882604bcb8a^EQ<item endquery="false" field="orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s" goto="false" newquery="false" operator="LIKE" or="false" value="fab6f5191bbcc210d991c882604bcb89"/>
             <item endquery="false" field="orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s" goto="false" newquery="false" operator="LIKE" or="false" value="f6b6f5191bbcc210d991c882604bcb8a"/>
@@ -40,7 +40,7 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p>Bonjour ${opened_by.first_name} ${opened_by.last_name},</p>
-<p>Nous vous informons que votre demande SLI concernant l'&eacute;l&egrave;ve ${eleve.name} (N&deg; ${number}) a &eacute;t&eacute; communiqu&eacute;e au comit&eacute; SLI et au comit&eacute; ROI pour traitement. &nbsp;La direction de l'&eacute;cole a &eacute;t&eacute; &eacute;galement &eacute;t&eacute; inform&eacute;e de cette demande.</p>
+<p>Nous vous informons que votre demande SLI concernant l'&eacute;l&egrave;ve ${l_ve.name} (N&deg; ${number}) a &eacute;t&eacute; communiqu&eacute;e au comit&eacute; SLI et au comit&eacute; ROI pour traitement. &nbsp;La direction de l'&eacute;cole a &eacute;t&eacute; &eacute;galement &eacute;t&eacute; inform&eacute;e de cette demande.</p>
 <p>Nous vous tiendrons inform&eacute; (e) de tout avancement concernant votre demande.</p>
 <p>Veuillez cliquer sur ce <a href="esc?id=ticket&amp;is_new_order=true&amp;table=x_ndecd_triage_2_0_sli_roi&amp;sys_id=${sys_id}" target="_blank" rel="noopener">lien</a> pour consulter la demande. .</p>
 <p>Merci.</p>]]></message_html>
@@ -65,7 +65,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a93523f91bf886108d594047bc4bcb59</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Confirmation de la soumission du formulaire à l'utilisateur SLI et ROI</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -73,7 +73,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_a93523f91bf886108d594047bc4bcb59</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-15 03:13:17</sys_updated_on>
+        <sys_updated_on>2024-05-03 16:04:48</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

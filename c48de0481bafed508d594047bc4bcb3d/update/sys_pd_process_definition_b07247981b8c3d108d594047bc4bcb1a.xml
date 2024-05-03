@@ -62,7 +62,7 @@
         <order>1</order>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-14 04:33:21</sys_created_on>
@@ -75,7 +75,7 @@
     <sys_variable_value action="delete_multiple" query="document_key=3543fb811b4431508d594047bc4bcbbf"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__30adc3601b00bd108d594047bc4bcba0">input_record.approval=approved<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__30adc3601b00bd108d594047bc4bcba0">input_record.approval=approved<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
         </condition_to_run>
         <description/>
         <label>Envoi Du Rapport</label>
@@ -84,7 +84,7 @@
         <order>2</order>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">3f030dc5bd8842aebc1fa64716545da2</start_rule>
+        <start_rule display_value="After Previous">3f030dc5bd8842aebc1fa64716545da2</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-12 12:31:56</sys_created_on>
@@ -97,7 +97,7 @@
     <sys_variable_value action="delete_multiple" query="document_key=30adc3601b00bd108d594047bc4bcba0"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__f9cf28171bcc39508d594047bc4bcb88">input_record.approval=approved^input_record.state!=7<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__f9cf28171bcc39508d594047bc4bcb88">input_record.approval=approved^input_record.state!=7<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
             <item display_value="Fermé ignoré" endquery="false" field="input_record.state" goto="false" newquery="false" operator="!=" or="false" value="7"/>
         </condition_to_run>
         <description/>
@@ -107,7 +107,7 @@
         <order>3</order>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">3f030dc5bd8842aebc1fa64716545da2</start_rule>
+        <start_rule display_value="After Previous">3f030dc5bd8842aebc1fa64716545da2</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-20 14:05:32</sys_created_on>
@@ -121,7 +121,7 @@
     <sys_pd_activity action="delete_multiple" query="process_definition=b07247981b8c3d108d594047bc4bcb1a^sys_idNOT IN39a8e3c01b8d3d108d594047bc4bcb09,9fdbd0851b84fd108d594047bc4bcb9f,4c8a96bb1b1979508d594047bc4bcb01,fe0892f71b1979508d594047bc4bcb82,5e78ec9b1b8c39508d594047bc4bcb69,26ee68d31bcc39508d594047bc4bcbbe,79e166b31b5979508d594047bc4bcb5b,ec326ef31b5979508d594047bc4bcb4e"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Demander une approbation ad hoc">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <activity_definition display_value="Request Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
@@ -135,7 +135,7 @@
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -951,7 +951,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Enregistrement de mise à jour automatisé">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
+        <activity_definition display_value="Automated Update Record">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__9fdbd0851b84fd108d594047bc4bcb9f">input_record.type_d_envoi_du_rapport=par courriel<item display_value="Par courriel" endquery="false" field="input_record.type_d_envoi_du_rapport" goto="false" newquery="false" operator="=" or="false" value="par courriel"/>
         </condition_to_run>
         <derivative_order/>
@@ -966,7 +966,7 @@
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -1834,7 +1834,7 @@
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">eb98b4955ba74acab978af26ad083f61</start_rule>
+        <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -3044,7 +3044,7 @@
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -4240,7 +4240,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Attendre une condition">f167cad40f200010f5bf5ae9c4767eb2</activity_definition>
+        <activity_definition display_value="Wait For Condition">f167cad40f200010f5bf5ae9c4767eb2</activity_definition>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
@@ -4254,7 +4254,7 @@
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">eb98b4955ba74acab978af26ad083f61</start_rule>
+        <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -5222,7 +5222,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Enregistrement de mise à jour automatisé">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
+        <activity_definition display_value="Automated Update Record">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__26ee68d31bcc39508d594047bc4bcbbe">input_record.accuse_de_reception=false</condition_to_run>
         <derivative_order/>
         <derivative_parent/>
@@ -5236,7 +5236,7 @@
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">eb98b4955ba74acab978af26ad083f61</start_rule>
+        <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -6104,7 +6104,7 @@
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -7314,7 +7314,7 @@
         <outputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">eb98b4955ba74acab978af26ad083f61</start_rule>
+        <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -8569,7 +8569,7 @@
         <sys_updated_on>2023-07-11 17:05:02</sys_updated_on>
         <trigger_definition/>
         <trigger_inputs/>
-        <trigger_type display_value="Créer un enregistrement">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
+        <trigger_type display_value="Record Create">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
     </sys_pd_trigger_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7c72c3981b8c3d108d594047bc4bcbbe"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

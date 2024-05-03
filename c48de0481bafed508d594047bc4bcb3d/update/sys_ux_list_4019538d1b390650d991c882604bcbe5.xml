@@ -3,10 +3,10 @@
         <active>true</active>
         <category display_value="TSA/CS - Demandes/Priorisation(ANT1)">76e8138d1b390650d991c882604bcb6a</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,ann_e_de_la_demande,scoretsacs,statut_de_la_demande_tsa_cs,date_de_l_obtention_du_consentement_parental,est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte,programme_roi_cs_si_suivi,bloc_suivi,nom_ducatrice_scs,nom_orthophoniste_d_pistage_roi_cs,nom_orthophoniste_suivi_roi_cs,nom_orthophoniste_consultation_tsa_cs</columns>
-        <condition table="x_ndecd_triage_2_0_tsa_cs">statut_de_la_demande_tsa_cs!=fermee^etat_annee=4^ORetat_annee=5^ORetat_annee=<item display_value="Fermée" endquery="false" field="statut_de_la_demande_tsa_cs" goto="false" newquery="false" operator="!=" or="false" value="fermee"/>
+        <condition table="x_ndecd_triage_2_0_tsa_cs">statut_de_la_demande_tsa_cs!=fermee^etat_annee=4^ORetat_annee=5^ORetat_annee=0<item display_value="Fermée" endquery="false" field="statut_de_la_demande_tsa_cs" goto="false" newquery="false" operator="!=" or="false" value="fermee"/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="4"/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="5"/>
-            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value=""/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="0"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
@@ -64,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4019538d1b390650d991c882604bcbe5</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Open</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -72,7 +72,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_4019538d1b390650d991c882604bcbe5</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-26 14:56:52</sys_updated_on>
+        <sys_updated_on>2024-05-03 17:48:22</sys_updated_on>
         <table>x_ndecd_triage_2_0_tsa_cs</table>
         <title>Open</title>
         <view/>

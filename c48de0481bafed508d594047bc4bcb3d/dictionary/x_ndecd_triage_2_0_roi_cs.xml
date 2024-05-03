@@ -4,8 +4,8 @@
         <element label="Année de la demande  int" max_length="40" name="ann_e_de_la_demande_int" type="integer"/>
         <element label="etat annee" max_length="40" name="etat_annee" type="integer"/>
         <element label="Nom éducatrice SCS" max_length="40" name="nom_ducatrice_scs" reference="sys_user" type="reference"/>
-        <element label="Nom orthophoniste dépistage ROI-CS" max_length="32" name="nom_orthophoniste_d_pistage_roi_cs" reference="sys_user" type="reference"/>
-        <element label="Nom orthophoniste suivi ROI-CS" max_length="32" name="nom_orthophoniste_suivi_roi_cs" reference="sys_user" type="reference"/>
+        <element label="Nom orthophoniste dépistage ROI-CS" max_length="32" name="nom_orthophoniste_d_pistage_roi_cs" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du volet^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du volet^EQ" type="reference"/>
+        <element label="Nom orthophoniste suivi ROI-CS" max_length="32" name="nom_orthophoniste_suivi_roi_cs" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du volet^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du volet^EQ" type="reference"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Programme ROI-CS si suivi" max_length="40" name="programme_roi_cs_si_suivi" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>

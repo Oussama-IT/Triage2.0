@@ -62,7 +62,7 @@
         <order>1</order>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-25 18:01:19</sys_created_on>
@@ -75,7 +75,7 @@
     <sys_variable_value action="delete_multiple" query="document_key=d4b517f41b943d50d991c882604bcbc8"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__20696c091bd83d50d991c882604bcb37">input_record.approval=approved<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__20696c091bd83d50d991c882604bcb37">input_record.approval=approved<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
         </condition_to_run>
         <description/>
         <label>Envoi Du Rapport</label>
@@ -84,7 +84,7 @@
         <order>2</order>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">3f030dc5bd8842aebc1fa64716545da2</start_rule>
+        <start_rule display_value="After Previous">3f030dc5bd8842aebc1fa64716545da2</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-26 00:06:58</sys_created_on>
@@ -97,7 +97,7 @@
     <sys_variable_value action="delete_multiple" query="document_key=20696c091bd83d50d991c882604bcb37"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__07bae8891bd83d50d991c882604bcbaf">input_record.approval=approved^input_record.state!=7<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__07bae8891bd83d50d991c882604bcbaf">input_record.approval=approved^input_record.state!=7<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
             <item display_value="Fermé ignoré" endquery="false" field="input_record.state" goto="false" newquery="false" operator="!=" or="false" value="7"/>
         </condition_to_run>
         <description/>
@@ -107,7 +107,7 @@
         <order>3</order>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">3f030dc5bd8842aebc1fa64716545da2</start_rule>
+        <start_rule display_value="After Previous">3f030dc5bd8842aebc1fa64716545da2</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-26 00:12:52</sys_created_on>
@@ -121,7 +121,7 @@
     <sys_pd_activity action="delete_multiple" query="process_definition=731c4e201b58bd508d594047bc4bcbe7^sys_idNOT IN361bcdbe1b09f110d991c882604bcb13,1ca9a0091bd83d50d991c882604bcb1d,cd23821c1b29f9508d594047bc4bcb97,8223c21c1b29f9508d594047bc4bcbda,0e3a64891bd83d50d991c882604bcbb1,c14aac491bd83d50d991c882604bcb35,9a41ca181b29f9508d594047bc4bcbdc,0d4106181b29f9508d594047bc4bcb65"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Demander une approbation ad hoc">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <activity_definition display_value="Request Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
@@ -135,7 +135,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -951,7 +951,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Enregistrement de mise à jour automatisé">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
+        <activity_definition display_value="Automated Update Record">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__1ca9a0091bd83d50d991c882604bcb1d">input_record.type_d_envoi_du_rapport=Par courriel<item display_value="Par courriel" endquery="false" field="input_record.type_d_envoi_du_rapport" goto="false" newquery="false" operator="=" or="false" value="Par courriel"/>
         </condition_to_run>
         <derivative_order/>
@@ -966,7 +966,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -1834,7 +1834,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">eb98b4955ba74acab978af26ad083f61</start_rule>
+        <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -3044,7 +3044,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">eb98b4955ba74acab978af26ad083f61</start_rule>
+        <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -4240,7 +4240,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Attendre une condition">f167cad40f200010f5bf5ae9c4767eb2</activity_definition>
+        <activity_definition display_value="Wait For Condition">f167cad40f200010f5bf5ae9c4767eb2</activity_definition>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__0e3a64891bd83d50d991c882604bcbb1">input_record.accuse_de_reception=true</condition_to_run>
         <derivative_order/>
         <derivative_parent/>
@@ -4254,7 +4254,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">eb98b4955ba74acab978af26ad083f61</start_rule>
+        <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -5222,7 +5222,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Enregistrement de mise à jour automatisé">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
+        <activity_definition display_value="Automated Update Record">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__c14aac491bd83d50d991c882604bcb35">input_record.accuse_de_reception=false</condition_to_run>
         <derivative_order/>
         <derivative_parent/>
@@ -5236,7 +5236,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">eb98b4955ba74acab978af26ad083f61</start_rule>
+        <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -6104,7 +6104,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -7314,7 +7314,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après le précédent">eb98b4955ba74acab978af26ad083f61</start_rule>
+        <start_rule display_value="After Previous">eb98b4955ba74acab978af26ad083f61</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -8569,7 +8569,7 @@
         <sys_updated_on>2023-07-24 18:01:37</sys_updated_on>
         <trigger_definition/>
         <trigger_inputs/>
-        <trigger_type display_value="Créer un enregistrement">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
+        <trigger_type display_value="Record Create">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
     </sys_pd_trigger_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b71c4e201b58bd508d594047bc4bcbfb"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
