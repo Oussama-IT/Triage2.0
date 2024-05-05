@@ -3,17 +3,25 @@
         <active>true</active>
         <category display_value="ROI - Demandes/Priorisation (en cours)">2047dabb1ba7a5108d594047bc4bcbac</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,score_roi,evaluation_sommaire_requise,lr,le,ld,prio,statut_sli,statut_sli_si_admissible,ortho_eval,ortho_int</columns>
-        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">orthophoniste_d_evaluationISEMPTY^soumis_par=eq-eco^le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe=oui^NQsoumis_par=eq-orth^evaluation_sommaire_requise=donnees-insuffisantes^orthophoniste_d_evaluationISEMPTY^NQsoumis_par=eq-orth^evaluation_sommaire_requise=donnees-suffisantes^le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe=oui^orthophoniste_d_evaluationISEMPTY^EQ<item endquery="false" field="orthophoniste_d_evaluation" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">orthophoniste_d_evaluationISEMPTY^soumis_par=eq-eco^le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe=oui^etat_annee=1^ORetat_annee=3^ORetat_annee=4^NQsoumis_par=eq-orth^evaluation_sommaire_requise=donnees-insuffisantes^orthophoniste_d_evaluationISEMPTY^etat_annee=1^ORetat_annee=3^ORetat_annee=4^NQsoumis_par=eq-orth^evaluation_sommaire_requise=donnees-suffisantes^le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe=oui^orthophoniste_d_evaluationISEMPTY^etat_annee=1^ORetat_annee=3^ORetat_annee=4<item endquery="false" field="orthophoniste_d_evaluation" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item display_value="équipe-école" endquery="false" field="soumis_par" goto="false" newquery="false" operator="=" or="false" value="eq-eco"/>
             <item display_value="Oui" endquery="false" field="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" goto="false" newquery="false" operator="=" or="false" value="oui"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="3"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="4"/>
             <item display_value="équipe-ortophonistes" endquery="false" field="soumis_par" goto="false" newquery="true" operator="=" or="false" value="eq-orth"/>
             <item display_value="Données suffisantes au dossier pour confirmer l’admissibilité à ROI" endquery="false" field="evaluation_sommaire_requise" goto="false" newquery="false" operator="=" or="false" value="donnees-insuffisantes"/>
             <item endquery="false" field="orthophoniste_d_evaluation" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="3"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="4"/>
             <item display_value="équipe-ortophonistes" endquery="false" field="soumis_par" goto="false" newquery="true" operator="=" or="false" value="eq-orth"/>
             <item display_value="Évaluation sommaire ROI requise (données insuffisantes)" endquery="false" field="evaluation_sommaire_requise" goto="false" newquery="false" operator="=" or="false" value="donnees-suffisantes"/>
             <item display_value="Oui" endquery="false" field="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" goto="false" newquery="false" operator="=" or="false" value="oui"/>
             <item endquery="false" field="orthophoniste_d_evaluation" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="3"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="4"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
@@ -71,7 +79,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8701a6fe1b298e108d594047bc4bcbd7</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Non assigné (Eval)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -79,7 +87,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_8701a6fe1b298e108d594047bc4bcbd7</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-22 14:11:21</sys_updated_on>
+        <sys_updated_on>2024-05-04 17:56:11</sys_updated_on>
         <table>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</table>
         <title>Non assigné (Eval)</title>
         <view/>

@@ -33,11 +33,11 @@
     let year = d.getFullYear();
 	let month =d.getMonth();
 	if (month>11){
-	current.ann_e_de_la_demande_int=(year+1);
+	current.ann_e_de_la_demande_int=(year+2);
 	current.update();
 	}
 	else{
-	current.ann_e_de_la_demande_int=year;
+	current.ann_e_de_la_demande_int=year+1;
 	current.update();
 	}     
 })(current, previous);]]></script>
@@ -47,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c8634d951ba40a508d594047bc4bcba1</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>copy attachement SLI ROI vers SLI &amp; anne</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -55,7 +55,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_c8634d951ba40a508d594047bc4bcba1</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-24 17:41:45</sys_updated_on>
+        <sys_updated_on>2024-05-04 18:18:07</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
