@@ -3,7 +3,8 @@
         <active>true</active>
         <category display_value="SLI - Demandes/Priorisation (ANT1)">dbf357091b390650d991c882604bcba4</category>
         <columns>number,nom_de_l_l_ve.u_nom_de_l_cole,nom_de_l_l_ve,nom_de_l_l_ve.u_classe,score_de_priorisation,langue_dominante,opened_by,suivis_anterieurs,d_pistage_sli_requis_ou_non,cote_de_priorisation,statut_sli,statut_sli_si_admissible,nom_ducatrice_d_pistage,nom_ducatrice_programme_sli,particularit_s</columns>
-        <condition table="x_ndecd_triage_2_0_demandes_priorisation_sli">nom_ducatrice_d_pistageISEMPTY^etat_annee=0^ORetat_annee=4^ORetat_annee=5<item endquery="false" field="nom_ducatrice_d_pistage" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+        <condition table="x_ndecd_triage_2_0_demandes_priorisation_sli">nom_ducatrice_d_pistageISEMPTY^d_pistage_sli_requis_ou_non=sli-requis^etat_annee=0^ORetat_annee=4^ORetat_annee=5<item endquery="false" field="nom_ducatrice_d_pistage" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item display_value="Dépistage SLI requis" endquery="false" field="d_pistage_sli_requis_ou_non" goto="false" newquery="false" operator="=" or="false" value="sli-requis"/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="0"/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="4"/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="5"/>
@@ -64,7 +65,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>71f417891b390650d991c882604bcbb4</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Non assigné (depistage)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -72,7 +73,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_71f417891b390650d991c882604bcbb4</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-26 14:05:32</sys_updated_on>
+        <sys_updated_on>2024-05-05 16:33:54</sys_updated_on>
         <table>x_ndecd_triage_2_0_demandes_priorisation_sli</table>
         <title>Non assigné (depistage)</title>
         <view/>
