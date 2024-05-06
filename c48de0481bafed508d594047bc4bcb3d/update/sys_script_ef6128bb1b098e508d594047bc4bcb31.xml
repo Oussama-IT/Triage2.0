@@ -231,7 +231,7 @@
 	approver.addEncodedQuery('name='+gsdirect.getDisplayValue('approver'));
 	approver.query();
 	if(approver.next()){
-	newHtml = newHtml.replace("var61", approver.getDisplayValue('title'));
+	newHtml = newHtml.replace("var61", current.opened_by.title);
 	}
 	
     var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
@@ -246,7 +246,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ef6128bb1b098e508d594047bc4bcb31</sys_id>
-        <sys_mod_count>36</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>TSA PDF</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -254,7 +254,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_ef6128bb1b098e508d594047bc4bcb31</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-11 13:25:29</sys_updated_on>
+        <sys_updated_on>2024-05-06 00:01:53</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
