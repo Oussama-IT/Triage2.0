@@ -3,7 +3,8 @@
         <active>true</active>
         <category display_value="Demandes TSA/CS">3e317aa41b9182908d594047bc4bcb36</category>
         <columns>number,eleve,ann_e_de_la_demande,scoretsacs,statut_de_la_demande_tsa_cs,date_de_l_obtention_du_consentement_parental,est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte,programme_roi_cs_si_suivi,bloc_suivi,nom_ducatrice_scs,nom_orthophoniste_d_pistage_roi_cs,nom_orthophoniste_suivi_roi_cs,nom_orthophoniste_consultation_tsa_cs</columns>
-        <condition/>
+        <condition table="x_ndecd_triage_2_0_tsa_cs">active=false<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="false"/>
+        </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
         <groups/>
@@ -60,7 +61,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a7adab041b1ece108d594047bc4bcb0c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Closed</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -68,7 +69,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_a7adab041b1ece108d594047bc4bcb0c</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-05-16 18:10:15</sys_updated_on>
+        <sys_updated_on>2024-05-28 19:07:13</sys_updated_on>
         <table>x_ndecd_triage_2_0_tsa_cs</table>
         <title>Closed</title>
         <view/>
