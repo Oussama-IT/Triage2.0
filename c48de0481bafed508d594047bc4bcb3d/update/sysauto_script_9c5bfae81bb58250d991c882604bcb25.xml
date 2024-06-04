@@ -2,7 +2,18 @@
     <sysauto_script action="INSERT_OR_UPDATE">
         <active>true</active>
         <business_calendar/>
-        <condition><![CDATA[new GlideDateTime().getMonth()==1;]]></condition>
+        <condition><![CDATA[isJan();
+function isJan() {
+    var isjan;
+    var gDate = new GlideDateTime(); //Uses your Timezone!
+    var month = gDate.getMonthUTC(); //Gets name of day
+    if (month == 1) {
+        isjan = true;
+    } else {
+        isjan = false;
+    }
+    return isjan;
+}]]></condition>
         <conditional>true</conditional>
         <entered_time>1970-01-01 00:00:00</entered_time>
         <max_drift/>
@@ -15,7 +26,7 @@
         <run_dayofweek>1</run_dayofweek>
         <run_period/>
         <run_start>2024-04-23 07:12:55</run_start>
-        <run_time>1970-01-01 08:00:00</run_time>
+        <run_time>1970-01-01 12:55:00</run_time>
         <run_type>monthly</run_type>
         <script><![CDATA[var gr = new GlideRecord('x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi');
 gr.query();
@@ -31,14 +42,14 @@ while (gr.next()) {
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-23 07:15:34</sys_created_on>
         <sys_id>9c5bfae81bb58250d991c882604bcb25</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>CECCE run january</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysauto_script_9c5bfae81bb58250d991c882604bcb25</sys_update_name>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-23 07:15:34</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-06-04 13:45:03</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
