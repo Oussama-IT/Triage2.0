@@ -5,7 +5,7 @@
         <action_delete>false</action_delete>
         <action_insert>true</action_insert>
         <action_query>false</action_query>
-        <action_update>true</action_update>
+        <action_update>false</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
@@ -28,321 +28,85 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
-gs.info('here');
+    var studylevel = current.l_ve.u_classe.getDisplayValue();
     var score = 0;
     var selectdict = {
         //Les stratégies de différenciation - les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l
-        "60b6078a1b64f110d991c882604bcbf4": 0.5,
-        "ecb6078a1b64f110d991c882604bcbf4": 0.5,
-        "64b6078a1b64f110d991c882604bcbf5": 0.5,
-        "e8b6078a1b64f110d991c882604bcbf5": 0.5,
-        "60b6078a1b64f110d991c882604bcbf6": 0.5,
-        "e4b6078a1b64f110d991c882604bcbf6": 0.5,
-        "6cb6078a1b64f110d991c882604bcbf6": 0.5,
-        "e0b6078a1b64f110d991c882604bcbf7": 0.5,
-        "68b6078a1b64f110d991c882604bcbf7": 0.5,
-		"619dbf541bc97550d991c882604bcbc7": 0,
-		"80b6d37e1bfcfd10d991c882604bcb6c": 0.5,
+        "60b6078a1b64f110d991c882604bcbf4": 0.0195,
+        "ecb6078a1b64f110d991c882604bcbf4": 0.0195,
+        "64b6078a1b64f110d991c882604bcbf5": 0.0195,
+        "e8b6078a1b64f110d991c882604bcbf5": 0.0195,
+        "60b6078a1b64f110d991c882604bcbf6": 0.0195,
+        "e4b6078a1b64f110d991c882604bcbf6": 0.0195,
+        "6cb6078a1b64f110d991c882604bcbf6": 0.0195,
+        "e0b6078a1b64f110d991c882604bcbf7": 0.0195,
+        "68b6078a1b64f110d991c882604bcbf7": 0.0195,
+        "619dbf541bc97550d991c882604bcbc7": 0,
+        "80b6d37e1bfcfd10d991c882604bcb6c": 0.0195,
         //Veuillez cliquer sur les services - veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n
-        "a09c03421ba4f110d991c882604bcbee": 3,
-        "289c03421ba4f110d991c882604bcbee": 3,
-        "ac9c03421ba4f110d991c882604bcbee": 6,
-		"209c03421ba4f110d991c882604bcbf0": 0,
-		"249c03421ba4f110d991c882604bcbef": 0,
-		"a49c03421ba4f110d991c882604bcbed": 0,
-		"a49c03421ba4f110d991c882604bcbf0": 0,
-		"a89c03421ba4f110d991c882604bcbef": 0,
-		"ed9dbf541bc97550d991c882604bcbc7": 0,
-		"b06644cb1b6b3d50d991c882604bcbb9": 0,
-		"d0c50c8b1b6b3d50d991c882604bcb58": 0,
+        "a09c03421ba4f110d991c882604bcbee": 0.117,
+        "289c03421ba4f110d991c882604bcbee": 0.117,
+        "ac9c03421ba4f110d991c882604bcbee": 0.234,
+        "209c03421ba4f110d991c882604bcbf0": 0,
+        "249c03421ba4f110d991c882604bcbef": 0,
+        "a49c03421ba4f110d991c882604bcbed": 0,
+        "a49c03421ba4f110d991c882604bcbf0": 0,
+        "a89c03421ba4f110d991c882604bcbef": 0,
+        "ed9dbf541bc97550d991c882604bcbc7": 0,
+        "b06644cb1b6b3d50d991c882604bcbb9": 0,
+        "d0c50c8b1b6b3d50d991c882604bcb58": 0,
         //L’élève présente-il les facteur - l_l_ve_pr_sente_il_les_facteurs_de_risque_suivants_questionnez_les_parents
-        "12e4070a1b64f110d991c882604bcbce": 1,
-        "dee4070a1b64f110d991c882604bcbd0": 3,
-        "d2e4070a1b64f110d991c882604bcbd1": 3,
-        "d6e4070a1b64f110d991c882604bcbd1": 3,
-        "5ee4070a1b64f110d991c882604bcbce": 3,
-        "52e4070a1b64f110d991c882604bcbcf": 2,
-        "d6e4070a1b64f110d991c882604bcbcf": 2,
-        "5ee4070a1b64f110d991c882604bcbcf": 1,
-        "d2e4070a1b64f110d991c882604bcbd0": 1,
-        "5ae4070a1b64f110d991c882604bcbd0": 1,
-		"632cb7141bc97550d991c882604bcb62": 0,
-		//L’élève éprouve des difficultés à utiliser différentes fonctions du langage
-		"2409454e1b6cb110d991c882604bcb79": 0.5,
-		"2409454e1b6cb110d991c882604bcb7a": 0.5,
-		"2c09454e1b6cb110d991c882604bcb78": 0.5,
-		"2c09454e1b6cb110d991c882604bcb79": 0.5,
-		"2c09454e1b6cb110d991c882604bcb7a": 0.5,
-		"3409454e1b6cb110d991c882604bcb7b": 0.5,
-		"3409454e1b6cb110d991c882604bcb7c": 0.5,
-		"3c09454e1b6cb110d991c882604bcb7b": 0.5,
-		"3c09454e1b6cb110d991c882604bcb7c": 0.5,
-		"6809054e1b6cb110d991c882604bcbb0": 0.5,
-		"d340afee1b2bf950d991c882604bcba4" : 0,
-		//Démontre des difficultés en situations sociales
-		"633b09021bacb110d991c882604bcbb8": 0.5,
-		"0e41a7221b6bf950d991c882604bcb0e": 0.5,
-		"7ab9018e1b6cb110d991c882604bcbe9": 0,
-		//L’élève éprouve des difficultés au niveau du jeu
-		"65fb0d421bacb110d991c882604bcbeb": 0.5,
-		"69fb0d421bacb110d991c882604bcbea": 0.5,
-		"e1fb0d421bacb110d991c882604bcbea": 0.5,
-		"e9fb0d421bacb110d991c882604bcbe9": 0.5,
-		"e9fb0d421bacb110d991c882604bcbeb": 0.5,
-		"edfb0d421bacb110d991c882604bcbea": 0.5,
-		"1f12af221b6bf950d991c882604bcb4f": 0,
-		//L’élève éprouve des difficultés d’imitation
-		"2181c6391b9cfd50d991c882604bcb7e": 0.5,
-		"2181c6391b9cfd50d991c882604bcb7f": 0.5,
-		"2501cef51b9cfd50d991c882604bcb5f": 0.5,
-		"2981c6391b9cfd50d991c882604bcb7e": 0.5,
-		"2981c6391b9cfd50d991c882604bcb7f": 0.5,
-		"83e0efee1b2bf950d991c882604bcb43": 0,
-		
+        "12e4070a1b64f110d991c882604bcbce": 0.039,
+        "dee4070a1b64f110d991c882604bcbd0": 0.117,
+        "d2e4070a1b64f110d991c882604bcbd1": 0.117,
+        "d6e4070a1b64f110d991c882604bcbd1": 0.117,
+        "5ee4070a1b64f110d991c882604bcbce": 0.117,
+        "52e4070a1b64f110d991c882604bcbcf": 0.078,
+        "d6e4070a1b64f110d991c882604bcbcf": 0.078,
+        "5ee4070a1b64f110d991c882604bcbcf": 0.039,
+        "d2e4070a1b64f110d991c882604bcbd0": 0.039,
+        "5ae4070a1b64f110d991c882604bcbd0": 0.039,
+        "632cb7141bc97550d991c882604bcb62": 0,
+        //L’élève éprouve des difficultés à utiliser différentes fonctions du langage
+        "2409454e1b6cb110d991c882604bcb79": 0.14625,
+        "2409454e1b6cb110d991c882604bcb7a": 0.14625,
+        "2c09454e1b6cb110d991c882604bcb78": 0.14625,
+        "2c09454e1b6cb110d991c882604bcb79": 0.14625,
+        "2c09454e1b6cb110d991c882604bcb7a": 0.14625,
+        "3409454e1b6cb110d991c882604bcb7b": 0.14625,
+        "3409454e1b6cb110d991c882604bcb7c": 0.14625,
+        "3c09454e1b6cb110d991c882604bcb7b": 0.14625,
+        "3c09454e1b6cb110d991c882604bcb7c": 0.14625,
+        "6809054e1b6cb110d991c882604bcbb0": 0.14625,
+        "d340afee1b2bf950d991c882604bcba4": 0,
+        //Démontre des difficultés en situations sociales
+        "633b09021bacb110d991c882604bcbb8": 0.14625,
+        "0e41a7221b6bf950d991c882604bcb0e": 0.14625,
+        "7ab9018e1b6cb110d991c882604bcbe9": 0,
+        //L’élève éprouve des difficultés au niveau du jeu
+        "65fb0d421bacb110d991c882604bcbeb": 0.14625,
+        "69fb0d421bacb110d991c882604bcbea": 0.14625,
+        "e1fb0d421bacb110d991c882604bcbea": 0.14625,
+        "e9fb0d421bacb110d991c882604bcbe9": 0.14625,
+        "e9fb0d421bacb110d991c882604bcbeb": 0.14625,
+        "edfb0d421bacb110d991c882604bcbea": 0.14625,
+        "1f12af221b6bf950d991c882604bcb4f": 0,
+        //L’élève éprouve des difficultés d’imitation
+        "2181c6391b9cfd50d991c882604bcb7e": 0.14625,
+        "2181c6391b9cfd50d991c882604bcb7f": 0.14625,
+        "2501cef51b9cfd50d991c882604bcb5f": 0.14625,
+        "2981c6391b9cfd50d991c882604bcb7e": 0.14625,
+        "2981c6391b9cfd50d991c882604bcb7f": 0.14625,
+        "83e0efee1b2bf950d991c882604bcb43": 0,
+
     };
+    // functions 
     function scoreforselectfields(str) {
         if (str != null) {
             var arr = str.split(',');
             arr.forEach((element) => score += selectdict[element]);
         }
     }
-    scoreforselectfields(current.getValue("les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l"));
-    scoreforselectfields(current.getValue("veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n"));
-    scoreforselectfields(current.getValue("l_l_ve_pr_sente_il_les_facteurs_de_risque_suivants_questionnez_les_parents"));
-	scoreforselectfields(current.getValue("a_l_l_ve_prouve_des_difficult_s_utiliser_diff_rentes_fonctions_du_langage"));
-	scoreforselectfields(current.getValue("c_d_montre_des_difficult_s_en_situations_sociales"));
-	scoreforselectfields(current.getValue("e_l_l_ve_prouve_des_difficult_s_au_niveau_du_jeu"));
-
-
-    if (current.getValue('l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole') == "no") {
-        score += 30;
-    }
-    if (current.getValue('l_l_ve_b_gaie_r_p_titions_de_sons_ou_de_syllabes_prolongations_de_sons_bloca') == "yes") {
-        score += 3;
-    }
-    if (current.getValue("l_l_ve_s_exprime_verbalement_dans_le_seul_but_de_nommer_de_r_citer_ou_d_num_r") == "yes") {
-        score += 3;
-    }
-    if (current.getValue("l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler") == "yes") {
-        score += 2;
-    }
-	if (current.getValue("l_l_ve_est_conscient_de_ses_difficult_s_prouve_de_la_frustration_ou_se_restre") == "yes"){
-		score += 2;
-	}
-	// Ajout 22/10/2024
-	if (current.getValue("la_qualit_de_la_voix_de_l_l_ve_semble_anormale_ex_rauque_nasale_et_ce_dela_quali") == "yes"){
-		score += 2;
-	}
-	gs.info(58963),
-	scoreforselectfields(current.getValue("l_l_ve_prouve_des_difficult_s_d_imitation"));
-
-
-    switch (current.getValue('je_comprends_l_l_ve_du_temps_impact_des_difficult_s_de_prononciation_et_non')) {
-        case "100": {
-            break;
-        }
-        case "75": {
-            score += 1;
-            break;
-        }
-        case "50": {
-            score += 2;
-            break;
-        }
-        case "25": {
-            score += 5;
-            break;
-        }
-    }
-	gs.info("221 "+ score);
-	switch (current.getValue('je_comprends_l_l_ve')) {
-        case "100": {
-            break;
-        }
-        case "75": {
-            score += 1;
-            break;
-        }
-        case "50": {
-            score += 2;
-            break;
-        }
-        case "25": {
-            score += 5;
-            break;
-        }
-    }
-
-    switch (current.getValue('quelle_est_la_note_obtenue_au_bulletin_le_plus_r_cent_en_communication_orale')) {
-        case "aoub": {
-            break;
-        }
-        case "c": {
-            score += 1;
-            break;
-        }
-        case "d": {
-            score += 2;
-            break;
-        }
-    }
-
-    switch (current.getValue('note_en_lecture_au_dernier_bulletin')) {
-        case "aoub": {
-            break;
-        }
-        case "c": {
-            score += 1;
-            break;
-        }
-        case "d": {
-            score += 2;
-            break;
-        }
-    }
-
-    switch (current.getValue('note_en_criture_au_dernier_bulletin')) {
-        case "aoub": {
-            break;
-        }
-        case "c": {
-            score += 1;
-            break;
-        }
-        case "d": {
-            score += 2;
-            break;
-        }
-    }
-	gs.info("27 "+score);
-
-
-    switch (current.getValue('est_ce_que_l_l_ve_a_un_pei_en_communication_orale_langage_expressif_et_ou_r_ce')) {
-        case "no": {
-            break;
-        }
-        case "yes-adapted": {
-            score += 1;
-            break;
-        }
-        case "yes-modified": {
-            score += 2;
-            break;
-        }
-
-    }
-	gs.info("28 "+score);
-    switch (current.getValue('est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture')) {
-        case "no": {
-            break;
-        }
-        case "yes-adapted": {
-            score += 1;
-            break;
-        }
-        case "yes-modified": {
-            score += 2;
-            break;
-        }
-
-    }
-	gs.info("29 "+score);
-
-    switch (current.getValue('quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit')) {
-        case "n/a": {
-            break;
-        }
-        case "indifficulty": {
-            score += 12;
-            break;
-        }
-        case "inrisk": {
-            score += 5;
-            break;
-        }
-        case "inthestandard": {
-            break;
-        }
-
-    }
-	gs.info("211 "+score);
-
-    switch (current.getValue('l_l_ve_pr_sente_un_retard_en_lecture')) {
-        case "nodifficulty": {
-            break;
-        }
-        case "slightdelay": {
-            score += 0.5;
-            break;
-        }
-        case "moderatedelay": {
-            score += 1;
-            break;
-        }
-        case "severedelay": {
-            score += 2;
-            break;
-        }
-
-    }
-
-    switch (current.getValue('l_l_ve_prouve_un_retard_en_criture')) {
-        case "nodifficulty": {
-            break;
-        }
-        case "slightdelay": {
-            score += 0.5;
-            break;
-        }
-        case "moderatedelay": {
-            score += 1;
-            break;
-        }
-        case "severedelay": {
-            score += 2;
-            break;
-        }
-
-    }
-	gs.info("213 "+score);
-
-
-    // function addscoreforcomsoci(field){
-    // 	if(current.getValue(field)=="true"){
-    // 		score+=0.5;
-    // 	}
-
-    // }
-    // addscoreforcomsoci("saluer");
-    // addscoreforcomsoci("initier_l_interaction_la_conversation");
-    // addscoreforcomsoci("faire_un_choix");
-    // addscoreforcomsoci("pointer_pour_demander_pour_montrer");
-    // addscoreforcomsoci("faire_une_demande");
-    // addscoreforcomsoci("respecter_le_sujet_de_conversation");
-    // addscoreforcomsoci("exprimer_un_refus");
-    // addscoreforcomsoci("respecter_le_tour_de_parole");
-    // addscoreforcomsoci("demander_de_l_aide");
-    // addscoreforcomsoci("mettre_des_commentaires");
-
-    // addscoreforcomsoci("expressions_faciales_mouvements_de_la_bouche");
-    // addscoreforcomsoci("vocalisations_sons_ou_syllabes");
-    // addscoreforcomsoci("actions_du_corps_imite_des_actions_lors_de_chanson_comptines");
-    // addscoreforcomsoci("gestes_ex_mouvements_avec_la_main_pour_saluer");
-    // addscoreforcomsoci("actions_lors_du_jeu_ex_imite_l_action_de_rouler_une_voiture");
-    // addscoreforcomsoci("l_l_ve_prouve_des_difficult_s_suivre_la_routine_du_groupe");
-    // addscoreforcomsoci("l_l_ve_prouve_des_difficult_s_lors_des_temps_non_structur_s");
-
-    if (current.getValue('l_l_ve_prouve_des_difficult_s_cr_er_et_maintenir_des_liens_d_amiti') == "yes") {
-        score += 1.5;
-    }
-	gs.info("215 "+score);
-    // addscoreforcomsoci("cause_effet");
-    // addscoreforcomsoci("collaboratif");
-    // addscoreforcomsoci("manipulation");
-    // addscoreforcomsoci("construction");
-    // addscoreforcomsoci("parall_le");
-    // addscoreforcomsoci("symbolique");
-
 
     function addscoreforjpst(field) {
         switch (current.getValue(field)) {
@@ -350,15 +114,15 @@ gs.info('here');
                 break;
             }
             case 'sometimes': {
-                score += 1;
+                score += 2.6325;
                 break;
             }
             case 'often': {
-                score += 2;
+                score += 5.265;
                 break;
             }
             case 'always': {
-                score += 3;
+                score += 7.8975;
                 break;
             }
             default: {
@@ -367,40 +131,302 @@ gs.info('here');
         }
 
     }
-    addscoreforjpst("l_l_ve_a_de_la_difficult_comprendre_les_consignes");
-    addscoreforjpst("l_l_ve_a_de_la_difficult_comprendre_les_questions");
-    addscoreforjpst("l_l_ve_utilise_des_mots_impr_cis_ex_chose_a_un_vocabulaire_plus_pauvre_qu");
-    addscoreforjpst("l_l_ve_produit_des_phrases_incompl_tes");
-    addscoreforjpst("l_l_ve_produit_des_phrases_grammaticalement_incorrectes");
-    addscoreforjpst("l_l_ve_a_de_la_difficult_raconter_un_v_nement_v_cu_r_cemment");
-    addscoreforjpst("l_l_ve_s_exprime_par_de_l_cholalie_r_p_tition_imm_diate_ou_diff_r_e_d_un_non");
 
+    function addscoreforjpstmodif(field) {
+        switch (current.getValue(field)) {
+            case 'never': {
+                break;
+            }
+            case 'sometimes': {
+                score += 1.755;
+                break;
+            }
+            case 'often': {
+                score += 3.51;
+                break;
+            }
+            case 'always': {
+                score += 5.265;
+                break;
+            }
+            default: {
+                break;
+            }
+        }
 
-    // function addscore(field,val){
-    // 	if(current.getValue(field)=="true"){
-    // 		score+=val;
-    // 	}
+    }
+    // end of functions 
 
-    // }
+    //L’enfant utilise-t-il  la parole comme moyen principal de communication à l’école ou à la maison
 
-    // addscore("pr_maturit_moins_de_36_semaines_ou_petit_poids_la_naissance_moins_de_5_5_l",1);
-    // addscore("difficult_s_langagi_res_dans_la_langue_dominante",3);
-    // addscore("trouble_des_apprentissages",3);
-    // addscore("trouble_de_l_attention",3);
-    // addscore("trouble_du_spectre_de_l_autisme",3);
-    // addscore("retard_langagier",2);
-    // addscore("perte_auditive",2);
-    // addscore("complications_p_rinatales_hospitalisation_prolong_e_la_naissance_ou_plus_tar",1);
-    // addscore("condition_m_dicale_chronique",1);
-    // addscore("alf_pana",1);
-
-    if (current.getValue('est_ce_que_les_difficult_s_observ_es_ont_un_impact_sur_les_apprentissages_scolai') == "yes") {
-        score += 5;
+    if (current.getValue('l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole') == "no") {
+        score += 38.5125;
     }
 
+    // L’élève bégaie (répétitions de sons ou de syllabes, prolongations de sons, blocages) dans sa langue dominante. 
+
+    if (current.getValue('l_l_ve_b_gaie_r_p_titions_de_sons_ou_de_syllabes_prolongations_de_sons_bloca') == "yes") {
+        score += 1.4625;
+    }
+    // L’élève a de la difficulté à prononcer certains sons (autres que /s/ et /z/)
+    if (current.getValue('l_l_ve_a_de_la_difficult_prononcer_certains_sons_autres_que_s_et_zl_eleve_a_de_l') == "yes") {
+        score += 1.4625;
+    }
+    // i. Je comprends l’élève 
+    switch (current.getValue('je_comprends_l_l_ve')) {
+        case "100": {
+            break;
+        }
+        case "75": {
+            score += 0.4875;
+            break;
+        }
+        case "50": {
+            score += 0.975;
+            break;
+        }
+        case "25": {
+            score += 2.4375;
+            break;
+        }
+    }
+
+    //La qualité de la voix de l’élève semble anormale (ex. rauque, nasale), et ce, de manière persistante
+
+    if (current.getValue("la_qualit_de_la_voix_de_l_l_ve_semble_anormale_ex_rauque_nasale_et_ce_dela_quali") == "yes") {
+        score += 0.975;
+    }
+
+    // d. L’élève est conscient de ses difficultés, éprouve de la frustration ou se restreint au niveau de la communication
+
+    if (current.getValue("l_l_ve_est_conscient_de_ses_difficult_s_prouve_de_la_frustration_ou_se_restre") == "yes") {
+        score += 0.975;
+    }
+
+    // L’élève a de la difficulté à comprendre les consignes dans sa langue dominante.
+    addscoreforjpst("l_l_ve_a_de_la_difficult_comprendre_les_consignes");
+
+    // L’élève a de la difficulté à comprendre les questions dans sa langue dominante
+    addscoreforjpst("l_l_ve_a_de_la_difficult_comprendre_les_questions");
+
+    // L’élève utilise des mots imprécis (ex. chose, ça…)/un vocabulaire plus pauvre que la norme dans sa langue dominante.
+    addscoreforjpstmodif("l_l_ve_utilise_des_mots_impr_cis_ex_chose_a_un_vocabulaire_plus_pauvre_qu");
+
+    // L’élève produit des phrases incomplètes dans sa langue dominante.
+    addscoreforjpstmodif("l_l_ve_produit_des_phrases_incompl_tes");
+
+    // L’élève produit des phrases grammaticalement incorrectes dans sa langue dominante.
+    addscoreforjpstmodif("l_l_ve_produit_des_phrases_grammaticalement_incorrectes");
+
+    // L’élève a de la difficulté à raconter un évènement vécu récemment dans sa langue dominante.
+    switch (current.getValue('l_l_ve_a_de_la_difficult_raconter_un_v_nement_v_cu_r_cemment')) {
+        case "100": {
+            break;
+        }
+        case "75": {
+            score += 0.8775;
+            break;
+        }
+        case "50": {
+            score += 1.755;
+            break;
+        }
+        case "25": {
+            score += 2.6325;
+            break;
+        }
+    }
+    // L’élève s’exprime par de l’écholalie (répétition immédiate ou différée d’un énoncé).
+    addscoreforjpstmodif("l_l_ve_s_exprime_par_de_l_cholalie_r_p_tition_imm_diate_ou_diff_r_e_d_un_non");
+
+
+    // L’élève s’exprime verbalement dans le seul but de nommer, de réciter ou d’énumérer.
+    if (current.getValue("l_l_ve_s_exprime_verbalement_dans_le_seul_but_de_nommer_de_r_citer_ou_d_num_r") == "yes") {
+        score += 2.6325;
+    }
+
+    // Quelle est la note obtenue au bulletin le plus récent en communication orale? 
+    switch (current.getValue('quelle_est_la_note_obtenue_au_bulletin_le_plus_r_cent_en_communication_orale')) {
+        case "aoub": {
+            break;
+        }
+        case "c": {
+            score += 0.8775;
+            break;
+        }
+        case "d": {
+            score += 1.755;
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+    // Est-ce que l’élève a un PEI en communication orale (langage expressif et/ou réceptif)?
+    switch (current.getValue('est_ce_que_l_l_ve_a_un_pei_en_communication_orale_langage_expressif_et_ou_r_ce')) {
+        case "no": {
+            break;
+        }
+        case "yes-adapted": {
+            score += 0.8775;
+            break;
+        }
+        case "yes-modified": {
+            score += 1.755;
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+
+    //a.	Quel est le résultat obtenu au dernier Dépist’Écrit
+
+    switch (current.getValue('quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit')) {
+        case "n/a": {
+            break;
+        }
+        case "indifficulty": {
+            score += 1.638;
+            break;
+        }
+        case "inrisk": {
+            score += 0.6825;
+            break;
+        }
+        case "inthestandard": {
+            break;
+        }
+
+    }
+    // a.	L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler les sons des mots à l’oral
+    if (current.getValue("l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler") == "yes") {
+        score += 0.195;
+    }
+    //b.	L’élève présente un retard en lecture (ex.: lien lettre-son, compréhension) 
+    switch (current.getValue('l_l_ve_pr_sente_un_retard_en_lecture')) {
+        case "nodifficulty": {
+            break;
+        }
+        case "slightdelay": {
+            score += 0.04875;
+            break;
+        }
+        case "moderatedelay": {
+            score += 0.0975;
+            break;
+        }
+        case "severedelay": {
+            score += 0.195;
+            break;
+        }
+    }
+    //c.	L’élève éprouve un retard en écriture (ex.: lien son-lettre, orthographe d’usage, orthographe grammaticale) 
+    switch (current.getValue('l_l_ve_prouve_un_retard_en_criture')) {
+        case "nodifficulty": {
+            break;
+        }
+        case "slightdelay": {
+            score += 0.04875;
+            break;
+        }
+        case "moderatedelay": {
+            score += 0.0975;
+            break;
+        }
+        case "severedelay": {
+            score += 0.195;
+            break;
+        }
+    }
+    //d.	Note en lecture au dernier bulletin
+    switch (current.getValue('note_en_lecture_au_dernier_bulletin')) {
+        case "aoub": {
+            break;
+        }
+        case "c": {
+            score += 0.0975;
+            break;
+        }
+        case "d": {
+            score += 0.195;
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+    //Note en écriture au dernier bulletin
+    switch (current.getValue('note_en_criture_au_dernier_bulletin')) {
+        case "aoub": {
+            break;
+        }
+        case "c": {
+            score += 0.0975;
+            break;
+        }
+        case "d": {
+            score += 0.195;
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+    //Est-ce que l’élève a un PEI en lecture et/ou écriture?
+    switch (current.getValue('est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture')) {
+        case "no": {
+            break;
+        }
+        case "yes-adapted": {
+            score += 0.0975;
+            break;
+        }
+        case "yes-modified": {
+            score += 0.195;
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+    //a.	L’élève éprouve des difficultés à utiliser différentes fonctions du langage (cochez les fonctions avec lesquelles l’élève éprouve des difficultés)
+    scoreforselectfields(current.getValue("a_l_l_ve_prouve_des_difficult_s_utiliser_diff_rentes_fonctions_du_langage"));
+
+    //b.	L’élève éprouve des difficultés d’imitation
+    scoreforselectfields(current.getValue("l_l_ve_prouve_des_difficult_s_d_imitation"));
+
+    //c.	Démontre des difficultés en situations sociales
+    scoreforselectfields(current.getValue("c_d_montre_des_difficult_s_en_situations_sociales"));
+
+    //d.	L’élève éprouve des difficultés à créer et à maintenir des liens d’amitié
+    if (current.getValue('l_l_ve_prouve_des_difficult_s_cr_er_et_maintenir_des_liens_d_amiti') == "yes") {
+        score += 0.43875;
+    }
+    //e.	L’élève éprouve des difficultés au niveau du jeu.  (cochez les fonctions avec lesquelles l’élève éprouve des difficultés) 
+    scoreforselectfields(current.getValue("e_l_l_ve_prouve_des_difficult_s_au_niveau_du_jeu"));
+
+    // L’élève présente-il les facteurs de risque suivants (questionnez les parents)? 
+    scoreforselectfields(current.getValue("l_l_ve_pr_sente_il_les_facteurs_de_risque_suivants_questionnez_les_parents"));
+
+    if (current.getValue("l_l_ve_pr_sente_il_les_facteurs_de_risque_suivants_questionnez_les_parents" != null)) {
+        score += 0.78;
+    }
+
+    //Est-ce que les difficultés observées ont un impact sur les apprentissages scolaires de l’élève?
+    if (current.getValue('est_ce_que_les_difficult_s_observ_es_ont_un_impact_sur_les_apprentissages_scolai') == "yes") {
+        score += 0.195;
+    }
+
+    //Les stratégies de différenciation et les adaptations suivantes ont été mises à l’essai en salle de classe (cliquer sur les stratégies déjà employées
+    scoreforselectfields(current.getValue("les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l"));
+
+    //Veuillez cliquer sur les services et programmes dont l’élève a bénéficié ou bénéficie présentement à l’école
+    scoreforselectfields(current.getValue("veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n"));
+    //  De façon générale, est-ce que l’élève profite des interventions offertes?
     switch (current.getValue('de_fa_on_g_n_rale_est_ce_que_l_l_ve_profite_des_interventions_offertes')) {
         case "no": {
-            score += 5;
+            score += 0.195;
             break;
         }
         case "yes": {
@@ -410,11 +436,11 @@ gs.info('here');
             break;
         }
         case "a_little": {
-            score += 3;
+            score += 0.117;
             break;
         }
     }
-
+    // L’élève bénéficie-t-il d’un plan d’enseignement individualisé (PEI) 
     switch (current.getValue('l_l_ve_b_n_ficie_t_il_d_un_plan_d_enseignement_individualis_pei')) {
         case "no": {
             break;
@@ -423,17 +449,83 @@ gs.info('here');
             break;
         }
         case "yes_different_expectation": {
-            score += 3;
+            score += 0.0585;
             break;
         }
         case "yes_modified": {
-            score += 6;
+            score += 0.117;
             break;
         }
     }
-
+    // Cette demande de service en orthophonie a été formellement recommandée par une orthophoniste (du Conseil ou en pratique privée).
     if (current.getValue('cette_demande_de_service_en_orthophonie_a_t_formellement_recommand_e_par_une_o') == "yes") {
-        score += 12;
+        score += 0.234;
+    }
+
+    // ajout multiplicateur
+
+    switch (studylevel) {
+        case "Pre-K": {
+            score = score * 1.5;
+            break;
+        }
+        case "JK": {
+            score = score * 1.5;
+            break;
+        }
+        case "SK": {
+            score = score * 1.5;
+            break;
+        }
+        case "1": {
+            score = score * 1.5;
+            break;
+        }
+        case "2": {
+            score = score * 1.5;
+            break;
+        }
+        case "3": {
+			score = score * 1;
+            break;
+        }
+        case "4": {
+			score = score * 1;
+            break;
+        }
+        case "5": {
+            score = score * 1;
+            break;
+        }
+        case "6": {
+            score = score * 1;
+            break;
+        }
+        case "7": {
+			score = score * 0.5;
+            break;
+        }
+        case "8": {
+			score = score * 0.5;
+            break;
+        }
+        case "9": {
+            score = score * 0.5;
+            break;
+        }
+        case "10": {
+            score = score * 0.5;
+            break;
+        }
+        case "11": {
+			score = score * 0.5;
+            break;
+        }
+        case "12": {
+			score = score * 0.5;
+            break;
+        }
+
     }
 
     current.setValue("score", score);
@@ -446,15 +538,15 @@ gs.info('here');
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cd1cc0f81b083d10d991c882604bcb52</sys_id>
-        <sys_mod_count>127</sys_mod_count>
+        <sys_mod_count>140</sys_mod_count>
         <sys_name>Calcul score </sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_cd1cc0f81b083d10d991c882604bcb52</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-02-14 15:47:00</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-06-28 13:32:44</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
