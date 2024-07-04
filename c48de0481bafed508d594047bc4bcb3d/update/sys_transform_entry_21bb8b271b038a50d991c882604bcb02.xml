@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_entry">
+    <sys_transform_entry action="INSERT_OR_UPDATE">
+        <choice_action>create</choice_action>
+        <coalesce>false</coalesce>
+        <coalesce_case_sensitive>false</coalesce_case_sensitive>
+        <coalesce_empty_fields>false</coalesce_empty_fields>
+        <date_format>yyyy-MM-dd HH:mm:ss</date_format>
+        <map display_value="transform new roi 0307-01">799bc7271b038a50d991c882604bcbda</map>
+        <reference_value_field/>
+        <source_field>u_ld</source_field>
+        <source_script><![CDATA[answer = (function transformEntry(source) {
+
+	// Add your code here
+	return ""; // return the value to be put into the target field
+
+})(source);]]></source_script>
+        <source_table>x_ndecd_triage_2_0_import_roi_0307_014</source_table>
+        <sys_class_name>sys_transform_entry</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-07-03 19:24:49</sys_created_on>
+        <sys_id>21bb8b271b038a50d991c882604bcb02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_ld</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_transform_entry_21bb8b271b038a50d991c882604bcb02</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-07-03 19:24:49</sys_updated_on>
+        <target_field>ld</target_field>
+        <target_table>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</target_table>
+        <use_source_script>false</use_source_script>
+    </sys_transform_entry>
+</record_update>
