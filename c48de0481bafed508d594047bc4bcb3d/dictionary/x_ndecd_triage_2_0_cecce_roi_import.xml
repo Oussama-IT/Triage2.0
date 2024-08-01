@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="134a86861b920a508d594047bc4bcba1" extends="sys_import_set_row" label="cecce Roi import" max_length="40" name="x_ndecd_triage_2_0_cecce_roi_import" type="collection">
+        <element attributes="import_attribute_name=Prio" label="Prio" max_length="40" name="u_prio" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=LR" label="LR" max_length="40" name="u_lr" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Statut SLI" label="Statut SLI " max_length="40" name="u_statut_sli" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Nom ECOLE" label="Nom ECOLE" max_length="40" name="u_nom_ecole" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=LD" label="LD" max_length="40" name="u_ld" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Année scolaire" label="Année scolaire" max_length="40" name="u_année_scolaire" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=ELEVE" label="ELEVE" max_length="40" name="u_eleve" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=Éval requ" label="Éval requ" max_length="40" name="u_éval_requ" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=LD" label="LD" max_length="40" name="u_ld" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=LE" label="LE" max_length="40" name="u_le" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=LR" label="LR" max_length="40" name="u_lr" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=Niveau" label="Niveau" max_length="40" name="u_niveau" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=Nom ECOLE" label="Nom ECOLE" max_length="40" name="u_nom_ecole" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=NOM ORTHO Éval" label="NOM ORTHO Éval" max_length="40" name="u_nom_ortho_éval" type="string"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=NOM ORTHO INTERVENTIONS" label="NOM ORTHO INTERVENTIONS" max_length="40" name="u_nom_ortho_interventions" type="string"/>
-        <element attributes="import_attribute_name=Prio" label="Prio" max_length="40" name="u_prio" type="integer"/>
-        <element attributes="edge_encryption_enabled=true,import_attribute_name=Statut SLI" label="Statut SLI " max_length="40" name="u_statut_sli" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Statut SLI - si admissible" label="Statut SLI - si admissible" max_length="40" name="u_statut_sli___si_admissible" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=NOM ORTHO INTERVENTIONS" label="NOM ORTHO INTERVENTIONS" max_length="40" name="u_nom_ortho_interventions" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Niveau" label="Niveau" max_length="40" name="u_niveau" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Éval requ" label="Éval requ" max_length="40" name="u_éval_requ" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=NOM ORTHO Éval" label="NOM ORTHO Éval" max_length="40" name="u_nom_ortho_éval" type="string"/>
     </element>
 </database>

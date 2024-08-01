@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="e70cf46b1be365108d594047bc4bcb10" extends="task" label="Tâche" max_length="40" name="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi" text_index="true" type="collection">
         <element label="année de la demande int " max_length="40" name="ann_e_de_la_demande_int" type="integer"/>
-        <element label="approver" max_length="32" name="approver" reference="sys_user" type="reference"/>
-        <element label="Autre e-mail" max_length="255" name="autre_e_mail" type="email"/>
-        <element label="Autre situation" max_length="400" name="autre_situation" type="string"/>
-        <element choice="1" label="classe choisie" max_length="40" name="classe_choisie" type="choice">
+        <element choice="1" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_a_t_il_t_envoy_aux_parents_tuteurs_l_gaux" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
+            </choice>
+        </element>
+        <element choice="3" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="LE" max_length="40" name="le" type="choice">
             <choice/>
         </element>
-        <element choice="1" label="Classe distincte" max_length="40" name="classe_distinct" type="choice">
+        <element choice="3" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="LR" max_length="40" name="lr" type="choice">
+            <choice/>
+        </element>
+        <element label="Par l’orthophoniste" max_length="32" name="par_l_orthophoniste" type="string"/>
+        <element label="Date du courriel" max_length="40" name="date_du_courriel" type="glide_date"/>
+        <element label="Autre situation" max_length="400" name="autre_situation" type="string"/>
+        <element label="Particularités" max_length="200" name="particularit_s" type="string"/>
+        <element choice="1" label="Raison de soumission du formulaire" max_length="250" name="raison_de_soumissions_de_formulaire" type="choice">
             <choice>
-                <element dependent_value="DA" inactive_on_update="false" label="Classe DA (Trouble d’apprentissage)" value="DA"/>
-                <element dependent_value="DAF" inactive_on_update="false" label="Classe DAF (Difficulté d’apprentissage - frontière)" value="DAF"/>
-                <element dependent_value="DIL" inactive_on_update="false" label="Classe DIL (Déficience intellectuelle légère)" value="DIL"/>
-                <element dependent_value="HD" inactive_on_update="false" label="Classe HD (Handicap de développement)" value="HD"/>
-                <element dependent_value="TSA" inactive_on_update="false" label="Classe TSA (Trouble du spectre de l’autisme)" value="TSA"/>
+                <element dependent_value="evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_seulemen" inactive_on_update="false" label="Évaluation sommaire ROI avec possibilité de bloc d’intervention" language="fq" value="evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_visible"/>
+                <element dependent_value="bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai" inactive_on_update="false" label="Bloc d’intervention ROI." language="fq" value="bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai"/>
             </choice>
+        </element>
+        <element choice="1" choice_field="x_ndecd_triage_2_0_soumis_par" choice_table="x_ndecd_cecce_base_options" label="Soumis par" max_length="200" name="soumis_par" type="choice">
+            <choice/>
         </element>
         <element choice="1" label="Classe distincte oui ou non" max_length="40" name="classe_distinc_vrai_faux" type="choice">
             <choice>
@@ -22,32 +32,101 @@
                 <element inactive_on_update="false" label="Non" sequence="1" value="no"/>
             </choice>
         </element>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Consentement Parental verbal" max_length="40" name="consentement_parental_verbal" type="choice">
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="sendable 1er jan 1er mai" max_length="40" name="sendable_1er_jan_1er_mai" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Recommandation" max_length="40" name="recomendation" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" type="choice">
             <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
             </choice>
         </element>
-        <element choice="1" label="Cote de priorisation de base" max_length="200" name="c_te_de_priorisation_de_base" type="float">
+        <element label="Pièces jointes" max_length="200" name="linkattachment" type="string"/>
+        <element label="Autre e-mail" max_length="255" name="autre_e_mail" type="email"/>
+        <element choice="1" choice_field="valuation_sommaire_roi_requise_suffisantes" choice_table="x_ndecd_cecce_base_options" label="Évaluation sommaire requise" max_length="40" name="evaluation_sommaire_requise" type="choice">
             <choice>
-                <element inactive_on_update="false" label="1:  N’a jamais reçu le programme ROI par le passé; ne recevra pas SLI prochainement (jardin et première)" value="4"/>
-                <element inactive_on_update="false" label="2: N’a jamais reçu le programme ROI`; recevra SLI prochainement ou l'a reçu l'an dernier" value="3"/>
-                <element inactive_on_update="false" label="3:  A reçu le programme ROI ou SOI-TSA par le passé; n'a pas reçu SLI par le passé et ne le recevra pas prochainement (jardin et première)" value="2"/>
-                <element inactive_on_update="false" label="4: A déjà reçu le programme ROI ou SOI-TSA par le passé et qui recevra le programme SLI prochainement ou l'a reçu l'an dernier" value="1"/>
-                <element inactive_on_update="false" label="5: Non-admissible" value="0"/>
+                <element inactive_on_update="false" label="Évaluation sommaire ROI requise (données insuffisantes)" sequence="1" value="donnees-suffisantes"/>
+                <element inactive_on_update="false" label="Données suffisantes au dossier pour confirmer l’admissibilité à ROI" sequence="0" value="donnees-insuffisantes"/>
             </choice>
         </element>
-        <element label="Date du courriel" max_length="40" name="date_du_courriel" type="glide_date"/>
+        <element label="PRIO" max_length="40" name="prio" type="float"/>
+        <element choice="1" choice_field="statut_sli_si_admissible" choice_table="x_ndecd_cecce_base_options" label="Statut SLI - si admissible" max_length="40" name="statut_sli_si_admissible" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langue dominante" max_length="40" name="langue_dominante" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Portuguese" sequence="8" value="portuguese"/>
+                <element inactive_on_update="false" label="Spanish" sequence="4" value="spanish"/>
+                <element inactive_on_update="false" label="Russian" sequence="7" value="russian"/>
+                <element inactive_on_update="false" label="Japanese" sequence="3" value="japanese"/>
+                <element inactive_on_update="false" label="English" sequence="0" value="english"/>
+                <element inactive_on_update="false" label="Arabic" sequence="6" value="arabic"/>
+                <element inactive_on_update="false" label="Hindi" sequence="2" value="hindi"/>
+                <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
+                <element inactive_on_update="false" label="Chinese" sequence="5" value="chinese"/>
+                <element inactive_on_update="false" label="French" sequence="1" value="french"/>
+            </choice>
+        </element>
+        <element label="Par l’éducatrice ressource langage" max_length="32" name="par_l_ducatrice_ressource_langage" type="string"/>
+        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langage réceptif" max_length="200" name="langage_r_ceptif" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="French" sequence="1" value="french"/>
+                <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
+                <element inactive_on_update="false" label="Chinese" sequence="5" value="chinese"/>
+                <element inactive_on_update="false" label="Portuguese" sequence="8" value="portuguese"/>
+                <element inactive_on_update="false" label="Spanish" sequence="4" value="spanish"/>
+                <element inactive_on_update="false" label="Russian" sequence="7" value="russian"/>
+                <element inactive_on_update="false" label="English" sequence="0" value="english"/>
+                <element inactive_on_update="false" label="Japanese" sequence="3" value="japanese"/>
+                <element inactive_on_update="false" label="Arabic" sequence="6" value="arabic"/>
+                <element inactive_on_update="false" label="Hindi" sequence="2" value="hindi"/>
+            </choice>
+        </element>
+        <element label="etat annee" max_length="40" name="etat_annee" type="integer"/>
+        <element label="Ortho Éval" max_length="32" name="ortho_eval" reference="sys_user" type="reference"/>
+        <element choice="1" choice_field="statut_sli" choice_table="x_ndecd_cecce_base_options" label="Statut SLI" max_length="40" name="statut_sli" type="choice">
+            <choice/>
+        </element>
+        <element label="Nom orthophoniste évaluation" max_length="32" name="orthophoniste_d_evaluation" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du régulier^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du régulier^EQ" type="reference"/>
+        <element label="Score ROI" max_length="40" name="score_roi" type="float"/>
+        <element choice="1" default="par lettre" label="Type d'envoi du rapport" max_length="40" name="type_d_envoi_du_rapport" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Par courriel" sequence="1" value="par courriel"/>
+                <element inactive_on_update="false" label="Par lettre" sequence="0" value="par lettre"/>
+            </choice>
+        </element>
+        <element label="Raison" max_length="250" name="raison" type="string"/>
+        <element label="Suivis antérieurs" max_length="4000" name="suivis_ant_rieurs" reference="x_ndecd_cecce_base_sli_roi_qa" reference_qual="questionSTARTSWITHLesquels program^EQ" reference_qual_condition="questionSTARTSWITHLesquels program^EQ" type="glide_list"/>
+        <element label="Eleve" mandatory="true" max_length="32" name="eleve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
         <element choice="1" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="Degré de sévérité langage expressif" max_length="200" name="degr_de_s_v_rit_langage_expressif" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Adéquat" sequence="0" value="adequat"/>
-                <element inactive_on_update="false" label="Léger" sequence="1" value="leger"/>
-                <element inactive_on_update="false" label="Léger à modéré" sequence="2" value="leger-a-modere"/>
                 <element inactive_on_update="false" label="Modéré" sequence="3" value="modere"/>
-                <element inactive_on_update="false" label="Modéré à sévère" sequence="4" value="modere-a-severe"/>
+                <element inactive_on_update="false" label="Léger à modéré" sequence="2" value="leger-a-modere"/>
+                <element inactive_on_update="false" label="Adéquat" sequence="0" value="adequat"/>
                 <element inactive_on_update="false" label="Sévère" sequence="5" value="severe"/>
+                <element inactive_on_update="false" label="Léger" sequence="1" value="leger"/>
+                <element inactive_on_update="false" label="Modéré à sévère" sequence="4" value="modere-a-severe"/>
             </choice>
         </element>
+        <element label="approver" max_length="32" name="approver" reference="sys_user" type="reference"/>
+        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langage expressif" max_length="200" name="langage_expressif" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Russian" sequence="7" value="russian"/>
+                <element inactive_on_update="false" label="English" sequence="0" value="english"/>
+                <element inactive_on_update="false" label="Japanese" sequence="3" value="japanese"/>
+                <element inactive_on_update="false" label="Arabic" sequence="6" value="arabic"/>
+                <element inactive_on_update="false" label="Hindi" sequence="2" value="hindi"/>
+                <element inactive_on_update="false" label="Chinese" sequence="5" value="chinese"/>
+                <element inactive_on_update="false" label="French" sequence="1" value="french"/>
+                <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
+                <element inactive_on_update="false" label="Spanish" sequence="4" value="spanish"/>
+                <element inactive_on_update="false" label="Portuguese" sequence="8" value="portuguese"/>
+            </choice>
+        </element>
+        <element label="Statut ROI" max_length="200" name="statut_roi" type="string"/>
         <element choice="3" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="Degré de sévérité langage réceptif" max_length="200" name="degr_de_s_v_rit_langage_r_ceptif" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Adéquat" sequence="0" value="adequat"/>
@@ -58,83 +137,55 @@
                 <element inactive_on_update="false" label="Sévère" sequence="5" value="severe"/>
             </choice>
         </element>
+        <element choice="1" label="Cote de priorisation de base" max_length="200" name="c_te_de_priorisation_de_base" type="float">
+            <choice>
+                <element inactive_on_update="false" label="5: Non-admissible" value="0"/>
+                <element inactive_on_update="false" label="2: N’a jamais reçu le programme ROI`; recevra SLI prochainement ou l'a reçu l'an dernier" value="3"/>
+                <element inactive_on_update="false" label="1:  N’a jamais reçu le programme ROI par le passé; ne recevra pas SLI prochainement (jardin et première)" value="4"/>
+                <element inactive_on_update="false" label="3:  A reçu le programme ROI ou SOI-TSA par le passé; n'a pas reçu SLI par le passé et ne le recevra pas prochainement (jardin et première)" value="2"/>
+                <element inactive_on_update="false" label="4: A déjà reçu le programme ROI ou SOI-TSA par le passé et qui recevra le programme SLI prochainement ou l'a reçu l'an dernier" value="1"/>
+            </choice>
+        </element>
+        <element choice="1" label="Classe distincte" max_length="40" name="classe_distinct" type="choice">
+            <choice>
+                <element dependent_value="TSA" inactive_on_update="false" label="Classe TSA (Trouble du spectre de l’autisme)" value="TSA"/>
+                <element dependent_value="DA" inactive_on_update="false" label="Classe DA (Trouble d’apprentissage)" value="DA"/>
+                <element dependent_value="HD" inactive_on_update="false" label="Classe HD (Handicap de développement)" value="HD"/>
+                <element dependent_value="DAF" inactive_on_update="false" label="Classe DAF (Difficulté d’apprentissage - frontière)" value="DAF"/>
+                <element dependent_value="DIL" inactive_on_update="false" label="Classe DIL (Déficience intellectuelle légère)" value="DIL"/>
+            </choice>
+        </element>
+        <element choice="1" label="Situation familiale" max_length="2000" name="situation_familiale" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Habite avec son tuteur ou sa tutrice" value="habite avec son tuteur ou sa tutrice"/>
+                <element inactive_on_update="false" label="Autre situation" value="autre situation"/>
+                <element dependent_value="fait l’objet d’une garde exclusive avec sa mère" inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec sa mère" value="fait l’objet d’une garde exclusive avec sa mère"/>
+                <element dependent_value="fait l’objet d’une garde exclusive avec son père" inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec son père" value="fait l’objet d’une garde exclusive avec son père"/>
+                <element dependent_value="réside avec ses deux parents à la même adresse" inactive_on_update="false" label="Réside avec ses deux parents à la même adresse" value="réside avec ses deux parents à la même adresse"/>
+                <element dependent_value="Fait l’objet d’une garde partagée" inactive_on_update="false" label="Fait l’objet d’une garde partagée" value="fait l’objet d’une garde partagée"/>
+            </choice>
+        </element>
         <element label="Demandesliroi" max_length="4000" name="demandesliroi" reference="x_ndecd_cecce_base_sli_roi_qa" type="glide_list"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="sendable 15 sep 1er dec" max_length="40" name="sendable_15_sep_1er_dec" type="choice">
+            <choice/>
+        </element>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Dépistage SLI requis" max_length="40" name="d_pistage_sli_requis" type="choice">
             <choice/>
-        </element>
-        <element label="Eleve" mandatory="true" max_length="32" name="eleve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
-        <element choice="1" choice_field="diagnostic" choice_table="x_ndecd_cecce_base_options" label="Diagnostique" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">
-            <choice/>
-        </element>
-        <element label="etat annee" max_length="40" name="etat_annee" type="integer"/>
-        <element choice="1" choice_field="valuation_sommaire_roi_requise_suffisantes" choice_table="x_ndecd_cecce_base_options" label="Évaluation sommaire requise" max_length="40" name="evaluation_sommaire_requise" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Données suffisantes au dossier pour confirmer l’admissibilité à ROI" sequence="0" value="donnees-insuffisantes"/>
-                <element inactive_on_update="false" label="Évaluation sommaire ROI requise (données insuffisantes)" sequence="1" value="donnees-suffisantes"/>
-            </choice>
-        </element>
-        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langage expressif" max_length="200" name="langage_expressif" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="English" sequence="0" value="english"/>
-                <element inactive_on_update="false" label="French" sequence="1" value="french"/>
-                <element inactive_on_update="false" label="Hindi" sequence="2" value="hindi"/>
-                <element inactive_on_update="false" label="Japanese" sequence="3" value="japanese"/>
-                <element inactive_on_update="false" label="Spanish" sequence="4" value="spanish"/>
-                <element inactive_on_update="false" label="Chinese" sequence="5" value="chinese"/>
-                <element inactive_on_update="false" label="Arabic" sequence="6" value="arabic"/>
-                <element inactive_on_update="false" label="Russian" sequence="7" value="russian"/>
-                <element inactive_on_update="false" label="Portuguese" sequence="8" value="portuguese"/>
-                <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
-            </choice>
-        </element>
-        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langage réceptif" max_length="200" name="langage_r_ceptif" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="English" sequence="0" value="english"/>
-                <element inactive_on_update="false" label="French" sequence="1" value="french"/>
-                <element inactive_on_update="false" label="Hindi" sequence="2" value="hindi"/>
-                <element inactive_on_update="false" label="Japanese" sequence="3" value="japanese"/>
-                <element inactive_on_update="false" label="Spanish" sequence="4" value="spanish"/>
-                <element inactive_on_update="false" label="Chinese" sequence="5" value="chinese"/>
-                <element inactive_on_update="false" label="Arabic" sequence="6" value="arabic"/>
-                <element inactive_on_update="false" label="Russian" sequence="7" value="russian"/>
-                <element inactive_on_update="false" label="Portuguese" sequence="8" value="portuguese"/>
-                <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
-            </choice>
-        </element>
-        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langue dominante" max_length="40" name="langue_dominante" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="English" sequence="0" value="english"/>
-                <element inactive_on_update="false" label="French" sequence="1" value="french"/>
-                <element inactive_on_update="false" label="Hindi" sequence="2" value="hindi"/>
-                <element inactive_on_update="false" label="Japanese" sequence="3" value="japanese"/>
-                <element inactive_on_update="false" label="Spanish" sequence="4" value="spanish"/>
-                <element inactive_on_update="false" label="Chinese" sequence="5" value="chinese"/>
-                <element inactive_on_update="false" label="Arabic" sequence="6" value="arabic"/>
-                <element inactive_on_update="false" label="Russian" sequence="7" value="russian"/>
-                <element inactive_on_update="false" label="Portuguese" sequence="8" value="portuguese"/>
-                <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
-            </choice>
         </element>
         <element choice="3" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="LD" max_length="40" name="ld" type="choice">
             <choice/>
         </element>
-        <element choice="3" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="LE" max_length="40" name="le" type="choice">
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Consentement Parental verbal" max_length="40" name="consentement_parental_verbal" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+            </choice>
+        </element>
+        <element choice="1" choice_field="diagnostic" choice_table="x_ndecd_cecce_base_options" label="Diagnostique" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">
             <choice/>
         </element>
-        <element choice="1" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_a_t_il_t_envoy_aux_parents_tuteurs_l_gaux" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
-                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
-            </choice>
-        </element>
-        <element choice="1" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
-                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
-            </choice>
-        </element>
-        <element label="Pièces jointes" max_length="200" name="linkattachment" type="string"/>
-        <element choice="3" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="LR" max_length="40" name="lr" type="choice">
+        <element label="Nom orthophoniste intervention" max_length="32" name="nom_orthophoniste_intervention" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du régulier^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du régulier^EQ" type="reference"/>
+        <element choice="1" label="classe choisie" max_length="40" name="classe_choisie" type="choice">
             <choice/>
         </element>
         <element choice="3" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Nom du demandeur" max_length="40" name="nom_du_demandeur" type="choice">
@@ -143,57 +194,6 @@
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
             </choice>
         </element>
-        <element label="Nom orthophoniste intervention" max_length="32" name="nom_orthophoniste_intervention" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du régulier^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du régulier^EQ" type="reference"/>
-        <element label="Nom orthophoniste évaluation" max_length="32" name="orthophoniste_d_evaluation" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du régulier^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du régulier^EQ" type="reference"/>
-        <element label="Ortho Éval" max_length="32" name="ortho_eval" reference="sys_user" type="reference"/>
         <element label="Ortho Int" max_length="32" name="ortho_int" reference="sys_user" type="reference"/>
-        <element label="Particularités" max_length="200" name="particularit_s" type="string"/>
-        <element label="Par l’éducatrice ressource langage" max_length="32" name="par_l_ducatrice_ressource_langage" type="string"/>
-        <element label="Par l’orthophoniste" max_length="32" name="par_l_orthophoniste" type="string"/>
-        <element label="PRIO" max_length="40" name="prio" type="float"/>
-        <element label="Raison" max_length="250" name="raison" type="string"/>
-        <element choice="1" label="Raison de soumission du formulaire" max_length="250" name="raison_de_soumissions_de_formulaire" type="choice">
-            <choice>
-                <element dependent_value="bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai" inactive_on_update="false" label="Bloc d’intervention ROI." language="fq" value="bloc_dintervention_roi_option_seulement_disponible_du_1_er_janvier_au_26_mai"/>
-                <element dependent_value="evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_seulemen" inactive_on_update="false" label="Évaluation sommaire ROI avec possibilité de bloc d’intervention" language="fq" value="evaluation_sommaire_roi_avec_possibilite_de_bloc_dintervention_option_visible"/>
-            </choice>
-        </element>
-        <element choice="1" label="Recommandation" max_length="40" name="recomendation" type="choice">
-            <choice/>
-        </element>
-        <element label="Score ROI" max_length="40" name="score_roi" type="float"/>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="sendable 15 sep 1er dec" max_length="40" name="sendable_15_sep_1er_dec" type="choice">
-            <choice/>
-        </element>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="sendable 1er jan 1er mai" max_length="40" name="sendable_1er_jan_1er_mai" type="choice">
-            <choice/>
-        </element>
-        <element choice="1" label="Situation familiale" max_length="2000" name="situation_familiale" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Autre situation" value="autre situation"/>
-                <element dependent_value="fait l’objet d’une garde exclusive avec sa mère" inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec sa mère" value="fait l’objet d’une garde exclusive avec sa mère"/>
-                <element dependent_value="fait l’objet d’une garde exclusive avec son père" inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec son père" value="fait l’objet d’une garde exclusive avec son père"/>
-                <element dependent_value="Fait l’objet d’une garde partagée" inactive_on_update="false" label="Fait l’objet d’une garde partagée" value="fait l’objet d’une garde partagée"/>
-                <element inactive_on_update="false" label="Habite avec son tuteur ou sa tutrice" value="habite avec son tuteur ou sa tutrice"/>
-                <element dependent_value="réside avec ses deux parents à la même adresse" inactive_on_update="false" label="Réside avec ses deux parents à la même adresse" value="réside avec ses deux parents à la même adresse"/>
-            </choice>
-        </element>
-        <element choice="1" choice_field="x_ndecd_triage_2_0_soumis_par" choice_table="x_ndecd_cecce_base_options" label="Soumis par" max_length="200" name="soumis_par" type="choice">
-            <choice/>
-        </element>
-        <element label="Statut ROI" max_length="200" name="statut_roi" type="string"/>
-        <element choice="1" choice_field="statut_sli" choice_table="x_ndecd_cecce_base_options" label="Statut SLI" max_length="40" name="statut_sli" type="choice">
-            <choice/>
-        </element>
-        <element choice="1" choice_field="statut_sli_si_admissible" choice_table="x_ndecd_cecce_base_options" label="Statut SLI - si admissible" max_length="40" name="statut_sli_si_admissible" type="choice">
-            <choice/>
-        </element>
-        <element label="Suivis antérieurs" max_length="4000" name="suivis_ant_rieurs" reference="x_ndecd_cecce_base_sli_roi_qa" reference_qual="questionSTARTSWITHLesquels program^EQ" reference_qual_condition="questionSTARTSWITHLesquels program^EQ" type="glide_list"/>
-        <element choice="1" default="par lettre" label="Type d'envoi du rapport" max_length="40" name="type_d_envoi_du_rapport" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Par lettre" sequence="0" value="par lettre"/>
-                <element inactive_on_update="false" label="Par courriel" sequence="1" value="par courriel"/>
-            </choice>
-        </element>
     </element>
 </database>

@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="9f0ea0eb1ba365108d594047bc4bcb29" extends="task" label="Tâche" max_length="40" name="x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture" text_index="true" type="collection">
-        <element label="Autre e-mail" max_length="255" name="autre_e_mail" type="email"/>
-        <element label="Autre situation(explication) :" max_length="255" name="autre_situation_explication" type="string_full_utf8"/>
-        <element choice="1" label="Spécifier la classe entre les choix suivants" max_length="40" name="classe_distinct" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Classe DA (Trouble d’apprentissage)" sequence="0" value="DA"/>
-                <element inactive_on_update="false" label="Classe DAF (Difficulté d’apprentissage - frontière)" sequence="1" value="DAF"/>
-                <element inactive_on_update="false" label="Classe DIL (Déficience intellectuelle légère)" sequence="2" value="DIL"/>
-                <element inactive_on_update="false" label="Classe HD (Handicap de développement)" sequence="3" value="HD"/>
-                <element inactive_on_update="false" label="Classe TSA (Trouble du spectre de l’autisme)" sequence="4" value="TSA"/>
-            </choice>
-        </element>
-        <element label="Je confirme avoir obtenu le consentement parental verbal pour cette demande afin" max_length="40" name="consentement_parental_verbal" type="boolean"/>
-        <element label="eleve" max_length="32" name="eleve" reference="sys_user" type="reference"/>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’achat d’outils technologiques a été recommandé par un(e) profession" max_length="40" name="est_ce_que_l_achat_d_outils_technologiques_a_t_recommand_par_un_e_profession" type="choice">
-            <choice>
-                <element inactive="true" inactive_on_update="true" label="Oui" sequence="0" value="yes"/>
-                <element inactive="true" inactive_on_update="true" label="Non" sequence="1" value="no"/>
-            </choice>
-        </element>
-        <element choice="1" label="Est-ce que l’élève a un diagnostic" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="TSA" sequence="0" value="TSA"/>
-                <element inactive_on_update="false" label="HD/DIL" sequence="1" value="HD/DIL"/>
-                <element inactive_on_update="false" label="Aucun diagnostic ou autre diagnostic" sequence="2" value="Aucun"/>
-            </choice>
-        </element>
         <element choice="1" choice_field="yes_no_indifferent" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève est motivé(e) à utiliser la technologie d’aide?" max_length="40" name="est_ce_que_l_l_ve_est_motiv_e_utiliser_la_technologie_d_aide" type="choice">
             <choice/>
         </element>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
+        <element choice="1" label="Spécifier la classe entre les choix suivants" max_length="40" name="classe_distinct" type="choice">
             <choice>
-                <element inactive="true" inactive_on_update="true" label="Oui" sequence="0" value="yes"/>
-                <element inactive="true" inactive_on_update="true" label="Non" sequence="1" value="no"/>
-            </choice>
-        </element>
-        <element choice="1" choice_field="yes_no_notquite" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève possède des aptitudes de base pour pouvoir utiliser cette tec" max_length="40" name="est_ce_que_l_l_ve_poss_de_des_aptitudes_de_base_pour_pouvoir_utiliser_cette_tec" type="choice">
-            <choice/>
-        </element>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce qu’une période de mise à l’essai de l’outil technologique a été complétée" max_length="40" name="est_ce_qu_une_p_riode_de_mise_l_essai_de_l_outil_technologique_a_t_compl_t_e" type="choice">
-            <choice/>
-        </element>
-        <element choice="1" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_a_t_il_t_envoy_aux_parents_tuteurs_l_gaux" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
-                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
-            </choice>
-        </element>
-        <element choice="1" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
-                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Classe HD (Handicap de développement)" sequence="3" value="HD"/>
+                <element inactive_on_update="false" label="Classe DA (Trouble d’apprentissage)" sequence="0" value="DA"/>
+                <element inactive_on_update="false" label="Classe DAF (Difficulté d’apprentissage - frontière)" sequence="1" value="DAF"/>
+                <element inactive_on_update="false" label="Classe TSA (Trouble du spectre de l’autisme)" sequence="4" value="TSA"/>
+                <element inactive_on_update="false" label="Classe DIL (Déficience intellectuelle légère)" sequence="2" value="DIL"/>
             </choice>
         </element>
         <element label="linkattachment" max_length="200" name="linkattachment" type="string"/>
-        <element label="Par qui?" max_length="32" name="par_qui" type="string"/>
-        <element label=" À quelle date?" max_length="40" name="quelle_date" type="glide_date"/>
-        <element label="Raison" max_length="250" name="raison" type="string"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Non" sequence="1" value="no"/>
+                <element inactive="true" inactive_on_update="true" label="Oui" sequence="0" value="yes"/>
+            </choice>
+        </element>
         <element label="Situation familiale de l’élève" max_length="100" name="situation_familiale_de_l_l_ve" type="string"/>
-        <element label="test" max_length="40" name="test" type="file_attachment"/>
+        <element choice="1" label="Est-ce que l’élève a un diagnostic" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="TSA" sequence="0" value="TSA"/>
+                <element inactive_on_update="false" label="Aucun diagnostic ou autre diagnostic" sequence="2" value="Aucun"/>
+                <element inactive_on_update="false" label="HD/DIL" sequence="1" value="HD/DIL"/>
+            </choice>
+        </element>
         <element choice="1" default="par lettre" label="Type d'envoi du rapport" max_length="40" name="type_d_envoi_du_rapport" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Par courriel" sequence="0" value="par courriel"/>
                 <element inactive_on_update="false" label="Par lettre" sequence="1" value="par lettre"/>
             </choice>
         </element>
+        <element label="Raison" max_length="250" name="raison" type="string"/>
+        <element label=" À quelle date?" max_length="40" name="quelle_date" type="glide_date"/>
+        <element label="Autre situation(explication) :" max_length="255" name="autre_situation_explication" type="string_full_utf8"/>
+        <element label="Je confirme avoir obtenu le consentement parental verbal pour cette demande afin" max_length="40" name="consentement_parental_verbal" type="boolean"/>
+        <element choice="1" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_a_t_il_t_envoy_aux_parents_tuteurs_l_gaux" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
+            </choice>
+        </element>
+        <element label="Autre e-mail" max_length="255" name="autre_e_mail" type="email"/>
+        <element choice="1" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Oui" sequence="0" value="oui"/>
+                <element inactive_on_update="false" label="Oui" language="fq" sequence="0" value="oui"/>
+            </choice>
+        </element>
+        <element label="Par qui?" max_length="32" name="par_qui" type="string"/>
+        <element choice="1" choice_field="yes_no_notquite" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève possède des aptitudes de base pour pouvoir utiliser cette tec" max_length="40" name="est_ce_que_l_l_ve_poss_de_des_aptitudes_de_base_pour_pouvoir_utiliser_cette_tec" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’achat d’outils technologiques a été recommandé par un(e) profession" max_length="40" name="est_ce_que_l_achat_d_outils_technologiques_a_t_recommand_par_un_e_profession" type="choice">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Non" sequence="1" value="no"/>
+                <element inactive="true" inactive_on_update="true" label="Oui" sequence="0" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce qu’une période de mise à l’essai de l’outil technologique a été complétée" max_length="40" name="est_ce_qu_une_p_riode_de_mise_l_essai_de_l_outil_technologique_a_t_compl_t_e" type="choice">
+            <choice/>
+        </element>
+        <element label="eleve" max_length="32" name="eleve" reference="sys_user" type="reference"/>
+        <element label="test" max_length="40" name="test" type="file_attachment"/>
     </element>
 </database>

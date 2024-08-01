@@ -1,145 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="c42c1a931bcd0e508d594047bc4bcb6e" extends="task" label="Demande TSA" max_length="40" name="x_ndecd_triage_2_0_demande_tsa" text_index="true" type="collection">
-        <element label=" Attentes du PEI en lien avec" max_length="4000" name="attentes_du_pei_en_lien_avec" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHAttentes du PEI en lien avec" reference_qual_condition="questionSTARTSWITHAttentes du PEI en lien avec" type="glide_list"/>
-        <element label="Audiologie date" max_length="40" name="audiologie_date" type="glide_date"/>
-        <element label="Autre situation explication" max_length="200" name="autre_situation_explication" type="string"/>
-        <element label="Date de l’obtention du consentement parental" max_length="40" name="date_de_l_obtention_du_consentement_parental" type="glide_date"/>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Des difficultés sont-elles observées au niveau de la lecture ou de l’écriture co" max_length="40" name="des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture_co" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
-        </element>
-        <element label="diagnostic médical officiel d’un TSA?explication autre" max_length="200" name="diagnostic_m_dical_officiel_d_un_tsa_explication_autre" type="string"/>
-        <element label="Difficultés au niveau de la routine et des transitions" max_length="4000" name="difficult_s_au_niveau_de_la_routine_et_des_transitions" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés au niveau de la routine" reference_qual_condition="questionSTARTSWITHdifficultés au niveau de la routine" type="glide_list"/>
-        <element choice="1" choice_field="yes_only" choice_table="x_ndecd_cecce_base_options" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="document_pdf_consentement_parental_re_u" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
-        </element>
-        <element label="eleve" max_length="32" name="eleve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
-        <element label="Ergothérapie date" max_length="40" name="ergoth_rapie_date" type="glide_date"/>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label=" Est-ce que des difficultés langagières sont observées dans sa langue dominante " max_length="40" name="est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
-        </element>
-        <element choice="1" choice_field="yes_no_uncertain" choice_table="x_ndecd_cecce_base_options" label="Est-ce que les parents sont en accord avec cette demande de placement?" max_length="40" name="est_ce_que_les_parents_sont_en_accord_avec_cette_demande_de_placement" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-                <element inactive_on_update="false" label="Uncertain" sequence="2" value="uncertain"/>
-            </choice>
-        </element>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est ce que “Le formulaire d’aiguillage Services orthophoniques régulier vs volet" max_length="40" name="est_ce_que_le_formulaire_d_aiguillage_services_orthophoniques_r_gulier_vs_volet" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
-        </element>
-        <element choice="1" label="Est-ce que l'élève a un diagnostic posé par un professionnel de la santé autoris" max_length="4000" name="est_ce_que_l_l_ve_a_un_diagnostic_pos_par_un_professionnel_de_la_sant_autoris" type="choice">
-            <choice/>
-        </element>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève a un PEI en lecture et/ou écriture?" max_length="40" name="est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
-        </element>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève est en attente d’une évaluation pouvant mener à un diagnostic" max_length="40" name="est_ce_que_l_l_ve_est_en_attente_d_une_valuation_pouvant_mener_un_diagnostic" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
-        </element>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
-            <choice/>
-        </element>
-        <element label="Est-ce que l’élève présente un diagnostic médical officiel d’un TSA? explication" max_length="4000" name="est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel_d_un_tsa_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdiagnostic médical officiel d’un TSA" reference_qual_condition="questionSTARTSWITHdiagnostic médical officiel d’un TSA" type="glide_list"/>
-        <element choice="1" choice_field="oui_non_possible" choice_table="x_ndecd_cecce_base_options" label="Est-ce qu’un placement est envisagé pour l’élève?" max_length="40" name="est_ce_qu_un_placement_est_envisag_pour_l_l_ve" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
-        </element>
-        <element label="Formulaire d'aiguillage" max_length="40" name="formulaire_d_aiguillage" type="file_attachment"/>
-        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langue dominante de l’élève (la langue avec laquelle l’élève est le plus à l’ais" max_length="40" name="langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="English" sequence="0" value="english"/>
-                <element inactive_on_update="false" label="French" sequence="1" value="french"/>
-                <element inactive_on_update="false" label="Hindi" sequence="2" value="hindi"/>
-                <element inactive_on_update="false" label="Japanese" sequence="3" value="japanese"/>
-                <element inactive_on_update="false" label="Spanish" sequence="4" value="spanish"/>
-                <element inactive_on_update="false" label="Chinese" sequence="5" value="chinese"/>
-                <element inactive_on_update="false" label="Arabic" sequence="6" value="arabic"/>
-                <element inactive_on_update="false" label="Russian" sequence="7" value="russian"/>
-                <element inactive_on_update="false" label="Portuguese" sequence="8" value="portuguese"/>
-                <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
-            </choice>
-        </element>
-        <element label="Langue(s) parlée(s) à la maison" max_length="4000" name="langue_s_parl_e_s_la_maison" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHlangue parlée" reference_qual_condition="questionSTARTSWITHlangue parlée" type="glide_list"/>
-        <element label="Les enfants utilisent souvent plus d’un moyen pour exprimer leurs besoins." max_length="4000" name="les_enfants_utilisent_souvent_plus_d_un_moyen_pour_exprimer_leurs_besoins" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHmoyen pour exprimer leurs besoins" reference_qual_condition="questionSTARTSWITHmoyen pour exprimer leurs besoins" type="glide_list"/>
-        <element label="L’enfant communique (verbalement ou non-verbalement) pour:" max_length="4000" name="l_enfant_communique_verbalement_ou_non_verbalement_pour" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHL’enfant communique" reference_qual_condition="questionSTARTSWITHL’enfant communique" type="glide_list"/>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label=" L’enfant utilise-t-il la parole comme moyen principal pour communiquer ses beso" max_length="40" name="l_enfant_utilise_t_il_la_parole_comme_moyen_principal_pour_communiquer_ses_beso" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
-        </element>
-        <element label="L’élève a-t-il reçu des services professionnels autre" max_length="200" name="l_l_ve_a_t_il_re_u_des_services_professionnels_autre" type="string"/>
-        <element label="L’élève a-t-il reçu des services professionnels dans les domaines suivants" max_length="4000" name="l_l_ve_a_t_il_re_u_des_services_professionnels_dans_les_domaines_suivants" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHServices professionels" reference_qual_condition="questionSTARTSWITHServices professionels" type="glide_list"/>
-        <element label="Autre :" max_length="200" name="l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_autre" type="string"/>
-        <element label="L’élève démontre-t-il des difficultés à comprendre le langage oral explication" max_length="4000" name="l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés à comprendre le langage oral" reference_qual_condition="questionSTARTSWITHdifficultés à comprendre le langage oral" type="glide_list"/>
-        <element label="L’élève démontre-t-il de l’intérêt à partager son plaisir, ses réussites et ses " max_length="4000" name="l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHl’intérêt à partager son plaisir, ses ré" reference_qual_condition="questionSTARTSWITHl’intérêt à partager son plaisir, ses ré" type="glide_list"/>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler" max_length="40" name="l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler" type="choice">
-            <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-            </choice>
-        </element>
-        <element label="difficultés à former des relations avec ses pairs du même âge" max_length="4000" name="l_l_ve_prouve_t_il_des_difficult_s_former_des_relations_avec_ses_pairs_du_m" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés à former des relations avec^EQ" reference_qual_condition="questionSTARTSWITHdifficultés à former des relations avec^EQ" type="glide_list"/>
-        <element label="L’élève éprouve-t-il des difficultés à imiter" max_length="4000" name="l_l_ve_prouve_t_il_des_difficult_s_imiter" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés à imiter^EQ" reference_qual_condition="questionSTARTSWITHdifficultés à imiter^EQ" type="glide_list"/>
-        <element label="L’élève éprouve-t-il des difficultés liées reciprocite explication" max_length="4000" name="l_l_ve_prouve_t_il_des_difficult_s_li_es_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés liées à la réciprocité socia^EQ" reference_qual_condition="questionSTARTSWITHdifficultés liées à la réciprocité socia^EQ" type="glide_list"/>
-        <element label="L’élève éprouve-t-il des difficultés à réguler les interactions sociales en util" max_length="4000" name="l_l_ve_prouve_t_il_des_difficult_s_r_guler_les_interactions_sociales_en_util" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés à réguler les interactions s" reference_qual_condition="questionSTARTSWITHdifficultés à réguler les interactions s" type="glide_list"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève éprouve un retard en écriture" max_length="40" name="l_l_ve_prouve_un_retard_en_criture" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
             </choice>
         </element>
-        <element label="L l ve pr sente t il des difficult s au niveau des habilet s li es au jeu ex" max_length="4000" name="l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés au niveau des habiletés liée^EQ" reference_qual_condition="questionSTARTSWITHdifficultés au niveau des habiletés liée^EQ" type="glide_list"/>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève présente un retard en lecture" max_length="40" name="l_l_ve_pr_sente_un_retard_en_lecture" type="choice">
+        <element label="Pratique privée date" max_length="40" name="pratique_priv_e_date" type="glide_date"/>
+        <element label="difficultés à former des relations avec ses pairs du même âge" max_length="4000" name="l_l_ve_prouve_t_il_des_difficult_s_former_des_relations_avec_ses_pairs_du_m" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés à former des relations avec^EQ" reference_qual_condition="questionSTARTSWITHdifficultés à former des relations avec^EQ" type="glide_list"/>
+        <element label="SRMS date" max_length="40" name="srms_date" type="glide_date"/>
+        <element label="eleve" max_length="32" name="eleve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
+        <element label="L’élève a-t-il reçu des services professionnels autre" max_length="200" name="l_l_ve_a_t_il_re_u_des_services_professionnels_autre" type="string"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label=" L’enfant utilise-t-il la parole comme moyen principal pour communiquer ses beso" max_length="40" name="l_enfant_utilise_t_il_la_parole_comme_moyen_principal_pour_communiquer_ses_beso" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
             </choice>
         </element>
+        <element label="Formulaire d'aiguillage" max_length="40" name="formulaire_d_aiguillage" type="file_attachment"/>
+        <element choice="1" choice_field="oui_non_possible" choice_table="x_ndecd_cecce_base_options" label="Est-ce qu’un placement est envisagé pour l’élève?" max_length="40" name="est_ce_qu_un_placement_est_envisag_pour_l_l_ve" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+        <element label="L’élève a-t-il reçu des services professionnels dans les domaines suivants" max_length="4000" name="l_l_ve_a_t_il_re_u_des_services_professionnels_dans_les_domaines_suivants" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHServices professionels" reference_qual_condition="questionSTARTSWITHServices professionels" type="glide_list"/>
+        <element label="recommendation et strategies" max_length="4000" name="recommendation_et_strategies" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHRecommandations et stratégies" reference_qual_condition="questionSTARTSWITHRecommandations et stratégies" type="glide_list"/>
+        <element label="L’élève éprouve-t-il des difficultés liées reciprocite explication" max_length="4000" name="l_l_ve_prouve_t_il_des_difficult_s_li_es_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés liées à la réciprocité socia^EQ" reference_qual_condition="questionSTARTSWITHdifficultés liées à la réciprocité socia^EQ" type="glide_list"/>
+        <element label="L’élève démontre-t-il de l’intérêt à partager son plaisir, ses réussites et ses " max_length="4000" name="l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHl’intérêt à partager son plaisir, ses ré" reference_qual_condition="questionSTARTSWITHl’intérêt à partager son plaisir, ses ré" type="glide_list"/>
+        <element label="L’élève éprouve-t-il des difficultés à réguler les interactions sociales en util" max_length="4000" name="l_l_ve_prouve_t_il_des_difficult_s_r_guler_les_interactions_sociales_en_util" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés à réguler les interactions s" reference_qual_condition="questionSTARTSWITHdifficultés à réguler les interactions s" type="glide_list"/>
+        <element choice="1" label="Statut de la demande" max_length="40" name="statut_de_la_demande" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" choice_field="yes_no_uncertain" choice_table="x_ndecd_cecce_base_options" label="Est-ce que les parents sont en accord avec cette demande de placement?" max_length="40" name="est_ce_que_les_parents_sont_en_accord_avec_cette_demande_de_placement" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Uncertain" sequence="2" value="uncertain"/>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+        <element label="L’enfant communique (verbalement ou non-verbalement) pour:" max_length="4000" name="l_enfant_communique_verbalement_ou_non_verbalement_pour" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHL’enfant communique" reference_qual_condition="questionSTARTSWITHL’enfant communique" type="glide_list"/>
         <element label="Optométrie date" max_length="40" name="optom_trie_date" type="glide_date"/>
-        <element label="Orthophonie explication" max_length="4000" name="orthophonie_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHorthophonie" reference_qual_condition="questionSTARTSWITHorthophonie" type="glide_list"/>
-        <element label="Orthophonie explication autre" max_length="200" name="orthophonie_explication_autre" type="string"/>
-        <element label="Par la présente demande, nous souhaitons :" max_length="4000" name="par_la_pr_sente_demande_nous_souhaitons" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHPar la présente demande, nous souhaitons" reference_qual_condition="questionSTARTSWITHPar la présente demande, nous souhaitons" type="glide_list"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève est en attente d’une évaluation pouvant mener à un diagnostic" max_length="40" name="est_ce_que_l_l_ve_est_en_attente_d_une_valuation_pouvant_mener_un_diagnostic" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+            </choice>
+        </element>
+        <element label="Ergothérapie date" max_length="40" name="ergoth_rapie_date" type="glide_date"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Des difficultés sont-elles observées au niveau de la lecture ou de l’écriture co" max_length="40" name="des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture_co" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+        <element label="L’élève démontre-t-il des difficultés à comprendre le langage oral explication" max_length="4000" name="l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés à comprendre le langage oral" reference_qual_condition="questionSTARTSWITHdifficultés à comprendre le langage oral" type="glide_list"/>
+        <element label="Travail social date" max_length="40" name="travail_social_date" type="glide_date"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève a un PEI en lecture et/ou écriture?" max_length="40" name="est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+        <element label="Autre situation explication" max_length="200" name="autre_situation_explication" type="string"/>
+        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langue dominante de l’élève (la langue avec laquelle l’élève est le plus à l’ais" max_length="40" name="langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Spanish" sequence="4" value="spanish"/>
+                <element inactive_on_update="false" label="Hindi" sequence="2" value="hindi"/>
+                <element inactive_on_update="false" label="Russian" sequence="7" value="russian"/>
+                <element inactive_on_update="false" label="English" sequence="0" value="english"/>
+                <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
+                <element inactive_on_update="false" label="Japanese" sequence="3" value="japanese"/>
+                <element inactive_on_update="false" label="French" sequence="1" value="french"/>
+                <element inactive_on_update="false" label="Chinese" sequence="5" value="chinese"/>
+                <element inactive_on_update="false" label="Portuguese" sequence="8" value="portuguese"/>
+                <element inactive_on_update="false" label="Arabic" sequence="6" value="arabic"/>
+            </choice>
+        </element>
+        <element choice="1" choice_field="yes_only" choice_table="x_ndecd_cecce_base_options" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="document_pdf_consentement_parental_re_u" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler" max_length="40" name="l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+        <element label="Difficultés au niveau de la routine et des transitions" max_length="4000" name="difficult_s_au_niveau_de_la_routine_et_des_transitions" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés au niveau de la routine" reference_qual_condition="questionSTARTSWITHdifficultés au niveau de la routine" type="glide_list"/>
+        <element label="évaluation pouvant mener à un diagnostic precisez" max_length="200" name="valuation_pouvant_mener_un_diagnostic_precisez" type="string"/>
+        <element choice="1" label="Est-ce que l'élève a un diagnostic posé par un professionnel de la santé autoris" max_length="4000" name="est_ce_que_l_l_ve_a_un_diagnostic_pos_par_un_professionnel_de_la_sant_autoris" type="choice">
+            <choice/>
+        </element>
         <element label="Par la présente demande, nous souhaitons autre" max_length="200" name="par_la_pr_sente_demande_nous_souhaitons_autre" type="string"/>
+        <element label="Audiologie date" max_length="40" name="audiologie_date" type="glide_date"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est ce que “Le formulaire d’aiguillage Services orthophoniques régulier vs volet" max_length="40" name="est_ce_que_le_formulaire_d_aiguillage_services_orthophoniques_r_gulier_vs_volet" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+            </choice>
+        </element>
+        <element label="Langue(s) parlée(s) à la maison" max_length="4000" name="langue_s_parl_e_s_la_maison" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHlangue parlée" reference_qual_condition="questionSTARTSWITHlangue parlée" type="glide_list"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève présente un retard en lecture" max_length="40" name="l_l_ve_pr_sente_un_retard_en_lecture" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+            </choice>
+        </element>
+        <element label="Premiers Mots date" max_length="40" name="premiers_mots_date" type="glide_date"/>
+        <element label="Les enfants utilisent souvent plus d’un moyen pour exprimer leurs besoins." max_length="4000" name="les_enfants_utilisent_souvent_plus_d_un_moyen_pour_exprimer_leurs_besoins" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHmoyen pour exprimer leurs besoins" reference_qual_condition="questionSTARTSWITHmoyen pour exprimer leurs besoins" type="glide_list"/>
         <element choice="1" choice_field="yes_only" choice_table="x_ndecd_cecce_base_options" label="Le formulaire de consentement a-t-il été envoyé aux parents/tuteurs légaux? " mandatory="true" max_length="40" name="pdf_envoye_au_parents" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
             </choice>
         </element>
-        <element label="Pratique privée date" max_length="40" name="pratique_priv_e_date" type="glide_date"/>
-        <element label="Premiers Mots date" max_length="40" name="premiers_mots_date" type="glide_date"/>
+        <element label="L l ve pr sente t il des difficult s au niveau des habilet s li es au jeu ex" max_length="4000" name="l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés au niveau des habiletés liée^EQ" reference_qual_condition="questionSTARTSWITHdifficultés au niveau des habiletés liée^EQ" type="glide_list"/>
+        <element label="Orthophonie explication autre" max_length="200" name="orthophonie_explication_autre" type="string"/>
+        <element label="Est-ce que l’élève présente un diagnostic médical officiel d’un TSA? explication" max_length="4000" name="est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel_d_un_tsa_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdiagnostic médical officiel d’un TSA" reference_qual_condition="questionSTARTSWITHdiagnostic médical officiel d’un TSA" type="glide_list"/>
+        <element label="diagnostic médical officiel d’un TSA?explication autre" max_length="200" name="diagnostic_m_dical_officiel_d_un_tsa_explication_autre" type="string"/>
+        <element label="Par la présente demande, nous souhaitons :" max_length="4000" name="par_la_pr_sente_demande_nous_souhaitons" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHPar la présente demande, nous souhaitons" reference_qual_condition="questionSTARTSWITHPar la présente demande, nous souhaitons" type="glide_list"/>
         <element label="Psychologie date" max_length="40" name="psychologie_date" type="glide_date"/>
-        <element label="recommendation et strategies" max_length="4000" name="recommendation_et_strategies" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHRecommandations et stratégies" reference_qual_condition="questionSTARTSWITHRecommandations et stratégies" type="glide_list"/>
+        <element label="Orthophonie explication" max_length="4000" name="orthophonie_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHorthophonie" reference_qual_condition="questionSTARTSWITHorthophonie" type="glide_list"/>
+        <element label=" Attentes du PEI en lien avec" max_length="4000" name="attentes_du_pei_en_lien_avec" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHAttentes du PEI en lien avec" reference_qual_condition="questionSTARTSWITHAttentes du PEI en lien avec" type="glide_list"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label=" Est-ce que des difficultés langagières sont observées dans sa langue dominante " max_length="40" name="est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+            </choice>
+        </element>
+        <element label="Date de l’obtention du consentement parental" max_length="40" name="date_de_l_obtention_du_consentement_parental" type="glide_date"/>
         <element default="0" label="Score" max_length="40" name="scoretsa" type="float"/>
+        <element label="Autre :" max_length="200" name="l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_autre" type="string"/>
         <element choice="1" label="Situation familiale de l’élève" max_length="40" name="situation_familiale_de_l_l_ve" type="choice">
             <choice/>
         </element>
-        <element label="SRMS date" max_length="40" name="srms_date" type="glide_date"/>
-        <element choice="1" label="Statut de la demande" max_length="40" name="statut_de_la_demande" type="choice">
-            <choice/>
-        </element>
-        <element label="Travail social date" max_length="40" name="travail_social_date" type="glide_date"/>
-        <element label="évaluation pouvant mener à un diagnostic precisez" max_length="200" name="valuation_pouvant_mener_un_diagnostic_precisez" type="string"/>
+        <element label="L’élève éprouve-t-il des difficultés à imiter" max_length="4000" name="l_l_ve_prouve_t_il_des_difficult_s_imiter" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés à imiter^EQ" reference_qual_condition="questionSTARTSWITHdifficultés à imiter^EQ" type="glide_list"/>
     </element>
 </database>

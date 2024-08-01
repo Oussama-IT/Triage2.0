@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="5309ce361bd48e108d594047bc4bcb45" label="Eleve" max_length="40" name="x_ndecd_triage_2_0_eleve" type="collection">
+        <element label="Nbr appro" max_length="40" name="u_nbr_appro" type="integer"/>
+        <element label="Nom de l'école" max_length="32" name="u_nom_de_l_cole" reference="x_ndecd_triage_2_0_x_ndecd_school" type="reference"/>
+        <element label="Tuteur" max_length="200" name="u_tuteur" type="string"/>
+        <element label="Date de naissance" max_length="40" name="u_date_de_naissance" type="glide_date"/>
+        <element label="Niveau scolaire" max_length="32" name="u_classe" reference="x_ndecd_triage_2_0_classe" type="reference"/>
+        <element label="Nombre de cas" max_length="40" name="u_nombre_de_cas" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Email Tuteur" max_length="100" name="u_email_tuteur" type="email"/>
         <element label="Email" max_length="100" name="email" type="email"/>
         <element label="Name" max_length="200" name="name" type="string"/>
-        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element label="Niveau scolaire" max_length="32" name="u_classe" reference="x_ndecd_triage_2_0_classe" type="reference"/>
-        <element label="Date de naissance" max_length="40" name="u_date_de_naissance" type="glide_date"/>
-        <element label="Email Tuteur" max_length="100" name="u_email_tuteur" type="email"/>
-        <element label="Nbr appro" max_length="40" name="u_nbr_appro" type="integer"/>
         <element label="NISO" max_length="200" name="u_niso" type="string"/>
-        <element label="Nombre de cas" max_length="40" name="u_nombre_de_cas" type="integer"/>
-        <element label="Nom de l'école" max_length="32" name="u_nom_de_l_cole" reference="x_ndecd_triage_2_0_x_ndecd_school" type="reference"/>
         <element label="Nom du titulaire" max_length="32" name="u_nom_du_titulaire" reference="sys_user" type="reference"/>
-        <element label="Tuteur" max_length="200" name="u_tuteur" type="string"/>
         <index name="index">
             <element name="u_classe"/>
         </index>

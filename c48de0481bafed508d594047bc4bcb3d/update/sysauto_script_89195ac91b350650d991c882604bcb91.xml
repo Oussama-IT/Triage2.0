@@ -19,204 +19,217 @@
         <run_type>daily</run_type>
         <script><![CDATA[var grroi = new GlideRecord('x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi');
 grroi.query();
-var currentYear = new Date().getFullYear();
-while (grroi.next()) {
-    //grroi.ann_e_de_la_demande_int=currentYear;
-	if (grroi.ann_e_de_la_demande_int==currentYear){
-		grroi.etat_annee=1;
+gs.info("etered");
+try {
+	gs.info("eterea");
+    var x = new Date();
+    x.setMonth(new Date().getMonth() + 5);
+    var currentYear = x.getFullYear();
+    while (grroi.next()) {
+        //grroi.ann_e_de_la_demande_int=currentYear;
+        if (grroi.ann_e_de_la_demande_int == currentYear) {
+            grroi.etat_annee = 1;
 
-	}
-	if (grroi.ann_e_de_la_demande_int==currentYear-1){
-		grroi.etat_annee=0;
+        }
+        if (grroi.ann_e_de_la_demande_int == currentYear - 1) {
+            grroi.etat_annee = 0;
 
-	}
-	if (grroi.ann_e_de_la_demande_int==currentYear-2){
-		grroi.etat_annee=10;
+        }
+        if (grroi.ann_e_de_la_demande_int == currentYear - 2) {
+            grroi.etat_annee = 10;
 
-	}
-	if (grroi.ann_e_de_la_demande_int==currentYear+1){
-		grroi.etat_annee=2;
+        }
+        if (grroi.ann_e_de_la_demande_int == currentYear + 1) {
+            grroi.etat_annee = 2;
 
-	}  
-	if (grroi.ann_e_de_la_demande_int==currentYear && current.eleve.u_classe=="78911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grroi.etat_annee=3;
-	}
-	if (grroi.ann_e_de_la_demande_int==currentYear-1 && current.eleve.u_classe=="78911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grroi.etat_annee=4;
-	}
-	if (grroi.ann_e_de_la_demande_int==currentYear-2 && current.eleve.u_classe=="78911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grroi.etat_annee=5;
-	}
-	if (grroi.ann_e_de_la_demande_int==currentYear-3 && current.eleve.u_classe=="78911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grroi.etat_annee=6;
-	}
-	// Add your code here
-	grroi.update();
+        }
+        if (grroi.ann_e_de_la_demande_int == currentYear && grroi.eleve.u_classe == "78911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grroi.etat_annee = 3;
+        }
+        if (grroi.ann_e_de_la_demande_int == currentYear - 1 && grroi.eleve.u_classe == "78911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grroi.etat_annee = 4;
+        }
+        if (grroi.ann_e_de_la_demande_int == currentYear - 2 && grroi.eleve.u_classe == "78911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grroi.etat_annee = 5;
+        }
+        if (grroi.ann_e_de_la_demande_int == currentYear - 3 && grroi.eleve.u_classe == "78911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grroi.etat_annee = 6;
+        }
+        // Add your code here
+        grroi.update();
 
-}
-
-
-var grsli = new GlideRecord('x_ndecd_triage_2_0_demandes_priorisation_sli');
-grsli.query();
-
-while (grsli.next()) {
-	if (grsli.ann_e_de_la_demande_int==currentYear){
-		grsli.etat_annee=1;
-
-	}
-	if (grsli.ann_e_de_la_demande_int==currentYear-1){
-		grsli.etat_annee=0;
-
-	}
-	if (grsli.ann_e_de_la_demande_int==currentYear-2){
-		grsli.etat_annee=10;
-
-	}
-	if (grsli.ann_e_de_la_demande_int==currentYear+1){
-		grsli.etat_annee=2;
-
-	}  
-	if (grsli.ann_e_de_la_demande_int==currentYear && grsli.eleve.u_classe=="78911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grsli.etat_annee=3;
-	}
-	if (grsli.ann_e_de_la_demande_int==currentYear-1 && grsli.eleve.u_classe=="78911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grsli.etat_annee=4;
-	}
-	if (grsli.ann_e_de_la_demande_int==currentYear-2 && grsli.eleve.u_classe=="78911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grsli.etat_annee=5;
-	}
-	if (grsli.ann_e_de_la_demande_int==currentYear-3 && grsli.eleve.u_classe=="78911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grsli.etat_annee=6;
-	}
-
-	grsli.update();
-
-}
+    }
+	gs.info("etereb");
 
 
-var grtsa = new GlideRecord('x_ndecd_triage_2_0_tsa_cs');
-grtsa.query();
+    var grsli = new GlideRecord('x_ndecd_triage_2_0_demandes_priorisation_sli');
+    grsli.query();
 
-while (grtsa.next()) {
-if (grtsa.ann_e_de_la_demande_int==currentYear){
-		grtsa.etat_annee=1;
+    while (grsli.next()) {
+        if (grsli.ann_e_de_la_demande_int == currentYear) {
+            grsli.etat_annee = 1;
 
-	}
-	if (grtsa.ann_e_de_la_demande_int==currentYear-1){
-		grtsa.etat_annee=0;
+        }
+        if (grsli.ann_e_de_la_demande_int == currentYear - 1) {
+            grsli.etat_annee = 0;
 
-	}
-	if (grtsa.ann_e_de_la_demande_int==currentYear-2){
-		grtsa.etat_annee=10;
+        }
+        if (grsli.ann_e_de_la_demande_int == currentYear - 2) {
+            grsli.etat_annee = 10;
 
-	}
-	if (grtsa.ann_e_de_la_demande_int==currentYear+1){
-		grtsa.etat_annee=2;
+        }
+        if (grsli.ann_e_de_la_demande_int == currentYear + 1) {
+            grsli.etat_annee = 2;
 
-	} 
-	grtsa.update();
+        }
+        if (grsli.ann_e_de_la_demande_int == currentYear && grsli.nom_de_l_l_ve.u_classe == "78911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grsli.etat_annee = 3;
+        }
+        if (grsli.ann_e_de_la_demande_int == currentYear - 1 && grsli.nom_de_l_l_ve.u_classe == "78911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grsli.etat_annee = 4;
+        }
+        if (grsli.ann_e_de_la_demande_int == currentYear - 2 && grsli.nom_de_l_l_ve.u_classe == "78911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grsli.etat_annee = 5;
+        }
+        if (grsli.ann_e_de_la_demande_int == currentYear - 3 && grsli.nom_de_l_l_ve.u_classe == "78911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grsli.etat_annee = 6;
+        }
 
-}
+        grsli.update();
+
+    }
+
+	gs.info("eterec");
+    var grtsa = new GlideRecord('x_ndecd_triage_2_0_tsa_cs');
+    grtsa.query();
+
+    while (grtsa.next()) {
+        if (grtsa.ann_e_de_la_demande_int == currentYear) {
+            grtsa.etat_annee = 1;
+
+        }
+        if (grtsa.ann_e_de_la_demande_int == currentYear - 1) {
+            grtsa.etat_annee = 0;
+
+        }
+        if (grtsa.ann_e_de_la_demande_int == currentYear - 2) {
+            grtsa.etat_annee = 10;
+
+        }
+        if (grtsa.ann_e_de_la_demande_int == currentYear + 1) {
+            grtsa.etat_annee = 2;
+
+        }
+        grtsa.update();
+
+    }
+
+	gs.info("etered");
+    var grscs = new GlideRecord('x_ndecd_triage_2_0_scs');
+    grscs.query();
+    while (grscs.next()) {
+
+        if (grscs.ann_e_de_la_demande == currentYear) {
+            grscs.etat_annee = 1;
+
+        }
+        if (grscs.ann_e_de_la_demande == currentYear - 1) {
+            grscs.etat_annee = 0;
+
+        }
+        if (grscs.ann_e_de_la_demande == currentYear - 2) {
+            grscs.etat_annee = 10;
+
+        }
+        if (grscs.ann_e_de_la_demande == currentYear + 1) {
+            grscs.etat_annee = 2;
+
+        }
+        if (grscs.ann_e_de_la_demande == currentYear && grscs.eleve.u_classe == "78911a0d1b413950d991c882604bcbc2") { //jk eleve
+            grscs.etat_annee = 3;
+        }
+        if (grscs.ann_e_de_la_demande == currentYear - 1 && grscs.eleve.u_classe == "78911a0d1b413950d991c882604bcbc2") { //jk eleve
+            grscs.etat_annee = 4;
+        }
+        if (grscs.ann_e_de_la_demande == currentYear - 2 && grscs.eleve.u_classe == "78911a0d1b413950d991c882604bcbc2") { //jk eleve
+            grscs.etat_annee = 5;
+        }
+        if (grscs.ann_e_de_la_demande == currentYear - 3 && grscs.eleve.u_classe == "78911a0d1b413950d991c882604bcbc2") { //jk eleve
+            grscs.etat_annee = 6;
+        }
+        grscs.update();
+
+    }
+
+	gs.info("eteref");
+    var grroics = new GlideRecord('x_ndecd_triage_2_0_roi_cs');
+    grroics.query();
+    gs.info("etered2")
+    while (grroics.next()) {
+        gs.info("etered3")
+        gs.info("setdate" + grroics.ann_e_de_la_demande_int + "currentdate" + currentYear);
+        if (grroics.ann_e_de_la_demande_int == currentYear) {
+            grroics.etat_annee = 1;
+
+        }
+        if (grroics.ann_e_de_la_demande_int == currentYear - 1) {
+            grroics.etat_annee = 0;
+
+        }
+        if (grroics.ann_e_de_la_demande_int == currentYear + 1) {
+            grroics.etat_annee = 2;
+
+        }
+        if (grroics.ann_e_de_la_demande_int == currentYear && grroics.eleve.u_classe == "78911a0d1b413950d991c882604bcbc2") { //jk eleve
+            grroics.etat_annee = 3;
+        }
+        if (grroics.ann_e_de_la_demande_int == currentYear && grroics.eleve.u_classe == "74911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grroics.etat_annee = 3;
+        }
 
 
-var grscs = new GlideRecord('x_ndecd_triage_2_0_scs');
-grscs.query();
-while (grscs.next()) {
+        if (grroics.ann_e_de_la_demande_int == currentYear - 1 && grroics.eleve.u_classe == "78911a0d1b413950d991c882604bcbc2") { //jk eleve
+            grroics.etat_annee = 4;
+        }
+        if (grroics.ann_e_de_la_demande_int == currentYear - 1 && grroics.eleve.u_classe == "74911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grroics.etat_annee = 4;
+        }
 
-	if (grscs.ann_e_de_la_demande==currentYear){
-		grscs.etat_annee=1;
+        if (grroics.ann_e_de_la_demande_int == currentYear - 2 && grroics.eleve.u_classe == "78911a0d1b413950d991c882604bcbc2") { //jk eleve
+            grroics.etat_annee = 5;
+        }
+        if (grroics.ann_e_de_la_demande_int == currentYear - 2 && grroics.eleve.u_classe == "74911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grroics.etat_annee = 5;
+        }
 
-	}
-	if (grscs.ann_e_de_la_demande==currentYear-1){
-		grscs.etat_annee=0;
+        if (grroics.ann_e_de_la_demande_int == currentYear - 3 && grroics.eleve.u_classe == "78911a0d1b413950d991c882604bcbc2") { //jk eleve
+            grroics.etat_annee = 6;
+        }
+        if (grroics.ann_e_de_la_demande_int == currentYear - 3 && grroics.eleve.u_classe == "74911a0d1b413950d991c882604bcbc3") { //sk eleve
+            grroics.etat_annee = 6;
+        }
 
-	}
-	if (grscs.ann_e_de_la_demande==currentYear-2){
-		grscs.etat_annee=10;
+        grroics.update();
 
-	}
-	if (grscs.ann_e_de_la_demande==currentYear+1){
-		grscs.etat_annee=2;
-
-	}  
-	if (grscs.ann_e_de_la_demande==currentYear && grscs.eleve.u_classe=="78911a0d1b413950d991c882604bcbc2"){//jk eleve
-		grscs.etat_annee=3;
-	}
-	if (grscs.ann_e_de_la_demande==currentYear-1 && grscs.eleve.u_classe=="78911a0d1b413950d991c882604bcbc2"){//jk eleve
-		grscs.etat_annee=4;
-	}
-	if (grscs.ann_e_de_la_demande==currentYear-2 && grscs.eleve.u_classe=="78911a0d1b413950d991c882604bcbc2"){//jk eleve
-		grscs.etat_annee=5;
-	}
-	if (grscs.ann_e_de_la_demande==currentYear-3 && grscs.eleve.u_classe=="78911a0d1b413950d991c882604bcbc2"){//jk eleve
-		grscs.etat_annee=6;
-	}
-	grscs.update();
-
-}
+    }
 
 
-var grroics = new GlideRecord('x_ndecd_triage_2_0_roi_cs');
-grroics.query();
-while (grroics.next()) {
-	if (grroics.ann_e_de_la_demande_int==currentYear){
-		grroics.etat_annee=1;
 
-	}
-	if (grroics.ann_e_de_la_demande_int==currentYear-1){
-		grroics.etat_annee=0;
-
-	}
-	if (grroics.ann_e_de_la_demande_int==currentYear+1){
-		grroics.etat_annee=2;
-
-	}  
-	if (grroics.ann_e_de_la_demande_int==currentYear && grroics.eleve.u_classe=="78911a0d1b413950d991c882604bcbc2"){//jk eleve
-		grroics.etat_annee=3;
-	}
-	if (grroics.ann_e_de_la_demande_int==currentYear && grroics.eleve.u_classe=="74911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grroics.etat_annee=3;
-	}
-
-
-	if (grroics.ann_e_de_la_demande_int==currentYear-1 && grroics.eleve.u_classe=="78911a0d1b413950d991c882604bcbc2"){//jk eleve
-		grroics.etat_annee=4;
-	}
-	if (grroics.ann_e_de_la_demande_int==currentYear-1 && grroics.eleve.u_classe=="74911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grroics.etat_annee=4;
-	}
-
-	if (grroics.ann_e_de_la_demande_int==currentYear-2 && grroics.eleve.u_classe=="78911a0d1b413950d991c882604bcbc2"){//jk eleve
-		grroics.etat_annee=5;
-	}
-	if (grroics.ann_e_de_la_demande_int==currentYear-2 && grroics.eleve.u_classe=="74911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grroics.etat_annee=5;
-	}
-
-	if (grroics.ann_e_de_la_demande_int==currentYear-3 && grroics.eleve.u_classe=="78911a0d1b413950d991c882604bcbc2"){//jk eleve
-		grroics.etat_annee=6;
-	}
-	if (grroics.ann_e_de_la_demande_int==currentYear-3 && grroics.eleve.u_classe=="74911a0d1b413950d991c882604bcbc3"){//sk eleve
-		grroics.etat_annee=6;
-	}
-
-	grroics.update();
-
-}
-
-]]></script>
+} catch (e) {
+    gs.info("scheduleerr" + e)
+}]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-24 18:02:09</sys_created_on>
         <sys_id>89195ac91b350650d991c882604bcb91</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>CECCE set date state </sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysauto_script_89195ac91b350650d991c882604bcb91</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-25 15:12:14</sys_updated_on>
+        <sys_updated_on>2024-08-01 19:29:21</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
