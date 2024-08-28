@@ -138,7 +138,14 @@
         <element default="0" label="Score" max_length="40" name="scoretsa" type="float"/>
         <element label="Autre :" max_length="200" name="l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_autre" type="string"/>
         <element choice="1" label="Situation familiale de l’élève" max_length="40" name="situation_familiale_de_l_l_ve" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec son père" value="Fait l’objet d’une garde exclusive avec son père"/>
+                <element inactive_on_update="false" label="Habite avec son tuteur ou sa tutrice" value="Habite avec son tuteur ou sa tutrice"/>
+                <element inactive_on_update="false" label="Réside avec ses deux parents à la même adresse" value="Réside avec ses deux parents à la même adresse"/>
+                <element inactive_on_update="false" label="Autre situation" value="Autre situation"/>
+                <element inactive_on_update="false" label="Fait l’objet d’une garde exclusive avec sa mère" value="Fait l’objet d’une garde exclusive avec sa mère"/>
+                <element inactive_on_update="false" label="Fait l’objet d’une garde partagée" value="Fait l’objet d’une garde partagée"/>
+            </choice>
         </element>
         <element label="L’élève éprouve-t-il des difficultés à imiter" max_length="4000" name="l_l_ve_prouve_t_il_des_difficult_s_imiter" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés à imiter^EQ" reference_qual_condition="questionSTARTSWITHdifficultés à imiter^EQ" type="glide_list"/>
     </element>
