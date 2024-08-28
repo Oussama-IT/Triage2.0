@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="c42c1a931bcd0e508d594047bc4bcb6e" extends="task" label="Demande TSA" max_length="40" name="x_ndecd_triage_2_0_demande_tsa" text_index="true" type="collection">
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève éprouve un retard en écriture" max_length="40" name="l_l_ve_prouve_un_retard_en_criture" type="choice">
+        <element choice="1" choice_field="retard_en_lecture" choice_table="x_ndecd_cecce_base_options" label="L’élève éprouve un retard en écriture" max_length="40" name="l_l_ve_prouve_un_retard_en_criture" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
@@ -56,7 +56,7 @@
         </element>
         <element label="L’élève démontre-t-il des difficultés à comprendre le langage oral explication" max_length="4000" name="l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHdifficultés à comprendre le langage oral" reference_qual_condition="questionSTARTSWITHdifficultés à comprendre le langage oral" type="glide_list"/>
         <element label="Travail social date" max_length="40" name="travail_social_date" type="glide_date"/>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève a un PEI en lecture et/ou écriture?" max_length="40" name="est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture" type="choice">
+        <element choice="1" choice_field="non_non_en_cours_oui_adapt_oui_modifi" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève a un PEI en lecture et/ou écriture?" max_length="40" name="est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
@@ -103,7 +103,7 @@
             </choice>
         </element>
         <element label="Langue(s) parlée(s) à la maison" max_length="4000" name="langue_s_parl_e_s_la_maison" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHlangue parlée" reference_qual_condition="questionSTARTSWITHlangue parlée" type="glide_list"/>
-        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève présente un retard en lecture" max_length="40" name="l_l_ve_pr_sente_un_retard_en_lecture" type="choice">
+        <element choice="1" choice_field="retard_en_lecture" choice_table="x_ndecd_cecce_base_options" label="L’élève présente un retard en lecture" max_length="40" name="l_l_ve_pr_sente_un_retard_en_lecture" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>
