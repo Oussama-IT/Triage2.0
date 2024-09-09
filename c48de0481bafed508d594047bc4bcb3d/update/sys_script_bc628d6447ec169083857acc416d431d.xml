@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ndecd_triage_2_0_eleve</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_ndecd_triage_2_0_eleve">u_classeCHANGESTO74911a0d1b413950d991c882604bcb59^ORu_classeCHANGESTO74911a0d1b413950d991c882604bcb5b^EQ<item display_table="x_ndecd_triage_2_0_classe" display_value="1" endquery="false" field="u_classe" goto="false" newquery="false" operator="CHANGESTO" or="false" value="74911a0d1b413950d991c882604bcb59"/>
+            <item display_table="x_ndecd_triage_2_0_classe" display_value="2" endquery="false" field="u_classe" goto="false" newquery="false" operator="CHANGESTO" or="true" value="74911a0d1b413950d991c882604bcb5b"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>update eleve scs / roi cs</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    //scs 1ere
+    gs.info('sce-roics 1');
+    if (current.u_classe == '74911a0d1b413950d991c882604bcb59') {
+        gs.info('sce-roics 2');
+        var scs = new GlideRecord('x_ndecd_triage_2_0_scs');
+        scs.addQuery('eleve', current.sys_id);
+        scs.query();
+        while (scs.next()) {
+            gs.info('sce-roics 3@@ ' + scs.state);
+            scs.state = 7;
+            scs.update();
+        }
+    }
+
+
+    //roi cs 2eme   
+    if (current.u_classe == '74911a0d1b413950d991c882604bcb5b') {
+        gs.info('sce-roics 4');
+        var roics = new GlideRecord('x_ndecd_triage_2_0_roi_cs');
+        roics.addQuery('eleve', current.sys_id);
+        roics.query();
+        while (roics.next()) {
+            gs.info('sce-roics 5@@ ' + roics.state);
+            roics.state = 7;
+            roics.update();
+        }
+    }
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-09-06 15:18:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bc628d6447ec169083857acc416d431d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>update eleve scs / roi cs</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_bc628d6447ec169083857acc416d431d</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-06 16:01:27</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=bc628d6447ec169083857acc416d431d"/>
+</record_update>

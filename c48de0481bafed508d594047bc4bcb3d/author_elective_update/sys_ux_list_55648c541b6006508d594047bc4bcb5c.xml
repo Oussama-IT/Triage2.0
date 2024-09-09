@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_list">
+    <sys_ux_list action="DELETE">
+        <active>true</active>
+        <category display_value="SLI - Demandes/Priorisation(en cours)">ce7304141b6006508d594047bc4bcb0c</category>
+        <columns>number,nom_de_l_l_ve.u_nom_de_l_cole,nom_de_l_l_ve,nom_de_l_l_ve.u_classe,score_de_priorisation,langue_dominante,opened_by,suivis_anterieurs,d_pistage_sli_requis_ou_non,cote_de_priorisation,statut_sli,statut_sli_si_admissible,nom_ducatrice_d_pistage,nom_ducatrice_programme_sli,particularit_s</columns>
+        <condition table="x_ndecd_triage_2_0_demandes_priorisation_sli">etat_annee=1^ORetat_annee=3^ORetat_annee=4<item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="1"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="3"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="4"/>
+        </condition>
+        <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
+        <group_by_column/>
+        <groups/>
+        <hide_cell_filter>false</hide_cell_filter>
+        <hide_checkbox_hover>true</hide_checkbox_hover>
+        <hide_column_filtering>false</hide_column_filtering>
+        <hide_column_grouping>false</hide_column_grouping>
+        <hide_column_resizing>false</hide_column_resizing>
+        <hide_column_sorting>false</hide_column_sorting>
+        <hide_drag_and_drop>true</hide_drag_and_drop>
+        <hide_empty_state_image>false</hide_empty_state_image>
+        <hide_first_page>false</hide_first_page>
+        <hide_header>false</hide_header>
+        <hide_highlight_content>false</hide_highlight_content>
+        <hide_highlighted_values>false</hide_highlighted_values>
+        <hide_inline_editing>false</hide_inline_editing>
+        <hide_last_page>false</hide_last_page>
+        <hide_last_refreshed_text>false</hide_last_refreshed_text>
+        <hide_links>false</hide_links>
+        <hide_list_actions>false</hide_list_actions>
+        <hide_menu_button>false</hide_menu_button>
+        <hide_next_page>false</hide_next_page>
+        <hide_option_to_save_as>false</hide_option_to_save_as>
+        <hide_pages>false</hide_pages>
+        <hide_pagination>false</hide_pagination>
+        <hide_panel_advanced>false</hide_panel_advanced>
+        <hide_panel_button>false</hide_panel_button>
+        <hide_panel_condition_delete>false</hide_panel_condition_delete>
+        <hide_panel_footer>false</hide_panel_footer>
+        <hide_panel_restore>false</hide_panel_restore>
+        <hide_personalization>false</hide_personalization>
+        <hide_previous_page>false</hide_previous_page>
+        <hide_quick_edit>false</hide_quick_edit>
+        <hide_range>false</hide_range>
+        <hide_record_count_badge>false</hide_record_count_badge>
+        <hide_reference_links>false</hide_reference_links>
+        <hide_refresh_button>false</hide_refresh_button>
+        <hide_row_count>false</hide_row_count>
+        <hide_row_selector>false</hide_row_selector>
+        <hide_rows_per_page_selector>false</hide_rows_per_page_selector>
+        <hide_select_all>false</hide_select_all>
+        <hide_sharing_button>false</hide_sharing_button>
+        <hide_title>false</hide_title>
+        <highlight_content_color/>
+        <highlight_content_pattern/>
+        <list_attributes/>
+        <max_characters>4000</max_characters>
+        <order>100</order>
+        <override_word_wrap_user_pref>false</override_word_wrap_user_pref>
+        <roles/>
+        <sys_class_name>sys_ux_list</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-02-19 19:56:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>55648c541b6006508d594047bc4bcb5c</sys_id>
+        <sys_mod_count>19</sys_mod_count>
+        <sys_name>All</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_ux_list_55648c541b6006508d594047bc4bcb5c</sys_update_name>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-04-25 16:04:58</sys_updated_on>
+        <table>x_ndecd_triage_2_0_demandes_priorisation_sli</table>
+        <title>All</title>
+        <view/>
+        <word_wrap>false</word_wrap>
+    </sys_ux_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</application>
+        <file_path/>
+        <instance_id>65b29b3adb7ea19492f5684e13961931</instance_id>
+        <instance_name>ceccedev</instance_name>
+        <name>sys_ux_list_55648c541b6006508d594047bc4bcb5c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_list"><sys_ux_list action="INSERT_OR_UPDATE"><active>true</active><category display_value="SLI - Demandes/Priorisation(en cours)">ce7304141b6006508d594047bc4bcb0c</category><columns>number,nom_de_l_l_ve.u_nom_de_l_cole,nom_de_l_l_ve,nom_de_l_l_ve.u_classe,score_de_priorisation,langue_dominante,opened_by,suivis_anterieurs,d_pistage_sli_requis_ou_non,cote_de_priorisation,statut_sli,statut_sli_si_admissible,nom_ducatrice_d_pistage,nom_ducatrice_programme_sli,particularit_s</columns><condition table="x_ndecd_triage_2_0_demandes_priorisation_sli">etat_annee=1^ORetat_annee=3^ORetat_annee=4<item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="1"/><item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="3"/><item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="4"/></condition><configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration><group_by_column/><groups/><hide_cell_filter>false</hide_cell_filter><hide_checkbox_hover>true</hide_checkbox_hover><hide_column_filtering>false</hide_column_filtering><hide_column_grouping>false</hide_column_grouping><hide_column_resizing>false</hide_column_resizing><hide_column_sorting>false</hide_column_sorting><hide_drag_and_drop>true</hide_drag_and_drop><hide_empty_state_image>false</hide_empty_state_image><hide_first_page>false</hide_first_page><hide_header>false</hide_header><hide_highlight_content>false</hide_highlight_content><hide_highlighted_values>false</hide_highlighted_values><hide_inline_editing>false</hide_inline_editing><hide_last_page>false</hide_last_page><hide_last_refreshed_text>false</hide_last_refreshed_text><hide_links>false</hide_links><hide_list_actions>false</hide_list_actions><hide_menu_button>false</hide_menu_button><hide_next_page>false</hide_next_page><hide_option_to_save_as>false</hide_option_to_save_as><hide_pages>false</hide_pages><hide_pagination>false</hide_pagination><hide_panel_advanced>false</hide_panel_advanced><hide_panel_button>false</hide_panel_button><hide_panel_condition_delete>false</hide_panel_condition_delete><hide_panel_footer>false</hide_panel_footer><hide_panel_restore>false</hide_panel_restore><hide_personalization>false</hide_personalization><hide_previous_page>false</hide_previous_page><hide_quick_edit>false</hide_quick_edit><hide_range>false</hide_range><hide_record_count_badge>false</hide_record_count_badge><hide_reference_links>false</hide_reference_links><hide_refresh_button>false</hide_refresh_button><hide_row_count>false</hide_row_count><hide_row_selector>false</hide_row_selector><hide_rows_per_page_selector>false</hide_rows_per_page_selector><hide_select_all>false</hide_select_all><hide_sharing_button>false</hide_sharing_button><hide_title>false</hide_title><highlight_content_color/><highlight_content_pattern/><list_attributes/><max_characters>4000</max_characters><order>100</order><override_word_wrap_user_pref>false</override_word_wrap_user_pref><roles/><sys_class_name>sys_ux_list</sys_class_name><sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by><sys_created_on>2024-02-19 19:56:46</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>55648c541b6006508d594047bc4bcb5c</sys_id><sys_mod_count>19</sys_mod_count><sys_name>All</sys_name><sys_overrides/><sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package><sys_policy/><sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope><sys_update_name>sys_ux_list_55648c541b6006508d594047bc4bcb5c</sys_update_name><sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by><sys_updated_on>2024-04-25 16:04:58</sys_updated_on><table>x_ndecd_triage_2_0_demandes_priorisation_sli</table><title>All</title><view/><word_wrap>false</word_wrap></sys_ux_list></record_update>]]></payload>
+        <payload_hash>-1573889508</payload_hash>
+        <record_name>All</record_name>
+        <reverted_from/>
+        <source>7a830c9d1b2586108d594047bc4bcbaf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-04-25 16:04:59</sys_created_on>
+        <sys_id>e148c3dd1bb1ca508d594047bc4bcbe2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18f1600bff40000001</sys_recorded_at>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-04-25 16:04:59</sys_updated_on>
+        <type>UX List</type>
+        <update_guid>e548c3dd4cb1ca5078fec106d7c9f5e1</update_guid>
+        <update_guid_history>e548c3dd4cb1ca5078fec106d7c9f5e1:-1573889508,aadb66999b31ca502ba4391ea59465d2:-1212046934,a5301028433d42500b4ae3200432a147:982385786,25df84a4c13d42509c0f600d3edb0fe3:1084769145,28c3dbd880394250246f30c1e6244632:982385786,8d3589d208254a10d3c46f43236fe2f0:142542791,ccd226299ea98610aeda9bdb19e0ea04:785516756,79ff2f7ea519ca90a09ba29ce83a8d31:-526731,420f070eb6bc8610ebe7c29f5f158bd4:-25640716,efbadc09d3b882104bbef615956fabed:761775339,15282134937082101f6523c50a1bb868:1809391045,97071470d13c4210381172ac59747fe9:761775339,0fa41dffbe688290e5fe022d98554e9b:-917069097,bc7ec1f725688290a589bd6d754ca2f2:826847334,bbecd46260644e502d24b934e0d96d75:-2031038580,f2d21f964c204e509049019510fa2a03:911880588,abfa526d552c4a50657fec8d0432bf15:-468168404,2a9ada2d3a2c4a50bde119f1378b7364:1893216982,50d02f45abe04650de0d63688757882c:-453278963,dd6484948f600650c3be46dbb301011a:97012809</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-09-09 14:10:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_list">sys_ux_list</sys_db_object>
+        <sys_id>20d33f101df54b6f8cd468c0653b9f31</sys_id>
+        <sys_metadata>55648c541b6006508d594047bc4bcb5c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>All</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_scope_delete display_value="">14b51fc3ce834665bcd5327947e6f949</sys_scope_delete>
+        <sys_update_name>sys_ux_list_55648c541b6006508d594047bc4bcb5c</sys_update_name>
+        <sys_update_version display_value="sys_ux_list_55648c541b6006508d594047bc4bcb5c">e148c3dd1bb1ca508d594047bc4bcbe2</sys_update_version>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-09 14:10:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
