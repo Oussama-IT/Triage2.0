@@ -52,7 +52,15 @@
                 <element inactive_on_update="false" label="Données suffisantes au dossier pour confirmer l’admissibilité à ROI" sequence="0" value="donnees-insuffisantes"/>
             </choice>
         </element>
-        <element label="PRIO" max_length="40" name="prio" type="float"/>
+        <element choice="1" label="PRIO" max_length="40" name="prio" type="float">
+            <choice>
+                <element inactive_on_update="false" label="5: Non-admissible" value="0"/>
+                <element inactive_on_update="false" label="2: N’a jamais reçu le programme ROI`; recevra SLI prochainement ou l'a reçu l'an dernier" value="3"/>
+                <element inactive_on_update="false" label="1:  N’a jamais reçu le programme ROI par le passé; ne recevra pas SLI prochainement (jardin et première)" value="4"/>
+                <element inactive_on_update="false" label="3:  A reçu le programme ROI ou SOI-TSA par le passé; n'a pas reçu SLI par le passé et ne le recevra pas prochainement (jardin et première)" value="2"/>
+                <element inactive_on_update="false" label="4: A déjà reçu le programme ROI ou SOI-TSA par le passé et qui recevra le programme SLI prochainement ou l'a reçu l'an dernier" value="1"/>
+            </choice>
+        </element>
         <element choice="1" choice_field="statut_sli_si_admissible" choice_table="x_ndecd_cecce_base_options" label="Statut SLI - si admissible" max_length="40" name="statut_sli_si_admissible" type="choice">
             <choice/>
         </element>
