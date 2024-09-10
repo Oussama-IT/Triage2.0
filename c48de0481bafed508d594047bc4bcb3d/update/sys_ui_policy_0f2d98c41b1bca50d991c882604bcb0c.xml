@@ -17,10 +17,10 @@
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
 if(g_user.hasRole('x_ndecd_triage_2_0.educatrice_res')){
-	g_form.setReadOnly('state',true);
+	g_form.setReadOnly('state',false);
 }
 else{
-g_form.setReadOnly('state',false);
+g_form.setReadOnly('state',true);
 
 }
 }]]></script_true>
@@ -32,7 +32,7 @@ g_form.setReadOnly('state',false);
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0f2d98c41b1bca50d991c882604bcb0c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>show /hide state</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -40,7 +40,7 @@ g_form.setReadOnly('state',false);
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ui_policy_0f2d98c41b1bca50d991c882604bcb0c</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-07-04 20:01:45</sys_updated_on>
+        <sys_updated_on>2024-09-10 15:44:04</sys_updated_on>
         <table>x_ndecd_triage_2_0_demandes_priorisation_sli</table>
         <ui_type>10</ui_type>
         <view/>
