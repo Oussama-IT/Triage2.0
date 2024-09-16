@@ -100,7 +100,6 @@
 
     var gselve = new GlideRecord('sys_user');
     gselve.get(eleve1);
-	newHtml = newHtml.replace("var14", gselve.getDisplayValue('u_classe'));
     newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_ecole'));
     newHtml = newHtml.replace("var12", gselve.u_niso);
     newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
@@ -117,7 +116,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>899b69401bc0b910d991c882604bcb48</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>CECCE Generae PDF ROI</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -125,7 +124,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_899b69401bc0b910d991c882604bcb48</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-06-03 16:55:58</sys_updated_on>
+        <sys_updated_on>2024-09-16 15:59:34</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
