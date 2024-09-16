@@ -36,7 +36,7 @@
                 <element inactive_on_update="false" label="Orthophonie" sequence="0" value="orthophonie"/>
             </choice>
         </element>
-        <element label="Élève" mandatory="true" max_length="32" name="eleve" reference="sys_user" type="reference"/>
+        <element label="Élève" mandatory="true" max_length="32" name="eleve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
         <element label="Date du rapport" max_length="255" name="date_du_rapport" type="glide_date"/>
         <element label="Attachment" max_length="255" name="attachment" type="file_attachment"/>
         <element choice="1" label="classe distinc vrai faux" max_length="40" name="classe_distinc_vrai_faux" type="choice">

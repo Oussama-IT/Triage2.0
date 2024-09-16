@@ -63,7 +63,7 @@
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce qu’une période de mise à l’essai de l’outil technologique a été complétée" max_length="40" name="est_ce_qu_une_p_riode_de_mise_l_essai_de_l_outil_technologique_a_t_compl_t_e" type="choice">
             <choice/>
         </element>
-        <element label="eleve" max_length="32" name="eleve" reference="sys_user" type="reference"/>
+        <element label="Eleve" max_length="32" name="eleve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
         <element label="test" max_length="40" name="test" type="file_attachment"/>
     </element>
 </database>

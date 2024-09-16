@@ -39,7 +39,7 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p>Bonjour ${opened_by.first_name} ${opened_by.last_name}&nbsp;</p>
-<p>Nous vous informons que votre demande de Partage d'un rapport en orthophonie ou en audiologie/recommandation syst&egrave;me MF concernant l'&eacute;l&egrave;ve ${eleve.first_name} ${eleve.last_name}(N&deg; ${number}) n'a pas &eacute;t&eacute; accept&eacute;e par la direction de votre &eacute;cole pour la ou les raisons suivantes :</p>
+<p>Nous vous informons que votre demande de Partage d'un rapport en orthophonie ou en audiologie/recommandation syst&egrave;me MF concernant l'&eacute;l&egrave;ve ${eleve.name} (N&deg; ${number}) n'a pas &eacute;t&eacute; accept&eacute;e par la direction de votre &eacute;cole pour la ou les raisons suivantes :</p>
 <p>"${upon_reject}".</p>]]></message_html>
         <message_list/>
         <message_text/>
@@ -62,7 +62,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>42e43daa1b48f150d991c882604bcb2a</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Demande rejected (direction)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -70,7 +70,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_42e43daa1b48f150d991c882604bcb2a</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-13 14:20:19</sys_updated_on>
+        <sys_updated_on>2024-09-12 13:21:27</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

@@ -372,7 +372,7 @@
                 <element inactive_on_update="false" label="Par courriel" sequence="1" value="par courriel"/>
             </choice>
         </element>
-        <element label="Élève" mandatory="true" max_length="32" name="l_ve" reference="sys_user" type="reference"/>
+        <element label="Élève" mandatory="true" max_length="32" name="l_ve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève s’exprime verbalement dans le seul but de nommer, de réciter ou d’énumér" max_length="40" name="l_l_ve_s_exprime_verbalement_dans_le_seul_but_de_nommer_de_r_citer_ou_d_num_r" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>

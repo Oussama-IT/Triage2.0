@@ -467,10 +467,10 @@
     newHtml = newHtml.replace("var91", current.getDisplayValue('sys_updated_on')); newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by')); newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by')); newHtml = newHtml.replace("var21", current.getDisplayValue('sys_created_on'));
     var eleve1 = current.getValue("l_ve");
 
-    var gselve = new GlideRecord('sys_user'); 
+    var gselve = new GlideRecord('x_ndecd_triage_2_0_eleve'); 
 	gselve.get(eleve1); 
 	newHtml = newHtml.replace("1125", gselve.getDisplayValue('u_classe')); 
-	newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_ecole')); 
+	newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_cole')); 
 	newHtml = newHtml.replace("var12", gselve.u_niso); 
 	newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
 
@@ -560,7 +560,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>585d85a21bfc75108d594047bc4bcb0f</sys_id>
-        <sys_mod_count>131</sys_mod_count>
+        <sys_mod_count>132</sys_mod_count>
         <sys_name>PDF2</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -568,7 +568,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_585d85a21bfc75108d594047bc4bcb0f</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-01-31 15:51:54</sys_updated_on>
+        <sys_updated_on>2024-09-11 17:14:22</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

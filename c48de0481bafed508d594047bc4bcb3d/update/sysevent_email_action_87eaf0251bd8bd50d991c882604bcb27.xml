@@ -7,7 +7,7 @@
         <affected_field_on_event/>
         <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
         <collection>x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation</collection>
-        <condition table="x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation">type_d_envoi_du_rapport=Par courriel^autre_e_mailISEMPTY^approvalCHANGESTOapproved^EQ<item display_value="Par courriel" endquery="false" field="type_d_envoi_du_rapport" goto="false" newquery="false" operator="=" or="false" value="Par courriel"/>
+        <condition table="x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation">type_d_envoi_du_rapport=^autre_e_mailISEMPTY^approvalCHANGESTOapproved^EQ<item display_value="-- None --" endquery="false" field="type_d_envoi_du_rapport" goto="false" newquery="false" operator="=" or="false" value=""/>
             <item endquery="false" field="autre_e_mail" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="CHANGESTO" or="false" value="approved"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
@@ -41,7 +41,7 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p>Bonjour ${l_ve.u_tuteur},</p>
-<p>L'&eacute;quipe &eacute;cole de votre enfant ${l_ve.first_name} ${l_ve.last_name} souhaite acheminer une demande de consultation avec possibilit&eacute; d'&eacute;valuation aupr&egrave;s du Service d'orthophonie du Conseil des &eacute;coles catholiques du Centre-Est.</p>
+<p>L'&eacute;quipe &eacute;cole de votre enfant ${l_ve.name} souhaite acheminer une demande de consultation avec possibilit&eacute; d'&eacute;valuation aupr&egrave;s du Service d'orthophonie du Conseil des &eacute;coles catholiques du Centre-Est.</p>
 <p>Afin de confirmer votre consentement &agrave; ce service, merci de prendre connaissance du document ci-joint, puis, de bien vouloir acheminer un courriel &agrave; l'adresse : ${opened_by.email} en y ajoutant le message ci-dessous dans un d&eacute;lai de 10 jours ouvrables :</p>
 <p>Je, soussign&eacute;, _________________ (nom du parent/tuteur l&eacute;gal taper), confirme avoir pris connaissance des informations contenues dans le document qui m'a &eacute;t&eacute; partag&eacute; en lien avec la demande de service en orthophonie : Demande de consultation avec possibilit&eacute; d'&eacute;valuation.</p>
 <p>Je comprends et je suis d'accord avec les informations qui s'y retrouvent, notamment, je comprends que :</p>
@@ -74,7 +74,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>87eaf0251bd8bd50d991c882604bcb27</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Demande de consentement parental</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -82,7 +82,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_87eaf0251bd8bd50d991c882604bcb27</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-13 15:05:25</sys_updated_on>
+        <sys_updated_on>2024-09-12 13:16:29</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

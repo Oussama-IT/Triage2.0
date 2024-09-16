@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Demande de consultation old values eleve fix</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="ServiceNowDeveloper3 CECCE">36406d381b3721108d594047bc4bcbeb</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2024-08-20 13:44:07</run_start>
+        <run_time>1970-01-01 05:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[var grroi = new GlideRecord('x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation');
+grroi.query();
+try {
+    while (grroi.next()) {
+
+        //grroi.eleve="7701f6c51b053950d991c882604bcb39";
+        var gruser = new GlideRecord('sys_user');
+        if (gruser.get("sys_id", grroi.l_ve)) {
+            var greleve = new GlideRecord('x_ndecd_triage_2_0_eleve');
+
+            if (greleve.get("email", gruser.email)) {
+                if (greleve.sys_id.toString()) {
+                    grroi.l_ve = greleve.sys_id;
+                    grroi.update();
+                }
+            } else if (greleve.get("u_niso", gruser.u_niso)) {
+                if (greleve.sys_id.toString()) {
+                    grroi.l_ve = greleve.sys_id;
+                    grroi.update();
+                }
+            } else {
+                gs.info("roi old values eleve fix" + greleve.sys_id)
+            }
+        }
+
+
+
+
+        //grroi.update();
+
+    }
+} catch (e) {
+    gs.info("roi old values eleve fix" + e);
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-09-11 19:23:18</sys_created_on>
+        <sys_id>31aa6bc64764561083857acc416d4393</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Demande de consultation old values eleve fix</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sysauto_script_31aa6bc64764561083857acc416d4393</sys_update_name>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-13 16:09:54</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

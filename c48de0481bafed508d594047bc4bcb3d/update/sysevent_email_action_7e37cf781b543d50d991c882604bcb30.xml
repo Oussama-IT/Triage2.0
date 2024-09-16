@@ -39,7 +39,7 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p>Bonjour ${assigned_to.first_name} ${assigned_to.last_name}</p>
-<p><br />Nous vous informons que l'&eacute;quipe triage vous a assign&eacute; une nouvelle Demande SEP li&eacute;e aux difficult&eacute;s lecture/&eacute;criture concernant l'&eacute;l&egrave;ve ${eleve.first_name} ${eleve.last_name} (N&deg; ${number}).&nbsp;</p>
+<p><br />Nous vous informons que l'&eacute;quipe triage vous a assign&eacute; une nouvelle Demande SEP li&eacute;e aux difficult&eacute;s lecture/&eacute;criture concernant l'&eacute;l&egrave;ve ${eleve.name} (N&deg; ${number}).&nbsp;</p>
 <p>Veuillez consulter le <a href="/x/ndecd/triage-20-demande-de-partage/record/x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture/${sys_id}/params/selected-tab-index/1" target="_blank" rel="noopener">lien suivant</a> afin de traiter cette demande et d'acc&eacute;der aux pi&egrave;ces jointes que vous pourrez t&eacute;l&eacute;charger puis ins&eacute;rer dans CRMS.</p>
 <p><br />Merci d'assurer le suivi dans ce dossier.</p>]]></message_html>
         <message_list/>
@@ -63,15 +63,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7e37cf781b543d50d991c882604bcb30</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Notification à l'orthophoniste d'une nouvelle affectation</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_7e37cf781b543d50d991c882604bcb30</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-16 18:58:10</sys_updated_on>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-12 13:20:00</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

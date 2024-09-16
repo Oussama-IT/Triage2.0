@@ -2,7 +2,7 @@
     <sys_ux_list action="INSERT_OR_UPDATE">
         <active>true</active>
         <category display_value="ROI - Demandes/Priorisation (ANT1)">67909b051b390650d991c882604bcb5b</category>
-        <columns>sys_updated_on,number,eleve,parent,score_roi,evaluation_sommaire_requise,soumis_par,statut_sli,statut_sli_si_admissible,situation_familiale,c_te_de_priorisation_de_base,particularit_s,nom_orthophoniste_intervention,orthophoniste_d_evaluation,langue_dominante,langage_expressif,langage_r_ceptif</columns>
+        <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,score_roi,evaluation_sommaire_requise,lr,le,ld,prio,statut_sli,statut_sli_si_admissible,orthophoniste_d_evaluation,nom_orthophoniste_intervention</columns>
         <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">opened_byDYNAMIC90d1921e5f510100a9ad2572f2b477fe^etat_annee=0^ORetat_annee=4^ORetat_annee=5<item endquery="false" field="opened_by" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="0"/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="4"/>
@@ -64,15 +64,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6c11692b47145a506274efbb616d4354</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Mes demandes</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_6c11692b47145a506274efbb616d4354</sys_update_name>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-03 14:59:03</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-12 17:55:07</sys_updated_on>
         <table>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</table>
         <title>Mes demandes</title>
         <view/>

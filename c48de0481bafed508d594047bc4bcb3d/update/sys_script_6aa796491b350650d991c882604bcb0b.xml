@@ -29,7 +29,9 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	var currentYear = new Date().getFullYear();
+	var x = new Date();
+    x.setMonth(new Date().getMonth() + 5);
+    var currentYear = x.getFullYear();
 	if (current.ann_e_de_la_demande_int==currentYear){
 		current.etat_annee=1;
 
@@ -69,7 +71,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6aa796491b350650d991c882604bcb0b</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>ROI set year state</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -77,7 +79,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_6aa796491b350650d991c882604bcb0b</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-25 14:54:19</sys_updated_on>
+        <sys_updated_on>2024-09-13 20:03:55</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

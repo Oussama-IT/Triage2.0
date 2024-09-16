@@ -39,7 +39,7 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p>Bonjour ${opened_by.first_name} ${opened_by.last_name},</p>
-<p>Nous vous informons que votre demande de consultation avec possibilit&eacute; d'&eacute;valuation concernant l'&eacute;l&egrave;ve ${l_ve.first_name} ${l_ve.last_name} (N&deg; ${number})&nbsp; n'a pas &eacute;t&eacute; accept&eacute;e par la direction de votre &eacute;cole pour la ou les raisons suivantes:</p>
+<p>Nous vous informons que votre demande de consultation avec possibilit&eacute; d'&eacute;valuation concernant l'&eacute;l&egrave;ve ${l_ve.name}&nbsp; (N&deg; ${number})&nbsp; n'a pas &eacute;t&eacute; accept&eacute;e par la direction de votre &eacute;cole pour la ou les raisons suivantes:</p>
 <p>"${upon_reject}".<span data-sheets-textstyleruns="{&quot;1&quot;:0}{&quot;1&quot;:8,&quot;2&quot;:{&quot;2&quot;:{&quot;1&quot;:2,&quot;2&quot;:255}}}{&quot;1&quot;:34}{&quot;1&quot;:74,&quot;2&quot;:{&quot;2&quot;:{&quot;1&quot;:2,&quot;2&quot;:255}}}{&quot;1&quot;:91}{&quot;1&quot;:95,&quot;2&quot;:{&quot;2&quot;:{&quot;1&quot;:2,&quot;2&quot;:255}}}{&quot;1&quot;:113}{&quot;1&quot;:133,&quot;2&quot;:{&quot;2&quot;:{&quot;1&quot;:2,&quot;2&quot;:255}}}{&quot;1&quot;:158}{&quot;1&quot;:197,&quot;2&quot;:{&quot;2&quot;:{&quot;1&quot;:2,&quot;2&quot;:255}}}{&quot;1&quot;:213}" data-sheets-userformat="{&quot;2&quot;:15295,&quot;3&quot;:{&quot;1&quot;:0},&quot;4&quot;:{&quot;1&quot;:3,&quot;3&quot;:2},&quot;5&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;6&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;7&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;8&quot;:{&quot;1&quot;:[{&quot;1&quot;:2,&quot;2&quot;:0,&quot;5&quot;:{&quot;1&quot;:2,&quot;2&quot;:0}},{&quot;1&quot;:0,&quot;2&quot;:0,&quot;3&quot;:3},{&quot;1&quot;:1,&quot;2&quot;:0,&quot;4&quot;:1}]},&quot;10&quot;:0,&quot;11&quot;:4,&quot;12&quot;:0,&quot;14&quot;:{&quot;1&quot;:3,&quot;3&quot;:1},&quot;15&quot;:&quot;Calibri&quot;,&quot;16&quot;:11}" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;Bonjour [Pr&eacute;nom, Nom du demandeur]\n\nNous vous informons que votre demande [type de demande] N&deg; [Num&eacute;ro du ticket] concernant l'&eacute;l&egrave;ve [Pr&eacute;nom, Nom de l'&eacute;l&egrave;ve] n'a pas &eacute;t&eacute; accept&eacute;e pour motif de : \&quot; [motif de rejet]\&quot;. \n\nCordialement\n &quot;}"><br /></span></p>]]></message_html>
         <message_list/>
         <message_text/>
@@ -62,7 +62,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a33a70e11bd8bd50d991c882604bcb6d</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Demande rejected (direction)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -70,7 +70,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_a33a70e11bd8bd50d991c882604bcb6d</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-09-13 15:02:17</sys_updated_on>
+        <sys_updated_on>2024-09-12 13:16:13</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

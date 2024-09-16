@@ -120,11 +120,11 @@
 
     var eleve1 = current.getValue("eleve");
 
-    var gselve = new GlideRecord('sys_user');
+    var gselve = new GlideRecord('x_ndecd_triage_2_0_eleve');
     gselve.get(eleve1);
 	
 	newHtml = newHtml.replace("var1125", gselve.getDisplayValue('u_classe'));
-    newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_ecole'));
+    newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_cole'));
     newHtml = newHtml.replace("var12", gselve.u_niso);
     newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
 
@@ -147,15 +147,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>04baf8a61bb76510d991c882604bcbae</sys_id>
-        <sys_mod_count>133</sys_mod_count>
+        <sys_mod_count>134</sys_mod_count>
         <sys_name>CECCE Generate PDF partage</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_04baf8a61bb76510d991c882604bcbae</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-01-26 20:56:35</sys_updated_on>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-11 17:13:11</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

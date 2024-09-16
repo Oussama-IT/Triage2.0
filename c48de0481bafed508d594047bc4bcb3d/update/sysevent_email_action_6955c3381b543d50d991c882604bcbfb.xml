@@ -37,7 +37,7 @@
         <mandatory>false</mandatory>
         <message/>
         <message_html><![CDATA[<p>Bonjour,</p>
-<p>Nous vous informons que que ${opened_by.first_name} ${opened_by.last_name} a &eacute;mis une nouvelle Demande SEP li&eacute;e aux difficult&eacute;s lecture/&eacute;criture concernant l'&eacute;l&egrave;ve ${eleve.first_name} ${eleve.last_name}(N&deg; ${number}).</p>
+<p>Nous vous informons que que ${opened_by.first_name} ${opened_by.last_name} a &eacute;mis une nouvelle Demande SEP li&eacute;e aux difficult&eacute;s lecture/&eacute;criture concernant l'&eacute;l&egrave;ve ${eleve.name} (N&deg; ${number}).</p>
 <p>Veuillez consulter le <a href="/esc?id=hrm_todos_page" target="_blank" rel="noopener">lien suivant</a> afin de valider cette demande et obtenir le consentement parental.</p>
 <p>Merci.</p>]]></message_html>
         <message_list/>
@@ -46,7 +46,7 @@
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
-        <recipient_fields>eleve.u_nom_de_l_ecole.admins</recipient_fields>
+        <recipient_fields/>
         <recipient_groups/>
         <recipient_users/>
         <reply_to>ne-pas-répondre équipe triage&lt;e_triage@ecolecatholique.ca&gt;</reply_to>
@@ -61,15 +61,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6955c3381b543d50d991c882604bcbfb</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Notication a la direction nouvelle instance</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_6955c3381b543d50d991c882604bcbfb</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-19 14:24:04</sys_updated_on>
+        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-12 13:19:07</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
