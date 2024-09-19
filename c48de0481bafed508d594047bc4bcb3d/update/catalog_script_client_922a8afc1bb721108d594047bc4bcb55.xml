@@ -32,13 +32,13 @@
     //  });
     var school;
     //Type appropriate comment here, and begin script below
-    var now_GR = new GlideRecord('sys_user');
+    var now_GR = new GlideRecord('x_ndecd_triage_2_0_eleve');
     now_GR.addQuery('sys_id', newValue); // Priority is 4 – Low and,
     now_GR.query(response);
 
     function response(result) {
         if (result.next()) {
-            school = result.getValue('u_nom_de_l_ecole');
+            school = result.getValue('u_nom_de_l_cole');
             var admins = new GlideRecord('x_ndecd_triage_2_0_x_ndecd_school');
             admins.addQuery('sys_id', school); // Priority is 4 – Low and,
             admins.query(responseA);
@@ -51,7 +51,6 @@
         while (result.next()) {
             var u_admin = result.getValue('admins');
             g_form.setValue("direction", u_admin);
-
         }
     }
 
@@ -71,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>922a8afc1bb721108d594047bc4bcb55</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>58</sys_mod_count>
         <sys_name>On change eleve </sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -79,7 +78,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_922a8afc1bb721108d594047bc4bcb55</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-01-26 15:50:55</sys_updated_on>
+        <sys_updated_on>2024-09-18 17:26:37</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

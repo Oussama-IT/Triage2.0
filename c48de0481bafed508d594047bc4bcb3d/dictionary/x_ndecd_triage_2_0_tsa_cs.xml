@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="175bd5401b9d8250d991c882604bcb2f" extends="x_ndecd_triage_2_0_demande_tsa" label="TSA/CS" max_length="40" name="x_ndecd_triage_2_0_tsa_cs" text_index="true" type="collection">
+    <element audit="true" db_object_id="175bd5401b9d8250d991c882604bcb2f" extends="x_ndecd_triage_2_0_demande_tsa" label="TSA/CS" max_length="40" name="x_ndecd_triage_2_0_tsa_cs" text_index="true" type="collection">
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Programme SCS si suivi" max_length="200" name="programme_scs_si_suivi" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
