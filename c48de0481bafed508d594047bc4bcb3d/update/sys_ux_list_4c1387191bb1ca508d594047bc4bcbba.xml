@@ -3,12 +3,10 @@
         <active>true</active>
         <category display_value="ROI - Demandes/Priorisation (ANT2)">2fd5bad11b71ca508d594047bc4bcb66</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,score_roi,evaluation_sommaire_requise,lr,le,ld,prio,statut_sli,statut_sli_si_admissible,ortho_eval,ortho_int</columns>
-        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">active=false^nom_orthophoniste_interventionDYNAMIC90d1921e5f510100a9ad2572f2b477fe^ORorthophoniste_d_evaluationDYNAMIC90d1921e5f510100a9ad2572f2b477fe^etat_annee=10^ORetat_annee=6^ORetat_annee=5<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="false"/>
+        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">stateIN3,4,7^nom_orthophoniste_interventionDYNAMIC90d1921e5f510100a9ad2572f2b477fe^ORorthophoniste_d_evaluationDYNAMIC90d1921e5f510100a9ad2572f2b477fe^etat_annee=10<item display_value="3,4,7" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="3,4,7"/>
             <item endquery="false" field="nom_orthophoniste_intervention" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
             <item endquery="false" field="orthophoniste_d_evaluation" goto="false" newquery="false" operator="DYNAMIC" or="true" value="90d1921e5f510100a9ad2572f2b477fe"/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="10"/>
-            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="6"/>
-            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="true" value="5"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
@@ -66,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4c1387191bb1ca508d594047bc4bcbba</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Assigné à moi (Fermé)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -74,7 +72,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_4c1387191bb1ca508d594047bc4bcbba</sys_update_name>
         <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-03 14:56:42</sys_updated_on>
+        <sys_updated_on>2024-09-17 15:08:31</sys_updated_on>
         <table>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</table>
         <title>Assigné à moi (Fermé)</title>
         <view/>
