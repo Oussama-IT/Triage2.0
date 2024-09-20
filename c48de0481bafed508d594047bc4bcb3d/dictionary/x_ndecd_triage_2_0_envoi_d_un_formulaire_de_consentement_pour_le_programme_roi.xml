@@ -79,7 +79,7 @@
             </choice>
         </element>
         <element label="Par l’éducatrice ressource langage" max_length="32" name="par_l_ducatrice_ressource_langage" type="string"/>
-        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langage réceptif" max_length="200" name="langage_r_ceptif" type="choice">
+        <element choice="1" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="Langage réceptif" max_length="200" name="langage_r_ceptif" type="choice">
             <choice>
                 <element inactive_on_update="false" label="French" sequence="1" value="french"/>
                 <element inactive_on_update="false" label="Other" sequence="9" value="other"/>
@@ -120,7 +120,7 @@
             </choice>
         </element>
         <element label="approver" max_length="32" name="approver" reference="sys_user" type="reference"/>
-        <element choice="1" choice_field="langue_parler" choice_table="x_ndecd_cecce_base_options" label="Langage expressif" max_length="200" name="langage_expressif" type="choice">
+        <element choice="1" choice_field="ad_quat_l_ger_l_ger_mod_r_mod_r_mod_r_s_v_re_s_v_re" choice_table="x_ndecd_cecce_base_options" label="Langage expressif" max_length="200" name="langage_expressif" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Russian" sequence="7" value="russian"/>
                 <element inactive_on_update="false" label="English" sequence="0" value="english"/>
