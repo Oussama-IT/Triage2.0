@@ -22,7 +22,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_b07247981b8c3d108d594047bc4bcb1a</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-06 12:43:14</sys_updated_on>
+        <sys_updated_on>2024-09-23 15:56:22</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
     <sys_pd_process_definition action="INSERT_OR_UPDATE">
@@ -48,7 +48,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_b07247981b8c3d108d594047bc4bcb1a</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-06 12:43:14</sys_updated_on>
+        <sys_updated_on>2024-09-23 15:56:22</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
     <sys_pd_lane action="delete_multiple" query="process_definition=b07247981b8c3d108d594047bc4bcb1a^sys_idNOT IN3543fb811b4431508d594047bc4bcbbf,30adc3601b00bd108d594047bc4bcba0,f9cf28171bcc39508d594047bc4bcb88"/>
@@ -169,9 +169,9 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-08-29 18:15:47</sys_created_on>
         <sys_id>39a8e3c01b8d3d108d594047bc4bcb09</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-19 13:35:31</sys_updated_on>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-23 15:56:21</sys_updated_on>
         <type_vals/>
         <type_vals/>
     </sys_pd_activity>
@@ -282,10 +282,10 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-08-29 18:15:47</sys_created_on>
         <sys_id>79a8e3c01b8d3d108d594047bc4bcb11</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-08-29 18:15:47</sys_updated_on>
-        <value>Approval for this requests have been {{vl.Request Ad hoc Approval./end.state}}</value>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-23 15:56:21</sys_updated_on>
+        <value/>
         <variable display_value="List Title">12e9e761870300102252c88fc0e3ecb2</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -324,10 +324,10 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-08-29 18:15:47</sys_created_on>
         <sys_id>7da8e3c01b8d3d108d594047bc4bcb13</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-08-29 18:15:47</sys_updated_on>
-        <value>sysapproval={{vl.Request Ad hoc Approval./end.approval_record}}^sys_created_on&gt;=javascript:gs.dateGenerate({{vl.Request Ad hoc Approval./end.flow_created_on}})</value>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-23 15:56:21</sys_updated_on>
+        <value/>
         <variable display_value="List Query">6f2f7ecf5b21001070e4492c11f91a77</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -477,11 +477,11 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-08-29 18:15:47</sys_created_on>
         <sys_id>fda86bc01b8d3d108d594047bc4bcba4</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-19 13:35:31</sys_updated_on>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-23 15:56:21</sys_updated_on>
         <table>var__m_sys_hub_flow_input_8ec899171b934150db4bba63cc4bcb22</table>
-        <value>{{pd.inputRecord.eleve.u_nom_de_l_ecole.admins}}</value>
+        <value>{{pd.inputRecord.eleve.u_nom_de_l_cole.admins}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>approver_group</field>
@@ -731,11 +731,11 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-08-29 18:15:47</sys_created_on>
         <sys_id>fda86bc01b8d3d108d594047bc4bcba4</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-10-19 13:35:31</sys_updated_on>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-09-23 15:56:21</sys_updated_on>
         <table>var__m_sys_hub_flow_input_8ec899171b934150db4bba63cc4bcb22</table>
-        <value>{{pd.inputRecord.eleve.u_nom_de_l_ecole.admins}}</value>
+        <value>{{pd.inputRecord.eleve.u_nom_de_l_cole.admins}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>approver_group</field>
