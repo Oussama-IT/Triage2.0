@@ -3,8 +3,8 @@
         <active>true</active>
         <category display_value="ROI - Demandes/Priorisation (prochains)">58725fc51b390650d991c882604bcbae</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,evaluation_sommaire_requise,lr,le,ld,prio,statut_sli,statut_sli_si_admissible,ortho_eval,ortho_int</columns>
-        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">stateIN7,3,4^etat_annee=<item display_value="7,3,4" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="7,3,4"/>
-            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value=""/>
+        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">stateIN7,3,4^etat_annee=2<item display_value="7,3,4" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="7,3,4"/>
+            <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="2"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
@@ -62,7 +62,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>611e6849473cde106274efbb616d4374</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Fermé</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -70,7 +70,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_611e6849473cde106274efbb616d4374</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-20 13:42:05</sys_updated_on>
+        <sys_updated_on>2024-09-24 01:59:27</sys_updated_on>
         <table>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</table>
         <title>Fermé</title>
         <view/>
