@@ -4,6 +4,7 @@
         <element label="Nom de l'école" max_length="32" name="u_nom_de_l_cole" reference="x_ndecd_triage_2_0_x_ndecd_school" type="reference"/>
         <element label="Tuteur" max_length="200" name="u_tuteur" type="string"/>
         <element label="Date de naissance" max_length="40" name="u_date_de_naissance" type="glide_date"/>
+        <element label="PSN_OID" max_length="40" name="psn_oid" type="string"/>
         <element label="Niveau scolaire" max_length="32" name="u_classe" reference="x_ndecd_triage_2_0_classe" type="reference"/>
         <element label="Nombre de cas" max_length="40" name="u_nombre_de_cas" type="integer"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
