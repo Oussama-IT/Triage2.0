@@ -98,7 +98,7 @@
         <element choice="1" choice_field="statut_sli" choice_table="x_ndecd_cecce_base_options" label="Statut SLI" max_length="40" name="statut_sli" type="choice">
             <choice/>
         </element>
-        <element label="Nom orthophoniste évaluation" max_length="32" name="orthophoniste_d_evaluation" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du régulier^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du régulier^EQ" type="reference"/>
+        <element label="Nom orthophoniste évaluation" max_length="32" name="orthophoniste_d_evaluation" reference="sys_user" reference_qual="roles=x_ndecd_triage_2_0.Orthophoniste" reference_qual_condition="roles=x_ndecd_triage_2_0.Orthophoniste" type="reference"/>
         <element label="Score ROI" max_length="40" name="score_roi" type="float"/>
         <element choice="1" default="par lettre" label="Type d'envoi du rapport" max_length="40" name="type_d_envoi_du_rapport" type="choice">
             <choice>
@@ -192,7 +192,7 @@
         <element choice="1" choice_field="diagnostic" choice_table="x_ndecd_cecce_base_options" label="Diagnostique" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic" type="choice">
             <choice/>
         </element>
-        <element label="Nom orthophoniste intervention" max_length="32" name="nom_orthophoniste_intervention" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du régulier^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du régulier^EQ" type="reference"/>
+        <element label="Nom orthophoniste intervention" max_length="32" name="nom_orthophoniste_intervention" reference="sys_user" reference_qual="roles=x_ndecd_triage_2_0.Orthophoniste" reference_qual_condition="roles=x_ndecd_triage_2_0.Orthophoniste" type="reference"/>
         <element choice="1" label="classe choisie" max_length="40" name="classe_choisie" type="choice">
             <choice/>
         </element>
