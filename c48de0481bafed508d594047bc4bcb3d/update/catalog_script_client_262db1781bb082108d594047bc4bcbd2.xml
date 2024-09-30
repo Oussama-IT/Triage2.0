@@ -21,24 +21,25 @@
         <script><![CDATA[function onSubmit() {
    //Type appropriate comment here, and begin script below
    if(g_form.getValue("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte") == 'yes'){
-	g_form.addErrorMessage("Vous ne pouvez soumettre une demande SLI pour un(e) élève en classe distincte.")
-	return false
+	g_form.addErrorMessage("Vous ne pouvez soumettre une demande SLI pour un(e) élève en classe distincte.");
+	return false;
    }
    if(g_form.getValue("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier") == 'yes'){
-	g_form.addErrorMessage("Vous ne pouvez soumettre une demande pour cet(te) élève. Veuillez communiquer avec l’orthophoniste de votre école. Si l’élève n’a pas déjà un dossier en orthophonie au Conseil, veuillez soumettre une demande de services en orthophonie - Motif 'Partage d’un rapport' sur la plateforme.")
-	return false
+	g_form.addErrorMessage("Vous ne pouvez soumettre une demande pour cet(te) élève. Veuillez communiquer avec l’orthophoniste de votre école. Si l’élève n’a pas déjà un dossier en orthophonie au Conseil, veuillez soumettre une demande de services en orthophonie - Motif 'Partage d’un rapport' sur la plateforme.");
+	return false;
    }
    if(g_form.getValue("les_difficult_s_de_l_l_ve_sont_elles_aussi_pr_sentes_dans_sa_langue_dominante") == 'no'){
-	g_form.addErrorMessage("Vous ne pouvez soumettre une demande pour un élève qui se développe bien dans sa langue dominante.")
-	return false
+	g_form.addErrorMessage("Vous ne pouvez soumettre une demande pour un élève qui se développe bien dans sa langue dominante.");
+	return false;
    }
    if (( ["adequat","leger","leger-a-modere"].includes(g_form.getValue("orth_langage_r_ceptif_dans_sa_langue_dominante")) && ["adequat","leger","leger-a-modere"].includes(g_form.getValue("orth_langage_expressif_dans_sa_langue_dominante")))){
     g_form.addErrorMessage("L'élève ne répond pas aux critères d'admissibilité au programme ROI");
-	return false
+	return false;
    }
 
     var sligr=new GlideRecord('x_ndecd_triage_2_0_sli_roi');
 	sligr.addQuery('l_ve', g_form.getValue("l_ve"));
+	sligr.addQuery('state',1);
 	sligr.query(checkeleveexiste);
 	function checkeleveexiste(result){
 	if (result.next()) {
@@ -57,7 +58,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>262db1781bb082108d594047bc4bcbd2</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>on submit</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -65,7 +66,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_262db1781bb082108d594047bc4bcbd2</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-06-13 18:39:13</sys_updated_on>
+        <sys_updated_on>2024-09-30 12:36:06</sys_updated_on>
         <table/>
         <type>onSubmit</type>
         <ui_type>10</ui_type>
