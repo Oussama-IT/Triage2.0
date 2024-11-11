@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>true</advanced>
+        <condition/>
+        <description>Allow create for records in x_ndecd_triage_2_0_pdftemplate, if the ACL script returns true.</description>
+        <name>x_ndecd_triage_2_0_pdftemplate</name>
+        <operation display_value="create">create</operation>
+        <script><![CDATA[answer = gs.getSession().isLoggedIn();
+if (!answer) {
+    answer = gs.getProperty('glide.security.allow_unauth_roleless_acl', false);
+}]]></script>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-02-22 20:11:34</sys_created_on>
+        <sys_id>af842f491be04650d991c882604bcb08</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_ndecd_triage_2_0_pdftemplate</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_security_acl_af842f491be04650d991c882604bcb08</sys_update_name>
+        <sys_updated_by>system@snc.admin,maint</sys_updated_by>
+        <sys_updated_on>2024-02-29 01:33:43</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</application>
+        <file_path/>
+        <instance_id>65b29b3adb7ea19492f5684e13961931</instance_id>
+        <instance_name>ceccedev</instance_name>
+        <name>sys_security_acl_af842f491be04650d991c882604bcb08</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_security_acl"&gt;&lt;sys_security_acl action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;admin_overrides&gt;true&lt;/admin_overrides&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;condition/&gt;&lt;description&gt;Allow create for records in x_ndecd_triage_2_0_pdftemplate, if the ACL script returns true.&lt;/description&gt;&lt;name&gt;x_ndecd_triage_2_0_pdftemplate&lt;/name&gt;&lt;operation display_value="create"&gt;create&lt;/operation&gt;&lt;script&gt;&lt;![CDATA[answer = gs.getSession().isLoggedIn();
+if (!answer) {
+    answer = gs.getProperty('glide.security.allow_unauth_roleless_acl', false);
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_security_acl&lt;/sys_class_name&gt;&lt;sys_created_by&gt;servicenowdeveloper3@ecolecatholique.ca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-02-22 20:11:34&lt;/sys_created_on&gt;&lt;sys_id&gt;af842f491be04650d991c882604bcb08&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;x_ndecd_triage_2_0_pdftemplate&lt;/sys_name&gt;&lt;sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Triage 2.0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_security_acl_af842f491be04650d991c882604bcb08&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;system@snc.admin,maint&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-02-29 01:33:43&lt;/sys_updated_on&gt;&lt;type display_value="record"&gt;record&lt;/type&gt;&lt;/sys_security_acl&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1455385109</payload_hash>
+        <record_name>x_ndecd_triage_2_0_pdftemplate</record_name>
+        <reverted_from/>
+        <source>45cc13ba1bb221108d594047bc4bcb66</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>system@snc.admin,maint</sys_created_by>
+        <sys_created_on>2024-02-29 01:33:43</sys_created_on>
+        <sys_id>cdd72bcf1b6002908d594047bc4bcb38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18df27ef76b0000001</sys_recorded_at>
+        <sys_updated_by>system@snc.admin,maint</sys_updated_by>
+        <sys_updated_on>2024-02-29 01:33:43</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>45d72bcfbf600290bba39bb14fee2738</update_guid>
+        <update_guid_history>45d72bcfbf600290bba39bb14fee2738:1455385109,67842f497be046502b795af1a687d80a:-717092769</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>system@snc.admin,maint</sys_created_by>
+        <sys_created_on>2024-11-06 15:42:13</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>5fea5ca787944e409d563d619a2c9840</sys_id>
+        <sys_metadata>af842f491be04650d991c882604bcb08</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_ndecd_triage_2_0_pdftemplate</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_parent display_value="x_ndecd_triage_2_0_pdftemplate">665438621bb76510d991c882604bcb27</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_scope_delete display_value="">14b51fc3ce834665bcd5327947e6f949</sys_scope_delete>
+        <sys_update_name>sys_security_acl_af842f491be04650d991c882604bcb08</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_af842f491be04650d991c882604bcb08">cdd72bcf1b6002908d594047bc4bcb38</sys_update_version>
+        <sys_updated_by>system@snc.admin,maint</sys_updated_by>
+        <sys_updated_on>2024-11-06 15:42:13</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
