@@ -6,10 +6,13 @@
         <designer_state/>
         <label>CECCE demandes-priorisation SLI ecole-ortho</label>
         <name>cecce_demandes_priorisation_sli</name>
+        <now_assist_prompt/>
+        <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_demandes_priorisation_sli">069c31e947c996906274efbb616d4343</snapshot>
+        <start_non_blocking>false</start_non_blocking>
         <status>published</status>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
@@ -32,10 +35,13 @@
         <designer_state/>
         <label>CECCE demandes-priorisation SLI ecole-ortho</label>
         <name>cecce_demandes_priorisation_sli</name>
+        <now_assist_prompt/>
+        <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_demandes_priorisation_sli">069c31e947c996906274efbb616d4343</snapshot>
+        <start_non_blocking>false</start_non_blocking>
         <status>published</status>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
@@ -15484,6 +15490,7 @@
         <derivatives>{"table":"sys_pd_snapshot","id":"069c31e947c996906274efbb616d4343","name":"derivatives","type":"com.snc.pd.model.serialization.DerivativeFetcher"}</derivatives>
         <name>cecce_demandes_priorisation_sli</name>
         <process_definition>{"table":"sys_pd_snapshot","id":"069c31e947c996906274efbb616d4343","name":"process_definition","type":"com.snc.pd.model.ProcessDefinition"}</process_definition>
+        <process_dependencies/>
         <process_plan>{"table":"sys_pd_snapshot","id":"069c31e947c996906274efbb616d4343","name":"process_plan","type":"com.snc.process_flow.engine.ProcessPlan"}</process_plan>
         <source display_value="CECCE demandes-priorisation SLI ecole-ortho">9b1ea89c1be006508d594047bc4bcb97</source>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -15527,6 +15534,7 @@
     </sys_pd_snapshot_chunk>
     <sys_flow_compiled_flow action="delete_multiple" query="sys_id=8e9c31e9dcc99690096e517f1cbc6545^sys_idNOT IN8e9c31e9dcc99690096e517f1cbc6545"/>
     <sys_flow_compiled_flow action="INSERT_OR_UPDATE">
+        <parent_snapshot_id/>
         <signature/>
         <snapshot_id>069c31e947c996906274efbb616d4343</snapshot_id>
         <sys_created_by>system</sys_created_by>

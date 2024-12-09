@@ -17,6 +17,7 @@
         <internal_name>cecce_demande_de_partage_assigned_to_notification</internal_name>
         <label_cache>[{"name":"Updated_1.current.assigned_to.last_name","label":"Trigger - Record Updated➛Demande de partage Record➛Assigned to➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Updated_1.current.assigned_to.first_name","label":"Trigger - Record Updated➛Demande de partage Record➛Assigned to➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Updated_1.current.eleve.last_name","label":"Trigger - Record Updated➛Demande de partage Record➛Eleve➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Updated_1.current.eleve.first_name","label":"Trigger - Record Updated➛Demande de partage Record➛Eleve➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Updated_1.current.number","label":"Trigger - Record Updated➛Demande de partage Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"number"},{"name":"Updated_1.current.opened_by.last_name","label":"Trigger - Record Updated➛Demande de partage Record➛Opened by➛Last name","reference":"","reference_display":"Last name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"last_name"},{"name":"Updated_1.current.opened_by.first_name","label":"Trigger - Record Updated➛Demande de partage Record➛Opened by➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Updated_1.current.opened_by","label":"Trigger - Record Updated➛Demande de partage Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_ndecd_triage_2_0_demande_de_partage","column_name":"opened_by"},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Demande de partage Record","reference":"x_ndecd_triage_2_0_demande_de_partage","reference_display":"Demande de partage","type":"reference","base_type":"reference","attributes":{}}]</label_cache>
         <master_snapshot>6f4469491bc8fd108d594047bc4bcb34</master_snapshot>
+        <master_snapshot_digest/>
         <name>cecce demande de partage assigned to notification</name>
         <natlang/>
         <outputs/>
@@ -45,6 +46,7 @@
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
         <sys_updated_on>2023-07-18 12:13:39</sys_updated_on>
         <type>flow</type>
+        <version>1</version>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=37a2e9c51bc8fd108d594047bc4bcb6e"/>
     <sys_variable_value action="delete_multiple" query="document_key=37a2e9c51bc8fd108d594047bc4bcb6e"/>
@@ -88,55 +90,6 @@
         <trigger display_value="">2b4469491bc8fd108d594047bc4bcb8a</trigger>
     </sys_trigger_runner_mapping>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=37a2e9c51bc8fd108d594047bc4bcb6e^sys_idNOT INa34469491bc8fd108d594047bc4bcb8b"/>
-    <sys_hub_trigger_instance action="delete_multiple" query="flow=37a2e9c51bc8fd108d594047bc4bcb6e^sys_idNOT IN0644e5491bc8fd108d594047bc4bcbb3"/>
-    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
-        <comment/>
-        <display_text/>
-        <flow display_value="cecce demande de partage assigned to notification">37a2e9c51bc8fd108d594047bc4bcb6e</flow>
-        <name>Updated</name>
-        <remote_sys_id/>
-        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-07-13 18:08:36</sys_created_on>
-        <sys_id>0644e5491bc8fd108d594047bc4bcbb3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_scope/>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-07-13 18:08:43</sys_updated_on>
-        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
-        <trigger_inputs/>
-        <trigger_outputs/>
-        <trigger_type>record_update</trigger_type>
-    </sys_hub_trigger_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=0644e5491bc8fd108d594047bc4bcbb3"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_trigger_instance</document>
-        <document_key>0644e5491bc8fd108d594047bc4bcbb3</document_key>
-        <order>1</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-07-13 18:08:36</sys_created_on>
-        <sys_id>4a44e5491bc8fd108d594047bc4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-07-13 18:08:36</sys_updated_on>
-        <value>x_ndecd_triage_2_0_demande_de_partage</value>
-        <variable display_value="Table">1dda12e0c31322002841b63b12d3aea8</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_trigger_instance</document>
-        <document_key>0644e5491bc8fd108d594047bc4bcbb3</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-07-13 18:08:36</sys_created_on>
-        <sys_id>8244e5491bc8fd108d594047bc4bcbb4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-07-13 18:08:36</sys_updated_on>
-        <value>assigned_toVALCHANGES</value>
-        <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=0644e5491bc8fd108d594047bc4bcbb3"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=37a2e9c51bc8fd108d594047bc4bcb6e"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=37a2e9c51bc8fd108d594047bc4bcb6e^sys_idNOT INffa2e9c51bc8fd108d594047bc4bcb6e"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -249,12 +202,12 @@
         <sys_domain_path/>
         <sys_id>f4f014150f023300ecf0cc52ff767eed</sys_id>
         <sys_mod_count>101</sys_mod_count>
-        <sys_name>FDCollection</sys_name>
+        <sys_name/>
         <sys_overrides/>
         <sys_package display_value="Flow Designer Designer Model" source="com.glide.hub.designer_backend.model">1170673e1bf221108d594047bc4bcb15</sys_package>
         <sys_policy/>
         <sys_scope display_value="Global">global</sys_scope>
-        <sys_update_name>sys_complex_object_f4f014150f023300ecf0cc52ff767eed</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2020-09-28 05:06:11</sys_updated_on>
         <type>complex_object_collection</type>
@@ -429,6 +382,55 @@
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8644e5491bc8fd108d594047bc4bcb95"/>
     <sys_hub_flow_output action="delete_multiple" query="model=37a2e9c51bc8fd108d594047bc4bcb6e"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=37a2e9c51bc8fd108d594047bc4bcb6e"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=37a2e9c51bc8fd108d594047bc4bcb6e^sys_idNOT IN0644e5491bc8fd108d594047bc4bcbb3"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="cecce demande de partage assigned to notification">37a2e9c51bc8fd108d594047bc4bcb6e</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-13 18:08:36</sys_created_on>
+        <sys_id>0644e5491bc8fd108d594047bc4bcbb3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-07-13 18:08:43</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=0644e5491bc8fd108d594047bc4bcbb3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>0644e5491bc8fd108d594047bc4bcbb3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-13 18:08:36</sys_created_on>
+        <sys_id>4a44e5491bc8fd108d594047bc4bcbb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-07-13 18:08:36</sys_updated_on>
+        <value>x_ndecd_triage_2_0_demande_de_partage</value>
+        <variable display_value="Table">1dda12e0c31322002841b63b12d3aea8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>0644e5491bc8fd108d594047bc4bcbb3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-13 18:08:36</sys_created_on>
+        <sys_id>8244e5491bc8fd108d594047bc4bcbb4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-07-13 18:08:36</sys_updated_on>
+        <value>assigned_toVALCHANGES</value>
+        <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=0644e5491bc8fd108d594047bc4bcbb3"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=37a2e9c51bc8fd108d594047bc4bcb6e^sys_idNOT IN1244e5491bc8fd108d594047bc4bcbbc"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
@@ -547,8 +549,8 @@
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=1244e5491bc8fd108d594047bc4bcbbc"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=1244e5491bc8fd108d594047bc4bcbbc"/>
-    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=37a2e9c51bc8fd108d594047bc4bcb6e"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=37a2e9c51bc8fd108d594047bc4bcb6e"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=37a2e9c51bc8fd108d594047bc4bcb6e"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=37a2e9c51bc8fd108d594047bc4bcb6e^sys_idNOT IN1244e5491bc8fd108d594047bc4bcbcf,1e44e5491bc8fd108d594047bc4bcbcf,5a44e5491bc8fd108d594047bc4bcbce,5a44e5491bc8fd108d594047bc4bcbcf,9644e5491bc8fd108d594047bc4bcbcf,d244e5491bc8fd108d594047bc4bcbcf,de44e5491bc8fd108d594047bc4bcbcf"/>
     <sys_hub_pill_compound action="INSERT_OR_UPDATE">
         <attached_to>37a2e9c51bc8fd108d594047bc4bcb6e</attached_to>
@@ -784,58 +786,10 @@
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
         <sys_updated_on>2023-07-13 18:08:41</sys_updated_on>
         <type>flow</type>
+        <version>1</version>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=6f4469491bc8fd108d594047bc4bcb34"/>
     <sys_variable_value action="delete_multiple" query="document_key=6f4469491bc8fd108d594047bc4bcb34"/>
-    <sys_hub_trigger_instance action="delete_multiple" query="flow=6f4469491bc8fd108d594047bc4bcb34^sys_idNOT IN274469491bc8fd108d594047bc4bcb6e"/>
-    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
-        <comment/>
-        <display_text/>
-        <flow display_value="cecce demande de partage assigned to notification">6f4469491bc8fd108d594047bc4bcb34</flow>
-        <name>Updated</name>
-        <remote_sys_id/>
-        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-07-13 18:08:42</sys_created_on>
-        <sys_id>274469491bc8fd108d594047bc4bcb6e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope/>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-07-13 18:08:42</sys_updated_on>
-        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
-        <trigger_inputs/>
-        <trigger_outputs/>
-        <trigger_type>record_update</trigger_type>
-    </sys_hub_trigger_instance>
-    <sys_variable_value action="delete_multiple" query="document_key=274469491bc8fd108d594047bc4bcb6e"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_trigger_instance</document>
-        <document_key>274469491bc8fd108d594047bc4bcb6e</document_key>
-        <order>1</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-07-13 18:08:42</sys_created_on>
-        <sys_id>6f4469491bc8fd108d594047bc4bcb6f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-07-13 18:08:42</sys_updated_on>
-        <value>x_ndecd_triage_2_0_demande_de_partage</value>
-        <variable display_value="Table">1dda12e0c31322002841b63b12d3aea8</variable>
-    </sys_variable_value>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_trigger_instance</document>
-        <document_key>274469491bc8fd108d594047bc4bcb6e</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-07-13 18:08:42</sys_created_on>
-        <sys_id>ab4469491bc8fd108d594047bc4bcb6f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2023-07-13 18:08:42</sys_updated_on>
-        <value>assigned_toVALCHANGES</value>
-        <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
-    </sys_variable_value>
-    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=274469491bc8fd108d594047bc4bcb6e"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=6f4469491bc8fd108d594047bc4bcb34"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=6f4469491bc8fd108d594047bc4bcb34^sys_idNOT INeb4469491bc8fd108d594047bc4bcb35"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -1105,6 +1059,55 @@
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6f4469491bc8fd108d594047bc4bcb4e"/>
     <sys_hub_flow_output action="delete_multiple" query="model=6f4469491bc8fd108d594047bc4bcb34"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=6f4469491bc8fd108d594047bc4bcb34"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=6f4469491bc8fd108d594047bc4bcb34^sys_idNOT IN274469491bc8fd108d594047bc4bcb6e"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="cecce demande de partage assigned to notification">6f4469491bc8fd108d594047bc4bcb34</flow>
+        <name>Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-13 18:08:42</sys_created_on>
+        <sys_id>274469491bc8fd108d594047bc4bcb6e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-07-13 18:08:42</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=274469491bc8fd108d594047bc4bcb6e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>274469491bc8fd108d594047bc4bcb6e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-13 18:08:42</sys_created_on>
+        <sys_id>6f4469491bc8fd108d594047bc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-07-13 18:08:42</sys_updated_on>
+        <value>x_ndecd_triage_2_0_demande_de_partage</value>
+        <variable display_value="Table">1dda12e0c31322002841b63b12d3aea8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>274469491bc8fd108d594047bc4bcb6e</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-13 18:08:42</sys_created_on>
+        <sys_id>ab4469491bc8fd108d594047bc4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2023-07-13 18:08:42</sys_updated_on>
+        <value>assigned_toVALCHANGES</value>
+        <variable display_value="Condition">bb9adea0c31322002841b63b12d3ae67</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=274469491bc8fd108d594047bc4bcb6e"/>
     <sys_hub_action_instance action="delete_multiple" query="flow=6f4469491bc8fd108d594047bc4bcb34^sys_idNOT IN274469491bc8fd108d594047bc4bcb6b"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
         <action_inputs/>
@@ -1223,8 +1226,8 @@
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=274469491bc8fd108d594047bc4bcb6b"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=274469491bc8fd108d594047bc4bcb6b"/>
-    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=6f4469491bc8fd108d594047bc4bcb34"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=6f4469491bc8fd108d594047bc4bcb34"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=6f4469491bc8fd108d594047bc4bcb34"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=6f4469491bc8fd108d594047bc4bcb34^sys_idNOT IN234469491bc8fd108d594047bc4bcb70,274469491bc8fd108d594047bc4bcb70,2b4469491bc8fd108d594047bc4bcb70,2f4469491bc8fd108d594047bc4bcb70,a34469491bc8fd108d594047bc4bcb70,a74469491bc8fd108d594047bc4bcb70,ab4469491bc8fd108d594047bc4bcb70"/>
     <sys_hub_pill_compound action="INSERT_OR_UPDATE">
         <attached_to>6f4469491bc8fd108d594047bc4bcb34</attached_to>

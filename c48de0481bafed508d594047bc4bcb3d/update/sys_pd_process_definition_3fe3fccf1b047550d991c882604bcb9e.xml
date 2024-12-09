@@ -6,10 +6,13 @@
         <designer_state/>
         <label>CECCE Demande SEP</label>
         <name>cecce_demande_sep</name>
+        <now_assist_prompt/>
+        <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_demande_sep">b34c424f4751965083857acc416d43c3</snapshot>
+        <start_non_blocking>false</start_non_blocking>
         <status>published</status>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -32,10 +35,13 @@
         <designer_state/>
         <label>CECCE Demande SEP</label>
         <name>cecce_demande_sep</name>
+        <now_assist_prompt/>
+        <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_demande_sep">b34c424f4751965083857acc416d43c3</snapshot>
+        <start_non_blocking>false</start_non_blocking>
         <status>published</status>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -8598,6 +8604,7 @@
         <derivatives>{"table":"sys_pd_snapshot","id":"b34c424f4751965083857acc416d43c3","name":"derivatives","type":"com.snc.pd.model.serialization.DerivativeFetcher"}</derivatives>
         <name>cecce_demande_sep</name>
         <process_definition>{"table":"sys_pd_snapshot","id":"b34c424f4751965083857acc416d43c3","name":"process_definition","type":"com.snc.pd.model.ProcessDefinition"}</process_definition>
+        <process_dependencies/>
         <process_plan>{"table":"sys_pd_snapshot","id":"b34c424f4751965083857acc416d43c3","name":"process_plan","type":"com.snc.process_flow.engine.ProcessPlan"}</process_plan>
         <source display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</source>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -8641,6 +8648,7 @@
     </sys_pd_snapshot_chunk>
     <sys_flow_compiled_flow action="delete_multiple" query="sys_id=374c424fe75196507c166b01df7a71c4^sys_idNOT IN374c424fe75196507c166b01df7a71c4"/>
     <sys_flow_compiled_flow action="INSERT_OR_UPDATE">
+        <parent_snapshot_id/>
         <signature/>
         <snapshot_id>b34c424f4751965083857acc416d43c3</snapshot_id>
         <sys_created_by>system</sys_created_by>

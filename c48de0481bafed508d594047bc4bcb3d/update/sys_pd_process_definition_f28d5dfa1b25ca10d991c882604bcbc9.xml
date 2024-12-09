@@ -6,10 +6,13 @@
         <designer_state/>
         <label>CECCE demandes-priorisation SLI apres changement etat non admissible</label>
         <name>cecce_demandes_priorisation_sli_nom_admissible</name>
+        <now_assist_prompt/>
+        <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_demandes_priorisation_sli_nom_admissible">db2f15be1b25ca10d991c882604bcbe7</snapshot>
+        <start_non_blocking>false</start_non_blocking>
         <status>draft</status>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
@@ -32,10 +35,13 @@
         <designer_state/>
         <label>CECCE demandes-priorisation SLI apres changement etat non admissible</label>
         <name>cecce_demandes_priorisation_sli_nom_admissible</name>
+        <now_assist_prompt/>
+        <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_demandes_priorisation_sli_nom_admissible">db2f15be1b25ca10d991c882604bcbe7</snapshot>
+        <start_non_blocking>false</start_non_blocking>
         <status>draft</status>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
@@ -2529,6 +2535,7 @@
         <derivatives>{"table":"sys_pd_snapshot","id":"db2f15be1b25ca10d991c882604bcbe7","name":"derivatives","type":"com.snc.pd.model.serialization.DerivativeFetcher"}</derivatives>
         <name>cecce_demandes_priorisation_sli_nom_admissible</name>
         <process_definition>{"table":"sys_pd_snapshot","id":"db2f15be1b25ca10d991c882604bcbe7","name":"process_definition","type":"com.snc.pd.model.ProcessDefinition"}</process_definition>
+        <process_dependencies/>
         <process_plan>{"table":"sys_pd_snapshot","id":"db2f15be1b25ca10d991c882604bcbe7","name":"process_plan","type":"com.snc.process_flow.engine.ProcessPlan"}</process_plan>
         <source display_value="CECCE demandes-priorisation SLI apres changement etat non admissible">f28d5dfa1b25ca10d991c882604bcbc9</source>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
@@ -2572,6 +2579,7 @@
     </sys_pd_snapshot_chunk>
     <sys_flow_compiled_flow action="delete_multiple" query="sys_id=5f2f15be7125ca10c52b1f15b6bc54e8^sys_idNOT IN5f2f15be7125ca10c52b1f15b6bc54e8"/>
     <sys_flow_compiled_flow action="INSERT_OR_UPDATE">
+        <parent_snapshot_id/>
         <signature/>
         <snapshot_id>db2f15be1b25ca10d991c882604bcbe7</snapshot_id>
         <sys_created_by>system</sys_created_by>

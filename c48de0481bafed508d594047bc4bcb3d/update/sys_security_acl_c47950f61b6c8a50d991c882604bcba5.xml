@@ -3,8 +3,10 @@
         <active>true</active>
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
+        <applies_to/>
         <condition table="x_ndecd_triage_2_0_demandes_priorisation_sli.statut_sli">statut_sli=^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
+        <decision_type>allow</decision_type>
         <description>Allow write for statut_sli in x_ndecd_triage_2_0_demandes_priorisation_sli, if the ACL condition (statut_sli=^EQ) evaluates to true.</description>
         <local_or_existing>Local</local_or_existing>
         <name>x_ndecd_triage_2_0_demandes_priorisation_sli.statut_sli</name>

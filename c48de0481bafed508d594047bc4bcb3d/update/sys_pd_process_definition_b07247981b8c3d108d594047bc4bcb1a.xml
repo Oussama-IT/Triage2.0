@@ -6,10 +6,13 @@
         <designer_state/>
         <label>CECCE Demande departage workflow</label>
         <name>cecce_demande_departage_workflow</name>
+        <now_assist_prompt/>
+        <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_demande_departage_workflow">f418b9074711965083857acc416d43b0</snapshot>
+        <start_non_blocking>false</start_non_blocking>
         <status>published</status>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -32,10 +35,13 @@
         <designer_state/>
         <label>CECCE Demande departage workflow</label>
         <name>cecce_demande_departage_workflow</name>
+        <now_assist_prompt/>
+        <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_demande_departage_workflow">f418b9074711965083857acc416d43b0</snapshot>
+        <start_non_blocking>false</start_non_blocking>
         <status>published</status>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -8640,6 +8646,7 @@
         <derivatives>{"table":"sys_pd_snapshot","id":"f418b9074711965083857acc416d43b0","name":"derivatives","type":"com.snc.pd.model.serialization.DerivativeFetcher"}</derivatives>
         <name>cecce_demande_departage_workflow</name>
         <process_definition>{"table":"sys_pd_snapshot","id":"f418b9074711965083857acc416d43b0","name":"process_definition","type":"com.snc.pd.model.ProcessDefinition"}</process_definition>
+        <process_dependencies/>
         <process_plan>{"table":"sys_pd_snapshot","id":"f418b9074711965083857acc416d43b0","name":"process_plan","type":"com.snc.process_flow.engine.ProcessPlan"}</process_plan>
         <source display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</source>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -8683,6 +8690,7 @@
     </sys_pd_snapshot_chunk>
     <sys_flow_compiled_flow action="delete_multiple" query="sys_id=3018b9077511965018af12ef6d12f6bf^sys_idNOT IN3018b9077511965018af12ef6d12f6bf"/>
     <sys_flow_compiled_flow action="INSERT_OR_UPDATE">
+        <parent_snapshot_id/>
         <signature/>
         <snapshot_id>f418b9074711965083857acc416d43b0</snapshot_id>
         <sys_created_by>system</sys_created_by>
