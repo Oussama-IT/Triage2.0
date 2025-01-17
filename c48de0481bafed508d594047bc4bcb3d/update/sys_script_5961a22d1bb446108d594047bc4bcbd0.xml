@@ -15,8 +15,7 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">c_te_de_priorisation_de_baseVALCHANGES^c_te_de_priorisation_de_baseISNOTEMPTY^EQ<item display_value="-- None --" endquery="false" field="c_te_de_priorisation_de_base" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
-            <item display_value="-- None --" endquery="false" field="c_te_de_priorisation_de_base" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        <filter_condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">c_te_de_priorisation_de_baseVALCHANGES^EQ<item display_value="-- None --" endquery="false" field="c_te_de_priorisation_de_base" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
@@ -31,10 +30,81 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-var roi =current //new GlideRecord('x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi');
-roi.setValue("score_roi",Number(roi.getValue("score_roi"))+(5*roi.getValue("c_te_de_priorisation_de_base")))
+var score_roi =0 ;
+var ld = current.langue_dominante;
+var scoreld = 0;
+if (ld == 'french'){
+	scoreld = 2;
+}
 
-roi.update()
+var lr = current.degr_de_s_v_rit_langage_r_ceptif;
+var scoreLR = 0;
+
+var le = current.degr_de_s_v_rit_langage_expressif;
+var scoreLE = 0;
+
+var cp = current.c_te_de_priorisation_de_base;
+var scorecp = 151 * (parseInt(cp) + 1 );
+
+var nScolaire = current.eleve.u_classe;
+var scorenScolaire = 0;
+if (nScolaire == '74911a0d1b413950d991c882604bcb59'){
+scorenScolaire = 1;
+}
+
+// french severe severe 3 74911 a0d1b413950d991c882604bcb59
+//scoreRoi  = CP*17 + LR*8 + LE*5  + LD*3 + NS
+lr = lr.toString();
+
+switch(lr){
+case 'severe':
+scoreLR = 144;
+break;
+case 'modere-a-severe':
+scoreLR = 120;
+break;
+case 'modere':
+scoreLR = 96;
+break;
+case 'leger-a-modere':
+scoreLR = 72;
+break;
+case 'leger':
+scoreLR = 48;
+break;
+case 'adequat':
+scoreLR = 24;
+break;
+
+}
+
+le = le.toString();
+
+switch(le){
+case 'severe':
+scoreLE = 24;
+break;
+case 'modere-a-severe':
+scoreLE = 20;
+break;
+case 'modere':
+scoreLE = 16;
+break;
+case 'leger-a-modere':
+scoreLE = 12;
+break;
+case 'leger':
+scoreLE = 8;
+break;
+case 'adequat':
+scoreLE = 4;
+break;
+
+}
+score_roi = scorecp + scoreLE + scoreLR + scoreld + scorenScolaire;
+current.score_roi = score_roi;
+current.update();
+
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
@@ -42,17 +112,28 @@ roi.update()
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5961a22d1bb446108d594047bc4bcbd0</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>Calcul score roi apres ponderation base</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_5961a22d1bb446108d594047bc4bcbd0</sys_update_name>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-22 14:56:56</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-01-03 15:08:37</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=5961a22d1bb446108d594047bc4bcbd0"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>5961a22d1bb446108d594047bc4bcbd0</id>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-12-20 16:53:53</sys_created_on>
+        <sys_id>58770e5247e61e1083857acc416d43ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2024-12-20 16:53:53</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>
