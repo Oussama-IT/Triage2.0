@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" db_object_id="c42c1a931bcd0e508d594047bc4bcb6e" extends="task" label="Demande TSA" max_length="40" name="x_ndecd_triage_2_0_demande_tsa" text_index="true" type="collection">
+    <element attributes="live_feed=true" audit="true" db_object_id="c42c1a931bcd0e508d594047bc4bcb6e" extends="task" label="Demande TSA" max_length="40" name="x_ndecd_triage_2_0_demande_tsa" text_index="true" type="collection">
         <element choice="1" choice_field="retard_en_lecture" choice_table="x_ndecd_cecce_base_options" label="L’élève éprouve un retard en écriture" max_length="40" name="l_l_ve_prouve_un_retard_en_criture" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>

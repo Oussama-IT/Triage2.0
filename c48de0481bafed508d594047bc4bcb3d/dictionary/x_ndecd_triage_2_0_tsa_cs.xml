@@ -11,9 +11,9 @@
         <element label="Année de la demande" max_length="200" name="ann_e_de_la_demande" type="string"/>
         <element choice="1" choice_field="status_de_la_demande_tsacs" choice_table="x_ndecd_cecce_base_options" label="Statut de la demande TSA/CS" max_length="40" name="statut_de_la_demande_tsa_cs" type="choice">
             <choice>
-                <element inactive="true" inactive_on_update="true" label="En consultation" sequence="0" value="enconsultation"/>
-                <element inactive_on_update="false" label="Fermée" sequence="0" value="fermee"/>
-                <element inactive="true" inactive_on_update="true" label="Non déléguée" sequence="1" value="nondeleguee"/>
+                <element inactive_on_update="false" label="En consultation" sequence="0" value="enconsultation"/>
+                <element inactive_on_update="false" label="Fermée" sequence="1" value="fermee"/>
+                <element inactive_on_update="false" label="Non déléguée" sequence="2" value="nondeleguee"/>
             </choice>
         </element>
         <element label="Nom orthophoniste consultation TSA/CS" max_length="32" name="nom_orthophoniste_consultation_tsa_cs" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du volet^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du volet^EQ" type="reference"/>
@@ -31,7 +31,10 @@
         </element>
         <element label="Année de la demande int" max_length="40" name="ann_e_de_la_demande_int" type="integer"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Programme ROI-CS si suivi" max_length="200" name="programme_roi_cs_si_suivi" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
         </element>
     </element>
 </database>
