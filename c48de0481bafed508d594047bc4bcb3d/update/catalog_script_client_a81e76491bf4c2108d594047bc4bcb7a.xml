@@ -19,56 +19,97 @@
         <order/>
         <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
-   if (isLoading || newValue == '') {
+    if (isLoading || newValue == '') {
+    }
 
-   }
-   if(newValue=="true"){
-	if(g_user.hasRole("x_ndecd_triage_2_0.Orthophoniste")){
-	//cacher variables pour ecole
-    //g_form.setVisible("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",false)
-	//g_form.setMandatory("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",false)
-	//g_form.setVisible("est_ce_que_l_l_ve_a_un_diagnostic",false)
-	// g_form.setMandatory("est_ce_que_l_l_ve_a_un_diagnostic",false)
-	// g_form.setVisible("situation_familiale_de_l_l_ve",false)
-	// g_form.setMandatory("situation_familiale_de_l_l_ve",false)
-
-	
-	g_form.setVisible("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s",true)
-	g_form.setMandatory("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s",true)
-	g_form.setVisible("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier",false)
-	g_form.setMandatory("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier",false)
-   }else{
-	// g_form.setVisible("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",true)
-	// g_form.setMandatory("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",true)
-	// g_form.setVisible("est_ce_que_l_l_ve_a_un_diagnostic",true)
-	// g_form.setMandatory("est_ce_que_l_l_ve_a_un_diagnostic",true)
-	// g_form.setVisible("situation_familiale_de_l_l_ve",true)
-	// g_form.setMandatory("situation_familiale_de_l_l_ve",true)
+    if (newValue == "true") {
+        if (g_user.hasRole("x_ndecd_triage_2_0.Orthophoniste")) {
+            //cacher variables pour ecole
+            //g_form.setVisible("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",false)
+            //g_form.setMandatory("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",false)
+            //g_form.setVisible("est_ce_que_l_l_ve_a_un_diagnostic",false)
+            // g_form.setMandatory("est_ce_que_l_l_ve_a_un_diagnostic",false)
+            // g_form.setVisible("situation_familiale_de_l_l_ve",false)
+            // g_form.setMandatory("situation_familiale_de_l_l_ve",false)
 
 
-	
-	g_form.setVisible("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier",true)
-	g_form.setMandatory("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier",true)
-	g_form.setVisible("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s",false)
-	g_form.setMandatory("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s",false)
-   } 
-   }else{
-	// g_form.setVisible("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",false)
-	// g_form.setMandatory("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",false)
-	// g_form.setVisible("est_ce_que_l_l_ve_a_un_diagnostic",false)
-	// g_form.setMandatory("est_ce_que_l_l_ve_a_un_diagnostic",false)
-	// g_form.setVisible("situation_familiale_de_l_l_ve",false)
-	// g_form.setMandatory("situation_familiale_de_l_l_ve",false)
-
-	g_form.setVisible("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier",false)
-	g_form.setMandatory("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier",false)
-	g_form.setVisible("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s",false)
-	g_form.setMandatory("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s",false)
-   }
+            g_form.setVisible("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s", true)
+            g_form.setMandatory("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s", true)
+            g_form.setVisible("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier", false)
+            g_form.setMandatory("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier", false)
+        } else {
+            // g_form.setVisible("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",true)
+            // g_form.setMandatory("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",true)
+            // g_form.setVisible("est_ce_que_l_l_ve_a_un_diagnostic",true)
+            // g_form.setMandatory("est_ce_que_l_l_ve_a_un_diagnostic",true)
+            // g_form.setVisible("situation_familiale_de_l_l_ve",true)
+            // g_form.setMandatory("situation_familiale_de_l_l_ve",true)
 
 
-   //Type appropriate comment here, and begin script below
-   
+
+            g_form.setVisible("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier", true)
+            g_form.setMandatory("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier", true)
+            g_form.setVisible("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s", false)
+            g_form.setMandatory("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s", false)
+        }
+    } else {
+        // g_form.setVisible("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",false)
+        // g_form.setMandatory("est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",false)
+        // g_form.setVisible("est_ce_que_l_l_ve_a_un_diagnostic",false)
+        // g_form.setMandatory("est_ce_que_l_l_ve_a_un_diagnostic",false)
+        // g_form.setVisible("situation_familiale_de_l_l_ve",false)
+        // g_form.setMandatory("situation_familiale_de_l_l_ve",false)
+
+        g_form.setVisible("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier", false)
+        g_form.setMandatory("existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier", false)
+        g_form.setVisible("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s", false)
+        g_form.setMandatory("orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s", false)
+    }
+
+	var student = g_form.getValue('l_ve');
+    if (student) {
+        var sligr = new GlideRecord('x_ndecd_triage_2_0_sli_roi');
+        sligr.addQuery('l_ve', student);
+        sligr.query(checkeleveexiste);
+
+        var school;
+        //Type appropriate comment here, and begin script below
+        var now_GR = new GlideRecord('x_ndecd_triage_2_0_eleve');
+        now_GR.addQuery('sys_id', student); // Priority is 4 – Low and,
+        now_GR.query(response);
+    }
+
+    function checkeleveexiste(result) {
+        if (result.next()) {
+            g_form.showFieldMsg('l_ve', "Une demande a déjà été acheminée pour cet élève. Veuillez acheminer un courriel au comité SLI-ROI afin de préciser les éléments que vous souhaitez mettre à jour", 'error');
+            //g_form.setMandatory('consentement_parental_verbal',false);
+            //g_form.setVisible("consentement_parental_verbal",false);
+            //g_form.setValue("consentement_parental_verbal","false");
+            g_form.setValue("can_submit", "false");
+        } else {
+            ///g_form.showFieldMsg('l_ve',"Ce programme vise la stimulation des habiletés langagières, telles que la compréhension des consignes/concepts, les structures de phrases, le vocabulaire, le discours ainsi que les préalables au langage écrit tels que la conscience phonologique et l'apprentissage des lettres de l'alphabet. Pour y être admissible, un élève doit présenter de telles difficultés dans sa langue dominante, c'est-à-dire la langue dans laquelle il ou elle est le plus confortable pour s'exprimer. Il est à noter que les élèves présentant seulement des difficultés au niveau de la parole (ex.: articulation des sons, bégaiement) ou au niveau de la lecture/écriture ne sont pas admissibles",'info');
+            //g_form.setMandatory('consentement_parental_verbal',true);
+            //g_form.setVisible("consentement_parental_verbal",true);
+            g_form.setValue("can_submit", "true");
+        }
+
+    }
+
+    function response(result) {
+        if (result.next()) {
+            school = result.getValue('u_nom_de_l_cole');
+            var admins = new GlideRecord('x_ndecd_triage_2_0_x_ndecd_school');
+            admins.addQuery('sys_id', school); // Priority is 4 – Low and,
+            admins.query(responseA);
+        }
+    }
+
+    function responseA(result) {
+        while (result.next()) {
+            var u_admin = result.getValue('admins');
+            g_form.setValue("direction", u_admin);
+        }
+    }
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
@@ -76,15 +117,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a81e76491bf4c2108d594047bc4bcb7a</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>Consentement parental changes</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_a81e76491bf4c2108d594047bc4bcb7a</sys_update_name>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-11 16:42:14</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-02-11 21:06:12</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
@@ -92,4 +133,15 @@
         <variable_set/>
         <view/>
     </catalog_script_client>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a81e76491bf4c2108d594047bc4bcb7a</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-02-11 20:55:52</sys_created_on>
+        <sys_id>311b3f5b47ab9e1083857acc416d435d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-02-11 20:55:52</sys_updated_on>
+        <table>catalog_script_client</table>
+        <use_es_latest>false</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

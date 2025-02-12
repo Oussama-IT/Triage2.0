@@ -17,7 +17,7 @@
         <digest_html/>
         <digest_reply_to/>
         <digest_separator_html><![CDATA[<p>&nbsp;</p>
-<hr />
+<hr>
 <p>&nbsp;</p>]]></digest_separator_html>
         <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
         <digest_subject/>
@@ -40,9 +40,9 @@
         <message/>
         <message_html><![CDATA[<p>Bonjour ${opened_by.first_name} ${opened_by.last_name},</p>
 <p>&nbsp;</p>
-<p>Nous vous confirmons que le traitement de votre demande SEP li&eacute;e aux difficult&eacute;s lecture/&eacute;criture concernant l'&eacute;l&egrave;ve ${eleve.name}&nbsp; N&deg; ${number} a &eacute;t&eacute; attribu&eacute;e &agrave; l'orthophoniste &nbsp;${assigned_to.first_name}, ${assigned_to.last_name}.&nbsp;</p>
+<p>Nous vous confirmons que le traitement de votre demande AES li&eacute;e aux difficult&eacute;s lecture/&eacute;criture concernant l'&eacute;l&egrave;ve ${eleve.name}&nbsp; N&deg; ${number} a &eacute;t&eacute; attribu&eacute;e &agrave; l'orthophoniste &nbsp;${assigned_to.first_name}, ${assigned_to.last_name}.&nbsp;</p>
 <p>L'orthophoniste communiquera avec vous dans les plus brefs d&eacute;lais.</p>
-<p>Merci.&nbsp;<br />&nbsp;</p>]]></message_html>
+<p>Merci.&nbsp;<br>&nbsp;</p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>Notification demandeur orthophoniste Affecte</name>
@@ -56,7 +56,7 @@
         <send_self>true</send_self>
         <sms_alternate/>
         <style/>
-        <subject>Votre demande SEP liée aux difficultés lecture/écriture N° ${number}</subject>
+        <subject>Votre demande AES liée aux difficultés lecture/écriture N° ${number}</subject>
         <subscribable>false</subscribable>
         <sys_class_name>sysevent_email_action</sys_class_name>
         <sys_created_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_created_by>
@@ -64,18 +64,29 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6172b6b41b143d50d991c882604bcbd8</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Notification demandeur orthophoniste Affecte</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_6172b6b41b143d50d991c882604bcbd8</sys_update_name>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-12 13:21:00</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-02-07 22:47:49</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
         <weight>0</weight>
     </sysevent_email_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>6172b6b41b143d50d991c882604bcbd8</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-02-07 22:47:48</sys_created_on>
+        <sys_id>925e2f8a47a35a1083857acc416d43c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-02-07 22:47:48</sys_updated_on>
+        <table>sysevent_email_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

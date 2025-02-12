@@ -31,7 +31,7 @@
         <mobile_picture/>
         <mobile_picture_type>use_desktop_picture</mobile_picture_type>
         <model/>
-        <name>Demande SEP liée aux difficultés lecture/écriture</name>
+        <name>Demande AES liée aux difficultés lecture/écriture</name>
         <no_attachment_v2>false</no_attachment_v2>
         <no_cart>false</no_cart>
         <no_cart_v2>false</no_cart_v2>
@@ -88,9 +88,9 @@ current.autre_situation_explication = producer.autre_situation_explication;
 current.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte=producer.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte;
 current.consentement_parental_verbal = producer.consentement_parental_verbal ;
 
-current.short_description = "Demande SEP liée aux difficultés lecture/écriture: "+producer.eleve.getDisplayValue();
+current.short_description = "Demande AES liée aux difficultés lecture/écriture: "+producer.eleve.getDisplayValue();
 ]]></script>
-        <short_description>Demande SEP liée aux difficultés lecture/écriture</short_description>
+        <short_description>Demande AES liée aux difficultés lecture/écriture</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
         <state>published</state>
@@ -98,16 +98,16 @@ current.short_description = "Demande SEP liée aux difficultés lecture/écritur
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-06-26 12:08:48</sys_created_on>
         <sys_id>f5ee602f1ba365108d594047bc4bcb5e</sys_id>
-        <sys_mod_count>30</sys_mod_count>
-        <sys_name>Demande SEP liée aux difficultés lecture/écriture</sys_name>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name>Demande AES liée aux difficultés lecture/écriture</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sc_cat_item_producer_f5ee602f1ba365108d594047bc4bcb5e</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2024-04-09 02:41:34</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-02-07 21:13:11</sys_updated_on>
         <table_name>x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture</table_name>
-        <taxonomy_topic display_value="SEP langage écrit">a89e5a3f1b2b6510d991c882604bcbda</taxonomy_topic>
+        <taxonomy_topic display_value="AES langage écrit">a89e5a3f1b2b6510d991c882604bcbda</taxonomy_topic>
         <template/>
         <template_manager_roles/>
         <type>item</type>
@@ -115,7 +115,7 @@ current.short_description = "Demande SEP liée aux difficultés lecture/écritur
         <u_approval_type/>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>13</version>
+        <version>14</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
@@ -219,4 +219,15 @@ current.short_description = "Demande SEP liée aux difficultés lecture/écritur
         <sys_created_on>2023-08-10 19:11:31</sys_created_on>
         <sys_id>b03fb94e1b6475d08d594047bc4bcb01</sys_id>
     </sys_attachment_doc>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>f5ee602f1ba365108d594047bc4bcb5e</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-02-07 21:13:11</sys_created_on>
+        <sys_id>18b8df4a47235a1083857acc416d432a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-02-07 21:13:11</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

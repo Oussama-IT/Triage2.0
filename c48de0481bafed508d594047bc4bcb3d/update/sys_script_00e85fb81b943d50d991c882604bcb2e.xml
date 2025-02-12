@@ -20,7 +20,7 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>CECCE Generate PDF SEP</name>
+        <name>CECCE Generate PDF AES</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -34,7 +34,7 @@
     var html;
     var newHtml;
     var gr = new GlideRecord('x_ndecd_triage_2_0_pdftemplate');
-    gr.addQuery('template_name', 'Demande SEP');
+    gr.addQuery('template_name', 'Demande AES');
     gr.query();
     while (gr.next()) {
         html = gr.html_template;
@@ -52,7 +52,7 @@
     // Add your code here
     var targetTableSysId = current.sys_id;
     var tableName = 'x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture';
-    var pdfName = "Demande SEP " + current.getDisplayValue('eleve');
+    var pdfName = "Demande AES " + current.getDisplayValue('eleve');
     newHtml = html.replace("var1", current.getDisplayValue('eleve'));
 
 
@@ -129,17 +129,28 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>00e85fb81b943d50d991c882604bcb2e</sys_id>
-        <sys_mod_count>19</sys_mod_count>
-        <sys_name>CECCE Generate PDF SEP</sys_name>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>CECCE Generate PDF AES</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_00e85fb81b943d50d991c882604bcb2e</sys_update_name>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-11 17:10:58</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-02-07 21:15:32</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=00e85fb81b943d50d991c882604bcb2e"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>00e85fb81b943d50d991c882604bcb2e</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-02-07 21:13:36</sys_created_on>
+        <sys_id>9ec8178a47235a1083857acc416d43eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-02-07 21:13:36</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

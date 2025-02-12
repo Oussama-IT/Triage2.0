@@ -37,19 +37,20 @@
 	return false;
    }
 
-    var sligr=new GlideRecord('x_ndecd_triage_2_0_sli_roi');
-	sligr.addQuery('l_ve', g_form.getValue("l_ve"));
-	sligr.addQuery('state',1);
-	sligr.query(checkeleveexiste);
-	function checkeleveexiste(result){
-	if (result.next()) {
-        g_form.addErrorMessage("Une demande a déjà été acheminée pour cet élève. Veuillez acheminer un courriel au comité SLI-ROI afin de préciser les éléments que vous souhaitez mettre à jour");
-	}
-	}
+    // var sligr = new GlideRecord('x_ndecd_triage_2_0_sli_roi');
+    // sligr.addQuery('l_ve', g_form.getValue("l_ve"));
+    // sligr.addQuery('state', 1);
+    // sligr.query(checkeleveexiste);
 
-	if(g_form.getValue("can_submit")=="false"){
-		return false;
-	}
+    // function checkeleveexiste(result) {
+    //     if (result.next()) {
+    //         g_form.addErrorMessage("Une demande a déjà été acheminée pour cet élève. Veuillez acheminer un courriel au comité SLI-ROI afin de préciser les éléments que vous souhaitez mettre à jour");
+    //     }
+    // }
+
+	// if (g_form.getValue("can_submit") == "false") {
+	//     return false;
+	// }
    
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -58,7 +59,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>262db1781bb082108d594047bc4bcbd2</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>on submit</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -66,7 +67,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_262db1781bb082108d594047bc4bcbd2</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-30 12:36:06</sys_updated_on>
+        <sys_updated_on>2025-02-10 15:09:26</sys_updated_on>
         <table/>
         <type>onSubmit</type>
         <ui_type>10</ui_type>
@@ -74,4 +75,15 @@
         <variable_set/>
         <view/>
     </catalog_script_client>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>262db1781bb082108d594047bc4bcbd2</id>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-02-10 15:05:28</sys_created_on>
+        <sys_id>8f41e183472716106274efbb616d43f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-02-10 15:05:28</sys_updated_on>
+        <table>catalog_script_client</table>
+        <use_es_latest>false</use_es_latest>
+    </sys_es_latest_script>
 </record_update>
