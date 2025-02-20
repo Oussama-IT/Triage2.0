@@ -2,8 +2,12 @@
     <element attributes="live_feed=true" audit="true" db_object_id="c42c1a931bcd0e508d594047bc4bcb6e" extends="task" label="Demande TSA" max_length="40" name="x_ndecd_triage_2_0_demande_tsa" text_index="true" type="collection">
         <element choice="1" choice_field="retard_en_lecture" choice_table="x_ndecd_cecce_base_options" label="L’élève éprouve un retard en écriture" max_length="40" name="l_l_ve_prouve_un_retard_en_criture" type="choice">
             <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="Moderate delay (4-8 months)" sequence="2" value="moderatedelay"/>
+                <element inactive_on_update="false" label="No difficulty" sequence="0" value="nodifficulty"/>
+                <element inactive="true" inactive_on_update="true" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Severe delay (more than 8 months)" sequence="3" value="severedelay"/>
+                <element inactive_on_update="false" label="Slight delay (1-3 months)" sequence="1" value="slightdelay"/>
+                <element inactive="true" inactive_on_update="true" label="Yes" sequence="1" value="yes"/>
             </choice>
         </element>
         <element label="Pratique privée date" max_length="40" name="pratique_priv_e_date" type="glide_date"/>
@@ -20,8 +24,9 @@
         <element label="Formulaire d'aiguillage" max_length="40" name="formulaire_d_aiguillage" type="file_attachment"/>
         <element choice="1" choice_field="oui_non_possible" choice_table="x_ndecd_cecce_base_options" label="Est-ce qu’un placement est envisagé pour l’élève?" max_length="40" name="est_ce_qu_un_placement_est_envisag_pour_l_l_ve" type="choice">
             <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="Possible" sequence="2" value="possible"/>
+                <element inactive_on_update="false" label="Non" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Oui" sequence="1" value="yes"/>
             </choice>
         </element>
         <element label="L’élève a-t-il reçu des services professionnels dans les domaines suivants" max_length="4000" name="l_l_ve_a_t_il_re_u_des_services_professionnels_dans_les_domaines_suivants" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHServices professionels" reference_qual_condition="questionSTARTSWITHServices professionels" type="glide_list"/>
@@ -58,8 +63,12 @@
         <element label="Travail social date" max_length="40" name="travail_social_date" type="glide_date"/>
         <element choice="1" choice_field="non_non_en_cours_oui_adapt_oui_modifi" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève a un PEI en lecture et/ou écriture?" max_length="40" name="est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture" type="choice">
             <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive="true" inactive_on_update="true" label="No" sequence="0" value="no"/>
+                <element inactive="true" inactive_on_update="true" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="Oui - Adapté" sequence="2" value="oui-adapte"/>
+                <element inactive_on_update="false" label="Non" sequence="0" value="non"/>
+                <element inactive_on_update="false" label="Non - en cours" sequence="1" value="mon-encours"/>
+                <element inactive_on_update="false" label="Oui - Modifié" sequence="3" value="oui-modifie"/>
             </choice>
         </element>
         <element label="Autre situation explication" max_length="200" name="autre_situation_explication" type="string"/>
@@ -79,8 +88,8 @@
         </element>
         <element choice="1" choice_field="yes_only" choice_table="x_ndecd_cecce_base_options" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="document_pdf_consentement_parental_re_u" type="choice">
             <choice>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive="true" inactive_on_update="true" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="0" value="yes"/>
             </choice>
         </element>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler" max_length="40" name="l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler" type="choice">
@@ -105,8 +114,12 @@
         <element label="Langue(s) parlée(s) à la maison" max_length="4000" name="langue_s_parl_e_s_la_maison" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHlangue parlée" reference_qual_condition="questionSTARTSWITHlangue parlée" type="glide_list"/>
         <element choice="1" choice_field="retard_en_lecture" choice_table="x_ndecd_cecce_base_options" label="L’élève présente un retard en lecture" max_length="40" name="l_l_ve_pr_sente_un_retard_en_lecture" type="choice">
             <choice>
-                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
-                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive="true" inactive_on_update="true" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="Severe delay (more than 8 months)" sequence="3" value="severedelay"/>
+                <element inactive_on_update="false" label="Slight delay (1-3 months)" sequence="1" value="slightdelay"/>
+                <element inactive="true" inactive_on_update="true" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="No difficulty" sequence="0" value="nodifficulty"/>
+                <element inactive_on_update="false" label="Moderate delay (4-8 months)" sequence="2" value="moderatedelay"/>
             </choice>
         </element>
         <element label="Premiers Mots date" max_length="40" name="premiers_mots_date" type="glide_date"/>
@@ -126,7 +139,10 @@
         <element label="Orthophonie explication" max_length="4000" name="orthophonie_explication" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHorthophonie" reference_qual_condition="questionSTARTSWITHorthophonie" type="glide_list"/>
         <element label=" Attentes du PEI en lien avec" max_length="4000" name="attentes_du_pei_en_lien_avec" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHAttentes du PEI en lien avec" reference_qual_condition="questionSTARTSWITHAttentes du PEI en lien avec" type="glide_list"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
         </element>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label=" Est-ce que des difficultés langagières sont observées dans sa langue dominante " max_length="40" name="est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante" type="choice">
             <choice>
