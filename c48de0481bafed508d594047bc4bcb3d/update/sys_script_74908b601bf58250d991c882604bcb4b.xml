@@ -39,12 +39,12 @@ var isBetweensepdec = (currentDate.getMonthNoTZ() == 9 && currentDate.getDayOfMo
 
 // to restore after tests 
 
-// if (isBetweensepdec) {
-//     current.sendable_15_sep_1er_dec="yes";
-// } else {
-//     current.sendable_15_sep_1er_dec="no";
-// }
-current.sendable_15_sep_1er_dec="yes"; // to delete after tests 
+if (isBetweensepdec) {
+    current.sendable_15_sep_1er_dec="yes";
+} else {
+    current.sendable_15_sep_1er_dec="no";
+}
+//current.sendable_15_sep_1er_dec="yes"; // to delete after tests 
 current.update();
 
 var isBetweenjanmay = (currentDate.getMonthNoTZ() == 1 && currentDate.getDayOfMonthNoTZ() >= 1) ||
@@ -66,7 +66,7 @@ current.update();
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>74908b601bf58250d991c882604bcb4b</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Set default sendable states roi</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -74,7 +74,7 @@ current.update();
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_74908b601bf58250d991c882604bcb4b</sys_update_name>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-02-21 15:50:39</sys_updated_on>
+        <sys_updated_on>2025-02-25 16:36:40</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
