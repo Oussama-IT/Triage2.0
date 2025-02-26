@@ -2,7 +2,7 @@
     <sys_ux_composite_datasource action="INSERT_OR_UPDATE">
         <active>true</active>
         <condition table="kb_knowledge">active=true^workflow_state=published^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
-            <item display_value="Published" endquery="false" field="workflow_state" goto="false" newquery="false" operator="=" or="false" value="published"/>
+            <item display_value="Publié" endquery="false" field="workflow_state" goto="false" newquery="false" operator="=" or="false" value="published"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <encoded_query_script/>
