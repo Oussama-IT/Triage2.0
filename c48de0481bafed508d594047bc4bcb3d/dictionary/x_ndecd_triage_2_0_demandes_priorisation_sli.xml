@@ -84,6 +84,7 @@
                 <element inactive_on_update="false" label="équipe-école" sequence="0" value="eq-eco"/>
             </choice>
         </element>
+        <element label="Intervenants précédents" max_length="4000" name="predecessor" type="string"/>
         <element choice="3" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Suivis antérieurs ou non" max_length="200" name="suivis_ant_rieurs_ou_non" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>

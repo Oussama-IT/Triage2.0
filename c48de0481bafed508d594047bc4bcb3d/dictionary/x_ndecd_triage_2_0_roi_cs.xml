@@ -2,6 +2,7 @@
     <element audit="true" db_object_id="bcfad5001b9d8250d991c882604bcbb5" extends="x_ndecd_triage_2_0_demande_tsa" label="ROI-CS" max_length="40" name="x_ndecd_triage_2_0_roi_cs" text_index="true" type="collection">
         <element label="Année de la demande  int" max_length="40" name="ann_e_de_la_demande_int" type="integer"/>
         <element label="Nom orthophoniste suivi ROI-CS" max_length="32" name="nom_orthophoniste_suivi_roi_cs" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du volet^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du volet^EQ" type="reference"/>
+        <element label="Intervenants précédents" max_length="4000" name="predecessor" type="string"/>
         <element label="Score réceptif" max_length="40" name="score_r_ceptif" type="float"/>
         <element label="Nom orthophoniste dépistage ROI-CS" max_length="32" name="nom_orthophoniste_d_pistage_roi_cs" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du volet^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du volet^EQ" type="reference"/>
         <element label="Score communication sociale" max_length="40" name="score_communication_sociale" type="float"/>
