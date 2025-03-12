@@ -68,7 +68,7 @@
         <order>1</order>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-25 18:01:19</sys_created_on>
@@ -81,7 +81,7 @@
     <sys_variable_value action="delete_multiple" query="document_key=d4b517f41b943d50d991c882604bcbc8"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__20696c091bd83d50d991c882604bcb37">input_record.approval=approved<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__20696c091bd83d50d991c882604bcb37">input_record.approval=approved<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
         </condition_to_run>
         <description/>
         <label>Envoi Du Rapport</label>
@@ -90,7 +90,7 @@
         <order>2</order>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après les voies">7407ca1ac3e02110f1f504186e40dd50</start_rule>
+        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-26 00:06:58</sys_created_on>
@@ -117,7 +117,7 @@
     </sys_variable_value>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__07bae8891bd83d50d991c882604bcbaf">input_record.approval=approved^input_record.state!=7<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__07bae8891bd83d50d991c882604bcbaf">input_record.approval=approved^input_record.state!=7<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
             <item display_value="Fermé ignoré" endquery="false" field="input_record.state" goto="false" newquery="false" operator="!=" or="false" value="7"/>
         </condition_to_run>
         <description/>
@@ -127,7 +127,7 @@
         <order>3</order>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après les voies">7407ca1ac3e02110f1f504186e40dd50</start_rule>
+        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-26 00:12:52</sys_created_on>
@@ -155,7 +155,7 @@
     <sys_pd_activity action="delete_multiple" query="process_definition=731c4e201b58bd508d594047bc4bcbe7^sys_idNOT IN361bcdbe1b09f110d991c882604bcb13,8223c21c1b29f9508d594047bc4bcbda,9a41ca181b29f9508d594047bc4bcbdc,0d4106181b29f9508d594047bc4bcb65,0e3a64891bd83d50d991c882604bcbb1,c14aac491bd83d50d991c882604bcb35"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Demander une approbation ad hoc">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <activity_definition display_value="Request Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
@@ -169,7 +169,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -999,7 +999,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -2223,7 +2223,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -3433,7 +3433,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après les activités">7abaf173c35101102a86cb03b940dd62</start_rule>
+        <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -4643,7 +4643,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Attendre une condition">f167cad40f200010f5bf5ae9c4767eb2</activity_definition>
+        <activity_definition display_value="Wait For Condition">f167cad40f200010f5bf5ae9c4767eb2</activity_definition>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__0e3a64891bd83d50d991c882604bcbb1">input_record.accuse_de_reception=true</condition_to_run>
         <derivative_order/>
         <derivative_parent/>
@@ -4657,7 +4657,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après les activités">7abaf173c35101102a86cb03b940dd62</start_rule>
+        <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -5639,7 +5639,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Enregistrement de mise à jour automatisé">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
+        <activity_definition display_value="Automated Update Record">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__c14aac491bd83d50d991c882604bcb35">input_record.accuse_de_reception=false</condition_to_run>
         <derivative_order/>
         <derivative_parent/>
@@ -5653,7 +5653,7 @@
         <outputs/>
         <process_definition display_value="Demande de consultation avec possibilité d'évaluation">731c4e201b58bd508d594047bc4bcbe7</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Après les activités">7abaf173c35101102a86cb03b940dd62</start_rule>
+        <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -6589,7 +6589,7 @@
     <sys_flow_compiled_flow_chunk action="delete_multiple" query="document_id=a11d4709c1e7d21092b9a11a8e485afe^sys_idNOT INa91d470947e7d2106274efbb616d43ff,211d470947e7d2106274efbb616d43ff,e51d470947e7d2106274efbb616d43fe,651d470947e7d2106274efbb616d43ff"/>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/zXNMQqAMAyF4bt09gTORXBw6gmCTTUQmxKjDuLdLZSuH//jvS6xPB4NiN2YL+bByY2qFHGBUihvnVcphHFSObrscHowCKYIFRPwibUD5joLtcdetpNEmYwkz7H59wOUb/OmfgAAAA==</data>
-        <document_id display_value="Créé 04/02/2025 12:48:33">a11d4709c1e7d21092b9a11a8e485afe</document_id>
+        <document_id display_value="Created 04/02/2025 12:48:33">a11d4709c1e7d21092b9a11a8e485afe</document_id>
         <field>flow_config_param</field>
         <length>152</length>
         <position>0</position>
@@ -6599,7 +6599,7 @@
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/+Waa2/bNhSG/4uwj0Yq6q58qpMGmIG2CZJswFAMBG9KhMmipktSw8h/H6lbbIuypdTqjBQI4Pjw8Iji+/DwUPJaCyL+fBWxJYvzTDv/ttYyXqSELah2rlG2RDFlUPwRHmdFlKM85DFET4zAhGdZiMMozCGFTygqyjZtVgf4ipbsB0P8EZajcE1ALGboANseprbuUdu3dMvFxMIEM7f1n0chEvegpZznwpigVNzU3WZTXETRTMtXiRzazfwTvLm9vry6u5MhCC+txPIo0y0PYBSwztVMKlyXYbyIszwtiByuHKMujOj7jhGY/kxjacrTe5Q+sLy5vPC8klaVe8oSnuZh/LDg2vlaC+OkEP3WLzONF3n7P2UBEjN53ZpeXqNeRgzFRdI7lm67lP3vmRZmi9/vcpZo5wGKMiYMj9nr15fZFhkoSVKOlYqrmmolqYVt4AYWwL5lirmlvg+I5xmOLueWeB0lN2LBAZ0VijcwbGj+ef716kcFN1SCm9YYvaX3VHK3Izm62r9lOUrzPZrvONTK2zaglqv7xGcuNYDuBZSYYp59wyQ40M19ylcR4YAQKv1HIrTByfzyfvHn4v6vSVgBxqjcYEyYGoyjspKyfwuW5RBR+MgJLKdfpPZdYg651dyYDsCEYgaw7gcA7CgGutz0xIUDAp0mPcBU4WOYY/CR3lPh047k+KmGxXRfotlsrnHx6xxhkCpH2CIxEBMZjucAGxxIMyIeHBDgNDExrF9qR2LxEw8hLWAqpp53N6Te9hoUQ3d8h+g+wNTrimR2a8rdgHBAhJ9Xjpi2Sn1vVP3pTVh+esetPnfFUBclB7yalEGrFe/TasWbLrMsYJjUNX1m6+ggCXV5MiCOioe3cDVB+lADZNljAJLeUwHUjuQ4AMXsGSLR+ynMVxDsgtPTWgPjGaLgNAAB2PADf3d+aReY7XBwQP8TBsVyVKDYzhhQpPdUoLQjOQ4ozyjMYcBT+fCChqrj7h6PGhidmcixvB6hMOgA0w0JB8Q4YWhsVwWN446BRnpPBU07kiPVsEXOlyhnFBYJFZ8wZYSntJtoDjvWCBFgIUSsPtnsbl3bFxkOCHXCJDmeiiTXG0OS9J6KpHYkExU6iiPRXp/mwVtdnDCjLk6wLw40VCfYFVllSJEjD0cDopwwOq7/S9XIeSp2kfKxfjfvKNua3crFiHl9Ow0KOqhsBoMDev+8U5Hf81h+1LOT0n26x/LHfXqyqYX6ULTHo8kVfrXK9fog47jUZqaPPcKYh6i+F4D6MDQghgqDsShNkCV6mNH1UcxI98mYacfy/5+FfGQBgoDXc5Yhh85CA/qfKCdAB0pQABgFinSfDJR2LMcHZR8mnR2FWiID9InsdIvXLUgG9D5VREDPm5+Rr34mffdz3Jc/W1uBolbtba9RAXWFib1q33BJgKnLbGbpOnYP7T2yRh0Q4VRxMZRvet5XuSI8spUwLOdlp3L6Wd1V/hLlLkcPrLlFMcAwDquLX6y2BJPjD18vfrH6wrKs7LrWPvBE2lA0bxKSMH4kEcqk0oQvz7KYnCX0bMkpi842wpwtlssiRzhiN5/mlF7vxNm4W6FgWE6IO9OaVFUSLPmilzzO2fdcGtaa/F2LhCKMxTXlIx3ZBEMJQZjdskA7F0HFQtKC3n7B3n5ZjJLskSsul3IipgW+ziNsfFVx4mqNdqdPYFHN7g1aRRx1LlNbd+OFWTOBrelDPaRLFBMWvUmXqqtKCuf9SbE9XXJho0zc8Xbs2rhv+utc3Qa8ZVXp/xYB6r4qBbwdBQ79cgumrDmCvBOlbtsbetuSiYUKIm9/QUmbrx/4pqGrqjA+8AtE/rnn1Q5RpsiLVfXlM8LlQut4lQ2drPryH/6bldARKAAA</data>
-        <document_id display_value="Créé 04/02/2025 12:48:33">a11d4709c1e7d21092b9a11a8e485afe</document_id>
+        <document_id display_value="Created 04/02/2025 12:48:33">a11d4709c1e7d21092b9a11a8e485afe</document_id>
         <field>flow_structure</field>
         <length>1892</length>
         <position>0</position>
@@ -6609,7 +6609,7 @@
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>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</data>
-        <document_id display_value="Créé 04/02/2025 12:48:33">a11d4709c1e7d21092b9a11a8e485afe</document_id>
+        <document_id display_value="Created 04/02/2025 12:48:33">a11d4709c1e7d21092b9a11a8e485afe</document_id>
         <field>instructions</field>
         <length>3236</length>
         <position>0</position>
@@ -6619,7 +6619,7 @@
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/6tWyswrLikqTS7JzM/zTAnJD0rNzS9L9U6tdEosSc5QsqqurQUAOtk80SQAAAA=</data>
-        <document_id display_value="Créé 04/02/2025 12:48:33">a11d4709c1e7d21092b9a11a8e485afe</document_id>
+        <document_id display_value="Created 04/02/2025 12:48:33">a11d4709c1e7d21092b9a11a8e485afe</document_id>
         <field>runtime_value_metadata</field>
         <length>76</length>
         <position>0</position>
@@ -6641,7 +6641,7 @@
         <sys_updated_on>2023-07-24 18:01:37</sys_updated_on>
         <trigger_definition/>
         <trigger_inputs/>
-        <trigger_type display_value="Créer un enregistrement">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
+        <trigger_type display_value="Record Create">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
     </sys_pd_trigger_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b71c4e201b58bd508d594047bc4bcbfb"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

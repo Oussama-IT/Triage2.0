@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
     <sysevent_email_action action="INSERT_OR_UPDATE">
-        <action_insert>false</action_insert>
-        <action_update>true</action_update>
+        <action_insert>true</action_insert>
+        <action_update>false</action_update>
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
         <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
-        <collection>x_ndecd_triage_2_0_demandes_priorisation_sli</collection>
-        <condition table="x_ndecd_triage_2_0_demandes_priorisation_sli">statut_sliCHANGESTOautoregulation^EQ<item display_value="Non-admissible - autorégulation" endquery="false" field="statut_sli" goto="false" newquery="false" operator="CHANGESTO" or="false" value="autoregulation"/>
+        <collection>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</collection>
+        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">statut_sli=autoregulation^EQ<item display_value="Non-admissible - autorégulation" endquery="false" field="statut_sli" goto="false" newquery="false" operator="=" or="false" value="autoregulation"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <content_type>text/html</content_type>
@@ -38,8 +38,8 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>Bonjour ${opened_by.first_name} ${opened_by.last_name} ,</p>
-<p>Nous vous informons qu'&agrave; la suite du d&eacute;pistage effectu&eacute; par l'&eacute;ducatrice ressource en langage, l'&eacute;l&egrave;ve ${nom_de_l_l_ve} (N&deg; ${number}) n'est pas admissible au programme SLI en raison de d&eacute;fis importants sur le plan de l'auto-r&eacute;gulation.</p>
+        <message_html><![CDATA[<p>Bonjour ${opened_by.last_name} ${opened_by.first_name},</p>
+<p>Nous vous informons qu'&agrave; la suite du d&eacute;pistage effectu&eacute; par l'&eacute;ducatrice ressource en langage, l'&eacute;l&egrave;ve ${eleve.name} (N&deg;: ${number}) n'est pas admissible au programme SLI en raison de d&eacute;fis importants sur le plan de l'auto-r&eacute;gulation.</p>
 <p>Toutefois, cet(te) &eacute;l&egrave;ve pourrait &ecirc;tre candidat pour le programme de r&eacute;&eacute;ducation en orthophonie (ROI). &nbsp;Par cons&eacute;quent, une &eacute;valuation partielle en orthophonie est sugg&eacute;r&eacute;e afin de d&eacute;terminer son admissibilit&eacute; &agrave; ce programme.</p>
 <p>&Agrave; cet effet, nous vous prions de t&eacute;l&eacute;charger le formulaire de "Consentement ROI" en cliquant sur le <a href="x/ndecd/triage-20-demande-de-partage/record/x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi/${sys_id}/params/selected-tab-index/1" target="_blank" rel="noopener">lien suivant</a> et de l'acheminer aux parents/tuteurs l&eacute;gaux afin d'obtenir leur signature. &nbsp;Une fois sign&eacute;, veuillez t&eacute;l&eacute;verser le formulaire dans le dossier de l&rsquo;&eacute;l&egrave;ve sur la plateforme dans la liste <a href="x/ndecd/triage-20-demande-de-partage/record/x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi/${sys_id}/params/selected-tab-index/1" target="_blank" rel="noopener">ROI - Demandes/Priorisation (en cours)</a> et compl&eacute;ter l'&eacute;tape d'accus&eacute; de r&eacute;ception.</p>
 <p>Merci</p>
@@ -50,7 +50,7 @@
         <omit_watermark>false</omit_watermark>
         <order>100</order>
         <push_message_only>false</push_message_only>
-        <recipient_fields>opened_by,nom_de_l_l_ve.u_nom_de_l_cole.admins</recipient_fields>
+        <recipient_fields/>
         <recipient_groups/>
         <recipient_users/>
         <reply_to>ne-pas-répondre comité SLI&lt;sli_roi@ecolecatholique.ca&gt;</reply_to>
@@ -65,15 +65,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>79ed1e4f474822d083857acc416d4343</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Notification SLI non admissible, ROI admissible</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_79ed1e4f474822d083857acc416d4343</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-03-11 20:06:17</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-03-12 18:22:48</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
