@@ -464,7 +464,10 @@
 
     newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver')); newHtml = newHtml.replace("var92", gsdirect.getDisplayValue('approver'));
 
-    newHtml = newHtml.replace("var91", current.getDisplayValue('sys_updated_on')); newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by')); newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by')); newHtml = newHtml.replace("var21", current.getDisplayValue('sys_created_on'));
+    newHtml = newHtml.replace("var91", current.getDisplayValue('sys_updated_on')); 
+	newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by')); 
+	newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by')); 
+	newHtml = newHtml.replace("var21", current.getDisplayValue('sys_created_on'));
 	
 	var approver =  new GlideRecord('sys_user');
 	approver.addQuery('sys_id', current.opened_by.sys_id);
@@ -568,7 +571,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>585d85a21bfc75108d594047bc4bcb0f</sys_id>
-        <sys_mod_count>133</sys_mod_count>
+        <sys_mod_count>134</sys_mod_count>
         <sys_name>PDF2</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -576,7 +579,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_585d85a21bfc75108d594047bc4bcb0f</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-03-20 18:32:00</sys_updated_on>
+        <sys_updated_on>2025-03-20 19:08:15</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
