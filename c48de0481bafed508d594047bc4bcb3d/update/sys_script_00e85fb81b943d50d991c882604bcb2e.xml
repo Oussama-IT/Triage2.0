@@ -110,11 +110,10 @@
     newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
 
 	var approver =  new GlideRecord('sys_user');
-	approver.addEncodedQuery('name='+gsdirect.getDisplayValue('approver'));
+	approver.addQuery('sys_id', current.opened_by.sys_id);
 	approver.query();
 	if(approver.next()){
 	newHtml = newHtml.replace("var22", approver.getDisplayValue('title'));
-
 	}
 
     var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
@@ -129,7 +128,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>00e85fb81b943d50d991c882604bcb2e</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>CECCE Generate PDF AES</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -137,7 +136,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_00e85fb81b943d50d991c882604bcb2e</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-02-07 21:15:32</sys_updated_on>
+        <sys_updated_on>2025-03-14 18:12:39</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
