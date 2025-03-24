@@ -124,11 +124,12 @@
 	// newHtml = newHtml.replace("var61", approver.getDisplayValue('title'));
 	// }
 	var user =  new GlideRecord('sys_user');
-	user.addEncodedQuery('name='+current.getDisplayValue('opened_by'));
+	user.addQuery('sys_id', current.opened_by.sys_id);
 	user.query();
 	if(user.next()){
-	newHtml = newHtml.replace("var61", user.getDisplayValue('title'));
+	newHtml = newHtml.replace("var22", user.getDisplayValue('title'));
 	}
+
     var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
     var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
     //current.linkattachment = result.attachment_id;
@@ -141,17 +142,28 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>df2f26ba1b69ca10d991c882604bcbaa</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>PDF formul eco consentement eval requise</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_df2f26ba1b69ca10d991c882604bcbaa</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-05 16:48:53</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-03-21 18:21:26</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=df2f26ba1b69ca10d991c882604bcbaa"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>df2f26ba1b69ca10d991c882604bcbaa</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-03-21 18:21:26</sys_created_on>
+        <sys_id>4224cbe747d8221083857acc416d4345</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-03-21 18:21:26</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>
