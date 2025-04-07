@@ -23,10 +23,10 @@
         return;
     }
 
-    if (newValue == 'bdc0c63247a022906274efbb616d43e1') {
-        g_form.showFieldMsg('quel_est_le_motif_de_la_demande', "Veuillez noter que si la demande fait suite à une consultation offerte par un(e) orthophoniste du CECCE, il n’est pas nécessaire de soumettre une demande pour cet(te) élève.", 'info');
-    } else if (newValue == '6dc1c6b247a022906274efbb616d433f') {
-        g_form.showFieldMsg('quel_est_le_motif_de_la_demande', "Il ne vous est pas possible de soumettre votre demande.  Veuillez compléter une demande de service sous le motif “Orthophonie TSA/CS” sur la plateforme", 'info');
+    if (newValue == 'bf2885c347e46e1083857acc416d4374') {
+        g_form.showFieldMsg('quel_est_le_motif_de_la_demande_ortho', "Veuillez noter que si la demande fait suite à une consultation offerte par un(e) orthophoniste du CECCE, il n’est pas nécessaire de soumettre une demande pour cet(te) élève.", 'info');
+    } else if (newValue == '9d788d8347e46e1083857acc416d435d') {
+        g_form.showFieldMsg('quel_est_le_motif_de_la_demande_ortho', "Il ne vous est pas possible de soumettre votre demande.  Veuillez compléter une demande de service sous le motif “Orthophonie TSA/CS” sur la plateforme.", 'info');
     }
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
@@ -35,7 +35,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1700a3b547646a1083857acc416d4342</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>A motive was selected</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -43,7 +43,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_1700a3b547646a1083857acc416d4342</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-03-31 16:21:26</sys_updated_on>
+        <sys_updated_on>2025-04-03 21:04:00</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

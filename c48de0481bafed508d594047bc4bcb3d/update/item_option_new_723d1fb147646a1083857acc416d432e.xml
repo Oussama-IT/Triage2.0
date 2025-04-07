@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="item_option_new">
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
-        <attributes/>
+        <attributes>ref_ac_order_by=order</attributes>
         <cat_item display_value="Communication alternative et améliorée Équipe Orthophonie TSA/Communication sociale">743e073147246a1083857acc416d43a9</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
@@ -22,7 +22,7 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field/>
+        <field>quel_est_le_motif_de_la_demande_ortho</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -39,10 +39,10 @@
         <macro/>
         <macroponent/>
         <mandatory>false</mandatory>
-        <map_to_field>false</map_to_field>
+        <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>quel_est_le_motif_de_la_demande</name>
+        <name>quel_est_le_motif_de_la_demande_ortho</name>
         <not_available_conversation>false</not_available_conversation>
         <order>400</order>
         <post_insert_script/>
@@ -57,10 +57,9 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table>x_ndecd_triage_2_0_demande_tsa_cs_caa</record_producer_table>
-        <reference>x_ndecd_cecce_base_communication_alternative_et_am_lior_e</reference>
-        <reference_qual>^ORDERBYDESCcommunication_alternative_et_amelioree</reference_qual>
-        <reference_qual_condition table="x_ndecd_cecce_base_communication_alternative_et_am_lior_e">^ORDERBYDESCcommunication_alternative_et_amelioree<item endquery="false" field="" goto="false" newquery="false" operator="ORDERBYDESC" or="false" value="communication_alternative_et_amelioree"/>
-        </reference_qual_condition>
+        <reference>x_ndecd_cecce_base_motif_tsa_cs_caa</reference>
+        <reference_qual/>
+        <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
         <save_script><![CDATA[/** This script is executed before the Record is generated
@@ -80,14 +79,14 @@
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-03-28 19:57:59</sys_created_on>
         <sys_id>723d1fb147646a1083857acc416d432e</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_name>Quel est le motif de la demande?</sys_name>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>quel_est_le_motif_de_la_demande_ortho</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>item_option_new_723d1fb147646a1083857acc416d432e</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-03-31 16:55:26</sys_updated_on>
+        <sys_updated_on>2025-04-03 20:47:31</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

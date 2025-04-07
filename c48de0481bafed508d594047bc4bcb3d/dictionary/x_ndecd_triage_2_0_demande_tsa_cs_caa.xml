@@ -1,3 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="55b0484d4768661083857acc416d430a" extends="task" label="Demande TSA/CS CAA" max_length="40" name="x_ndecd_triage_2_0_demande_tsa_cs_caa" type="collection"/>
+    <element audit="true" db_object_id="55b0484d4768661083857acc416d430a" extends="task" label="Demande TSA/CS CAA" max_length="40" name="x_ndecd_triage_2_0_demande_tsa_cs_caa" type="collection">
+        <element label="Formulaire d'aiguillage" max_length="40" name="formulaire_d_aiguillage" type="file_attachment"/>
+        <element active="false" label="Autre situation explication" max_length="4000" name="autre_situation_explication" type="string"/>
+        <element label="Date du rapport contenant la recommandation" max_length="40" name="date_du_rapport_contenant_la_recommandation" type="glide_date"/>
+        <element label="Situation familiale de l’élève" max_length="100" name="situation_familiale_de_l_l_ve" type="string"/>
+        <element label="Élève" max_length="32" name="eleve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est ce que Le formulaire d'aiguillage &quot;Services orthophoniques régulier vs volet" max_length="40" name="est_ce_que_le_formulaire_d_aiguillage_services_orthophoniques_r_gulier_vs_volet" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+            </choice>
+        </element>
+        <element choice="1" label="Est-ce que l'élève a un diagnostic posé par un professionnel de la santé autoris" max_length="40" name="est_ce_que_l_l_ve_a_un_diagnostic_pos_par_un_professionnel_de_la_sant_autoris" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="HD/DIL" value="HD/DIL"/>
+                <element inactive_on_update="false" label="TSA" value="TSA"/>
+                <element inactive_on_update="false" label="Autre" value="autre"/>
+                <element inactive_on_update="false" label="Aucun diagnostic" value="Aucun"/>
+            </choice>
+        </element>
+        <element label="Consentement parental verbal" max_length="40" name="consentement_parental_verbal" type="boolean"/>
+        <element choice="1" choice_field="classe_distincte" choice_table="x_ndecd_cecce_base_options" label="Classe distincte" max_length="40" name="classe_distinct" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Classe DA (Trouble d’apprentissage)" sequence="0" value="DA"/>
+                <element inactive_on_update="false" label="Classe DAF (Difficulté d’apprentissage - frontière)" sequence="1" value="DAF"/>
+                <element inactive_on_update="false" label="Classe DIL (Déficience intellectuelle légère)" sequence="2" value="DIL"/>
+                <element inactive_on_update="false" label="Classe HD (Handicap de développement)" sequence="3" value="HD"/>
+                <element inactive_on_update="false" label="Classe TSA (Trouble du spectre de l’autisme)" sequence="4" value="TSA"/>
+            </choice>
+        </element>
+        <element label="Veuillez ajouter le rapport ou la recommandation en pièce jointe" max_length="40" name="veuillez_ajouter_le_rapport_ou_la_recommandation_en_pi_ce_jointe" type="file_attachment"/>
+        <element label="Quel est le motif de la demande?" max_length="32" name="quel_est_le_motif_de_la_demande_ortho" reference="x_ndecd_cecce_base_motif_tsa_cs_caa" type="reference"/>
+        <element label="Titre du professionnel de la santé ayant fait la recommandation" max_length="100" name="titre_du_professionnel_de_la_sant_ayant_fait_la_recommandation" type="string"/>
+        <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève fréquente présentement une classe distincte?" max_length="40" name="est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="No" sequence="0" value="no"/>
+            </choice>
+        </element>
+        <element label="Nom du professionnel de la santé ayant fait la recommandation" max_length="100" name="nom_du_professionnel_de_la_sant_ayant_fait_la_recommandation" type="string"/>
+    </element>
 </database>

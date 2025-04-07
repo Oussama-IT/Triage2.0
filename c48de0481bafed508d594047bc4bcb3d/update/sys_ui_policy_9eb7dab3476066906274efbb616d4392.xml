@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_ndecd_triage_2_0_demande_tsa_cs_caa">quel_est_le_motif_de_la_demande_ortho=bf2885c347e46e1083857acc416d4374^EQ<item display_table="x_ndecd_cecce_base_motif_tsa_cs_caa" display_value="Nouvelle demande d’achat ou d’ajout pour un outil de communication alternative et améliorée à haute technologie (ex. Proloquo2Go, TD Snap) avec recommandation d’un(e) professionnel(le) de la santé réglementé(e) de l’externe (ex. pratique privée, CTEO)." endquery="false" field="quel_est_le_motif_de_la_demande_ortho" goto="false" newquery="false" operator="=" or="false" value="bf2885c347e46e1083857acc416d4374"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Hide Fields when motives 1 and 2 are selected</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-04-03 20:02:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9eb7dab3476066906274efbb616d4392</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Hide Fields when motives 1 and 2 are selected</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_ui_policy_9eb7dab3476066906274efbb616d4392</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-04-03 20:49:32</sys_updated_on>
+        <table>x_ndecd_triage_2_0_demande_tsa_cs_caa</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>
