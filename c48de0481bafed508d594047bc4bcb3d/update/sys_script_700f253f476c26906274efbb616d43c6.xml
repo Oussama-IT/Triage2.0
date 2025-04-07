@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ndecd_triage_2_0_demande_tsa_cs_caa</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_ndecd_triage_2_0_demande_tsa_cs_caa">approvalCHANGESTOapproved^EQ<item display_value="Approved" endquery="false" field="approval" goto="false" newquery="false" operator="CHANGESTO" or="false" value="approved"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>CECCE Generate PDF TSA/CS CAA</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    var html;
+    var gr = new GlideRecord('x_ndecd_triage_2_0_pdftemplate');
+    gr.addQuery('template_name', 'TSA/CS CAA');
+    gr.query();
+    if (gr.next()) {
+        html = gr.html_template;
+    }
+
+    var eleve = new GlideRecord('x_ndecd_triage_2_0_eleve');
+    eleve.get(current.getValue('eleve'));
+    html = html.replace('var1', eleve.name); //Name
+    html = html.replace('var2', eleve.u_date_de_naissance); //Birthdate
+    html = html.replace('var3', eleve.u_niso); //NISO
+    html = html.replace('var4', eleve.getDisplayValue('u_nom_de_l_cole')); //School name
+    html = html.replace('var5', eleve.getDisplayValue('u_classe')); //Class
+
+    html = html.replace('var6', current.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte);
+    html = html.replace('var7', current.classe_distinct);
+    html = html.replace('var8', current.est_ce_que_l_l_ve_a_un_diagnostic_pos_par_un_professionnel_de_la_sant_autoris);
+    html = html.replace('var9', current.situation_familiale_de_l_l_ve);
+    //html = html.replace('var10');
+    html = html.replace('var11', current.est_ce_que_le_formulaire_d_aiguillage_services_orthophoniques_r_gulier_vs_volet);
+    html = html.replace('var12', current.getDisplayValue('quel_est_le_motif_de_la_demande_ortho'));
+
+    var value = new GlideRecord('x_ndecd_cecce_base_motif_tsa_cs_caa');
+    value.get(current.getValue('quel_est_le_motif_de_la_demande_ortho'));
+
+    if (value.order == '0') {
+        html = html.replace('var13', current.nom_du_professionnel_de_la_sant_ayant_fait_la_recommandation);
+        html = html.replace('var14', current.titre_du_professionnel_de_la_sant_ayant_fait_la_recommandation);
+        html = html.replace('var15', current.date_du_rapport_contenant_la_recommandation);
+    } else {
+        html = html.replace('Nom du professionnel de la santé ayant fait la recommandation:', '');
+        html = html.replace('var13', '');
+        html = html.replace('Titre du professionnel de la santé ayant fait la recommandation:', '');
+        html = html.replace('var14', '');
+        html = html.replace('Date du rapport contenant la recommandation:', '');
+        html = html.replace('var15', '');
+    }
+
+    html = html.replace("var20", current.getDisplayValue('opened_by'));
+    html = html.replace("var20", current.getDisplayValue('opened_by'));
+    html = html.replace("var21", current.getDisplayValue('sys_created_on'));
+
+    var opened_by_title = new GlideRecord('sys_user');
+    opened_by_title.addQuery('sys_id', current.opened_by.sys_id);
+    opened_by_title.query();
+    if (opened_by_title.next()) {
+        html = html.replace("var22", opened_by_title.getDisplayValue('title'));
+    }
+
+    var dir = current.number;
+    var gsdirect = new GlideRecord('sysapproval_approver');
+    gsdirect.addQuery('sysapproval.number', dir);
+    gsdirect.addQuery('state', 'approved');
+    gsdirect.query();
+    while (gsdirect.next()) {
+        html = html.replace("var90", gsdirect.getDisplayValue('approver'));
+        html = html.replace("var91", gsdirect.getDisplayValue('approver'));
+    }
+    html = html.replace("var92", current.getDisplayValue('sys_updated_on'));
+
+    pdf_name = 'TSA/CS CAA ' + eleve.name;
+    table_name = 'x_ndecd_triage_2_0_demande_tsa_cs_caa';
+    table_sys_id = current.sys_id;
+
+    var hfInfo = {
+        HeaderImageAttachmentId: "fe71ca801b04b910d991c882604bcb30",
+        HeaderImageAlignment: "left",
+        FooterImageAttachmentId: "f69aa9661bf7a5108d594047bc4bcb1c",
+        FooterImageAlignment: "TOP_CENTER",
+        PageSize: "A4",
+        GeneratePageNumber: "false",
+        TopOrBottomMargin: "50",
+        LeftOrRightMargin: "24"
+    };
+
+    var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
+    var result = v.convertToPDFWithHeaderFooter(html, table_name, table_sys_id, pdf_name, hfInfo);
+    current.update();
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-04-03 17:04:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>700f253f476c26906274efbb616d43c6</sys_id>
+        <sys_mod_count>66</sys_mod_count>
+        <sys_name>CECCE Generate PDF TSA/CS CAA</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_700f253f476c26906274efbb616d43c6</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-04-07 16:05:21</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=700f253f476c26906274efbb616d43c6"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>700f253f476c26906274efbb616d43c6</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-04-03 17:04:37</sys_created_on>
+        <sys_id>233f213f476c26906274efbb616d43dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-04-03 17:04:37</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
