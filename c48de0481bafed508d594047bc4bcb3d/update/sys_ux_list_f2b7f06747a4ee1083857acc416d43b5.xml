@@ -2,8 +2,9 @@
     <sys_ux_list action="INSERT_OR_UPDATE">
         <active>true</active>
         <category display_value="Demandes TSA/CS CAA">0f97fc2747a4ee1083857acc416d439f</category>
-        <columns>number,state,eleve,assigned_to,sys_created_on</columns>
-        <condition/>
+        <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,state,assigned_to,sys_created_on</columns>
+        <condition table="x_ndecd_triage_2_0_demande_tsa_cs_caa">ORDERBYnumber<item endquery="false" field="" goto="false" newquery="false" operator="ORDERBY" or="false" value="number"/>
+        </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
         <group_by_column/>
         <groups/>
@@ -60,7 +61,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f2b7f06747a4ee1083857acc416d43b5</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Tout</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -68,7 +69,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_f2b7f06747a4ee1083857acc416d43b5</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-04-04 20:52:35</sys_updated_on>
+        <sys_updated_on>2025-04-07 18:54:03</sys_updated_on>
         <table>x_ndecd_triage_2_0_demande_tsa_cs_caa</table>
         <title>Tout</title>
         <view/>

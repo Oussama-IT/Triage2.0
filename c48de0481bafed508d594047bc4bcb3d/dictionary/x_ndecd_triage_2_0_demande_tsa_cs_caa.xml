@@ -20,7 +20,6 @@
             </choice>
         </element>
         <element label="Consentement parental verbal" max_length="40" name="consentement_parental_verbal" type="boolean"/>
-        <element label="Nom orthophoniste" mandatory="true" max_length="32" name="nom_orthophoniste" reference="sys_user" type="reference"/>
         <element choice="1" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" value="oui"/>
