@@ -20,6 +20,12 @@
             </choice>
         </element>
         <element label="Consentement parental verbal" max_length="40" name="consentement_parental_verbal" type="boolean"/>
+        <element choice="1" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" value="oui"/>
+                <element inactive_on_update="false" label="Oui" language="fr" value="oui"/>
+            </choice>
+        </element>
         <element choice="1" choice_field="classe_distincte" choice_table="x_ndecd_cecce_base_options" label="Classe distincte" max_length="40" name="classe_distinct" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Classe DA (Trouble d’apprentissage)" sequence="0" value="DA"/>
