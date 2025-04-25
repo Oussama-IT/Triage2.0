@@ -36,7 +36,7 @@
             </choice>
         </element>
         <element label="Consentement parental verbal" max_length="40" name="consentement_parental_verbal" type="boolean"/>
-        <element label="Nom orthophoniste TSA/CS" max_length="32" name="nom_orthophoniste_tsa_cs" reference="sys_user" type="reference"/>
+        <element label="Nom orthophoniste TSA/CS" max_length="32" name="nom_orthophoniste_tsa_cs" reference="sys_user" reference_qual="javascript:&quot;roles=x_ndecd_triage_2_0.Orthophonistes responsables de TSA^sys_id!=7167fb1f1b9c7590d991c882604bcbcf&quot;; /*Nathalie Lagroix*/" type="reference" use_reference_qualifier="advanced"/>
         <element choice="1" label="Le formulaire de consentement signé a-t-il été placé en pièce jointe?" mandatory="true" max_length="40" name="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" value="oui"/>
