@@ -3,13 +3,13 @@
         <active>true</active>
         <category display_value="ROI - Demandes/Priorisation (prochains)">58725fc51b390650d991c882604bcbae</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,evaluation_sommaire_requise,lr,le,ld,prio,statut_sli,statut_sli_si_admissible,ortho_eval,ortho_int,predecessor</columns>
-        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">nom_orthophoniste_interventionISEMPTY^orthophoniste_d_evaluationISNOTEMPTY^active=true^evaluation_sommaire_requise=donnees-suffisantes^etat_annee=2^NQevaluation_sommaire_requise=donnees-insuffisantes^le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe=oui^nom_orthophoniste_interventionISEMPTY^etat_annee=2^active=true<item endquery="false" field="nom_orthophoniste_intervention" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+        <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">nom_orthophoniste_interventionISEMPTY^orthophoniste_d_evaluationISNOTEMPTY^active=true^evaluation_sommaire_requise=donnees-suffisantes^etat_annee=2^NQevaluation_sommaire_requise=donnees-insuffisantes^consentement_parental_verbal=yes^nom_orthophoniste_interventionISEMPTY^etat_annee=2^active=true<item endquery="false" field="nom_orthophoniste_intervention" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item endquery="false" field="orthophoniste_d_evaluation" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
             <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item display_value="Évaluation sommaire ROI requise (données insuffisantes)" endquery="false" field="evaluation_sommaire_requise" goto="false" newquery="false" operator="=" or="false" value="donnees-suffisantes"/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="2"/>
             <item display_value="Données suffisantes au dossier pour confirmer l’admissibilité à ROI" endquery="false" field="evaluation_sommaire_requise" goto="false" newquery="true" operator="=" or="false" value="donnees-insuffisantes"/>
-            <item display_value="Oui" endquery="false" field="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" goto="false" newquery="false" operator="=" or="false" value="oui"/>
+            <item display_value="Yes" endquery="false" field="consentement_parental_verbal" goto="false" newquery="false" operator="=" or="false" value="yes"/>
             <item endquery="false" field="nom_orthophoniste_intervention" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item endquery="false" field="etat_annee" goto="false" newquery="false" operator="=" or="false" value="2"/>
             <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
@@ -70,7 +70,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4c24e04d47f8de106274efbb616d43df</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Non assigné (Int)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -78,7 +78,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_4c24e04d47f8de106274efbb616d43df</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-03-10 17:06:52</sys_updated_on>
+        <sys_updated_on>2025-05-02 17:08:37</sys_updated_on>
         <table>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</table>
         <title>Non assigné (Int)</title>
         <view/>

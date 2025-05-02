@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping">
+    <sys_ux_addon_event_mapping action="DELETE">
+        <active>true</active>
+        <controller/>
+        <description/>
+        <name>List New Problem task</name>
+        <parent_macroponent display_value="List">456f69b847516a106274efbb616d43bc</parent_macroponent>
+        <source_component/>
+        <source_da display_value="sow_list_new_problem_task">08b9e0520b7230106237818393673a89</source_da>
+        <source_element_id>list</source_element_id>
+        <sys_class_name>sys_ux_addon_event_mapping</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-01 16:10:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>596f2db847516a106274efbb616d4385</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>List New Problem task</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_ux_addon_event_mapping_596f2db847516a106274efbb616d4385</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-01 16:10:37</sys_updated_on>
+        <target_event display_value="LIST#OPEN_MODAL">2640a5150f1310107d20409dc4767e8a</target_event>
+        <target_payload_mapping>{
+    "container": {
+        "fields": {
+            "container": {
+                "pageSubTitle": {
+                    "binding": {
+                        "address": [
+                            "pageSubTitle"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "pageTitle": {
+                    "binding": {
+                        "address": [
+                            "pageTitle"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "sysId": {
+                    "binding": {
+                        "address": [
+                            "sysId"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "table": {
+                    "binding": {
+                        "address": [
+                            "table"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "useDomain": {
+                    "binding": {
+                        "address": [
+                            "useDomain"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                }
+            },
+            "type": "MAP_CONTAINER"
+        },
+        "params": {
+            "binding": {
+                "address": [
+                    "params"
+                ]
+            },
+            "type": "EVENT_PAYLOAD_BINDING"
+        },
+        "route": {
+            "type": "JSON_LITERAL",
+            "value": "interceptor"
+        },
+        "size": {
+            "type": "JSON_LITERAL",
+            "value": "lg"
+        }
+    },
+    "type": "MAP_CONTAINER"
+}</target_payload_mapping>
+    </sys_ux_addon_event_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</application>
+        <file_path/>
+        <instance_id>65b29b3adb7ea19492f5684e13961931</instance_id>
+        <instance_name>ceccedev</instance_name>
+        <name>sys_ux_addon_event_mapping_596f2db847516a106274efbb616d4385</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping"><sys_ux_addon_event_mapping action="INSERT_OR_UPDATE"><active>true</active><controller/><description/><name>List New Problem task</name><parent_macroponent display_value="List">456f69b847516a106274efbb616d43bc</parent_macroponent><source_component/><source_da display_value="sow_list_new_problem_task">08b9e0520b7230106237818393673a89</source_da><source_element_id>list</source_element_id><sys_class_name>sys_ux_addon_event_mapping</sys_class_name><sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by><sys_created_on>2025-05-01 16:10:37</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>596f2db847516a106274efbb616d4385</sys_id><sys_mod_count>0</sys_mod_count><sys_name>List New Problem task</sys_name><sys_overrides/><sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package><sys_policy/><sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope><sys_update_name>sys_ux_addon_event_mapping_596f2db847516a106274efbb616d4385</sys_update_name><sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by><sys_updated_on>2025-05-01 16:10:37</sys_updated_on><target_event display_value="LIST#OPEN_MODAL">2640a5150f1310107d20409dc4767e8a</target_event><target_payload_mapping>{
+    "container": {
+        "fields": {
+            "container": {
+                "pageSubTitle": {
+                    "binding": {
+                        "address": [
+                            "pageSubTitle"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "pageTitle": {
+                    "binding": {
+                        "address": [
+                            "pageTitle"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "sysId": {
+                    "binding": {
+                        "address": [
+                            "sysId"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "table": {
+                    "binding": {
+                        "address": [
+                            "table"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                },
+                "useDomain": {
+                    "binding": {
+                        "address": [
+                            "useDomain"
+                        ]
+                    },
+                    "type": "EVENT_PAYLOAD_BINDING"
+                }
+            },
+            "type": "MAP_CONTAINER"
+        },
+        "params": {
+            "binding": {
+                "address": [
+                    "params"
+                ]
+            },
+            "type": "EVENT_PAYLOAD_BINDING"
+        },
+        "route": {
+            "type": "JSON_LITERAL",
+            "value": "interceptor"
+        },
+        "size": {
+            "type": "JSON_LITERAL",
+            "value": "lg"
+        }
+    },
+    "type": "MAP_CONTAINER"
+}</target_payload_mapping></sys_ux_addon_event_mapping></record_update>]]></payload>
+        <payload_hash>1556678037</payload_hash>
+        <record_name>List New Problem task</record_name>
+        <reverted_from/>
+        <source>d5801a38476392106274efbb616d43e2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-01 16:10:37</sys_created_on>
+        <sys_id>116f2db847516a106274efbb616d4388</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1968c9d3e410000001</sys_recorded_at>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-01 16:10:37</sys_updated_on>
+        <type>UX Add-on Event Mapping</type>
+        <update_guid>d16f2db8fa516a107d555caa6770e687</update_guid>
+        <update_guid_history>d16f2db8fa516a107d555caa6770e687:1556678037</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-01 18:45:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_addon_event_mapping">sys_ux_addon_event_mapping</sys_db_object>
+        <sys_id>2ed45637d78842a8996f31a793ab3990</sys_id>
+        <sys_metadata>596f2db847516a106274efbb616d4385</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>List New Problem task</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_scope_delete display_value="">14b51fc3ce834665bcd5327947e6f949</sys_scope_delete>
+        <sys_update_name>sys_ux_addon_event_mapping_596f2db847516a106274efbb616d4385</sys_update_name>
+        <sys_update_version display_value="sys_ux_addon_event_mapping_596f2db847516a106274efbb616d4385">116f2db847516a106274efbb616d4388</sys_update_version>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-01 18:45:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
