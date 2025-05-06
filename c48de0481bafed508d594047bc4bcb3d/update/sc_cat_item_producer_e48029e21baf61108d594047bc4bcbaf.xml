@@ -88,7 +88,15 @@ current.situation_familiale = producer.situation_familiale_de_l_l_ve;
 current.autre_situation_explication = producer.autre_situation_explication;
 current.classe_distinc_vrai_faux = producer.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte;
 current.consetement_parental = producer.consentement_parental_verbal;
-current.short_description = "Demande de consultation avec possibilité d'évaluation: "+producer.eleve.getDisplayValue();]]></script>
+current.short_description = "Demande de consultation avec possibilité d'évaluation: "+producer.eleve.getDisplayValue();
+
+var profil_communication = producer.l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole_ou_la_maison;
+
+if (profil_communication == "0" || profil_communication == "1") {
+	current.l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole = "yes";
+} else if (profil_communication == "2") {
+	current.l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole = "no";
+}]]></script>
         <short_description>Demande de consultation avec possibilité d'évaluation</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
@@ -97,14 +105,14 @@ current.short_description = "Demande de consultation avec possibilité d'évalua
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-06-23 13:11:36</sys_created_on>
         <sys_id>e48029e21baf61108d594047bc4bcbaf</sys_id>
-        <sys_mod_count>314</sys_mod_count>
+        <sys_mod_count>329</sys_mod_count>
         <sys_name>Demande de consultation avec possibilité d'évaluation</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sc_cat_item_producer_e48029e21baf61108d594047bc4bcbaf</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2025-05-05 15:03:04</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-06 15:12:02</sys_updated_on>
         <table_name>x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation</table_name>
         <taxonomy_topic display_value="Consultation / Evaluation">ba5e163f1b2b6510d991c882604bcbbf</taxonomy_topic>
         <template/>
@@ -114,7 +122,7 @@ current.short_description = "Demande de consultation avec possibilité d'évalua
         <u_approval_type/>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>298</version>
+        <version>313</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
