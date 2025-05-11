@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_addon_event_mapping">
+    <sys_ux_addon_event_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <controller/>
+        <description/>
+        <name>hardware expense line confirmation event mapping</name>
+        <parent_macroponent display_value="Admin">37c662d747dda6106274efbb616d4392</parent_macroponent>
+        <source_component/>
+        <source_da display_value="create_expense_lines_historical_task">fc3974eb77e9311087d92531df5a9986</source_da>
+        <source_element_id>list</source_element_id>
+        <sys_class_name>sys_ux_addon_event_mapping</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-09 14:37:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>88d6e2d747dda6106274efbb616d43c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>hardware expense line confirmation event mapping</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_ux_addon_event_mapping_88d6e2d747dda6106274efbb616d43c8</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-09 14:37:33</sys_updated_on>
+        <target_event display_value="LIST#OPEN_MODAL">2640a5150f1310107d20409dc4767e8a</target_event>
+        <target_payload_mapping>{
+    "container": {
+        "fields": {
+            "binding": {
+                "address": [
+                    "fields"
+                ]
+            },
+            "type": "EVENT_PAYLOAD_BINDING"
+        },
+        "params": {
+            "binding": {
+                "address": [
+                    "params"
+                ]
+            },
+            "type": "EVENT_PAYLOAD_BINDING"
+        },
+        "route": {
+            "binding": {
+                "address": [
+                    "route"
+                ]
+            },
+            "type": "EVENT_PAYLOAD_BINDING"
+        }
+    },
+    "type": "MAP_CONTAINER"
+}</target_payload_mapping>
+    </sys_ux_addon_event_mapping>
+</record_update>
