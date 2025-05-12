@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_in_email_action">
+    <sysevent_in_email_action action="DELETE">
+        <action>record_action</action>
+        <active>false</active>
+        <assignment_operator/>
+        <condition_script/>
+        <description/>
+        <event_name>email.read</event_name>
+        <filter_condition/>
+        <from/>
+        <name>Triage</name>
+        <order>100</order>
+        <reply_email/>
+        <required_roles/>
+        <script><![CDATA[(function runAction(/*GlideRecord*/ current, /*GlideRecord*/ event, /*EmailWrapper*/ email, /*ScopedEmailLogger*/ logger, /*EmailClassifier*/ classifier) {
+
+// update current
+gs.info('today is today');
+// test email.body_text
+current.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe = 	'oui' ;
+
+
+current.update();
+
+})(current, event, email, logger, classifier);]]></script>
+        <stop_processing>true</stop_processing>
+        <sys_class_name>sysevent_in_email_action</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-12 15:06:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>261646904769ea106274efbb616d43c3</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Triage</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sysevent_in_email_action_261646904769ea106274efbb616d43c3</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-12 16:51:36</sys_updated_on>
+        <table>x_ndecd_triage_2_0_demande_de_partage</table>
+        <template/>
+        <type>reply</type>
+    </sysevent_in_email_action>
+    <sys_es_latest_script action="DELETE">
+        <id>261646904769ea106274efbb616d43c3</id>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-12 15:06:36</sys_created_on>
+        <sys_id>8b3acad44769ea106274efbb616d43b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-12 15:06:36</sys_updated_on>
+        <table>sysevent_in_email_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</application>
+        <file_path/>
+        <instance_id>65b29b3adb7ea19492f5684e13961931</instance_id>
+        <instance_name>ceccedev</instance_name>
+        <name>sysevent_in_email_action_261646904769ea106274efbb616d43c3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sysevent_in_email_action"&gt;&lt;sysevent_in_email_action action="INSERT_OR_UPDATE"&gt;&lt;action&gt;record_action&lt;/action&gt;&lt;active&gt;false&lt;/active&gt;&lt;assignment_operator/&gt;&lt;condition_script/&gt;&lt;description/&gt;&lt;event_name&gt;email.read&lt;/event_name&gt;&lt;filter_condition/&gt;&lt;from/&gt;&lt;name&gt;Triage&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;reply_email/&gt;&lt;required_roles/&gt;&lt;script&gt;&lt;![CDATA[(function runAction(/*GlideRecord*/ current, /*GlideRecord*/ event, /*EmailWrapper*/ email, /*ScopedEmailLogger*/ logger, /*EmailClassifier*/ classifier) {
+
+// update current
+gs.info('today is today');
+// test email.body_text
+current.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe = 	'oui' ;
+
+
+current.update();
+
+})(current, event, email, logger, classifier);]]&gt;&lt;/script&gt;&lt;stop_processing&gt;true&lt;/stop_processing&gt;&lt;sys_class_name&gt;sysevent_in_email_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;ServiceNowDeveloper2@ecolecatholique.ca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-05-12 15:06:37&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;261646904769ea106274efbb616d43c3&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Triage&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Triage 2.0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_in_email_action_261646904769ea106274efbb616d43c3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;KHARRF@ecolecatholique.ca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-05-12 16:51:36&lt;/sys_updated_on&gt;&lt;table&gt;x_ndecd_triage_2_0_demande_de_partage&lt;/table&gt;&lt;template/&gt;&lt;type&gt;reply&lt;/type&gt;&lt;/sysevent_in_email_action&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;261646904769ea106274efbb616d43c3&lt;/id&gt;&lt;sys_created_by&gt;ServiceNowDeveloper2@ecolecatholique.ca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-05-12 15:06:36&lt;/sys_created_on&gt;&lt;sys_id&gt;8b3acad44769ea106274efbb616d43b6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;ServiceNowDeveloper2@ecolecatholique.ca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-05-12 15:06:36&lt;/sys_updated_on&gt;&lt;table&gt;sysevent_in_email_action&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-646343669</payload_hash>
+        <record_name>Triage</record_name>
+        <reverted_from/>
+        <source>d5801a38476392106274efbb616d43e2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-12 16:51:36</sys_created_on>
+        <sys_id>fc42e2d447616a1083857acc416d43f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>196c568b78e0000001</sys_recorded_at>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-12 16:51:36</sys_updated_on>
+        <type>Inbound Email Actions</type>
+        <update_guid>b042e2d4e1616a10b7e73b95ee319df8</update_guid>
+        <update_guid_history>b042e2d4e1616a10b7e73b95ee319df8:-646343669,8a1ec25c1a69ea10dd9fcaa7975daa7b:-327427333,015d8e1ca169ea10b9ce06241e3b4ccb:705213814,8d2d461c0869ea1028da96da5dac7a1c:1020007813,c2cc821c0d69ea109b692bd9f6b560be:-1295679962,0b3a8ad4b469ea109ea775218c3fadc1:-1568391030</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-12 16:52:19</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_in_email_action">sysevent_in_email_action</sys_db_object>
+        <sys_id>0ee029a75fad4853b2c01546ec31a4a9</sys_id>
+        <sys_metadata>261646904769ea106274efbb616d43c3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Triage</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_parent display_value="Demande de partage">f71e6c481bafed508d594047bc4bcb8f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_scope_delete display_value="">14b51fc3ce834665bcd5327947e6f949</sys_scope_delete>
+        <sys_update_name>sysevent_in_email_action_261646904769ea106274efbb616d43c3</sys_update_name>
+        <sys_update_version display_value="sysevent_in_email_action_261646904769ea106274efbb616d43c3">fc42e2d447616a1083857acc416d43f8</sys_update_version>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-12 16:52:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
