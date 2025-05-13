@@ -5,6 +5,7 @@
         <element label="Objet" max_length="1000" name="subject" read_only="true" type="string_full_utf8"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Destinataire(s)" max_length="400" name="recipients" read_only="true" type="string"/>
+        <element label="Message ID" max_length="100" name="message_id" reference="sys_email" type="reference"/>
         <element label="Statut" max_length="40" name="status" read_only="true" type="string"/>
         <element label="Body" max_length="8000" name="body" read_only="true" type="html"/>
     </element>
