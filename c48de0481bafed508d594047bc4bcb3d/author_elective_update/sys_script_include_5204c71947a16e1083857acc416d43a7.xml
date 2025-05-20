@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_ndecd_triage_2_0.GetStudentsFromSchool</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>GetStudentsFromSchool</name>
+        <sandbox_callable>true</sandbox_callable>
+        <script><![CDATA[    function GetStudentsFromSchool() {
+		gs.info("here 123");
+
+		
+        var userId = gs.getUserID();
+        var userGR = new GlideRecord('sys_user');
+        userGR.get(userId);
+        
+        var school = new GlideRecord('x_ndecd_triage_2_0_x_ndecd_school');
+        school.addEncodedQuery('adminsCONTAINS' + userId);
+        school.setLimit(1);
+        school.query();
+
+        if (school.next()) {
+            gs.info("here 123456 " + school.sys_id.toString());
+            var studentsList = [];
+            var students = new GlideRecord('x_ndecd_triage_2_0_eleve');
+            students.addQuery('u_nom_de_l_cole', school.sys_id.toString());
+            students.query();
+            while (students.next()) {
+                gs.info('testtesttest ' + students);
+                studentsList.push(students.sys_id.toString());
+            }
+            return studentsList.join(',');
+        }
+
+        return '';
+    }]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-15 21:53:45</sys_created_on>
+        <sys_id>5204c71947a16e1083857acc416d43a7</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_name>GetStudentsFromSchool</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_include_5204c71947a16e1083857acc416d43a7</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-16 16:53:48</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>5204c71947a16e1083857acc416d43a7</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-15 21:53:45</sys_created_on>
+        <sys_id>5034871947a16e1083857acc416d43a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-15 21:53:45</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</application>
+        <file_path/>
+        <instance_id>65b29b3adb7ea19492f5684e13961931</instance_id>
+        <instance_name>ceccedev</instance_name>
+        <name>sys_script_include_5204c71947a16e1083857acc416d43a7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_ndecd_triage_2_0.GetStudentsFromSchool&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;GetStudentsFromSchool&lt;/name&gt;&lt;sandbox_callable&gt;true&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[    function GetStudentsFromSchool() {
+		gs.info("here 123");
+
+		
+        var userId = gs.getUserID();
+        var userGR = new GlideRecord('sys_user');
+        userGR.get(userId);
+        
+        var school = new GlideRecord('x_ndecd_triage_2_0_x_ndecd_school');
+        school.addEncodedQuery('adminsCONTAINS' + userId);
+        school.setLimit(1);
+        school.query();
+
+        if (school.next()) {
+            gs.info("here 123456 " + school.sys_id.toString());
+            var studentsList = [];
+            var students = new GlideRecord('x_ndecd_triage_2_0_eleve');
+            students.addQuery('u_nom_de_l_cole', school.sys_id.toString());
+            students.query();
+            while (students.next()) {
+                gs.info('testtesttest ' + students);
+                studentsList.push(students.sys_id.toString());
+            }
+            return studentsList.join(',');
+        }
+
+        return '';
+    }]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;KHARRF@ecolecatholique.ca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-05-15 21:53:45&lt;/sys_created_on&gt;&lt;sys_id&gt;5204c71947a16e1083857acc416d43a7&lt;/sys_id&gt;&lt;sys_mod_count&gt;28&lt;/sys_mod_count&gt;&lt;sys_name&gt;GetStudentsFromSchool&lt;/sys_name&gt;&lt;sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Triage 2.0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_5204c71947a16e1083857acc416d43a7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;KHARRF@ecolecatholique.ca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-05-16 16:53:48&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;5204c71947a16e1083857acc416d43a7&lt;/id&gt;&lt;sys_created_by&gt;KHARRF@ecolecatholique.ca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-05-15 21:53:45&lt;/sys_created_on&gt;&lt;sys_id&gt;5034871947a16e1083857acc416d43a1&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;KHARRF@ecolecatholique.ca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-05-15 21:53:45&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1462333656</payload_hash>
+        <record_name>GetStudentsFromSchool</record_name>
+        <reverted_from/>
+        <source>d5801a38476392106274efbb616d43e2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-16 16:53:48</sys_created_on>
+        <sys_id>1c298ba5476922106274efbb616d43c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>196da042c530000001</sys_recorded_at>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-16 16:53:48</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>10298ba5a3692210c49b84145e5f69c3</update_guid>
+        <update_guid_history>10298ba5a3692210c49b84145e5f69c3:1462333656,8438cf65326922105974d332b1cf21d1:-271678865,4cb783653d6922106519cd36356f38de:-6572252,cfa74765a26922106d344f3feb3ea22a:-271678865,48a74fa17b6922104517c6e6a644d0b4:-659161841,6ca5bea1b6292210b1a05dcb7b5983be:-1770540586,c055faa1792922104b994d810aad2807:-2116391341,03453ea16e292210bd76423f339afd54:-1770540586,0a4532a1172922105f0a5d58d9232d5c:-2116391341,a445ba614929221090bcdca1587ea0d3:-1770540586,3c447a6187292210e963a45110f34d15:1715406612,1330762d68e522102fcda759822356d6:-37687524,5710fe2d6be52210211338821f4d47d6:-1476323556,b3aa57d5fead225031dc43535691976c:969820316,707a17d55ead2250b656d47f3e2e131d:-1711063364,2f69d315baad22507ed45f453fd73b29:-1476323556,31e71bd1c3ad2250184cde87276924ec:-1554800351,e9c71fd1c1ad2250cd14cd6098ef3797:-1706659747,9917db51ecad22502f7eacdc8ce0f9dd:1072731026,9e0e0751d3e16e101a99f7edafdce397:-1778839328,5fdb8711fbe16e102478dd0e567d8e57:-814222953,e2ab0711dce16e109a20f8622276d58e:612461409,709b0711fee16e10bc75467ada2a0f59:1842802745,1b8bc311a2e16e105d316ce71a4c36db:634524242,ba6b8311c3e16e10ba82cb02bb582502:1521921601,ed154b59c4a16e10ec2dc5c6c1d1863c:603308865,bde4835984a16e10f1eb087beda0dc9e:-1231192961,17648f1963a16e109a7051ef8d3aef49:-1765337803,14348b19e5a16e102acd9f9f4ac3bc60:-299665751</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-16 16:56:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>05f5ee8d4f02499f818c2150fce4f3d1</sys_id>
+        <sys_metadata>5204c71947a16e1083857acc416d43a7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GetStudentsFromSchool</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_scope_delete display_value="">14b51fc3ce834665bcd5327947e6f949</sys_scope_delete>
+        <sys_update_name>sys_script_include_5204c71947a16e1083857acc416d43a7</sys_update_name>
+        <sys_update_version display_value="sys_script_include_5204c71947a16e1083857acc416d43a7">1c298ba5476922106274efbb616d43c3</sys_update_version>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-16 16:56:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
