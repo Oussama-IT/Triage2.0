@@ -25,7 +25,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_295fb7671b858e508d594047bc4bcb18</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-14 13:35:02</sys_updated_on>
+        <sys_updated_on>2025-05-21 14:31:13</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
     <sys_pd_process_definition action="INSERT_OR_UPDATE">
@@ -54,7 +54,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_295fb7671b858e508d594047bc4bcb18</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-14 13:35:02</sys_updated_on>
+        <sys_updated_on>2025-05-21 14:31:13</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
     <sys_pd_lane action="delete_multiple" query="process_definition=295fb7671b858e508d594047bc4bcb18^sys_idNOT IN2caf37671b858e508d594047bc4bcb55,63022d841b9d8250d991c882604bcb36,ed5d61c01bdd8250d991c882604bcb74,4e363e2c1b9182908d594047bc4bcb7c,c5a5d00c5a8ee0c5a08d0c5a30d0c5ae"/>
@@ -83,7 +83,7 @@
         <active>true</active>
         <condition_to_run/>
         <description/>
-        <label>Envoi du rapport</label>
+        <label>Envoi du formulaire de consentement</label>
         <lane_condition/>
         <name>envoi_du_rapport</name>
         <order>2</order>
@@ -94,9 +94,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-27 14:54:35</sys_created_on>
         <sys_id>63022d841b9d8250d991c882604bcb36</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-04-08 18:57:39</sys_updated_on>
+        <sys_updated_on>2025-05-21 14:31:12</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=63022d841b9d8250d991c882604bcb36"/>
@@ -2738,7 +2738,7 @@
         <inputs/>
         <inputs/>
         <label>Accusé de réception (en attente)</label>
-        <lane display_value="Envoi du rapport">63022d841b9d8250d991c882604bcb36</lane>
+        <lane display_value="Envoi du formulaire de consentement">63022d841b9d8250d991c882604bcb36</lane>
         <name>wait_for_condition</name>
         <order>1</order>
         <outputs/>

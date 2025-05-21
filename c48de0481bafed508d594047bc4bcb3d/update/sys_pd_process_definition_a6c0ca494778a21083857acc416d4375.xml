@@ -25,7 +25,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_a6c0ca494778a21083857acc416d4375</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-14 12:59:22</sys_updated_on>
+        <sys_updated_on>2025-05-21 14:30:40</sys_updated_on>
         <view_type>DIAGRAM</view_type>
     </sys_pd_process_definition>
     <sys_pd_process_definition action="INSERT_OR_UPDATE">
@@ -54,7 +54,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_a6c0ca494778a21083857acc416d4375</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-14 12:59:22</sys_updated_on>
+        <sys_updated_on>2025-05-21 14:30:40</sys_updated_on>
         <view_type>DIAGRAM</view_type>
     </sys_pd_process_definition>
     <sys_pd_lane action="delete_multiple" query="process_definition=a6c0ca494778a21083857acc416d4375^sys_idNOT IN251ac50251cb602517b302511860251d,9510090951b2109515890951ecd09512,d265880d26ab20d264010d264630d26d,f307450f3072d0f30d270f306270f302"/>
@@ -84,7 +84,7 @@
         <condition_to_run table="v_pd_lane_condition_to_run__sys_id__9510090951b2109515890951ecd09512">input_record.approval=approved<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
         </condition_to_run>
         <description/>
-        <label>Envoi du rapport</label>
+        <label>Envoi du formulaire de consentement</label>
         <lane_condition/>
         <name>new_stage_1</name>
         <order>2</order>
@@ -95,9 +95,9 @@
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-04-07 15:41:45</sys_created_on>
         <sys_id>9510090951b2109515890951ecd09512</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-04-08 19:11:14</sys_updated_on>
+        <sys_updated_on>2025-05-21 14:30:40</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=9510090951b2109515890951ecd09512"/>
@@ -3451,7 +3451,7 @@
         <inputs/>
         <inputs/>
         <label>Accusé de réception (en attente)</label>
-        <lane display_value="Envoi du rapport">9510090951b2109515890951ecd09512</lane>
+        <lane display_value="Envoi du formulaire de consentement">9510090951b2109515890951ecd09512</lane>
         <name>wait_for_condition</name>
         <order>1</order>
         <outputs/>
