@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">work_notesVALCHANGES^ORcommentsVALCHANGES^le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe=^EQ<item endquery="false" field="work_notes" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="comments" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item display_value="-- None --" endquery="false" field="le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" goto="false" newquery="false" operator="=" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Accusé de réception demande ROI</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current /*, previous*/ ) {
+    var noteGR = new GlideRecord('sys_journal_field');
+    noteGR.addQuery('element_id', current.sys_id);
+    noteGR.orderByDesc('sys_created_on');
+    noteGR.setLimit(1);
+    noteGR.query();
+
+    if (!noteGR.next()) {
+        return;
+    }
+
+    var noteText = (noteGR.value + '').toLowerCase();
+    var noteAuthorName = noteGR.sys_created_by + '';
+
+    if (!noteText.includes('consentement parental obtenu')) {
+        return;
+    }
+
+    if (current.opened_by &&
+        current.opened_by.email.toString() === noteAuthorName) {
+        current.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe = 'oui';
+        current.update();
+        return;
+    }
+
+    var roleGR = new GlideRecord('sys_user_has_role');
+    roleGR.addEncodedQuery('user.user_name=' + noteAuthorName +
+        '^role.name=x_ndecd_triage_2_0.Direction');
+    roleGR.setLimit(1);
+    roleGR.query();
+
+    if (roleGR.hasNext()) {
+        current.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe = 'oui';
+        current.update();
+    }
+})(current);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-21 16:40:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8bc570d747e1e6106274efbb616d4305</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Accusé de réception demande ROI</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_8bc570d747e1e6106274efbb616d4305</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-21 16:40:38</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8bc570d747e1e6106274efbb616d4305"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>8bc570d747e1e6106274efbb616d4305</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-21 16:40:37</sys_created_on>
+        <sys_id>c816b89747e1e6106274efbb616d4354</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-21 16:40:37</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
