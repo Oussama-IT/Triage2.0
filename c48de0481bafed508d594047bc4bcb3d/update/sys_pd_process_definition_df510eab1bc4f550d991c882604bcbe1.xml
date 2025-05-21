@@ -25,7 +25,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_df510eab1bc4f550d991c882604bcbe1</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 16:46:13</sys_updated_on>
+        <sys_updated_on>2025-05-21 20:40:05</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
     <sys_pd_process_definition action="INSERT_OR_UPDATE">
@@ -54,7 +54,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_df510eab1bc4f550d991c882604bcbe1</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 16:46:13</sys_updated_on>
+        <sys_updated_on>2025-05-21 20:40:05</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
     <sys_pd_lane action="delete_multiple" query="process_definition=df510eab1bc4f550d991c882604bcbe1^sys_idNOT IN5ff14aeb1bc4f550d991c882604bcb3d,1d09bddb1b914e908d594047bc4bcbff,a82286eb1bc4f550d991c882604bcbd2,2d3ec0a11b7c06108d594047bc4bcba8,102950441bed8210d991c882604bcbc0"/>
@@ -64,7 +64,7 @@
             <item display_value="équipe-école" endquery="false" field="input_record.soumis_par" goto="false" newquery="false" operator="=" or="false" value="eq-eco"/>
         </condition_to_run>
         <description/>
-        <label>Envoi du rapport</label>
+        <label>Envoi du formulaire de consentement</label>
         <lane_condition/>
         <name>envoi_du_rapport</name>
         <order>1</order>
@@ -75,9 +75,9 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-21 14:43:12</sys_created_on>
         <sys_id>5ff14aeb1bc4f550d991c882604bcb3d</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-06 20:19:03</sys_updated_on>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-21 20:39:47</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=5ff14aeb1bc4f550d991c882604bcb3d"/>
@@ -87,7 +87,7 @@
             <item display_value="équipe-ortophonistes" endquery="false" field="input_record.soumis_par" goto="false" newquery="false" operator="=" or="false" value="eq-orth"/>
         </condition_to_run>
         <description/>
-        <label>Envoi du rapport pour la direction evaluation requise</label>
+        <label>Envoi du formulaire de consentement pour la direction evaluation requise</label>
         <lane_condition/>
         <name>envoi_du_rapport_pour_ortho_direction_1</name>
         <order>2</order>
@@ -98,9 +98,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-06 18:55:10</sys_created_on>
         <sys_id>1d09bddb1b914e908d594047bc4bcbff</sys_id>
-        <sys_mod_count>9</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-08 19:51:33</sys_updated_on>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-21 20:39:56</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=1d09bddb1b914e908d594047bc4bcbff"/>
@@ -183,7 +183,7 @@
             <item display_value="équipe-ortophonistes" endquery="false" field="input_record.soumis_par" goto="false" newquery="false" operator="=" or="false" value="eq-orth"/>
         </condition_to_run>
         <description/>
-        <label>Envoi du rapport pour la direction evaluation non-requise</label>
+        <label>Envoi du formulaire de consentement pour la direction evaluation non-requise</label>
         <lane_condition/>
         <name>envoi_du_rapport_pour_la_direction_evaluation_non_requise</name>
         <order>5</order>
@@ -194,9 +194,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-08 19:51:39</sys_created_on>
         <sys_id>102950441bed8210d991c882604bcbc0</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-11 20:36:03</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-21 20:40:05</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=102950441bed8210d991c882604bcbc0"/>
@@ -1435,7 +1435,7 @@
         <inputs/>
         <inputs/>
         <label>Accusé de réception (en attente)</label>
-        <lane display_value="Envoi du rapport pour la direction evaluation non-requise">102950441bed8210d991c882604bcbc0</lane>
+        <lane display_value="Envoi du formulaire de consentement pour la direction evaluation non-requise">102950441bed8210d991c882604bcbc0</lane>
         <name>wait_for_condition</name>
         <order>1</order>
         <outputs/>
@@ -2406,7 +2406,7 @@
         <inputs/>
         <inputs/>
         <label>Accusé de réception (en attente)</label>
-        <lane display_value="Envoi du rapport">5ff14aeb1bc4f550d991c882604bcb3d</lane>
+        <lane display_value="Envoi du formulaire de consentement">5ff14aeb1bc4f550d991c882604bcb3d</lane>
         <name>wait_for_condition</name>
         <order>1</order>
         <outputs/>
@@ -3377,7 +3377,7 @@
         <inputs/>
         <inputs/>
         <label>Accusé de réception (en attente)</label>
-        <lane display_value="Envoi du rapport pour la direction evaluation requise">1d09bddb1b914e908d594047bc4bcbff</lane>
+        <lane display_value="Envoi du formulaire de consentement pour la direction evaluation requise">1d09bddb1b914e908d594047bc4bcbff</lane>
         <name>wait_for_condition</name>
         <order>1</order>
         <outputs/>
@@ -6782,7 +6782,7 @@
         <inputs/>
         <inputs/>
         <label>Finalisation</label>
-        <lane display_value="Envoi du rapport pour la direction evaluation non-requise">102950441bed8210d991c882604bcbc0</lane>
+        <lane display_value="Envoi du formulaire de consentement pour la direction evaluation non-requise">102950441bed8210d991c882604bcbc0</lane>
         <name>finalistion_du_process</name>
         <order>2</order>
         <outputs/>
