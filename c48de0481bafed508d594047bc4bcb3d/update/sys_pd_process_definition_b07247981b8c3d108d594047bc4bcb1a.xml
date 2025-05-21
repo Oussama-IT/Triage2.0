@@ -25,7 +25,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_b07247981b8c3d108d594047bc4bcb1a</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-12 20:29:46</sys_updated_on>
+        <sys_updated_on>2025-05-21 13:49:31</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
     <sys_pd_process_definition action="INSERT_OR_UPDATE">
@@ -54,7 +54,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_b07247981b8c3d108d594047bc4bcb1a</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-12 20:29:46</sys_updated_on>
+        <sys_updated_on>2025-05-21 13:49:31</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
     <sys_pd_lane action="delete_multiple" query="process_definition=b07247981b8c3d108d594047bc4bcb1a^sys_idNOT IN203d3a00203dddb0203d0ed0203de9b0,30adc3601b00bd108d594047bc4bcba0,f9cf28171bcc39508d594047bc4bcb88"/>
@@ -84,7 +84,7 @@
         <condition_to_run table="v_pd_lane_condition_to_run__sys_id__30adc3601b00bd108d594047bc4bcba0">input_record.approval=approved<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
         </condition_to_run>
         <description/>
-        <label>Envoi Du Rapport</label>
+        <label>Envoi du formulaire de consentement</label>
         <lane_condition/>
         <name>envoi_par_lettre</name>
         <order>2</order>
@@ -95,9 +95,9 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-12 12:31:56</sys_created_on>
         <sys_id>30adc3601b00bd108d594047bc4bcba0</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-02-03 18:49:21</sys_updated_on>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-21 13:49:31</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=30adc3601b00bd108d594047bc4bcba0"/>
@@ -2246,7 +2246,7 @@
         <inputs/>
         <inputs/>
         <label>Accusé de réception (en attente)</label>
-        <lane display_value="Envoi Du Rapport">30adc3601b00bd108d594047bc4bcba0</lane>
+        <lane display_value="Envoi du formulaire de consentement">30adc3601b00bd108d594047bc4bcba0</lane>
         <name>wait_for_condition</name>
         <order>1</order>
         <outputs/>
