@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_ndecd_triage_2_0.getStudentsFromSameSchool</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>getStudentsFromSameSchool</name>
+        <sandbox_callable>true</sandbox_callable>
+        <script><![CDATA[function getStudentsFromSameSchool() {
+    var userId = gs.getUserID();
+
+    var school = new GlideRecord('x_ndecd_triage_2_0_x_ndecd_school');
+    school.addEncodedQuery('adminsCONTAINS' + userId);
+    school.setLimit(1);
+    school.query();
+
+    if (school.next()) {
+        var studentsList = [];
+        var students = new GlideRecord('x_ndecd_triage_2_0_eleve');
+        students.addQuery('u_nom_de_l_cole', school.sys_id.toString());
+        students.query();
+        while (students.next()) {
+            studentsList.push(students.sys_id.toString());
+        }
+        return studentsList;
+    }
+
+    return '';
+}]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-16 16:54:30</sys_created_on>
+        <sys_id>1329cfa5476922106274efbb616d439a</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>getStudentsFromSameSchool</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_include_1329cfa5476922106274efbb616d439a</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-16 18:19:58</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>1329cfa5476922106274efbb616d439a</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-05-16 16:54:30</sys_created_on>
+        <sys_id>2a498ba5476922106274efbb616d43e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-16 16:54:30</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
