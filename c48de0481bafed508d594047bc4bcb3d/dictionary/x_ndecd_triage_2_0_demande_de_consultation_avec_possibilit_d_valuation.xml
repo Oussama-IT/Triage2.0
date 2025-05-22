@@ -36,7 +36,7 @@
         <element label="Fréquence (éducateur-ressource EED) :" max_length="40" name="fr_quence_ducateur_ressource_eed" type="string"/>
         <element label="L’élève éprouve des difficultés au niveau du jeu." max_length="4000" name="e_l_l_ve_prouve_des_difficult_s_au_niveau_du_jeu" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
         <element label="L’élève présente-il les facteurs de risque suivants (questionnez les parents)?" max_length="4000" name="l_l_ve_pr_sente_il_les_facteurs_de_risque_suivants_questionnez_les_parents" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
-        <element choice="1" label="Je comprends l’élève % du temps (impact des difficultés de prononciation et non " max_length="40" name="je_comprends_l_l_ve_du_temps_impact_des_difficult_s_de_prononciation_et_non" type="choice">
+        <element choice="1" label="Je comprends l’élève du temps (impact des difficultés de prononciation et non " max_length="40" name="je_comprends_l_l_ve_du_temps_impact_des_difficult_s_de_prononciation_et_non" type="choice">
             <choice>
                 <element inactive_on_update="false" label="75%" value="75"/>
                 <element inactive_on_update="false" label="100%" value="100"/>
@@ -406,6 +406,7 @@
         </element>
         <element label="Options" max_length="1000" name="options" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" reference_qual="question=Options^EQ" reference_qual_condition="question=Options^EQ" type="glide_list"/>
         <element label="Préciser :" max_length="200" name="pr_ciser" type="string"/>
+        <element label="Moyen principal de communication" max_length="400" name="moyen_principal_de_communication" read_only="true" type="string"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est-ce que l’élève est en attente d’une évaluation pouvant mener à un diagnostic" max_length="40" name="est_ce_que_l_l_ve_est_en_attente_d_une_valuation_pouvant_mener_un_diagnostic" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" sequence="0" value="no"/>

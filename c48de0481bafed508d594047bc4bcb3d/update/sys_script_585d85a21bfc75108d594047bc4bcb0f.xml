@@ -100,14 +100,14 @@
 
         //Mode de communication
 
-        newHtml = newHtml.replace("var34", current.getDisplayValue('l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole'));
+        newHtml = newHtml.replace("var34", current.moyen_principal_de_communication);
         if (current.getValue('l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole') == "yes") {
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Communication alternative : <strong>var36</strong></span></p>', '');
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre Communication : <strong>var37</strong></span></p>', '');
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève utilise-t-il un système de communication alternative? :<strong>var35</strong></span></p>', '');
         } else {
             newHtml = newHtml.replace("var35", current.getDisplayValue('l_l_ve_utilise_t_il_un_syst_me_de_communication_alternative'));
-            newHtml = newHtml.replace('<p><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong>Parole</strong></span></p>', '');
+			newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong>Parole</strong></span></div>', '');
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’enfant présente-il des difficultés de la parole (par ex. bégaiement, articulation des sons, voix, intelligibilité)? : <strong>var40</strong></span></p>', '');
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève bégaie (répétitions de sons ou de syllabes, prolongations de sons, blocages) dans sa langue dominante. : <strong>var42</strong></span></p>', '');
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à prononcer certains sons (autres que /s/ et /z/) : <strong>var43</strong></span></p>', '');
@@ -143,7 +143,7 @@
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Je comprends l&#39;élève : <strong>var202</strong></span></p>', '');
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">La qualité de la voix de l’élève semble anormale (ex. rauque, nasale), et ce, de manière persistante. : <strong>var45</strong></span></p>', '');
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève est conscient de ses difficultés, éprouve de la frustration ou se restreint au niveau de la communication : <strong>var46</strong></span></p>', '');
-            newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong>Parole</strong></span></div>', '');
+            //newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong>Parole</strong></span></div>', '');
         } else {
             newHtml = newHtml.replace("var42", current.getDisplayValue('l_l_ve_b_gaie_r_p_titions_de_sons_ou_de_syllabes_prolongations_de_sons_bloca'));
             newHtml = newHtml.replace("var43", current.getDisplayValue('l_l_ve_a_de_la_difficult_prononcer_certains_sons_autres_que_s_et_zl_eleve_a_de_l'));
@@ -571,7 +571,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>585d85a21bfc75108d594047bc4bcb0f</sys_id>
-        <sys_mod_count>134</sys_mod_count>
+        <sys_mod_count>138</sys_mod_count>
         <sys_name>PDF2</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -579,7 +579,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_585d85a21bfc75108d594047bc4bcb0f</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-03-20 19:08:15</sys_updated_on>
+        <sys_updated_on>2025-05-22 17:02:51</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
