@@ -66,9 +66,9 @@
         <lane_condition/>
         <name>approbation</name>
         <order>1</order>
-        <process_definition display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</process_definition>
+        <process_definition display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule display_value="Immédiatement">b823830967fc41ddb84959d97897b1ae</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-19 19:45:33</sys_created_on>
@@ -81,16 +81,16 @@
     <sys_variable_value action="delete_multiple" query="document_key=700470031b447550d991c882604bcbbe"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__d014f0031b447550d991c882604bcbbe">input_record.approval=approved<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__d014f0031b447550d991c882604bcbbe">input_record.approval=approved<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
         </condition_to_run>
         <description/>
         <label>Envoi du formulaire de consentement</label>
         <lane_condition/>
         <name>envoi_du_rapport</name>
         <order>2</order>
-        <process_definition display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</process_definition>
+        <process_definition display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
+        <start_rule display_value="Après les voies">7407ca1ac3e02110f1f504186e40dd50</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-19 19:45:47</sys_created_on>
@@ -117,7 +117,7 @@
     </sys_variable_value>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__642474031b447550d991c882604bcb26">input_record.approval=approved^input_record.state!=7<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__642474031b447550d991c882604bcb26">input_record.approval=approved^input_record.state!=7<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
             <item display_value="Fermé ignoré" endquery="false" field="input_record.state" goto="false" newquery="false" operator="!=" or="false" value="7"/>
         </condition_to_run>
         <description/>
@@ -125,9 +125,9 @@
         <lane_condition/>
         <name>traitement</name>
         <order>3</order>
-        <process_definition display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</process_definition>
+        <process_definition display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
+        <start_rule display_value="Après les voies">7407ca1ac3e02110f1f504186e40dd50</start_rule>
         <start_rule_vars/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-19 19:46:05</sys_created_on>
@@ -167,9 +167,9 @@
         <name>new_activity</name>
         <order>1</order>
         <outputs/>
-        <process_definition display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</process_definition>
+        <process_definition display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -1365,7 +1365,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Wait For Condition">5009aca043713110333c145f15b8f212</activity_definition>
+        <activity_definition display_value="Attendre une condition">5009aca043713110333c145f15b8f212</activity_definition>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
@@ -1377,9 +1377,9 @@
         <name>wait_for_condition_1</name>
         <order>1</order>
         <outputs/>
-        <process_definition display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</process_definition>
+        <process_definition display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
@@ -2336,7 +2336,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Request Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <activity_definition display_value="Demander une approbation ad hoc">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
@@ -2348,9 +2348,9 @@
         <name>request_ad_hoc_approval</name>
         <order>1</order>
         <outputs/>
-        <process_definition display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</process_definition>
+        <process_definition display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -3166,7 +3166,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Update Record">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
+        <activity_definition display_value="Enregistrement de mise à jour automatisé">569b840c1bbf0010affd0e55cc4bcbac</activity_definition>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__542cbd971b08b550d991c882604bcb95">input_record.accuse_de_reception=false</condition_to_run>
         <derivative_order/>
         <derivative_parent/>
@@ -3178,9 +3178,9 @@
         <name>automated_update_record_1</name>
         <order>2</order>
         <outputs/>
-        <process_definition display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</process_definition>
+        <process_definition display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
+        <start_rule display_value="Après les activités">7abaf173c35101102a86cb03b940dd62</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -4060,9 +4060,9 @@
         <name>new_activity_1</name>
         <order>2</order>
         <outputs/>
-        <process_definition display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</process_definition>
+        <process_definition display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
+        <start_rule display_value="Après les activités">7abaf173c35101102a86cb03b940dd62</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -5278,7 +5278,7 @@
         <process_definition>{"table":"sys_pd_snapshot","id":"04f8d89347e1665083857acc416d431f","name":"process_definition","type":"com.snc.pd.model.ProcessDefinition"}</process_definition>
         <process_dependencies>{"table":"sys_pd_snapshot","id":"04f8d89347e1665083857acc416d431f","name":"process_dependencies","type":"com.snc.pd.model.dependency.InstructionBasedProcessDependenciesCollection"}</process_dependencies>
         <process_plan>{"table":"sys_pd_snapshot","id":"04f8d89347e1665083857acc416d431f","name":"process_plan","type":"com.snc.process_flow.engine.ProcessPlan"}</process_plan>
-        <source display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</source>
+        <source display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</source>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-05-21 14:33:23</sys_created_on>
         <sys_id>04f8d89347e1665083857acc416d431f</sys_id>
@@ -5340,7 +5340,7 @@
     <sys_flow_compiled_flow_chunk action="delete_multiple" query="document_id=00f8d893d8e16650de00ad7882ab5c21^sys_idNOT IN04f8d89347e1665083857acc416d4322,88f8d89347e1665083857acc416d4321,44f8d89347e1665083857acc416d4321,ccf8d89347e1665083857acc416d4321"/>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/zXNMQqAMAyF4bt09gTORXBw6gmCTTUQmxKjDuLdLZSuH//jvS6xPB4NiN2YL+bByY2qFHGBUihvnVcphHFSObrscHowCKYIFRPwibUD5joLtcdetpNEmYwkz7H59wOUb/OmfgAAAA==</data>
-        <document_id display_value="Created 21/05/2025 10:33:23">00f8d893d8e16650de00ad7882ab5c21</document_id>
+        <document_id display_value="Créé 21/05/2025 10:33:23">00f8d893d8e16650de00ad7882ab5c21</document_id>
         <field>flow_config_param</field>
         <length>152</length>
         <position>0</position>
@@ -5350,7 +5350,7 @@
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/+Wa227jNhCG30XopZElZeqUqzrZADWwuwmStEBRFARFUolQWVR1SNYI8u4ldbIj0baUWgsje6VkOBxS/D8Ox7RfjCASz1cRX/E4z4zzv16MTBQp5UtmnBuUU8ox4ysSM44znhizuvkbWfG9Dr+HZYR5wOcBpQH0AXIsCzDPg9R1TRsgn/oeb/0XUUjk+EYqRC6NCUnlhO62m+IiimZGvk7UwDeLz/jm9vry6u5OhaCitFLkMg6QC30ScGYBl1kekgP7VI02Z9J1FcbLOMvTguahiNUcgTSS7x0jNN2ZwdNUpPckfeB5M7z0vFJWnXvKE5HmYfywFMb5ixHGSSH7vbzODFHk7d+MB6SI8uvW9LqJehlxEhfJzrn025Vkf8+MMFv+dpfL5T8PSJRxaXjMNv++zt6oSpIkFT5R3bt66ppqJR0gFxKAOfSRRkm/r+RWLDygs0bxBoYtzb8svl39X8FNneBzNEZv5T2V3O1Mjq72L1lO0nyP5h2HRnnXdxnw5i7n0LYtQJkJGUXARXMIPEL2KV9FxANC6PQfidAWJ4vL++Ufy/s/J2EFmuNyw5Sp4aispPzfgmc5Jgw/CorL5X8iUZeYQ241N4RzagMCZO63fAY7C05QP/fr4+IBgU6THjjX4WPOx+CjvKfCp53J8VMNj9m+RLPdXOPi1zkC2VWOIMyiCFGXO7KAYAfSjIyHBwQ4TUxM9FOdSDx+EiFmBU7l0ov+gbSzvQaFAYiCMZVINyAeEOHHlSNzS6e+M6r+dCYsP53jVp9dMfRFyQGvJmXQascTWu14y0YeJT6xAWcM+vAgCXV5MiCOjof3cDVB+tADhKwxACnvqQBqZ3IcgJ5JmONApJiKmIVl2oZdfPb61PC4vskCF8gHt2D58IB6uNZcPZwePLqgeECUE0YH2Tp0LHsMOsp7KnTamRypQClysSI5Z7hImHzilFORsj4/hx1riCxkUp95jixNXb9/v2H1i5ZdkfGAUCdMkuXoSLKdMSQp76lIamcy0SmmqXf3+tT8BPXJg5zq5JmTAAEWEG45jm0POcFU5TsgygmjY7s/VQGUp/IcKe9bu8BoWmpMbGQiB+0SxrR7mGxC4QF9f1yx63j6C5WRNyqTXqkc905lo4S+0t3Z3ty+oWpve261t4El93YgSw5oWpxSsEf65vLtcAQdAOMQmiAv6FlxvTGoKO+pSGlnchxQYv6Miez9FObrLiTathoQxBCgNkTQN73A664t93qAbAfDA3qfJBye/msbAEYlEuU+WSJp53J8PvoV647W5oMyQQCYbIfKMNjPCMQD+p8kJRBALSYQjsJEuU+GSTuXo583mpp0R2uDSX1SWFZ1Unimxxz5edZ0geVa+8+a8gb2cP/TxATu+J7nI5Ul0iNbS8NqUXYqF5/XXdWPAO5y8sCbV5QTDOOwGvxi/UYuNf9wM/jF+ivPsrLri/FJJMpGokVzWEnjrzQimdKZitVZFtOzhJ2tBOPR2VaYs+VqVeTEj/jN5wVj1504W28rFQzLBbFnRpOiSnoVXexSxDn/nivDi/FEokJBEcZyTHVto5pwqCAIs1seGOcyqNxARrCzX7C3XxaTJHsUmuFSQeWy4M064sZXFyeudmd/+SQW1erekHUkSG+Y2tqNF2bNAramT/WULklMefQuXaquOimsjyfF2+VSG5tk8o3fxq6N+5a/ztFtwFtelfnvEaDuq1PA6Shw6Ic3OOXNx40PotRt+0Lv2zKxVEHm7a8kafP1g9g29FWVxgdxQeg/96I6Ib4Qn0eafPnWq2y4WG91KY+A/wCG3zTyjCUAAA==</data>
-        <document_id display_value="Created 21/05/2025 10:33:23">00f8d893d8e16650de00ad7882ab5c21</document_id>
+        <document_id display_value="Créé 21/05/2025 10:33:23">00f8d893d8e16650de00ad7882ab5c21</document_id>
         <field>flow_structure</field>
         <length>1828</length>
         <position>0</position>
@@ -5360,7 +5360,7 @@
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>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</data>
-        <document_id display_value="Created 21/05/2025 10:33:23">00f8d893d8e16650de00ad7882ab5c21</document_id>
+        <document_id display_value="Créé 21/05/2025 10:33:23">00f8d893d8e16650de00ad7882ab5c21</document_id>
         <field>instructions</field>
         <length>3012</length>
         <position>0</position>
@@ -5370,7 +5370,7 @@
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/6tWyswrLikqTS7JzM/zTAnJD0rNzS9L9U6tdEosSc5QsqqurQUAOtk80SQAAAA=</data>
-        <document_id display_value="Created 21/05/2025 10:33:23">00f8d893d8e16650de00ad7882ab5c21</document_id>
+        <document_id display_value="Créé 21/05/2025 10:33:23">00f8d893d8e16650de00ad7882ab5c21</document_id>
         <field>runtime_value_metadata</field>
         <length>76</length>
         <position>0</position>
@@ -5382,7 +5382,7 @@
     <sys_pd_trigger_instance action="INSERT_OR_UPDATE">
         <label/>
         <name/>
-        <process_definition display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</process_definition>
+        <process_definition display_value="CECCE Demande SEP">3fe3fccf1b047550d991c882604bcb9e</process_definition>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-19 19:45:13</sys_created_on>
         <sys_id>3be374cf1b047550d991c882604bcb73</sys_id>
@@ -5392,7 +5392,7 @@
         <sys_updated_on>2023-07-19 19:45:25</sys_updated_on>
         <trigger_definition/>
         <trigger_inputs/>
-        <trigger_type display_value="Record Create">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
+        <trigger_type display_value="Créer un enregistrement">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
     </sys_pd_trigger_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3be374cf1b047550d991c882604bcb73"/>
     <sys_variable_value action="INSERT_OR_UPDATE">

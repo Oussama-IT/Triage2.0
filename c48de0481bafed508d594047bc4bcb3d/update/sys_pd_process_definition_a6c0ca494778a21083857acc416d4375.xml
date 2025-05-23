@@ -68,7 +68,7 @@
         <order>1</order>
         <process_definition display_value="TSA/CS CAA">a6c0ca494778a21083857acc416d4375</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule display_value="Immédiatement">b823830967fc41ddb84959d97897b1ae</start_rule>
         <start_rule_vars/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-04-07 15:36:36</sys_created_on>
@@ -81,7 +81,7 @@
     <sys_variable_value action="delete_multiple" query="document_key=251ac50251cb602517b302511860251d"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__9510090951b2109515890951ecd09512">input_record.approval=approved<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__9510090951b2109515890951ecd09512">input_record.approval=approved<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
         </condition_to_run>
         <description/>
         <label>Envoi du formulaire de consentement</label>
@@ -90,7 +90,7 @@
         <order>2</order>
         <process_definition display_value="TSA/CS CAA">a6c0ca494778a21083857acc416d4375</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
+        <start_rule display_value="Après les voies">7407ca1ac3e02110f1f504186e40dd50</start_rule>
         <start_rule_vars/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-04-07 15:41:45</sys_created_on>
@@ -117,8 +117,8 @@
     </sys_variable_value>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__d265880d26ab20d264010d264630d26d">input_record.approval=approved^input_record.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe=oui<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
-            <item display_value="Yes" endquery="false" field="input_record.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" goto="false" newquery="false" operator="=" or="false" value="oui"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__d265880d26ab20d264010d264630d26d">input_record.approval=approved^input_record.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe=oui<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+            <item display_value="Oui" endquery="false" field="input_record.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" goto="false" newquery="false" operator="=" or="false" value="oui"/>
         </condition_to_run>
         <description/>
         <label>Affectation d'une orthophoniste</label>
@@ -127,7 +127,7 @@
         <order>3</order>
         <process_definition display_value="TSA/CS CAA">a6c0ca494778a21083857acc416d4375</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
+        <start_rule display_value="Après les voies">7407ca1ac3e02110f1f504186e40dd50</start_rule>
         <start_rule_vars/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-04-07 17:24:34</sys_created_on>
@@ -154,8 +154,8 @@
     </sys_variable_value>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__f307450f3072d0f30d270f306270f302">input_record.approval=approved^input_record.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe=oui^input_record.nom_orthophoniste_tsa_csISNOTEMPTY<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
-            <item display_value="Yes" endquery="false" field="input_record.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" goto="false" newquery="false" operator="=" or="false" value="oui"/>
+        <condition_to_run table="v_pd_lane_condition_to_run__sys_id__f307450f3072d0f30d270f306270f302">input_record.approval=approved^input_record.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe=oui^input_record.nom_orthophoniste_tsa_csISNOTEMPTY<item display_value="Approuvé" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
+            <item display_value="Oui" endquery="false" field="input_record.le_formulaire_de_consentement_sign_a_t_il_t_plac_en_pi_ce_jointe" goto="false" newquery="false" operator="=" or="false" value="oui"/>
             <item endquery="false" field="input_record.nom_orthophoniste_tsa_cs" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
         </condition_to_run>
         <description/>
@@ -165,7 +165,7 @@
         <order>4</order>
         <process_definition display_value="TSA/CS CAA">a6c0ca494778a21083857acc416d4375</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
+        <start_rule display_value="Après les voies">7407ca1ac3e02110f1f504186e40dd50</start_rule>
         <start_rule_vars/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-04-07 18:01:38</sys_created_on>
@@ -207,7 +207,7 @@
         <outputs/>
         <process_definition display_value="TSA/CS CAA">a6c0ca494778a21083857acc416d4375</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
@@ -1403,7 +1403,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Request Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <activity_definition display_value="Demander une approbation ad hoc">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
@@ -1417,7 +1417,7 @@
         <outputs/>
         <process_definition display_value="TSA/CS CAA">a6c0ca494778a21083857acc416d4375</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
@@ -2247,7 +2247,7 @@
         <outputs/>
         <process_definition display_value="TSA/CS CAA">a6c0ca494778a21083857acc416d4375</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
@@ -3443,7 +3443,7 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Wait For Condition">5009aca043713110333c145f15b8f212</activity_definition>
+        <activity_definition display_value="Attendre une condition">5009aca043713110333c145f15b8f212</activity_definition>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
@@ -3457,7 +3457,7 @@
         <outputs/>
         <process_definition display_value="TSA/CS CAA">a6c0ca494778a21083857acc416d4375</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule display_value="Immédiatement">ef8ab8c0a3f04bceb117263f51401070</start_rule>
         <start_rule_vars/>
         <swim_lane/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
@@ -4482,7 +4482,7 @@
     <sys_flow_compiled_flow_chunk action="delete_multiple" query="document_id=aaf81c936ce16650a3d1d5ce662a90c0^sys_idNOT INaef81c9347e1665083857acc416d43c1,26f81c9347e1665083857acc416d43c1,eef81c9347e1665083857acc416d43c0,6af81c9347e1665083857acc416d43c1"/>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/zXNMQqAMAyF4bt09gTORXBw6gmCTTUQmxKjDuLdLZSuH//jvS6xPB4NiN2YL+bByY2qFHGBUihvnVcphHFSObrscHowCKYIFRPwibUD5joLtcdetpNEmYwkz7H59wOUb/OmfgAAAA==</data>
-        <document_id display_value="Created 21/05/2025 10:33:33">aaf81c936ce16650a3d1d5ce662a90c0</document_id>
+        <document_id display_value="Créé 21/05/2025 10:33:33">aaf81c936ce16650a3d1d5ce662a90c0</document_id>
         <field>flow_config_param</field>
         <length>152</length>
         <position>0</position>
@@ -4492,7 +4492,7 @@
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/+VabW/bNhD+L8I+GilJkZSUT3PSADPQlyDJBgzDQFB8SYXJkifJbY2g/72k3uLIsix3Vme0/pCLj3dHis/D44n0k6Pj9NNNrJYqKXLn8q8nJ0/XmVAL6Vw6Rc6ZyJng3JnV+nd8qfpbfo9KH04FEBwH2PN8jiDwXZ94XAgMqcSuR1r7eRxx06OTpWlhlCuemSHcbzcl6zieOcVmZXu8nb9mt3fvr2/u720IkZZagX2pAPZhyLWSBPiSBBhgLxQ4FKErjekyShZJXmRrUURpYscIjJJ/7iihG8wclWVp9sCzR1U03RvLG6vtM8/UKs2KKHlcpM7lkxMlq7Xxe/oyc9J10f4vlebruHjfqr48R72OFU/Wq71j2W23IP09c6J88dt9oVbOpeZxroziQ/789cvsBY6J+sTygj+qLoy7DTWKiEAuCDBChNQKL3StgH75Te6g2EZiI1x7sG5osIX2m/m7m/8KNeqD2sXHIG2tpwK6HcmJcf7F/M2KvWh3mmvMISC+xMQNhYKUEgDMLAdeSKQOJTKf/ZhX8diIAH3IH0WdLX7Mrx8Wfywe/pyEIxAdlQ3QhMkAnZQjmfp3rfKCcck+pILx1SpLP/K4y5VDZjVnPDPdXAEjEKdWaB6UAmor8G6274/LRgQ6R+5At488yD2GPNZ6KvK0Izl1glGJ3J9ethtropA6N/hhlRsQFhQorWVItaaDycVEYyPcz5EeCP+c+w+De8mx1VRTIyAQgAAYEZp60Qjil9+UkFYMUINBNsL5+1UbLumDm3rHwG2tp4K7HcnJ4T5QcOwYNFkBV8sa6WpZhx4lPHSJZz5IID4EfV10jAgxnBlGcWiC3NBPFkyOIYu1noos7UhOQ5ZPPCqYTjMm0kRGNkqXLQMWNV20p5VGwAhElBVScyso8a3wduiyG5KNiHGefMG0jy+EHsMXaz0VX9qRnD65DBUbneZmT6mzghdUWcFzKaZYKaUl58GBxGILjhEBzpMmxPtJ9yC0nyKoSw+JzHL3gRE8RFZgAEtBXSsGjzfYCOfvV3JQv/ftFYCjXl+t+WTvr+1YTo74oaqja9BJDs3LhDT1vyKBFpoqj7pDBWcdkY0IceB9ZAyNJkgP/Xzx/GPoYq2nYks7ktORhRvvj1Gx6ePJTluTIEIaSA2McAW3AoaeFYCXyt1zje1gbIT3ebLDC/rY4R91Mu5PeDDuT3Qubtb1YI2B+moMWecAiKsc4GMaKCo8qXxfhQfSiK0xRgQ4T5oE/TcoP8Wm4+5nidtliHaBhwmwAkkrJPKsoJUYYojLRjh/vzIDAth/aXbUSWdpPt2l2URnncw9VGd0DZo6oz60DPx6fUOFkZQh8SQGviuG4G/qjMMhhlPEKB5NcTC+hzAQHkUYaz4ZYdqx/L+1Bgy0eakMgJXIwFpKQkuJuQTDtcYI7zNlCNxz8XbkzdukV2+nvXvbXt+D9YbbW2/UucCFVS6grgIQEUU0IIQeSCdlvXE4wJlSBfVes/1Yu4+xyDdGsZyXTuXsq9rV/kjnvvydRv2IZoBRElWdX21e4GXHHz13frV5q/K8dH1yXqUrq+PxvMlFRvmriHlugRbp8iJPxMVKXixTqeKLrTAXi+VyXfAwVrev51K+78TZelqDYFROiDdzmixV8tfSS16nSaE+F1bx5Hzk8dqSIkpMn/aM1jaxyJIgyu+Udi5NULOIHL3XTw/65Qlf5R/Snu6yVJhpYc/zyBrbvjhJtUB3p8/QoprdW76JU77TTa3txovyZgJb1at6SNc8ESr+Jlwq1z4o6I8Hxcvpsgub5+aJX8aulUPTX+fpNuCdqmq5bwGg9u1DwO8gcOhncixTTU35gyB11z7Qty2ZxKBg8vZbvmrz9WO6rdhF1Sgf0ysu/nlIqx3iDQ9V3JMvX1qVDVebLZdyC/gKJpAFKSwpAAA=</data>
-        <document_id display_value="Created 21/05/2025 10:33:33">aaf81c936ce16650a3d1d5ce662a90c0</document_id>
+        <document_id display_value="Créé 21/05/2025 10:33:33">aaf81c936ce16650a3d1d5ce662a90c0</document_id>
         <field>flow_structure</field>
         <length>1944</length>
         <position>0</position>
@@ -4502,7 +4502,7 @@
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/+Wd247bOBKG30XXDUOkeJByNZkDBsEsZhadzO7FYmHQEpUY47YbbTvZQZB3X8l252DZqvKwihpbfaM+mCZZVX+RH1htfkzmy/XmaVtu5qvlOnnxn4/Jd+XCrZtvk3L1MFkvy8ljNXlYVX4x+eqlk1cPD9uNmy38P398vXFPm1df/pbcJfMqeZHeJa75+f188+er5sfEmTItnSqUtbmTIs2zXFtXlkqYSmVWT9ft+zSNH6sfVsuN/9+mbfYxee8WW9+0ny+bkUzL/Z+mTQ9NN+t7Xycvmo79p7ukPtuu7m23XrrH9bvVie6eVqVfr6eVr+fLeTu16fNrT73P0j20DTdrNy3X09K5zzOar397bJu7RfKidot18+q/YOcffTmv/K/tBDvGFhca+4rNTGPM1+9W20X18mCz++2ya1N5lyzczC/ad1V55VOVi5mrfaXTvNKFSpWdlWpWzrJq8sXpk6X/0Dr+rZ+IVOeV0tms9MIYnaZN08LOdFXPKtl8fY6Pb1wHtbpi1z1tl88W/wevZZue8Lo7TKJerD5M3stD3FSb1enY+bebb96s/vAnIia7S1aPzTvf//Tzq9dvfrpvfv3h+dW/+D8Rzp22r59u2gYJxWDfuKe3/kS+UOyxvZk/+CeSObQG785AM9gWyBn3X8K3Ox7DbtF9TI8lV+xX0+V2sQhy9F3r3ceF3xykwOeearX0TXeb1bZ8x93XrpO2s1Zk7J3tlLzL3t8vVuUf8+XbvZeYEuy5nGXZFdbGDWPKyuOnrDdtoJxPWsV48gn3cndQZOuwl2/dfMmtyl2sRlagSNntuMuizNs0IQ77tN9/5dypheCcHI8wo/GcyEKj1zZtnE+bh3SmfdSu2D1E3T7UaaCDWl2x78iADrTsMEAnFEh04MgjEZ3Q7NHNjXTCMFg3hOlE8JYTGddjyRc9UHeJp8mgDuyUEOpgeRFCHVLLR1C3S6mx95Q5u8aYsU4U8dMWwHXy+PDlhnMK96JHDHa4aI0sQinY7RgD7KREgB27NvvATmbjEWa8g7rg0wx9wOt8tsdrqUqT+rquZqauzbmTOqjVFfuODOxAyw4DdlKDYAeOPBLYyeCTJXAm3GAnLYN1Q8BOBm86kXE9lnzRA3aXeJoM7MBOCcEOlhch2CG1PPxpnSzYJcbMdVkaP2sBXJcd13ndcErhXvOIuQ4XrZFFmAXXsOESKXddVYbgOnZt9nFdpsYjzGhcl4UeaUzFRKu9H2S998PMGu1mmbbNlyylO0N2QKsr9h4V2WFsO1AVpoHZDhp5JLbLQg+YMF7gprusW9cUbt8QustCt5742B5L1ujjuwt8TcV3GAfRER5KZHSMh9f08JSnQivCMJNl5jwl4ucvgPPUcf3XDacW/vWPlvTQERtbiqHlbeikyrx/UwpDe9wK7aM9pccjz2i0p0LPOZr4rW3ta5k2D6l9+6hq1z6MztuHPU17UKsr9h4h7YG2HYb2lAVpDxx5rH+6Cz11wniBm/ZUt9op3L4htKcJtqDI2B5L1uihvUt8TUh7YLektAeLjJT2kJoenvZ0aJkYZrLMtKdl/PwF0J4+Lgq74dTCv/6R0x4uYmNLMbTmDZ1UmfdvWiNoj12hfbSnzXjkGY32NMHJR3GgblvsqdtmRhnlva8r54pzZ3tQqyv2HiHtgbYdhvZ0DtIeOPJItKcJTqHAuXDTnunWQIXbN+hjVgi2oMjYHkvW6KG9S3xNSHtgt6S0B4uMlPaQmh6e9kxo8Rhmssy0Z7L4+QugPXNcKnbDqYV//SOnPVzExpYiQSUcLqky79+MQdAeu0L7aM/Y8cgzGu2Z4JMP+Tl+nytqKy0qr4u6rI23JjvzP3pQqyv2HhntIWw7DO2ZAk17Z0ceifZs8CkUwgvctGe7lVDh9g2hPRu8BUXH9liyBoL2ML4moz2EgwhpDyMyQtpDa3p42rPB5WOIyTLTnlXx8xdAe/a4VOyGUwv/+kdMe9iIjS3F4Eo4bFJl3r9ZewHtsSm0j/ZsPh55RqM9G3zyISfVzBRVnTaPrHTtQ8xs+0jd7pdnPmoTanXF3iOkPdC2w9BenoK0B448Eu3lwadQCC9w017erYQKt28I7eUEW1BkbI8la/TQ3iW+JqQ9sFtS2oNFRkp7SE0PT3t5cPkYYrLc1yl0r4Bhz18A7eXHpWI3nFr41z9y2sNFbGwpBlfCYZMq9/4tR9Aeu0L7aC8/vu/khuUZjfYKgpOP6kDdQu2pO1em8Ka0lc9zPzt3tge1umLvUdIeZNthaK8QMO1BI49EewXBKRQ4F27aK7qVUOH2DaG9gmILiovtsWSNPtq7wNeUtAd1S0t7oMhoaQ+n6eFprwguH0NMlpn2iu7lMOz5C7o977hU7IZTC//6R097qIiNLUWCSjhcUuXevxUY2uNWaO8leunxLSg3rM94t+ilwWcf2aQ4fDpqkR8cIbySVTXTtlJpnpVnajmBVlfsPjLeQ9h2oKv0UgkXc0JDjwR8Ig0+iUL4gf06vfREOVSwhYPu00uDN6Lo+B5L5uir57zA2WTMh3AQIfNhZEbIfGhVD898Ig2uIkPMlhn6RNq9OYY9hQHUJ9JOzdjtZhf+RZAY+7AxG12NwTVx2MTKfnl6iinq5BZpL/iJ42tSblih8cBPBB+DZBNR1HXlirR9ysb2u6c2u6dyVXoa/KBWV+w+QvADbTsQ+IkMBD9w6LHATwQfSiH8wA5+olsZFW7hIPATBJtRZHyPJXP0gN8lziYEP7BbUvCDZUYKfkhV/w3ATwQXlCFmyw1+onupDHsKg8BPHJeP3XB24V8EycEPF7Ox1SiDy+OwiZV7HycFAvzYRdoLfvL43pQbVmg88JMEpyHVgcAzsSdwk/lUSO11nWptzp34Qa2u2H2E4AfadiDwkwou8YSGHgv8JMHJFDgZdvCTJ4qkgi0cBH6SYDOKjO+xZI6+Ks8LnE0IfmC3pOAHy4wU/JCq/huAnwyuLUPMlhv8ZPd+GfYUBoFf1ikku93swr8IkoMfLmZjqzEjqJPDJVbufVwmMaWe3CLtBb/s+AqVG1ZoPPDLvjoNcaZMS6cKZW3upEjzLNfWlaUSplKZ1c9r/DdegBpdsRdO8BtooucNFz4XAU784fCGp3x3/MFjV2xrdAx+ZeD9Ljn5klj7rf/fu6QZjNsumuzyuN38qx1r44mPnz7//rft5ps/fPo/hc89azytAAA=</data>
-        <document_id display_value="Created 21/05/2025 10:33:33">aaf81c936ce16650a3d1d5ce662a90c0</document_id>
+        <document_id display_value="Créé 21/05/2025 10:33:33">aaf81c936ce16650a3d1d5ce662a90c0</document_id>
         <field>instructions</field>
         <length>3224</length>
         <position>0</position>
@@ -4512,7 +4512,7 @@
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/6tWyswrLikqTS7JzM/zTAnJD0rNzS9L9U6tdEosSc5QsqqurQUAOtk80SQAAAA=</data>
-        <document_id display_value="Created 21/05/2025 10:33:33">aaf81c936ce16650a3d1d5ce662a90c0</document_id>
+        <document_id display_value="Créé 21/05/2025 10:33:33">aaf81c936ce16650a3d1d5ce662a90c0</document_id>
         <field>runtime_value_metadata</field>
         <length>76</length>
         <position>0</position>
@@ -4534,7 +4534,7 @@
         <sys_updated_on>2025-04-07 15:34:56</sys_updated_on>
         <trigger_definition/>
         <trigger_inputs/>
-        <trigger_type display_value="Record Create">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
+        <trigger_type display_value="Créer un enregistrement">ab6951170f1200108c87f4f0ff767e4f</trigger_type>
     </sys_pd_trigger_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2d1f02c02d1fbaf02d1f6f802d1fa270"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
