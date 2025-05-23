@@ -39,13 +39,11 @@
         <item_table/>
         <mandatory>false</mandatory>
         <message/>
-        <message_html><![CDATA[<p>&nbsp;</p>
-<p>Bonjour ${opened_by.first_name} ${opened_by.last_name}</p>
-<p>&nbsp;</p>
-<p>Nous vous confirmons que votre Demande AES li&eacute;e aux difficult&eacute;s lecture/&eacute;criture concernant l'&eacute;l&egrave;ve&nbsp; ${eleve.name} (${number}) a &eacute;t&eacute; approuv&eacute;e par la direction.</p>
+        <message_html><![CDATA[<p>Bonjour ${opened_by.first_name} ${opened_by.last_name},</p>
+<p>Nous vous confirmons que votre Demande AES li&eacute;e aux difficult&eacute;s lecture/&eacute;criture concernant l'&eacute;l&egrave;ve&nbsp; ${eleve.name} (N&deg; ${number}) a &eacute;t&eacute; approuv&eacute;e par la direction.</p>
 <p>Veuillez t&eacute;l&eacute;charger le formulaire de consentement au <a href="esc?id=ticket&amp;table=x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture&amp;sys_id=${sys_id}" target="_blank" rel="noopener">lien suivant</a>&nbsp;et le faire parvenir aux parents/tuteurs l&eacute;gaux par l'entremise de l'&eacute;l&egrave;ve ou par la poste.</p>
-<p>Le parent de l'&eacute;l&egrave;ve ${eleve.name}&nbsp; devra vous acheminer le formulaire d&ucirc;ment sign&eacute; dans un d&eacute;lai de 10 jours ouvrables.</p>
-<p>Lorsque vous recevrez le formulaire sign&eacute;, veuillez joindre le document en pi&egrave;ce jointe via le <a href="esc?id=ticket&amp;table=x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture&amp;sys_id=${sys_id}" target="_blank" rel="noopener">lien suivant</a> puis taper "Consentement parental obtenu" dans la case des commentaires dans l'application. La demande sera alors achemin&eacute;e &agrave; l'&eacute;quipe Triage Orthophonie.</p>
+<p>Le parent de l'&eacute;l&egrave;ve ${eleve.name} devra vous acheminer le formulaire d&ucirc;ment sign&eacute; dans un d&eacute;lai de 10 jours ouvrables.</p>
+<p>Lorsque vous recevrez le formulaire sign&eacute;, veuillez joindre le document &agrave; la demande de l&rsquo;&eacute;l&egrave;ve via le <a href="esc?id=ticket&amp;table=x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture&amp;sys_id=${sys_id}">lien suivant</a>, puis taper "Consentement parental obtenu" dans la case de commentaires disponible &agrave; cet effet. Puis, cliquez sur Publier afin de soumettre votre demande.</p>
 <p>Merci.&nbsp;<br>&nbsp;</p>
 <p>&nbsp;</p>
 <p><br>&nbsp;</p>]]></message_html>
@@ -70,7 +68,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c8fadd891bfc79108d594047bc4bcbac</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>Notif de dem de signee par post</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -78,7 +76,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_c8fadd891bfc79108d594047bc4bcbac</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 18:01:51</sys_updated_on>
+        <sys_updated_on>2025-05-23 15:58:33</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
