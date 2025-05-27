@@ -5,7 +5,7 @@
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
-        <category display_value="Non catégorisé" name="Non catégorisé">c97d83137f4432005f58108c3ffa917a</category>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
         <collection>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</collection>
         <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">soumis_par=eq-orth^demandesliroiLIKEf6b6f5191bbcc210d991c882604bcb8a^demandesliroiNOT LIKEfab6f5191bbcc210d991c882604bcb89^EQ<item display_value="équipe-ortophonistes" endquery="false" field="soumis_par" goto="false" newquery="false" operator="=" or="false" value="eq-orth"/>
             <item endquery="false" field="demandesliroi" goto="false" newquery="false" operator="LIKE" or="false" value="f6b6f5191bbcc210d991c882604bcb8a"/>
@@ -43,7 +43,7 @@
         <message_html><![CDATA[<p>Bonjour ${opened_by.first_name} ${opened_by.last_name},&nbsp;</p>
 <p>Nous vous informons que votre demande ROI concernant l'&eacute;l&egrave;ve ${eleve.name} (N&deg; ${number}) a &eacute;t&eacute; communiqu&eacute;e au comit&eacute; ROI pour traitement. &nbsp;La direction de l'&eacute;cole a &eacute;galement &eacute;t&eacute; inform&eacute;e de cette demande.</p>
 <p>Nous vous tiendrons inform&eacute; (e) de tout avancement concernant votre demande.</p>
-<p>Veuillez cliquer sur ce <a href="x/ndecd/triage-20-demande-de-partage/record/x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi/${sys_id}" target="_blank" rel="noopener">lien</a> pour consulter votre demande.</p>
+<p>Veuillez cliquer sur ce <a href="esc?id=ticket&amp;table=x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi&amp;sys_id=${sys_id}" target="_blank" rel="noopener">lien</a> pour consulter votre demande.</p>
 <p>Merci.</p>
 <p>&nbsp;</p>]]></message_html>
         <message_list/>
@@ -67,7 +67,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5762abb91bf886108d594047bc4bcbff</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Confirmation de la soumission du formulaire à l'utilisateur ROI</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -75,7 +75,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_5762abb91bf886108d594047bc4bcbff</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 21:22:58</sys_updated_on>
+        <sys_updated_on>2025-05-26 18:18:56</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>

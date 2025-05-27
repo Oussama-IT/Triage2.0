@@ -5,11 +5,11 @@
         <active>true</active>
         <advanced_condition/>
         <affected_field_on_event/>
-        <category display_value="Non catégorisé" name="Non catégorisé">c97d83137f4432005f58108c3ffa917a</category>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
         <collection>x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</collection>
         <condition table="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">evaluation_sommaire_requise=donnees-suffisantes^soumis_par=eq-orth^sendable_15_sep_1er_dec=yes^EQ<item display_value="Évaluation sommaire ROI requise (données insuffisantes)" endquery="false" field="evaluation_sommaire_requise" goto="false" newquery="false" operator="=" or="false" value="donnees-suffisantes"/>
             <item display_value="équipe-ortophonistes" endquery="false" field="soumis_par" goto="false" newquery="false" operator="=" or="false" value="eq-orth"/>
-            <item display_value="Oui" endquery="false" field="sendable_15_sep_1er_dec" goto="false" newquery="false" operator="=" or="false" value="yes"/>
+            <item display_value="Yes" endquery="false" field="sendable_15_sep_1er_dec" goto="false" newquery="false" operator="=" or="false" value="yes"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
         <content_type>text/html</content_type>
@@ -19,7 +19,7 @@
         <digest_html/>
         <digest_reply_to/>
         <digest_separator_html><![CDATA[<p>&nbsp;</p>
-<hr />
+<hr>
 <p>&nbsp;</p>]]></digest_separator_html>
         <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
         <digest_subject/>
@@ -42,7 +42,7 @@
         <message/>
         <message_html><![CDATA[<p>Bonjour,</p>
 <p>Nous vous informons qu'une &eacute;valuation sommaire en orthophonie est requise pour l'&eacute;l&egrave;ve ${eleve.name} (N&deg;: ${number}) afin de d&eacute;terminer son admissibilit&eacute; au programme de r&eacute;&eacute;ducation en orthophonie (ROI).</p>
-<p>&Agrave; cet effet, nous vous prions de compl&eacute;ter une demande "Consentement ROI" en cliquant sur le <a href="/x/ndecd/triage-20-demande-de-partage/record/x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi/${sys_id}/params/selected-tab-index/1">lien suivant</a> afin de soumettre votre demande.</p>
+<p>&Agrave; cet effet, nous vous prions de compl&eacute;ter une demande "Consentement ROI" en cliquant sur le <a href="esc?id=ticket&amp;table=x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi&amp;sys_id=${sys_id}">lien suivant</a> afin de soumettre votre demande.</p>
 <p>Merci.</p>]]></message_html>
         <message_list/>
         <message_text/>
@@ -65,15 +65,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3c561e911b0d06508d594047bc4bcb08</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>Obtention du consentement ROI 15bis</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_3c561e911b0d06508d594047bc4bcb08</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-05-05 17:09:15</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-26 18:15:44</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
