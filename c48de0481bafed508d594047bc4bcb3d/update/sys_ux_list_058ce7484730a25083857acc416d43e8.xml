@@ -4,7 +4,7 @@
         <category display_value="Demandes TSA/CS CAA">0f97fc2747a4ee1083857acc416d439f</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,state,nom_orthophoniste_tsa_cs,sys_created_on</columns>
         <condition table="x_ndecd_triage_2_0_demande_tsa_cs_caa">nom_orthophoniste_tsa_csISEMPTY^approval!=rejected^u_stateNOT IN3,4,7<item endquery="false" field="nom_orthophoniste_tsa_cs" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
-            <item display_value="Refusé" endquery="false" field="approval" goto="false" newquery="false" operator="!=" or="false" value="rejected"/>
+            <item display_value="Rejected" endquery="false" field="approval" goto="false" newquery="false" operator="!=" or="false" value="rejected"/>
             <item display_value="3,4,7" endquery="false" field="u_state" goto="false" newquery="false" operator="NOT IN" or="false" value="3,4,7"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
