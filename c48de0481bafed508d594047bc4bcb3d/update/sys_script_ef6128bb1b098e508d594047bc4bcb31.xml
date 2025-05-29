@@ -214,15 +214,22 @@
     newHtml = newHtml.replace("var62", current.getDisplayValue('opened_by'));
     newHtml = newHtml.replace("var63", current.getDisplayValue('sys_created_on'));
 
-
-	//information direction
-	var dir = current.number;
+    var dir = current.number;
     var gsdirect = new GlideRecord('sysapproval_approver');
-    gsdirect.addEncodedQuery('sysapproval.number=' + dir+'^state=approved');
+    gsdirect.addQuery('sysapproval.number', dir);
+    gsdirect.addQuery('state', 'approved');
     gsdirect.query();
     while (gsdirect.next()) {
         newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
         newHtml = newHtml.replace("var91", gsdirect.getDisplayValue('approver'));
+
+        var approverSysId = gsdirect.approver.sys_id.toString();
+        var grApprover = new GlideRecord('sys_user');
+        grApprover.addQuery('sys_id', approverSysId);
+		grApprover.query();
+        if (grApprover.next()) {
+            newHtml = newHtml.replace("var93", grApprover.title);
+        }
     }
     newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
 
@@ -246,7 +253,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ef6128bb1b098e508d594047bc4bcb31</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>TSA PDF</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -254,7 +261,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_ef6128bb1b098e508d594047bc4bcb31</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-03-20 19:12:14</sys_updated_on>
+        <sys_updated_on>2025-05-28 19:41:15</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

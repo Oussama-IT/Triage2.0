@@ -46,23 +46,23 @@
     html = html.replace('var4', eleve.getDisplayValue('u_nom_de_l_cole')); //School name
     html = html.replace('var5', eleve.getDisplayValue('u_classe')); //Class
 
-	if (current.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte == 'yes') {
-		html = html.replace('var6', 'Oui');
-	} else {
-		html = html.replace('var6', 'Non');
-	}
+    if (current.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte == 'yes') {
+        html = html.replace('var6', 'Oui');
+    } else {
+        html = html.replace('var6', 'Non');
+    }
 
     //html = html.replace('var7', current.classe_distinct);
     html = html.replace('var8', current.est_ce_que_l_l_ve_a_un_diagnostic_pos_par_un_professionnel_de_la_sant_autoris);
     html = html.replace('var9', current.situation_familiale_de_l_l_ve);
     //html = html.replace('var10');
 
-	if (current.est_ce_que_le_formulaire_d_aiguillage_services_orthophoniques_r_gulier_vs_volet == 'yes') {
-		html = html.replace('var11', 'Oui');
-	} else {
-		html = html.replace('var11', 'Non');
-	}
-    
+    if (current.est_ce_que_le_formulaire_d_aiguillage_services_orthophoniques_r_gulier_vs_volet == 'yes') {
+        html = html.replace('var11', 'Oui');
+    } else {
+        html = html.replace('var11', 'Non');
+    }
+
     html = html.replace('var12', current.getDisplayValue('quel_est_le_motif_de_la_demande_ortho'));
 
     var value = new GlideRecord('x_ndecd_cecce_base_motif_tsa_cs_caa');
@@ -100,6 +100,14 @@
     while (gsdirect.next()) {
         html = html.replace("var90", gsdirect.getDisplayValue('approver'));
         html = html.replace("var91", gsdirect.getDisplayValue('approver'));
+
+        var approverSysId = gsdirect.approver.sys_id.toString();
+        var grApprover = new GlideRecord('sys_user');
+        grApprover.addQuery('sys_id', approverSysId);
+		grApprover.query();
+        if (grApprover.next()) {
+            html = html.replace("var93", grApprover.title);
+        }
     }
     html = html.replace("var92", current.getDisplayValue('sys_updated_on'));
 
@@ -129,7 +137,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>700f253f476c26906274efbb616d43c6</sys_id>
-        <sys_mod_count>69</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>CECCE Generate PDF TSA/CS CAA</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -137,7 +145,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_700f253f476c26906274efbb616d43c6</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-04-08 15:22:35</sys_updated_on>
+        <sys_updated_on>2025-05-28 18:44:29</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
