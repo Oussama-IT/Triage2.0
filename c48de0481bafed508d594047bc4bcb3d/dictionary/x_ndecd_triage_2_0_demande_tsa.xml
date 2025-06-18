@@ -22,11 +22,13 @@
             </choice>
         </element>
         <element label="Formulaire d'aiguillage" max_length="40" name="formulaire_d_aiguillage" type="file_attachment"/>
-        <element choice="1" choice_field="oui_non_possible" choice_table="x_ndecd_cecce_base_options" label="Est-ce qu’un placement est envisagé pour l’élève?" max_length="40" name="est_ce_qu_un_placement_est_envisag_pour_l_l_ve" type="choice">
+        <element choice="1" label="Est-ce qu’un placement est envisagé pour l’élève?" max_length="40" name="est_ce_qu_un_placement_est_envisag_pour_l_l_ve" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Possible" sequence="2" value="possible"/>
                 <element inactive_on_update="false" label="Non" sequence="0" value="no"/>
+                <element inactive_on_update="false" label="Non, l’élève est déjà inscrit en classe à effectif réduit" value="non_2"/>
                 <element inactive_on_update="false" label="Oui" sequence="1" value="yes"/>
+                <element inactive_on_update="false" label="Non, l’élève est déjà inscrit en classe à effectif réduit" language="fq" value="non_2"/>
             </choice>
         </element>
         <element label="L’élève a-t-il reçu des services professionnels dans les domaines suivants" max_length="4000" name="l_l_ve_a_t_il_re_u_des_services_professionnels_dans_les_domaines_suivants" reference="x_ndecd_cecce_base_tsa_qa" reference_qual="questionSTARTSWITHServices professionels" reference_qual_condition="questionSTARTSWITHServices professionels" type="glide_list"/>
@@ -104,6 +106,7 @@
             <choice/>
         </element>
         <element label="Par la présente demande, nous souhaitons autre" max_length="200" name="par_la_pr_sente_demande_nous_souhaitons_autre" type="string"/>
+        <element label="Veuillez préciser (Syndrome génétique)" max_length="400" name="veuillez_pr_ciser_syndrome_g_n_tique" type="string"/>
         <element label="Audiologie date" max_length="40" name="audiologie_date" type="glide_date"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="Est ce que “Le formulaire d’aiguillage Services orthophoniques régulier vs volet" max_length="40" name="est_ce_que_le_formulaire_d_aiguillage_services_orthophoniques_r_gulier_vs_volet" type="choice">
             <choice>

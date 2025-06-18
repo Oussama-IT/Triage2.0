@@ -31,188 +31,234 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
     var html;
-    var newHtml;
     var gr = new GlideRecord('x_ndecd_triage_2_0_pdftemplate');
     gr.addQuery('template_name', 'PDFTSA');
     gr.query();
     while (gr.next()) {
         html = gr.html_template;
     }
-	gs.info("cccccccccccc"+html);
-    var hfInfo = new Object();
-    hfInfo["HeaderImageAttachmentId"] = "fe71ca801b04b910d991c882604bcb30";
-    hfInfo["HeaderImageAlignment"] = "left";
-    hfInfo["FooterImageAttachmentId"] = "f69aa9661bf7a5108d594047bc4bcb1c";
-    hfInfo["FooterImageAlignment"] = "TOP_CENTER";
-    hfInfo["PageSize"] = "A4";
-    hfInfo["GeneratePageNumber"] = "false";
-    hfInfo["TopOrBottomMargin"] = "50";
-    hfInfo["LeftOrRightMargin"] = "24";
-    // Add your code here
-    var targetTableSysId = current.sys_id;
-    var tableName = 'x_ndecd_triage_2_0_demande_tsa';
-    var pdfName = "TSA " + current.getDisplayValue('eleve');
 
-    //information eleve
-	newHtml = html.replace("var10", current.getDisplayValue('eleve'));
-	var gselve = new GlideRecord('x_ndecd_triage_2_0_eleve');
-    gselve.get(current.getValue("eleve"));
-    newHtml = newHtml.replace("var14", gselve.getDisplayValue('u_classe'));
-    newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_cole'));
-    newHtml = newHtml.replace("var12", gselve.u_niso);
-    newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
+    //Données démographiques de l'élève
+    var eleve = new GlideRecord('x_ndecd_triage_2_0_eleve');
+    eleve.get(current.getValue('eleve'));
+    html = html.replace('var1', eleve.name); //Name
+    html = html.replace('var2', eleve.u_date_de_naissance); //Birthdate
+    html = html.replace('var3', eleve.u_niso); //NISO
+    html = html.replace('var4', eleve.getDisplayValue('u_nom_de_l_cole')); //School name
+    html = html.replace('var5', eleve.getDisplayValue('u_classe')); //Class
 
+    //Informations concernant l'élève
+    html = html.replace('var6', getBoolean(current.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte));
+    html = html.replace('var7', current.est_ce_que_l_l_ve_a_un_diagnostic_pos_par_un_professionnel_de_la_sant_autoris);
+    html = html.replace('var8', current.situation_familiale_de_l_l_ve);
 
-
-	//record producer details
-	record_fields={
-		"var17":"est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte",
-		"var18":"est_ce_que_l_l_ve_a_un_diagnostic_pos_par_un_professionnel_de_la_sant_autoris",
-		"var19":"situation_familiale_de_l_l_ve",
-		"var20":"autre_situation_explication",
-		"var21":"par_la_pr_sente_demande_nous_souhaitons",
-		"var22":"par_la_pr_sente_demande_nous_souhaitons_autre",
-		"var23":"recommendation_et_strategies",
-		"var24":"attentes_du_pei_en_lien_avec",
-		"var25":"langue_s_parl_e_s_la_maison",
-		"var26":"langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais",
-		"var27":"est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante",
-		"var28":"diagnostic_m_dical_officiel_d_un_tsa_explication_autre",////
-		"var29":"l_enfant_utilise_t_il_la_parole_comme_moyen_principal_pour_communiquer_ses_beso",
-		"var30":"l_l_ve_prouve_t_il_des_difficult_s_li_es_explication",
-		"var31":"l_l_ve_prouve_t_il_des_difficult_s_r_guler_les_interactions_sociales_en_util",
-		"var32":"l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses",
-		"var33":"l_l_ve_prouve_t_il_des_difficult_s_former_des_relations_avec_ses_pairs_du_m",
-		"var34":"l_enfant_communique_verbalement_ou_non_verbalement_pour",
-		"var35":"l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication",
-		"vara35":"l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_autre",
-		"var36":"les_enfants_utilisent_souvent_plus_d_un_moyen_pour_exprimer_leurs_besoins",
-		"var37":"difficult_s_au_niveau_de_la_routine_et_des_transitions",
-		"var38":"l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex",
-		"var39":"l_l_ve_prouve_t_il_des_difficult_s_imiter",
-		"var40":"l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler",
-		"var41":"l_l_ve_pr_sente_un_retard_en_lecture",
-		"var42":"l_l_ve_prouve_un_retard_en_criture",
-		"var43":"est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture",
-		"var44":"l_l_ve_a_t_il_re_u_des_services_professionnels_dans_les_domaines_suivants",
-		"var45":"audiologie_date",
-		"var46":"optom_trie_date",
-		"var47":"ergoth_rapie_date",
-		"var48":"psychologie_date",
-		"var49":"travail_social_date",
-		"var50":"premiers_mots_date",
-		"var51":"srms_date",
-		"var52":"pratique_priv_e_date",
-		"var53":"orthophonie_explication",
-		"var54":"orthophonie_explication_autre",
-		"var55":"l_l_ve_a_t_il_re_u_des_services_professionnels_autre",
-		"var56":"est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel_d_un_tsa_explication",
-		"var57":"est_ce_que_l_l_ve_est_en_attente_d_une_valuation_pouvant_mener_un_diagnostic",
-		"var58":"est_ce_qu_un_placement_est_envisag_pour_l_l_ve",
-		"var59":"est_ce_que_les_parents_sont_en_accord_avec_cette_demande_de_placement",
-	}
-	non_record_fields={
-		"varno30":"l_l_ve_prouve_t_il_des_difficult_s_li_es_explication",
-		"varno31":"l_l_ve_prouve_t_il_des_difficult_s_r_guler_les_interactions_sociales_en_util",
-		"varno32":"l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses",
-		"varno33":"l_l_ve_prouve_t_il_des_difficult_s_former_des_relations_avec_ses_pairs_du_m",
-		"varno35":"l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication",
-		"varno37":"difficult_s_au_niveau_de_la_routine_et_des_transitions",
-		"varno38":"l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex",
-		"varno39":"l_l_ve_prouve_t_il_des_difficult_s_imiter",
-		"varno40":"l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler",
-		"varno56":"est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel_d_un_tsa_explication",
-		"varno57":"est_ce_que_l_l_ve_est_en_attente_d_une_valuation_pouvant_mener_un_diagnostic"
-
-	}
-	fields_html={
-		"autre_situation_explication":'<div><span style="font-size: 10pt;">Autre situation familiale :<strong>var20</strong></span></div>',
-		"par_la_pr_sente_demande_nous_souhaitons_autre":'<div><span style="font-size: 10pt;">Autre (demande) :<strong>var22</strong></span></div>',//var22
-		"recommendation_et_strategies":`<div><span style="font-size: 10pt;">Veuillez sélectionner les habiletés pour lesquelles vous souhaitez obtenir des stratégies et recommandations afin d'appuyer l'élève en salle de classe: <strong>var23</strong></span></div>`,
-		"attentes_du_pei_en_lien_avec":`<div><span style="font-size: 10pt;">Veuillez sélectionner les habiletés pour lesquelles vous souhaitez un appui pour l'élaboration du PEI de l'élève: <strong>var24</strong></span></div>`,
-		"l_l_ve_prouve_t_il_des_difficult_s_li_es_explication":'<div><span style="font-size: 10pt;">Veuillez préciser :<strong>var30</strong></span></div>',//var30
-		"l_l_ve_prouve_t_il_des_difficult_s_r_guler_les_interactions_sociales_en_util":'<p style="line-height: 1;"><span style="font-size: 10pt;">Veuillez préciser :<strong>var31</strong></span></p>',//var31
-		"l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses":'<div><span style="font-size: 10pt;">Veuillez préciser :<strong>var32</strong></span></div>',//var32
-		"l_l_ve_prouve_t_il_des_difficult_s_former_des_relations_avec_ses_pairs_du_m":'<div><span style="font-size: 10pt;">Veuillez préciser :<strong>var33</strong></span></div>',//var33
-		"l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication":'<div><span style="font-size: 10pt;">Difficultés à comprendre le langage oral :<strong>var35</strong></span></div>',//var35
-		"l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_autre":'<div><span style="font-size: 10pt;">Autre :<strong>vara35</strong></span></div>',//vara35
-		"difficult_s_au_niveau_de_la_routine_et_des_transitions":'<div><span style="font-size: 10pt;">Veuillez préciser :<strong>var37</strong></span></div>',//var37
-		"l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex":'<div><span style="font-size: 10pt;">Veuillez préciser :<strong>var38</strong></span></div>',//var38
-		"l_l_ve_prouve_t_il_des_difficult_s_imiter":'<div><span style="font-size: 10pt;">Veuillez préciser :<strong>var39</strong></span></div>',//var39
-		"l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler":'<div><span style="font-size: 10pt;">L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler les sons des mots à l’oral) :<strong>var40</strong></span></div>',
-		"l_l_ve_pr_sente_un_retard_en_lecture":'<div><span style="font-size: 10pt;">L’élève présente un retard en lecture :<strong>var41</strong></span></div>',
-		"l_l_ve_prouve_un_retard_en_criture":'<div><span style="font-size: 10pt;">L’élève éprouve un retard en écriture :<strong>var42</strong></span></div>',
-		"est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture":'<div><span style="font-size: 10pt;">Est-ce que l’élève a un PEI en lecture et/ou écriture? :<strong>var43</strong></span></div>',
-		"audiologie_date":'<div><span style="font-size: 10pt;">Audiologie date :<strong>var45</strong></span></div>',//var45
-		"optom_trie_date":'<div><span style="font-size: 10pt;">Optométrie date :<strong>var46</strong></span></div>',//var46
-		"ergoth_rapie_date":'<div><span style="font-size: 10pt;">Ergothérapie date :<strong>var47</strong></span></div>',//var47
-		"psychologie_date":'<div><span style="font-size: 10pt;">Psychologie date :<strong>var48</strong></span></div>',//var48
-		"travail_social_date":'<div><span style="font-size: 10pt;">Travail social date :<strong>var49</strong></span></div>',//var49
-		"premiers_mots_date":'<div><span style="font-size: 10pt;">Premiers Mots date :<strong>var50</strong></span></div>',//var50
-		"srms_date":'<div><span style="font-size: 10pt;">SRMS date :<strong>var51</strong></span></div>',//var51
-		"pratique_priv_e_date":'<div><span style="font-size: 10pt;">Pratique privée date :<strong>var52</strong></span></div>',//var52
-		"orthophonie_explication":'<div><span style="font-size: 10pt;">Services professionnels orthophonie :<strong>var53</strong></span></div>',//var53
-		"orthophonie_explication_autre":'<div><span style="font-size: 10pt;">Autres services professionnels orthophonie :<strong>var54</strong></span></div>',//var54
-		"l_l_ve_a_t_il_re_u_des_services_professionnels_autre":'<div><span style="font-size: 10pt;">Autres services professionnels :<strong>var55</strong></span></div>',//var55
-		"est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel_d_un_tsa_explication":'<div><span style="font-size: 10pt;">Veuillez préciser :<strong>var56</strong></span></div>',
-		"est_ce_que_l_l_ve_est_en_attente_d_une_valuation_pouvant_mener_un_diagnostic":`<div><span style="font-size: 10pt;">Veuillez préciser :<strong>var57</strong></span></div>`,
-		"est_ce_que_les_parents_sont_en_accord_avec_cette_demande_de_placement":'<div><span style="font-size: 10pt;">Est-ce que les parents sont en accord avec cette demande de placement? :<strong>var59</strong></span></div>',//var59
-	}
-	// if (current.getDisplayValue('quelles_langues_sont_parl_es_la_maison').indexOf("Autre") == -1) {
-    //         newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Autres langues:<strong>var23</strong></span></div>', "");
-    //     }
-	// if (current.getValue("l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs")!="yes")
-	// {
-	// 	newHtml = newHtml.replace('<div><span style="font-size: 10pt;">lequel(s)?:<strong>var32</strong></span></div>',"");
-	// }
-	// if (current.getValue("est_ce_que_l_l_ve_est_identifi_comme_tant_un_l_ve_pana")!="yes")
-	// {
-	// 	newHtml = newHtml.replace(`<div><span style="font-size: 10pt;">Précisez le nombre d'années depuis son arrivée au Canada:<strong>var29</strong></span></div>`,"");
-	// }
-	// if (current.getValue("quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri")!="other")
-	// {
-	// 	newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Autre langues:<strong>var25</strong></span></div>',"");
-	// }
-	// if (current.getValue("l_l_ve_pr_sente_t_il_un_diagnostic_m_dical_officiel")!="yes")
-	// {
-	// 	newHtml = newHtml.replace('<div><span style="font-size: 10pt;">precisez:<strong>var46</strong></span></div>',"");
-	// }
-	// if (current.getDisplayValue('pr_cise_dignostic').indexOf("Autre") == -1) {
-    //         newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Autre (veuillez préciser):<strong>var47</strong></span></div>', "");
-    // }
-	// if (current.getValue("cet_l_ve_pourrait_il_tre_jumel_avec_un_autre_l_ve_dans_le_cadre_des_sessions")!="Il serait preferable de le voir individu")
-	// {
-	// 	newHtml = newHtml.replace('<div><span style="font-size: 10pt;">Veuillez préciser pourquoi:<strong>var50</strong></span></div>',"");
-	// }
-    for (const property in non_record_fields) {
-		newHtml = newHtml.replace(property, current.getDisplayValue(non_record_fields[property])?"Oui":"Non");
-    }
-	// for (const property in non_record_fields) {
-	// 	gs.info("prprt"+" "+property)
-	// 	newHtml = newHtml.replace(property,"Oui");
-	// 	// if (current.getDisplayValue(non_record_fields[property])){
-    //     //  newHtml = newHtml.replace(property,"Oui");
-	// 	// }else{
-	// 	// 	newHtml = newHtml.replace(property,"Non");
-	// 	// }
-		
-    // }
-
-	for (const property in fields_html) {
-		newHtml = newHtml.replace(fields_html[property], current.getDisplayValue(property)?fields_html[property]:"");
-    }
-	
-	for (const property in record_fields) {
-
-		newHtml = newHtml.replace(property, current.getDisplayValue(record_fields[property])?current.getDisplayValue(record_fields[property]):"Sans objet");
+    if (current.situation_familiale_de_l_l_ve == 'Autre situation') {
+        html = html.replace('var9', current.autre_situation_explication);
+    } else {
+        html = html.replace('<div><span style="font-size: 10pt;">Autre situation familiale: <strong>var9</strong></span></div>', '');
     }
 
+    //DESCRIPTION DES BESOINS DE L’ÉLÈVE
+
+    //Langues parlées
+    html = html.replace('var20', current.getDisplayValue('langue_s_parl_e_s_la_maison'));
+    html = html.replace('var21', current.getDisplayValue('langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais'));
+    html = html.replace('var22', getBoolean(current.est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante));
+
+    //Communication sociale
+    html = html.replace('var30', current.getDisplayValue('l_l_ve_prouve_t_il_des_difficult_s_li_es_explication'));
+    html = html.replace('var31', current.getDisplayValue('l_l_ve_prouve_t_il_des_difficult_s_r_guler_les_interactions_sociales_en_util'));
+
+    if (current.l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses) {
+        html = html.replace('var32', 'Non');
+        html = html.replace('var33', current.getDisplayValue('l_l_ve_d_montre_t_il_de_l_int_r_t_partager_son_plaisir_ses_r_ussites_et_ses'));
+    } else {
+        html = html.replace('var32', 'Oui');
+        html = html.replace('<div><span style="font-size: 10pt;">L’élève (cochez toutes les options qui s’appliquent):<strong> var33</strong></span></div>', '');
+    }
+
+    if (current.l_l_ve_prouve_t_il_des_difficult_s_former_des_relations_avec_ses_pairs_du_m) {
+        html = html.replace('var34', 'Oui');
+        html = html.replace('var35', current.getDisplayValue('l_l_ve_prouve_t_il_des_difficult_s_former_des_relations_avec_ses_pairs_du_m'));
+    } else {
+        html = html.replace('var34', 'Non');
+        html = html.replace('<div><span style="font-size: 10pt;"><span title="">L’élève (cochez toutes les options qui s’appliquent): </span><strong>var35</strong></span></div>', '');
+    }
+
+    //Compréhension langagière
+    if (current.l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication) {
+        html = html.replace('var40', 'Oui');
+        html = html.replace('var41', current.getDisplayValue('l_l_ve_d_montre_t_il_des_difficult_s_comprendre_le_langage_oral_explication'));
+    } else {
+        html = html.replace('var40', 'Non');
+        html = html.replace('<div><span style="font-size: 10pt;"><span title="">L’élève démontre de la difficulté à comprendre (cochez toutes les options qui s’appliquent): </span><strong>var41</strong></span></div>', '');
+    }
+
+    //Habiletés expressives
+    html = html.replace('var50', current.getDisplayValue('les_enfants_utilisent_souvent_plus_d_un_moyen_pour_exprimer_leurs_besoins'));
+
+    //Routines/flexibilité
+    if (current.difficult_s_au_niveau_de_la_routine_et_des_transitions) {
+        html = html.replace('var60', 'Oui');
+        html = html.replace('var61', current.getDisplayValue('difficult_s_au_niveau_de_la_routine_et_des_transitions'));
+    } else {
+        html = html.replace('var60', 'Non');
+        html = html.replace('<div><span style="font-size: 10pt;">L’élève (cochez toutes les options qui s’appliquent): <strong>var61</strong></span></div>', '');
+    }
+
+    //Jeu
+    if (current.l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex) {
+        html = html.replace('var70', 'Oui');
+        html = html.replace('var71', current.getDisplayValue('l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex'));
+    } else {
+        html = html.replace('var70', 'Non');
+        html = html.replace('<div><span style="font-size: 10pt;">Veuillez cocher l’option qui s’applique le mieux à l’élève parmi les choix suivants: <strong>var71</strong></span></div>', '');
+    }
+
+    //Imitation
+    if (current.l_l_ve_prouve_t_il_des_difficult_s_imiter) {
+        html = html.replace('var80', 'Oui');
+        html = html.replace('var81', current.getDisplayValue('l_l_ve_prouve_t_il_des_difficult_s_imiter'));
+    } else {
+        html = html.replace('var80', 'Non');
+        html = html.replace('<div><span style="font-size: 10pt;"><span title="">Choisissez l’énoncé qui décrit le mieux l’élève:</span><strong> var81</strong></span></div>', '');
+    }
+
+    //INFORMATIONS ADDITIONNELLES
+    var services = current.getDisplayValue('l_l_ve_a_t_il_re_u_des_services_professionnels_dans_les_domaines_suivants');
+    html = html.replace('var90', services);
+
+    if (services.indexOf('Audiologie') > -1) {
+        html = html.replace('var91', current.audiologie_date);
+    } else {
+        html = html.replace('<div><span style="font-size: 10pt;">Audiologie date: <strong>var91</strong></span></div>', '');
+    }
+
+    if (services.indexOf('Optométrie') > -1) {
+        html = html.replace('var92', current.optom_trie_date);
+    } else {
+        html = html.replace('<div><span style="font-size: 10pt;">Optométrie date: <strong>var92</strong></span></div>', '');
+    }
+
+    if (services.indexOf('Ergothérapie') > -1) {
+        html = html.replace('var93', current.ergoth_rapie_date);
+    } else {
+        html = html.replace('<div><span style="font-size: 10pt;">Ergothérapie date: <strong>var93</strong></span></div>', '');
+    }
+
+    if (services.indexOf('Psychologie') > -1) {
+        html = html.replace('var94', current.psychologie_date);
+    } else {
+        html = html.replace('<div><span style="font-size: 10pt;">Psychologie date: <strong>var94</strong></span></div>', '');
+    }
+
+    if (services.indexOf('Travail social') > -1) {
+        html = html.replace('var95', current.travail_social_date);
+    } else {
+        html = html.replace('<div><span style="font-size: 10pt;">Travail social date: <strong>var95</strong></span></div>', '');
+    }
+
+    if (services.indexOf('Orthophonie') > -1) {
+        var services_ortho = current.getDisplayValue('orthophonie_explication');
+        html = html.replace('var96', services_ortho);
+
+        if (services_ortho.indexOf('Premiers Mots') > -1) {
+            html = html.replace('var97', current.getDisplayValue('premiers_mots_date'));
+        } else {
+            html = html.replace('<div><span style="font-size: 10pt;">Premiers Mots date: <strong>var97</strong></span></div>', '');
+        }
+
+        if (services_ortho.indexOf('SRMS') > -1) {
+            html = html.replace('var98', current.getDisplayValue('srms_date'));
+        } else {
+            html = html.replace('<div><span style="font-size: 10pt;">SRMS date: <strong>var98</strong></span></div>', '');
+        }
+
+        if (services_ortho.indexOf('Pratique privée') > -1) {
+            html = html.replace('var99', current.getDisplayValue('pratique_priv_e_date'));
+        } else {
+            html = html.replace('<div><span style="font-size: 10pt;">Pratique privée date: <strong>var99</strong></span></div>', '');
+        }
+
+        if (services_ortho.indexOf('Autre') > -1) {
+            html = html.replace('var100', current.getDisplayValue('orthophonie_explication_autre'));
+        } else {
+            html = html.replace('<div><span style="font-size: 10pt;">Autres services professionnels orthophonie: <strong>var100</strong></span></div>', '');
+        }
+
+    } else {
+        html = html.replace('<div><span style="font-size: 10pt;">Services professionnels orthophonie:<strong> var96</strong></span></div>', '');
+
+        html = html.replace('<div><span style="font-size: 10pt;">Premiers Mots date: <strong>var97</strong></span></div>', '');
+
+        html = html.replace('<div><span style="font-size: 10pt;">SRMS date: <strong>var98</strong></span></div>', '');
+
+        html = html.replace('<div><span style="font-size: 10pt;">Pratique privée date: <strong>var99</strong></span></div>', '');
+
+        html = html.replace('<div><span style="font-size: 10pt;">Autres services professionnels orthophonie: <strong>var100</strong></span></div>', '');
+    }
+
+    if (services.indexOf('Autre') > -1) {
+        html = html.replace('var101', current.getDisplayValue('l_l_ve_a_t_il_re_u_des_services_professionnels_autre'));
+    } else {
+        html = html.replace('<div><span style="font-size: 10pt;">Autres services professionnels: <strong>var101</strong></span></div>', '');
+    }
+
+    if (current.est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel_d_un_tsa_explication) {
+        html = html.replace('var102', 'Oui');
+        var diagnostics = current.getDisplayValue('est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel_d_un_tsa_explication');
+        html = html.replace('var103', diagnostics);
+
+        if (diagnostics.indexOf('Syndrome génétique') > -1) {
+            html = html.replace('var104', current.getDisplayValue('veuillez_pr_ciser_syndrome_g_n_tique'));
+        } else {
+            html = html.replace('<div><span style="font-size: 10pt;">Veuillez préciser (Syndrome génétique):<strong> var104</strong></span></div>', '');
+        }
+
+        if (diagnostics.indexOf('Autres') > -1) {
+            html = html.replace('var105', current.getDisplayValue('diagnostic_m_dical_officiel_d_un_tsa_explication_autre'));
+        } else {
+            html = html.replace('<div><span style="font-size: 10pt;">Veuillez préciser (Autres):<strong> var105</strong></span></div>', '');
+        }
 
 
-	//information opened by
-	newHtml = newHtml.replace("var60", current.getDisplayValue('opened_by'));
-    newHtml = newHtml.replace("var62", current.getDisplayValue('opened_by'));
-    newHtml = newHtml.replace("var63", current.getDisplayValue('sys_created_on'));
+    } else {
+        html = html.replace('var102', 'Non');
+        html = html.replace('<div><span style="font-size: 10pt;">Veuillez préciser: <strong>var103</strong></span></div>', '');
+
+        html = html.replace('<div><span style="font-size: 10pt;">Veuillez préciser (Syndrome génétique):<strong> var104</strong></span></div>', '');
+
+        html = html.replace('<div><span style="font-size: 10pt;">Veuillez préciser (Autres):<strong> var105</strong></span></div>', '');
+    }
+
+    if (current.est_ce_que_l_l_ve_est_en_attente_d_une_valuation_pouvant_mener_un_diagnostic) {
+        html = html.replace('var106', 'Oui');
+        html = html.replace('var107', current.getDisplayValue('est_ce_que_l_l_ve_est_en_attente_d_une_valuation_pouvant_mener_un_diagnostic'));
+    } else {
+        html = html.replace('var106', 'Non');
+        html = html.replace('<div><span style="font-size: 10pt;">Veuillez préciser: <strong>var107</strong></span></div>', '');
+    }
+
+    html = html.replace('var108', current.getDisplayValue('est_ce_qu_un_placement_est_envisag_pour_l_l_ve'));
+
+    if (current.est_ce_qu_un_placement_est_envisag_pour_l_l_ve == 'yes') {
+        html = html.replace('var109', current.getDisplayValue('est_ce_que_les_parents_sont_en_accord_avec_cette_demande_de_placement'));
+    } else {
+        html = html.replace('<div><span style="font-size: 10pt;">Est-ce que les parents sont en accord avec cette demande de placement? <strong>var109</strong></span></div>', '');
+    }
+
+    //Attestation de l'équipe école
+    html = html.replace("var110", current.getDisplayValue('opened_by'));
+    html = html.replace("var111", current.getDisplayValue('opened_by'));
+
+    var approver = new GlideRecord('sys_user');
+    approver.addQuery('sys_id', current.opened_by.sys_id);
+    approver.query();
+    if (approver.next()) {
+        html = html.replace("var112", approver.getDisplayValue('title'));
+    }
+
+    html = html.replace("var113", current.getDisplayValue('sys_created_on'));
 
     var dir = current.number;
     var gsdirect = new GlideRecord('sysapproval_approver');
@@ -220,40 +266,53 @@
     gsdirect.addQuery('state', 'approved');
     gsdirect.query();
     while (gsdirect.next()) {
-        newHtml = newHtml.replace("var90", gsdirect.getDisplayValue('approver'));
-        newHtml = newHtml.replace("var91", gsdirect.getDisplayValue('approver'));
+        html = html.replace("var114", gsdirect.getDisplayValue('approver'));
+        html = html.replace("var115", gsdirect.getDisplayValue('approver'));
 
         var approverSysId = gsdirect.approver.sys_id.toString();
         var grApprover = new GlideRecord('sys_user');
         grApprover.addQuery('sys_id', approverSysId);
-		grApprover.query();
+        grApprover.query();
         if (grApprover.next()) {
-            newHtml = newHtml.replace("var93", grApprover.title);
+            html = html.replace("var116", grApprover.title);
         }
     }
-    newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
+    html = html.replace("var117", current.getDisplayValue('sys_updated_on'));
 
+    //Construire PDF
+    var pdf_name = 'TSA ' + eleve.name;
+    var table_name = 'x_ndecd_triage_2_0_demande_tsa';
+    var table_sys_id = current.sys_id;
 
-	var approver =  new GlideRecord('sys_user');
-	approver.addQuery('sys_id', current.opened_by.sys_id);
-	approver.query();
-	if(approver.next()){
-	newHtml = newHtml.replace("var61", approver.getDisplayValue('title'));
-	}
-	
+    var hfInfo = {
+        HeaderImageAttachmentId: "fe71ca801b04b910d991c882604bcb30",
+        HeaderImageAlignment: "left",
+        FooterImageAttachmentId: "f69aa9661bf7a5108d594047bc4bcb1c",
+        FooterImageAlignment: "TOP_CENTER",
+        PageSize: "A4",
+        GeneratePageNumber: "false",
+        TopOrBottomMargin: "50",
+        LeftOrRightMargin: "24"
+    };
+
     var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
-    var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
-    gs.info("cvcvcv"+newHtml);
-    current.linkattachment = result.attachment_id;
+    var result = v.convertToPDFWithHeaderFooter(html, table_name, table_sys_id, pdf_name, hfInfo);
     current.update();
-})(current, previous);]]></script>
+
+})(current, previous);
+
+function getBoolean(value) {
+    if (value == 'yes') return 'Oui';
+    else if (value == 'no') return 'Non';
+    return value;
+}]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-26 15:33:45</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ef6128bb1b098e508d594047bc4bcb31</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>106</sys_mod_count>
         <sys_name>TSA PDF</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -261,7 +320,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_ef6128bb1b098e508d594047bc4bcb31</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-28 19:41:15</sys_updated_on>
+        <sys_updated_on>2025-06-18 14:31:56</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

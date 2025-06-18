@@ -19,12 +19,12 @@
         <order/>
         <published_ref/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
-   if (isLoading || newValue == '') {
-      return;
-   }
-	if (newValue=="no"){
-		g_form.showFieldMsg('est_ce_que_le_formulaire_d_aiguillage_services_orthophoniques',"Vous devez compléter le formulaire d’aiguillage avant de soumettre la demande afin de vous assurer que l'élève répond aux critères d'admissibilité.",'error');
-	}
+    if (isLoading || newValue == '') {
+        return;
+    }
+    if (newValue == 'no') {
+        g_form.showFieldMsg('est_ce_que_le_formulaire_d_aiguillage_services_orthophoniques_r_gulier_vs_volet', "Vous devez compléter le formulaire d’aiguillage avant de soumettre la demande afin de vous assurer que l'élève répond aux critères d'admissibilité.", 'info');
+    }
 }]]></script>
         <sys_class_name>catalog_script_client</sys_class_name>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
@@ -32,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8dd56f194702a21083857acc416d43fc</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>onChange attachment form question</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -40,7 +40,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_8dd56f194702a21083857acc416d43fc</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-06-09 20:53:19</sys_updated_on>
+        <sys_updated_on>2025-06-16 20:06:12</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

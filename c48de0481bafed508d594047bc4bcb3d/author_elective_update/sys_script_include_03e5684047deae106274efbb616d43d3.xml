@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_ndecd_triage_2_0.CheckIfStudentHasOpenTSARequests</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>CheckIfStudentHasOpenTSARequests</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var CheckIfStudentHasOpenTSARequests = Class.create();
+CheckIfStudentHasOpenTSARequests.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    checkStudent: function() {
+        var sysId = this.getParameter('sysparm_sysId');
+
+        var gr = new GlideRecord('x_ndecd_triage_2_0_demande_tsa');
+        gr.addQuery('eleve', sysId);
+        gr.addQuery('state', 1);
+        gr.query();
+
+        if (gr.next()) {
+            return 'true';
+        }
+
+        return 'false';
+    },
+
+    type: 'CheckIfStudentHasOpenTSARequests'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-06-17 19:58:43</sys_created_on>
+        <sys_id>03e5684047deae106274efbb616d43d3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>CheckIfStudentHasOpenTSARequests</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_script_include_03e5684047deae106274efbb616d43d3</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-06-17 20:10:07</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="DELETE">
+        <id>03e5684047deae106274efbb616d43d3</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-06-17 19:58:43</sys_created_on>
+        <sys_id>f856a44047deae106274efbb616d43da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-06-17 19:58:43</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</application>
+        <file_path/>
+        <instance_id>65b29b3adb7ea19492f5684e13961931</instance_id>
+        <instance_name>ceccedev</instance_name>
+        <name>sys_script_include_03e5684047deae106274efbb616d43d3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_ndecd_triage_2_0.CheckIfStudentHasOpenTSARequests&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;mobile_callable&gt;false&lt;/mobile_callable&gt;&lt;name&gt;CheckIfStudentHasOpenTSARequests&lt;/name&gt;&lt;sandbox_callable&gt;false&lt;/sandbox_callable&gt;&lt;script&gt;&lt;![CDATA[var CheckIfStudentHasOpenTSARequests = Class.create();
+CheckIfStudentHasOpenTSARequests.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    checkStudent: function() {
+        var sysId = this.getParameter('sysparm_sysId');
+
+        var gr = new GlideRecord('x_ndecd_triage_2_0_demande_tsa');
+        gr.addQuery('eleve', sysId);
+        gr.addQuery('state', 1);
+        gr.query();
+
+        if (gr.next()) {
+            return 'true';
+        }
+
+        return 'false';
+    },
+
+    type: 'CheckIfStudentHasOpenTSARequests'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;KHARRF@ecolecatholique.ca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-17 19:58:43&lt;/sys_created_on&gt;&lt;sys_id&gt;03e5684047deae106274efbb616d43d3&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;CheckIfStudentHasOpenTSARequests&lt;/sys_name&gt;&lt;sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="Triage 2.0"&gt;c48de0481bafed508d594047bc4bcb3d&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_03e5684047deae106274efbb616d43d3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;KHARRF@ecolecatholique.ca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-17 20:10:07&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;sys_es_latest_script action="INSERT_OR_UPDATE"&gt;&lt;id&gt;03e5684047deae106274efbb616d43d3&lt;/id&gt;&lt;sys_created_by&gt;KHARRF@ecolecatholique.ca&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-17 19:58:43&lt;/sys_created_on&gt;&lt;sys_id&gt;f856a44047deae106274efbb616d43da&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;KHARRF@ecolecatholique.ca&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-17 19:58:43&lt;/sys_updated_on&gt;&lt;table&gt;sys_script_include&lt;/table&gt;&lt;use_es_latest&gt;true&lt;/use_es_latest&gt;&lt;/sys_es_latest_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1623405687</payload_hash>
+        <record_name>CheckIfStudentHasOpenTSARequests</record_name>
+        <reverted_from/>
+        <source>d5801a38476392106274efbb616d43e2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-06-17 20:10:07</sys_created_on>
+        <sys_id>33e8a48447deae106274efbb616d43c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1977f8365cc0000001</sys_recorded_at>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-06-17 20:10:07</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>73e8a484e0deae1001beb0ff970c6bc4</update_guid>
+        <update_guid_history>73e8a484e0deae1001beb0ff970c6bc4:-1623405687,43566880aadeae100e4b954af38b61cd:-1328093120,4d56a880eadeae105b95b70a457d8444:-784869135</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-06-18 13:42:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>0c7a6063c6724c5080da32f077097ea9</sys_id>
+        <sys_metadata>03e5684047deae106274efbb616d43d3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CheckIfStudentHasOpenTSARequests</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_scope_delete display_value="">14b51fc3ce834665bcd5327947e6f949</sys_scope_delete>
+        <sys_update_name>sys_script_include_03e5684047deae106274efbb616d43d3</sys_update_name>
+        <sys_update_version display_value="sys_script_include_03e5684047deae106274efbb616d43d3">33e8a48447deae106274efbb616d43c5</sys_update_version>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-06-18 13:42:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
