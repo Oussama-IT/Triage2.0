@@ -58,7 +58,7 @@
         <record/>
         <record_producer_table>x_ndecd_triage_2_0_demande_tsa</record_producer_table>
         <reference>x_ndecd_cecce_base_tsa_qa</reference>
-        <reference_qual>questionSTARTSWITHdifficultés au niveau des habiletés liée</reference_qual>
+        <reference_qual>questionSTARTSWITHdifficultés au niveau des habiletés liée^numberISNOTEMPTY</reference_qual>
         <reference_qual_condition table="x_ndecd_cecce_base_tsa_qa">questionSTARTSWITHdifficultés au niveau des habiletés liée^EQ<item endquery="false" field="question" goto="false" newquery="false" operator="STARTSWITH" or="false" value="difficultés au niveau des habiletés liée"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </reference_qual_condition>
@@ -81,14 +81,14 @@
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-06-10 21:46:27</sys_created_on>
         <sys_id>859b7c3d470626106274efbb616d4379</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>l_l_ve_pr_sente_t_il_des_difficult_s_au_niveau_des_habilet_s_li_es_au_jeu_ex</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Veuillez cocher l’option qui s’applique le mieux à l’élève parmi les choix suivants :</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>item_option_new_859b7c3d470626106274efbb616d4379</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-06-13 16:28:22</sys_updated_on>
+        <sys_updated_on>2025-06-19 19:15:08</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
