@@ -38,17 +38,16 @@
     while (gr.next()) {
         html = gr.html_template;
     }
-    gs.info('Partage test : ' + html);
     var hfInfo = new Object();
-    hfInfo["HeaderImageAttachmentId"] = "fe71ca801b04b910d991c882604bcb30";
+    hfInfo["HeaderImageAttachmentId"] = "9706fe644712a2506274efbb616d43cf";
     hfInfo["HeaderImageAlignment"] = "left";
+	hfInfo["HeaderImageHeight"] = "60";
     hfInfo["FooterImageAttachmentId"] = "f69aa9661bf7a5108d594047bc4bcb1c";
     hfInfo["FooterImageAlignment"] = "TOP_CENTER";
     hfInfo["PageSize"] = "A4";
     hfInfo["GeneratePageNumber"] = "false";
-    hfInfo["TopOrBottomMargin"] = "50";
     hfInfo["LeftOrRightMargin"] = "24";
-    // Add your code here
+
     var targetTableSysId = current.sys_id;
     var tableName = 'x_ndecd_triage_2_0_demande_de_partage';
     var pdfName = "Partage d'un rapport " + current.getDisplayValue('eleve');
@@ -88,9 +87,6 @@
         newHtml = newHtml.replace('<p><span style="font-size: 10pt;">Date: <strong>var43</strong></span></p>', '');
     }
 
-
-
-    //
     newHtml = newHtml.replace("var5", current.getDisplayValue('situation_familiale_de_l_l_ve'));
     newHtml = newHtml.replace("var4", current.getDisplayValue('est_ce_que_l_l_ve_a_un_diagnostic'));
     // var3
@@ -134,7 +130,6 @@
     newHtml = newHtml.replace("var12", gselve.u_niso);
     newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
 
-
     var approver = new GlideRecord('sys_user');
     approver.addQuery('sys_id', current.opened_by.sys_id);
     approver.query();
@@ -155,7 +150,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>04baf8a61bb76510d991c882604bcbae</sys_id>
-        <sys_mod_count>140</sys_mod_count>
+        <sys_mod_count>159</sys_mod_count>
         <sys_name>CECCE Generate PDF partage</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -163,7 +158,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_04baf8a61bb76510d991c882604bcbae</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-28 19:17:16</sys_updated_on>
+        <sys_updated_on>2025-06-20 15:14:18</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

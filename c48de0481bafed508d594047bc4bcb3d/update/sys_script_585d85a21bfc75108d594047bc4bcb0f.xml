@@ -30,162 +30,162 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
-        // Add your code here
-        var html;
-        var newHtml;
-        var gr = new GlideRecord('x_ndecd_triage_2_0_pdftemplate');
-        gr.addQuery('template_name', 'PDF Consultation');
-        gr.query();
-        while (gr.next()) {
-            html = gr.html_template;
-        }
-        var hfInfo = new Object();
-        hfInfo["HeaderImageAttachmentId"] = "fe71ca801b04b910d991c882604bcb30";
-        hfInfo["HeaderImageAlignment"] = "left";
-        hfInfo["FooterImageAttachmentId"] = "f69aa9661bf7a5108d594047bc4bcb1c";
-        hfInfo["FooterImageAlignment"] = "TOP_CENTER";
-        hfInfo["PageSize"] = "A4";
-        hfInfo["GeneratePageNumber"] = "false";
-        hfInfo["TopOrBottomMargin"] = "50";
-        hfInfo["LeftOrRightMargin"] = "24";
-        // Add your code here
-        var targetTableSysId = current.sys_id;
-        var tableName = 'x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation';
-        var pdfName = "Demande de consultation avec possibilité d'évaluation pour  " + current.getDisplayValue('l_ve');
-        newHtml = html.replace("var1", current.getDisplayValue('l_ve'));
+
+    var html;
+    var newHtml;
+    var gr = new GlideRecord('x_ndecd_triage_2_0_pdftemplate');
+    gr.addQuery('template_name', 'PDF Consultation');
+    gr.query();
+    while (gr.next()) {
+        html = gr.html_template;
+    }
+    var hfInfo = new Object();
+    hfInfo["HeaderImageAttachmentId"] = "9706fe644712a2506274efbb616d43cf";
+    hfInfo["HeaderImageAlignment"] = "left";
+    hfInfo["HeaderImageHeight"] = "60";
+    hfInfo["FooterImageAttachmentId"] = "f69aa9661bf7a5108d594047bc4bcb1c";
+    hfInfo["FooterImageAlignment"] = "TOP_CENTER";
+    hfInfo["PageSize"] = "A4";
+    hfInfo["GeneratePageNumber"] = "false";
+    hfInfo["LeftOrRightMargin"] = "24";
+
+    var targetTableSysId = current.sys_id;
+    var tableName = 'x_ndecd_triage_2_0_demande_de_consultation_avec_possibilit_d_valuation';
+    var pdfName = "Demande de consultation avec possibilité d'évaluation pour  " + current.getDisplayValue('l_ve');
+    newHtml = html.replace("var1", current.getDisplayValue('l_ve'));
 
 
-		//information eleve
-		newHtml = newHtml.replace("var2", current.getDisplayValue('classe_distinc_vrai_faux'));
-		if (current.getValue('classe_distinct') != null ) {
+    //information eleve
+    newHtml = newHtml.replace("var2", current.getDisplayValue('classe_distinc_vrai_faux'));
+    if (current.getValue('classe_distinct') != null) {
         newHtml = newHtml.replace("var3", current.getDisplayValue('classe_distinct'));
-		} else {
-			newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Classe distincte: <strong>var3</strong></span></p>', '');
-		}
-		newHtml = newHtml.replace("var4", current.getDisplayValue('est_ce_que_l_l_ve_a_un_diagnostic'));
-		newHtml = newHtml.replace("var5", current.getDisplayValue('situation_familiale'));
-	    if (current.getDisplayValue('autre_situation_explication') != "") {
+    } else {
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Classe distincte: <strong>var3</strong></span></p>', '');
+    }
+    newHtml = newHtml.replace("var4", current.getDisplayValue('est_ce_que_l_l_ve_a_un_diagnostic'));
+    newHtml = newHtml.replace("var5", current.getDisplayValue('situation_familiale'));
+    if (current.getDisplayValue('autre_situation_explication') != "") {
         newHtml = newHtml.replace("var6", current.getDisplayValue('autre_situation_explication'));
-		} else {
-			newHtml = newHtml.replace('<p id="maBalise"><span style="font-size: 8pt;">Autre situation explication: <strong>var6</strong></span></p>', '');
-		}
+    } else {
+        newHtml = newHtml.replace('<p id="maBalise"><span style="font-size: 8pt;">Autre situation explication: <strong>var6</strong></span></p>', '');
+    }
 
-        //Langues parlees
-        newHtml = newHtml.replace("var400", current.getDisplayValue('raison'));
-        if (current.getDisplayValue('raison').indexOf("Autre") > -1) {
-            newHtml = newHtml.replace("var500", current.getDisplayValue('autre_diagnostic'));
-        } else {
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre raison<strong>: var500</strong></span></p>', '');
-        }
-        newHtml = newHtml.replace("var31", current.getDisplayValue('langue_s_parl_e_s_la_maison'));
-        if (current.getDisplayValue('langue_s_parl_e_s_la_maison').indexOf("Autre") > -1) {
-            newHtml = newHtml.replace("var200", current.getDisplayValue('autre_langue_parl'));
-        } else {
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre : <strong>var200</strong></span></p>', '');
-        }
+    //Langues parlees
+    newHtml = newHtml.replace("var400", current.getDisplayValue('raison'));
+    if (current.getDisplayValue('raison').indexOf("Autre") > -1) {
+        newHtml = newHtml.replace("var500", current.getDisplayValue('autre_diagnostic'));
+    } else {
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre raison<strong>: var500</strong></span></p>', '');
+    }
+    newHtml = newHtml.replace("var31", current.getDisplayValue('langue_s_parl_e_s_la_maison'));
+    if (current.getDisplayValue('langue_s_parl_e_s_la_maison').indexOf("Autre") > -1) {
+        newHtml = newHtml.replace("var200", current.getDisplayValue('autre_langue_parl'));
+    } else {
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre : <strong>var200</strong></span></p>', '');
+    }
 
-        if (current.getDisplayValue('langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais').indexOf('Fran') > -1) {
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Est-ce que des difficultés langagières sont observées dans sa langue dominante (par les parents et/ou l’équipe-école) (ex. difficultés à  comprendre des questions ou des consignes, à s’exprimer en phrases complètes) ?: <strong>var32</strong></span></p>', '');
+    if (current.getDisplayValue('langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais').indexOf('Fran') > -1) {
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Est-ce que des difficultés langagières sont observées dans sa langue dominante (par les parents et/ou l’équipe-école) (ex. difficultés à  comprendre des questions ou des consignes, à s’exprimer en phrases complètes) ?: <strong>var32</strong></span></p>', '');
 
-        } else {
-            newHtml = newHtml.replace("var32", current.getDisplayValue('est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante_p'));
-        }
+    } else {
+        newHtml = newHtml.replace("var32", current.getDisplayValue('est_ce_que_des_difficult_s_langagi_res_sont_observ_es_dans_sa_langue_dominante_p'));
+    }
 
-        newHtml = newHtml.replace("var33", current.getDisplayValue('langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais'));
-        if (current.getDisplayValue('autre_langue_dominante') == "") {
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre : <strong>var201</strong></span></p>', '');
-        } else {
-            newHtml = newHtml.replace("var201", current.getDisplayValue('autre_langue_dominante'));
-        }
+    newHtml = newHtml.replace("var33", current.getDisplayValue('langue_dominante_de_l_l_ve_la_langue_avec_laquelle_l_l_ve_est_le_plus_l_ais'));
+    if (current.getDisplayValue('autre_langue_dominante') == "") {
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre : <strong>var201</strong></span></p>', '');
+    } else {
+        newHtml = newHtml.replace("var201", current.getDisplayValue('autre_langue_dominante'));
+    }
 
-        //Mode de communication
+    //Mode de communication
 
-        newHtml = newHtml.replace("var34", current.moyen_principal_de_communication);
-        if (current.getValue('l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole') == "yes") {
+    newHtml = newHtml.replace("var34", current.moyen_principal_de_communication);
+    if (current.getValue('l_enfant_utilise_t_il_la_parole_comme_moyen_principal_de_communication_l_cole') == "yes") {
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Communication alternative : <strong>var36</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre Communication : <strong>var37</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève utilise-t-il un système de communication alternative? :<strong>var35</strong></span></p>', '');
+    } else {
+        newHtml = newHtml.replace("var35", current.getDisplayValue('l_l_ve_utilise_t_il_un_syst_me_de_communication_alternative'));
+        newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong>Parole</strong></span></div>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’enfant présente-il des difficultés de la parole (par ex. bégaiement, articulation des sons, voix, intelligibilité)? : <strong>var40</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève bégaie (répétitions de sons ou de syllabes, prolongations de sons, blocages) dans sa langue dominante. : <strong>var42</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à prononcer certains sons (autres que /s/ et /z/) : <strong>var43</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Je comprends l&#39;élève : <strong>var202</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">La qualité de la voix de l’élève semble anormale (ex. rauque, nasale), et ce, de manière persistante. : <strong>var45</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève est conscient de ses difficultés, éprouve de la frustration ou se restreint au niveau de la communication : <strong>var46</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève utilise des mots imprécis (ex. chose, ça…)/un vocabulaire plus pauvre que la norme. : <strong>var50</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève produit des phrases incomplètes.: <strong>var51</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève produit des phrases grammaticalement incorrectes. : <strong>var52</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à raconter un évènement vécu récemment. : <strong>var53</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Quelle est la note obtenue au bulletin le plus récent en communication orale? : <strong>var56</strong></span></p>', '');
+
+        if (current.getValue('l_l_ve_utilise_t_il_un_syst_me_de_communication_alternative') == "no") {
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Communication alternative : <strong>var36</strong></span></p>', '');
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre Communication : <strong>var37</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève utilise-t-il un système de communication alternative? :<strong>var35</strong></span></p>', '');
-        } else {
-            newHtml = newHtml.replace("var35", current.getDisplayValue('l_l_ve_utilise_t_il_un_syst_me_de_communication_alternative'));
-			newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong>Parole</strong></span></div>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’enfant présente-il des difficultés de la parole (par ex. bégaiement, articulation des sons, voix, intelligibilité)? : <strong>var40</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève bégaie (répétitions de sons ou de syllabes, prolongations de sons, blocages) dans sa langue dominante. : <strong>var42</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à prononcer certains sons (autres que /s/ et /z/) : <strong>var43</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Je comprends l&#39;élève : <strong>var202</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">La qualité de la voix de l’élève semble anormale (ex. rauque, nasale), et ce, de manière persistante. : <strong>var45</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève est conscient de ses difficultés, éprouve de la frustration ou se restreint au niveau de la communication : <strong>var46</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève utilise des mots imprécis (ex. chose, ça…)/un vocabulaire plus pauvre que la norme. : <strong>var50</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève produit des phrases incomplètes.: <strong>var51</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève produit des phrases grammaticalement incorrectes. : <strong>var52</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à raconter un évènement vécu récemment. : <strong>var53</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Quelle est la note obtenue au bulletin le plus récent en communication orale? : <strong>var56</strong></span></p>', '');
 
-            if (current.getValue('l_l_ve_utilise_t_il_un_syst_me_de_communication_alternative') == "no") {
-                newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Communication alternative : <strong>var36</strong></span></p>', '');
+        } else {
+            newHtml = newHtml.replace("var36", current.getDisplayValue('communication_alternative'));
+            if (current.getDisplayValue('autre_communication') == "") {
                 newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre Communication : <strong>var37</strong></span></p>', '');
-
             } else {
-                newHtml = newHtml.replace("var36", current.getDisplayValue('communication_alternative'));
-                if (current.getDisplayValue('autre_communication') == "") {
-                    newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre Communication : <strong>var37</strong></span></p>', '');
-                } else {
-                    newHtml = newHtml.replace("var37", current.getDisplayValue('autre_communication'));
-                }
-
+                newHtml = newHtml.replace("var37", current.getDisplayValue('autre_communication'));
             }
-        }
 
-        //Parole
-        newHtml = newHtml.replace("var40", current.getDisplayValue('l_enfant_pr_sente_il_des_difficult_s_de_la_parole_par_ex_b_gaiement_articulat'));
-        if (current.getValue('l_enfant_pr_sente_il_des_difficult_s_de_la_parole_par_ex_b_gaiement_articulat') == "no") {
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève bégaie (répétitions de sons ou de syllabes, prolongations de sons, blocages) dans sa langue dominante. : <strong>var42</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à prononcer certains sons (autres que /s/ et /z/) : <strong>var43</strong></span></p>', '');
+        }
+    }
+
+    //Parole
+    newHtml = newHtml.replace("var40", current.getDisplayValue('l_enfant_pr_sente_il_des_difficult_s_de_la_parole_par_ex_b_gaiement_articulat'));
+    if (current.getValue('l_enfant_pr_sente_il_des_difficult_s_de_la_parole_par_ex_b_gaiement_articulat') == "no") {
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève bégaie (répétitions de sons ou de syllabes, prolongations de sons, blocages) dans sa langue dominante. : <strong>var42</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à prononcer certains sons (autres que /s/ et /z/) : <strong>var43</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Je comprends l&#39;élève : <strong>var202</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">La qualité de la voix de l’élève semble anormale (ex. rauque, nasale), et ce, de manière persistante. : <strong>var45</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève est conscient de ses difficultés, éprouve de la frustration ou se restreint au niveau de la communication : <strong>var46</strong></span></p>', '');
+        //newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong>Parole</strong></span></div>', '');
+    } else {
+        newHtml = newHtml.replace("var42", current.getDisplayValue('l_l_ve_b_gaie_r_p_titions_de_sons_ou_de_syllabes_prolongations_de_sons_bloca'));
+        newHtml = newHtml.replace("var43", current.getDisplayValue('l_l_ve_a_de_la_difficult_prononcer_certains_sons_autres_que_s_et_zl_eleve_a_de_l'));
+        newHtml = newHtml.replace("var45", current.getDisplayValue('la_qualit_de_la_voix_de_l_l_ve_semble_anormale_ex_rauque_nasale_et_ce_dela_quali'));
+        newHtml = newHtml.replace("var46", current.getDisplayValue('l_l_ve_est_conscient_de_ses_difficult_s_prouve_de_la_frustration_ou_se_restre'));
+        if (current.getValue('l_l_ve_a_de_la_difficult_prononcer_certains_sons_autres_que_s_et_zl_eleve_a_de_l') == "no") {
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Je comprends l&#39;élève : <strong>var202</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">La qualité de la voix de l’élève semble anormale (ex. rauque, nasale), et ce, de manière persistante. : <strong>var45</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève est conscient de ses difficultés, éprouve de la frustration ou se restreint au niveau de la communication : <strong>var46</strong></span></p>', '');
-            //newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong>Parole</strong></span></div>', '');
         } else {
-            newHtml = newHtml.replace("var42", current.getDisplayValue('l_l_ve_b_gaie_r_p_titions_de_sons_ou_de_syllabes_prolongations_de_sons_bloca'));
-            newHtml = newHtml.replace("var43", current.getDisplayValue('l_l_ve_a_de_la_difficult_prononcer_certains_sons_autres_que_s_et_zl_eleve_a_de_l'));
-            newHtml = newHtml.replace("var45", current.getDisplayValue('la_qualit_de_la_voix_de_l_l_ve_semble_anormale_ex_rauque_nasale_et_ce_dela_quali'));
-            newHtml = newHtml.replace("var46", current.getDisplayValue('l_l_ve_est_conscient_de_ses_difficult_s_prouve_de_la_frustration_ou_se_restre'));
-            if (current.getValue('l_l_ve_a_de_la_difficult_prononcer_certains_sons_autres_que_s_et_zl_eleve_a_de_l') == "no") {
-                newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Je comprends l&#39;élève : <strong>var202</strong></span></p>', '');
-            } else {
-                newHtml = newHtml.replace("var202", current.getDisplayValue('je_comprends_l_l_ve'));
+            newHtml = newHtml.replace("var202", current.getDisplayValue('je_comprends_l_l_ve'));
 
-            }
         }
+    }
 
-        //language oral
-        newHtml = newHtml.replace("var47", current.getDisplayValue('des_difficult_s_langagi_res_orales_compr_hension_ou_expression_sont_elles_obse'));
-        if (current.getValue('des_difficult_s_langagi_res_orales_compr_hension_ou_expression_sont_elles_obse') == "no") {
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à comprendre les consignes. : <strong>var48</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à comprendre les questions. : <strong>var49</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève utilise des mots imprécis (ex. chose, ça…)/un vocabulaire plus pauvre que la norme. : <strong>var50</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève produit des phrases incomplètes.: <strong>var51</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève produit des phrases grammaticalement incorrectes. : <strong>var52</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à raconter un évènement vécu récemment. : <strong>var53</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève s’exprime par de l’écholalie (répétition immédiate ou différée d’un énoncé). : <strong>var54</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève s’exprime verbalement dans le seul but de nommer, de réciter ou d’énumérer. : <strong>var55</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Quelle est la note obtenue au bulletin le plus récent en communication orale? : <strong>var56</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Est-ce que l’élève a un PEI en communication orale (langage expressif et/ou réceptif)? : <strong>var57</strong></span></p>', '');
-        } else {
-            newHtml = newHtml.replace("var48", current.getDisplayValue('l_l_ve_a_de_la_difficult_comprendre_les_consignes'));
-            newHtml = newHtml.replace("var49", current.getDisplayValue('l_l_ve_a_de_la_difficult_comprendre_les_questions'));
-            newHtml = newHtml.replace("var50", current.getDisplayValue('l_l_ve_utilise_des_mots_impr_cis_ex_chose_a_un_vocabulaire_plus_pauvre_qu'));
-            newHtml = newHtml.replace("var51", current.getDisplayValue('l_l_ve_produit_des_phrases_incompl_tes'));
-            newHtml = newHtml.replace("var52", current.getDisplayValue('l_l_ve_produit_des_phrases_grammaticalement_incorrectes'));
-            newHtml = newHtml.replace("var53", current.getDisplayValue('l_l_ve_a_de_la_difficult_raconter_un_v_nement_v_cu_r_cemment'));
-            newHtml = newHtml.replace("var54", current.getDisplayValue('l_l_ve_s_exprime_par_de_l_cholalie_r_p_tition_imm_diate_ou_diff_r_e_d_un_non'));
-            newHtml = newHtml.replace("var55", current.getDisplayValue('l_l_ve_s_exprime_verbalement_dans_le_seul_but_de_nommer_de_r_citer_ou_d_num_r'));
-            newHtml = newHtml.replace("var56", current.getDisplayValue('quelle_est_la_note_obtenue_au_bulletin_le_plus_r_cent_en_communication_orale'));
-            newHtml = newHtml.replace("var57", current.getDisplayValue('est_ce_que_l_l_ve_a_un_pei_en_communication_orale_langage_expressif_et_ou_r_ce'));
-        }
+    //language oral
+    newHtml = newHtml.replace("var47", current.getDisplayValue('des_difficult_s_langagi_res_orales_compr_hension_ou_expression_sont_elles_obse'));
+    if (current.getValue('des_difficult_s_langagi_res_orales_compr_hension_ou_expression_sont_elles_obse') == "no") {
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à comprendre les consignes. : <strong>var48</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à comprendre les questions. : <strong>var49</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève utilise des mots imprécis (ex. chose, ça…)/un vocabulaire plus pauvre que la norme. : <strong>var50</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève produit des phrases incomplètes.: <strong>var51</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève produit des phrases grammaticalement incorrectes. : <strong>var52</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève a de la difficulté à raconter un évènement vécu récemment. : <strong>var53</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève s’exprime par de l’écholalie (répétition immédiate ou différée d’un énoncé). : <strong>var54</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève s’exprime verbalement dans le seul but de nommer, de réciter ou d’énumérer. : <strong>var55</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Quelle est la note obtenue au bulletin le plus récent en communication orale? : <strong>var56</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Est-ce que l’élève a un PEI en communication orale (langage expressif et/ou réceptif)? : <strong>var57</strong></span></p>', '');
+    } else {
+        newHtml = newHtml.replace("var48", current.getDisplayValue('l_l_ve_a_de_la_difficult_comprendre_les_consignes'));
+        newHtml = newHtml.replace("var49", current.getDisplayValue('l_l_ve_a_de_la_difficult_comprendre_les_questions'));
+        newHtml = newHtml.replace("var50", current.getDisplayValue('l_l_ve_utilise_des_mots_impr_cis_ex_chose_a_un_vocabulaire_plus_pauvre_qu'));
+        newHtml = newHtml.replace("var51", current.getDisplayValue('l_l_ve_produit_des_phrases_incompl_tes'));
+        newHtml = newHtml.replace("var52", current.getDisplayValue('l_l_ve_produit_des_phrases_grammaticalement_incorrectes'));
+        newHtml = newHtml.replace("var53", current.getDisplayValue('l_l_ve_a_de_la_difficult_raconter_un_v_nement_v_cu_r_cemment'));
+        newHtml = newHtml.replace("var54", current.getDisplayValue('l_l_ve_s_exprime_par_de_l_cholalie_r_p_tition_imm_diate_ou_diff_r_e_d_un_non'));
+        newHtml = newHtml.replace("var55", current.getDisplayValue('l_l_ve_s_exprime_verbalement_dans_le_seul_but_de_nommer_de_r_citer_ou_d_num_r'));
+        newHtml = newHtml.replace("var56", current.getDisplayValue('quelle_est_la_note_obtenue_au_bulletin_le_plus_r_cent_en_communication_orale'));
+        newHtml = newHtml.replace("var57", current.getDisplayValue('est_ce_que_l_l_ve_a_un_pei_en_communication_orale_langage_expressif_et_ou_r_ce'));
+    }
 
     //langage écrit
 
-    
+
     //Communication Sociale
     newHtml = newHtml.replace("var67", current.getDisplayValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_communication_sociale_habil'));
     if (current.getValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_communication_sociale_habil') == 'no') {
@@ -204,7 +204,9 @@
     }
 
     //intervention preventives
-    newHtml = newHtml.replace("var72", current.getDisplayValue('l_l_ve_pr_sente_il_les_facteurs_de_risque_suivants_questionnez_les_parents')); newHtml = newHtml.replace("var109", current.getDisplayValue('est_ce_que_les_difficult_s_observ_es_ont_un_impact_sur_les_apprentissages_scolai')); newHtml = newHtml.replace("var73", current.getDisplayValue('les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l'));
+    newHtml = newHtml.replace("var72", current.getDisplayValue('l_l_ve_pr_sente_il_les_facteurs_de_risque_suivants_questionnez_les_parents'));
+    newHtml = newHtml.replace("var109", current.getDisplayValue('est_ce_que_les_difficult_s_observ_es_ont_un_impact_sur_les_apprentissages_scolai'));
+    newHtml = newHtml.replace("var73", current.getDisplayValue('les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l'));
     if (current.getDisplayValue('les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l').indexOf("Autres") > -1) {
         newHtml = newHtml.replace("var74", current.getDisplayValue('autre_strategie'));
     } else {
@@ -372,7 +374,7 @@
         } else {
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;" title="">Date (Pratique privée) : <strong>var176</strong></span></p>', '');
         }
-        if (current.getDisplayValue('orthophonie').indexOf("Autre")> -1) {
+        if (current.getDisplayValue('orthophonie').indexOf("Autre") > -1) {
             newHtml = newHtml.replace("var79", current.getDisplayValue('autre_orthophonie'));
         } else {
             newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Autre Orthophonie : <strong>var79</strong></span></p>', '');
@@ -387,7 +389,8 @@
         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Orthophonie : <strong>var78</strong></span></p>', '');
     }
 
-    newHtml = newHtml.replace("var102", current.getDisplayValue('de_fa_on_g_n_rale_est_ce_que_l_l_ve_profite_des_interventions_offertes')); newHtml = newHtml.replace("var110", current.getDisplayValue('est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel'));
+    newHtml = newHtml.replace("var102", current.getDisplayValue('de_fa_on_g_n_rale_est_ce_que_l_l_ve_profite_des_interventions_offertes'));
+    newHtml = newHtml.replace("var110", current.getDisplayValue('est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel'));
 
     if (current.getValue('est_ce_que_l_l_ve_pr_sente_un_diagnostic_m_dical_officiel') == "no") {
         newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Diagnostique médical officiel : <strong>var111</strong></span></p>', '');
@@ -408,7 +411,8 @@
     }
 
     //Interventions ciblées
-    newHtml = newHtml.replace("var113", current.getDisplayValue('l_l_ve_a_t_il_t_valu_en_orthophonie_dans_les_deux_derni_res_ann_es_premier')); newHtml = newHtml.replace("var114", current.getDisplayValue('une_valuation_p_dagogique_a_t_elle_t_effectu_e_aupr_s_de_l_l_ve_ex_efar_ou'));
+    newHtml = newHtml.replace("var113", current.getDisplayValue('l_l_ve_a_t_il_t_valu_en_orthophonie_dans_les_deux_derni_res_ann_es_premier'));
+    newHtml = newHtml.replace("var114", current.getDisplayValue('une_valuation_p_dagogique_a_t_elle_t_effectu_e_aupr_s_de_l_l_ve_ex_efar_ou'));
     if (current.getValue('une_valuation_p_dagogique_a_t_elle_t_effectu_e_aupr_s_de_l_l_ve_ex_efar_ou') == 'no') {
         newHtml = newHtml.replace('<p><span style="font-size: 8pt;" title="">Quand : <strong>var115</strong></span></p>', '');
         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Résultat : <strong>var116</strong></span></p>', '');
@@ -454,8 +458,8 @@
         newHtml = newHtml.replace("var125", current.getDisplayValue('est_ce_que_les_parents_sont_en_accord_avec_cette_demande_de_placement'));
         newHtml = newHtml.replace("var126", current.getDisplayValue('pr_cisez_la_classe'));
     }
-	
-	var dir = current.number;
+
+    var dir = current.number;
     var gsdirect = new GlideRecord('sysapproval_approver');
     gsdirect.addQuery('sysapproval.number', dir);
     gsdirect.addQuery('state', 'approved');
@@ -467,50 +471,50 @@
         var approverSysId = gsdirect.approver.sys_id.toString();
         var grApprover = new GlideRecord('sys_user');
         grApprover.addQuery('sys_id', approverSysId);
-		grApprover.query();
+        grApprover.query();
         if (grApprover.next()) {
             newHtml = newHtml.replace("var93", grApprover.title);
         }
     }
     newHtml = newHtml.replace("var92", current.getDisplayValue('sys_updated_on'));
-	
-	
-	
-	newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by')); 
-	newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by')); 
-	newHtml = newHtml.replace("var21", current.getDisplayValue('sys_created_on'));
-	
-	var approver =  new GlideRecord('sys_user');
-	approver.addQuery('sys_id', current.opened_by.sys_id);
-	approver.query();
-	if(approver.next()){
-	newHtml = newHtml.replace("var22", approver.getDisplayValue('title'));
-	}
-	
+
+
+
+    newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
+    newHtml = newHtml.replace("var20", current.getDisplayValue('opened_by'));
+    newHtml = newHtml.replace("var21", current.getDisplayValue('sys_created_on'));
+
+    var approver = new GlideRecord('sys_user');
+    approver.addQuery('sys_id', current.opened_by.sys_id);
+    approver.query();
+    if (approver.next()) {
+        newHtml = newHtml.replace("var22", approver.getDisplayValue('title'));
+    }
+
     var eleve1 = current.getValue("l_ve");
 
-    var gselve = new GlideRecord('x_ndecd_triage_2_0_eleve'); 
-	gselve.get(eleve1); 
-	newHtml = newHtml.replace("1125", gselve.getDisplayValue('u_classe')); 
-	newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_cole')); 
-	newHtml = newHtml.replace("var12", gselve.u_niso); 
-	newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
+    var gselve = new GlideRecord('x_ndecd_triage_2_0_eleve');
+    gselve.get(eleve1);
+    newHtml = newHtml.replace("1125", gselve.getDisplayValue('u_classe'));
+    newHtml = newHtml.replace("var13", gselve.getDisplayValue('u_nom_de_l_cole'));
+    newHtml = newHtml.replace("var12", gselve.u_niso);
+    newHtml = newHtml.replace("var11", gselve.u_date_de_naissance);
 
-        //Préalables au langage écrit
+    //Préalables au langage écrit
 
 
     //    if ((gselve.getDisplayValue('u_classe') != 'JK') && (gselve.getDisplayValue('u_classe') != 'SK')) {
     //         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date du Dépist’Écrit: <strong>var59</strong></span></p>', '');
     //         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Quel est le résultat obtenu au dernier Dépist’Écrit? : <strong>var58</strong></span></p>', '');
-	// 		newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Préalables au langage écrit</span></strong></span></div>','');
+    // 		newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Préalables au langage écrit</span></strong></span></div>','');
     //     } else {
-	// 		newHtml = newHtml.replace('<p><span style="font-size: 10pt;"><strong>Langage écrit</strong></span></p><p><span style="font-size: 10pt;"><strong>Langage écrit</strong></span></p>','');
-	// 		newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler les sons des mots à l’oral) : <strong>var64</strong></span></p>', '');
-	// 		newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve un retard en écriture :<strong>var65</strong></span></p>', '');
-	// 		newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en lecture au dernier bulletin : <strong>var62 </strong></span></p>', '');
-	// 		newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève présente un retard en lecture: <strong>var61</strong></span></p>', '');
-	// 		newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en écriture au dernier bulletin : <strong>var66</strong></span></p>', '');
-	// 		newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Est-ce que l’élève a un PEI en lecture et/ou écriture? : <strong>var63</strong></span></p>', '');
+    // 		newHtml = newHtml.replace('<p><span style="font-size: 10pt;"><strong>Langage écrit</strong></span></p><p><span style="font-size: 10pt;"><strong>Langage écrit</strong></span></p>','');
+    // 		newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler les sons des mots à l’oral) : <strong>var64</strong></span></p>', '');
+    // 		newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve un retard en écriture :<strong>var65</strong></span></p>', '');
+    // 		newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en lecture au dernier bulletin : <strong>var62 </strong></span></p>', '');
+    // 		newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève présente un retard en lecture: <strong>var61</strong></span></p>', '');
+    // 		newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en écriture au dernier bulletin : <strong>var66</strong></span></p>', '');
+    // 		newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Est-ce que l’élève a un PEI en lecture et/ou écriture? : <strong>var63</strong></span></p>', '');
 
     //         gs.info("xxxx1");
     //         newHtml = newHtml.replace("var58", current.getDisplayValue('quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit'));
@@ -519,62 +523,63 @@
     //         } else {
     //             newHtml = newHtml.replace("var59", current.getDisplayValue('date_du_d_pist_crit'));
     //         }
-	// 		gs.info("xxxx2");
+    // 		gs.info("xxxx2");
     //     }
 
 
 
 
-        if ((gselve.getDisplayValue('u_classe') == 'JK') || (gselve.getDisplayValue('u_classe') == 'SK')) {
-			newHtml = newHtml.replace('<p><span style="font-size: 10pt;"><strong>Langage écrit</strong></span></p><p><span style="font-size: 10pt;"><strong>Langage écrit</strong></span></p>','');
-			newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler les sons des mots à l’oral) : <strong>var64</strong></span></p>', '');
-			newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve un retard en écriture :<strong>var65</strong></span></p>', '');
-			newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en lecture au dernier bulletin : <strong>var62 </strong></span></p>', '');
-			newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève présente un retard en lecture: <strong>var61</strong></span></p>', '');
-			newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en écriture au dernier bulletin : <strong>var66</strong></span></p>', '');
-			newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Est-ce que l’élève a un PEI en lecture et/ou écriture? : <strong>var63</strong></span></p>', '');
-			
-			newHtml = newHtml.replace('<p><span style="font-size: 10pt;"><strong>Langage écrit</strong></span></p>','');
-			newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Des difficultés sont-elles observées au niveau de la lecture ou de l’écriture? : <strong>var60</strong></span></p>','');
+    if ((gselve.getDisplayValue('u_classe') == 'JK') || (gselve.getDisplayValue('u_classe') == 'SK')) {
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;"><strong>Langage écrit</strong></span></p><p><span style="font-size: 10pt;"><strong>Langage écrit</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler les sons des mots à l’oral) : <strong>var64</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve un retard en écriture :<strong>var65</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en lecture au dernier bulletin : <strong>var62 </strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève présente un retard en lecture: <strong>var61</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en écriture au dernier bulletin : <strong>var66</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Est-ce que l’élève a un PEI en lecture et/ou écriture? : <strong>var63</strong></span></p>', '');
 
-            gs.info("xxxx6"+ newHtml);
-            newHtml = newHtml.replace("var58", current.getDisplayValue('quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit'));
-            if (current.getValue('quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit') == 'n/a') {
-                newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date du Dépist’Écrit: <strong>var59</strong></span></p>', '');
-            } else {
-                newHtml = newHtml.replace("var59", current.getDisplayValue('date_du_d_pist_crit'));
-            }
-			gs.info("xxxx2");
+        newHtml = newHtml.replace('<p><span style="font-size: 10pt;"><strong>Langage écrit</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Des difficultés sont-elles observées au niveau de la lecture ou de l’écriture? : <strong>var60</strong></span></p>', '');
 
-    
+        gs.info("xxxx6" + newHtml);
+        newHtml = newHtml.replace("var58", current.getDisplayValue('quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit'));
+        if (current.getValue('quel_est_le_r_sultat_obtenu_au_dernier_d_pist_crit') == 'n/a') {
+            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date du Dépist’Écrit: <strong>var59</strong></span></p>', '');
         } else {
-			newHtml = newHtml.replace("var60", current.getDisplayValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture'));
-			if (current.getValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture') == 'no') {
-				newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler les sons des mots à l’oral) : <strong>var64</strong></span></p>', '');
-				newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve un retard en écriture :<strong>var65</strong></span></p>', '');
-				newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en lecture au dernier bulletin : <strong>var62 </strong></span></p>', '');
-				newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève présente un retard en lecture: <strong>var61</strong></span></p>', '');
-				newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en écriture au dernier bulletin : <strong>var66</strong></span></p>', '');
-				newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Est-ce que l’élève a un PEI en lecture et/ou écriture? : <strong>var63</strong></span></p>', '');
-
-			} else {
-				newHtml = newHtml.replace("var61", current.getDisplayValue('l_l_ve_pr_sente_un_retard_en_lecture'));
-				newHtml = newHtml.replace("var62", current.getDisplayValue('note_en_lecture_au_dernier_bulletin'));
-				newHtml = newHtml.replace("var63", current.getDisplayValue('est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture'));
-				newHtml = newHtml.replace("var64", current.getDisplayValue('l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler'));
-				newHtml = newHtml.replace("var65", current.getDisplayValue('l_l_ve_prouve_un_retard_en_criture'));
-				newHtml = newHtml.replace("var66", current.getDisplayValue('note_en_criture_au_dernier_bulletin'));
-			}
-
-			newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date du Dépist’Écrit: <strong>var59</strong></span></p>', '');
-            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Quel est le résultat obtenu au dernier Dépist’Écrit? : <strong>var58</strong></span></p>', '');
-			newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Préalables au langage écrit</span></strong></span></div>','');
+            newHtml = newHtml.replace("var59", current.getDisplayValue('date_du_d_pist_crit'));
         }
+        gs.info("xxxx2");
+
+
+    } else {
+        newHtml = newHtml.replace("var60", current.getDisplayValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture'));
+        if (current.getValue('des_difficult_s_sont_elles_observ_es_au_niveau_de_la_lecture_ou_de_l_criture') == 'no') {
+            newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve des difficultés en conscience phonologique (habileté à manipuler les sons des mots à l’oral) : <strong>var64</strong></span></p>', '');
+            newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">L’élève éprouve un retard en écriture :<strong>var65</strong></span></p>', '');
+            newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en lecture au dernier bulletin : <strong>var62 </strong></span></p>', '');
+            newHtml = newHtml.replace('<p><span style="font-size: 8pt;">L’élève présente un retard en lecture: <strong>var61</strong></span></p>', '');
+            newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Note en écriture au dernier bulletin : <strong>var66</strong></span></p>', '');
+            newHtml = newHtml.replace('<p><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28))))); font-size: 8pt;">Est-ce que l’élève a un PEI en lecture et/ou écriture? : <strong>var63</strong></span></p>', '');
+
+        } else {
+            newHtml = newHtml.replace("var61", current.getDisplayValue('l_l_ve_pr_sente_un_retard_en_lecture'));
+            newHtml = newHtml.replace("var62", current.getDisplayValue('note_en_lecture_au_dernier_bulletin'));
+            newHtml = newHtml.replace("var63", current.getDisplayValue('est_ce_que_l_l_ve_a_un_pei_en_lecture_et_ou_criture'));
+            newHtml = newHtml.replace("var64", current.getDisplayValue('l_l_ve_prouve_des_difficult_s_en_conscience_phonologique_habilet_manipuler'));
+            newHtml = newHtml.replace("var65", current.getDisplayValue('l_l_ve_prouve_un_retard_en_criture'));
+            newHtml = newHtml.replace("var66", current.getDisplayValue('note_en_criture_au_dernier_bulletin'));
+        }
+
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date du Dépist’Écrit: <strong>var59</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Quel est le résultat obtenu au dernier Dépist’Écrit? : <strong>var58</strong></span></p>', '');
+        newHtml = newHtml.replace('<div><span style="font-family: &#39;times new roman&#39;, times; font-size: 10pt;"><strong><span style="background-color: rgb(var(--sn-tinymce_content-background,var(--now-form-field--background-color,var(--now-color_background--primary,var(--now-color--neutral-0,255,255,255))))); color: rgb(var(--sn-tinymce_content-text,var(--now-form-field--color,var(--now-color_text--primary,var(--now-color--neutral-18,22,27,28)))));">Préalables au langage écrit</span></strong></span></div>', '');
+    }
 
     var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
     var result = v.convertToPDFWithHeaderFooter(newHtml, tableName, targetTableSysId, pdfName, hfInfo);
 
-    current.linkattachment = result.attachment_id; current.update();
+    current.linkattachment = result.attachment_id;
+    current.update();
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
@@ -582,7 +587,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>585d85a21bfc75108d594047bc4bcb0f</sys_id>
-        <sys_mod_count>139</sys_mod_count>
+        <sys_mod_count>141</sys_mod_count>
         <sys_name>PDF2</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -590,7 +595,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_585d85a21bfc75108d594047bc4bcb0f</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-28 19:29:27</sys_updated_on>
+        <sys_updated_on>2025-06-24 16:35:50</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

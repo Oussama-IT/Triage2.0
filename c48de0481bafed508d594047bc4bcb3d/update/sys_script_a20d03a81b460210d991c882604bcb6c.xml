@@ -40,13 +40,13 @@
         html = gr.html_template;
     }
     var hfInfo = new Object();
-    hfInfo["HeaderImageAttachmentId"] = "fe71ca801b04b910d991c882604bcb30";
+    hfInfo["HeaderImageAttachmentId"] = "9706fe644712a2506274efbb616d43cf";
     hfInfo["HeaderImageAlignment"] = "left";
+    hfInfo["HeaderImageHeight"] = "60";
     hfInfo["FooterImageAttachmentId"] = "f69aa9661bf7a5108d594047bc4bcb1c";
     hfInfo["FooterImageAlignment"] = "TOP_CENTER";
     hfInfo["PageSize"] = "A4";
     hfInfo["GeneratePageNumber"] = "false";
-    hfInfo["TopOrBottomMargin"] = "50";
     hfInfo["LeftOrRightMargin"] = "24";
     // Add your code here
     var targetTableSysId = current.sys_id;
@@ -132,17 +132,28 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a20d03a81b460210d991c882604bcb6c</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>PDF formul orth consent (di) eva non req</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_a20d03a81b460210d991c882604bcb6c</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-16 15:59:05</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-06-23 17:21:08</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=a20d03a81b460210d991c882604bcb6c"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>a20d03a81b460210d991c882604bcb6c</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-06-23 17:21:08</sys_created_on>
+        <sys_id>47cb72b54792e25083857acc416d43c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-06-23 17:21:08</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>
