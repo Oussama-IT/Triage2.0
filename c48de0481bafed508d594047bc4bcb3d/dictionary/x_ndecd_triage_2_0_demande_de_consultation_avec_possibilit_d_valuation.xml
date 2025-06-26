@@ -23,6 +23,7 @@
         <element label="L’élève a-t-il reçu des services professionnels dans les domaines suivants (coch" max_length="4000" name="l_l_ve_a_t_il_re_u_des_services_professionnels_dans_les_domaines_suivants_coch" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
         <element label="Recommandé par" max_length="40" name="recommand_par" type="string"/>
         <element label="score" max_length="20" name="score" type="decimal"/>
+        <element label="Date début (Programme SCS ) :" max_length="40" name="date_d_but_programme_sc_s" type="glide_date"/>
         <element choice="1" label="L’élève a de la difficulté à comprendre les questions." max_length="40" name="l_l_ve_a_de_la_difficult_comprendre_les_questions" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Toujours" sequence="3" value="always"/>
@@ -230,6 +231,7 @@
                 <element inactive_on_update="false" label="Centre Jules-Léger Consortium Program (for students who are deaf or hard of hearing" sequence="6" value="Centre Jules-Léger Consortium Program (for students who are deaf or hard of hearing"/>
             </choice>
         </element>
+        <element label="Date fin (Programme SCS ) :" max_length="40" name="date_fin_programme_sc_s" type="glide_date"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève éprouve des difficultés à créer et à maintenir des liens d’amitié." max_length="40" name="l_l_ve_prouve_des_difficult_s_cr_er_et_maintenir_des_liens_d_amiti" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
@@ -290,6 +292,7 @@
         <element label="Fréquence (programme ISLÉ1) :" max_length="40" name="fr_quence_programme_isl_1" type="string"/>
         <element label="Fréquence (programme SLI) :" max_length="40" name="fr_quence_programme_sli" type="string"/>
         <element label="Veuillez cliquer sur les services et programmes dont l’élève a bénéficié ou béné" max_length="4000" name="veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element label="Date fin (Programme d’intervention ROI-CS) :" max_length="40" name="date_fin_programme_d_intervention_roics" type="glide_date"/>
         <element label="Date fin (Programme SCS ) :" max_length="40" name="date_fin_programme_scs" type="glide_date_time"/>
         <element label="Date fin (EEAS-EED, Coach ACA) :" max_length="40" name="date_fin_eeas_eed_coach_aca" type="glide_date"/>
         <element label="L’élève éprouve des difficultés d’imitation :" max_length="4000" name="l_l_ve_prouve_des_difficult_s_d_imitation" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
@@ -388,6 +391,7 @@
             </choice>
         </element>
         <element label="Diagnostique médical officiel" max_length="4000" name="diagnostique_m_dical_officiel" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
+        <element label="Date début (Programme d’intervention ROI-CS) :" max_length="40" name="date_d_but_programme_d_intervention_roics" type="glide_date"/>
         <element label="Score" max_length="40" name="score1" type="string"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’élève a-t-il été évalué en orthophonie dans les deux dernières années (Premier" max_length="40" name="l_l_ve_a_t_il_t_valu_en_orthophonie_dans_les_deux_derni_res_ann_es_premier" type="choice">
             <choice>

@@ -233,14 +233,14 @@
         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Fin (programme ISLÉ1 ) : <strong>var154</strong></span></p>', '');
         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (programme ISLÉ1 ) : <strong>var155</strong></span></p>', '');
     }
-    if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("Programme destiné à l’EED") > -1) {
+    if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("Programme destiné à l’éducation spécialisée (ES)") > -1) {
         newHtml = newHtml.replace("var157", current.getDisplayValue('date_fin_programme_destin_l_eed'));
         newHtml = newHtml.replace("var158", current.getDisplayValue('fr_quence_programme_destin_l_eed'));
         newHtml = newHtml.replace("var156", current.getDisplayValue('date_d_but_programme_destin_l_eed'));
     } else {
-        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Début (programme destiné à l’EED ) : <strong>var156</strong></span></p>', '');
-        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Fin (programme destiné à l’EED ) : <strong>var157</strong></span></p>', '');
-        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (programme destiné à l’EED ) : <strong>var158</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Début (programme destiné à l’ES ) : <strong>var156</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Fin (programme destiné à l’ES ) : <strong>var157</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (programme destiné à l’ES ) : <strong>var158</strong></span></p>', '');
     }
     if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("Programme SLI") > -1) {
         newHtml = newHtml.replace("var159", current.getDisplayValue('date_d_but_programme_sli'));
@@ -251,25 +251,29 @@
         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Fin (programme SLI ) : <strong>var160</strong></span></p>', '');
         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (programme SLI ) : <strong>var161</strong></span></p>', '');
     }
-    if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("EEAS-EED, Coach ACA") > -1) {
+    if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("EEAS-ES, Coach ACA") > -1) {
         newHtml = newHtml.replace("var163", current.getDisplayValue('date_fin_eeas_eed_coach_aca'));
         newHtml = newHtml.replace("var164", current.getDisplayValue('fr_quence_eeas_eed_coach_aca'));
         newHtml = newHtml.replace("var162", current.getDisplayValue('date_d_but_eeas_eed_coach_aca'));
     } else {
-        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Début (EEAS-EED, Coach ACA ) : <strong>var162</strong></span></p>', '');
-        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Fin (EEAS-EED, Coach ACA ) : <strong>var163</strong></span></p>', '');
-        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (EEAS-EED, Coach ACA ) : <strong>var164</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Début (EEAS-ES, Coach ACA ) : <strong>var162</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Fin (EEAS-ES, Coach ACA ) : <strong>var163</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (EEAS-ES, Coach ACA ) : <strong>var164</strong></span></p>', '');
     }
-    if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("Éducateur-ressource EED") > -1) {
+    if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("Éducateur-ressource ES") > -1) {
         newHtml = newHtml.replace("var166", current.getDisplayValue('date_fin_ducateur_ressource_eed'));
         newHtml = newHtml.replace("var167", current.getDisplayValue('fr_quence_ducateur_ressource_eed'));
         newHtml = newHtml.replace("var165", current.getDisplayValue('date_d_but_ducateur_ressource_eed'));
     } else {
-        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Début (éducateur-ressource EED ) : <strong>var165</strong></span></p>', '');
-        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Fin (éducateur-ressource EED ) : <strong>var166</strong></span></p>', '');
-        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (éducateur-ressource EED ) : <strong>var167</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Début (éducateur-ressource ES ) : <strong>var165</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Fin (éducateur-ressource ES ) : <strong>var166</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (éducateur-ressource ES ) : <strong>var167</strong></span></p>', '');
     }
-    if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("Programme d’intervention ROI") > -1) {
+	var tmp = current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n');
+	if (tmp.indexOf("Programme d’intervention ROI-CS") > -1) {
+		tmp = tmp.replace("Programme d’intervention ROI-CS", "");
+	}
+    if (tmp.indexOf("Programme d’intervention ROI") > -1) {
         newHtml = newHtml.replace("var169", current.getDisplayValue('date_fin_programme_d_intervention_roi'));
         newHtml = newHtml.replace("var170", current.getDisplayValue('fr_quence_programme_d_intervention_roi'));
         newHtml = newHtml.replace("var168", current.getDisplayValue('date_d_but_programme_d_intervention_roi'));
@@ -286,6 +290,24 @@
         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Début (programme d’intervention SOI ) : <strong>var171</strong></span></p>', '');
         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date Fin (programme d’intervention SOI ) : <strong>var172</strong></span></p>', '');
         newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (programme d’intervention SOI ) : <strong>var173</strong></span></p>', '');
+    }
+    if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("Programme d’intervention ROI-CS") > -1) {
+        newHtml = newHtml.replace("var402", current.getDisplayValue('date_fin_programme_d_intervention_roics'));
+        newHtml = newHtml.replace("var403", current.getDisplayValue('fr_quence_programme_d_intervention_roi_cs'));
+        newHtml = newHtml.replace("var401", current.getDisplayValue('date_d_but_programme_d_intervention_roics'));
+    } else {
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date début (Programme d’intervention ROI-CS) : <strong>var401</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date fin(Programme d’intervention ROI-CS) : <strong>var402</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (Programme d’intervention ROI-CS) : <strong>var403</strong></span></p>', '');
+    }
+    if (current.getDisplayValue('veuillez_cliquer_sur_les_services_et_programmes_dont_l_l_ve_a_b_n_fici_ou_b_n').indexOf("Programme SCS") > -1) {
+        newHtml = newHtml.replace("var405", current.getDisplayValue('date_fin_programme_sc_s'));
+        newHtml = newHtml.replace("var406", current.getDisplayValue('programme_scs_frequence_heure_semaine'));
+        newHtml = newHtml.replace("var404", current.getDisplayValue('date_d_but_programme_sc_s'));
+    } else {
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date début (Programme SCS) : <strong>var404</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Date fin (Programme SCS) : <strong>var405</strong></span></p>', '');
+        newHtml = newHtml.replace('<p><span style="font-size: 8pt;">Fréquence (Programme SCS) : <strong>var406</strong></span></p>', '');
     }
 
     newHtml = newHtml.replace("var76", current.getDisplayValue('l_l_ve_a_t_il_re_u_des_services_professionnels_dans_les_domaines_suivants_coch'));
@@ -587,7 +609,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>585d85a21bfc75108d594047bc4bcb0f</sys_id>
-        <sys_mod_count>141</sys_mod_count>
+        <sys_mod_count>156</sys_mod_count>
         <sys_name>PDF2</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
@@ -595,7 +617,7 @@
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_script_585d85a21bfc75108d594047bc4bcb0f</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-06-24 16:35:50</sys_updated_on>
+        <sys_updated_on>2025-06-26 12:22:25</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
