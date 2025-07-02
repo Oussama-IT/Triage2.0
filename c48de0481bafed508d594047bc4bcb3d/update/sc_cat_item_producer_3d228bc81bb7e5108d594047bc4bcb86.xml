@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_producer">
     <sc_cat_item_producer action="INSERT_OR_UPDATE">
         <access_type>restricted</access_type>
-        <active>true</active>
+        <active>false</active>
         <allow_edit>false</allow_edit>
         <availability>on_desktop</availability>
         <billable>false</billable>
@@ -89,14 +89,14 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-06-28 12:09:06</sys_created_on>
         <sys_id>3d228bc81bb7e5108d594047bc4bcb86</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>En cours de construction</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sc_cat_item_producer_3d228bc81bb7e5108d594047bc4bcb86</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-11-12 17:29:33</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-07-02 20:31:38</sys_updated_on>
         <table_name>x_ndecd_triage_2_0_test</table_name>
         <taxonomy_topic display_value="Psychologie">c93cd8e81b7361108d594047bc4bcb44</taxonomy_topic>
         <template/>
@@ -106,7 +106,7 @@
         <u_approval_type/>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>2</version>
+        <version>5</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
@@ -132,4 +132,15 @@
         <table>sc_cat_item_producer</table>
         <type>calculated</type>
     </fx_price>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>3d228bc81bb7e5108d594047bc4bcb86</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-06-30 20:21:32</sys_created_on>
+        <sys_id>86386b0447e2a61083857acc416d4393</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-06-30 20:21:32</sys_updated_on>
+        <table>sc_cat_item_producer</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>
