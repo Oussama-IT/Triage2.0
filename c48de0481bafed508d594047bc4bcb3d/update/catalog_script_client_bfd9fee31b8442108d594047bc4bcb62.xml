@@ -23,7 +23,7 @@
       return;
    }
 	if(newValue=='yes'){
-		g_form.showFieldMsg('existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier',"Vous ne pouvez soumettre une demande pour cet(te) élève. Veuillez communiquer avec l’orthophoniste de votre école. Si l’élève n’a pas déjà un dossier en orthophonie au Conseil, veuillez soumettre une demande de services en orthophonie - Motif 'Partage d’un rapport' sur la plateforme.",'error');
+		g_form.showFieldMsg('existe_t_il_un_rapport_d_valuation_en_orthophonie_au_dossier', "Communiquez avec l’orthophoniste de votre école. Si l’élève n’a pas déjà un dossier en orthophonie au Conseil, veuillez soumettre une demande de services en orthophonie - Motif “Partage d’un rapport” sur la plateforme (si un rapport/plan d'intervention en orthophonie est disponible) ou une demande sous le motif 'Consultation avec possibilité d'une évaluation' (si aucun rapport/plan d'intervention n'est disponible). L'orthophoniste soumettra la demande pour le(s) programme(s) SLI et/ou ROI pour l'élève, si pertinent.",'error');
 	} 
    //Type appropriate comment here, and begin script below
    
@@ -34,15 +34,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bfd9fee31b8442108d594047bc4bcb62</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Existe-t-il un rapport change</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>catalog_script_client_bfd9fee31b8442108d594047bc4bcb62</sys_update_name>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-09 07:44:55</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-07-11 14:39:35</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>
@@ -50,4 +50,15 @@
         <variable_set/>
         <view/>
     </catalog_script_client>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>bfd9fee31b8442108d594047bc4bcb62</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-07-11 14:37:46</sys_created_on>
+        <sys_id>2503036f47eaa61083857acc416d43b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-07-11 14:37:46</sys_updated_on>
+        <table>catalog_script_client</table>
+        <use_es_latest>false</use_es_latest>
+    </sys_es_latest_script>
 </record_update>
