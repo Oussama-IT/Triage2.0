@@ -180,7 +180,7 @@
         <element choice="1" choice_field="sli_roi" choice_table="x_ndecd_cecce_base_options" label="Je soumets la candidature de l’élève au(x) programme(s) :" max_length="200" name="orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s" reference="x_ndecd_cecce_base_sli_roi_qa" type="glide_list">
             <choice/>
         </element>
-        <element label="Autres commentaires" max_length="200" name="autres_commentaires" type="string"/>
+        <element label="Autres commentaires" max_length="4000" name="autres_commentaires" type="string"/>
         <element choice="1" label="À votre connaissance, est-ce que les parents sont inquiets du développement lang" max_length="40" name="votre_connaissance_est_ce_que_les_parents_sont_inquiets_du_d_veloppement_lang" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Non" language="fq" value="no"/>
