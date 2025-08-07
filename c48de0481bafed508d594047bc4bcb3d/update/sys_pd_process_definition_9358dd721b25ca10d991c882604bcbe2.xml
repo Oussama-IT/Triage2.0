@@ -4,6 +4,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>demande priorisation sli apres changement etat a admissible</label>
         <name>demande_priorisation_sli_apres_changement_etat_a_admissible</name>
         <now_assist_prompt/>
@@ -33,6 +34,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>demande priorisation sli apres changement etat a admissible</label>
         <name>demande_priorisation_sli_apres_changement_etat_a_admissible</name>
         <now_assist_prompt/>
@@ -122,6 +124,7 @@
         <sys_updated_on>2025-03-10 20:01:18</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=d75855361b25ca10d991c882604bcb2d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -952,6 +955,7 @@
         <sys_updated_on>2024-04-17 13:31:13</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=575855361b25ca10d991c882604bcb2d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2176,6 +2180,7 @@
         <sys_updated_on>2024-04-17 13:31:13</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=d35855361b25ca10d991c882604bcb2d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3400,6 +3405,7 @@
         <sys_updated_on>2024-04-17 13:31:13</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=5b5855361b25ca10d991c882604bcb2d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4597,6 +4603,15 @@
         <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
         <value>{{act.5b5855361b25ca10d991c882604bcb2d.label}}</value>
     </sys_element_mapping>
+    <sys_pd_process_variant action="delete_multiple" query="process_definition=9358dd721b25ca10d991c882604bcbe2"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=575855361b25ca10d991c882604bcb2d"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=5b5855361b25ca10d991c882604bcb2d"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=d35855361b25ca10d991c882604bcb2d"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=d75855361b25ca10d991c882604bcb2d"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=575855361b25ca10d991c882604bcb2d"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=5b5855361b25ca10d991c882604bcb2d"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=d35855361b25ca10d991c882604bcb2d"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=d75855361b25ca10d991c882604bcb2d"/>
     <sys_pd_snapshot action="delete_multiple" query="sys_id=d3dbbf9847d4261083857acc416d4333^sys_idNOT INd3dbbf9847d4261083857acc416d4333"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

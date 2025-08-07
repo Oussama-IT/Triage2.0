@@ -4,6 +4,7 @@
         <active>true</active>
         <description>Demande de consultation avec possibilité d'évaluation</description>
         <designer_state/>
+        <engine_major_version/>
         <label>Demande de consultation avec possibilité d'évaluation</label>
         <name>demande_de_consultation_avec_possibilit_d_valuation</name>
         <now_assist_prompt/>
@@ -33,6 +34,7 @@
         <active>true</active>
         <description>Demande de consultation avec possibilité d'évaluation</description>
         <designer_state/>
+        <engine_major_version/>
         <label>Demande de consultation avec possibilité d'évaluation</label>
         <name>demande_de_consultation_avec_possibilit_d_valuation</name>
         <now_assist_prompt/>
@@ -180,6 +182,7 @@
         <sys_updated_on>2025-05-14 14:01:45</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=11ac1f2011aca2f011ac04a011acfe00"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1151,6 +1154,7 @@
         <sys_updated_on>2024-10-21 21:55:33</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=361bcdbe1b09f110d991c882604bcb13"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1981,6 +1985,7 @@
         <sys_updated_on>2024-09-23 15:58:14</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=9a41ca181b29f9508d594047bc4bcbdc"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3191,6 +3196,7 @@
         <sys_updated_on>2024-09-23 15:58:14</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=0d4106181b29f9508d594047bc4bcb65"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4415,6 +4421,7 @@
         <sys_updated_on>2025-05-14 13:54:00</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=0e3a64891bd83d50d991c882604bcbb1"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -5411,6 +5418,7 @@
         <sys_updated_on>2025-05-14 13:54:00</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=c14aac491bd83d50d991c882604bcb35"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -6266,6 +6274,19 @@
         <table>var__m_sys_hub_action_input_baf174c8c3c232002841b63b12d3aee4</table>
         <value/>
     </sys_element_mapping>
+    <sys_pd_process_variant action="delete_multiple" query="process_definition=731c4e201b58bd508d594047bc4bcbe7"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=0d4106181b29f9508d594047bc4bcb65"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=0e3a64891bd83d50d991c882604bcbb1"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=11ac1f2011aca2f011ac04a011acfe00"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=361bcdbe1b09f110d991c882604bcb13"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=9a41ca181b29f9508d594047bc4bcbdc"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=c14aac491bd83d50d991c882604bcb35"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=0d4106181b29f9508d594047bc4bcb65"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=0e3a64891bd83d50d991c882604bcbb1"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=11ac1f2011aca2f011ac04a011acfe00"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=361bcdbe1b09f110d991c882604bcb13"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=9a41ca181b29f9508d594047bc4bcbdc"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=c14aac491bd83d50d991c882604bcb35"/>
     <sys_pd_snapshot action="delete_multiple" query="sys_id=656958d347e1665083857acc416d4361^sys_idNOT IN656958d347e1665083857acc416d4361"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

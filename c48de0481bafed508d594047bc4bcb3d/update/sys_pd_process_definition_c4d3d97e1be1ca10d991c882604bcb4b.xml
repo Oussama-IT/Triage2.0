@@ -4,6 +4,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>CECCE demandes-priorisation SLI depistage</label>
         <name>duplicate_of_cecce_demandes_priorisation_sli_ecole_ortho_inactive</name>
         <now_assist_prompt/>
@@ -33,6 +34,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>CECCE demandes-priorisation SLI depistage</label>
         <name>duplicate_of_cecce_demandes_priorisation_sli_ecole_ortho_inactive</name>
         <now_assist_prompt/>
@@ -108,6 +110,7 @@
         <sys_updated_on>2024-04-17 13:11:20</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=ccd3d97e1be1ca10d991c882604bcb51"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1319,6 +1322,7 @@
         <sys_updated_on>2024-04-17 13:11:20</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=4cd3d97e1be1ca10d991c882604bcb51"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2516,6 +2520,11 @@
         <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
         <value>{{act.4cd3d97e1be1ca10d991c882604bcb51.label}}</value>
     </sys_element_mapping>
+    <sys_pd_process_variant action="delete_multiple" query="process_definition=c4d3d97e1be1ca10d991c882604bcb4b"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=4cd3d97e1be1ca10d991c882604bcb51"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=ccd3d97e1be1ca10d991c882604bcb51"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=4cd3d97e1be1ca10d991c882604bcb51"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=ccd3d97e1be1ca10d991c882604bcb51"/>
     <sys_pd_snapshot action="delete_multiple" query="sys_id=618b997a1b25ca10d991c882604bcb94^sys_idNOT IN618b997a1b25ca10d991c882604bcb94"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

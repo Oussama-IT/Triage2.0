@@ -4,6 +4,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>CECCE SLI-ROI orthophoniste</label>
         <name>cecce_sli_roi_orthophoniste</name>
         <now_assist_prompt/>
@@ -33,6 +34,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>CECCE SLI-ROI orthophoniste</label>
         <name>cecce_sli_roi_orthophoniste</name>
         <now_assist_prompt/>
@@ -131,6 +133,7 @@
         <sys_updated_on>2025-05-27 17:49:20</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=133243151bf00610d991c882604bcb7c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -961,6 +964,7 @@
         <sys_updated_on>2025-05-27 17:51:31</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=2932cfd11bf00610d991c882604bcbfe"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1792,6 +1796,7 @@
         <sys_updated_on>2025-05-27 17:49:48</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=040195351b4986508d594047bc4bcb98"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2609,6 +2614,13 @@
         <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
         <value>statut_sli=^nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^d_pistage_sli_requis_ou_non={{pd.inputRecord.orth_d_pistage_sli_requis_ou_non}}^generer_roi=false^demandesliroi={{pd.inputRecord.orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s}}^soumis_par=eq-orth^short_description=Demandes/priorisation SLI: {{pd.inputRecord.l_ve.name}}^</value>
     </sys_element_mapping>
+    <sys_pd_process_variant action="delete_multiple" query="process_definition=2200a2d11b700610d991c882604bcb5f"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=040195351b4986508d594047bc4bcb98"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=133243151bf00610d991c882604bcb7c"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=2932cfd11bf00610d991c882604bcbfe"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=040195351b4986508d594047bc4bcb98"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=133243151bf00610d991c882604bcb7c"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=2932cfd11bf00610d991c882604bcbfe"/>
     <sys_pd_snapshot action="delete_multiple" query="sys_id=540204994731ae5083857acc416d4340^sys_idNOT IN540204994731ae5083857acc416d4340"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

@@ -4,6 +4,7 @@
         <active>true</active>
         <description/>
         <designer_state>{"diagram":{"hiddenElements":{"edges":{}}}}</designer_state>
+        <engine_major_version/>
         <label>CECCE Demande departage workflow</label>
         <name>cecce_demande_departage_workflow</name>
         <now_assist_prompt/>
@@ -33,6 +34,7 @@
         <active>true</active>
         <description/>
         <designer_state>{"diagram":{"hiddenElements":{"edges":{}}}}</designer_state>
+        <engine_major_version/>
         <label>CECCE Demande departage workflow</label>
         <name>cecce_demande_departage_workflow</name>
         <now_assist_prompt/>
@@ -180,6 +182,7 @@
         <sys_updated_on>2025-02-03 18:38:08</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=3346b90334fde0334120033421803340"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1039,6 +1042,7 @@
         <sys_updated_on>2025-02-03 20:11:53</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=79e166b31b5979508d594047bc4bcb5b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2263,6 +2267,7 @@
         <sys_updated_on>2025-05-12 20:27:51</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=7eb3be107eb381307eb3def07eb3f470"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3235,6 +3240,7 @@
         <sys_updated_on>2025-02-03 20:11:53</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=ec326ef31b5979508d594047bc4bcb4e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4432,6 +4438,15 @@
         <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
         <value>{{act.ec326ef31b5979508d594047bc4bcb4e.label}}</value>
     </sys_element_mapping>
+    <sys_pd_process_variant action="delete_multiple" query="process_definition=b07247981b8c3d108d594047bc4bcb1a"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=3346b90334fde0334120033421803340"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=79e166b31b5979508d594047bc4bcb5b"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=7eb3be107eb381307eb3def07eb3f470"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=ec326ef31b5979508d594047bc4bcb4e"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=3346b90334fde0334120033421803340"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=79e166b31b5979508d594047bc4bcb5b"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=7eb3be107eb381307eb3def07eb3f470"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=ec326ef31b5979508d594047bc4bcb4e"/>
     <sys_pd_snapshot action="delete_multiple" query="sys_id=294f0c5747a1665083857acc416d4315^sys_idNOT IN294f0c5747a1665083857acc416d4315"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

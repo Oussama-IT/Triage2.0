@@ -4,6 +4,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>CECCE SLI-ROI</label>
         <name>cecce_sli_roi</name>
         <now_assist_prompt/>
@@ -33,6 +34,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>CECCE SLI-ROI</label>
         <name>cecce_sli_roi</name>
         <now_assist_prompt/>
@@ -142,6 +144,7 @@
         <sys_updated_on>2025-04-09 03:11:23</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=008037000858c0008aaa00088400008c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -973,6 +976,7 @@
         <sys_updated_on>2025-05-27 16:48:30</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=6be7bb081b2006508d594047bc4bcb3e"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1776,6 +1780,11 @@
         <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
         <value>nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}0^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^scorepriorisationroi={{pd.inputRecord.scoreroi}}^est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte={{pd.inputRecord.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte}}^situation_familiale_de_l_l_ve={{pd.inputRecord.situation_familiale_de_l_l_ve}}^est_ce_que_l_l_ve_a_un_diagnostic={{pd.inputRecord.est_ce_que_l_l_ve_a_un_diagnostic}}^autre_situation_explication={{pd.inputRecord.autre_situation_explication}}^d_pistage_sli_requis_ou_non=sli-requis^generer_roi=true^soumis_par=eq-eco^short_description=Demandes/priorisation SLI: {{pd.inputRecord.l_ve.name}}^</value>
     </sys_element_mapping>
+    <sys_pd_process_variant action="delete_multiple" query="process_definition=238b04b81b104610d991c882604bcbb4"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=008037000858c0008aaa00088400008c"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=6be7bb081b2006508d594047bc4bcb3e"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=008037000858c0008aaa00088400008c"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=6be7bb081b2006508d594047bc4bcb3e"/>
     <sys_pd_snapshot action="delete_multiple" query="sys_id=083bbfcd47fd6e5083857acc416d4302^sys_idNOT IN083bbfcd47fd6e5083857acc416d4302"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

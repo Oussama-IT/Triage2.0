@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <max_drift/>
+        <name>Populate ortho groups</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="Fredj Kharroubi">6494e0411b7dc250d991c882604bcbe3</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2025-07-22 18:27:10</run_start>
+        <run_time>1970-01-01 05:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[(function() {
+    var groupIds = [
+        '699f42af1beb2510d991c882604bcb05', //CECCE - Orthophonistes
+        'a099d53c1bb10a508d594047bc4bcbe6', //CECCE Éducatrices ressources langage
+        '1bead5bc1bb10a508d594047bc4bcb56', //CECCE Secrétaires
+        '95aa1d7c1bb10a508d594047bc4bcb43', //CECCE Direction du SSA volet EED
+    ];
+
+    groupIds.forEach(function(grpId) {
+        var members = [];
+        var gm = new GlideRecord('sys_user_grmember');
+        gm.addQuery('group', grpId);
+        gm.query();
+        while (gm.next()) {
+            members.push(gm.user.toString());
+        }
+
+        var rec = new GlideRecord('x_ndecd_triage_2_0_r_le_orthophonie');
+        rec.addQuery('group', grpId);
+        rec.query();
+        if (rec.next()) {
+            rec.setValue('membres', members.join(','));
+            rec.update();
+        } else {
+            rec.initialize();
+            rec.setValue('group', grpId);
+            rec.setValue('membres', members.join(','));
+            rec.insert();
+        }
+    });
+})();]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-07-22 18:27:43</sys_created_on>
+        <sys_id>8d01601f4772665083857acc416d4374</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Populate ortho groups</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sysauto_script_8d01601f4772665083857acc416d4374</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-07-23 14:21:23</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>8d01601f4772665083857acc416d4374</id>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-07-22 18:27:43</sys_created_on>
+        <sys_id>cd2168db4772665083857acc416d4346</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-07-22 18:27:43</sys_updated_on>
+        <table>sysauto_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

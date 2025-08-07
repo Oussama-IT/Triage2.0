@@ -4,6 +4,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>TSA/CS CAA</label>
         <name>tsa_cs_caa</name>
         <now_assist_prompt/>
@@ -33,6 +34,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>TSA/CS CAA</label>
         <name>tsa_cs_caa</name>
         <now_assist_prompt/>
@@ -218,6 +220,7 @@
         <sys_updated_on>2025-04-22 18:07:32</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=19ffda9019ff2d4019ff256019ff4ad0"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1428,6 +1431,7 @@
         <sys_updated_on>2025-04-09 03:14:07</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=7de0ae07de2a607defa907def1f07de4"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2258,6 +2262,7 @@
         <sys_updated_on>2025-04-22 18:08:59</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=db69df0db63ca0db61b70db60af0db64"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3468,6 +3473,7 @@
         <sys_updated_on>2025-05-14 12:58:14</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=f7fef20f7f25e0f7fdfa0f7f6580f7f7"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -4412,6 +4418,15 @@
         <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
         <value>{{act.f7fef20f7f25e0f7fdfa0f7f6580f7f7.label}}</value>
     </sys_element_mapping>
+    <sys_pd_process_variant action="delete_multiple" query="process_definition=a6c0ca494778a21083857acc416d4375"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=19ffda9019ff2d4019ff256019ff4ad0"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=7de0ae07de2a607defa907def1f07de4"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=db69df0db63ca0db61b70db60af0db64"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=f7fef20f7f25e0f7fdfa0f7f6580f7f7"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=19ffda9019ff2d4019ff256019ff4ad0"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=7de0ae07de2a607defa907def1f07de4"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=db69df0db63ca0db61b70db60af0db64"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=f7fef20f7f25e0f7fdfa0f7f6580f7f7"/>
     <sys_pd_snapshot action="delete_multiple" query="sys_id=aef81c9347e1665083857acc416d43be^sys_idNOT INaef81c9347e1665083857acc416d43be"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

@@ -4,6 +4,7 @@
         <active>true</active>
         <description>pour maternelle ou jardin</description>
         <designer_state/>
+        <engine_major_version/>
         <label>CECCE SCS</label>
         <name>cecce_scs</name>
         <now_assist_prompt/>
@@ -33,6 +34,7 @@
         <active>true</active>
         <description>pour maternelle ou jardin</description>
         <designer_state/>
+        <engine_major_version/>
         <label>CECCE SCS</label>
         <name>cecce_scs</name>
         <now_assist_prompt/>
@@ -107,6 +109,7 @@
         <sys_updated_on>2024-04-13 06:07:23</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=71121071c60071a1d0714c2071666071"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1345,6 +1348,7 @@
         <sys_updated_on>2024-04-13 06:06:04</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=8c2a0b581bd142908d594047bc4bcbe9"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2542,6 +2546,11 @@
         <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
         <value>{{act.8c2a0b581bd142908d594047bc4bcbe9.label}}</value>
     </sys_element_mapping>
+    <sys_pd_process_variant action="delete_multiple" query="process_definition=529f0e581bddc250d991c882604bcb21"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=71121071c60071a1d0714c2071666071"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=8c2a0b581bd142908d594047bc4bcbe9"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=71121071c60071a1d0714c2071666071"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=8c2a0b581bd142908d594047bc4bcbe9"/>
     <sys_pd_snapshot action="delete_multiple" query="sys_id=a8609e08474aea1083857acc416d4370^sys_idNOT INa8609e08474aea1083857acc416d4370"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

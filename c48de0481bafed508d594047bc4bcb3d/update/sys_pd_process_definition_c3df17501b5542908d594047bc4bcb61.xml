@@ -4,6 +4,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>CECCE TSACS</label>
         <name>cecce_tsacs</name>
         <now_assist_prompt/>
@@ -33,6 +34,7 @@
         <active>true</active>
         <description/>
         <designer_state/>
+        <engine_major_version/>
         <label>CECCE TSACS</label>
         <name>cecce_tsacs</name>
         <now_assist_prompt/>
@@ -107,6 +109,7 @@
         <sys_updated_on>2024-04-13 04:52:32</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=958027501b5542908d594047bc4bcbd3"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1331,6 +1334,7 @@
         <sys_updated_on>2024-04-09 15:29:20</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=221223901b5542908d594047bc4bcb90"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2213,6 +2217,7 @@
         <sys_updated_on>2024-04-13 04:55:02</sys_updated_on>
         <type_vals/>
         <type_vals/>
+        <variant/>
     </sys_pd_activity>
     <sys_variable_value action="delete_multiple" query="document_key=12b0c53012b0e96012b01a1012b074e0"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -3424,6 +3429,13 @@
         <table>var__m_sys_pd_activity_type_prop_e12af577871333003058d1a936cb0ba4</table>
         <value>{{act.12b0c53012b0e96012b01a1012b074e0.label}}</value>
     </sys_element_mapping>
+    <sys_pd_process_variant action="delete_multiple" query="process_definition=c3df17501b5542908d594047bc4bcb61"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=12b0c53012b0e96012b01a1012b074e0"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=221223901b5542908d594047bc4bcb90"/>
+    <sys_pd_derivative action="delete_multiple" query="derivative_parent=958027501b5542908d594047bc4bcbd3"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=12b0c53012b0e96012b01a1012b074e0"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=221223901b5542908d594047bc4bcb90"/>
+    <sys_pd_activity_override action="delete_multiple" query="override_parent=958027501b5542908d594047bc4bcbd3"/>
     <sys_pd_snapshot action="delete_multiple" query="sys_id=244043d11b2d4610d991c882604bcb77^sys_idNOT IN244043d11b2d4610d991c882604bcb77"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
