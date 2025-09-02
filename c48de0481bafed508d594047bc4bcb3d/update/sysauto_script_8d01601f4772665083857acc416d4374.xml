@@ -19,10 +19,17 @@
         <run_type>on_demand</run_type>
         <script><![CDATA[(function() {
     var groupIds = [
+        '7b16d1981bb8b5108d594047bc4bcb45', //CECCE - Equipe Triage
+        '95aa1d7c1bb10a508d594047bc4bcb43', //CECCE - Direction du SSA-ES
+        'e7b604994763661083857acc416d4349', //CECCE - Orthophonistes - Admin
+        'b678afa31ba48e50d991c882604bcb1b', //CECCE - Orthophonistes - comité ROI
         '699f42af1beb2510d991c882604bcb05', //CECCE - Orthophonistes
-        'a099d53c1bb10a508d594047bc4bcbe6', //CECCE Éducatrices ressources langage
-        '1bead5bc1bb10a508d594047bc4bcb56', //CECCE Secrétaires
-        '95aa1d7c1bb10a508d594047bc4bcb43', //CECCE Direction du SSA volet EED
+        '383751b81bb10a508d594047bc4bcb87', //CECCE - Orthophonistes du régulier
+        '2bb8513c1bb10a508d594047bc4bcbc3', //CECCE - Orthophonistes du volet TSA/CS
+        'a099d53c1bb10a508d594047bc4bcbe6', //CECCE - Éducatrices ressources langage
+        'c01a9d3c1bb10a508d594047bc4bcbe1', //CECCE - Éducatrices ressources langage TSA/CS
+        '6829553c1bb10a508d594047bc4bcbd9', //CECCE - Éducatrices ressources langage - comité SLI
+        '8bf880d94763661083857acc416d4316', //CECCE - Éducatrices ressources langage TSA/CS - Comité SCS
     ];
 
     groupIds.forEach(function(grpId) {
@@ -34,15 +41,23 @@
             members.push(gm.user.toString());
         }
 
+        var description = '';
+        var group = new GlideRecord('sys_user_group');
+        group.get(grpId);
+        description = group.description;
+        gs.info('desc :' + description);
+
         var rec = new GlideRecord('x_ndecd_triage_2_0_r_le_orthophonie');
         rec.addQuery('group', grpId);
         rec.query();
         if (rec.next()) {
             rec.setValue('membres', members.join(','));
+            rec.setValue('description', description);
             rec.update();
         } else {
             rec.initialize();
             rec.setValue('group', grpId);
+            rec.setValue('description', description);
             rec.setValue('membres', members.join(','));
             rec.insert();
         }
@@ -52,14 +67,14 @@
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-07-22 18:27:43</sys_created_on>
         <sys_id>8d01601f4772665083857acc416d4374</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Populate ortho groups</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysauto_script_8d01601f4772665083857acc416d4374</sys_update_name>
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-07-23 14:21:23</sys_updated_on>
+        <sys_updated_on>2025-08-22 19:19:08</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
