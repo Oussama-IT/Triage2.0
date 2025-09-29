@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysrule_view_workspace">
     <sysrule_view_workspace action="INSERT_OR_UPDATE">
         <active>true</active>
+        <advanced>false</advanced>
         <condition table="x_ndecd_triage_2_0_demande_de_partage">state=50^EQ<item display_value="50" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="50"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </condition>
@@ -15,6 +16,7 @@
         <name>foce new</name>
         <order>100</order>
         <roles/>
+        <script/>
         <sys_class_name>sysrule_view_workspace</sys_class_name>
         <sys_created_by>ServiceNowDeveloper1@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-18 00:50:46</sys_created_on>

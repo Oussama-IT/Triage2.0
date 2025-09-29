@@ -8,13 +8,18 @@
         <label>CECCE SCS</label>
         <name>cecce_scs_1</name>
         <now_assist_prompt/>
+        <permission/>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
+        <run_strategy>run_once</run_strategy>
+        <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_scs_1">8f4cbf6247b3221083857acc416d43bd</snapshot>
         <start_non_blocking>true</start_non_blocking>
         <status>published</status>
+        <sync_state>COMPLETE</sync_state>
+        <synced_on/>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-09-04 17:23:45</sys_created_on>
@@ -29,36 +34,8 @@
         <sys_updated_on>2025-09-08 19:32:33</sys_updated_on>
         <view_type>DIAGRAM</view_type>
     </sys_pd_process_definition>
-    <sys_pd_process_definition action="INSERT_OR_UPDATE">
-        <access>public</access>
-        <active>true</active>
-        <description>SCS</description>
-        <designer_state>{"diagram":{"hiddenElements":{"edges":{}}}}</designer_state>
-        <engine_major_version/>
-        <label>CECCE SCS</label>
-        <name>cecce_scs_1</name>
-        <now_assist_prompt/>
-        <process_type/>
-        <restartable>RESTARTABLE_FALSE</restartable>
-        <run_on_pad_engine>false</run_on_pad_engine>
-        <schema_version>2</schema_version>
-        <snapshot display_value="cecce_scs_1">8f4cbf6247b3221083857acc416d43bd</snapshot>
-        <start_non_blocking>true</start_non_blocking>
-        <status>published</status>
-        <sys_class_name>sys_pd_process_definition</sys_class_name>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-09-04 17:23:45</sys_created_on>
-        <sys_id>5d78bedd47fbe2106274efbb616d433a</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>CECCE SCS</sys_name>
-        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
-        <sys_update_name>sys_pd_process_definition_5d78bedd47fbe2106274efbb616d433a</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-09-08 19:32:33</sys_updated_on>
-        <view_type>DIAGRAM</view_type>
-    </sys_pd_process_definition>
+    <sys_pd_process_input action="delete_multiple" query="model=5d78bedd47fbe2106274efbb616d433a"/>
+    <sys_pd_process_output action="delete_multiple" query="model=5d78bedd47fbe2106274efbb616d433a"/>
     <sys_pd_lane action="delete_multiple" query="process_definition=5d78bedd47fbe2106274efbb616d433a^sys_idNOT INca57cc0ca553c0ca52830ca50d40ca5a"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -68,10 +45,15 @@
         <lane_condition/>
         <name>new_stage</name>
         <order>1</order>
+        <permission/>
         <process_definition display_value="CECCE SCS">5d78bedd47fbe2106274efbb616d433a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-09-04 17:24:16</sys_created_on>
         <sys_id>ca57cc0ca553c0ca52830ca50d40ca5a</sys_id>
@@ -81,6 +63,7 @@
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=ca57cc0ca553c0ca52830ca50d40ca5a"/>
+    <sys_pd_timer_attributes action="delete_multiple" query="process_definition=5d78bedd47fbe2106274efbb616d433a"/>
     <sys_pd_activity action="delete_multiple" query="process_definition=5d78bedd47fbe2106274efbb616d433a^sys_idNOT IN07729200779ad00777b300773e800772,296f26a0296fa2f0296fed90296f2240"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -99,7 +82,11 @@
         <process_definition display_value="CECCE SCS">5d78bedd47fbe2106274efbb616d433a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-09-04 17:24:44</sys_created_on>
@@ -1310,7 +1297,11 @@
         <process_definition display_value="CECCE SCS">5d78bedd47fbe2106274efbb616d433a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-09-04 17:58:00</sys_created_on>
@@ -2595,6 +2586,8 @@
         <sys_created_on>2025-09-08 19:32:33</sys_created_on>
         <sys_id>c34cbf6247b3221083857acc416d43c0</sys_id>
     </sys_pd_snapshot_chunk>
+    <sys_pd_snapshot_input action="delete_multiple" query="model=8f4cbf6247b3221083857acc416d43bd"/>
+    <sys_pd_snapshot_output action="delete_multiple" query="model=8f4cbf6247b3221083857acc416d43bd"/>
     <sys_flow_compiled_flow action="delete_multiple" query="sys_id=034cbf62eeb322107a80a598e3cf84c1^sys_idNOT IN034cbf62eeb322107a80a598e3cf84c1"/>
     <sys_flow_compiled_flow action="INSERT_OR_UPDATE">
         <parent_snapshot_id/>
@@ -2649,6 +2642,7 @@
     <sys_pd_trigger_instance action="INSERT_OR_UPDATE">
         <label/>
         <name/>
+        <playbook_inputs/>
         <process_definition display_value="CECCE SCS">5d78bedd47fbe2106274efbb616d433a</process_definition>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-09-04 17:24:07</sys_created_on>
@@ -2700,6 +2694,7 @@
         <on_delete>false</on_delete>
         <on_insert>true</on_insert>
         <on_update>false</on_update>
+        <published_version/>
         <run_flow_in>background</run_flow_in>
         <run_on_extended>false</run_on_extended>
         <run_when_setting>both</run_when_setting>
@@ -2717,5 +2712,41 @@
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
         <sys_updated_on>2025-09-08 19:32:33</sys_updated_on>
         <table>x_ndecd_triage_2_0_scs</table>
+        <trigger_definition/>
     </sys_flow_record_trigger>
+    <sys_pd_process_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <description>SCS</description>
+        <designer_state>{"diagram":{"hiddenElements":{"edges":{}}}}</designer_state>
+        <engine_major_version/>
+        <label>CECCE SCS</label>
+        <name>cecce_scs_1</name>
+        <now_assist_prompt/>
+        <permission/>
+        <process_type/>
+        <restartable>RESTARTABLE_FALSE</restartable>
+        <run_on_pad_engine>false</run_on_pad_engine>
+        <run_strategy>run_once</run_strategy>
+        <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
+        <schema_version>2</schema_version>
+        <snapshot display_value="cecce_scs_1">8f4cbf6247b3221083857acc416d43bd</snapshot>
+        <start_non_blocking>true</start_non_blocking>
+        <status>published</status>
+        <sync_state>COMPLETE</sync_state>
+        <synced_on/>
+        <sys_class_name>sys_pd_process_definition</sys_class_name>
+        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-09-04 17:23:45</sys_created_on>
+        <sys_id>5d78bedd47fbe2106274efbb616d433a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>CECCE SCS</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_process_definition_5d78bedd47fbe2106274efbb616d433a</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-09-08 19:32:33</sys_updated_on>
+        <view_type>DIAGRAM</view_type>
+    </sys_pd_process_definition>
 </record_update>

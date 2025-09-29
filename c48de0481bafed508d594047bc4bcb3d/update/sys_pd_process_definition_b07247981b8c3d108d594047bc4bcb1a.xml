@@ -8,13 +8,18 @@
         <label>CECCE Demande departage workflow</label>
         <name>cecce_demande_departage_workflow</name>
         <now_assist_prompt/>
+        <permission/>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
+        <run_strategy>run_once</run_strategy>
+        <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_demande_departage_workflow">294f0c5747a1665083857acc416d4315</snapshot>
         <start_non_blocking>false</start_non_blocking>
         <status>published</status>
+        <sync_state>COMPLETE</sync_state>
+        <synced_on/>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-11 17:04:35</sys_created_on>
@@ -29,36 +34,8 @@
         <sys_updated_on>2025-05-21 13:51:09</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
-    <sys_pd_process_definition action="INSERT_OR_UPDATE">
-        <access>public</access>
-        <active>true</active>
-        <description/>
-        <designer_state>{"diagram":{"hiddenElements":{"edges":{}}}}</designer_state>
-        <engine_major_version/>
-        <label>CECCE Demande departage workflow</label>
-        <name>cecce_demande_departage_workflow</name>
-        <now_assist_prompt/>
-        <process_type/>
-        <restartable>RESTARTABLE_FALSE</restartable>
-        <run_on_pad_engine>false</run_on_pad_engine>
-        <schema_version>2</schema_version>
-        <snapshot display_value="cecce_demande_departage_workflow">294f0c5747a1665083857acc416d4315</snapshot>
-        <start_non_blocking>false</start_non_blocking>
-        <status>published</status>
-        <sys_class_name>sys_pd_process_definition</sys_class_name>
-        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2023-07-11 17:04:35</sys_created_on>
-        <sys_id>b07247981b8c3d108d594047bc4bcb1a</sys_id>
-        <sys_mod_count>94</sys_mod_count>
-        <sys_name>CECCE Demande departage workflow</sys_name>
-        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
-        <sys_update_name>sys_pd_process_definition_b07247981b8c3d108d594047bc4bcb1a</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 13:51:09</sys_updated_on>
-        <view_type>KANBAN</view_type>
-    </sys_pd_process_definition>
+    <sys_pd_process_input action="delete_multiple" query="model=b07247981b8c3d108d594047bc4bcb1a"/>
+    <sys_pd_process_output action="delete_multiple" query="model=b07247981b8c3d108d594047bc4bcb1a"/>
     <sys_pd_lane action="delete_multiple" query="process_definition=b07247981b8c3d108d594047bc4bcb1a^sys_idNOT IN203d3a00203dddb0203d0ed0203de9b0,30adc3601b00bd108d594047bc4bcba0,f9cf28171bcc39508d594047bc4bcb88"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -68,10 +45,15 @@
         <lane_condition/>
         <name>new_stage</name>
         <order>1</order>
+        <permission/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-09-30 16:33:46</sys_created_on>
         <sys_id>203d3a00203dddb0203d0ed0203de9b0</sys_id>
@@ -90,10 +72,15 @@
         <lane_condition/>
         <name>envoi_par_lettre</name>
         <order>2</order>
+        <permission/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-12 12:31:56</sys_created_on>
         <sys_id>30adc3601b00bd108d594047bc4bcba0</sys_id>
@@ -127,10 +114,15 @@
         <lane_condition/>
         <name>traitement</name>
         <order>3</order>
+        <permission/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-20 14:05:32</sys_created_on>
         <sys_id>f9cf28171bcc39508d594047bc4bcb88</sys_id>
@@ -154,6 +146,7 @@
         <value>30adc3601b00bd108d594047bc4bcba0</value>
         <variable display_value="Lanes">9a070e1ac3e02110f1f504186e40ddd2</variable>
     </sys_variable_value>
+    <sys_pd_timer_attributes action="delete_multiple" query="process_definition=b07247981b8c3d108d594047bc4bcb1a"/>
     <sys_pd_activity action="delete_multiple" query="process_definition=b07247981b8c3d108d594047bc4bcb1a^sys_idNOT IN3346b90334fde0334120033421803340,79e166b31b5979508d594047bc4bcb5b,7eb3be107eb381307eb3def07eb3f470,ec326ef31b5979508d594047bc4bcb4e"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -172,7 +165,11 @@
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-09-30 17:51:48</sys_created_on>
@@ -1032,7 +1029,11 @@
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-09-22 14:59:36</sys_created_on>
@@ -2257,7 +2258,11 @@
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-05-12 20:23:09</sys_created_on>
@@ -3230,7 +3235,11 @@
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-09-22 15:00:52</sys_created_on>
@@ -4505,6 +4514,8 @@
         <sys_created_on>2025-05-21 13:51:09</sys_created_on>
         <sys_id>ad4f0c5747a1665083857acc416d4316</sys_id>
     </sys_pd_snapshot_chunk>
+    <sys_pd_snapshot_input action="delete_multiple" query="model=294f0c5747a1665083857acc416d4315"/>
+    <sys_pd_snapshot_output action="delete_multiple" query="model=294f0c5747a1665083857acc416d4315"/>
     <sys_flow_compiled_flow action="delete_multiple" query="sys_id=294f0c576ba16650d068a3d948cc5018^sys_idNOT IN294f0c576ba16650d068a3d948cc5018"/>
     <sys_flow_compiled_flow action="INSERT_OR_UPDATE">
         <parent_snapshot_id/>
@@ -4559,6 +4570,7 @@
     <sys_pd_trigger_instance action="INSERT_OR_UPDATE">
         <label/>
         <name/>
+        <playbook_inputs/>
         <process_definition display_value="CECCE Demande departage workflow">b07247981b8c3d108d594047bc4bcb1a</process_definition>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-11 17:04:35</sys_created_on>
@@ -4610,6 +4622,7 @@
         <on_delete>false</on_delete>
         <on_insert>true</on_insert>
         <on_update>false</on_update>
+        <published_version/>
         <run_flow_in>background</run_flow_in>
         <run_on_extended>false</run_on_extended>
         <run_when_setting>both</run_when_setting>
@@ -4627,5 +4640,41 @@
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
         <sys_updated_on>2025-05-21 13:51:09</sys_updated_on>
         <table>x_ndecd_triage_2_0_demande_de_partage</table>
+        <trigger_definition/>
     </sys_flow_record_trigger>
+    <sys_pd_process_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <description/>
+        <designer_state>{"diagram":{"hiddenElements":{"edges":{}}}}</designer_state>
+        <engine_major_version/>
+        <label>CECCE Demande departage workflow</label>
+        <name>cecce_demande_departage_workflow</name>
+        <now_assist_prompt/>
+        <permission/>
+        <process_type/>
+        <restartable>RESTARTABLE_FALSE</restartable>
+        <run_on_pad_engine>false</run_on_pad_engine>
+        <run_strategy>run_once</run_strategy>
+        <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
+        <schema_version>2</schema_version>
+        <snapshot display_value="cecce_demande_departage_workflow">294f0c5747a1665083857acc416d4315</snapshot>
+        <start_non_blocking>false</start_non_blocking>
+        <status>published</status>
+        <sync_state>COMPLETE</sync_state>
+        <synced_on/>
+        <sys_class_name>sys_pd_process_definition</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2023-07-11 17:04:35</sys_created_on>
+        <sys_id>b07247981b8c3d108d594047bc4bcb1a</sys_id>
+        <sys_mod_count>94</sys_mod_count>
+        <sys_name>CECCE Demande departage workflow</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_process_definition_b07247981b8c3d108d594047bc4bcb1a</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-21 13:51:09</sys_updated_on>
+        <view_type>KANBAN</view_type>
+    </sys_pd_process_definition>
 </record_update>

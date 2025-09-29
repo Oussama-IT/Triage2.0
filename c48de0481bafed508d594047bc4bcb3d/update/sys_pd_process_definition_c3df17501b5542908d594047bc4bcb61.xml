@@ -8,13 +8,18 @@
         <label>CECCE TSACS (Legacy)</label>
         <name>cecce_tsacs</name>
         <now_assist_prompt/>
+        <permission/>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
+        <run_strategy>run_once</run_strategy>
+        <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_tsacs">717de21147fbae1083857acc416d43fd</snapshot>
         <start_non_blocking>false</start_non_blocking>
         <status>draft</status>
+        <sync_state>COMPLETE</sync_state>
+        <synced_on/>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-28 18:42:42</sys_created_on>
@@ -29,36 +34,8 @@
         <sys_updated_on>2025-09-10 13:31:02</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
-    <sys_pd_process_definition action="INSERT_OR_UPDATE">
-        <access>public</access>
-        <active>true</active>
-        <description/>
-        <designer_state/>
-        <engine_major_version/>
-        <label>CECCE TSACS (Legacy)</label>
-        <name>cecce_tsacs</name>
-        <now_assist_prompt/>
-        <process_type/>
-        <restartable>RESTARTABLE_FALSE</restartable>
-        <run_on_pad_engine>false</run_on_pad_engine>
-        <schema_version>2</schema_version>
-        <snapshot display_value="cecce_tsacs">717de21147fbae1083857acc416d43fd</snapshot>
-        <start_non_blocking>false</start_non_blocking>
-        <status>draft</status>
-        <sys_class_name>sys_pd_process_definition</sys_class_name>
-        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2024-03-28 18:42:42</sys_created_on>
-        <sys_id>c3df17501b5542908d594047bc4bcb61</sys_id>
-        <sys_mod_count>8</sys_mod_count>
-        <sys_name>CECCE TSACS (Legacy)</sys_name>
-        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
-        <sys_update_name>sys_pd_process_definition_c3df17501b5542908d594047bc4bcb61</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-09-10 13:31:02</sys_updated_on>
-        <view_type>KANBAN</view_type>
-    </sys_pd_process_definition>
+    <sys_pd_process_input action="delete_multiple" query="model=c3df17501b5542908d594047bc4bcb61"/>
+    <sys_pd_process_output action="delete_multiple" query="model=c3df17501b5542908d594047bc4bcb61"/>
     <sys_pd_lane action="delete_multiple" query="process_definition=c3df17501b5542908d594047bc4bcb61^sys_idNOT INa400eb101b5542908d594047bc4bcb6f"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -68,10 +45,15 @@
         <lane_condition/>
         <name>delegation_pour_consultation</name>
         <order>1</order>
+        <permission/>
         <process_definition display_value="CECCE TSACS (Legacy)">c3df17501b5542908d594047bc4bcb61</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-28 18:43:22</sys_created_on>
         <sys_id>a400eb101b5542908d594047bc4bcb6f</sys_id>
@@ -81,6 +63,7 @@
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=a400eb101b5542908d594047bc4bcb6f"/>
+    <sys_pd_timer_attributes action="delete_multiple" query="process_definition=c3df17501b5542908d594047bc4bcb61"/>
     <sys_pd_activity action="delete_multiple" query="process_definition=c3df17501b5542908d594047bc4bcb61^sys_idNOT IN958027501b5542908d594047bc4bcbd3,221223901b5542908d594047bc4bcb90,12b0c53012b0e96012b01a1012b074e0"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -99,7 +82,11 @@
         <process_definition display_value="CECCE TSACS (Legacy)">c3df17501b5542908d594047bc4bcb61</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-28 18:45:36</sys_created_on>
@@ -1324,7 +1311,11 @@
         <process_definition display_value="CECCE TSACS (Legacy)">c3df17501b5542908d594047bc4bcb61</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-28 18:52:30</sys_created_on>
@@ -2207,7 +2198,11 @@
         <process_definition display_value="CECCE TSACS (Legacy)">c3df17501b5542908d594047bc4bcb61</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-09-02 16:31:16</sys_created_on>
@@ -3494,6 +3489,8 @@
         <sys_created_on>2025-09-04 16:35:43</sys_created_on>
         <sys_id>f57de21147fbae1083857acc416d43fe</sys_id>
     </sys_pd_snapshot_chunk>
+    <sys_pd_snapshot_input action="delete_multiple" query="model=717de21147fbae1083857acc416d43fd"/>
+    <sys_pd_snapshot_output action="delete_multiple" query="model=717de21147fbae1083857acc416d43fd"/>
     <sys_flow_compiled_flow action="delete_multiple" query="sys_id=7d7de211a6fbae10e6d85f0b5d998efe^sys_idNOT IN7d7de211a6fbae10e6d85f0b5d998efe"/>
     <sys_flow_compiled_flow action="INSERT_OR_UPDATE">
         <parent_snapshot_id/>
@@ -3548,6 +3545,7 @@
     <sys_pd_trigger_instance action="INSERT_OR_UPDATE">
         <label/>
         <name/>
+        <playbook_inputs/>
         <process_definition display_value="CECCE TSACS (Legacy)">c3df17501b5542908d594047bc4bcb61</process_definition>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-28 18:42:43</sys_created_on>
@@ -3575,4 +3573,39 @@
         <value>x_ndecd_triage_2_0_tsa_cs</value>
         <variable display_value="Table">28eef8d1ff2200108c8733af793bf14a</variable>
     </sys_variable_value>
+    <sys_pd_process_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <description/>
+        <designer_state/>
+        <engine_major_version/>
+        <label>CECCE TSACS (Legacy)</label>
+        <name>cecce_tsacs</name>
+        <now_assist_prompt/>
+        <permission/>
+        <process_type/>
+        <restartable>RESTARTABLE_FALSE</restartable>
+        <run_on_pad_engine>false</run_on_pad_engine>
+        <run_strategy>run_once</run_strategy>
+        <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
+        <schema_version>2</schema_version>
+        <snapshot display_value="cecce_tsacs">717de21147fbae1083857acc416d43fd</snapshot>
+        <start_non_blocking>false</start_non_blocking>
+        <status>draft</status>
+        <sync_state>COMPLETE</sync_state>
+        <synced_on/>
+        <sys_class_name>sys_pd_process_definition</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-03-28 18:42:42</sys_created_on>
+        <sys_id>c3df17501b5542908d594047bc4bcb61</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>CECCE TSACS (Legacy)</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_process_definition_c3df17501b5542908d594047bc4bcb61</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-09-10 13:31:02</sys_updated_on>
+        <view_type>KANBAN</view_type>
+    </sys_pd_process_definition>
 </record_update>

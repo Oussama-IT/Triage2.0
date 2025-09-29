@@ -8,13 +8,18 @@
         <label>CECCE SLI-ROI</label>
         <name>cecce_sli_roi</name>
         <now_assist_prompt/>
+        <permission/>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
+        <run_strategy>run_once</run_strategy>
+        <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_sli_roi">083bbfcd47fd6e5083857acc416d4302</snapshot>
         <start_non_blocking>false</start_non_blocking>
         <status>published</status>
+        <sync_state>COMPLETE</sync_state>
+        <synced_on/>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-08 23:29:18</sys_created_on>
@@ -29,36 +34,8 @@
         <sys_updated_on>2025-05-27 17:31:15</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
-    <sys_pd_process_definition action="INSERT_OR_UPDATE">
-        <access>public</access>
-        <active>true</active>
-        <description/>
-        <designer_state/>
-        <engine_major_version/>
-        <label>CECCE SLI-ROI</label>
-        <name>cecce_sli_roi</name>
-        <now_assist_prompt/>
-        <process_type/>
-        <restartable>RESTARTABLE_FALSE</restartable>
-        <run_on_pad_engine>false</run_on_pad_engine>
-        <schema_version>2</schema_version>
-        <snapshot display_value="cecce_sli_roi">083bbfcd47fd6e5083857acc416d4302</snapshot>
-        <start_non_blocking>false</start_non_blocking>
-        <status>published</status>
-        <sys_class_name>sys_pd_process_definition</sys_class_name>
-        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2024-02-08 23:29:18</sys_created_on>
-        <sys_id>238b04b81b104610d991c882604bcbb4</sys_id>
-        <sys_mod_count>39</sys_mod_count>
-        <sys_name>CECCE SLI-ROI</sys_name>
-        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
-        <sys_update_name>sys_pd_process_definition_238b04b81b104610d991c882604bcbb4</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 17:31:15</sys_updated_on>
-        <view_type>KANBAN</view_type>
-    </sys_pd_process_definition>
+    <sys_pd_process_input action="delete_multiple" query="model=238b04b81b104610d991c882604bcbb4"/>
+    <sys_pd_process_output action="delete_multiple" query="model=238b04b81b104610d991c882604bcbb4"/>
     <sys_pd_lane action="delete_multiple" query="process_definition=238b04b81b104610d991c882604bcbb4^sys_idNOT IN12ab48b81b104610d991c882604bcbe6,2a44b3441b2006508d594047bc4bcb61"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -68,10 +45,15 @@
         <lane_condition/>
         <name>approbation</name>
         <order>1</order>
+        <permission/>
         <process_definition display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-08 23:29:45</sys_created_on>
         <sys_id>12ab48b81b104610d991c882604bcbe6</sys_id>
@@ -89,10 +71,15 @@
         <lane_condition/>
         <name>delegation</name>
         <order>2</order>
+        <permission/>
         <process_definition display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-19 18:46:23</sys_created_on>
         <sys_id>2a44b3441b2006508d594047bc4bcb61</sys_id>
@@ -116,6 +103,7 @@
         <value>12ab48b81b104610d991c882604bcbe6</value>
         <variable display_value="Lanes">9a070e1ac3e02110f1f504186e40ddd2</variable>
     </sys_variable_value>
+    <sys_pd_timer_attributes action="delete_multiple" query="process_definition=238b04b81b104610d991c882604bcbb4"/>
     <sys_pd_activity action="delete_multiple" query="process_definition=238b04b81b104610d991c882604bcbb4^sys_idNOT IN008037000858c0008aaa00088400008c,6be7bb081b2006508d594047bc4bcb3e"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -134,7 +122,11 @@
         <process_definition display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-11 23:45:16</sys_created_on>
@@ -966,7 +958,11 @@
         <process_definition display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-19 19:02:18</sys_created_on>
@@ -1843,6 +1839,8 @@
         <sys_created_on>2025-05-27 17:31:15</sys_created_on>
         <sys_id>843bbfcd47fd6e5083857acc416d4304</sys_id>
     </sys_pd_snapshot_chunk>
+    <sys_pd_snapshot_input action="delete_multiple" query="model=083bbfcd47fd6e5083857acc416d4302"/>
+    <sys_pd_snapshot_output action="delete_multiple" query="model=083bbfcd47fd6e5083857acc416d4302"/>
     <sys_flow_compiled_flow action="delete_multiple" query="sys_id=803bbfcd21fd6e508a207db1f6224b05^sys_idNOT IN803bbfcd21fd6e508a207db1f6224b05"/>
     <sys_flow_compiled_flow action="INSERT_OR_UPDATE">
         <parent_snapshot_id/>
@@ -1897,6 +1895,7 @@
     <sys_pd_trigger_instance action="INSERT_OR_UPDATE">
         <label/>
         <name/>
+        <playbook_inputs/>
         <process_definition display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</process_definition>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-08 23:29:18</sys_created_on>
@@ -1962,6 +1961,7 @@
         <on_delete>false</on_delete>
         <on_insert>true</on_insert>
         <on_update>false</on_update>
+        <published_version/>
         <run_flow_in>background</run_flow_in>
         <run_on_extended>false</run_on_extended>
         <run_when_setting>both</run_when_setting>
@@ -1979,5 +1979,41 @@
         <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
         <sys_updated_on>2025-05-27 17:31:15</sys_updated_on>
         <table>x_ndecd_triage_2_0_sli_roi</table>
+        <trigger_definition/>
     </sys_flow_record_trigger>
+    <sys_pd_process_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <description/>
+        <designer_state/>
+        <engine_major_version/>
+        <label>CECCE SLI-ROI</label>
+        <name>cecce_sli_roi</name>
+        <now_assist_prompt/>
+        <permission/>
+        <process_type/>
+        <restartable>RESTARTABLE_FALSE</restartable>
+        <run_on_pad_engine>false</run_on_pad_engine>
+        <run_strategy>run_once</run_strategy>
+        <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
+        <schema_version>2</schema_version>
+        <snapshot display_value="cecce_sli_roi">083bbfcd47fd6e5083857acc416d4302</snapshot>
+        <start_non_blocking>false</start_non_blocking>
+        <status>published</status>
+        <sync_state>COMPLETE</sync_state>
+        <synced_on/>
+        <sys_class_name>sys_pd_process_definition</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-02-08 23:29:18</sys_created_on>
+        <sys_id>238b04b81b104610d991c882604bcbb4</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>CECCE SLI-ROI</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_process_definition_238b04b81b104610d991c882604bcbb4</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-05-27 17:31:15</sys_updated_on>
+        <view_type>KANBAN</view_type>
+    </sys_pd_process_definition>
 </record_update>

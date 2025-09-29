@@ -8,13 +8,18 @@
         <label>CECCE demandes-priorisation SLI apres changement etat non admissible</label>
         <name>cecce_demandes_priorisation_sli_nom_admissible</name>
         <now_assist_prompt/>
+        <permission/>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
+        <run_strategy>run_once</run_strategy>
+        <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
         <schema_version>2</schema_version>
         <snapshot display_value="cecce_demandes_priorisation_sli_nom_admissible">7cebff9847d4261083857acc416d43ae</snapshot>
         <start_non_blocking>false</start_non_blocking>
         <status>draft</status>
+        <sync_state>COMPLETE</sync_state>
+        <synced_on/>
         <sys_class_name>sys_pd_process_definition</sys_class_name>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-17 13:53:51</sys_created_on>
@@ -29,36 +34,8 @@
         <sys_updated_on>2025-03-13 20:57:32</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
-    <sys_pd_process_definition action="INSERT_OR_UPDATE">
-        <access>public</access>
-        <active>true</active>
-        <description/>
-        <designer_state/>
-        <engine_major_version/>
-        <label>CECCE demandes-priorisation SLI apres changement etat non admissible</label>
-        <name>cecce_demandes_priorisation_sli_nom_admissible</name>
-        <now_assist_prompt/>
-        <process_type/>
-        <restartable>RESTARTABLE_FALSE</restartable>
-        <run_on_pad_engine>false</run_on_pad_engine>
-        <schema_version>2</schema_version>
-        <snapshot display_value="cecce_demandes_priorisation_sli_nom_admissible">7cebff9847d4261083857acc416d43ae</snapshot>
-        <start_non_blocking>false</start_non_blocking>
-        <status>draft</status>
-        <sys_class_name>sys_pd_process_definition</sys_class_name>
-        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2024-04-17 13:53:51</sys_created_on>
-        <sys_id>f28d5dfa1b25ca10d991c882604bcbc9</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>CECCE demandes-priorisation SLI apres changement etat non admissible</sys_name>
-        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
-        <sys_update_name>sys_pd_process_definition_f28d5dfa1b25ca10d991c882604bcbc9</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-03-13 20:57:32</sys_updated_on>
-        <view_type>KANBAN</view_type>
-    </sys_pd_process_definition>
+    <sys_pd_process_input action="delete_multiple" query="model=f28d5dfa1b25ca10d991c882604bcbc9"/>
+    <sys_pd_process_output action="delete_multiple" query="model=f28d5dfa1b25ca10d991c882604bcbc9"/>
     <sys_pd_lane action="delete_multiple" query="process_definition=f28d5dfa1b25ca10d991c882604bcbc9^sys_idNOT IN7a8d5dfa1b25ca10d991c882604bcbce"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -69,10 +46,15 @@
         <lane_condition/>
         <name>statut_sli_non_admissible</name>
         <order>1</order>
+        <permission/>
         <process_definition display_value="CECCE demandes-priorisation SLI apres changement etat non admissible">f28d5dfa1b25ca10d991c882604bcbc9</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-17 13:53:51</sys_created_on>
         <sys_id>7a8d5dfa1b25ca10d991c882604bcbce</sys_id>
@@ -96,6 +78,7 @@
         <value>f68d5dfa1b25ca10d991c882604bcbce</value>
         <variable display_value="Lanes">9a070e1ac3e02110f1f504186e40ddd2</variable>
     </sys_variable_value>
+    <sys_pd_timer_attributes action="delete_multiple" query="process_definition=f28d5dfa1b25ca10d991c882604bcbc9"/>
     <sys_pd_activity action="delete_multiple" query="process_definition=f28d5dfa1b25ca10d991c882604bcbc9^sys_idNOT IN368d5dfa1b25ca10d991c882604bcbcf,b28d5dfa1b25ca10d991c882604bcbcf"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -114,7 +97,11 @@
         <process_definition display_value="CECCE demandes-priorisation SLI apres changement etat non admissible">f28d5dfa1b25ca10d991c882604bcbc9</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-17 13:53:51</sys_created_on>
@@ -1325,7 +1312,11 @@
         <process_definition display_value="CECCE demandes-priorisation SLI apres changement etat non admissible">f28d5dfa1b25ca10d991c882604bcbc9</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
         <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
+        <start_rule_name/>
         <start_rule_vars/>
+        <starts_after_activities/>
+        <starts_after_branches/>
+        <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-17 13:53:51</sys_created_on>
@@ -2596,6 +2587,8 @@
         <sys_created_on>2025-03-11 20:04:41</sys_created_on>
         <sys_id>f0ebff9847d4261083857acc416d43b0</sys_id>
     </sys_pd_snapshot_chunk>
+    <sys_pd_snapshot_input action="delete_multiple" query="model=7cebff9847d4261083857acc416d43ae"/>
+    <sys_pd_snapshot_output action="delete_multiple" query="model=7cebff9847d4261083857acc416d43ae"/>
     <sys_flow_compiled_flow action="delete_multiple" query="sys_id=78ebff98a7d42610571c19106e0afeb0^sys_idNOT IN78ebff98a7d42610571c19106e0afeb0"/>
     <sys_flow_compiled_flow action="INSERT_OR_UPDATE">
         <parent_snapshot_id/>
@@ -2650,6 +2643,7 @@
     <sys_pd_trigger_instance action="INSERT_OR_UPDATE">
         <label/>
         <name/>
+        <playbook_inputs/>
         <process_definition display_value="CECCE demandes-priorisation SLI apres changement etat non admissible">f28d5dfa1b25ca10d991c882604bcbc9</process_definition>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-17 13:53:51</sys_created_on>
@@ -2691,4 +2685,39 @@
         <value>x_ndecd_triage_2_0_demandes_priorisation_sli</value>
         <variable display_value="Table">82be38d1ff2200108c8733af793bf1a7</variable>
     </sys_variable_value>
+    <sys_pd_process_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <description/>
+        <designer_state/>
+        <engine_major_version/>
+        <label>CECCE demandes-priorisation SLI apres changement etat non admissible</label>
+        <name>cecce_demandes_priorisation_sli_nom_admissible</name>
+        <now_assist_prompt/>
+        <permission/>
+        <process_type/>
+        <restartable>RESTARTABLE_FALSE</restartable>
+        <run_on_pad_engine>false</run_on_pad_engine>
+        <run_strategy>run_once</run_strategy>
+        <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
+        <schema_version>2</schema_version>
+        <snapshot display_value="cecce_demandes_priorisation_sli_nom_admissible">7cebff9847d4261083857acc416d43ae</snapshot>
+        <start_non_blocking>false</start_non_blocking>
+        <status>draft</status>
+        <sync_state>COMPLETE</sync_state>
+        <synced_on/>
+        <sys_class_name>sys_pd_process_definition</sys_class_name>
+        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2024-04-17 13:53:51</sys_created_on>
+        <sys_id>f28d5dfa1b25ca10d991c882604bcbc9</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>CECCE demandes-priorisation SLI apres changement etat non admissible</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_process_definition_f28d5dfa1b25ca10d991c882604bcbc9</sys_update_name>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-03-13 20:57:32</sys_updated_on>
+        <view_type>KANBAN</view_type>
+    </sys_pd_process_definition>
 </record_update>

@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
     <sysauto_script action="INSERT_OR_UPDATE">
         <active>false</active>
+        <advanced>false</advanced>
         <business_calendar/>
         <condition/>
         <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
         <entered_time>1970-01-01 00:00:00</entered_time>
         <max_drift/>
         <name>roi old values eleve fix</name>
         <offset/>
         <offset_type>0</offset_type>
+        <repeat_every/>
         <run_as display_value="ServiceNowDeveloper3 CECCE">36406d381b3721108d594047bc4bcbeb</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
         <run_period/>
         <run_start>2024-08-20 13:44:07</run_start>
         <run_time>1970-01-01 05:00:00</run_time>
         <run_type>on_demand</run_type>
+        <run_weekinmonth/>
         <script><![CDATA[var grroi = new GlideRecord('x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi');
 grroi.query();
 try {

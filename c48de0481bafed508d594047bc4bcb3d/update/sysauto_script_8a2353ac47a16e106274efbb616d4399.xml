@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
     <sysauto_script action="INSERT_OR_UPDATE">
         <active>true</active>
+        <advanced>true</advanced>
         <business_calendar/>
         <condition/>
         <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
         <entered_time>1970-01-01 00:00:00</entered_time>
         <max_drift/>
         <name>Update email status notifcations ortho admin module</name>
         <offset/>
         <offset_type>0</offset_type>
+        <repeat_every/>
         <run_as display_value="Fredj Kharroubi">6494e0411b7dc250d991c882604bcbe3</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
         <run_period>1970-01-01 01:00:00</run_period>
         <run_start>2025-05-13 15:03:42</run_start>
         <run_time>1970-01-01 05:00:00</run_time>
         <run_type>periodically</run_type>
+        <run_weekinmonth/>
         <script><![CDATA[var gr = new GlideRecord('x_ndecd_triage_2_0_admin_notifications_ortho');
 gr.addQuery('status', 'send-ready').addOrCondition('status', 'send-translation-ready');
 gr.query();
@@ -31,14 +39,14 @@ while (gr.next()) {
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-05-13 15:04:48</sys_created_on>
         <sys_id>8a2353ac47a16e106274efbb616d4399</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Update email status notifcations ortho admin module</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysauto_script_8a2353ac47a16e106274efbb616d4399</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-28 15:03:03</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-09-23 02:09:23</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
