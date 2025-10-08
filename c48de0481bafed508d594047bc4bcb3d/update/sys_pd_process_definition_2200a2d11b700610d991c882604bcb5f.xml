@@ -95,12 +95,19 @@
     <sys_pd_activity action="delete_multiple" query="process_definition=2200a2d11b700610d991c882604bcb5f^sys_idNOT IN133243151bf00610d991c882604bcb7c,2932cfd11bf00610d991c882604bcbfe,040195351b4986508d594047bc4bcb98"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <activity_definition display_value="Create New Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__133243151bf00610d991c882604bcb7c">input_record.orth_d_pistage_sli_requis_ou_non!=sli-requis<item display_value="Dépistage SLI requis" endquery="false" field="input_record.orth_d_pistage_sli_requis_ou_non" goto="false" newquery="false" operator="!=" or="false" value="sli-requis"/>
         </condition_to_run>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Automated Create Record</label>
@@ -931,11 +938,18 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <activity_definition display_value="Create New Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Create Record Roi</label>
@@ -1766,12 +1780,19 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <activity_definition display_value="Create New Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__040195351b4986508d594047bc4bcb98">input_record.orth_d_pistage_sli_requis_ou_non=sli-requis<item display_value="Dépistage SLI requis" endquery="false" field="input_record.orth_d_pistage_sli_requis_ou_non" goto="false" newquery="false" operator="=" or="false" value="sli-requis"/>
         </condition_to_run>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Automated Create Record</label>

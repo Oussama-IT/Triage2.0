@@ -227,11 +227,18 @@
     <sys_pd_activity action="delete_multiple" query="process_definition=295fb7671b858e508d594047bc4bcb18^sys_idNOT IN017dadcc1b9d8250d991c882604bcb12,7f6da5401bdd8250d991c882604bcb51,afff3f671b858e508d594047bc4bcbcf,e918470e91eed0e91f990e9177b0e910,f97d61c01bdd8250d991c882604bcb38"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <activity_definition display_value="Create New Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Create Record TSA/CS</label>
@@ -1076,7 +1083,13 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <activity_definition display_value="Create New Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__7f6da5401bdd8250d991c882604bcb51">input_record.eleve.u_classe=74911a0d1b413950d991c882604bcb59^ORinput_record.eleve.u_classe=78911a0d1b413950d991c882604bcbc2^ORinput_record.eleve.u_classe=fc911a0d1b413950d991c882604bcbc2^ORinput_record.eleve.u_classe=74911a0d1b413950d991c882604bcbc3<item display_table="x_ndecd_triage_2_0_classe" display_value="1" endquery="false" field="input_record.eleve.u_classe" goto="false" newquery="false" operator="=" or="false" value="74911a0d1b413950d991c882604bcb59"/>
             <item display_table="x_ndecd_triage_2_0_classe" display_value="JK" endquery="false" field="input_record.eleve.u_classe" goto="false" newquery="false" operator="=" or="true" value="78911a0d1b413950d991c882604bcbc2"/>
             <item display_table="x_ndecd_triage_2_0_classe" display_value="Pre-K" endquery="false" field="input_record.eleve.u_classe" goto="false" newquery="false" operator="=" or="true" value="fc911a0d1b413950d991c882604bcbc2"/>
@@ -1085,6 +1098,7 @@
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Create Record ROI-CS</label>
@@ -1915,11 +1929,18 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Request Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <activity_definition display_value="Ask For Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Request Ad Hoc Approval</label>
@@ -2751,10 +2772,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="Wait For Condition">5009aca043713110333c145f15b8f212</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description>En attente de la confirmation de réception</description>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Accusé de réception (en attente)</label>
@@ -3726,7 +3754,13 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <activity_definition display_value="Create New Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__f97d61c01bdd8250d991c882604bcb38">input_record.eleve.u_classe=78911a0d1b413950d991c882604bcbc2^ORinput_record.eleve.u_classe=fc911a0d1b413950d991c882604bcbc2^ORinput_record.eleve.u_classe=74911a0d1b413950d991c882604bcbc3<item display_table="x_ndecd_triage_2_0_classe" display_value="JK" endquery="false" field="input_record.eleve.u_classe" goto="false" newquery="false" operator="=" or="false" value="78911a0d1b413950d991c882604bcbc2"/>
             <item display_table="x_ndecd_triage_2_0_classe" display_value="Pre-K" endquery="false" field="input_record.eleve.u_classe" goto="false" newquery="false" operator="=" or="true" value="fc911a0d1b413950d991c882604bcbc2"/>
             <item display_table="x_ndecd_triage_2_0_classe" display_value="SK" endquery="false" field="input_record.eleve.u_classe" goto="false" newquery="false" operator="=" or="true" value="74911a0d1b413950d991c882604bcbc3"/>
@@ -3734,6 +3768,7 @@
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Create Record SCS</label>

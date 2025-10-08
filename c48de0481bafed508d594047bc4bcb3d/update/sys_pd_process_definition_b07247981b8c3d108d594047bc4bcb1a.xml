@@ -150,11 +150,18 @@
     <sys_pd_activity action="delete_multiple" query="process_definition=b07247981b8c3d108d594047bc4bcb1a^sys_idNOT IN3346b90334fde0334120033421803340,79e166b31b5979508d594047bc4bcb5b,7eb3be107eb381307eb3def07eb3f470,ec326ef31b5979508d594047bc4bcb4e"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Request Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <activity_definition display_value="Ask For Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Approbation</label>
@@ -1014,11 +1021,18 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__79e166b31b5979508d594047bc4bcb5b">input_record.active=true<item endquery="false" field="input_record.active" goto="false" newquery="false" operator="=" or="false" value="true"/>
         </condition_to_run>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Affectation d'orthophoniste</label>
@@ -2244,10 +2258,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="Wait For Condition">5009aca043713110333c145f15b8f212</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description>En attente de la confirmation de réception</description>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Accusé de réception (en attente)</label>
@@ -3220,11 +3241,18 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__ec326ef31b5979508d594047bc4bcb4e">input_record.active=true<item endquery="false" field="input_record.active" goto="false" newquery="false" operator="=" or="false" value="true"/>
         </condition_to_run>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Finalisation du process</label>

@@ -81,12 +81,19 @@
     <sys_pd_activity action="delete_multiple" query="process_definition=9358dd721b25ca10d991c882604bcbe2^sys_idNOT INd75855361b25ca10d991c882604bcb2d,575855361b25ca10d991c882604bcb2d,d35855361b25ca10d991c882604bcb2d,5b5855361b25ca10d991c882604bcb2d"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <activity_definition display_value="Create New Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__d75855361b25ca10d991c882604bcb2d">input_record.generer_roi=true<item endquery="false" field="input_record.generer_roi" goto="false" newquery="false" operator="=" or="false" value="true"/>
         </condition_to_run>
         <derivative_order/>
         <derivative_parent/>
         <description>creation d'une entree pour le programme roi apres l'acceptation par l'educatrice de depistage </description>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Automated Create Record</label>
@@ -918,10 +925,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description>À la suite du dépistage SLI, veuillez modifier le statut SLI à Admissible, à risque ou non admissible selon le résultat obtenu.</description>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>À la suite du dépistage SLI, veuillez modifier le statut SLI à Admissible, à risque ou non admissible selon le résultat obtenu.</label>
@@ -2147,10 +2161,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Assignation à une éducatrice pour suivi</label>
@@ -3376,10 +3397,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Clôturer par éducatrice suivi</label>

@@ -107,11 +107,18 @@
     <sys_pd_activity action="delete_multiple" query="process_definition=238b04b81b104610d991c882604bcbb4^sys_idNOT IN008037000858c0008aaa00088400008c,6be7bb081b2006508d594047bc4bcb3e"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Request Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <activity_definition display_value="Ask For Ad Hoc Approval">b54fdecb1b130150db4bba63cc4bcb58</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Request Ad Hoc Approval</label>
@@ -942,12 +949,19 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <activity_definition display_value="Create New Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__6be7bb081b2006508d594047bc4bcb3e">input_record.approval=approved<item display_value="Approved" endquery="false" field="input_record.approval" goto="false" newquery="false" operator="=" or="false" value="approved"/>
         </condition_to_run>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Automated Create Record</label>

@@ -231,12 +231,19 @@
     <sys_pd_activity action="delete_multiple" query="process_definition=9b1ea89c1be006508d594047bc4bcb97^sys_idNOT IN0ba39800bac1700bad2e00ba4be00bae,3ee734e03ee788403ee7bcf03ee7f660,6a7174d01b2406508d594047bc4bcb5d,9d4eaf09d4a8f09d4ee909d461309d41,c9336dfc1be486508d594047bc4bcb05,56de9d381be486508d594047bc4bcb21,73da867073da26c073da730073daeab0,b58f95b81be486508d594047bc4bcb12,e9b4c40e9b25f0e9b9ee0e9bce20e9be,fe8f1db81be486508d594047bc4bcbe3,1adb2601adf0d01ad42801ad9df01adc,59c3751059c3949059c35f6059c38080,7fad9e7c1be886508d594047bc4bcb01,8eaa1708eaab508ea5a208ea3cb08ead"/>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <activity_definition display_value="Create New Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__0ba39800bac1700bad2e00ba4be00bae">input_record.generer_roi=true<item endquery="false" field="input_record.generer_roi" goto="false" newquery="false" operator="=" or="false" value="true"/>
         </condition_to_run>
         <derivative_order/>
         <derivative_parent/>
         <description>Création d'une entrée pour le programme roi après le refus (autorégulation) par l'éducatrice de dépistage </description>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Automated Create Record</label>
@@ -1068,10 +1075,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="Wait For Condition">5009aca043713110333c145f15b8f212</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Attente</label>
@@ -2016,11 +2030,18 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__6a7174d01b2406508d594047bc4bcb5d">input_record.d_pistage_sli_requis_ou_non=sli-requis<item display_value="Dépistage SLI requis" endquery="false" field="input_record.d_pistage_sli_requis_ou_non" goto="false" newquery="false" operator="=" or="false" value="sli-requis"/>
         </condition_to_run>
         <derivative_order/>
         <derivative_parent/>
         <description>creation de formulaire de delegation pour l'educatrice responsable a une educatrice de depistage.</description>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Délégation.</label>
@@ -3246,10 +3267,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>À la suite du dépistage SLI, veuillez modifier le statut SLI à Admissible, à risque ou non admissible selon le résultat obtenu.</label>
@@ -4488,12 +4516,19 @@
     </sys_element_mapping>
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
-        <activity_definition display_value="Automated Create Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <activity_definition display_value="Create New Record">295188c01b3f0010affd0e55cc4bcb01</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__c9336dfc1be486508d594047bc4bcb05">input_record.generer_roi=true<item endquery="false" field="input_record.generer_roi" goto="false" newquery="false" operator="=" or="false" value="true"/>
         </condition_to_run>
         <derivative_order/>
         <derivative_parent/>
         <description>creation d'une entree pour le programme roi apres l'acceptation par l'educatrice de depistage </description>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Automated Create Record</label>
@@ -5325,11 +5360,18 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run table="v_pd_activity_condition_to_run__sys_id__56de9d381be486508d594047bc4bcb21">input_record.d_pistage_sli_requis_ou_non=sli-requis<item display_value="Dépistage SLI requis" endquery="false" field="input_record.d_pistage_sli_requis_ou_non" goto="false" newquery="false" operator="=" or="false" value="sli-requis"/>
         </condition_to_run>
         <derivative_order/>
         <derivative_parent/>
         <description>À la suite du dépistage SLI, veuillez modifier le statut SLI à Admissible, à risque ou non admissible selon le résultat obtenu.</description>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>À la suite du dépistage SLI, veuillez modifier le statut SLI à Admissible, à risque ou non admissible selon le résultat obtenu.</label>
@@ -6555,10 +6597,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>À la suite du dépistage SLI, veuillez modifier le statut SLI à Admissible, à risque ou non admissible selon le résultat obtenu.</label>
@@ -7798,10 +7847,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description>À la suite du dépistage SLI, veuillez modifier le statut SLI à Admissible, à risque ou non admissible selon le résultat obtenu.</description>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>À la suite du dépistage SLI, veuillez modifier le statut SLI à Admissible, à risque ou non admissible selon le résultat obtenu.</label>
@@ -9027,10 +9083,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="Wait For Condition">5009aca043713110333c145f15b8f212</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Attente</label>
@@ -10003,10 +10066,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Assignation à une éducatrice pour suivi</label>
@@ -11232,10 +11302,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description>À la suite du dépistage SLI, veuillez modifier le statut SLI à Admissible, à risque ou non admissible selon le résultat obtenu.</description>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>À la suite du dépistage SLI, veuillez modifier le statut SLI à Admissible, à risque ou non admissible selon le résultat obtenu.</label>
@@ -12475,10 +12552,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Assignation à une éducatrice pour suivi</label>
@@ -13718,10 +13802,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Assignation à une éducatrice pour suivi</label>
@@ -14947,10 +15038,17 @@
     <sys_pd_activity action="INSERT_OR_UPDATE">
         <active>true</active>
         <activity_definition display_value="new Activity">d92991551b9d3d10d991c882604bcb62</activity_definition>
+        <ai_agent_execution_mode/>
+        <ai_agent_obj_additional_detail/>
+        <ai_agent_objective/>
+        <ai_agent_run_as>playbook_user</ai_agent_run_as>
+        <ai_agent_run_with_roles/>
+        <ai_agent_user/>
         <condition_to_run/>
         <derivative_order/>
         <derivative_parent/>
         <description/>
+        <enable_ai_agent>false</enable_ai_agent>
         <inputs/>
         <inputs/>
         <label>Assignation à une éducatrice pour suivi</label>
