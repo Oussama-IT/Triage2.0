@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
     <sysauto_script action="INSERT_OR_UPDATE">
         <active>true</active>
-        <advanced>false</advanced>
+        <advanced>true</advanced>
         <business_calendar/>
         <condition><![CDATA[isJan();
 function isJan() {
@@ -20,7 +20,7 @@ function isJan() {
         <entered_run_start/>
         <entered_time>1970-01-01 00:00:00</entered_time>
         <max_drift/>
-        <name>CECCE run january</name>
+        <name>CECCE run january (ROI)</name>
         <offset/>
         <offset_type>0</offset_type>
         <repeat_every/>
@@ -30,12 +30,12 @@ function isJan() {
         <run_dayofweek>1</run_dayofweek>
         <run_daysofweek/>
         <run_end/>
-        <run_month/>
+        <run_month>1</run_month>
         <run_period/>
         <run_start>2024-04-23 07:12:55</run_start>
         <run_time>1970-01-01 12:55:00</run_time>
         <run_type>monthly</run_type>
-        <run_weekinmonth/>
+        <run_weekinmonth>1</run_weekinmonth>
         <script><![CDATA[var gr = new GlideRecord('x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi');
 gr.query();
 while (gr.next()) {
@@ -50,14 +50,14 @@ while (gr.next()) {
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-23 07:15:34</sys_created_on>
         <sys_id>9c5bfae81bb58250d991c882604bcb25</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>CECCE run january</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>CECCE run january (ROI)</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysauto_script_9c5bfae81bb58250d991c882604bcb25</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-06-04 13:45:03</sys_updated_on>
+        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-12-01 21:20:56</sys_updated_on>
         <time_zone/>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
