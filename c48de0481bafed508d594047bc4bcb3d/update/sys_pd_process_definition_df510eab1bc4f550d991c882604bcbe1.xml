@@ -8,13 +8,13 @@
         <label>CECCE Demande roi workflow</label>
         <name>cecce_demande_roi_workflow</name>
         <now_assist_prompt/>
-        <permission/>
+        <permission>{}</permission>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <run_strategy>run_once</run_strategy>
         <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
-        <schema_version>2</schema_version>
+        <schema_version>3</schema_version>
         <snapshot display_value="cecce_demande_roi_workflow">07601248474aea1083857acc416d43b2</snapshot>
         <start_non_blocking>false</start_non_blocking>
         <status>published</status>
@@ -24,17 +24,100 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-21 14:40:28</sys_created_on>
         <sys_id>df510eab1bc4f550d991c882604bcbe1</sys_id>
-        <sys_mod_count>83</sys_mod_count>
+        <sys_mod_count>84</sys_mod_count>
         <sys_name>CECCE Demande roi workflow</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_df510eab1bc4f550d991c882604bcbe1</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-06-05 17:26:33</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:10</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
-    <sys_pd_process_input action="delete_multiple" query="model=df510eab1bc4f550d991c882604bcbe1"/>
+    <sys_pd_process_input action="delete_multiple" query="model=df510eab1bc4f550d991c882604bcbe1^sys_idNOT IN4cbf251b4705f21083857acc416d43da"/>
+    <sys_pd_process_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.snc.pd.designer.elementmapping.PlaybookInputElementMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Parent record</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>parent_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Parent record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</model>
+        <model_id>df510eab1bc4f550d991c882604bcbe1</model_id>
+        <model_table/>
+        <name>var__m_sys_pd_process_input_df510eab1bc4f550d991c882604bcbe1</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi">x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_pd_process_input</sys_class_name>
+        <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2025-11-11 20:32:10</sys_created_on>
+        <sys_id>4cbf251b4705f21083857acc416d43da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Parent record</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_process_input_4cbf251b4705f21083857acc416d43da</sys_update_name>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:10</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_pd_process_input>
     <sys_pd_process_output action="delete_multiple" query="model=df510eab1bc4f550d991c882604bcbe1"/>
     <sys_pd_lane action="delete_multiple" query="process_definition=df510eab1bc4f550d991c882604bcbe1^sys_idNOT IN5ff14aeb1bc4f550d991c882604bcb3d,1d09bddb1b914e908d594047bc4bcbff,a82286eb1bc4f550d991c882604bcbd2,2d3ec0a11b7c06108d594047bc4bcba8,102950441bed8210d991c882604bcbc0"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
@@ -47,11 +130,11 @@
         <lane_condition/>
         <name>envoi_du_rapport</name>
         <order>1</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -59,9 +142,9 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-21 14:43:12</sys_created_on>
         <sys_id>5ff14aeb1bc4f550d991c882604bcb3d</sys_id>
-        <sys_mod_count>13</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 20:39:47</sys_updated_on>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:10</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=5ff14aeb1bc4f550d991c882604bcb3d"/>
@@ -75,11 +158,11 @@
         <lane_condition/>
         <name>envoi_du_rapport_pour_ortho_direction_1</name>
         <order>2</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -87,9 +170,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-06 18:55:10</sys_created_on>
         <sys_id>1d09bddb1b914e908d594047bc4bcbff</sys_id>
-        <sys_mod_count>10</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 20:39:56</sys_updated_on>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=1d09bddb1b914e908d594047bc4bcbff"/>
@@ -103,21 +186,21 @@
         <lane_condition/>
         <name>traitement</name>
         <order>3</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
-        <starts_after_lanes/>
+        <starts_after_lanes>5ff14aeb1bc4f550d991c882604bcb3d,1d09bddb1b914e908d594047bc4bcbff</starts_after_lanes>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-21 14:43:50</sys_created_on>
         <sys_id>a82286eb1bc4f550d991c882604bcbd2</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-02-24 17:34:56</sys_updated_on>
+        <sys_updated_on>2025-11-11 20:32:10</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=a82286eb1bc4f550d991c882604bcbd2"/>
@@ -144,21 +227,21 @@
         <lane_condition/>
         <name>ajout_cote_priorisation</name>
         <order>4</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
-        <starts_after_lanes/>
+        <starts_after_lanes>a82286eb1bc4f550d991c882604bcbd2</starts_after_lanes>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-07 04:07:46</sys_created_on>
         <sys_id>2d3ec0a11b7c06108d594047bc4bcba8</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-11 14:24:05</sys_updated_on>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=2d3ec0a11b7c06108d594047bc4bcba8"/>
@@ -186,21 +269,21 @@
         <lane_condition/>
         <name>envoi_du_rapport_pour_la_direction_evaluation_non_requise</name>
         <order>5</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
-        <starts_after_lanes/>
+        <starts_after_lanes>2d3ec0a11b7c06108d594047bc4bcba8</starts_after_lanes>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-08 19:51:39</sys_created_on>
         <sys_id>102950441bed8210d991c882604bcbc0</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 20:40:05</sys_updated_on>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=102950441bed8210d991c882604bcbc0"/>
@@ -243,8 +326,8 @@
         <outputs/>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -253,9 +336,9 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-01 14:39:27</sys_created_on>
         <sys_id>244523eb1ba082908d594047bc4bcb96</sys_id>
-        <sys_mod_count>19</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-12 20:01:55</sys_updated_on>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -1465,8 +1548,8 @@
         <outputs/>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -1475,9 +1558,9 @@
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-05-21 16:37:10</sys_created_on>
         <sys_id>35efca9035ef381035ef36c035ef9080</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 16:38:09</sys_updated_on>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -2448,8 +2531,8 @@
         <outputs/>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -2458,9 +2541,9 @@
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-05-21 16:29:58</sys_created_on>
         <sys_id>3c631603c67a503c6c6703c614503c6f</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 16:35:41</sys_updated_on>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -3431,8 +3514,8 @@
         <outputs/>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -3441,9 +3524,9 @@
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-05-21 16:36:01</sys_created_on>
         <sys_id>4170a0604170fc304170176041705e40</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 16:36:59</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -4414,8 +4497,8 @@
         <outputs/>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -4424,9 +4507,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-07 04:08:40</sys_created_on>
         <sys_id>fa6ec0a11b7c06108d594047bc4bcbaa</sys_id>
-        <sys_mod_count>16</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-22 01:54:17</sys_updated_on>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -5636,19 +5719,19 @@
         <outputs/>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
-        <starts_after_activities/>
+        <starts_after_activities>fa6ec0a11b7c06108d594047bc4bcbaa</starts_after_activities>
         <starts_after_branches/>
         <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-11 15:02:24</sys_created_on>
         <sys_id>0e6a8fb61bb40210d991c882604bcbdf</sys_id>
-        <sys_mod_count>13</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-12 20:06:14</sys_updated_on>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -6872,19 +6955,19 @@
         <outputs/>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
-        <starts_after_activities/>
+        <starts_after_activities>244523eb1ba082908d594047bc4bcb96</starts_after_activities>
         <starts_after_branches/>
         <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-01 15:27:39</sys_created_on>
         <sys_id>e6403bab1ba48e50d991c882604bcbcd</sys_id>
-        <sys_mod_count>22</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-12 20:04:25</sys_updated_on>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -8122,19 +8205,19 @@
         <outputs/>
         <process_definition display_value="CECCE Demande roi workflow">df510eab1bc4f550d991c882604bcbe1</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Activities">7abaf173c35101102a86cb03b940dd62</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
-        <starts_after_activities/>
+        <starts_after_activities>e6403bab1ba48e50d991c882604bcbcd</starts_after_activities>
         <starts_after_branches/>
         <starts_after_lanes/>
         <swim_lane/>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-10-10 14:23:55</sys_created_on>
         <sys_id>765687e11bb97110d991c882604bcb65</sys_id>
-        <sys_mod_count>24</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-14 21:35:47</sys_updated_on>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:09</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -9508,6 +9591,7 @@
         <value/>
         <variable display_value="Condition">2a8a7851ff2200108c8733af793bf131</variable>
     </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_pd_process_input_df510eab1bc4f550d991c882604bcbe1^id=1751ceab1bc4f550d991c882604bcbcf"/>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=1751ceab1bc4f550d991c882604bcbcf^sys_idNOT IN03601248474aea1083857acc416d43b2"/>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -9561,13 +9645,13 @@
         <label>CECCE Demande roi workflow</label>
         <name>cecce_demande_roi_workflow</name>
         <now_assist_prompt/>
-        <permission/>
+        <permission>{}</permission>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <run_strategy>run_once</run_strategy>
         <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
-        <schema_version>2</schema_version>
+        <schema_version>3</schema_version>
         <snapshot display_value="cecce_demande_roi_workflow">07601248474aea1083857acc416d43b2</snapshot>
         <start_non_blocking>false</start_non_blocking>
         <status>published</status>
@@ -9577,14 +9661,14 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-07-21 14:40:28</sys_created_on>
         <sys_id>df510eab1bc4f550d991c882604bcbe1</sys_id>
-        <sys_mod_count>83</sys_mod_count>
+        <sys_mod_count>84</sys_mod_count>
         <sys_name>CECCE Demande roi workflow</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_df510eab1bc4f550d991c882604bcbe1</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-06-05 17:26:33</sys_updated_on>
+        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2025-11-11 20:32:10</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
 </record_update>
