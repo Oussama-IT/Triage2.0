@@ -8,13 +8,13 @@
         <label>CECCE TSA</label>
         <name>cecce_tsa</name>
         <now_assist_prompt/>
-        <permission/>
+        <permission>{}</permission>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <run_strategy>run_once</run_strategy>
         <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
-        <schema_version>2</schema_version>
+        <schema_version>3</schema_version>
         <snapshot display_value="cecce_tsa">925d221147fbae1083857acc416d4351</snapshot>
         <start_non_blocking>false</start_non_blocking>
         <status>published</status>
@@ -24,17 +24,100 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-26 13:04:47</sys_created_on>
         <sys_id>295fb7671b858e508d594047bc4bcb18</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>CECCE TSA</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_295fb7671b858e508d594047bc4bcb18</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-09-04 16:35:13</sys_updated_on>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:53</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
-    <sys_pd_process_input action="delete_multiple" query="model=295fb7671b858e508d594047bc4bcb18"/>
+    <sys_pd_process_input action="delete_multiple" query="model=295fb7671b858e508d594047bc4bcb18^sys_idNOT IN560b77ed47dbf61083857acc416d4355"/>
+    <sys_pd_process_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.snc.pd.designer.elementmapping.PlaybookInputElementMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Parent record</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>parent_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Parent record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</model>
+        <model_id>295fb7671b858e508d594047bc4bcb18</model_id>
+        <model_table/>
+        <name>var__m_sys_pd_process_input_295fb7671b858e508d594047bc4bcb18</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_ndecd_triage_2_0_demande_tsa">x_ndecd_triage_2_0_demande_tsa</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_pd_process_input</sys_class_name>
+        <sys_created_by>ZAGUINO@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-02-26 16:32:53</sys_created_on>
+        <sys_id>560b77ed47dbf61083857acc416d4355</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Parent record</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_process_input_560b77ed47dbf61083857acc416d4355</sys_update_name>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_pd_process_input>
     <sys_pd_process_output action="delete_multiple" query="model=295fb7671b858e508d594047bc4bcb18"/>
     <sys_pd_lane action="delete_multiple" query="process_definition=295fb7671b858e508d594047bc4bcb18^sys_idNOT IN2caf37671b858e508d594047bc4bcb55,63022d841b9d8250d991c882604bcb36,ed5d61c01bdd8250d991c882604bcb74,4e363e2c1b9182908d594047bc4bcb7c,c5a5d00c5a8ee0c5a08d0c5a30d0c5ae"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
@@ -45,11 +128,11 @@
         <lane_condition/>
         <name>approval</name>
         <order>1</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -57,9 +140,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-26 13:06:06</sys_created_on>
         <sys_id>2caf37671b858e508d594047bc4bcb55</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-26 13:06:14</sys_updated_on>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:52</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=2caf37671b858e508d594047bc4bcb55"/>
@@ -71,21 +154,21 @@
         <lane_condition/>
         <name>envoi_du_rapport</name>
         <order>2</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
-        <starts_after_lanes/>
+        <starts_after_lanes>2caf37671b858e508d594047bc4bcb55</starts_after_lanes>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-27 14:54:35</sys_created_on>
         <sys_id>63022d841b9d8250d991c882604bcb36</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-21 14:31:12</sys_updated_on>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:53</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=63022d841b9d8250d991c882604bcb36"/>
@@ -111,21 +194,21 @@
         <lane_condition/>
         <name>records_creation</name>
         <order>3</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
-        <starts_after_lanes/>
+        <starts_after_lanes>63022d841b9d8250d991c882604bcb36</starts_after_lanes>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-27 15:43:52</sys_created_on>
         <sys_id>ed5d61c01bdd8250d991c882604bcb74</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-27 14:56:11</sys_updated_on>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:53</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=ed5d61c01bdd8250d991c882604bcb74"/>
@@ -151,21 +234,21 @@
         <lane_condition/>
         <name>envo</name>
         <order>4</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
-        <starts_after_lanes/>
+        <starts_after_lanes>ed5d61c01bdd8250d991c882604bcb74</starts_after_lanes>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-29 10:19:15</sys_created_on>
         <sys_id>4e363e2c1b9182908d594047bc4bcb7c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-27 14:52:15</sys_updated_on>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:53</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=4e363e2c1b9182908d594047bc4bcb7c"/>
@@ -191,21 +274,21 @@
         <lane_condition/>
         <name>new_stage</name>
         <order>5</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
-        <starts_after_lanes/>
+        <starts_after_lanes>4e363e2c1b9182908d594047bc4bcb7c</starts_after_lanes>
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-09-27 14:52:32</sys_created_on>
         <sys_id>c5a5d00c5a8ee0c5a08d0c5a30d0c5ae</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-27 14:52:38</sys_updated_on>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:53</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=c5a5d00c5a8ee0c5a08d0c5a30d0c5ae"/>
@@ -248,8 +331,8 @@
         <outputs/>
         <process_definition display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -258,9 +341,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-27 15:44:23</sys_created_on>
         <sys_id>017dadcc1b9d8250d991c882604bcb12</sys_id>
-        <sys_mod_count>26</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 16:23:22</sys_updated_on>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:51</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -1108,8 +1191,8 @@
         <outputs/>
         <process_definition display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -1118,9 +1201,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-27 15:44:17</sys_created_on>
         <sys_id>7f6da5401bdd8250d991c882604bcb51</sys_id>
-        <sys_mod_count>24</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 16:23:02</sys_updated_on>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:51</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -1950,8 +2033,8 @@
         <outputs/>
         <process_definition display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -1960,9 +2043,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-26 13:07:40</sys_created_on>
         <sys_id>afff3f671b858e508d594047bc4bcbcf</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-03-26 13:09:18</sys_updated_on>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:52</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -2792,8 +2875,8 @@
         <outputs/>
         <process_definition display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -2802,9 +2885,9 @@
         <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2025-05-14 13:32:44</sys_created_on>
         <sys_id>e918470e91eed0e91f990e9177b0e910</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-14 13:33:50</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:52</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -3778,8 +3861,8 @@
         <outputs/>
         <process_definition display_value="CECCE TSA">295fb7671b858e508d594047bc4bcb18</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -3788,9 +3871,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-27 15:44:26</sys_created_on>
         <sys_id>f97d61c01bdd8250d991c882604bcb38</sys_id>
-        <sys_mod_count>25</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 16:23:12</sys_updated_on>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:52</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -4764,6 +4847,7 @@
         <value>x_ndecd_triage_2_0_demande_tsa</value>
         <variable display_value="Table">a8ae38d1ff2200108c8733af793bf15c</variable>
     </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_pd_process_input_295fb7671b858e508d594047bc4bcb18^id=ed5f7f271b858e508d594047bc4bcbb7"/>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=ed5f7f271b858e508d594047bc4bcbb7^sys_idNOT INd25d221147fbae1083857acc416d4350"/>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -4817,13 +4901,13 @@
         <label>CECCE TSA</label>
         <name>cecce_tsa</name>
         <now_assist_prompt/>
-        <permission/>
+        <permission>{}</permission>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <run_strategy>run_once</run_strategy>
         <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
-        <schema_version>2</schema_version>
+        <schema_version>3</schema_version>
         <snapshot display_value="cecce_tsa">925d221147fbae1083857acc416d4351</snapshot>
         <start_non_blocking>false</start_non_blocking>
         <status>published</status>
@@ -4833,14 +4917,14 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-03-26 13:04:47</sys_created_on>
         <sys_id>295fb7671b858e508d594047bc4bcb18</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>31</sys_mod_count>
         <sys_name>CECCE TSA</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_295fb7671b858e508d594047bc4bcb18</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-09-04 16:35:13</sys_updated_on>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-02-26 16:32:53</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
 </record_update>
