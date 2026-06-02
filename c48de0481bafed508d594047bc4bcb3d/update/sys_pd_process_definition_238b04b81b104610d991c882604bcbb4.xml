@@ -8,14 +8,14 @@
         <label>CECCE SLI-ROI</label>
         <name>cecce_sli_roi</name>
         <now_assist_prompt/>
-        <permission/>
+        <permission>{}</permission>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <run_strategy>run_once</run_strategy>
         <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
-        <schema_version>2</schema_version>
-        <snapshot display_value="cecce_sli_roi">083bbfcd47fd6e5083857acc416d4302</snapshot>
+        <schema_version>3</schema_version>
+        <snapshot display_value="cecce_sli_roi">306502ac47d9c3506274efbb616d4361</snapshot>
         <start_non_blocking>false</start_non_blocking>
         <status>published</status>
         <sync_state>COMPLETE</sync_state>
@@ -24,17 +24,100 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-08 23:29:18</sys_created_on>
         <sys_id>238b04b81b104610d991c882604bcbb4</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>CECCE SLI-ROI</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_238b04b81b104610d991c882604bcbb4</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 17:31:15</sys_updated_on>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:30:31</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
-    <sys_pd_process_input action="delete_multiple" query="model=238b04b81b104610d991c882604bcbb4"/>
+    <sys_pd_process_input action="delete_multiple" query="model=238b04b81b104610d991c882604bcbb4^sys_idNOT INca35ce2c47d9c3506274efbb616d4322"/>
+    <sys_pd_process_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.snc.pd.designer.elementmapping.PlaybookInputElementMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Parent record</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>parent_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Parent record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</model>
+        <model_id>238b04b81b104610d991c882604bcbb4</model_id>
+        <model_table/>
+        <name>var__m_sys_pd_process_input_238b04b81b104610d991c882604bcbb4</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_ndecd_triage_2_0_sli_roi">x_ndecd_triage_2_0_sli_roi</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_pd_process_input</sys_class_name>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:29:46</sys_created_on>
+        <sys_id>ca35ce2c47d9c3506274efbb616d4322</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Parent record</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_process_input_ca35ce2c47d9c3506274efbb616d4322</sys_update_name>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:29:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_pd_process_input>
     <sys_pd_process_output action="delete_multiple" query="model=238b04b81b104610d991c882604bcbb4"/>
     <sys_pd_lane action="delete_multiple" query="process_definition=238b04b81b104610d991c882604bcbb4^sys_idNOT IN12ab48b81b104610d991c882604bcbe6,2a44b3441b2006508d594047bc4bcb61"/>
     <sys_pd_lane action="INSERT_OR_UPDATE">
@@ -45,11 +128,11 @@
         <lane_condition/>
         <name>approbation</name>
         <order>1</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">b823830967fc41ddb84959d97897b1ae</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -57,9 +140,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-08 23:29:45</sys_created_on>
         <sys_id>12ab48b81b104610d991c882604bcbe6</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-02-08 23:30:08</sys_updated_on>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:29:46</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=12ab48b81b104610d991c882604bcbe6"/>
@@ -71,21 +154,21 @@
         <lane_condition/>
         <name>delegation</name>
         <order>2</order>
-        <permission/>
+        <permission>{}</permission>
         <process_definition display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="After Lanes">7407ca1ac3e02110f1f504186e40dd50</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>after_items</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
-        <starts_after_lanes/>
+        <starts_after_lanes>12ab48b81b104610d991c882604bcbe6</starts_after_lanes>
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-19 18:46:23</sys_created_on>
         <sys_id>2a44b3441b2006508d594047bc4bcb61</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>servicenowdeveloper3@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-04-11 14:23:25</sys_updated_on>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:29:46</sys_updated_on>
         <visible_rule/>
     </sys_pd_lane>
     <sys_variable_value action="delete_multiple" query="document_key=2a44b3441b2006508d594047bc4bcb61"/>
@@ -128,8 +211,8 @@
         <outputs/>
         <process_definition display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -138,9 +221,9 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-04-11 23:45:16</sys_created_on>
         <sys_id>008037000858c0008aaa00088400008c</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-04-09 03:11:23</sys_updated_on>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:29:46</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -971,8 +1054,8 @@
         <outputs/>
         <process_definition display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</process_definition>
         <restart_rule>RUN_ONLY_ONCE</restart_rule>
-        <start_rule display_value="Immediately">ef8ab8c0a3f04bceb117263f51401070</start_rule>
-        <start_rule_name/>
+        <start_rule/>
+        <start_rule_name>immediate</start_rule_name>
         <start_rule_vars/>
         <starts_after_activities/>
         <starts_after_branches/>
@@ -981,9 +1064,9 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-19 19:02:18</sys_created_on>
         <sys_id>6be7bb081b2006508d594047bc4bcb3e</sys_id>
-        <sys_mod_count>40</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 16:48:30</sys_updated_on>
+        <sys_mod_count>44</sys_mod_count>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:30:27</sys_updated_on>
         <type_vals/>
         <type_vals/>
         <variant/>
@@ -1530,11 +1613,11 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-19 19:02:18</sys_created_on>
         <sys_id>a7e7b7481b2006508d594047bc4bcbe1</sys_id>
-        <sys_mod_count>26</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 16:48:30</sys_updated_on>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:30:27</sys_updated_on>
         <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
-        <value>nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}0^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^scorepriorisationroi={{pd.inputRecord.scoreroi}}^est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte={{pd.inputRecord.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte}}^situation_familiale_de_l_l_ve={{pd.inputRecord.situation_familiale_de_l_l_ve}}^est_ce_que_l_l_ve_a_un_diagnostic={{pd.inputRecord.est_ce_que_l_l_ve_a_un_diagnostic}}^autre_situation_explication={{pd.inputRecord.autre_situation_explication}}^d_pistage_sli_requis_ou_non=sli-requis^generer_roi=true^soumis_par=eq-eco^short_description=Demandes/priorisation SLI: {{pd.inputRecord.l_ve.name}}^</value>
+        <value>nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}0^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^scorepriorisationroi={{pd.inputRecord.scoreroi}}^est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte={{pd.inputRecord.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte}}^situation_familiale_de_l_l_ve={{pd.inputRecord.situation_familiale_de_l_l_ve}}^est_ce_que_l_l_ve_a_un_diagnostic={{pd.inputRecord.est_ce_que_l_l_ve_a_un_diagnostic}}^autre_situation_explication={{pd.inputRecord.autre_situation_explication}}^d_pistage_sli_requis_ou_non=sli-requis^generer_roi=true^soumis_par=eq-eco^short_description=Demandes/priorisation SLI: {{pd.inputRecord.l_ve.name}}^state=1^</value>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_02f0b88cc3c632002841b63b12d3aeff^id=6be7bb081b2006508d594047bc4bcb3e"/>
     <sys_element_mapping action="delete_multiple" query="id=6be7bb081b2006508d594047bc4bcb3e"/>
@@ -1784,126 +1867,209 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-19 19:02:18</sys_created_on>
         <sys_id>a7e7b7481b2006508d594047bc4bcbe1</sys_id>
-        <sys_mod_count>26</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 16:48:30</sys_updated_on>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:30:27</sys_updated_on>
         <table>var__m_sys_hub_action_input_02f0b88cc3c632002841b63b12d3aeff</table>
-        <value>nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}0^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^scorepriorisationroi={{pd.inputRecord.scoreroi}}^est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte={{pd.inputRecord.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte}}^situation_familiale_de_l_l_ve={{pd.inputRecord.situation_familiale_de_l_l_ve}}^est_ce_que_l_l_ve_a_un_diagnostic={{pd.inputRecord.est_ce_que_l_l_ve_a_un_diagnostic}}^autre_situation_explication={{pd.inputRecord.autre_situation_explication}}^d_pistage_sli_requis_ou_non=sli-requis^generer_roi=true^soumis_par=eq-eco^short_description=Demandes/priorisation SLI: {{pd.inputRecord.l_ve.name}}^</value>
+        <value>nom_de_l_l_ve={{pd.inputRecord.l_ve}}^opened_by={{pd.inputRecord.opened_by}}^number={{pd.inputRecord.number}}^parent={{pd.inputRecord}}^suivis_ant_rieurs_ou_non={{pd.inputRecord.l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs}}^suivis_anterieurs={{pd.inputRecord.lequel_s_programmes}}^score_de_priorisation={{pd.inputRecord.scoresli}}0^langue_dominante={{pd.inputRecord.quelle_est_la_langue_dominante_de_l_l_ve_langue_dans_laquelle_l_enfant_s_expri}}^scorepriorisationroi={{pd.inputRecord.scoreroi}}^est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte={{pd.inputRecord.est_ce_que_l_l_ve_fr_quente_pr_sentement_une_classe_distincte}}^situation_familiale_de_l_l_ve={{pd.inputRecord.situation_familiale_de_l_l_ve}}^est_ce_que_l_l_ve_a_un_diagnostic={{pd.inputRecord.est_ce_que_l_l_ve_a_un_diagnostic}}^autre_situation_explication={{pd.inputRecord.autre_situation_explication}}^d_pistage_sli_requis_ou_non=sli-requis^generer_roi=true^soumis_par=eq-eco^short_description=Demandes/priorisation SLI: {{pd.inputRecord.l_ve.name}}^state=1^</value>
     </sys_element_mapping>
     <sys_pd_process_variant action="delete_multiple" query="process_definition=238b04b81b104610d991c882604bcbb4"/>
     <sys_pd_derivative action="delete_multiple" query="derivative_parent=008037000858c0008aaa00088400008c"/>
     <sys_pd_derivative action="delete_multiple" query="derivative_parent=6be7bb081b2006508d594047bc4bcb3e"/>
     <sys_pd_activity_override action="delete_multiple" query="override_parent=008037000858c0008aaa00088400008c"/>
     <sys_pd_activity_override action="delete_multiple" query="override_parent=6be7bb081b2006508d594047bc4bcb3e"/>
-    <sys_pd_snapshot action="delete_multiple" query="sys_id=083bbfcd47fd6e5083857acc416d4302^sys_idNOT IN083bbfcd47fd6e5083857acc416d4302"/>
+    <sys_pd_snapshot action="delete_multiple" query="sys_id=306502ac47d9c3506274efbb616d4361^sys_idNOT IN306502ac47d9c3506274efbb616d4361"/>
     <sys_pd_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
-        <derivatives>{"table":"sys_pd_snapshot","id":"083bbfcd47fd6e5083857acc416d4302","name":"derivatives","type":"com.snc.pd.model.serialization.DerivativeFetcher"}</derivatives>
+        <derivatives>{"table":"sys_pd_snapshot","id":"306502ac47d9c3506274efbb616d4361","name":"derivatives","type":"com.snc.pd.model.serialization.DerivativeFetcher"}</derivatives>
         <name>cecce_sli_roi</name>
-        <process_definition>{"table":"sys_pd_snapshot","id":"083bbfcd47fd6e5083857acc416d4302","name":"process_definition","type":"com.snc.pd.model.ProcessDefinition"}</process_definition>
-        <process_dependencies>{"table":"sys_pd_snapshot","id":"083bbfcd47fd6e5083857acc416d4302","name":"process_dependencies","type":"com.snc.pd.model.dependency.InstructionBasedProcessDependenciesCollection"}</process_dependencies>
-        <process_plan>{"table":"sys_pd_snapshot","id":"083bbfcd47fd6e5083857acc416d4302","name":"process_plan","type":"com.snc.process_flow.engine.ProcessPlan"}</process_plan>
+        <process_definition>{"table":"sys_pd_snapshot","id":"306502ac47d9c3506274efbb616d4361","name":"process_definition","type":"com.snc.pd.model.ProcessDefinition"}</process_definition>
+        <process_dependencies>{"table":"sys_pd_snapshot","id":"306502ac47d9c3506274efbb616d4361","name":"process_dependencies","type":"com.snc.pd.model.dependency.InstructionBasedProcessDependenciesCollection"}</process_dependencies>
+        <process_plan>{"table":"sys_pd_snapshot","id":"306502ac47d9c3506274efbb616d4361","name":"process_plan","type":"com.snc.process_flow.engine.ProcessPlan"}</process_plan>
         <source display_value="CECCE SLI-ROI">238b04b81b104610d991c882604bcbb4</source>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>083bbfcd47fd6e5083857acc416d4302</sys_id>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>306502ac47d9c3506274efbb616d4361</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 17:31:15</sys_updated_on>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:30:31</sys_updated_on>
     </sys_pd_snapshot>
-    <sys_json_chunk action="delete_multiple" query="document_id=083bbfcd47fd6e5083857acc416d4302"/>
-    <sys_pd_snapshot_chunk action="delete_multiple" query="document_id=083bbfcd47fd6e5083857acc416d4302^sys_idNOT IN403bbfcd47fd6e5083857acc416d4303,483bbfcd47fd6e5083857acc416d4303,4c3bbfcd47fd6e5083857acc416d4303,843bbfcd47fd6e5083857acc416d4304"/>
+    <sys_json_chunk action="delete_multiple" query="document_id=306502ac47d9c3506274efbb616d4361"/>
+    <sys_pd_snapshot_chunk action="delete_multiple" query="document_id=306502ac47d9c3506274efbb616d4361^sys_idNOT IN386502ac47d9c3506274efbb616d4363,386502ac47d9c3506274efbb616d4364,706502ac47d9c3506274efbb616d4363,fc6502ac47d9c3506274efbb616d4363"/>
     <sys_pd_snapshot_chunk action="INSERT_OR_UPDATE">
-        <data>H4sIAAAAAAAA/+1YW2vjRhj9K2boY9LO6K5AYb2pSwNu0joXWJYg5vJNMlSW3JFsMCb/vZ8uvmQtr+U0D6XkJTKj+W7nHI2OsiJGkQviuJGgnoiYYNQLGFVxzGQUOQEuSiE8ckYyPgXcKUFKSIrUJDY3uJxyASmuX44uL0eD2/HV+eTmql7PoCAXX1dNAeZw4UWHCkCwLcBnM5sLXpo8w8Wi5LYkF20WVwUs1JJBqFUAPo183wEK4CpHuAG4nVl+aHKcES5LszDlMlGgTWbqChfZPE23U3SFKSikNbPX2zPoN1RuFdh1WJ0xsfMU9leScjnrWl5wizCuXs6Ihf14mWeqHiQpc7yxaVDBDDIFmTQ1CY/VijULHGzRsqJNWladEWwSaxielVdqHV6DvYNYH+hfHtu+f4GUL29qvNrOd0fLF2CtUVDfwnvY5obesK2hdVNDRQqAaQ5+IEP/EL1VhpPJbYI+qF32gf2N1LZTbegVbZ04aOo4woeAaS9SfhDrQ/Sus5xM8Tbwg+ZlH/jfSPMa++H+wd1OSsx0CsrwErYdmd23A6URdUOKFz+S1YVzXl0ij1YXuVWGhb/niGLCVfKcy6Tme8HTQ+ogwve0AimQYJcy1LbwhOCBK2VFsB/tvMEmTerBUA1+y+VguE39Sj+EvEE97DuA7CmIgI64QCC4q6tMIBgLncDVPvMooyElvfRFJvfXyc31+Av+uRyRLqkR8j5C68HfjhCP7j4qRDI2RfVgv5biY9cwB/Ls4ffN03iXT9YAfRfVl7NWwg73POF6HhMOpQG+H5Ufe9QLRS20gG0lrCCFp25/o9cvWdU8oqEUNPZCpoVyHQ6iK8kp9qYj6vDZ2GOi/83ZeBT4d3A3LmtqOLSpEUQaq4nIiSlnGmQnub3NzV7MB7HLPqC/k7cJ2zpua48D5QWe74SAB7b0DpB7krXpjPsgedkH/H/pbC4t1MAPBgqmHHsvfppZk1tTNMv41fut4+EaJ0iaj+BuzxMICIWgUTdBLuy44XmZT9ErqERWjUBiQSJ3Bz2PE/sswjcrE+gfEAKOvp6C7zeeh7IdzzNcpx7UM8Jgsk59yPP019V/1fOYbDYvWwx/XBvIn5sfoN7JEfVgd0fAR3cfd0Qb4o55ouOu9QTXtFr/n2dFPsmUF/iLXGUPtWv+VAMhaRRwcMNz7YM898KQnQs/hnM3DmVMQ4f7TNcopvOellqZYoaNPfSPKGGKESU0hD3zoo0t7RzOGj3cF0j9heZpgSuFwf1w1wB788fwz/tR0+LdJlFDNSKd29+hKPjTZs2CBotoN9qpjpHTTeXjZgMXzf3R7d1wcjf8PB4lvw7Ht6Ot8FqJonqxZDGGBaTD3eOmYlPm9SgSv/WAeggV16D2ZFapp5DPeMQ9gC3qB99pOb/Os89pLv8y2VOL0ss/pto8HjoUAAA=</data>
-        <document_id display_value="cecce_sli_roi">083bbfcd47fd6e5083857acc416d4302</document_id>
-        <field>process_definition</field>
-        <length>1440</length>
-        <position>0</position>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>403bbfcd47fd6e5083857acc416d4303</sys_id>
-    </sys_pd_snapshot_chunk>
-    <sys_pd_snapshot_chunk action="INSERT_OR_UPDATE">
-        <data>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</data>
-        <document_id display_value="cecce_sli_roi">083bbfcd47fd6e5083857acc416d4302</document_id>
+        <data>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</data>
+        <document_id display_value="cecce_sli_roi">306502ac47d9c3506274efbb616d4361</document_id>
         <field>derivatives</field>
-        <length>4064</length>
+        <length>5040</length>
         <position>0</position>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>483bbfcd47fd6e5083857acc416d4303</sys_id>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>386502ac47d9c3506274efbb616d4363</sys_id>
     </sys_pd_snapshot_chunk>
     <sys_pd_snapshot_chunk action="INSERT_OR_UPDATE">
-        <data>H4sIAAAAAAAA/61UPW/DIBT8L6hjhseHAXurlKVDp45RBh48IkspjmInS5T/XojTrRVUqpfn4XTv7ji4sdN58jTPWzpRCpT8SDMbbuwF3Uzl5+rOo0vLW2BDuhyPG3Z0iV79Ml7HJWPf3amghFMKpVIcBYDuwIauV6AMeoUeNWfDjmkkgwj2Z4wktt8wLhwqixnDQWkOoe+5t1ZoKBjShQfAgjSQR2d9Gc65MqyCMjzb3zfMpexqmc4ftDwlVtcPuyygxUhVZOapinxsa7BbzIzJT59jOjydyKC5iZ6TiUFT1th1goBIBoFSkywahbSYSX5hRlU0NiTC4veusO4yHqFXhkcMUjjCwmOemBhXTLCBiEdHnfamW/XUD60ps7r3coY174WHrzwCVh5tY3aIVvTgeKSHnqr3zFP1nnmqu5ouR+7BdFkO09960JJ7Sw9a8mrpQUufWnrwX7m33JOWHrQ8bk29rPb7nr8vXen1ELcFAAA=</data>
-        <document_id display_value="cecce_sli_roi">083bbfcd47fd6e5083857acc416d4302</document_id>
-        <field>process_dependencies</field>
-        <length>496</length>
-        <position>0</position>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>4c3bbfcd47fd6e5083857acc416d4303</sys_id>
-    </sys_pd_snapshot_chunk>
-    <sys_pd_snapshot_chunk action="INSERT_OR_UPDATE">
-        <data>H4sIAAAAAAAA/11SXW/iMBD8L/ucByihcLxxUE5IpZVSdDycKrSxF+I7x2v5o1dU8d/PCUmu6ps9nt3ZGe8HKAkLE7XOwGBNsABBQtDRa3V0rCADth4Wv14zKDWLP+n8cc3ABwwN+bDc7rdPP6BFztQxyZyVoRVaLJVW4fKTnFdsYDEeZaD8nnwoYrqeUHvKwJFgJw8YREXuKcq2z22moOqv0Bu6bggXzTIdwV98oBpa4KBCVbDuJ7EYPcmC0DfyALeOey7Ix9ZtQir0awz4EhxhPQxFzrHbkffJVi+dmA8NPJBSNht2BVl2QZlzz5NcozLbIVmNPrSFK4znKgzlFh2ZsF0PbjmgfrbkMKS4/MM7iRgotUmx8VuaSEk61mjtJy1v0PqKQ6MGo/mkLE9C5rOTvKdpus6nMxQiH9/LfDK66//pUaXEDLm+iUCtU88Xjk7QV1Cw/Y+xVSQ3juseiU1Ax5oCyhRij7JTaQW6fzpp/rtOBKXTPZm035tN2l+atrB5fD5AX7CVSyObh0+VnT6IfC5plM/HJZ5IJm9y+i0f5bNS5KUoJxKu/eLt8De7Yefubk5azRVHE3ZoBzuV0nLFJtB7CrBbses/KtsqbBUDAAA=</data>
-        <document_id display_value="cecce_sli_roi">083bbfcd47fd6e5083857acc416d4302</document_id>
+        <data>H4sIAAAAAAAA/22SW28aMRCF/4uf92GB5RLeKIRopUAkgspDVaFZe9h16rUtX9KgiP/e8QLbqOqbdTwef3POfDIp2FxHpTKmoUU2Zxw5x6NX8uiMZBkz1rP5j58Zq5Thv+j8ecmYDxBS8WFR7svtE+uUGm+VqGupcQkWKqlkOH9H56XRbD6cDfI8Y9Lv0YddJOUEymPGHHLjxAECb9Bto+haXbGCbP+V3sHdOFzUCzoyf/YBW9YJBxmanVF3GAvRo9gh+ETA2LXj3uzQx25gUhrwKwjwGhxC20Ohc8Zt0Hua7P6112B9Y0JJtrFRPhnnQ+DFVDzw0TifDKcFnqpqMpiIYjQZUGcOSkldv3Jj+x53zUTHezGmX44tBhBE8rX0W/J9aaIOG7D3CyJ+THg9rAIfOmUJsW5Cr/NGKrE0OuAHQfcWXiPawJtxf9Mha0wA9WLRQSDJP34gjwFpVkpNmBakLvt9OSnze0W8UlEW9NJ2oPtzGpStn18OaXmcrNObhRbp4pZaenlzhPFiJjAvZoMKTijG+UyMH4q8mFa8qHg1EtREErzToLb/W9BLStihDuWqzyit4rOkjdDo7qJ5pzilIIvBWnK/161fG7dDa1z4KnfgN15ClSjWzrTX68sf0auHnTcDAAA=</data>
+        <document_id display_value="cecce_sli_roi">306502ac47d9c3506274efbb616d4361</document_id>
         <field>process_plan</field>
-        <length>624</length>
+        <length>652</length>
         <position>0</position>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>843bbfcd47fd6e5083857acc416d4304</sys_id>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>386502ac47d9c3506274efbb616d4364</sys_id>
     </sys_pd_snapshot_chunk>
-    <sys_pd_snapshot_input action="delete_multiple" query="model=083bbfcd47fd6e5083857acc416d4302"/>
-    <sys_pd_snapshot_output action="delete_multiple" query="model=083bbfcd47fd6e5083857acc416d4302"/>
-    <sys_flow_compiled_flow action="delete_multiple" query="sys_id=803bbfcd21fd6e508a207db1f6224b05^sys_idNOT IN803bbfcd21fd6e508a207db1f6224b05"/>
+    <sys_pd_snapshot_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/+1Ya2vjRhT9K0b0Y9SOpNErUFiv16WBdLN1HlBKEPO4kwyVJXckG4Lxf+/Vw4/EUmyngS0lXyz7auY+zrm6c+SlpaV1brlexAnlkcMdQgOHyDh2RBS5ARoF59Q6szI2BVwpQAhIilQnJtdoThmHFO2j8Wg0HlxfXtiTq4vankFhnf+5bAI4LuM06gsAwTYAm81Mzlmp8wyNRclMaZ23XjgJfAGBYFTGwvMJBC6PvZgw16OUxm6nlx8aH2cWE6Ve6PIpkaB0pusI59k8TbdVdG2TUAijZ8+XZ3BcUdXKC7nelxsJZv2j9p+YeQr7lqR8mnWZF8wgqMvVmWVgf7/IM1mXlZQ53tikK2EGmYRM6JqS+8pi9ALLXLQcKZ2WVWYWpowxNMvKbdY19Dv4HUPE6r7N+wuk7OmqRq/NfLe0fAHGaAn1LbyHaW7IVm0M8JoYhEdcxCHzXcVD3kd25eFkqptNH0TvE32QhDcS3Va1IdujTRzhN3GYw5TvOioUvhuFfWSvvZxM+HbjB+n7pB8k442kr5kY7o/4tlJLT6cgNSthm5HePUcIiYgXErz4kagujLHqElFSXcS2Twz8PUcUEyaTx1wkNfsLlvb1isV9qiQIjnR7xPGJ5JRzFnhCVHT70c5ZN2lcD4Zy8GsuBsOt62fdZFlv6aVj1rad5rwC3tu7zZrcfk2uvl7+gR+jsdXVeJb1Pm13BJs7bXlw9cG2tC51UT30zxvzvquYHj97+L14Nm/yyRqgA6jOwEx1UTSdslxZq7O2xV1GKcdj1OEuwelLIunHlNCQ140YONsWl5DCQ7dS8qqdLsPGbR5hEYJUhDPJHcU8z+tycopQ6tjVP0mPqOj/OkkP0fAOOilsY9CgiSE9nNcVsJTEzO+h+miZtLfng+Z9mg9S8E4qia/jyCZOIIUbKuariMS0j+qTRFLnvg/Ku9+AXqXiX2qkkYGahsFAwpRh7sVPM6Nzo4vGjG/aL7UTU1hBokuYFj3qKeAQck6ibro82FHZ8zKfopKQiagSgcSAQO561ZMb+06Ep7LDPUWIQ5hSkoDvN+qJODvqabh2PahrhMFk7bpPPZ3QZces/e7qSWezedki+uNamP7cfAH5TtrqCK532vng6sPaakPjIXV1WOGeoL+Wzxp9aX0SKSvwm3WR3dWS/FNzSPpeKEPFbRePX5sGTNk84MImKmQEAs8PY1FDmc6h1be6mGH0u60FHyy0lO2vR1a090ozh7OG1NsC+TtXLC3QUmhcDzcNOlffhr/fjpsQNxtHDV8IV25+g6JgDxubAQUGIWsaYLX5Q623QnBjxXgg7SBwI5sy5tkxJ6Ht+C6TLg+8OKQ7FR7xlvECgSN2fF+EuGGZeHwVJBxL3BMqsKWD0FDFYztyJLdDiHzuKspcL/gvt8HqfV417jdbGG92jK9vhpOb4efLcfLL8PJ6vB0r7QB66QPTrVDC9O+adaNHnUpMdajK7QmPEw1TLy5hAelw90CqnnCR15AIGkkgFPuKKZB7o6eaKAXSOmV3YJr4XjsHvubZ5zQXf+nsYYM2Ttjr0mBaD09X2bcvXfbqz4F5luSIqrX6Bw5vAzgBFwAA</data>
+        <document_id display_value="cecce_sli_roi">306502ac47d9c3506274efbb616d4361</document_id>
+        <field>process_definition</field>
+        <length>1608</length>
+        <position>0</position>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>706502ac47d9c3506274efbb616d4363</sys_id>
+    </sys_pd_snapshot_chunk>
+    <sys_pd_snapshot_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAA/5WSvW7DMAyE30XomIH6sSx5K9ClQ6eOQQZSkgMDqRzETpYg716pzthCrBca0OF4JL+7OF/mkJblLZ1TjimHKS1iuIsXwiXVnxteJszrexRDvp5OO3HCnF7DOt2mtWg/8FxVCo0hbYwkBWA7cLHzBkxPwVAgK8WwF5ZSTwTud41O4rATUiEZR0UjwVgJ0XsZnFMWqibZ6gPgQPdQSudCLYhYizNQSxCHx05gLlOt8+Uzrc+IzfbDvgTgDNIMWXyaIX+6Mcatw0w5zF9TPvInEbo+KAzURR90B6FPcQTCSHJErXXN2D81xm6aqFFitTDgsSsa5tGavYrPWDQh2ZD0pgFyFHyPnRqpJ6+qT1PDOv5O0NMHzeaTrCKvPaAqhzWbj9KOypL/2DwZ5g3bvSpTrV7Fp3mLysF8XY/z/zho+/I44OyLwwGHJw4HHL45HHB44nDA4ZvDQZunR/m+ARWp71i3BQAA</data>
+        <document_id display_value="cecce_sli_roi">306502ac47d9c3506274efbb616d4361</document_id>
+        <field>process_dependencies</field>
+        <length>488</length>
+        <position>0</position>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>fc6502ac47d9c3506274efbb616d4363</sys_id>
+    </sys_pd_snapshot_chunk>
+    <sys_pd_snapshot_input action="delete_multiple" query="model=306502ac47d9c3506274efbb616d4361^sys_idNOT INb86502ac47d9c3506274efbb616d4368"/>
+    <sys_pd_snapshot_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.snc.pd.designer.elementmapping.PlaybookInputElementMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Parent record</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>parent_record</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Parent record</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="cecce_sli_roi">306502ac47d9c3506274efbb616d4361</model>
+        <model_id>306502ac47d9c3506274efbb616d4361</model_id>
+        <model_table/>
+        <name>var__m_sys_pd_snapshot_input_306502ac47d9c3506274efbb616d4361</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_ndecd_triage_2_0_sli_roi">x_ndecd_triage_2_0_sli_roi</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_pd_snapshot_input</sys_class_name>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>b86502ac47d9c3506274efbb616d4368</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Parent record</sys_name>
+        <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
+        <sys_update_name>sys_pd_snapshot_input_b86502ac47d9c3506274efbb616d4368</sys_update_name>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:30:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_pd_snapshot_input>
+    <sys_pd_snapshot_output action="delete_multiple" query="model=306502ac47d9c3506274efbb616d4361"/>
+    <sys_flow_compiled_flow action="delete_multiple" query="sys_id=b06502ac01d9c3506e086f6100681965^sys_idNOT INb06502ac01d9c3506e086f6100681965"/>
     <sys_flow_compiled_flow action="INSERT_OR_UPDATE">
         <parent_snapshot_id/>
         <signature/>
-        <snapshot_id>083bbfcd47fd6e5083857acc416d4302</snapshot_id>
+        <snapshot_id>306502ac47d9c3506274efbb616d4361</snapshot_id>
         <sys_created_by>system</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>803bbfcd21fd6e508a207db1f6224b05</sys_id>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>b06502ac01d9c3506e086f6100681965</sys_id>
     </sys_flow_compiled_flow>
-    <sys_flow_compiled_flow_chunk action="delete_multiple" query="document_id=803bbfcd21fd6e508a207db1f6224b05^sys_idNOT INc83bbfcd47fd6e5083857acc416d4306,403bbfcd47fd6e5083857acc416d4306,083bbfcd47fd6e5083857acc416d4305,843bbfcd47fd6e5083857acc416d4306"/>
+    <sys_flow_compiled_flow_chunk action="delete_multiple" query="document_id=b06502ac01d9c3506e086f6100681965^sys_idNOT IN3c6502ac47d9c3506274efbb616d4367,b86502ac47d9c3506274efbb616d4366,706502ac47d9c3506274efbb616d4366,f06502ac47d9c3506274efbb616d4367"/>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
-        <data>H4sIAAAAAAAA/zXNMQqAMAyF4bt09gTORXBw6gmCTTUQmxKjDuLdLZSuH//jvS6xPB4NiN2YL+bByY2qFHGBUihvnVcphHFSObrscHowCKYIFRPwibUD5joLtcdetpNEmYwkz7H59wOUb/OmfgAAAA==</data>
-        <document_id display_value="Created 27/05/2025 13:31:15">803bbfcd21fd6e508a207db1f6224b05</document_id>
+        <data>H4sIAAAAAAAA/zWPwUoDQQyG3yXnPaw4xXVvSikIasEKHkt2km2D6WSZmSpS+u7Grb3++b4/yQlGte8lVxSF/gTVpke1+Pn+MzH0sHpef0ADlmUn6YkeEv0NipPnZjY30WYwho64Dd3NgCPTou1ocR/acDfEMMThlrxEUuWcUF/xMBscI2+LyjabgNfZF+csxC84TZJ20KejagO+QJhW2Q7XZI9liRU3NTN6OKIWdg5VXfs/6EJefhslSRXz+685HuveMtM6vbEyFhfa8y8cLoi2CwEAAA==</data>
+        <document_id display_value="Created 02/06/2026 11:30:31">b06502ac01d9c3506e086f6100681965</document_id>
         <field>flow_config_param</field>
-        <length>152</length>
+        <length>288</length>
         <position>0</position>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>c83bbfcd47fd6e5083857acc416d4306</sys_id>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>3c6502ac47d9c3506274efbb616d4367</sys_id>
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
-        <data>H4sIAAAAAAAA/+VYWW/bRhD+L0QeBWV5U3qKrBiogCQ2LLdAERTEHkOZKMVlyWUaQfB/76546OBKllyxMNwn2nNzvm9nVlwbUcL/vk1gCakojPH3tVHwMqcwY8bYoEAphEUShzmPjUGt+oaXcFT5a7zxtOyAIIcEJjGR45mIjUYmDQLLk0JKiNPaT5IYy7xGzrmQwgznspD5riotk2RgiFWmkt5PPof3D3fT2/lchaB8I6VOwAA5MhuOgLkoYO7IQY5PqMpmM2m6jNNZWoi8pCLmqaoRSSH+eSD07YEBec7zR5wvQDTZpeGtkmqsc8h4LuJ0MePGeG3EaVZKt/XzwOClaP9mEOEyEXet6HkbdJoATsvsWCVdtcLpj4ERF7Nf5gIyYxzhpAApeCq2/z4P9qDEWZZzgpX7IZA6VQ2jaWHiBMdgBK8D406s8AxnDdwNE3YA/zL5dvtv0bZ0aNvOJWgr677Qbiu5OtofCoFzcQLzA4MaeZt5ph9RE/yIeSCb7LoWIACbWcT2wD6FfBUxPCOEDv8LKbTDk8n0cfbb7PH3XrhiWpdwRVn3xZW2kutwJYe/SihEiFn4xGm4af8PnBwy5iWzmjcIBcj2kXy4AVUPjLF6BA5SD9od/Pq44RmB3iZ7TFtHH+uixWL1uFis3hbLB0jZqUGzq67p4tczIoqqGcFkw8GMMLge9d0XxoyMF54R4G3SxHL+VxuJQQIL7fVDo2kukdhxiO04JrEQ8g776pkdcmxDhWf4/neXD9vVYe35l2CtrPvCuq3k2ljrLx9H9TXuUXNxYNWZ9ilBI8c3I8JsCwM5gXt99Tgjgg79y/jTw1DQE8VxLyGKsu6LKG0lV9odpeBLLICFNAf5DHOgPO/ukBfMatp4BHxCUKCHzIbuLtHHDc8I9CbZ43g69rjeJexR1n2xp63k6mNGc/E4om1+3pjVgLBQNSC8IJKjggTWCGEzgu41dT9ceIb/m6SI67/zTSQtipUULCcbp03joXZVn7rmAi+geUFZX5zGVe6b1R5Uqvx4m/xm9RWKYuO6Nj7yTMlwonL8iMVKCT/RBBcKY8qXwyKlw4wNl1wCPtwJM5wtl6XAJIH7zxPG7g7i7LytRC9WX4HMgYEbrSKuIhab8lTAT6EEa0P+WCoVH+JUpgxppQpjhX9cPEBkjGVMeXbkWj3mF530K1KcFU9cky7nVHYl3LYxbGx1cdLqYHa7J0lRNfcerxKOO2lq6WG8uGj614o+1iVNcUoheRUslasGCfT+kNjvljrVuJAvvB+7Fp7qfj2d24APUN3rXtP/2lcDgHUAwEvfmOU6b66X7wSoh/aFXndgUgmCnNlfcdbO6gXfFXRBlcIFv8H0z0deLYcvmECiGZb7VhvFzWrHZTP+/wFbjgo2bxgAAA==</data>
-        <document_id display_value="Created 27/05/2025 13:31:15">803bbfcd21fd6e508a207db1f6224b05</document_id>
+        <data>H4sIAAAAAAAA/+2Z227jNhCG30XYS8OhJOpgX9VxUtTAbhLYaYHFohCGBzlCZVGVqO0aQd69pCQfYskHpfU6wO6VnOHMcMT/ywzjPBthLP65jfmCJzI3hl+ejVwUGeUTZgwNyinlQR5HQSYio1cv3cGC7138PSojLdsnCBPfJCbCronYYGBS37dcZaSE4LX/KI5A7WtkQkhlTCFThcy2l5IijnuGXKZ604fRTfAwvR/fzmY6BRWllWKfcYTVbhBy5iCfOQOMsEeo3s1mynURJZMkl1lBZSQSXSNSRvi2Y/TsnsGzTGSPkM25XO2uHG+1tcU746nIZJTMJ8IYPhu/6ELrE5pyYPdJvLzhIRSxvC9kWshc+fWMKFEflf9LzxClufrMtj216WWz9zjmkBTpvoKby1rOP9VW+eS3meSpMQwhzrnaMGM8U+XdXY10JU/5ZvGl90p/SNNMENDJdtVvW6q1Ny0g2N+nPXcb2m/lCk4IbmFkhc8WJR9Hd7f/FRGrDREbd0FEe18YkXXBZ0bkQy4hkwdA2XGocSHIdSh3KWA2oLaDuGuRgT1AYNkY44F1CJcqY3BCijZoOnK3Bddo/Dj5Y/L4+SyAmVYXwLT3hQFbF3wOwDL+d8FzGQALngQNSs2+QryL2TG3GjaEfGR7SD0cn+oHAOiHj5F+0OZcas8bnJDofSJn2m3MWZ3mnnX5uWd9p7n3gSfsUEvbXq4ZC+tuxO2qGyHiEzrwwLFC4pEjDU3lC05I8D7ZsvDPgXmMLcZjPm+9UrWsrG7TgDFRo8wkFlJs7Ijhmg2iNqmCE2K/34XKdtoAcb0ugGjvCwOyLvi8gLRfqPau17DYWmULKHGq7kE9zkJEgBEzBNu2D8BSX6dOyNCGTDfoztB+2unCThe6tPeF6VoXfJbRVkixAMlZQDOunkHGqYpujLgjbjVrLuEeIchv19nmzVHXnjc4IdG7RA67bcg5bhfktPeFkVsXfOaG1nKZ2rNaA+bVrQi7VStiNpig9cBoAM7hZqavUifEv0uuHO/noGxypfzzpTIsRmWKUi1eJ9LfY84kzPnqVFS1URJVlVwvX+mrXybalHK9/MTzvAx9Nq5Eqm0Q6z2+RnJZnhuNIddgULHo5wntp6y/EIqS/laa/mSxKCSQmD/cjBi738mz9e76xfR3d2bPgNWqpl3TyMYikfyb1IbXgv2q3nDKQ65wpbohqj9DC22PElVOQKuwQCVWbxe+KU24myZPIM2fRMdiMkHVeQYbAYJVnjptUuVoHrXiqVLiAZaxgE671hFa2nx19sZQHbnqR8ZVXdQYVGD8Jkmr0BYV0Q+u4uuj1T0HcnU6p29VB+woV4+Sdf4pr667b9Gujm0Rz9oR79g/LtSFZXXr/hFFnq7f/n/5RU2UgGo4fYJ0PW3mYtvQBEIZ5+Ia6F+PopqCZU+/XlY/fARS/no3vMqFxhh4+RdDbpcNABsAAA==</data>
+        <document_id display_value="Created 02/06/2026 11:30:31">b06502ac01d9c3506e086f6100681965</document_id>
         <field>flow_structure</field>
-        <length>1408</length>
+        <length>1472</length>
         <position>0</position>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>403bbfcd47fd6e5083857acc416d4306</sys_id>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>b86502ac47d9c3506274efbb616d4366</sys_id>
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
-        <data>H4sIAAAAAAAA/+WcXW+jOBSG/wvXUeRPIL3a2ZnRqtrVzKrtzl6sVpEB06IhEAXo7Kia/752knbahGIDtqOUK9qEg+1zznvsR3Z48LKiqjdNXGdlUXkX/zx4v8Q5q8SfXlyu5lURz9fJfFUmPJ8/u3V+uVo1NYty/ueH65pt6suf33kzL0u8CzDzmPj/Pqu/X4p/PYTDCJAohBEExIcgWSxgHIbIFx/GUUSWlXyOMF4n78ui5v/V0uzBu2d5w4V9VoieLOPdV0vRgmimuuKpdyEa5j9mXvqqXdppVxVsXd2VLc1typhX1TLhaVZkcmjLx3vbnlOwlTSMeRzzZZVny02ZPQ0qqz6v5RNY7l2kLK+EwQBXf+BxlvBPcoxH/oY9/X3GnjbjzOu7ssmTd3ufXTXFsU/RzMtZxHP5VBImHBDhTpbyhIIwoQsCSBDF0p04mb+I+5ytxZgitm0TJz4M0hjyIE18LkwpRRxwjhMUYZ/jpyR5ET+V1RnHb9MUj27/w4F7RXP6CtyPJM3Lb/N7tM+gpC7bs+hvltU35Vfekjt45pVr8eSrj79dXt98vBIff3u8+3f+XSPCS3n/spYGnonO3rDNLW+pHMRNltfZim+MDER6/XgY1IKDFSXk6mciH/fHd+PWXXZPpXTsJtmiyfNR0Z7JEK9zXu9FYTlGSVlw0WZdNvGdkwa3LckWpebctLhV97a2/5qX8desuN0FzVLlfa2YBW5UJ3PJYi0L3deyG5kyr1ezxXRqjJPJcC9QGbV3tywrnIh0m7WOBQmBG49ua6zlNR2E+0XdX59sLuvGUCCajk6dYSDERlIYgBDgAIgLDWN5YYzJS0iAvMTtHKiyOuMAmuVApXtPw4GQKEFQ2XNHIAipmzy3TYLQt+DiMSgIzaxKNTN8KuWjgwX7hNssCypbNs2CarWZZkFNfZ+eBWHoRnaWYRAu3JczBQ2iw92dN1xmnMyINnBQL28daxJBNx51gYMIaeCgdal24SDC09Gpu11BMxsmwZ7M03RH5ol4Eocp49SPA/ratqDK6owDaBYHle49DQ4iqsRBZc8d4SAys4OlHI5tHESBBRePwUFkZl2qmeFTKR8dONgn3GZxUNmyaRxUq800Dmrq+/Q4iBZuZGcZBzFwX84UOIgPD5+94TLjZEa0gYN6eetYk9jMETu9Mmv7xBfWwEHrUu3CQUymo1NnOIiH75qIhvntLoPTx33aZBeJII7AggQwjRKMGI/aaVBldcbxG0+Dfbx7ojOivhIGlT13BIN4+BZWnzjYZkF8fLJqvIfHsCAevijtn99TqR0dKNgn2uNRsE+ITJBgL6mZAMH+2j49B5LhJ9L6DNcyBhLovpIpMJAcHj57wyXGxVxoigJ7Z61rQQ4/X9e7wFpe0RGiwYDWddrFgIROR6TOGJAM3yp5lsF+xIMoAsISAeAfWfJ2BlRZnXH8jDKg0runYUASKBlQ2XNXPxQcvm/VJw62GZAcn6ca7+ExDEiNLEg183sqtaODAftE2ygDKhs2zIBqqRlmQE1tn54B6fBjaH2Ga5kBKXJfyRQMSA9PnL3hEuNiLrTAgHpZ61qQww/V9S6wlld0lGowoHWddjEg9acjUmcMSI3skGC4o3EEdjTuh6ng8ihEC8Bgyl/5kaDK6ozjZ5QBld49DQPSUP2yGFXPHTEgNbJfpRyNbQb0jw9RjffwqLfFGFmQaub3VGpH19tiekTbKAMqGzbMgGqpGWZATW2fngH94WfP+gzXMgP62H0lUzCgf3jM7A2XGBdzoQUG1Mta14I0cpJOr8BaXtH5vs6bYmzrtIsB/WA6InXGgP6zHRLlC2/3E/1U3traAnJKFz2uu/QrkSKG7/cPbAnd4RvOztjV2in4zL+try/u9P+/M0/0hzW5qC7rpv4iuyti8fDj6fPPTf3iix//A6V94rZwWgAA</data>
-        <document_id display_value="Created 27/05/2025 13:31:15">803bbfcd21fd6e508a207db1f6224b05</document_id>
+        <data>H4sIAAAAAAAA/+2cy27jNhSG30Vrw6BEUpesOp2ZFkGLTJFJ20VRGBRFJcLIkmHJmQZB3r2krWQS2zFJiaQW1sqJY97OOf9vfibjR6+omna9oW1RV4138c+j9xMtScN/9Gi9nDcVna+y+bLOWDl/9dL55XK5aUlasj8+fW3Jur388Tdv5hWZdwFmHuG/3xftwyX/1QtgnAKUxn7qAxT6IEsSn8ZxEPInaZqiRSP64Y1X2ce6atl/rWjG59M+rNgVWTLexy9l/f2a5WzNKsr4S+9JuRHPFxWf5YLumi346E8zL+/VTb7fTVORVXNXa05mXVPWNIuM5UVViKAsnvvpuq12fVBGKVs0ZbFY18VLBIrmy0o0IqV3kZOyYU+zHnn5xGiRsSsRgYPk+JrJOZe0mIn817t6U2YfugBfb6rDBAQzryQpK0WvKM4YQDz2JGcZBnGGEwRQlFIRe5jN3xTJnKz4MlKyHTMFIaYspARlCYUYsDBIE5gAEkCEUBK8VNSbZMtanUuy15vqOUe/O8gFH05d293kc76++X3QlVvW1sdL7m9StDf1N3ak0ODMq1e85+vPv15+vfl8zZ/+/vzq39iDQjksxOsXrWjgmZjsDVnfsiOehNxIoi2WbG1kISLqh8vAFgIs8ZvrH4V8OJ/QTVh31T35zLvv9dWmLAeVxkzUw6pkbacgywnN6kqstK039M7JgNuRxIhCoG5G3FrB9o3g57Km34rq1rvg8mGWbPo954vcSFTUkkXji90b340omfetL5kM6aghOXmb7dQsUvzhlhSVE0VvS9yxen3gJqJbQ7a8W/T9brv455XNDeMQcg0mUY+Lrj40Uu8AxABGgD/gmIoHQoh4iBEQD/Q4u8panUu2zbKrNBfjsKuPpPAqnbkjePWxG1HYplc/tBDiIfjqm9kcK1b45DV6/KpTG2b5VTqyaX6VS9M0vyqawfj86sduNGoZYP3EvfdJCDbYP0WbPMkYwioL2ijCqhW5YwEHvpuIukDYIFBAWOu6PoWwAZxEPfLpq5mzprz76IHB3UcPII1TmkQEB3kape8dv8panUu2zSKsNBfjIGyApQgrnbkjhA3MnBRKl2MbYYPIQoiHIGxgZnusWOGT1+ghrE5tmEVY6cimEVYuTdMIq2gG4yNskLjRqGWEhcC990kQFu7fNZw8yRjCKgvaKMKqFbljAUMzNyrVPNn2nT2ogLDWdX0KYSGaRD0uwsL+B058YHa7K3fI0wYCQlO8SxuNWJaDlGSpnxMI4XGClbU6l2QPJ1idVIx0fziUAqx05o4AFvY/KtTJg21+hYcX6YZHeAi/wv57Y/36noxGD191SmM4vurk0wS9aunSBLzqG8H47Ir6X0DUWa5ldEW+e9uToCvav2s4+dEgdO2j5sHkql3irtXb/zqlthtb3isipMCt1kV9ilsRnhQ9Lrei/qdMr8o9TFmUpoC3DIDI4F5LdpxbZa3OJdlGuVWainG4FUVSbpXO3NU/vvY/H9TJg21uRYfX54ZHeAi3YiP7YsX6noxGj1t1SsMot0oHNsytcl0a5lZFIxifW3H/W4c6y7XMrThwb3sSbsX7FwwnPzLFrcpqNsmtaiXuWr3971Bqu7HlvSLGCtxqXdSnuBWHk6LH5VZs5HAp6j5uQOHu44YMEp+IRggkBL933iprdS7JNsqt0lSMw604lnKrdOaOuBUbOReUrsY2t4aHd+aGR3jQNzYZ2Rcr1vdkNHrcqlMaRrlVOrBhbpXr0jC3KhrB+Nwa9r9qqLNcy9waQve2J+HWcP9W4eRHprhVWc0muVWtxF2r18jFSTU3trxXDEMFbrUu6lPcGkaTosfl1vDV4ZL0K7i7LcT01dBq8CmN5/P2T93jJAn/2HV4JM/7X3Z4LnlRLu5XyTj67esnk/XvzONTIJuSm9xq0/4lZsgT9/j08vyXTfvmD0//A/5ZpMxcXwAA</data>
+        <document_id display_value="Created 02/06/2026 11:30:31">b06502ac01d9c3506e086f6100681965</document_id>
         <field>instructions</field>
-        <length>1940</length>
+        <length>1960</length>
         <position>0</position>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>083bbfcd47fd6e5083857acc416d4305</sys_id>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>706502ac47d9c3506274efbb616d4366</sys_id>
     </sys_flow_compiled_flow_chunk>
     <sys_flow_compiled_flow_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAA/6tWyswrLikqTS7JzM/zTAnJD0rNzS9L9U6tdEosSc5QsqqurQUAOtk80SQAAAA=</data>
-        <document_id display_value="Created 27/05/2025 13:31:15">803bbfcd21fd6e508a207db1f6224b05</document_id>
+        <document_id display_value="Created 02/06/2026 11:30:31">b06502ac01d9c3506e086f6100681965</document_id>
         <field>runtime_value_metadata</field>
         <length>76</length>
         <position>0</position>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>843bbfcd47fd6e5083857acc416d4306</sys_id>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>f06502ac47d9c3506274efbb616d4367</sys_id>
     </sys_flow_compiled_flow_chunk>
     <sys_pd_trigger_instance action="delete_multiple" query="sys_id=ef8bc0b81b104610d991c882604bcbae^sys_idNOT INef8bc0b81b104610d991c882604bcbae"/>
     <sys_pd_trigger_instance action="INSERT_OR_UPDATE">
@@ -1951,22 +2117,23 @@
         <value>x_ndecd_triage_2_0_sli_roi</value>
         <variable display_value="Table">a8ae38d1ff2200108c8733af793bf15c</variable>
     </sys_variable_value>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=ef8bc0b81b104610d991c882604bcbae^sys_idNOT IN883bbfcd47fd6e5083857acc416d4301"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_pd_process_input_238b04b81b104610d991c882604bcbb4^id=ef8bc0b81b104610d991c882604bcbae"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=ef8bc0b81b104610d991c882604bcbae^sys_idNOT INf06502ac47d9c3506274efbb616d4360"/>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"run_trigger":"org.mozilla.javascript.UniqueTag@2bdd801a: NOT_FOUND"}</data>
+        <data>{"trigger_on_unique_change":"org.mozilla.javascript.UniqueTag@5ddec369: NOT_FOUND","run_trigger":"org.mozilla.javascript.UniqueTag@5ddec369: NOT_FOUND"}</data>
         <identifier>ef8bc0b81b104610d991c882604bcbae</identifier>
         <runner>PDTriggerRunner</runner>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
-        <sys_id>883bbfcd47fd6e5083857acc416d4301</sys_id>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
+        <sys_id>f06502ac47d9c3506274efbb616d4360</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 17:31:15</sys_updated_on>
-        <trigger display_value="">cc3bbfcd47fd6e5083857acc416d4300</trigger>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:30:31</sys_updated_on>
+        <trigger display_value="">f46502ac47d9c3506274efbb616d435f</trigger>
     </sys_trigger_runner_mapping>
-    <sys_json_chunk action="delete_multiple" query="document_id=883bbfcd47fd6e5083857acc416d4301"/>
-    <sys_flow_record_trigger action="delete_multiple" query="sys_id=cc3bbfcd47fd6e5083857acc416d4300^sys_idNOT INcc3bbfcd47fd6e5083857acc416d4300"/>
+    <sys_json_chunk action="delete_multiple" query="document_id=f06502ac47d9c3506274efbb616d4360"/>
+    <sys_flow_record_trigger action="delete_multiple" query="sys_id=f46502ac47d9c3506274efbb616d435f^sys_idNOT INf46502ac47d9c3506274efbb616d435f"/>
     <sys_flow_record_trigger action="INSERT_OR_UPDATE">
         <active>true</active>
         <condition table="x_ndecd_triage_2_0_sli_roi">orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_sISEMPTY<item endquery="false" field="orth_je_soumets_la_candidature_de_l_l_ve_au_x_programme_s" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
@@ -1982,16 +2149,16 @@
         <run_when_user_list/>
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
-        <sys_created_by>KHARRF@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2025-05-27 17:31:15</sys_created_on>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-06-02 15:30:31</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>cc3bbfcd47fd6e5083857acc416d4300</sys_id>
+        <sys_id>f46502ac47d9c3506274efbb616d435f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 17:31:15</sys_updated_on>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:30:31</sys_updated_on>
         <table>x_ndecd_triage_2_0_sli_roi</table>
         <trigger_definition/>
     </sys_flow_record_trigger>
@@ -2004,14 +2171,14 @@
         <label>CECCE SLI-ROI</label>
         <name>cecce_sli_roi</name>
         <now_assist_prompt/>
-        <permission/>
+        <permission>{}</permission>
         <process_type/>
         <restartable>RESTARTABLE_FALSE</restartable>
         <run_on_pad_engine>false</run_on_pad_engine>
         <run_strategy>run_once</run_strategy>
         <run_strategy_on_process_definition>false</run_strategy_on_process_definition>
-        <schema_version>2</schema_version>
-        <snapshot display_value="cecce_sli_roi">083bbfcd47fd6e5083857acc416d4302</snapshot>
+        <schema_version>3</schema_version>
+        <snapshot display_value="cecce_sli_roi">306502ac47d9c3506274efbb616d4361</snapshot>
         <start_non_blocking>false</start_non_blocking>
         <status>published</status>
         <sync_state>COMPLETE</sync_state>
@@ -2020,14 +2187,14 @@
         <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2024-02-08 23:29:18</sys_created_on>
         <sys_id>238b04b81b104610d991c882604bcbb4</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>CECCE SLI-ROI</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_pd_process_definition_238b04b81b104610d991c882604bcbb4</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-05-27 17:31:15</sys_updated_on>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-02 15:30:31</sys_updated_on>
         <view_type>KANBAN</view_type>
     </sys_pd_process_definition>
 </record_update>
