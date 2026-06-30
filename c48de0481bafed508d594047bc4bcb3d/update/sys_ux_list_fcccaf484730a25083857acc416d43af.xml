@@ -3,7 +3,8 @@
         <active>true</active>
         <category display_value="Demandes TSA/CS CAA">0f97fc2747a4ee1083857acc416d439f</category>
         <columns>number,eleve.u_nom_de_l_cole,eleve,eleve.u_classe,state,nom_orthophoniste_tsa_cs,sys_created_on</columns>
-        <condition table="x_ndecd_triage_2_0_demande_tsa_cs_caa">nom_orthophoniste_tsa_csDYNAMIC90d1921e5f510100a9ad2572f2b477fe^ORDERBYnumber<item endquery="false" field="nom_orthophoniste_tsa_cs" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+        <condition table="x_ndecd_triage_2_0_demande_tsa_cs_caa">nom_orthophoniste_tsa_csDYNAMIC90d1921e5f510100a9ad2572f2b477fe^active=true^ORDERBYnumber<item endquery="false" field="nom_orthophoniste_tsa_cs" goto="false" newquery="false" operator="DYNAMIC" or="false" value="90d1921e5f510100a9ad2572f2b477fe"/>
+            <item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
             <item endquery="false" field="" goto="false" newquery="false" operator="ORDERBY" or="false" value="number"/>
         </condition>
         <configuration display_value="Triage 2.0 demande de partage_menu_config">30e901d51ba7ad50d991c882604bcb8b</configuration>
@@ -65,15 +66,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fcccaf484730a25083857acc416d43af</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Assigné à moi (demande CAA)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sys_ux_list_fcccaf484730a25083857acc416d43af</sys_update_name>
-        <sys_updated_by>KHARRF@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2025-04-09 18:00:39</sys_updated_on>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-06-30 15:11:53</sys_updated_on>
         <table>x_ndecd_triage_2_0_demande_tsa_cs_caa</table>
         <title>Assigné à moi (demande CAA)</title>
         <view/>
