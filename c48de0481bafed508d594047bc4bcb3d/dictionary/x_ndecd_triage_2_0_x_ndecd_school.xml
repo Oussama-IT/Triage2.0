@@ -7,10 +7,10 @@
         <element label="ID" max_length="40" name="id" type="string"/>
         <element label="Name" max_length="400" name="name" type="string"/>
         <index name="index">
-            <element name="department"/>
+            <element name="location"/>
         </index>
         <index name="index2">
-            <element name="location"/>
+            <element name="department"/>
         </index>
     </element>
 </database>

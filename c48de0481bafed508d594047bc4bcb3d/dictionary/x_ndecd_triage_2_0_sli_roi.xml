@@ -30,7 +30,7 @@
             </choice>
         </element>
         <element label="Élève" max_length="32" name="l_ve" reference="x_ndecd_triage_2_0_eleve" type="reference"/>
-        <element choice="1" label="L’élève a de la difficulté en conscience phonologique (habilités à manipuler les" max_length="40" name="l_l_ve_a_de_la_difficult_en_conscience_phonologique_habilit_s_manipuler_les" type="choice">
+        <element choice="3" default="no" label="L’élève a de la difficulté en conscience phonologique (habilités à manipuler les" max_length="40" name="l_l_ve_a_de_la_difficult_en_conscience_phonologique_habilit_s_manipuler_les" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" value="yes"/>
                 <element inactive_on_update="false" label="Non" language="fq" value="no"/>
@@ -38,7 +38,7 @@
                 <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
             </choice>
         </element>
-        <element choice="1" label="L’élève a de la difficulté avec les habiletés sociales/habiletés de jeu (ex. jou" max_length="40" name="l_l_ve_a_de_la_difficult_avec_les_habilet_s_sociales_habilet_s_de_jeu_ex_jou" type="choice">
+        <element choice="3" default="no" label="L’élève a de la difficulté avec les habiletés sociales/habiletés de jeu (ex. jou" max_length="40" name="l_l_ve_a_de_la_difficult_avec_les_habilet_s_sociales_habilet_s_de_jeu_ex_jou" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
                 <element inactive_on_update="false" label="Non" language="fq" value="no"/>
@@ -46,7 +46,7 @@
                 <element inactive_on_update="false" label="Yes" value="yes"/>
             </choice>
         </element>
-        <element choice="1" label="L'élève présente-t-il un diagnostic médical officiel?" max_length="40" name="l_l_ve_pr_sente_t_il_un_diagnostic_m_dical_officiel" type="choice">
+        <element choice="3" default="no" label="L'élève présente-t-il un diagnostic médical officiel?" max_length="40" name="l_l_ve_pr_sente_t_il_un_diagnostic_m_dical_officiel" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" value="yes"/>
                 <element inactive_on_update="false" label="Non" language="fq" value="no"/>
@@ -96,7 +96,7 @@
                 <element inactive_on_update="false" label="Incertain" language="fq" value="uncertain"/>
             </choice>
         </element>
-        <element choice="1" label="Est-ce que cet élève est identifié comme étant un apprenant de la langue françai" max_length="40" name="est_ce_que_cet_l_ve_est_identifi_comme_tant_un_apprenant_de_la_langue_fran_ai" type="choice">
+        <element choice="3" default="no" label="Est-ce que cet élève est identifié comme étant un apprenant de la langue françai" max_length="40" name="est_ce_que_cet_l_ve_est_identifi_comme_tant_un_apprenant_de_la_langue_fran_ai" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
                 <element inactive_on_update="false" label="No" value="no"/>
@@ -116,7 +116,7 @@
             </choice>
         </element>
         <element label="Quels services du soutien 1 de la pyramide d’intervention l’élève a-t-il déjà re" max_length="4000" name="quels_services_du_soutien_1_de_la_pyramide_d_intervention_l_l_ve_a_t_il_d_j_re" reference="x_ndecd_cecce_base_sli_roi_qa" type="glide_list"/>
-        <element choice="1" label="L’élève a-t-il déjà reçu le programme SLI, ROI, SOI-TSA, SCS, ROI-CS?" max_length="40" name="l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs" type="choice">
+        <element choice="3" default="no" label="L’élève a-t-il déjà reçu le programme SLI, ROI, SOI-TSA, SCS, ROI-CS?" max_length="40" name="l_l_ve_a_t_il_d_j_re_u_le_programme_sli_roi_soi_tsa_scs_roi_cs" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
                 <element inactive_on_update="false" label="Yes" value="yes"/>
@@ -140,7 +140,7 @@
         <element choice="1" choice_field="valuation_sommaire_roi_requise_suffisantes" choice_table="x_ndecd_cecce_base_options" label="Évaluation sommaire ROI requise ou non" max_length="40" name="orth_valuation_sommaire_roi_requise_ou_non" type="choice">
             <choice/>
         </element>
-        <element choice="1" label="Est-ce que l’élève est identifié comme étant un élève PANA?" max_length="40" name="est_ce_que_l_l_ve_est_identifi_comme_tant_un_l_ve_pana" type="choice">
+        <element choice="3" default="no" label="Est-ce que l’élève est identifié comme étant un élève PANA?" max_length="40" name="est_ce_que_l_l_ve_est_identifi_comme_tant_un_l_ve_pana" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
                 <element inactive_on_update="false" label="Non" language="fq" value="no"/>
@@ -148,7 +148,7 @@
                 <element inactive_on_update="false" label="Yes" value="yes"/>
             </choice>
         </element>
-        <element choice="1" label="Les difficultés de l'élève ont un impact sur ses apprentissages." max_length="40" name="les_difficult_s_de_l_l_ve_ont_un_impact_sur_ses_apprentissages" type="choice">
+        <element choice="3" default="no" label="Les difficultés de l'élève ont un impact sur ses apprentissages." max_length="40" name="les_difficult_s_de_l_l_ve_ont_un_impact_sur_ses_apprentissages" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" value="yes"/>
                 <element inactive_on_update="false" label="No" value="no"/>
@@ -157,7 +157,7 @@
             </choice>
         </element>
         <element label="Autre langues" max_length="200" name="autre_langues_dominante" type="string"/>
-        <element choice="1" label="L'élève a de la difficulté au niveau de l’articulation/la parole (ex. prononciat" max_length="40" name="l_l_ve_a_de_la_difficult_au_niveau_de_l_articulation_la_parole_ex_prononciat" type="choice">
+        <element choice="3" default="no" label="L'élève a de la difficulté au niveau de l’articulation/la parole (ex. prononciat" max_length="40" name="l_l_ve_a_de_la_difficult_au_niveau_de_l_articulation_la_parole_ex_prononciat" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
                 <element inactive_on_update="false" label="No" value="no"/>
@@ -165,7 +165,7 @@
                 <element inactive_on_update="false" label="Non" language="fq" value="no"/>
             </choice>
         </element>
-        <element choice="1" label="Les difficultés de l'élève ont un impact sur sa participation en salle de classe" max_length="40" name="les_difficult_s_de_l_l_ve_ont_un_impact_sur_sa_participation_en_salle_de_classe" type="choice">
+        <element choice="3" default="no" label="Les difficultés de l'élève ont un impact sur sa participation en salle de classe" max_length="40" name="les_difficult_s_de_l_l_ve_ont_un_impact_sur_sa_participation_en_salle_de_classe" type="choice">
             <choice>
                 <element inactive_on_update="false" label="No" value="no"/>
                 <element inactive_on_update="false" label="Non" language="fq" value="no"/>
@@ -219,7 +219,7 @@
             </choice>
         </element>
         <element label="Précisez :" max_length="4000" name="pr_cise_dignostic" reference="x_ndecd_cecce_base_sli_roi_qa" type="glide_list"/>
-        <element choice="1" label="L’élève a de la difficulté à nommer les lettres et leurs sons selon les attentes" max_length="40" name="l_l_ve_a_de_la_difficult_nommer_les_lettres_et_leurs_sons_selon_les_attentes" type="choice">
+        <element choice="3" default="no" label="L’élève a de la difficulté à nommer les lettres et leurs sons selon les attentes" max_length="40" name="l_l_ve_a_de_la_difficult_nommer_les_lettres_et_leurs_sons_selon_les_attentes" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Oui" language="fq" value="yes"/>
                 <element inactive_on_update="false" label="Non" language="fq" value="no"/>

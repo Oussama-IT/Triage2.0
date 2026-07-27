@@ -15,16 +15,16 @@
         <element label="NISO" max_length="200" name="u_niso" type="string"/>
         <element label="Nom du titulaire" max_length="32" name="u_nom_du_titulaire" reference="sys_user" type="reference"/>
         <index name="index">
-            <element name="u_classe"/>
-        </index>
-        <index name="index2">
             <element name="u_niso"/>
         </index>
+        <index name="index2">
+            <element name="u_nom_du_titulaire"/>
+        </index>
         <index name="index3">
-            <element name="u_nom_de_l_cole"/>
+            <element name="u_classe"/>
         </index>
         <index name="index4">
-            <element name="u_nom_du_titulaire"/>
+            <element name="u_nom_de_l_cole"/>
         </index>
     </element>
 </database>
