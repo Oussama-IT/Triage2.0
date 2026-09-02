@@ -18,7 +18,7 @@
         <digest_html/>
         <digest_reply_to/>
         <digest_separator_html><![CDATA[<p>&nbsp;</p>
-<hr />
+<hr>
 <p>&nbsp;</p>]]></digest_separator_html>
         <digest_separator_text><![CDATA[\n--------------------------------------------------------------------------------\n]]></digest_separator_text>
         <digest_subject/>
@@ -44,7 +44,7 @@
 <p>Nous vous informons que ${opened_by.first_name} ${opened_by.last_name} a soumis une demande ROI concernant l'&eacute;l&egrave;ve ${eleve.name} (N&deg; ${number}). &nbsp;</p>
 <p>Une &eacute;valuation sommaire ROI est requise pour cet(te) &eacute;l&egrave;ve.</p>
 <p>Veuillez cliquer sur le <a href="x/ndecd/triage-20-demande-de-partage/record/x_ndecd_triage_2_0_envoi_d_un_formulaire_de_consentement_pour_le_programme_roi/${sys_id}" target="_blank" rel="noopener">lien suivant</a> afin de consulter le dossier. La d&eacute;l&eacute;gation du cas pour l'&eacute;valuation &agrave; une orthophoniste pourra &ecirc;tre effectu&eacute;e &agrave; la suite de l'obtention du consentement &eacute;crit de la part des parents/tuteurs l&eacute;gaux.</p>
-<p><br />Merci.</p>]]></message_html>
+<p><br>Merci.</p>]]></message_html>
         <message_list/>
         <message_text/>
         <name>Cas ROI coché et évaluation ROI requise : Notification du comité ROI de l'existence d'une nouvelle d</name>
@@ -53,7 +53,7 @@
         <push_message_only>false</push_message_only>
         <recipient_fields/>
         <recipient_groups/>
-        <recipient_users>00f6e32d1b9531508d594047bc4bcbfa</recipient_users>
+        <recipient_users>SLI-ROI@ecolecatholique.ca</recipient_users>
         <reply_to>ne-pas-répondre comité ROI&lt;sli_roi@ecolecatholique.ca&gt;</reply_to>
         <send_self>true</send_self>
         <sms_alternate/>
@@ -66,18 +66,29 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>08f7eb7d1bf886108d594047bc4bcba2</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Cas ROI coché et évaluation ROI requise : Notification du comité ROI de l'existence d'une nouvelle d</sys_name>
         <sys_overrides/>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>sysevent_email_action_08f7eb7d1bf886108d594047bc4bcba2</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-27 14:21:44</sys_updated_on>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-09-02 20:14:05</sys_updated_on>
         <sys_version>2</sys_version>
         <template display_value="Unsubscribe and Preferences">7ed0481f3b0b2200c869c2c703efc487</template>
         <type>email</type>
         <weight>0</weight>
     </sysevent_email_action>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>08f7eb7d1bf886108d594047bc4bcba2</id>
+        <sys_created_by>kharrf@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-09-02 20:14:05</sys_created_on>
+        <sys_id>67883c9a478bc7106274efbb616d43dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-09-02 20:14:05</sys_updated_on>
+        <table>sysevent_email_action</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
 </record_update>

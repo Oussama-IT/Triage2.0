@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_ndecd_triage_2_0_eleve">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_pd_process_input">
+    <sys_pd_process_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
-        <attributes>live_feed=true</attributes>
-        <audit>true</audit>
-        <calculation/>
+        <attributes>element_mapping_provider=com.snc.pd.designer.elementmapping.PlaybookInputElementMapper</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label/>
+        <column_label>Parent record</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -21,21 +26,28 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element/>
+        <element>parent_record</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Collection">collection</internal_type>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Parent record</label>
         <mandatory>false</mandatory>
-        <max_length>40</max_length>
-        <name>x_ndecd_triage_2_0_eleve</name>
+        <max_length>32</max_length>
+        <model display_value="CECCE Demande AES">3fe3fccf1b047550d991c882604bcb9e</model>
+        <model_id>3fe3fccf1b047550d991c882604bcb9e</model_id>
+        <model_table/>
+        <name>var__m_sys_pd_process_input_3fe3fccf1b047550d991c882604bcb9e</name>
         <next_element/>
+        <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference/>
+        <reference display_value="" name="x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture">x_ndecd_triage_2_0_demande_sep_li_e_aux_difficult_s_lecture_ecriture</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -44,16 +56,17 @@
         <reference_type/>
         <spell_check>false</spell_check>
         <staged>false</staged>
-        <sys_class_name>sys_dictionary</sys_class_name>
-        <sys_created_by>servicenowdeveloper3@ecolecatholique.ca</sys_created_by>
-        <sys_created_on>2024-02-15 13:45:27</sys_created_on>
-        <sys_name>x_ndecd_triage_2_0_eleve</sys_name>
+        <sys_class_name>sys_pd_process_input</sys_class_name>
+        <sys_created_by>ZAGUINO@ecolecatholique.ca</sys_created_by>
+        <sys_created_on>2026-08-19 12:45:55</sys_created_on>
+        <sys_id>c6bb87a5477e87106274efbb616d435f</sys_id>
+        <sys_name>Parent record</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
-        <sys_update_name>sys_dictionary_x_ndecd_triage_2_0_eleve_null</sys_update_name>
-        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2026-08-13 19:59:08</sys_updated_on>
+        <sys_update_name>sys_pd_process_input_c6bb87a5477e87106274efbb616d435f</sys_update_name>
+        <sys_updated_by>ZAGUINO@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-08-19 12:45:55</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -65,5 +78,5 @@
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
-    </sys_dictionary>
+    </sys_pd_process_input>
 </record_update>
