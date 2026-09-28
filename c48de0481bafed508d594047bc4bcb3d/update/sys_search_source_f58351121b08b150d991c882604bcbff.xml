@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_source">
     <sys_search_source action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition table="x_ndecd_triage_2_0_eleve">active=true</condition>
+        <condition table="x_ndecd_triage_2_0_eleve">active=true<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+        </condition>
         <group/>
         <name>CECCE demande de partage : equipe triage - x_ndecd</name>
         <roles/>

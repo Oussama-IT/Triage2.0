@@ -6,6 +6,7 @@
         <element label="Date de naissance" max_length="40" name="u_date_de_naissance" type="glide_date"/>
         <element label="PSN_OID" max_length="40" name="psn_oid" type="string"/>
         <element label="Niveau scolaire" max_length="32" name="u_classe" reference="x_ndecd_triage_2_0_classe" type="reference"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
         <element label="Nombre de cas" max_length="40" name="u_nombre_de_cas" type="integer"/>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Std id local" max_length="40" name="std_id_local" type="string"/>
