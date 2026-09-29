@@ -61,8 +61,10 @@
         <record/>
         <record_producer_table/>
         <reference>x_ndecd_triage_2_0_eleve</reference>
-        <reference_qual/>
-        <reference_qual_condition/>
+        <reference_qual>active=true^EQ</reference_qual>
+        <reference_qual_condition table="x_ndecd_triage_2_0_eleve">active=true^EQ<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </reference_qual_condition>
         <rich_text/>
         <roles_to_use_also_request_for/>
         <save_script><![CDATA[/** This script is executed before the Record is generated
@@ -82,14 +84,14 @@
         <sys_created_by>ServiceNowDeveloper2@ecolecatholique.ca</sys_created_by>
         <sys_created_on>2023-06-23 14:47:32</sys_created_on>
         <sys_id>8ad5752a1bef61108d594047bc4bcb44</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Recherche d'un élève</sys_name>
         <sys_package display_value="Triage 2.0" source="x_ndecd_triage_2_0">c48de0481bafed508d594047bc4bcb3d</sys_package>
         <sys_policy/>
         <sys_scope display_value="Triage 2.0">c48de0481bafed508d594047bc4bcb3d</sys_scope>
         <sys_update_name>item_option_new_8ad5752a1bef61108d594047bc4bcb44</sys_update_name>
-        <sys_updated_by>ServiceNowDeveloper4@ecolecatholique.ca</sys_updated_by>
-        <sys_updated_on>2024-09-12 13:02:29</sys_updated_on>
+        <sys_updated_by>kharrf@ecolecatholique.ca</sys_updated_by>
+        <sys_updated_on>2026-09-29 17:12:05</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
@@ -98,7 +100,7 @@
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>advanced</use_reference_qualifier>
+        <use_reference_qualifier>simple</use_reference_qualifier>
         <validate_regex/>
         <variable_name/>
         <variable_set display_value="Triage2.0 questtions prealables ">dffd7b421b6b2110d991c882604bcb9f</variable_set>
