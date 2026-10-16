@@ -16,11 +16,11 @@
                 <element inactive_on_update="false" label="Non déléguée" sequence="2" value="nondeleguee"/>
             </choice>
         </element>
-        <element label="Nom orthophoniste consultation TSA/CS" max_length="32" name="nom_orthophoniste_consultation_tsa_cs" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du volet^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du volet^EQ" type="reference"/>
+        <element label="Nom orthophoniste consultation TSA/CS" max_length="32" name="nom_orthophoniste_consultation_tsa_cs" reference="sys_user" reference_qual="roles=x_ndecd_triage_2_0.Orthophonistes responsables de TSA^EQ" reference_qual_condition="roles=x_ndecd_triage_2_0.Orthophonistes responsables de TSA^EQ" type="reference"/>
         <element label="Score TSACS" max_length="40" name="scoretsacs" type="float"/>
         <element label="Nom éducatrice SCS" max_length="32" name="nom_ducatrice_scs" reference="sys_user" type="reference"/>
-        <element label="Nom orthophoniste suivi ROI-CS" max_length="32" name="nom_orthophoniste_suivi_roi_cs" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du volet^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du volet^EQ" type="reference"/>
-        <element label="Nom orthophoniste dépistage ROI-CS" max_length="32" name="nom_orthophoniste_d_pistage_roi_cs" reference="sys_user" reference_qual="u_user_typeLIKEOrthophonistes du volet^EQ" reference_qual_condition="u_user_typeLIKEOrthophonistes du volet^EQ" type="reference"/>
+        <element label="Nom orthophoniste suivi ROI-CS" max_length="32" name="nom_orthophoniste_suivi_roi_cs" reference="sys_user" reference_qual="roles=x_ndecd_triage_2_0.Orthophonistes responsables de TSA^EQ" reference_qual_condition="roles=x_ndecd_triage_2_0.Orthophonistes responsables de TSA^EQ" type="reference"/>
+        <element label="Nom orthophoniste dépistage ROI-CS" max_length="32" name="nom_orthophoniste_d_pistage_roi_cs" reference="sys_user" reference_qual="roles=x_ndecd_triage_2_0.Orthophonistes responsables de TSA^EQ" reference_qual_condition="roles=x_ndecd_triage_2_0.Orthophonistes responsables de TSA^EQ" type="reference"/>
         <element choice="1" choice_field="bloc_scs" choice_table="x_ndecd_cecce_base_options" label="Bloc suivi" max_length="200" name="bloc_suivi" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Bloc SCS 3" sequence="2" value="b3"/>

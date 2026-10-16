@@ -27,6 +27,6 @@
                 <element inactive_on_update="false" label="Fermée" sequence="3" value="fermee"/>
             </choice>
         </element>
-        <element label="Nom éducatrice SCS" max_length="32" name="nom_ducatrice_scs" reference="sys_user" reference_qual="u_user_typeLIKEÉducatrices ressources langage TSA/CS" reference_qual_condition="u_user_typeLIKEÉducatrices ressources langage TSA/CS" type="reference"/>
+        <element label="Nom éducatrice SCS" max_length="32" name="nom_ducatrice_scs" reference="sys_user" reference_qual="roles=x_ndecd_triage_2_0.Éducatrices ressources langage TSA/CS - Comité SCS^EQ" reference_qual_condition="roles=x_ndecd_triage_2_0.Éducatrices ressources langage TSA/CS - Comité SCS^EQ" type="reference"/>
     </element>
 </database>
