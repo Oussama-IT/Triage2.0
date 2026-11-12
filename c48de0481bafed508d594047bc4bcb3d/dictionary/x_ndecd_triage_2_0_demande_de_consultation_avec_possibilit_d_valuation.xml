@@ -178,7 +178,7 @@
                 <element inactive_on_update="false" label="Non" sequence="1" value="no"/>
             </choice>
         </element>
-        <element label="Date début (programme ALF/PANA) :" max_length="40" name="date_d_but_programme_alf_pana" type="glide_date"/>
+        <element label="Date début (programme EPAF/ENA) :" max_length="40" name="date_d_but_programme_alf_pana" type="glide_date"/>
         <element label="Les stratégies de différenciation et les adaptations suivantes ont été mises à l" max_length="4000" name="les_strat_gies_de_diff_renciation_et_les_adaptations_suivantes_ont_t_mises_l" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
         <element choice="3" choice_field="je_comprends" choice_table="x_ndecd_cecce_base_options" label="Je comprends l’élève" max_length="40" name="je_comprends_l_l_ve" type="choice">
             <choice/>
@@ -316,7 +316,7 @@
         </element>
         <element label="Langue(s) parlée(s) à la maison :" max_length="100" name="langue_s_parl_e_s_la_maison" reference="x_ndecd_cecce_base_demande_de_consultation_avec_possibilit_d_valuation_qa" type="glide_list"/>
         <element label="Fréquence (programme destiné à l’EED) :" max_length="40" name="fr_quence_programme_destin_l_eed" type="string"/>
-        <element label="Date fin (programme ALF/PANA) :" max_length="40" name="date_fin_programme_alf_pana" type="glide_date"/>
+        <element label="Date fin (programme EPAF/ENA) :" max_length="40" name="date_fin_programme_alf_pana" type="glide_date"/>
         <element choice="1" choice_field="yes_no" choice_table="x_ndecd_cecce_base_options" label="L’enfant présente-il des difficultés de la parole (par ex. bégaiement, articulat" max_length="40" name="l_enfant_pr_sente_il_des_difficult_s_de_la_parole_par_ex_b_gaiement_articulat" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Yes" sequence="1" value="yes"/>
@@ -364,7 +364,7 @@
                 <element inactive="true" inactive_on_update="true" sequence="0"/>
             </choice>
         </element>
-        <element label="Fréquence (programme ALF/PANA) :" max_length="40" name="fr_quence_programme_alf_pana" type="string"/>
+        <element label="Fréquence (programme EPAF/ENA) :" max_length="40" name="fr_quence_programme_alf_pana" type="string"/>
         <element label="Date (Optométrie) " max_length="40" name="date_optom_trie" type="glide_date"/>
         <element label="EEAS-EED, Coach ACA date debut" max_length="40" name="eeas_eed_coach_aca_date_debut" type="glide_date_time"/>
         <element label="Date fin (programme SLI) :" max_length="40" name="date_fin_programme_sli" type="glide_date"/>
